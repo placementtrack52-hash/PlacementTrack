@@ -1,0 +1,17 @@
+[
+  {
+    "type": "frontend",
+    "title": "Frontend Developer",
+    "pdf": "/pdfs/frontend.pdf"
+  },
+  {
+    "type": "backend",
+    "title": "Backend Developer",
+    "pdf": "/pdfs/backend.pdf"
+  },
+  {
+    "type": "java",
+    "title": "Java Developer",
+    "pdf": "/pdfs/java.pdf"
+  }
+]

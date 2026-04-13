@@ -1,0 +1,65 @@
+{
+  "number-system": {
+    "overview": "Number systems start with classifying integers, factors, multiples, and divisibility. Once the basics are clear, advanced questions become a matter of pattern spotting.",
+    "advanced": "Focus on last-digit cycles, remainders, and modular thinking. Competitive exams love testing how quickly you can convert a large expression into a remainder or divisibility check.",
+    "formulas": ["If a = bq + r, then r is the remainder with 0 <= r < b", "Count of factors of n = (p1+1)(p2+1)... after prime factorization", "LCM x HCF = product of two numbers (for two integers)"],
+    "shortcuts": ["Check divisibility by 3 or 9 using sum of digits", "Use cyclicity of powers to find unit digits fast", "For consecutive integers, compare parity before doing heavy calculation"],
+    "examples": ["Find the remainder when 2^10 is divided by 3. Since 2 mod 3 = -1, (-1)^10 = 1. Remainder = 1.", "How many factors does 72 have? 72 = 2^3 x 3^2, so factors = (3+1)(2+1) = 12."]
+  },
+  "percentages": {
+    "overview": "Percentages turn comparison problems into a common language. They connect directly to ratios, profit-loss, and data interpretation.",
+    "advanced": "Use percentage points versus percent change carefully. Reverse percentages and successive changes are where most students lose accuracy.",
+    "formulas": ["x% of y = (x/100) x y", "New value = Original x (1 +/- change/100)", "Successive changes a% and b% = a + b + ab/100"],
+    "shortcuts": ["10% is shift-one-decimal, so build 5%, 1%, 15% from that", "Convert awkward percentages into fractions like 12.5% = 1/8", "For increase followed by decrease of same %, net change is always negative"],
+    "examples": ["25% of 320 = 320/4 = 80.", "A price rises 20% then falls 20%. Net change = 20 - 20 - 4 = -4%, so there is a 4% decrease."]
+  },
+  "profit-loss": {
+    "overview": "Profit and loss problems are percentage problems in disguise. The key is identifying cost price, selling price, and margin language correctly.",
+    "advanced": "Questions may hide CP or SP using discounts, marked price, or mixed transactions. Translate every sentence into a relationship before solving.",
+    "formulas": ["Profit = SP - CP", "Loss = CP - SP", "Profit% = (Profit/CP) x 100", "Loss% = (Loss/CP) x 100"],
+    "shortcuts": ["Use assumed CP = 100 in percentage-heavy questions", "For discount and profit chained together, move one step at a time", "When profit % and loss % are equal in two cases, average is not enough; compute actual values"],
+    "examples": ["An item bought for 500 and sold for 575 gives profit 75, so profit% = 15%.", "If SP is 80 after 20% loss, CP = 80/0.8 = 100."]
+  },
+  "reading-comprehension": {
+    "overview": "Reading comprehension is about extracting meaning, structure, and tone under time pressure. Accuracy beats speed at the start.",
+    "advanced": "Look for the author’s intent, transitions, and scope. Trap options often sound intelligent but go beyond the passage.",
+    "formulas": ["Read question stems before re-reading key paragraph sections", "Main idea = repeated theme + author purpose", "Tone = word choice + stance + emotional distance"],
+    "shortcuts": ["Underline transition words like however, therefore, similarly", "Eliminate options with extreme language unless passage supports it", "For vocabulary-in-context, replace the word inside the sentence"],
+    "examples": ["If a paragraph contrasts old and new policy, the main idea is likely the shift, not a detail inside one side.", "If the author uses cautious words like perhaps or suggests, tone is likely analytical rather than aggressive."]
+  },
+  "sentence-correction": {
+    "overview": "Sentence correction tests grammar plus clarity. Most errors come from agreement, tense, modifiers, and parallel structure.",
+    "advanced": "In long sentences, isolate the core subject and verb first. Ignore interrupting phrases until the skeleton is clear.",
+    "formulas": ["Subject and verb must agree in number", "Parallel ideas should use parallel grammatical form", "Pronouns must clearly refer to one noun"],
+    "shortcuts": ["Find the shortest error-free option instead of over-reading every choice", "Check modifiers near commas first", "Watch out for collective nouns and each/every constructions"],
+    "examples": ["Each of the players is ready. Subject is each, so singular verb is.", "She likes reading, writing, and painting. All three items stay parallel."]
+  },
+  "synonyms-antonyms": {
+    "overview": "Vocabulary questions reward context and word families more than memorizing isolated meanings.",
+    "advanced": "Learn roots, prefixes, and tonal shades. Two words may be close in dictionary meaning but different in usage intensity.",
+    "formulas": ["Prefix dis- often indicates negation", "Root bene relates to good", "Root mal relates to bad"],
+    "shortcuts": ["Guess using context before seeing options", "Group words by tone: positive, neutral, negative", "Use root meaning to eliminate at least two options quickly"],
+    "examples": ["Benevolent suggests kindness, so a close synonym is compassionate.", "Scarce means limited, so a close antonym is abundant."]
+  },
+  "series": {
+    "overview": "Series questions ask you to detect a repeating pattern in numbers, letters, or mixed structures.",
+    "advanced": "Check differences, second differences, multiplication, position jumps, and alternating sub-series. The pattern is often simpler than it first looks.",
+    "formulas": ["Arithmetic series: constant difference", "Geometric series: constant ratio", "Alphabet positions: A=1 to Z=26"],
+    "shortcuts": ["Split alternate terms into two mini-series", "For letter series, convert letters to positions", "If numbers grow fast, test multiplication before testing addition"],
+    "examples": ["2, 5, 8, 11 increases by 3, so next is 14.", "A, C, F, J has jumps of 2, 3, 4, so next jump is 5 and answer is O."]
+  },
+  "coding-decoding": {
+    "overview": "Coding-decoding checks whether you can infer a rule that maps one form to another.",
+    "advanced": "The rule may involve position shifts, reversal, substitution, or symbol mapping. Test one consistent rule across all examples.",
+    "formulas": ["Shift cipher: move letters by fixed positions", "Reverse coding: read from right to left", "Symbol mapping: one-to-one substitution"],
+    "shortcuts": ["Write alphabet positions under the word", "Check if the code preserves order before testing shifts", "Use the shortest example to identify the rule first"],
+    "examples": ["If CAT becomes DBU, each letter shifts forward by one.", "If DELHI becomes I H L E D, the pattern may be reversal with spacing ignored."]
+  },
+  "blood-relations": {
+    "overview": "Blood relations become easy once every statement is converted into a family link one step at a time.",
+    "advanced": "The fastest method is to draw a compact tree or use relation chains. Never solve long statements only in your head.",
+    "formulas": ["Brother/Sister share parents", "Father's brother = uncle", "Mother's daughter = sister"],
+    "shortcuts": ["Start from the named person and move outward", "Mark gender only when given; do not assume", "For coded relations, decode each symbol before combining"],
+    "examples": ["A is the mother of B and B is the brother of C, so A is also mother of C.", "If P is Q's father's sister, P is Q's aunt."]
+  }
+}

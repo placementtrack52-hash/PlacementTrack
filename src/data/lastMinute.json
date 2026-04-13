@@ -1,0 +1,37 @@
+[
+  {
+    "subject": "aptitude",
+    "topics": [
+      {
+        "name": "number-system",
+        "pdf": "/pdfs/last-minute-aptitude-number.pdf"
+      },
+      {
+        "name": "time-work",
+        "pdf": "/pdfs/last-minute-aptitude-time.pdf"
+      }
+    ]
+  },
+  {
+    "subject": "verbal",
+    "topics": [
+      {
+        "name": "grammar",
+        "pdf": "/pdfs/last-minute-verbal-grammar.pdf"
+      },
+      {
+        "name": "vocabulary",
+        "pdf": "/pdfs/last-minute-verbal-vocab.pdf"
+      }
+    ]
+  },
+  {
+    "subject": "reasoning",
+    "topics": [
+      {
+        "name": "logical-reasoning",
+        "pdf": "/pdfs/last-minute-reasoning-logical.pdf"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "aptitude",
+    "name": "Aptitude",
+    "description": "Strengthen quantitative thinking, shortcuts, and test stamina.",
+    "color": "from-amber-200 via-orange-100 to-white",
+    "icon": "Sigma",
+    "topics": [
+      { "id": "number-system", "name": "Number System",  "estimatedMinutes": 40 },
+      { "id": "percentages", "name": "Percentages",  "estimatedMinutes": 35 },
+      { "id": "profit-loss", "name": "Profit & Loss",  "estimatedMinutes": 30 }
+    ]
+  },
+  {
+    "id": "verbal",
+    "name": "Verbal",
+    "description": "Build vocabulary, precision, and reading confidence.",
+    "color": "from-emerald-200 via-teal-100 to-white",
+    "icon": "BookOpen",
+    "topics": [
+      { "id": "reading-comprehension", "name": "Reading Comprehension", "difficulty": "Core", "estimatedMinutes": 45 },
+      { "id": "sentence-correction", "name": "Sentence Correction", "difficulty": "Applied", "estimatedMinutes": 30 },
+      { "id": "synonyms-antonyms", "name": "Synonyms & Antonyms", "difficulty": "Scoring", "estimatedMinutes": 25 }
+    ]
+  },
+  {
+    "id": "reasoning",
+    "name": "Reasoning",
+    "description": "Sharpen patterns, logic, and structured problem solving.",
+    "color": "from-sky-200 via-cyan-100 to-white",
+    "icon": "Brain",
+    "topics": [
+      { "id": "series", "name": "Series", "difficulty": "Core", "estimatedMinutes": 35 },
+      { "id": "coding-decoding", "name": "Coding-Decoding", "difficulty": "Applied", "estimatedMinutes": 30 },
+      { "id": "blood-relations", "name": "Blood Relations", "difficulty": "Scoring", "estimatedMinutes": 28 }
+    ]
+  }
+]

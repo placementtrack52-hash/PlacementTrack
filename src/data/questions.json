@@ -1,0 +1,278 @@
+{
+  "aptitude": {
+    "number-system": {
+      "easy": [
+        { "id": "apt-ns-e1", "question": "What is the remainder when 17 is divided by 5?", "options": ["1", "2", "3", "4"], "answer": 1, "explanation": "17 = 5 x 3 + 2, so the remainder is 2." },
+        { "id": "apt-ns-e2", "question": "Which number is prime?", "options": ["21", "27", "29", "39"], "answer": 2, "explanation": "29 has no factors other than 1 and itself." },
+        { "id": "apt-ns-e3", "question": "The HCF of 24 and 36 is:", "options": ["6", "8", "10", "12"], "answer": 3, "explanation": "The highest common factor of 24 and 36 is 12." },
+        { "id": "apt-ns-e4", "question": "How many factors does 49 have?", "options": ["2", "3", "4", "5"], "answer": 1, "explanation": "49 = 7^2, so the number of factors is 3." },
+        { "id": "apt-ns-e5", "question": "What is the least number to be added to 99 to make it divisible by 8?", "options": ["3", "4", "5", "6"], "answer": 2, "explanation": "99 leaves remainder 3 on division by 8, so add 5." }
+      ],
+      "medium": [
+        { "id": "apt-ns-m1", "question": "If LCM(a,b)=60, HCF(a,b)=5, and a=15, then b is:", "options": ["18", "20", "25", "30"], "answer": 1, "explanation": "a x b = LCM x HCF = 300, so b = 20." },
+        { "id": "apt-ns-m2", "question": "How many trailing zeros are there in 25!?", "options": ["4", "5", "6", "7"], "answer": 2, "explanation": "Count factors of 5: 5 from multiples of 5 and 1 extra from 25, total 6." },
+        { "id": "apt-ns-m3", "question": "What is the unit digit of 3^7?", "options": ["1", "3", "7", "9"], "answer": 2, "explanation": "Unit digits cycle as 3, 9, 7, 1; the 7th power ends in 7." },
+        { "id": "apt-ns-m4", "question": "Find the next number: 1, 4, 9, 16, ?", "options": ["20", "24", "25", "27"], "answer": 2, "explanation": "These are squares; next is 25." },
+        { "id": "apt-ns-m5", "question": "Find the next number: 1, 8, 27, 64, ?", "options": ["81", "100", "125", "216"], "answer": 2, "explanation": "These are cubes; next is 5^3 = 125." }
+      ],
+      "hard": [
+        { "id": "apt-ns-h1", "question": "Find the next term: 4, 9, 19, 39, ?", "options": ["59", "69", "79", "89"], "answer": 2, "explanation": "Pattern is x2 + 1, so next is 79." },
+        { "id": "apt-ns-h2", "question": "Find the next letter: C, F, J, O, ?", "options": ["S", "T", "U", "V"], "answer": 2, "explanation": "Jumps are +3, +4, +5, so next is +6 to U." },
+        { "id": "apt-ns-h3", "question": "Find the next term: AZ, BY, CX, ?", "options": ["DW", "EV", "FV", "DU"], "answer": 0, "explanation": "First letters move forward, second letters move backward." },
+        { "id": "apt-ns-h4", "question": "What is 150% of 80?", "options": ["100", "110", "120", "130"], "answer": 2, "explanation": "150% means 1.5 times, so the answer is 120." },
+        { "id": "apt-ns-h5", "question": "A value falls from 250 to 200. Percentage decrease is:", "options": ["15%", "20%", "25%", "30%"], "answer": 1, "explanation": "Decrease is 50 on base 250, so 20%." }
+      ],
+      "final": [
+        { "id": "apt-ns-f1", "question": "25% of 200 is:", "options": ["25", "40", "50", "75"], "answer": 2, "explanation": "25% means one-fourth, and one-fourth of 200 is 50." },
+        { "id": "apt-ns-f2", "question": "10% of 450 is:", "options": ["35", "40", "45", "50"], "answer": 2, "explanation": "10% is one-tenth, so the answer is 45." },
+        { "id": "apt-ns-f3", "question": "Successive increases of 10% and 20% equal:", "options": ["28%", "30%", "32%", "35%"], "answer": 2, "explanation": "10 + 20 + (10 x 20)/100 = 32%." },
+        { "id": "apt-ns-f4", "question": "If loss is 25% and SP is 75, CP is:", "options": ["90", "95", "100", "110"], "answer": 2, "explanation": "SP is 75% of CP, so CP = 75/0.75 = 100." },
+        { "id": "apt-ns-f5", "question": "Marked price is 800 and discount is 15%. SP is:", "options": ["660", "680", "700", "720"], "answer": 1, "explanation": "SP = 85% of 800 = 680." }
+      ]
+    },
+    "time-work": {
+      "easy": [
+        { "id": "apt-tw-e1", "question": "If CP = 100 and SP = 120, profit is:", "options": ["10", "15", "20", "25"], "answer": 2, "explanation": "Profit = SP - CP = 20." },
+        { "id": "apt-tw-e2", "question": "A value increases from 40 to 50. Increase percent is:", "options": ["20%", "25%", "30%", "40%"], "answer": 1, "explanation": "Increase is 10 on base 40, so 10/40 x 100 = 25%." },
+        { "id": "apt-tw-e3", "question": "If SP = 360 and profit = 20%, CP is:", "options": ["280", "290", "300", "320"], "answer": 2, "explanation": "CP x 1.2 = 360, so CP = 300." },
+        { "id": "apt-tw-e4", "question": "An item is increased by 25% and then decreased by 20%. Net effect is:", "options": ["No change", "2% gain", "5% loss", "4% loss"], "answer": 0, "explanation": "1.25 x 0.8 = 1, so there is no net change." },
+        { "id": "apt-tw-e5", "question": "A dealer gains 25% after giving a 20% discount on MP. CP as a percent of MP is:", "options": ["60%", "64%", "68%", "72%"], "answer": 1, "explanation": "SP = 80% of MP and SP = 125% of CP, so CP = 64% of MP." }
+      ],
+      "medium": [
+        { "id": "apt-tw-m1", "question": "25% of 200 is:", "options": ["25", "40", "50", "75"], "answer": 2, "explanation": "25% means one-fourth, and one-fourth of 200 is 50." },
+        { "id": "apt-tw-m2", "question": "10% of 450 is:", "options": ["35", "40", "45", "50"], "answer": 2, "explanation": "10% is one-tenth, so the answer is 45." },
+        { "id": "apt-tw-m3", "question": "Successive increases of 10% and 20% equal:", "options": ["28%", "30%", "32%", "35%"], "answer": 2, "explanation": "10 + 20 + (10 x 20)/100 = 32%." },
+        { "id": "apt-tw-m4", "question": "If loss is 25% and SP is 75, CP is:", "options": ["90", "95", "100", "110"], "answer": 2, "explanation": "SP is 75% of CP, so CP = 75/0.75 = 100." },
+        { "id": "apt-tw-m5", "question": "Marked price is 800 and discount is 15%. SP is:", "options": ["660", "680", "700", "720"], "answer": 1, "explanation": "SP = 85% of 800 = 680." }
+      ],
+      "hard": [
+        { "id": "apt-tw-h1", "question": "What is the remainder when 17 is divided by 5?", "options": ["1", "2", "3", "4"], "answer": 1, "explanation": "17 = 5 x 3 + 2, so the remainder is 2." },
+        { "id": "apt-tw-h2", "question": "Which number is prime?", "options": ["21", "27", "29", "39"], "answer": 2, "explanation": "29 has no factors other than 1 and itself." },
+        { "id": "apt-tw-h3", "question": "The HCF of 24 and 36 is:", "options": ["6", "8", "10", "12"], "answer": 3, "explanation": "The highest common factor of 24 and 36 is 12." },
+        { "id": "apt-tw-h4", "question": "How many factors does 49 have?", "options": ["2", "3", "4", "5"], "answer": 1, "explanation": "49 = 7^2, so the number of factors is 3." },
+        { "id": "apt-tw-h5", "question": "What is the least number to be added to 99 to make it divisible by 8?", "options": ["3", "4", "5", "6"], "answer": 2, "explanation": "99 leaves remainder 3 on division by 8, so add 5." }
+      ],
+      "final": [
+        { "id": "apt-tw-f1", "question": "A value increases from 40 to 50. Increase percent is:", "options": ["20%", "25%", "30%", "40%"], "answer": 1, "explanation": "Increase is 10 on base 40, so 10/40 x 100 = 25%." },
+        { "id": "apt-tw-f2", "question": "If SP = 360 and profit = 20%, CP is:", "options": ["280", "290", "300", "320"], "answer": 2, "explanation": "CP x 1.2 = 360, so CP = 300." },
+        { "id": "apt-tw-f3", "question": "An item is increased by 25% and then decreased by 20%. Net effect is:", "options": ["No change", "2% gain", "5% loss", "4% loss"], "answer": 0, "explanation": "1.25 x 0.8 = 1, so there is no net change." },
+        { "id": "apt-tw-f4", "question": "A dealer gains 25% after giving a 20% discount on MP. CP as a percent of MP is:", "options": ["60%", "64%", "68%", "72%"], "answer": 1, "explanation": "SP = 80% of MP and SP = 125% of CP, so CP = 64% of MP." },
+        { "id": "apt-tw-f5", "question": "If LCM(a,b)=60, HCF(a,b)=5, and a=15, then b is:", "options": ["18", "20", "25", "30"], "answer": 1, "explanation": "a x b = LCM x HCF = 300, so b = 20." }
+      ]
+    },
+    "percentage": {
+      "easy": [
+        { "id": "apt-per-e1", "question": "25% of 200 is:", "options": ["25", "40", "50", "75"], "answer": 2, "explanation": "25% means one-fourth, and one-fourth of 200 is 50." },
+        { "id": "apt-per-e2", "question": "10% of 450 is:", "options": ["35", "40", "45", "50"], "answer": 2, "explanation": "10% is one-tenth, so the answer is 45." },
+        { "id": "apt-per-e3", "question": "A value increases from 40 to 50. Increase percent is:", "options": ["20%", "25%", "30%", "40%"], "answer": 1, "explanation": "Increase is 10 on base 40, so 10/40 x 100 = 25%." },
+        { "id": "apt-per-e4", "question": "A value falls from 250 to 200. Percentage decrease is:", "options": ["15%", "20%", "25%", "30%"], "answer": 1, "explanation": "Decrease is 50 on base 250, so 20%." },
+        { "id": "apt-per-e5", "question": "Successive increases of 10% and 20% equal:", "options": ["28%", "30%", "32%", "35%"], "answer": 2, "explanation": "10 + 20 + (10 x 20)/100 = 32%." }
+      ],
+      "medium": [
+        { "id": "apt-per-m1", "question": "If SP = 360 and profit = 20%, CP is:", "options": ["280", "290", "300", "320"], "answer": 2, "explanation": "CP x 1.2 = 360, so CP = 300." },
+        { "id": "apt-per-m2", "question": "If loss is 25% and SP is 75, CP is:", "options": ["90", "95", "100", "110"], "answer": 2, "explanation": "SP is 75% of CP, so CP = 75/0.75 = 100." },
+        { "id": "apt-per-m3", "question": "Marked price is 800 and discount is 15%. SP is:", "options": ["660", "680", "700", "720"], "answer": 1, "explanation": "SP = 85% of 800 = 680." },
+        { "id": "apt-per-m4", "question": "A dealer gains 25% after giving a 20% discount on MP. CP as a percent of MP is:", "options": ["60%", "64%", "68%", "72%"], "answer": 1, "explanation": "SP = 80% of MP and SP = 125% of CP, so CP = 64% of MP." },
+        { "id": "apt-per-m5", "question": "An item is increased by 25% and then decreased by 20%. Net effect is:", "options": ["No change", "2% gain", "5% loss", "4% loss"], "answer": 0, "explanation": "1.25 x 0.8 = 1, so there is no net change." }
+      ],
+      "hard": [
+        { "id": "apt-per-h1", "question": "What is 150% of 80?", "options": ["100", "110", "120", "130"], "answer": 2, "explanation": "150% means 1.5 times, so the answer is 120." },
+        { "id": "apt-per-h2", "question": "How many trailing zeros are there in 25!?", "options": ["4", "5", "6", "7"], "answer": 2, "explanation": "Count factors of 5: 5 from multiples of 5 and 1 extra from 25, total 6." },
+        { "id": "apt-per-h3", "question": "What is the unit digit of 3^7?", "options": ["1", "3", "7", "9"], "answer": 2, "explanation": "Unit digits cycle as 3, 9, 7, 1; the 7th power ends in 7." },
+        { "id": "apt-per-h4", "question": "Find the next number: 1, 4, 9, 16, ?", "options": ["20", "24", "25", "27"], "answer": 2, "explanation": "These are squares; next is 25." },
+        { "id": "apt-per-h5", "question": "Find the next number: 1, 8, 27, 64, ?", "options": ["81", "100", "125", "216"], "answer": 2, "explanation": "These are cubes; next is 5^3 = 125." }
+      ],
+      "final": [
+        { "id": "apt-per-f1", "question": "If CP = 100 and SP = 120, profit is:", "options": ["10", "15", "20", "25"], "answer": 2, "explanation": "Profit = SP - CP = 20." },
+        { "id": "apt-per-f2", "question": "What is the remainder when 17 is divided by 5?", "options": ["1", "2", "3", "4"], "answer": 1, "explanation": "17 = 5 x 3 + 2, so the remainder is 2." },
+        { "id": "apt-per-f3", "question": "Which number is prime?", "options": ["21", "27", "29", "39"], "answer": 2, "explanation": "29 has no factors other than 1 and itself." },
+        { "id": "apt-per-f4", "question": "The HCF of 24 and 36 is:", "options": ["6", "8", "10", "12"], "answer": 3, "explanation": "The highest common factor of 24 and 36 is 12." },
+        { "id": "apt-per-f5", "question": "How many factors does 49 have?", "options": ["2", "3", "4", "5"], "answer": 1, "explanation": "49 = 7^2, so the number of factors is 3." }
+      ]
+    }
+  },
+  "verbal": {
+    "grammar": {
+      "easy": [
+        { "id": "verb-g-e1", "question": "Choose the correct sentence.", "options": ["She go to college daily.", "She goes to college daily.", "She going to college daily.", "She gone to college daily."], "answer": 1, "explanation": "Singular subject 'she' takes 'goes'." },
+        { "id": "verb-g-e2", "question": "Choose the sentence without modifier error.", "options": ["Walking to class, the rain soaked me.", "Walking to class, I was soaked by rain.", "Walking to class, the umbrella opened.", "Walking to class, the road looked long."], "answer": 1, "explanation": "The introductory phrase correctly refers to 'I'." },
+        { "id": "verb-g-e3", "question": "Choose the error-free sentence.", "options": ["The bouquet of roses smell sweet.", "The bouquet of roses smells sweet.", "The bouquet of roses smelling sweet.", "The bouquet of roses have smelled sweet."], "answer": 1, "explanation": "The subject 'bouquet' is singular, so 'smells' is correct." },
+        { "id": "verb-g-e4", "question": "Select the sentence with proper parallel structure.", "options": ["The job requires typing, to file, and answering calls.", "The job requires typing, filing, and answering calls.", "The job requires type, filing, and answering calls.", "The job requires typing, filing, and to answer calls."], "answer": 1, "explanation": "All three elements use the same grammatical form." },
+        { "id": "verb-g-e5", "question": "Choose the best revision: 'The report, along with the charts, were submitted.'", "options": ["The report, along with the charts, was submitted.", "The report, along with the charts, were submitting.", "The report along with the charts were submittedly.", "The report and charts was submitted."], "answer": 0, "explanation": "The main subject is singular: 'report'." }
+      ],
+      "medium": [
+        { "id": "verb-g-m1", "question": "Which sentence is parallel?", "options": ["He likes dancing, to sing, and painting.", "He likes dancing, singing, and painting.", "He likes dance, singing, and to paint.", "He likes to dancing, sing, and painting."], "answer": 1, "explanation": "All items use the same '-ing' form." },
+        { "id": "verb-g-m2", "question": "Choose the correct comparison.", "options": ["Her score is higher than any student in the class.", "Her score is higher than any other student in the class.", "Her score is highest than any student.", "Her score is more higher than any student."], "answer": 1, "explanation": "'Any other student' makes the comparison logical." },
+        { "id": "verb-g-m3", "question": "Words like however and although usually signal:", "options": ["A contrast", "A conclusion", "A definition", "A list"], "answer": 0, "explanation": "These transition words often introduce contrast." },
+        { "id": "verb-g-m4", "question": "Choose the synonym of 'rapid'.", "options": ["Slow", "Quick", "Quiet", "Heavy"], "answer": 1, "explanation": "Rapid means quick or fast." },
+        { "id": "verb-g-m5", "question": "Choose the antonym of 'scarce'.", "options": ["Rare", "Few", "Abundant", "Tiny"], "answer": 2, "explanation": "Scarce means limited, so abundant is the opposite." }
+      ],
+      "hard": [
+        { "id": "verb-g-h1", "question": "Choose the synonym of 'vivid'.", "options": ["Dull", "Bright", "Late", "Small"], "answer": 1, "explanation": "Vivid means bright, clear, or striking." },
+        { "id": "verb-g-h2", "question": "Choose the antonym of 'optimistic'.", "options": ["Hopeful", "Cheerful", "Pessimistic", "Excited"], "answer": 2, "explanation": "Pessimistic is opposite to optimistic." },
+        { "id": "verb-g-h3", "question": "'Meticulous' is closest in meaning to:", "options": ["Careless", "Precise", "Rough", "Flexible"], "answer": 1, "explanation": "Meticulous means very careful and precise." },
+        { "id": "verb-g-h4", "question": "An extreme option in RC is often wrong because it:", "options": ["Is too short", "Exceeds the passage claim", "Uses punctuation", "Mentions examples"], "answer": 1, "explanation": "Extreme wording usually goes beyond the author's claim." },
+        { "id": "verb-g-h5", "question": "If all options are partially true in RC, choose the one that:", "options": ["Uses stronger language", "Matches passage scope exactly", "Mentions a new idea", "Feels familiar"], "answer": 1, "explanation": "Correct answers stay within the passage scope." }
+      ],
+      "final": [
+        { "id": "verb-g-f1", "question": "Choose the synonym of 'diligent'.", "options": ["Lazy", "Careful", "Hardworking", "Careless"], "answer": 2, "explanation": "Diligent means hardworking and attentive." },
+        { "id": "verb-g-f2", "question": "Choose the antonym of 'fragile'.", "options": ["Weak", "Delicate", "Sturdy", "Tiny"], "answer": 2, "explanation": "Sturdy is opposite to fragile." },
+        { "id": "verb-g-f3", "question": "The best way to answer vocabulary-in-context questions is to:", "options": ["Use the dictionary only", "Replace the word in the sentence", "Skip the line", "Choose the longest option"], "answer": 1, "explanation": "Context decides the intended meaning." },
+        { "id": "verb-g-f4", "question": "In reading comprehension, the main idea is the:", "options": ["First line", "Central message", "Hardest word", "Last line only"], "answer": 1, "explanation": "The main idea is the central message of the passage." },
+        { "id": "verb-g-f5", "question": "An inference question asks for:", "options": ["A direct quote", "What is reasonably implied", "A random opinion", "The author's biography"], "answer": 1, "explanation": "Inference is about what the passage suggests indirectly." }
+      ]
+    },
+    "vocabulary": {
+      "easy": [
+        { "id": "verb-v-e1", "question": "Choose the synonym of 'rapid'.", "options": ["Slow", "Quick", "Quiet", "Heavy"], "answer": 1, "explanation": "Rapid means quick or fast." },
+        { "id": "verb-v-e2", "question": "Choose the antonym of 'scarce'.", "options": ["Rare", "Few", "Abundant", "Tiny"], "answer": 2, "explanation": "Scarce means limited, so abundant is the opposite." },
+        { "id": "verb-v-e3", "question": "Choose the synonym of 'diligent'.", "options": ["Lazy", "Careful", "Hardworking", "Careless"], "answer": 2, "explanation": "Diligent means hardworking and attentive." },
+        { "id": "verb-v-e4", "question": "Choose the antonym of 'fragile'.", "options": ["Weak", "Delicate", "Sturdy", "Tiny"], "answer": 2, "explanation": "Sturdy is opposite to fragile." },
+        { "id": "verb-v-e5", "question": "Choose the synonym of 'vivid'.", "options": ["Dull", "Bright", "Late", "Small"], "answer": 1, "explanation": "Vivid means bright, clear, or striking." }
+      ],
+      "medium": [
+        { "id": "verb-v-m1", "question": "Choose the antonym of 'optimistic'.", "options": ["Hopeful", "Cheerful", "Pessimistic", "Excited"], "answer": 2, "explanation": "Pessimistic is opposite to optimistic." },
+        { "id": "verb-v-m2", "question": "'Meticulous' is closest in meaning to:", "options": ["Careless", "Precise", "Rough", "Flexible"], "answer": 1, "explanation": "Meticulous means very careful and precise." },
+        { "id": "verb-v-m3", "question": "Choose the synonym of 'rapid'.", "options": ["Slow", "Quick", "Quiet", "Heavy"], "answer": 1, "explanation": "Rapid means quick or fast." },
+        { "id": "verb-v-m4", "question": "Choose the antonym of 'scarce'.", "options": ["Rare", "Few", "Abundant", "Tiny"], "answer": 2, "explanation": "Scarce means limited, so abundant is the opposite." },
+        { "id": "verb-v-m5", "question": "Choose the synonym of 'diligent'.", "options": ["Lazy", "Careful", "Hardworking", "Careless"], "answer": 2, "explanation": "Diligent means hardworking and attentive." }
+      ],
+      "hard": [
+        { "id": "verb-v-h1", "question": "Choose the antonym of 'fragile'.", "options": ["Weak", "Delicate", "Sturdy", "Tiny"], "answer": 2, "explanation": "Sturdy is opposite to fragile." },
+        { "id": "verb-v-h2", "question": "Choose the synonym of 'vivid'.", "options": ["Dull", "Bright", "Late", "Small"], "answer": 1, "explanation": "Vivid means bright, clear, or striking." },
+        { "id": "verb-v-h3", "question": "Choose the antonym of 'optimistic'.", "options": ["Hopeful", "Cheerful", "Pessimistic", "Excited"], "answer": 2, "explanation": "Pessimistic is opposite to optimistic." },
+        { "id": "verb-v-h4", "question": "'Meticulous' is closest in meaning to:", "options": ["Careless", "Precise", "Rough", "Flexible"], "answer": 1, "explanation": "Meticulous means very careful and precise." },
+        { "id": "verb-v-h5", "question": "The best way to answer vocabulary-in-context questions is to:", "options": ["Use the dictionary only", "Replace the word in the sentence", "Skip the line", "Choose the longest option"], "answer": 1, "explanation": "Context decides the intended meaning." }
+      ],
+      "final": [
+        { "id": "verb-v-f1", "question": "Choose the synonym of 'rapid'.", "options": ["Slow", "Quick", "Quiet", "Heavy"], "answer": 1, "explanation": "Rapid means quick or fast." },
+        { "id": "verb-v-f2", "question": "Choose the antonym of 'scarce'.", "options": ["Rare", "Few", "Abundant", "Tiny"], "answer": 2, "explanation": "Scarce means limited, so abundant is the opposite." },
+        { "id": "verb-v-f3", "question": "Choose the synonym of 'diligent'.", "options": ["Lazy", "Careful", "Hardworking", "Careless"], "answer": 2, "explanation": "Diligent means hardworking and attentive." },
+        { "id": "verb-v-f4", "question": "Choose the antonym of 'fragile'.", "options": ["Weak", "Delicate", "Sturdy", "Tiny"], "answer": 2, "explanation": "Sturdy is opposite to fragile." },
+        { "id": "verb-v-f5", "question": "Choose the synonym of 'vivid'.", "options": ["Dull", "Bright", "Late", "Small"], "answer": 1, "explanation": "Vivid means bright, clear, or striking." }
+      ]
+    },
+    "reading-comprehension": {
+      "easy": [
+        { "id": "verb-rc-e1", "question": "In reading comprehension, the main idea is the:", "options": ["First line", "Central message", "Hardest word", "Last line only"], "answer": 1, "explanation": "The main idea is the central message of the passage." },
+        { "id": "verb-rc-e2", "question": "An inference question asks for:", "options": ["A direct quote", "What is reasonably implied", "A random opinion", "The author's biography"], "answer": 1, "explanation": "Inference is about what the passage suggests indirectly." },
+        { "id": "verb-rc-e3", "question": "An extreme option in RC is often wrong because it:", "options": ["Is too short", "Exceeds the passage claim", "Uses punctuation", "Mentions examples"], "answer": 1, "explanation": "Extreme wording usually goes beyond the author's claim." },
+        { "id": "verb-rc-e4", "question": "If all options are partially true in RC, choose the one that:", "options": ["Uses stronger language", "Matches passage scope exactly", "Mentions a new idea", "Feels familiar"], "answer": 1, "explanation": "Correct answers stay within the passage scope." },
+        { "id": "verb-rc-e5", "question": "The best way to answer vocabulary-in-context questions is to:", "options": ["Use the dictionary only", "Replace the word in the sentence", "Skip the line", "Choose the longest option"], "answer": 1, "explanation": "Context decides the intended meaning." }
+      ],
+      "medium": [
+        { "id": "verb-rc-m1", "question": "Words like however and although usually signal:", "options": ["A contrast", "A conclusion", "A definition", "A list"], "answer": 0, "explanation": "These transition words often introduce contrast." },
+        { "id": "verb-rc-m2", "question": "In reading comprehension, the main idea is the:", "options": ["First line", "Central message", "Hardest word", "Last line only"], "answer": 1, "explanation": "The main idea is the central message of the passage." },
+        { "id": "verb-rc-m3", "question": "An inference question asks for:", "options": ["A direct quote", "What is reasonably implied", "A random opinion", "The author's biography"], "answer": 1, "explanation": "Inference is about what the passage suggests indirectly." },
+        { "id": "verb-rc-m4", "question": "An extreme option in RC is often wrong because it:", "options": ["Is too short", "Exceeds the passage claim", "Uses punctuation", "Mentions examples"], "answer": 1, "explanation": "Extreme wording usually goes beyond the author's claim." },
+        { "id": "verb-rc-m5", "question": "If all options are partially true in RC, choose the one that:", "options": ["Uses stronger language", "Matches passage scope exactly", "Mentions a new idea", "Feels familiar"], "answer": 1, "explanation": "Correct answers stay within the passage scope." }
+      ],
+      "hard": [
+        { "id": "verb-rc-h1", "question": "The best way to answer vocabulary-in-context questions is to:", "options": ["Use the dictionary only", "Replace the word in the sentence", "Skip the line", "Choose the longest option"], "answer": 1, "explanation": "Context decides the intended meaning." },
+        { "id": "verb-rc-h2", "question": "Words like however and although usually signal:", "options": ["A contrast", "A conclusion", "A definition", "A list"], "answer": 0, "explanation": "These transition words often introduce contrast." },
+        { "id": "verb-rc-h3", "question": "In reading comprehension, the main idea is the:", "options": ["First line", "Central message", "Hardest word", "Last line only"], "answer": 1, "explanation": "The main idea is the central message of the passage." },
+        { "id": "verb-rc-h4", "question": "An inference question asks for:", "options": ["A direct quote", "What is reasonably implied", "A random opinion", "The author's biography"], "answer": 1, "explanation": "Inference is about what the passage suggests indirectly." },
+        { "id": "verb-rc-h5", "question": "An extreme option in RC is often wrong because it:", "options": ["Is too short", "Exceeds the passage claim", "Uses punctuation", "Mentions examples"], "answer": 1, "explanation": "Extreme wording usually goes beyond the author's claim." }
+      ],
+      "final": [
+        { "id": "verb-rc-f1", "question": "If all options are partially true in RC, choose the one that:", "options": ["Uses stronger language", "Matches passage scope exactly", "Mentions a new idea", "Feels familiar"], "answer": 1, "explanation": "Correct answers stay within the passage scope." },
+        { "id": "verb-rc-f2", "question": "The best way to answer vocabulary-in-context questions is to:", "options": ["Use the dictionary only", "Replace the word in the sentence", "Skip the line", "Choose the longest option"], "answer": 1, "explanation": "Context decides the intended meaning." },
+        { "id": "verb-rc-f3", "question": "Words like however and although usually signal:", "options": ["A contrast", "A conclusion", "A definition", "A list"], "answer": 0, "explanation": "These transition words often introduce contrast." },
+        { "id": "verb-rc-f4", "question": "In reading comprehension, the main idea is the:", "options": ["First line", "Central message", "Hardest word", "Last line only"], "answer": 1, "explanation": "The main idea is the central message of the passage." },
+        { "id": "verb-rc-f5", "question": "An inference question asks for:", "options": ["A direct quote", "What is reasonably implied", "A random opinion", "The author's biography"], "answer": 1, "explanation": "Inference is about what the passage suggests indirectly." }
+      ]
+    }
+  },
+  "reasoning": {
+    "logical-reasoning": {
+      "easy": [
+        { "id": "rea-lr-e1", "question": "Find the next number: 2, 4, 6, 8, ?", "options": ["9", "10", "11", "12"], "answer": 1, "explanation": "The pattern adds 2 each time." },
+        { "id": "rea-lr-e2", "question": "If CAT is coded as DBU, then DOG is coded as:", "options": ["EPH", "EPG", "EOH", "FPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-lr-e3", "question": "If NOTE is coded as ETON, the rule is:", "options": ["Reverse", "+1 shift", "-1 shift", "Vowel removal"], "answer": 0, "explanation": "The letters are reversed." },
+        { "id": "rea-lr-e4", "question": "If KING is coded as LJOH, then RING is coded as:", "options": ["SJOH", "SJPH", "RJOH", "TJPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-lr-e5", "question": "If ROAD is coded as URDG by shifting each letter +3, then PATH is coded as:", "options": ["SDWK", "SBWI", "QCVJ", "SDTJ"], "answer": 0, "explanation": "P->S, A->D, T->W, H->K gives SDWK." }
+      ],
+      "medium": [
+        { "id": "rea-lr-m1", "question": "Find the next number: 3, 6, 12, 24, ?", "options": ["36", "42", "48", "54"], "answer": 2, "explanation": "Each term doubles, so next is 48." },
+        { "id": "rea-lr-m2", "question": "If DELHI is coded as IHLED, the pattern is:", "options": ["Forward shift", "Reverse order", "Alternate skip", "Replace vowels"], "answer": 1, "explanation": "The letters are reversed." },
+        { "id": "rea-lr-m3", "question": "If 123 is coded as 234, then 456 is coded as:", "options": ["345", "567", "546", "455"], "answer": 1, "explanation": "Each digit increases by one." },
+        { "id": "rea-lr-m4", "question": "Find the next term: 4, 9, 19, 39, ?", "options": ["59", "69", "79", "89"], "answer": 2, "explanation": "Pattern is x2 + 1, so next is 79." },
+        { "id": "rea-lr-m5", "question": "Find the next letter: C, F, J, O, ?", "options": ["S", "T", "U", "V"], "answer": 2, "explanation": "Jumps are +3, +4, +5, so next is +6 to U." }
+      ],
+      "hard": [
+        { "id": "rea-lr-h1", "question": "Find the next term: AZ, BY, CX, ?", "options": ["DW", "EV", "FV", "DU"], "answer": 0, "explanation": "First letters move forward, second letters move backward." },
+        { "id": "rea-lr-h2", "question": "Find the next number: 1, 4, 9, 16, ?", "options": ["20", "24", "25", "27"], "answer": 2, "explanation": "These are squares; next is 25." },
+        { "id": "rea-lr-h3", "question": "Find the next number: 1, 8, 27, 64, ?", "options": ["81", "100", "125", "216"], "answer": 2, "explanation": "These are cubes; next is 5^3 = 125." },
+        { "id": "rea-lr-h4", "question": "Find the next number: 2, 4, 6, 8, ?", "options": ["9", "10", "11", "12"], "answer": 1, "explanation": "The pattern adds 2 each time." },
+        { "id": "rea-lr-h5", "question": "If CAT is coded as DBU, then DOG is coded as:", "options": ["EPH", "EPG", "EOH", "FPH"], "answer": 0, "explanation": "Each letter shifts forward by one." }
+      ],
+      "final": [
+        { "id": "rea-lr-f1", "question": "If NOTE is coded as ETON, the rule is:", "options": ["Reverse", "+1 shift", "-1 shift", "Vowel removal"], "answer": 0, "explanation": "The letters are reversed." },
+        { "id": "rea-lr-f2", "question": "If KING is coded as LJOH, then RING is coded as:", "options": ["SJOH", "SJPH", "RJOH", "TJPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-lr-f3", "question": "If ROAD is coded as URDG by shifting each letter +3, then PATH is coded as:", "options": ["SDWK", "SBWI", "QCVJ", "SDTJ"], "answer": 0, "explanation": "P->S, A->D, T->W, H->K gives SDWK." },
+        { "id": "rea-lr-f4", "question": "Find the next number: 3, 6, 12, 24, ?", "options": ["36", "42", "48", "54"], "answer": 2, "explanation": "Each term doubles, so next is 48." },
+        { "id": "rea-lr-f5", "question": "If DELHI is coded as IHLED, the pattern is:", "options": ["Forward shift", "Reverse order", "Alternate skip", "Replace vowels"], "answer": 1, "explanation": "The letters are reversed." }
+      ]
+    },
+    "verbal-reasoning": {
+      "easy": [
+        { "id": "rea-vr-e1", "question": "If A is the mother of B, then B is the _____ of A.", "options": ["Mother", "Child", "Sister", "Aunt"], "answer": 1, "explanation": "If A is mother of B, B is A's child." },
+        { "id": "rea-vr-e2", "question": "Find the next letter: A, C, E, G, ?", "options": ["H", "I", "J", "K"], "answer": 1, "explanation": "Letters skip one each time, so next is I." },
+        { "id": "rea-vr-e3", "question": "Father's father is:", "options": ["Uncle", "Grandfather", "Brother", "Nephew"], "answer": 1, "explanation": "Father's father is grandfather." },
+        { "id": "rea-vr-e4", "question": "A is B's sister and B is C's son. How is A related to C?", "options": ["Mother", "Daughter", "Sister", "Aunt"], "answer": 1, "explanation": "If B is C's son and A is B's sister, A is also C's daughter." },
+        { "id": "rea-vr-e5", "question": "If A is B's father and B is C's mother, A is C's:", "options": ["Father", "Grandfather", "Uncle", "Brother"], "answer": 1, "explanation": "A is the father of C's mother, so A is the grandfather." }
+      ],
+      "medium": [
+        { "id": "rea-vr-m1", "question": "Pointing to a woman, Ravi said, 'She is the daughter of my grandfather's only son.' The woman is Ravi's:", "options": ["Mother", "Sister", "Aunt", "Niece"], "answer": 1, "explanation": "Grandfather's only son is Ravi's father; father's daughter is Ravi's sister." },
+        { "id": "rea-vr-m2", "question": "A is the brother of B. C is the mother of B. D is the father of C. How is D related to A?", "options": ["Father", "Grandfather", "Uncle", "Brother"], "answer": 1, "explanation": "C is A's mother and D is C's father, so D is A's grandfather." },
+        { "id": "rea-vr-m3", "question": "If A is the mother of B, then B is the _____ of A.", "options": ["Mother", "Child", "Sister", "Aunt"], "answer": 1, "explanation": "If A is mother of B, B is A's child." },
+        { "id": "rea-vr-m4", "question": "Find the next letter: A, C, E, G, ?", "options": ["H", "I", "J", "K"], "answer": 1, "explanation": "Letters skip one each time, so next is I." },
+        { "id": "rea-vr-m5", "question": "Father's father is:", "options": ["Uncle", "Grandfather", "Brother", "Nephew"], "answer": 1, "explanation": "Father's father is grandfather." }
+      ],
+      "hard": [
+        { "id": "rea-vr-h1", "question": "A is B's sister and B is C's son. How is A related to C?", "options": ["Mother", "Daughter", "Sister", "Aunt"], "answer": 1, "explanation": "If B is C's son and A is B's sister, A is also C's daughter." },
+        { "id": "rea-vr-h2", "question": "If A is B's father and B is C's mother, A is C's:", "options": ["Father", "Grandfather", "Uncle", "Brother"], "answer": 1, "explanation": "A is the father of C's mother, so A is the grandfather." },
+        { "id": "rea-vr-h3", "question": "Pointing to a woman, Ravi said, 'She is the daughter of my grandfather's only son.' The woman is Ravi's:", "options": ["Mother", "Sister", "Aunt", "Niece"], "answer": 1, "explanation": "Grandfather's only son is Ravi's father; father's daughter is Ravi's sister." },
+        { "id": "rea-vr-h4", "question": "A is the brother of B. C is the mother of B. D is the father of C. How is D related to A?", "options": ["Father", "Grandfather", "Uncle", "Brother"], "answer": 1, "explanation": "C is A's mother and D is C's father, so D is A's grandfather." },
+        { "id": "rea-vr-h5", "question": "If A is the mother of B, then B is the _____ of A.", "options": ["Mother", "Child", "Sister", "Aunt"], "answer": 1, "explanation": "If A is mother of B, B is A's child." }
+      ],
+      "final": [
+        { "id": "rea-vr-f1", "question": "Find the next letter: A, C, E, G, ?", "options": ["H", "I", "J", "K"], "answer": 1, "explanation": "Letters skip one each time, so next is I." },
+        { "id": "rea-vr-f2", "question": "Father's father is:", "options": ["Uncle", "Grandfather", "Brother", "Nephew"], "answer": 1, "explanation": "Father's father is grandfather." },
+        { "id": "rea-vr-f3", "question": "A is B's sister and B is C's son. How is A related to C?", "options": ["Mother", "Daughter", "Sister", "Aunt"], "answer": 1, "explanation": "If B is C's son and A is B's sister, A is also C's daughter." },
+        { "id": "rea-vr-f4", "question": "If A is B's father and B is C's mother, A is C's:", "options": ["Father", "Grandfather", "Uncle", "Brother"], "answer": 1, "explanation": "A is the father of C's mother, so A is the grandfather." },
+        { "id": "rea-vr-f5", "question": "Pointing to a woman, Ravi said, 'She is the daughter of my grandfather's only son.' The woman is Ravi's:", "options": ["Mother", "Sister", "Aunt", "Niece"], "answer": 1, "explanation": "Grandfather's only son is Ravi's father; father's daughter is Ravi's sister." }
+      ]
+    },
+    "analytical-reasoning": {
+      "easy": [
+        { "id": "rea-ar-e1", "question": "Find the next number: 2, 4, 6, 8, ?", "options": ["9", "10", "11", "12"], "answer": 1, "explanation": "The pattern adds 2 each time." },
+        { "id": "rea-ar-e2", "question": "If CAT is coded as DBU, then DOG is coded as:", "options": ["EPH", "EPG", "EOH", "FPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-ar-e3", "question": "If NOTE is coded as ETON, the rule is:", "options": ["Reverse", "+1 shift", "-1 shift", "Vowel removal"], "answer": 0, "explanation": "The letters are reversed." },
+        { "id": "rea-ar-e4", "question": "If KING is coded as LJOH, then RING is coded as:", "options": ["SJOH", "SJPH", "RJOH", "TJPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-ar-e5", "question": "If ROAD is coded as URDG by shifting each letter +3, then PATH is coded as:", "options": ["SDWK", "SBWI", "QCVJ", "SDTJ"], "answer": 0, "explanation": "P->S, A->D, T->W, H->K gives SDWK." }
+      ],
+      "medium": [
+        { "id": "rea-ar-m1", "question": "Find the next number: 3, 6, 12, 24, ?", "options": ["36", "42", "48", "54"], "answer": 2, "explanation": "Each term doubles, so next is 48." },
+        { "id": "rea-ar-m2", "question": "If DELHI is coded as IHLED, the pattern is:", "options": ["Forward shift", "Reverse order", "Alternate skip", "Replace vowels"], "answer": 1, "explanation": "The letters are reversed." },
+        { "id": "rea-ar-m3", "question": "If 123 is coded as 234, then 456 is coded as:", "options": ["345", "567", "546", "455"], "answer": 1, "explanation": "Each digit increases by one." },
+        { "id": "rea-ar-m4", "question": "Find the next term: 4, 9, 19, 39, ?", "options": ["59", "69", "79", "89"], "answer": 2, "explanation": "Pattern is x2 + 1, so next is 79." },
+        { "id": "rea-ar-m5", "question": "Find the next letter: C, F, J, O, ?", "options": ["S", "T", "U", "V"], "answer": 2, "explanation": "Jumps are +3, +4, +5, so next is +6 to U." }
+      ],
+      "hard": [
+        { "id": "rea-ar-h1", "question": "Find the next term: AZ, BY, CX, ?", "options": ["DW", "EV", "FV", "DU"], "answer": 0, "explanation": "First letters move forward, second letters move backward." },
+        { "id": "rea-ar-h2", "question": "Find the next number: 1, 4, 9, 16, ?", "options": ["20", "24", "25", "27"], "answer": 2, "explanation": "These are squares; next is 25." },
+        { "id": "rea-ar-h3", "question": "Find the next number: 1, 8, 27, 64, ?", "options": ["81", "100", "125", "216"], "answer": 2, "explanation": "These are cubes; next is 5^3 = 125." },
+        { "id": "rea-ar-h4", "question": "Find the next number: 2, 4, 6, 8, ?", "options": ["9", "10", "11", "12"], "answer": 1, "explanation": "The pattern adds 2 each time." },
+        { "id": "rea-ar-h5", "question": "If CAT is coded as DBU, then DOG is coded as:", "options": ["EPH", "EPG", "EOH", "FPH"], "answer": 0, "explanation": "Each letter shifts forward by one." }
+      ],
+      "final": [
+        { "id": "rea-ar-f1", "question": "If NOTE is coded as ETON, the rule is:", "options": ["Reverse", "+1 shift", "-1 shift", "Vowel removal"], "answer": 0, "explanation": "The letters are reversed." },
+        { "id": "rea-ar-f2", "question": "If KING is coded as LJOH, then RING is coded as:", "options": ["SJOH", "SJPH", "RJOH", "TJPH"], "answer": 0, "explanation": "Each letter shifts forward by one." },
+        { "id": "rea-ar-f3", "question": "If ROAD is coded as URDG by shifting each letter +3, then PATH is coded as:", "options": ["SDWK", "SBWI", "QCVJ", "SDTJ"], "answer": 0, "explanation": "P->S, A->D, T->W, H->K gives SDWK." },
+        { "id": "rea-ar-f4", "question": "Find the next number: 3, 6, 12, 24, ?", "options": ["36", "42", "48", "54"], "answer": 2, "explanation": "Each term doubles, so next is 48." },
+        { "id": "rea-ar-f5", "question": "If DELHI is coded as IHLED, the pattern is:", "options": ["Forward shift", "Reverse order", "Alternate skip", "Replace vowels"], "answer": 1, "explanation": "The letters are reversed." }
+      ]
+    }
+  }
+}
