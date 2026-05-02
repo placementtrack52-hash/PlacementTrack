@@ -7,10 +7,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-[#f5efe7] font-sans text-ink antialiased transition-colors duration-300;
+    overflow-x: hidden;
   }
 
   html.dark body {
@@ -20,6 +22,16 @@
 
   * {
     @apply selection:bg-amber-200 selection:text-ink;
+  }
+
+  :root {
+    --dashboard-bg: #0a0e1a;
+    --dashboard-card: #1a1f35;
+    --dashboard-blue: #4361ee;
+    --dashboard-purple: #7c3aed;
+    --dashboard-text: #ffffff;
+    --dashboard-text-muted: #94a3b8;
+    --dashboard-border: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -31,4 +43,84 @@
   html.dark .glass-panel {
     background-color: rgba(23, 36, 48, 0.8);
   }
+  
+  html.dark .practice-feedback-header {
+    background-color: #18181b !important;
+  }
+  
+  html.dark .practice-feedback-header h1,
+  html.dark .practice-feedback-header p {
+    color: #fff !important;
+  }
+  
+  /* Badges page dark mode - forces dark bg and white text */
+  html.dark body:has(.badges-page) {
+    background-color: #18181b !important;
+  }
+  
+  html.dark body:has(.badges-page) * {
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+  
+  html.dark body:has(.badges-page) .bg-white,
+  html.dark body:has(.badges-page) .bg-slate-50,
+  html.dark body:has(.badges-page) .bg-slate-100 {
+    background-color: #27272a !important;
+  }
+  
+  html.dark body:has(.badges-page) .text-slate-500,
+  html.dark body:has(.badges-page) .text-slate-400,
+  html.dark body:has(.badges-page) .text-slate-600,
+  html.dark body:has(.badges-page) .text-slate-800,
+  html.dark body:has(.badges-page) .text-slate-700,
+  html.dark body:has(.badges-page) .text-slate-300,
+  html.dark body:has(.badges-page) .text-slate-200,
+  html.dark body:has(.badges-page) .text-slate-900 {
+    color: #fff !important;
+  }
+  
+  html.dark body:has(.badges-page) .bg-slate-200 {
+    background-color: #3f3f46 !important;
+  }
+  
+  /* Next Achievement section - always dark in dark mode */
+  html.dark .from-amber-50.to-yellow-50,
+  html.dark [class*="from-amber-50"],
+  html.dark [class*="to-yellow-50"] {
+    background-color: #18181b !important;
+  }
+  
+  html.dark .text-amber-700,
+  html.dark .text-amber-600 {
+    color: #fff !important;
+  }
+}
+
+@keyframes question-card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.question-card-enter {
+  animation: question-card-enter 0.35s ease;
+}
+
+.study-dashboard {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(67, 97, 238, 0.18), transparent 24%),
+    radial-gradient(circle at 88% 20%, rgba(124, 58, 237, 0.16), transparent 26%),
+    linear-gradient(180deg, #0a0e1a 0%, #0d1224 100%);
+}
+
+.study-dashboard .dashboard-card {
+  background-color: rgba(26, 31, 53, 0.78);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
 }

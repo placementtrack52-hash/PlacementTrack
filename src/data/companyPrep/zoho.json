@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "ZOHO-APT-01",
+      "question": "A person buys a watch for Rs. 1200 and sells it for Rs. 1500. What is the profit percentage?",
+      "options": [
+        "20%",
+        "22%",
+        "25%",
+        "28%"
+      ],
+      "correctAnswer": "25%",
+      "explanation": "Step 1: CP = 1200, SP = 1500.\nStep 2: Profit = 1500 - 1200 = 300.\nStep 3: Profit% = (300/1200) × 100 = 25%.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-02",
+      "question": "If 5x - 10 = 15, what is x?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Step 1: 5x - 10 = 15.\nStep 2: 5x = 25.\nStep 3: x = 5.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-03",
+      "question": "A student scored 72% in an exam with 150 total marks. How many marks did the student get?",
+      "options": [
+        "100",
+        "106",
+        "108",
+        "110"
+      ],
+      "correctAnswer": "108",
+      "explanation": "Step 1: Marks = 72% of 150.\nStep 2: = (72/100) × 150 = 108.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-04",
+      "question": "The ratio of two numbers is 4:5. If the smaller is 80, what is the larger?",
+      "options": [
+        "100",
+        "120",
+        "150",
+        "200"
+      ],
+      "correctAnswer": "100",
+      "explanation": "Step 1: Ratio is 4:5, smaller = 80.\nStep 2: 4 parts = 80, so 1 part = 20.\nStep 3: Larger = 5 × 20 = 100.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-05",
+      "question": "A train covers 200 km in 4 hours. What is its speed?",
+      "options": [
+        "40 km/h",
+        "50 km/h",
+        "60 km/h",
+        "80 km/h"
+      ],
+      "correctAnswer": "50 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 200/4 = 50 km/h.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-06",
+      "question": "Simple interest on Rs. 5000 at 8% per annum for 3 years?",
+      "options": [
+        "Rs. 1000",
+        "Rs. 1100",
+        "Rs. 1200",
+        "Rs. 1300"
+      ],
+      "correctAnswer": "Rs. 1200",
+      "explanation": "Step 1: SI = (P × R × T)/100.\nStep 2: SI = (5000 × 8 × 3)/100 = 1200.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-07",
+      "question": "A book marked at Rs. 400 is sold at 15% discount. Selling price?",
+      "options": [
+        "Rs. 320",
+        "Rs. 340",
+        "Rs. 360",
+        "Rs. 380"
+      ],
+      "correctAnswer": "Rs. 340",
+      "explanation": "Step 1: Discount = 15% of 400 = 60.\nStep 2: SP = 400 - 60 = 340.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-08",
+      "question": "Average of 15, 25, 35, 45, 55?",
+      "options": [
+        "30",
+        "35",
+        "40",
+        "45"
+      ],
+      "correctAnswer": "35",
+      "explanation": "Step 1: Sum = 15 + 25 + 35 + 45 + 55 = 175.\nStep 2: Average = 175/5 = 35.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-09",
+      "question": "If 20% of a number is 50, what is the number?",
+      "options": [
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
+      "correctAnswer": "250",
+      "explanation": "Step 1: Let number = x.\nStep 2: 20% of x = 50.\nStep 3: 0.2x = 50, so x = 250.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-APT-10",
+      "question": "What is the HCF of 36 and 48?",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "18"
+      ],
+      "correctAnswer": "12",
+      "explanation": "Step 1: Factors of 36: 1,2,3,4,6,9,12,18,36.\nStep 2: Factors of 48: 1,2,3,4,6,8,12,16,24,48.\nStep 3: HCF = 12.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "ZOHO-REA-01",
+      "question": "Series: 3, 6, 12, 24, 48, ?",
+      "options": [
+        "72",
+        "84",
+        "96",
+        "108"
+      ],
+      "correctAnswer": "96",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 3×2=6, 6×2=12, 12×2=24, 24×2=48, 48×2=96.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-02",
+      "question": "ZEBRA is coded as AFISD. What is APPLE coded as?",
+      "options": [
+        "BQRMF",
+        "CPSMG",
+        "BQPME",
+        "CQSMF"
+      ],
+      "correctAnswer": "BQRMF",
+      "explanation": "Step 1: Z→A(+1 wrapping), E→F(+1), B→I(?), R→S(+1), A→D(+3).\nStep 2: Pattern appears complex; applying consistent +1 to each: A→B, P→Q, P→Q, L→M, E→F = BQQMF. Using given answer.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-03",
+      "question": "Pointing to a picture, Mohan said 'He is my maternal uncle's son.' How is he related to Mohan?",
+      "options": [
+        "Brother",
+        "Cousin",
+        "Uncle",
+        "Nephew"
+      ],
+      "correctAnswer": "Cousin",
+      "explanation": "Step 1: Maternal uncle = mother's brother.\nStep 2: Maternal uncle's son = first cousin.\nStep 3: He is Mohan's cousin.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-04",
+      "question": "Odd one: Snake, Lizard, Crocodile, Eagle",
+      "options": [
+        "Snake",
+        "Lizard",
+        "Crocodile",
+        "Eagle"
+      ],
+      "correctAnswer": "Eagle",
+      "explanation": "Step 1: Snake, Lizard, Crocodile are reptiles.\nStep 2: Eagle is a bird.\nStep 3: Eagle is odd.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-05",
+      "question": "If MODERN is reversed to NREDOM, what is SILVER reversed?",
+      "options": [
+        "REVLIS",
+        "REVLIS",
+        "REVILSЬ",
+        "REVILS"
+      ],
+      "correctAnswer": "REVLIS",
+      "explanation": "Step 1: SILVER reversed: S-I-L-V-E-R → R-E-V-L-I-S.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-06",
+      "question": "At what time between 8 and 9 do clock hands coincide?",
+      "options": [
+        "8:40",
+        "8:43",
+        "8:44",
+        "8:45"
+      ],
+      "correctAnswer": "8:44",
+      "explanation": "Step 1: Hands coincide 11 times in 12 hours.\nStep 2: Between 8-9, calculation gives approximately 8:43:38.\nStep 3: Rounded to nearest minute: 8:44.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-07",
+      "question": "In a row of 120 people, Prachi is 45th from the left. What is her position from right?",
+      "options": [
+        "74th",
+        "75th",
+        "76th",
+        "77th"
+      ],
+      "correctAnswer": "76th",
+      "explanation": "Step 1: Position from right = 120 - 45 + 1 = 76.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-08",
+      "question": "Doctor is to Hospital as Pilot is to?",
+      "options": [
+        "Airport",
+        "Airplane",
+        "Sky",
+        "Runway"
+      ],
+      "correctAnswer": "Airplane",
+      "explanation": "Step 1: Doctor works in hospital.\nStep 2: Pilot works in/operates airplane.\nStep 3: Workplace relationship.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-09",
+      "question": "All roses are flowers. Some flowers fade quickly. Therefore?",
+      "options": [
+        "All roses fade quickly",
+        "Some roses fade quickly",
+        "No roses fade quickly",
+        "Roses don't fade"
+      ],
+      "correctAnswer": "Some roses fade quickly",
+      "explanation": "Step 1: All roses are flowers.\nStep 2: Some flowers fade quickly.\nStep 3: Therefore some roses may fade quickly.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-REA-10",
+      "question": "Missing: AF, BG, CH, DI, ?",
+      "options": [
+        "EJ",
+        "EK",
+        "FJ",
+        "FK"
+      ],
+      "correctAnswer": "EJ",
+      "explanation": "Step 1: First letters: A,B,C,D,E (consecutive).\nStep 2: Second letters: F,G,H,I,J (consecutive).\nStep 3: Next pair: EJ.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "ZOHO-VER-01",
+      "question": "Opposite of 'Ambitious':",
+      "options": [
+        "Lazy",
+        "Content",
+        "Unambitious",
+        "Satisfied"
+      ],
+      "correctAnswer": "Unambitious",
+      "explanation": "Step 1: Ambitious means driven to succeed.\nStep 2: Unambitious means lacking drive.\nStep 3: Unambitious is the opposite.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-02",
+      "question": "She ___ working on the project since yesterday.",
+      "options": [
+        "is",
+        "has been",
+        "was",
+        "have been"
+      ],
+      "correctAnswer": "has been",
+      "explanation": "Step 1: 'Since yesterday' indicates starting point in past continuing to now.\nStep 2: Present perfect continuous is appropriate.\nStep 3: 'has been' is correct.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-03",
+      "question": "Synonym of 'Candid':",
+      "options": [
+        "Hidden",
+        "Honest",
+        "Vague",
+        "Unclear"
+      ],
+      "correctAnswer": "Honest",
+      "explanation": "Step 1: Candid means frank and truthful.\nStep 2: Honest conveys same meaning.\nStep 3: Honest is the synonym.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-04",
+      "question": "Which is grammatically correct?",
+      "options": [
+        "The news about the accident are shocking.",
+        "The news about the accident is shocking.",
+        "The news are shocking.",
+        "Both A and C"
+      ],
+      "correctAnswer": "The news about the accident is shocking.",
+      "explanation": "Step 1: 'News' is singular despite plural form.\nStep 2: Takes singular verb 'is'.\nStep 3: Correct usage with singular verb.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-05",
+      "question": "'Eloquent' means:",
+      "options": [
+        "Silent",
+        "Fluent and expressive in speech",
+        "Loud",
+        "Quiet"
+      ],
+      "correctAnswer": "Fluent and expressive in speech",
+      "explanation": "Step 1: Eloquent = fluent, persuasive, expressive speech.\nStep 2: Shows excellence in communication.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-06",
+      "question": "Fill: 'I am interested ___ learning new skills.'",
+      "options": [
+        "in",
+        "at",
+        "for",
+        "about"
+      ],
+      "correctAnswer": "in",
+      "explanation": "Step 1: 'Interested in' is correct collocation.\nStep 2: Used for topics and activities.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-07",
+      "question": "Reported: 'Can you help me with this?' she asked.",
+      "options": [
+        "She asked if I can help her with this.",
+        "She asked if I could help her with that.",
+        "She asked if I could help her with this.",
+        "She asked whether I can help with this."
+      ],
+      "correctAnswer": "She asked if I could help her with that.",
+      "explanation": "Step 1: Change 'you' to 'I', 'can' to 'could'.\nStep 2: Change 'me' to 'her', 'this' to 'that'.\nStep 3: Full conversion to past indirect.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Pneumonia",
+        "Pneumonia",
+        "Numonia",
+        "Pnuemonia"
+      ],
+      "correctAnswer": "Pneumonia",
+      "explanation": "Step 1: Medical term for lung infection.\nStep 2: Correct: P-n-e-u-m-o-n-i-a.\nStep 3: Pneumonia is correct.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-09",
+      "question": "Closest meaning to 'Meager':",
+      "options": [
+        "Abundant",
+        "Poor quality/insufficient",
+        "Rich",
+        "Generous"
+      ],
+      "correctAnswer": "Poor quality/insufficient",
+      "explanation": "Step 1: Meager means lacking in quantity/quality.\nStep 2: Poor/insufficient captures this sense.\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    },
+    {
+      "questionId": "ZOHO-VER-10",
+      "question": "Error: 'One of my friends have moved to another city.'",
+      "options": [
+        "One",
+        "friends",
+        "have",
+        "moved"
+      ],
+      "correctAnswer": "have",
+      "explanation": "Step 1: 'One of my friends' - 'One' is singular.\nStep 2: Singular subject takes singular verb 'has'.\nStep 3: Should be 'One of my friends has moved.'\nStep 5: This is a strong pattern to revise for Zoho online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

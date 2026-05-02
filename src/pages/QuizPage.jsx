@@ -7,8 +7,9 @@ import PageShell from '../components/PageShell'
 import ProgressBar from '../components/ProgressBar'
 import QuizReview from '../components/QuizReview'
 import { useProgress } from '../context/ProgressContext'
-import { playCorrectSound, playWrongSound } from '../utils/audio'
 import { buildIncorrectEntries, getTopicMeta } from '../utils/learning'
+import HelpfulWidget from '../components/HelpfulWidget'
+import ReportIssueButton from '../components/ReportIssueButton'
 
 const levelBaseTimes = {
   easy: 90,
@@ -29,6 +30,7 @@ const QuizPage = () => {
   const [submitted, setSubmitted] = useState(false)
   const [resultData, setResultData] = useState(null)
   const [secondsLeft, setSecondsLeft] = useState(levelBaseTimes[level] ?? 90)
+  const [timerEnabled, setTimerEnabled] = useState(true)
   const questionStartedAtRef = useRef(Date.now())
   const hasSubmittedRef = useRef(false)
 
@@ -45,12 +47,12 @@ const QuizPage = () => {
   }, [mode, level])
 
   useEffect(() => {
-    if (submitted) return undefined
+    if (submitted || !timerEnabled) return undefined
     const interval = setInterval(() => {
       setSecondsLeft((current) => (current <= 1 ? 0 : current - 1))
     }, 1000)
     return () => clearInterval(interval)
-  }, [submitted])
+  }, [submitted, timerEnabled])
 
   const buildFinalQuestionTimes = () => ({
     ...questionTimes,
@@ -113,6 +115,13 @@ const QuizPage = () => {
   }, [secondsLeft, questionSet.length])
 
   const result = useMemo(() => resultData, [resultData])
+  const resultRef = useRef(null)
+
+  useEffect(() => {
+    if (submitted && resultRef.current) {
+      resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [submitted])
 
   if (!meta || !questionSet.length) {
     return (
@@ -145,57 +154,63 @@ const QuizPage = () => {
   return (
     <PageShell
       title={`${meta.topic.name} - ${level} quiz`}
-      subtitle="Use Speed Mode for time pressure or Accuracy Mode for calmer solving. Every answer and mistake is stored locally."
+      subtitle="Use Speed Mode for time pressure or Accuracy Mode for calmer solving. Every answer and mistake syncs to your account."
       actions={
         <>
-          <button type="button" onClick={() => setFocusMode((current) => !current)} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-[#172430] dark:text-slate-100">
+          <button type="button" onClick={() => setFocusMode((current) => !current)} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]">
             {focusMode ? 'Exit focus mode' : 'Focus mode'}
           </button>
-          <Link to={`/subjects/${subjectId}/topics/${topicId}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-[#172430] dark:text-slate-100">
+          <Link to={`/subjects/${subjectId}/topics/${topicId}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]">
             Back to topic
           </Link>
         </>
       }
     >
-      <div className={`grid gap-6 ${focusMode ? '' : 'lg:grid-cols-[1.05fr_0.95fr]'}`}>
-        <section className="relative rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
+      <div className="space-y-6">
+        <section className="relative rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-black">
           {submitted && result?.score >= 80 ? <ConfettiBurst /> : null}
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Question {activeIndex + 1} of {questionSet.length}</h2>
             <div className="flex items-center gap-3">
-              <span className="rounded-full bg-sand px-4 py-2 text-sm text-ink dark:bg-[#223244] dark:text-slate-100">{secondsLeft}s left</span>
-              <div className="rounded-full bg-[#faf6f0] p-1 dark:bg-[#111b25]">
+              <div className="flex rounded-full bg-[#f0f0f0] p-1 dark:bg-zinc-800">
                 {['accuracy', 'speed'].map((modeOption) => (
-                  <button key={modeOption} type="button" onClick={() => setMode(modeOption)} className={`rounded-full px-4 py-2 text-sm font-semibold capitalize ${mode === modeOption ? 'bg-ink text-white dark:bg-white dark:text-[#0f1720]' : 'text-slate dark:text-slate-300'}`}>
+                  <button key={modeOption} type="button" onClick={() => setMode(modeOption)} className={`rounded-full px-4 py-2 text-sm font-semibold capitalize ${mode === modeOption ? 'bg-ink text-white dark:bg-emerald-500 dark:text-white' : 'text-slate dark:text-white/70'}`}>
                     {modeOption}
                   </button>
                 ))}
               </div>
+              <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink dark:bg-emerald-500 dark:text-white">
+                {Math.floor(secondsLeft / 60)}:{(secondsLeft % 60).toString().padStart(2, '0')}
+              </span>
+              <label className="inline-flex items-center gap-2 text-sm text-slate dark:text-white">
+                <input type="checkbox" checked={timerEnabled} onChange={(event) => setTimerEnabled(event.target.checked)} className="h-4 w-4 rounded border-ink/20 text-moss focus:ring-moss" />
+                Timer
+              </label>
             </div>
           </div>
           <div className="mt-4">
             <ProgressBar value={progressValue} />
           </div>
 
-          <div className="mt-6 rounded-[1.5rem] bg-[#faf6f0] p-5 dark:bg-[#111b25]">
+          <div className="mt-6 rounded-[1.5rem] bg-[#faf6f0] p-5 dark:bg-zinc-800">
             <p className="font-semibold text-ink dark:text-white">{currentQuestion.question}</p>
             <div className="mt-4 space-y-3">
               {currentQuestion.options.map((option, optionIndex) => (
-                <label key={option} className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm transition ${answers[activeIndex] === optionIndex ? 'border-moss bg-emerald-50 dark:bg-[#10281f]' : 'border-black/5 bg-white dark:border-white/10 dark:bg-[#172430]'}`}>
+                <label key={option} className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm transition ${answers[activeIndex] === optionIndex ? 'border-moss bg-emerald-50 dark:border-emerald-500 dark:bg-emerald-500/20' : 'border-black/5 bg-white dark:border-white/10 dark:bg-zinc-700'}`}>
                   <input type="radio" name={`question-${activeIndex}`} checked={answers[activeIndex] === optionIndex} onChange={() => handleAnswerChange(optionIndex)} className="h-4 w-4 border-ink/20 text-moss focus:ring-moss" />
-                  <span className="text-slate dark:text-slate-200">{option}</span>
+                  <span className="text-slate dark:text-white">{option}</span>
                 </label>
               ))}
             </div>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-            <button type="button" onClick={() => moveToQuestion(Math.max(0, activeIndex - 1))} disabled={activeIndex === 0} className="rounded-full bg-[#faf6f0] px-5 py-3 text-sm font-semibold text-ink disabled:opacity-40 dark:bg-[#111b25] dark:text-slate-100">
+            <button type="button" onClick={() => moveToQuestion(Math.max(0, activeIndex - 1))} disabled={activeIndex === 0} className="rounded-full bg-[#faf6f0] px-5 py-3 text-sm font-semibold text-ink disabled:opacity-40 dark:bg-zinc-800 dark:text-white">
               Previous
             </button>
             <div className="flex flex-wrap gap-2">
               {questionSet.map((_, index) => (
-                <button key={index} type="button" onClick={() => moveToQuestion(index)} className={`h-10 w-10 rounded-full text-sm font-semibold ${activeIndex === index ? 'bg-ink text-white dark:bg-white dark:text-[#0f1720]' : answers[index] !== undefined ? 'bg-[#eef7f2] text-ink dark:bg-[#10281f] dark:text-slate-100' : 'bg-[#faf6f0] text-slate dark:bg-[#111b25] dark:text-slate-300'}`}>
+                <button key={index} type="button" onClick={() => moveToQuestion(index)} className={`h-10 w-10 rounded-full text-sm font-semibold ${activeIndex === index ? 'bg-ink text-white dark:bg-white dark:text-[#0f1720]' : answers[index] !== undefined ? 'bg-[#eef7f2] text-ink dark:bg-emerald-500/20 dark:text-white' : 'bg-[#faf6f0] text-slate dark:bg-zinc-800 dark:text-white'}`}>
                   {index + 1}
                 </button>
               ))}
@@ -212,34 +227,28 @@ const QuizPage = () => {
           </div>
         </section>
 
-        {!focusMode ? (
-          <section className="space-y-6">
-            <div className="rounded-[1.75rem] bg-ink p-6 text-white shadow-soft dark:bg-[#111b25]">
-              <p className="text-sm uppercase tracking-[0.25em] text-white/70">Mode guidance</p>
-              <p className="mt-4 text-sm leading-7 text-white/85">
-                Speed Mode uses tighter timing to train quick decision-making. Accuracy Mode gives more room and is better when rebuilding fundamentals.
-              </p>
+        {!focusMode && submitted && result ? (
+          <>
+            <div ref={resultRef} className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-black">
+              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Scorecard</h2>
+              <p className="mt-3 text-4xl font-bold text-moss dark:text-emerald-400">{result.score}%</p>
+              <p className="mt-2 text-sm text-slate dark:text-white/70">{result.correctAnswers} of {result.totalQuestions} answered correctly</p>
+              <p className="mt-2 text-sm text-slate dark:text-white/70">Average speed: {result.averageTimePerQuestion}s per question</p>
+              <p className="mt-5 rounded-2xl bg-[#fff4e9] px-4 py-4 text-sm leading-6 text-ink dark:bg-zinc-800 dark:text-white">{result.quote}</p>
             </div>
-
-            {submitted && result ? (
-              <>
-                <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
-                  <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Scorecard</h2>
-                  <p className="mt-3 text-4xl font-bold text-moss">{result.score}%</p>
-                  <p className="mt-2 text-sm text-slate dark:text-slate-300">{result.correctAnswers} of {result.totalQuestions} answered correctly</p>
-                  <p className="mt-2 text-sm text-slate dark:text-slate-300">Average speed: {result.averageTimePerQuestion}s per question</p>
-                  <p className="mt-5 rounded-2xl bg-[#fff4e9] px-4 py-4 text-sm leading-6 text-ink dark:bg-[#2a1f18] dark:text-slate-100">{result.quote}</p>
-                </div>
-                <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
-                  <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Review answers</h2>
-                  <div className="mt-5">
-                    <QuizReview questions={questionSet} answers={answers} />
-                  </div>
-                </div>
-              </>
-            ) : null}
-          </section>
+            <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-black">
+              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Review answers</h2>
+              <div className="mt-5">
+                <QuizReview questions={questionSet} answers={answers} />
+              </div>
+            </div>
+          </>
         ) : null}
+
+        <div className="flex flex-col sm:flex-row items-center gap-4 justify-between rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-black">
+          <HelpfulWidget contextData={{ page: 'Quiz', subjectId, topicId, level }} />
+          <ReportIssueButton contextData={{ page: 'Quiz', subjectId, topicId, level }} />
+        </div>
       </div>
     </PageShell>
   )

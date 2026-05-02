@@ -9,16 +9,26 @@ const FeedbackPage = () => {
   const [rating, setRating] = useState(5)
   const [message, setMessage] = useState('')
   const [saved, setSaved] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    submitFeedback({ rating, message })
+    setSaved(false)
+    setError('')
+
+    const result = await submitFeedback({ rating, message })
+
+    if (!result.success) {
+      setError(result.message)
+      return
+    }
+
     setSaved(true)
     setMessage('')
   }
 
   return (
-    <PageShell title="Feedback" subtitle="Share what feels smooth, what feels confusing, and what would make Prep Master even more useful for your study flow.">
+    <PageShell title="Feedback" subtitle="Share what feels smooth, what feels confusing, and what would make Placement Track even more useful for your study flow.">
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <section className="rounded-[1.75rem] bg-white p-6 shadow-soft">
           <h2 className="font-display text-2xl font-semibold text-ink">Rate your experience</h2>
@@ -37,7 +47,8 @@ const FeedbackPage = () => {
               <label className="text-sm font-medium text-ink">Feedback</label>
               <textarea rows="6" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="Tell us what’s working well and what should improve." className="mt-2 w-full rounded-3xl border border-black/10 px-4 py-3 outline-none transition focus:border-moss" required />
             </div>
-            {saved ? <p className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-moss">Thanks — your feedback is saved in LocalStorage.</p> : null}
+            {saved ? <p className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-moss">Thanks. Your feedback is now saved to MongoDB.</p> : null}
+            {error ? <p className="rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p> : null}
             <button type="submit" className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white">Submit feedback</button>
           </form>
         </section>

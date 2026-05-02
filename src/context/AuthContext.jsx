@@ -1,8 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import { getData, saveData } from '../utils/localStorage'
-
-const USERS_KEY = 'prepMasterUsers'
-const SESSION_KEY = 'prepMasterSession'
+import { authApi } from '../services/api'
 
 const AuthContext = createContext(null)
 
@@ -11,54 +8,66 @@ export const AuthProvider = ({ children }) => {
   const [isHydrating, setIsHydrating] = useState(true)
 
   useEffect(() => {
-    const session = getData(SESSION_KEY, null)
-    if (session) setUser(session)
-    setIsHydrating(false)
+    let cancelled = false
+
+    const hydrateUser = async () => {
+      try {
+        const { user: currentUser } = await authApi.me()
+        if (!cancelled) {
+          setUser(currentUser)
+        }
+      } catch {
+        if (!cancelled) {
+          setUser(null)
+        }
+      } finally {
+        if (!cancelled) {
+          setIsHydrating(false)
+        }
+      }
+    }
+
+    hydrateUser()
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
-  const signup = ({ name, email, password }) => {
-    const normalizedEmail = email.trim().toLowerCase()
-    const users = getData(USERS_KEY, [])
-    const exists = users.some((item) => item.email === normalizedEmail)
-
-    if (exists) {
-      return { success: false, message: 'An account already exists for this email.' }
+  const signup = async ({ name, email, password }) => {
+    try {
+      const { user: nextUser, message } = await authApi.signup({ name, email, password })
+      setUser(nextUser)
+      return { success: true, message }
+    } catch (error) {
+      const message =
+        error?.message === 'Failed to fetch'
+          ? 'Cannot connect to server. Make sure the backend is running.'
+          : (error?.message ?? 'Signup failed. Please try again.')
+      return { success: false, message }
     }
-
-    const nextUser = {
-      id: crypto.randomUUID(),
-      name: name.trim(),
-      email: normalizedEmail,
-      password,
-      createdAt: new Date().toISOString(),
-    }
-
-    const updatedUsers = [...users, nextUser]
-    saveData(USERS_KEY, updatedUsers)
-    saveData(SESSION_KEY, nextUser)
-    setUser(nextUser)
-
-    return { success: true, message: 'Account created successfully.' }
   }
 
-  const login = ({ email, password }) => {
-    const normalizedEmail = email.trim().toLowerCase()
-    const users = getData(USERS_KEY, [])
-    const existingUser = users.find(
-      (item) => item.email === normalizedEmail && item.password === password,
-    )
-
-    if (!existingUser) {
-      return { success: false, message: 'Invalid email or password. Try again.' }
+  const login = async ({ email, password }) => {
+    try {
+      const { user: nextUser, message } = await authApi.login({ email, password })
+      setUser(nextUser)
+      return { success: true, message }
+    } catch (error) {
+      const message =
+        error?.message === 'Failed to fetch'
+          ? 'Cannot connect to server. Make sure the backend is running.'
+          : (error?.message ?? 'Login failed. Please try again.')
+      return { success: false, message }
     }
-
-    saveData(SESSION_KEY, existingUser)
-    setUser(existingUser)
-    return { success: true, message: 'Logged in successfully.' }
   }
 
-  const logout = () => {
-    localStorage.removeItem(SESSION_KEY)
+  const logout = async () => {
+    try {
+      await authApi.logout()
+    } catch {
+      // Clear the local session state even if the logout request fails.
+    }
     setUser(null)
   }
 

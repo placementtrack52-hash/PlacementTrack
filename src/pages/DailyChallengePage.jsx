@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageShell from '../components/PageShell'
 import ProgressBar from '../components/ProgressBar'
@@ -36,14 +36,21 @@ const DailyChallengePage = () => {
   }
 
   const activeResult = result ?? (submitted ? scorePreview : null)
+  const resultRef = useRef(null)
+
+  useEffect(() => {
+    if (activeResult && resultRef.current) {
+      resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [activeResult])
 
   return (
     <PageShell
       title="Daily challenge"
       subtitle="Five rotating questions, refreshed by the day. Great for keeping your streak alive and your brain warm."
-      actions={<Link to="/dashboard" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-[#172430] dark:text-slate-100">Back to dashboard</Link>}
+      actions={<Link to="/dashboard" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]">Back to dashboard</Link>}
     >
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="space-y-6">
         <section className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
           <div className="flex items-center justify-between">
             <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Today's 5 questions</h2>
@@ -74,21 +81,14 @@ const DailyChallengePage = () => {
           ) : null}
         </section>
 
-        <section className="space-y-6">
-          <div className="rounded-[1.75rem] bg-ink p-6 text-white shadow-soft dark:bg-[#111b25]">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/70">Challenge benefit</p>
-            <p className="mt-4 text-sm leading-7 text-white/85">This keeps streaks, speed, and revision muscle active even on a busy day.</p>
-          </div>
-
-          {activeResult ? (
-            <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
-              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Daily result</h2>
-              <p className="mt-3 text-4xl font-bold text-moss">{activeResult.score}%</p>
-              <p className="mt-2 text-sm text-slate dark:text-slate-300">{activeResult.correctAnswers} of {activeResult.totalQuestions} correct</p>
-              <p className="mt-2 text-sm text-slate dark:text-slate-300">Time used: {activeResult.timeTakenSeconds}s</p>
-            </div>
-          ) : null}
-        </section>
+        {activeResult ? (
+          <section ref={resultRef} className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
+            <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Daily result</h2>
+            <p className="mt-3 text-4xl font-bold text-moss">{activeResult.score}%</p>
+            <p className="mt-2 text-sm text-slate dark:text-slate-300">{activeResult.correctAnswers} of {activeResult.totalQuestions} correct</p>
+            <p className="mt-2 text-sm text-slate dark:text-slate-300">Time used: {activeResult.timeTakenSeconds}s</p>
+          </section>
+        ) : null}
       </div>
     </PageShell>
   )

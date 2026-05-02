@@ -8,10 +8,14 @@ const LoginPage = () => {
   const { login } = useAuth()
   const [form, setForm] = useState({ email: '', password: '' })
   const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = login(form)
+    setError('')
+    setIsSubmitting(true)
+    const result = await login(form)
+    setIsSubmitting(false)
 
     if (!result.success) {
       setError(result.message)
@@ -24,14 +28,14 @@ const LoginPage = () => {
   return (
     <AuthShell
       title="Prep smarter, stay consistent, and see every win."
-      subtitle="Prep Master gives college students a calm, modern space to revise notes, attempt quizzes, and track progress across aptitude, verbal, and reasoning."
+      subtitle="Placement Track gives college students a calm, modern space to revise notes, attempt quizzes, and track progress across aptitude, verbal, and reasoning."
       aside={
         <>
           <p className="text-sm uppercase tracking-[0.2em] text-white/70">Why students stay here</p>
           <div className="mt-4 space-y-4 text-sm leading-6 text-white/85">
             <p>Structured topic notes help you move from basics to shortcuts without feeling scattered.</p>
-            <p>Every quiz result, topic completion, and feedback entry stays safely in your browser using LocalStorage.</p>
-            <p>It’s your own private prep cockpit, minus the backend drama.</p>
+            <p>Every quiz result, topic completion, and feedback entry now syncs with your account.</p>
+            <p>It’s your own private prep cockpit, now backed by MongoDB.</p>
           </div>
         </>
       }
@@ -65,9 +69,10 @@ const LoginPage = () => {
         {error ? <p className="rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p> : null}
         <button
           type="submit"
-          className="w-full rounded-2xl bg-ink px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px]"
+          disabled={isSubmitting}
+          className="w-full rounded-2xl bg-ink px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px] disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Enter dashboard
+          {isSubmitting ? 'Logging in...' : 'Enter dashboard'}
         </button>
       </form>
 

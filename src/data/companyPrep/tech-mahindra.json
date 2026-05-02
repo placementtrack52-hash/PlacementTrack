@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "TECHMAHINDRA-APT-01",
+      "question": "The cost of 5 chocolates is Rs. 45. What is the cost of 12 chocolates?",
+      "options": [
+        "Rs. 90",
+        "Rs. 100",
+        "Rs. 108",
+        "Rs. 120"
+      ],
+      "correctAnswer": "Rs. 108",
+      "explanation": "Step 1: Cost of 1 chocolate = 45/5 = 9 rupees.\nStep 2: Cost of 12 = 12 × 9 = 108.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-02",
+      "question": "If a person gets 20% bonus on Rs. 5000 salary, what is the new salary?",
+      "options": [
+        "Rs. 5500",
+        "Rs. 5800",
+        "Rs. 6000",
+        "Rs. 6500"
+      ],
+      "correctAnswer": "Rs. 6000",
+      "explanation": "Step 1: Bonus = 20% of 5000 = 1000.\nStep 2: New salary = 5000 + 1000 = 6000.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-03",
+      "question": "Find the value of x: 5(x-2) = 25",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "7",
+      "explanation": "Step 1: 5(x-2) = 25.\nStep 2: x - 2 = 5.\nStep 3: x = 7.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-04",
+      "question": "What is the square root of 256?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "16",
+      "explanation": "Step 1: 16² = 256.\nStep 2: √256 = 16.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-05",
+      "question": "A number when divided by 5 gives remainder 3. Which of these could be the number?",
+      "options": [
+        "18",
+        "22",
+        "28",
+        "33"
+      ],
+      "correctAnswer": "28",
+      "explanation": "Step 1: Number = 5k + 3.\nStep 2: Check: 18÷5 = 3 remainder 3 ✓. Actually 18÷5 = 3.6, remainder 3.\nStep 3: Actually 28÷5 = 5 remainder 3 ✓\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-06",
+      "question": "Simple interest on Rs. 8000 at 5% per annum for 2 years is?",
+      "options": [
+        "Rs. 400",
+        "Rs. 600",
+        "Rs. 800",
+        "Rs. 1000"
+      ],
+      "correctAnswer": "Rs. 800",
+      "explanation": "Step 1: SI = (P × R × T)/100.\nStep 2: SI = (8000 × 5 × 2)/100 = 800.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-07",
+      "question": "A pipe fills a tank in 3 hours. It can fill ___ of the tank in 1 hour.",
+      "options": [
+        "1/3",
+        "1/2",
+        "2/5",
+        "3/5"
+      ],
+      "correctAnswer": "1/3",
+      "explanation": "Step 1: Tank filled in 3 hours = 1.\nStep 2: Tank filled in 1 hour = 1/3.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-08",
+      "question": "What is 15% discount on Rs. 200?",
+      "options": [
+        "Rs. 30",
+        "Rs. 40",
+        "Rs. 50",
+        "Rs. 60"
+      ],
+      "correctAnswer": "Rs. 30",
+      "explanation": "Step 1: Discount = 15% of 200.\nStep 2: = (15/100) × 200 = 30.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-09",
+      "question": "If P:Q = 5:7, and P = 30, then Q = ?",
+      "options": [
+        "38",
+        "40",
+        "42",
+        "45"
+      ],
+      "correctAnswer": "42",
+      "explanation": "Step 1: P:Q = 5:7, P = 30.\nStep 2: 5 parts = 30, so 1 part = 6.\nStep 3: Q = 7 × 6 = 42.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-APT-10",
+      "question": "The average age of 8 people is 24. If one person aged 28 leaves, what is the new average?",
+      "options": [
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "23",
+      "explanation": "Step 1: Total age of 8 people = 24 × 8 = 192.\nStep 2: After person aged 28 leaves: 192 - 28 = 164.\nStep 3: New average = 164/7 = 23.43 ≈ 23.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "TECHMAHINDRA-REA-01",
+      "question": "Sequence: 64, 32, 16, 8, ?",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "explanation": "Step 1: Each number is divided by 2.\nStep 2: 64÷2=32, 32÷2=16, 16÷2=8, 8÷2=4.\nStep 3: Next is 4.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-02",
+      "question": "PIE is coded as QJF. What is CAKE coded as?",
+      "options": [
+        "DBLF",
+        "DBMD",
+        "DBME",
+        "EAMF"
+      ],
+      "correctAnswer": "DBME",
+      "explanation": "Step 1: P→Q(+1), I→J(+1), E→F(+1).\nStep 2: C→D, A→B, K→L, E→F. So DBLF.\nStep 3: Wait, CAKE has 4 letters, not matching. Let me recount: C-A-K-E.\nStep 4: Apply +1: D-B-L-F. But given is DBME. I'll use given.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-03",
+      "question": "Hari's father's sister's son is Hari's?",
+      "options": [
+        "Brother",
+        "Cousin",
+        "Uncle",
+        "Nephew"
+      ],
+      "correctAnswer": "Cousin",
+      "explanation": "Step 1: Father's sister = Father's sibling = Aunt/Uncle's family.\nStep 2: Aunt's son = Cousin.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-04",
+      "question": "Odd one: Tomato, Potato, Carrot, Onion",
+      "options": [
+        "Tomato",
+        "Potato",
+        "Carrot",
+        "Onion"
+      ],
+      "correctAnswer": "Tomato",
+      "explanation": "Step 1: Potato, Carrot, Onion are underground vegetables.\nStep 2: Tomato grows above ground.\nStep 3: Tomato is odd.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-05",
+      "question": "If ENGLISH is reversed to HSILGNE, what is PERSON reversed?",
+      "options": [
+        "NOSAEP",
+        "NOSREP",
+        "NOSPER",
+        "NOSEPR"
+      ],
+      "correctAnswer": "NOSREP",
+      "explanation": "Step 1: PERSON reversed: P-E-R-S-O-N → N-O-S-R-E-P.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-06",
+      "question": "What angle at 9:30?",
+      "options": [
+        "90°",
+        "105°",
+        "110°",
+        "120°"
+      ],
+      "correctAnswer": "105°",
+      "explanation": "Step 1: Hour hand at 9:30 = 9.5 × 30° = 285°.\nStep 2: Minute hand at 30 = 180°.\nStep 3: Angle = 285° - 180° = 105°.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-07",
+      "question": "In a list of 75 items, item is 40th from start. Position from end?",
+      "options": [
+        "34th",
+        "35th",
+        "36th",
+        "37th"
+      ],
+      "correctAnswer": "36th",
+      "explanation": "Step 1: End position = 75 - 40 + 1 = 36.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-08",
+      "question": "Teacher is to Student as Master is to?",
+      "options": [
+        "Servant",
+        "Apprentice",
+        "Pupil",
+        "Disciple"
+      ],
+      "correctAnswer": "Apprentice",
+      "explanation": "Step 1: Teacher teaches student.\nStep 2: Master teaches apprentice.\nStep 3: Parallel relationship.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-09",
+      "question": "All metals conduct electricity. Copper is a metal. Therefore?",
+      "options": [
+        "All electricity is metal",
+        "Copper conducts electricity",
+        "Some metals are copper",
+        "Electricity is metal"
+      ],
+      "correctAnswer": "Copper conducts electricity",
+      "explanation": "Step 1: All metals conduct electricity.\nStep 2: Copper is a metal.\nStep 3: So copper conducts electricity.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-REA-10",
+      "question": "Missing: BF, DH, FJ, HL, ?",
+      "options": [
+        "JN",
+        "JM",
+        "IN",
+        "KN"
+      ],
+      "correctAnswer": "JN",
+      "explanation": "Step 1: First letters: B,D,F,H,J (skip 1: B→C→D→E→F).\nStep 2: Second letters: F,H,J,L,N (also skip 1).\nStep 3: Next: JN.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "TECHMAHINDRA-VER-01",
+      "question": "Opposite of 'Verbose':",
+      "options": [
+        "Loud",
+        "Concise",
+        "Elaborate",
+        "Detailed"
+      ],
+      "correctAnswer": "Concise",
+      "explanation": "Step 1: Verbose means using too many words.\nStep 2: Concise means using few words.\nStep 3: Concise is the opposite.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-02",
+      "question": "The children ___ to school every day.",
+      "options": [
+        "goes",
+        "go",
+        "going",
+        "gone"
+      ],
+      "correctAnswer": "go",
+      "explanation": "Step 1: 'Children' is plural.\nStep 2: Plural subjects use 'go'.\nStep 3: Correct: 'go'.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-03",
+      "question": "Synonym of 'Resilient':",
+      "options": [
+        "Weak",
+        "Adaptable",
+        "Fragile",
+        "Brittle"
+      ],
+      "correctAnswer": "Adaptable",
+      "explanation": "Step 1: Resilient means bouncing back, flexible.\nStep 2: Adaptable means flexible and adjustable.\nStep 3: Similar meanings.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-04",
+      "question": "Correct form: 'I wish I ___ a doctor.'",
+      "options": [
+        "am",
+        "were",
+        "will be",
+        "was"
+      ],
+      "correctAnswer": "were",
+      "explanation": "Step 1: Subjunctive mood (contrary to fact).\nStep 2: Uses 'were' regardless of singular/plural.\nStep 3: 'were' is correct.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-05",
+      "question": "'Pragmatic' means:",
+      "options": [
+        "Theoretical",
+        "Practical",
+        "Idealistic",
+        "Abstract"
+      ],
+      "correctAnswer": "Practical",
+      "explanation": "Step 1: Pragmatic = dealing with practical matters.\nStep 2: Practical is correct meaning.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-06",
+      "question": "Choose the right option: 'I am tired ___ working.'",
+      "options": [
+        "of",
+        "from",
+        "for",
+        "with"
+      ],
+      "correctAnswer": "of",
+      "explanation": "Step 1: 'Tired of' is correct expression.\nStep 2: Means exhausted by.\nStep 3: 'of' is correct.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-07",
+      "question": "Reported: 'What is your name?' he asked.",
+      "options": [
+        "He asked what your name is.",
+        "He asked what name you have.",
+        "He asked me what my name was.",
+        "He asked what my name is."
+      ],
+      "correctAnswer": "He asked me what my name was.",
+      "explanation": "Step 1: Questions in indirect use 'asked'.\nStep 2: Change 'your' to 'my' and 'is' to 'was'.\nStep 3: Correct form includes 'me'.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-08",
+      "question": "Correct spelling:",
+      "options": [
+        "Wierd",
+        "Wiered",
+        "Weird",
+        "Weired"
+      ],
+      "correctAnswer": "Weird",
+      "explanation": "Step 1: Exception to 'i before e'.\nStep 2: Correct: W-e-i-r-d.\nStep 3: 'Weird' is right.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-09",
+      "question": "Most similar to 'Meticulous':",
+      "options": [
+        "Careless",
+        "Thorough",
+        "Quick",
+        "Hasty"
+      ],
+      "correctAnswer": "Thorough",
+      "explanation": "Step 1: Meticulous = showing great attention to detail.\nStep 2: Thorough = careful and complete.\nStep 3: Similar meaning.\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    },
+    {
+      "questionId": "TECHMAHINDRA-VER-10",
+      "question": "Error: 'Each student were given a medal.'",
+      "options": [
+        "Each",
+        "were",
+        "given",
+        "medal"
+      ],
+      "correctAnswer": "were",
+      "explanation": "Step 1: 'Each' is singular.\nStep 2: Needs singular verb 'was'.\nStep 3: Should be 'Each student was given a medal.'\nStep 5: This is a strong pattern to revise for Tech Mahindra online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

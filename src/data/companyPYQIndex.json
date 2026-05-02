@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "tcs",
+    "displayName": "TCS",
+    "gradient": "from-violet-500 to-purple-700",
+    "initials": "TC",
+    "pdfs": [
+      {
+        "slug": "tcs-pyq-2025",
+        "title": "TCS PYQ 2025",
+        "year": "2025",
+        "path": "/pdfs/pyq/tcs_2025.pdf"
+      },
+      {
+        "slug": "tcs-pyq-2024",
+        "title": "TCS PYQ 2024",
+        "year": "2024",
+        "path": "/pdfs/pyq/tcs_2024.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "wipro",
+    "displayName": "Wipro",
+    "gradient": "from-violet-500 to-purple-700",
+    "initials": "WI",
+    "pdfs": [
+      {
+        "slug": "wipro-pyq-2025",
+        "title": "Wipro PYQ 2025",
+        "year": "2025",
+        "path": "/pdfs/pyq/wipro_2025.pdf"
+      },
+      {
+        "slug": "wipro-pyq-2024",
+        "title": "Wipro PYQ 2024",
+        "year": "2024",
+        "path": "/pdfs/pyq/wipro_2024.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "infosys",
+    "displayName": "Infosys",
+    "gradient": "from-violet-500 to-purple-700",
+    "initials": "IN",
+    "pdfs": [
+      {
+        "slug": "infosys-pyq-2025",
+        "title": "Infosys PYQ 2025",
+        "year": "2025",
+        "path": "/pdfs/pyq/infosys_2025.pdf"
+      },
+      {
+        "slug": "infosys-pyq-2024",
+        "title": "Infosys PYQ 2024",
+        "year": "2024",
+        "path": "/pdfs/pyq/infosys_2024.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "accenture",
+    "displayName": "Accenture",
+    "gradient": "from-violet-500 to-purple-700",
+    "initials": "AC",
+    "pdfs": [
+      {
+        "slug": "accenture-pyq-2025",
+        "title": "Accenture PYQ 2025",
+        "year": "2025",
+        "path": "/pdfs/pyq/accenture_2025.pdf"
+      },
+      {
+        "slug": "accenture-pyq-2024",
+        "title": "Accenture PYQ 2024",
+        "year": "2024",
+        "path": "/pdfs/pyq/accenture_2024.pdf"
+      }
+    ]
+  }
+]

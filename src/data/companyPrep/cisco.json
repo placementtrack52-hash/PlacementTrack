@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "CISCO-APT-ADV-01",
+      "question": "An item costs Rs. 500. After 20% markup and then 15% discount, what is the final price?",
+      "options": [
+        "Rs. 520",
+        "Rs. 510",
+        "Rs. 500",
+        "Rs. 490"
+      ],
+      "correctAnswer": "Rs. 510",
+      "explanation": "Step 1: Markup → 500 × 1.2 = 600.\nStep 2: Discount → 600 × 0.85 = 510.\nStep 3: Final price = Rs. 510."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-02",
+      "question": "Solve: 2x - 5 = 9",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "7",
+      "explanation": "Step 1: 2x = 14.\nStep 2: x = 7."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-03",
+      "question": "In a school, 45% are girls. If 900 are girls, total students?",
+      "options": [
+        "1800",
+        "1900",
+        "2000",
+        "2100"
+      ],
+      "correctAnswer": "2000",
+      "explanation": "Step 1: 0.45x = 900.\nStep 2: x = 2000."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-04",
+      "question": "Ratio of books to pens is 5:3. If there are 45 books, how many pens?",
+      "options": [
+        "27",
+        "30",
+        "33",
+        "36"
+      ],
+      "correctAnswer": "27",
+      "explanation": "Step 1: 5 parts = 45 → 1 part = 9.\nStep 2: Pens = 3 × 9 = 27."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-05",
+      "question": "A train travels 540 km in 6 hours. What is its speed?",
+      "options": [
+        "80 km/h",
+        "85 km/h",
+        "90 km/h",
+        "95 km/h"
+      ],
+      "correctAnswer": "90 km/h",
+      "explanation": "Step 1: Speed = Distance / Time = 540 / 6 = 90 km/h."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-06",
+      "question": "Find compound interest on Rs. 40,000 at 8% per annum for 2 years.",
+      "options": [
+        "Rs. 6400",
+        "Rs. 6656",
+        "Rs. 6800",
+        "Rs. 7000"
+      ],
+      "correctAnswer": "Rs. 6656",
+      "explanation": "Step 1: Amount = 40000 × (1.08)^2 = 46656.\nStep 2: CI = 46656 - 40000 = 6656."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-07",
+      "question": "An article marked Rs. 800 is sold at 35% discount. Find selling price.",
+      "options": [
+        "Rs. 480",
+        "Rs. 520",
+        "Rs. 540",
+        "Rs. 560"
+      ],
+      "correctAnswer": "Rs. 520",
+      "explanation": "Step 1: Discount = 35% of 800 = 280.\nStep 2: SP = 800 - 280 = 520."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-08",
+      "question": "Find the average of 15, 20, 25, 30.",
+      "options": [
+        "20",
+        "22.5",
+        "25",
+        "27.5"
+      ],
+      "correctAnswer": "22.5",
+      "explanation": "Step 1: Sum = 90.\nStep 2: Average = 90 / 4 = 22.5."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-09",
+      "question": "If 25% of a number is 75, find the number.",
+      "options": [
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
+      "correctAnswer": "300",
+      "explanation": "Step 1: 0.25x = 75.\nStep 2: x = 300."
+    },
+    {
+      "questionId": "CISCO-APT-ADV-10",
+      "question": "Find the LCM of 18, 24, and 36.",
+      "options": [
+        "72",
+        "80",
+        "96",
+        "108"
+      ],
+      "correctAnswer": "72",
+      "explanation": "Step 1: 18 = 2 × 3², 24 = 2³ × 3, 36 = 2² × 3².\nStep 2: LCM = 2³ × 3² = 72."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "CISCO-REA-ADV-01",
+      "question": "Series: 3, 6, 12, 24, 48, ?",
+      "options": [
+        "72",
+        "84",
+        "96",
+        "108"
+      ],
+      "correctAnswer": "96",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 48 × 2 = 96."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-02",
+      "question": "If BIKE is coded as DKMG, what is JUMP coded as?",
+      "options": [
+        "LWOR",
+        "LWPQ",
+        "MWPQ",
+        "LWQR"
+      ],
+      "correctAnswer": "LWOR",
+      "explanation": "Step 1: Each letter shifts +2.\nStep 2: J→L, U→W, M→O, P→R.\nStep 3: JUMP → LWOR.\nStep 4: Corrected coding (previous typo fixed)."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-03",
+      "question": "A is facing North. B is standing to the right of A. In which direction is B from A?",
+      "options": [
+        "North",
+        "East",
+        "South",
+        "West"
+      ],
+      "correctAnswer": "East",
+      "explanation": "Step 1: A faces North.\nStep 2: Right of North is East.\nStep 3: So B is in East direction."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-04",
+      "question": "Odd one out: Apple, Mango, Carrot, Banana",
+      "options": [
+        "Apple",
+        "Mango",
+        "Carrot",
+        "Banana"
+      ],
+      "correctAnswer": "Carrot",
+      "explanation": "Step 1: Apple, Mango, Banana are fruits.\nStep 2: Carrot is a vegetable."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-05",
+      "question": "If NETWORK is written as KROWTEN, how is INTERNET written?",
+      "options": [
+        "TENRETNI",
+        "TNERETNI",
+        "TENRENTI",
+        "TNETERNI"
+      ],
+      "correctAnswer": "TENRETNI",
+      "explanation": "Step 1: Pattern = reverse word.\nStep 2: INTERNET → TENRETNI."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-06",
+      "question": "At what time between 3 and 4 do the hour and minute hands coincide?",
+      "options": [
+        "3:15",
+        "3:16:22",
+        "3:18:30",
+        "3:20"
+      ],
+      "correctAnswer": "3:16:22",
+      "explanation": "Step 1: Coincidence occurs when minute hand catches hour hand.\nStep 2: Standard result ≈ 3:16:22."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-07",
+      "question": "In a line of 240 people, Raj is 80th from the front. What is his position from the back?",
+      "options": [
+        "159th",
+        "160th",
+        "161st",
+        "162nd"
+      ],
+      "correctAnswer": "161st",
+      "explanation": "Step 1: Position from back = 240 - 80 + 1 = 161."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-08",
+      "question": "Teacher is to School as Doctor is to?",
+      "options": [
+        "Patient",
+        "Hospital",
+        "Clinic",
+        "Medicine"
+      ],
+      "correctAnswer": "Hospital",
+      "explanation": "Step 1: Teacher works in school.\nStep 2: Doctor works in hospital."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-09",
+      "question": "Some engineers are lazy. All lazy people are ineffective. What can be concluded?",
+      "options": [
+        "All engineers are ineffective",
+        "Some engineers are ineffective",
+        "No engineers are lazy",
+        "All ineffective people are engineers"
+      ],
+      "correctAnswer": "Some engineers are ineffective",
+      "explanation": "Step 1: Some engineers → lazy.\nStep 2: Lazy → ineffective.\nStep 3: Therefore some engineers → ineffective."
+    },
+    {
+      "questionId": "CISCO-REA-ADV-10",
+      "question": "Series: AZ, BY, CX, DW, ?",
+      "options": [
+        "EV",
+        "EU",
+        "EW",
+        "EX"
+      ],
+      "correctAnswer": "EV",
+      "explanation": "Step 1: First letters increase (A, B, C, D, E).\nStep 2: Second letters decrease (Z, Y, X, W, V).\nStep 3: Next term = EV."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "CISCO-VER-01",
+      "question": "Opposite of 'Meager':",
+      "options": [
+        "Scarce",
+        "Plentiful",
+        "Little",
+        "Minimal"
+      ],
+      "correctAnswer": "Plentiful",
+      "explanation": "Step 1: Meager means scanty or insufficient.\nStep 2: Plentiful means abundant.\nStep 3: Opposite of meager."
+    },
+    {
+      "questionId": "CISCO-VER-02",
+      "question": "The team ___ decided to postpone the match.",
+      "options": [
+        "have",
+        "has",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "has",
+      "explanation": "'Team' is a collective noun and takes a singular verb, so 'has decided' is correct."
+    },
+    {
+      "questionId": "CISCO-VER-03",
+      "question": "Synonym of 'Diligent':",
+      "options": [
+        "Lazy",
+        "Hardworking",
+        "Careless",
+        "Reckless"
+      ],
+      "correctAnswer": "Hardworking",
+      "explanation": "Diligent means careful and persistent in work, which matches 'Hardworking'."
+    },
+    {
+      "questionId": "CISCO-VER-04",
+      "question": "Choose correct:",
+      "options": [
+        "The news are very shocking today.",
+        "The news is very shocking today.",
+        "A news is shocking.",
+        "News have shocked us."
+      ],
+      "correctAnswer": "The news is very shocking today.",
+      "explanation": "'News' is treated as a singular noun, so it takes 'is'."
+    },
+    {
+      "questionId": "CISCO-VER-05",
+      "question": "'Volatile' means:",
+      "options": [
+        "Heavy",
+        "Explosive/unstable",
+        "Thick",
+        "Solid"
+      ],
+      "correctAnswer": "Explosive/unstable",
+      "explanation": "Volatile refers to something unstable or liable to change rapidly."
+    },
+    {
+      "questionId": "CISCO-VER-06",
+      "question": "Complete: 'She is known ___ her singing talent.'",
+      "options": [
+        "for",
+        "by",
+        "with",
+        "as"
+      ],
+      "correctAnswer": "for",
+      "explanation": "'Known for' is the correct phrase used for recognition."
+    },
+    {
+      "questionId": "CISCO-VER-07",
+      "question": "Convert: 'I will complete the project,' he said.",
+      "options": [
+        "He said he will complete the project.",
+        "He said he would complete the project.",
+        "He said he completes the project.",
+        "He said he had completed the project."
+      ],
+      "correctAnswer": "He said he would complete the project.",
+      "explanation": "In reported speech, 'will' changes to 'would'."
+    },
+    {
+      "questionId": "CISCO-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Occassion",
+        "Occasion",
+        "Occation",
+        "Ocasion"
+      ],
+      "correctAnswer": "Occasion",
+      "explanation": "Correct spelling is O-c-c-a-s-i-o-n."
+    },
+    {
+      "questionId": "CISCO-VER-09",
+      "question": "Similar to 'Candid':",
+      "options": [
+        "Shy",
+        "Frank/honest",
+        "Timid",
+        "Quiet"
+      ],
+      "correctAnswer": "Frank/honest",
+      "explanation": "Candid means honest and straightforward."
+    },
+    {
+      "questionId": "CISCO-VER-10",
+      "question": "Error: 'The committee have agreed on the new policy.'",
+      "options": [
+        "committee",
+        "have",
+        "on",
+        "policy"
+      ],
+      "correctAnswer": "have",
+      "explanation": "'Committee' is singular, so 'have' should be 'has'."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

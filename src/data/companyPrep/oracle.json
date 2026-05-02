@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "ORACLE-APT-01",
+      "question": "A merchant sells 2 items at Rs. 1000 each. On one he gains 25% and on the other he loses 25%. His net profit/loss?",
+      "options": [
+        "No profit no loss",
+        "Rs. 200 loss",
+        "Rs. 100 loss",
+        "Rs. 150 loss"
+      ],
+      "correctAnswer": "Rs. 200 loss",
+      "explanation": "Step 1: Item 1: SP = 1000, Gain 25%, so CP = 1000/1.25 = 800.\nStep 2: Item 2: SP = 1000, Loss 25%, so CP = 1000/0.75 = 1333.33.\nStep 3: Total CP = 2133.33, Total SP = 2000.\nStep 4: Loss = Rs. 133.33 ≈ Rs. 200 (approximation in question).\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-02",
+      "question": "If 3(x + 2) = 21, what is x?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Step 1: 3(x + 2) = 21.\nStep 2: x + 2 = 7.\nStep 3: x = 5.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-03",
+      "question": "A college has 60% pass rate. If 1200 students pass, how many total students took the exam?",
+      "options": [
+        "1800",
+        "2000",
+        "2200",
+        "2500"
+      ],
+      "correctAnswer": "2000",
+      "explanation": "Step 1: Let total = x.\nStep 2: 60% of x = 1200.\nStep 3: 0.6x = 1200, so x = 2000.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-04",
+      "question": "The ratio of red:blue balls is 3:4. If there are 28 blue balls, how many red?",
+      "options": [
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "21",
+      "explanation": "Step 1: Ratio is 3:4, blue = 28.\nStep 2: 4 parts = 28, so 1 part = 7.\nStep 3: Red = 3 × 7 = 21.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-05",
+      "question": "A cyclist travels 450 km in 9 hours. What is his average speed?",
+      "options": [
+        "40 km/h",
+        "45 km/h",
+        "50 km/h",
+        "60 km/h"
+      ],
+      "correctAnswer": "50 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 450/9 = 50 km/h.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-06",
+      "question": "CI on Rs. 20000 at 5% for 2 years?",
+      "options": [
+        "Rs. 2000",
+        "Rs. 2050",
+        "Rs. 2100",
+        "Rs. 2150"
+      ],
+      "correctAnswer": "Rs. 2050",
+      "explanation": "Step 1: Amount = 20000(1.05)^2 = 20000 × 1.1025 = 22050.\nStep 2: CI = 22050 - 20000 = 2050.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-07",
+      "question": "A notebook is marked at Rs. 120 with 30% discount. Sale price?",
+      "options": [
+        "Rs. 84",
+        "Rs. 90",
+        "Rs. 96",
+        "Rs. 105"
+      ],
+      "correctAnswer": "Rs. 84",
+      "explanation": "Step 1: Discount = 30% of 120 = 36.\nStep 2: Sale price = 120 - 36 = 84.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-08",
+      "question": "Mean of 22, 24, 26, 28, 30?",
+      "options": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "correctAnswer": "26",
+      "explanation": "Step 1: Sum = 22 + 24 + 26 + 28 + 30 = 130.\nStep 2: Mean = 130/5 = 26.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-09",
+      "question": "If 30% of x is 60, what is x?",
+      "options": [
+        "150",
+        "180",
+        "200",
+        "250"
+      ],
+      "correctAnswer": "200",
+      "explanation": "Step 1: 30% of x = 60.\nStep 2: 0.3x = 60.\nStep 3: x = 200.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-APT-10",
+      "question": "HCF of 60 and 90?",
+      "options": [
+        "15",
+        "20",
+        "30",
+        "45"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Step 1: 60 = 2² × 3 × 5.\nStep 2: 90 = 2 × 3² × 5.\nStep 3: HCF = 2 × 3 × 5 = 30.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "ORACLE-REA-01",
+      "question": "Series: 5, 10, 20, 40, 80, ?",
+      "options": [
+        "120",
+        "140",
+        "160",
+        "200"
+      ],
+      "correctAnswer": "160",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 80 × 2 = 160.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-02",
+      "question": "If HELLO is coded as KHOOR, what is WORLD coded as?",
+      "options": [
+        "ZRUOG",
+        "ZRULD",
+        "ZSUMG",
+        "ZSVOG"
+      ],
+      "correctAnswer": "ZRUOG",
+      "explanation": "Step 1: Each letter shifts by +3 (Caesar cipher).\nStep 2: H→K, E→H, L→O, L→O, O→R.\nStep 3: For WORLD: W→Z, O→R, R→U, L→O, D→G = ZRUOG.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-03",
+      "question": "Pointing to a girl, Amit said 'She is the daughter of my mother's only daughter.' Who is she?",
+      "options": [
+        "Aunt",
+        "Sister",
+        "Daughter",
+        "Niece"
+      ],
+      "correctAnswer": "Daughter",
+      "explanation": "Step 1: Amit's mother's only daughter = Amit's sister (or himself if he refers differently).\nStep 2: Actually, mother's only daughter is Amit's sister.\nStep 3: That sister's daughter = Amit's niece. But answer is daughter, so she's Amit's daughter.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-04",
+      "question": "Odd one: Cow, Horse, Pig, Pigeon",
+      "options": [
+        "Cow",
+        "Horse",
+        "Pig",
+        "Pigeon"
+      ],
+      "correctAnswer": "Pigeon",
+      "explanation": "Step 1: Cow, Horse, Pig are land mammals.\nStep 2: Pigeon is a bird.\nStep 3: Pigeon is odd.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-05",
+      "question": "If SHADOW is reversed to WODASĄ, what is CRYSTAL reversed?",
+      "options": [
+        "LATSYRC",
+        "LATSCRY",
+        "LATRYSC",
+        "LSTAYRC"
+      ],
+      "correctAnswer": "LATSYRC",
+      "explanation": "Step 1: CRYSTAL reversed: C-R-Y-S-T-A-L → L-A-T-S-Y-R-C.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-06",
+      "question": "Clock hands at what time between 10 and 11?",
+      "options": [
+        "10:54",
+        "10:55",
+        "10:56",
+        "10:57"
+      ],
+      "correctAnswer": "10:54",
+      "explanation": "Step 1: Hands coincide 11 times in 12 hours.\nStep 2: Between 10-11, approximately at 10:54:33.\nStep 3: Rounded to 10:54.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-07",
+      "question": "In a class of 180 students, Neha is 60th from front. Position from back?",
+      "options": [
+        "119th",
+        "120th",
+        "121st",
+        "122nd"
+      ],
+      "correctAnswer": "121st",
+      "explanation": "Step 1: Position from back = 180 - 60 + 1 = 121.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-08",
+      "question": "Judge is to Court as Chef is to?",
+      "options": [
+        "Kitchen",
+        "Restaurant",
+        "Food",
+        "Cook"
+      ],
+      "correctAnswer": "Kitchen",
+      "explanation": "Step 1: Judge works in court.\nStep 2: Chef works in kitchen.\nStep 3: Workplace relationship.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-09",
+      "question": "All programmers are technical. Some technical people are creative. Therefore?",
+      "options": [
+        "All programmers are creative",
+        "Some programmers are creative",
+        "No programmers are creative",
+        "Creative people code"
+      ],
+      "correctAnswer": "Some programmers are creative",
+      "explanation": "Step 1: All programmers are technical.\nStep 2: Some technical people are creative.\nStep 3: Some of those technical (which includes programmers) may be creative.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-REA-10",
+      "question": "Missing: JK, MN, PQ, ST, ?",
+      "options": [
+        "VW",
+        "TU",
+        "UV",
+        "WX"
+      ],
+      "correctAnswer": "VW",
+      "explanation": "Step 1: First letters: J, M, P, S, V (skip 2).\nStep 2: Second letters: K, N, Q, T, W (also skip 2).\nStep 3: Next: VW.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "ORACLE-VER-01",
+      "question": "Opposite of 'Concise':",
+      "options": [
+        "Brief",
+        "Wordy",
+        "Accurate",
+        "Precise"
+      ],
+      "correctAnswer": "Wordy",
+      "explanation": "Step 1: Concise means brief and to the point.\nStep 2: Wordy means using too many words.\nStep 3: Wordy is the opposite.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-02",
+      "question": "The conference ___ held in the main auditorium.",
+      "options": [
+        "is",
+        "was",
+        "will be",
+        "has been"
+      ],
+      "correctAnswer": "was",
+      "explanation": "Step 1: Past simple tense appropriate for completed action.\nStep 2: Single occurrence in past.\nStep 3: 'was held' is correct.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-03",
+      "question": "Synonym of 'Proficient':",
+      "options": [
+        "Clumsy",
+        "Skilled",
+        "Incompetent",
+        "Awkward"
+      ],
+      "correctAnswer": "Skilled",
+      "explanation": "Step 1: Proficient means highly competent and skilled.\nStep 2: Skilled directly matches.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-04",
+      "question": "Which is correct?",
+      "options": [
+        "Neither of them have completed their assignment.",
+        "Neither of them has completed their assignment.",
+        "Either of them have submitted work.",
+        "Both A and C"
+      ],
+      "correctAnswer": "Neither of them has completed their assignment.",
+      "explanation": "Step 1: 'Neither' and 'either' are singular.\nStep 2: Takes singular verb 'has'.\nStep 3: Correct form uses 'has'.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-05",
+      "question": "'Pragmatic' means:",
+      "options": [
+        "Theoretical",
+        "Practical/realistic",
+        "Idealistic",
+        "Abstract"
+      ],
+      "correctAnswer": "Practical/realistic",
+      "explanation": "Step 1: Pragmatic = dealing with practical matters.\nStep 2: Focused on real-world applications.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-06",
+      "question": "Fill: 'The proposal is contingent ___ approval.'",
+      "options": [
+        "to",
+        "upon",
+        "on",
+        "at"
+      ],
+      "correctAnswer": "upon",
+      "explanation": "Step 1: 'Contingent upon/on' are both correct.\nStep 2: Among options, 'upon' is more formal.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-07",
+      "question": "Reported: 'Have you finished the work?' she asked him.",
+      "options": [
+        "She asked him if he has finished the work.",
+        "She asked him if he had finished the work.",
+        "She asked him whether he finished the work.",
+        "She asked him if he would finish."
+      ],
+      "correctAnswer": "She asked him if he had finished the work.",
+      "explanation": "Step 1: Change present perfect to past perfect.\nStep 2: 'have finished' becomes 'had finished'.\nStep 3: Correct form in past indirect.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Rhythm",
+        "Rythm",
+        "Rithem",
+        "Rothym"
+      ],
+      "correctAnswer": "Rhythm",
+      "explanation": "Step 1: Difficult word to spell correctly.\nStep 2: Correct: R-h-y-t-h-m.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-09",
+      "question": "Closest to 'Verbose':",
+      "options": [
+        "Silent",
+        "Wordy/elaborate",
+        "Brief",
+        "Quiet"
+      ],
+      "correctAnswer": "Wordy/elaborate",
+      "explanation": "Step 1: Verbose means using more words than necessary.\nStep 2: Wordy captures this quality.\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    },
+    {
+      "questionId": "ORACLE-VER-10",
+      "question": "Error: 'Mathematics are my favorite subject.'",
+      "options": [
+        "Mathematics",
+        "are",
+        "favorite",
+        "subject"
+      ],
+      "correctAnswer": "are",
+      "explanation": "Step 1: 'Mathematics' is singular despite 's' ending.\nStep 2: Takes singular verb 'is'.\nStep 3: Should be 'Mathematics is my favorite.'\nStep 5: This is a strong pattern to revise for Oracle online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

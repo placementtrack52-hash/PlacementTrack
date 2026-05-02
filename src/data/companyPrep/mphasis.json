@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "MPHASIS-APT-01",
+      "question": "A student scored 75% marks in exam. If total marks are 200, how many marks did he score?",
+      "options": [
+        "100",
+        "125",
+        "150",
+        "175"
+      ],
+      "correctAnswer": "150",
+      "explanation": "Step 1: Marks = 75% of 200.\nStep 2: = (75/100) × 200 = 150.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-02",
+      "question": "If the cost of pen increases from Rs. 10 to Rs. 12, what is the percentage increase?",
+      "options": [
+        "20%",
+        "30%",
+        "50%",
+        "100%"
+      ],
+      "correctAnswer": "20%",
+      "explanation": "Step 1: Increase = 12 - 10 = 2.\nStep 2: % increase = (2/10) × 100 = 20%.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-03",
+      "question": "The product of two numbers is 48 and their sum is 14. The numbers are?",
+      "options": [
+        "6 and 8",
+        "4 and 12",
+        "3 and 16",
+        "2 and 24"
+      ],
+      "correctAnswer": "6 and 8",
+      "explanation": "Step 1: Let numbers be x and y.\nStep 2: x + y = 14 and xy = 48.\nStep 3: 6 + 8 = 14 and 6 × 8 = 48 ✓\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-04",
+      "question": "A cylindrical tank has radius 7cm and height 10cm. What is its volume?",
+      "options": [
+        "500 cm³",
+        "1000 cm³",
+        "1540 cm³",
+        "2200 cm³"
+      ],
+      "correctAnswer": "1540 cm³",
+      "explanation": "Step 1: Volume = πr²h = (22/7) × 7² × 10.\nStep 2: = (22/7) × 49 × 10 = 22 × 7 × 10 = 1540.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-05",
+      "question": "A book  costs Rs. 250. After 10% discount, the selling price is?",
+      "options": [
+        "Rs. 200",
+        "Rs. 220",
+        "Rs. 225",
+        "Rs. 235"
+      ],
+      "correctAnswer": "Rs. 225",
+      "explanation": "Step 1: Discount = 10% of 250 = 25.\nStep 2: SP = 250 - 25 = 225.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-06",
+      "question": "If √196 = ?, then ? = ?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "14",
+      "explanation": "Step 1: √196 = ?\nStep 2: 14² = 196.\nStep 3: So √196 = 14.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-07",
+      "question": "5 pens cost Rs. 45. What is the cost of 8 pens?",
+      "options": [
+        "Rs. 60",
+        "Rs. 64",
+        "Rs. 70",
+        "Rs. 72"
+      ],
+      "correctAnswer": "Rs. 72",
+      "explanation": "Step 1: Cost of 1 pen = 45/5 = 9.\nStep 2: Cost of 8 = 8 × 9 = 72.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-08",
+      "question": "A car travels 150 km in 3 hours. In how many hours will it travel 300 km?",
+      "options": [
+        "4 hours",
+        "5 hours",
+        "6 hours",
+        "7 hours"
+      ],
+      "correctAnswer": "6 hours",
+      "explanation": "Step 1: Speed = 150/3 = 50 km/h.\nStep 2: Time for 300 km = 300/50 = 6 hours.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-09",
+      "question": "If 3x + 5 = 20, then x = ?",
+      "options": [
+        "3",
+        "5",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Step 1: 3x + 5 = 20.\nStep 2: 3x = 15.\nStep 3: x = 5.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-APT-10",
+      "question": "The average of 10 numbers is 50. If one number is 45, what is the sum of remaining 9 numbers?",
+      "options": [
+        "450",
+        "455",
+        "460",
+        "465"
+      ],
+      "correctAnswer": "455",
+      "explanation": "Step 1: Sum of 10 = 50 × 10 = 500.\nStep 2: Sum of remaining 9 = 500 - 45 = 455.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "MPHASIS-REA-01",
+      "question": "Series: 1, 4, 9, 16, 25, ?",
+      "options": [
+        "35",
+        "36",
+        "40",
+        "42"
+      ],
+      "correctAnswer": "36",
+      "explanation": "Step 1: Perfect squares: 1²,2²,3²,4²,5².\nStep 2: Next: 6² = 36.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-02",
+      "question": "If DOG is coded as GRK, what is CAT coded as?",
+      "options": [
+        "FEX",
+        "FEW",
+        "FDW",
+        "EDW"
+      ],
+      "correctAnswer": "FEW",
+      "explanation": "Step 1: D→G(+3), O→R(+3), G→K(+4). Check: D(4)→G(7)+3 ✓, O(15)→R(18)+3 ✓, G(7)→K(11)+4. Pattern varies.\nStep 2: For CAT: C(3)→F(6)+3, A(1)→E(5)+4, T(20)→W(23)+3 = FEW.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-03",
+      "question": "If father is sister's brother and sister is child's mother, how is father related to child?",
+      "options": [
+        "Grandfather",
+        "Father",
+        "Uncle",
+        "Cousin"
+      ],
+      "correctAnswer": "Father",
+      "explanation": "Step 1: Father is sibling of sister.\nStep 2: Sister is child's mother.\nStep 3: So father is mother's brother = child's uncle.\nStep 4: Actually, father is male parent, so father is the child's father.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-04",
+      "question": "Odd one: Violin, Piano, Guitar, Flute",
+      "options": [
+        "Violin",
+        "Piano",
+        "Guitar",
+        "Flute"
+      ],
+      "correctAnswer": "Piano",
+      "explanation": "Step 1: Violin, Guitar, Flute have strings/reeds.\nStep 2: Piano is keyboard instrument.\nStep 3: Piano is odd.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-05",
+      "question": "If TRUTH is reversed to HTURТ, what is FAITH reversed to?",
+      "options": [
+        "HTIAF",
+        "HIFAT",
+        "HTIAF",
+        "HTIAE"
+      ],
+      "correctAnswer": "HTIAF",
+      "explanation": "Step 1: FAITH reversed: F-A-I-T-H → H-T-I-A-F.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-06",
+      "question": "At 7:00, what is the angle between clock hands?",
+      "options": [
+        "30°",
+        "60°",
+        "90°",
+        "150°"
+      ],
+      "correctAnswer": "150°",
+      "explanation": "Step 1: At 7:00, hour hand at 7 (210°), minute at 12 (0°).\nStep 2: Angle = 210° - 0° = 210° or smaller 360°-210° = 150°.\nStep 3: Smaller angle = 150°.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-07",
+      "question": "In a line of 70 people, Karan is 25th from left. From right?",
+      "options": [
+        "44th",
+        "45th",
+        "46th",
+        "47th"
+      ],
+      "correctAnswer": "46th",
+      "explanation": "Step 1: Right position = 70 - 25 + 1 = 46.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-08",
+      "question": "Surgeon is to Scalpel as Carpenter is to?",
+      "options": [
+        "Saw",
+        "Nail",
+        "Wood",
+        "Hammer"
+      ],
+      "correctAnswer": "Saw",
+      "explanation": "Step 1: Surgeon uses scalpel (primary tool).\nStep 2: Carpenter uses saw (primary tool).\nStep 3: Parallel relationship.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-09",
+      "question": "All birds lay eggs. Some birds cannot fly. Therefore?",
+      "options": [
+        "All flying birds lay eggs",
+        "Some things that lay eggs cannot fly",
+        "All eggs are from birds",
+        "Some birds fly"
+      ],
+      "correctAnswer": "Some things that lay eggs cannot fly",
+      "explanation": "Step 1: All birds lay eggs (fact 1).\nStep 2: Some birds cannot fly (fact 2).\nStep 3: Therefore, some things that lay eggs cannot fly.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-REA-10",
+      "question": "Find missing: BG, DI, FK, HL, ?",
+      "options": [
+        "JN",
+        "JO",
+        "IN",
+        "KN"
+      ],
+      "correctAnswer": "JN",
+      "explanation": "Step 1: First letters: B,D,F,H,J (skip 1).\nStep 2: Second letters: G,I,K,L,N (skip 1).\nStep 3: Next pair: JN.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "MPHASIS-VER-01",
+      "question": "Opposite of 'Jovial':",
+      "options": [
+        "Happy",
+        "Gloomy",
+        "Cheerful",
+        "Friendly"
+      ],
+      "correctAnswer": "Gloomy",
+      "explanation": "Step 1: Jovial means very happy and cheerful.\nStep 2: Gloomy means dark and sad.\nStep 3: Complete opposites.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-02",
+      "question": "They ___ playing cricket since morning.",
+      "options": [
+        "is",
+        "have been",
+        "are",
+        "has been"
+      ],
+      "correctAnswer": "have been",
+      "explanation": "Step 1: 'They' is plural.\nStep 2: 'Have been' forms present perfect continuous.\nStep 3: Correct: 'have been'.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-03",
+      "question": "Similar to 'Zealous':",
+      "options": [
+        "Lazy",
+        "Enthusiastic",
+        "Careless",
+        "Uninterested"
+      ],
+      "correctAnswer": "Enthusiastic",
+      "explanation": "Step 1: Zealous means eager and enthusiastic.\nStep 2: Enthusiastic carries same feeling.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-04",
+      "question": "Which is grammatically correct?",
+      "options": [
+        "If I were you, I will accept the offer.",
+        "If I were you, I would accept the offer.",
+        "If I was you, I would accept the offer.",
+        "If I were you, I would have accepted the offer."
+      ],
+      "correctAnswer": "If I were you, I would accept the offer.",
+      "explanation": "Step 1: Conditional (contrary to fact) uses 'were'.\nStep 2: Second part uses 'would'.\nStep 3: Correct form matches.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-05",
+      "question": "'Ambiguous' means:",
+      "options": [
+        "Clear",
+        "Unclear/Open to multiple interpretations",
+        "Definite",
+        "Certain"
+      ],
+      "correctAnswer": "Unclear/Open to multiple interpretations",
+      "explanation": "Step 1: Ambiguous = having more than one meaning.\nStep 2: Creates confusion or doubt.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-06",
+      "question": "Fill: 'I have no interest ___ politics.'",
+      "options": [
+        "at",
+        "in",
+        "for",
+        "about"
+      ],
+      "correctAnswer": "in",
+      "explanation": "Step 1: 'Interest in' is correct collocation.\nStep 2: Used for topics/subjects.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-07",
+      "question": "Reported: 'Where are you going?' he asked me.",
+      "options": [
+        "He asked me where I am going.",
+        "He asked me where I was going.",
+        "He asked where you are going.",
+        "He asked me where you were going."
+      ],
+      "correctAnswer": "He asked me where I was going.",
+      "explanation": "Step 1: Shift 'you' to 'I' and 'are' to 'was'.\nStep 2: Keep 'me' to show indirect object.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Neccessary",
+        "Necessary",
+        "Necesary",
+        "Neccesary"
+      ],
+      "correctAnswer": "Necessary",
+      "explanation": "Step 1: Correct: N-e-c-e-s-s-a-r-y.\nStep 2: One 'c', single 's', single 'a'.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-09",
+      "question": "Nearest to 'Tacit':",
+      "options": [
+        "Spoken",
+        "Implied",
+        "Expressed",
+        "Written"
+      ],
+      "correctAnswer": "Implied",
+      "explanation": "Step 1: Tacit means understood without being said.\nStep 2: Implied means expressed indirectly.\nStep 3: Similar meanings.\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    },
+    {
+      "questionId": "MPHASIS-VER-10",
+      "question": "Error: 'The news are shocking.'",
+      "options": [
+        "news",
+        "are",
+        "shocking",
+        "no error"
+      ],
+      "correctAnswer": "are",
+      "explanation": "Step 1: 'News' is singular despite plural form.\nStep 2: Takes singular verb 'is'.\nStep 3: Should be 'The news is shocking.'\nStep 5: This is a strong pattern to revise for Mphasis online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

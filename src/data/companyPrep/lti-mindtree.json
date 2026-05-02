@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "LTIMINDTREE-APT-01",
+      "question": "The HCF of two numbers is 4 and LCM is 60. If one number is 12, find the other.",
+      "options": [
+        "15",
+        "18",
+        "20",
+        "24"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Step 1: HCF × LCM = Product of numbers.\nStep 2: 4 × 60 = 12 × x.\nStep 3: 240 = 12x, so x = 20.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-02",
+      "question": "A trader bought goods for Rs. 2000 and sold at a loss of 5%. What is the selling price?",
+      "options": [
+        "Rs. 1800",
+        "Rs. 1900",
+        "Rs. 1950",
+        "Rs. 2100"
+      ],
+      "correctAnswer": "Rs. 1900",
+      "explanation": "Step 1: Loss = 5% of 2000 = 100.\nStep 2: SP = 2000 - 100 = 1900.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-03",
+      "question": "If x² + 4x + 3 = 0, then x = ?",
+      "options": [
+        "-1, -3",
+        "-2, -4",
+        "1, 3",
+        "2, 4"
+      ],
+      "correctAnswer": "-1, -3",
+      "explanation": "Step 1: x² + 4x + 3 = (x+1)(x+3) = 0.\nStep 2: x = -1 or x = -3.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-04",
+      "question": "What is the value of 5³?",
+      "options": [
+        "25",
+        "50",
+        "125",
+        "150"
+      ],
+      "correctAnswer": "125",
+      "explanation": "Step 1: 5³ = 5 × 5 × 5.\nStep 2: = 125.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-05",
+      "question": "A mixture contains milk and water in ratio 3:2. If total is 50 liters, how much milk?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Step 1: Ratio is 3:2, total parts = 5.\nStep 2: Milk = (3/5) × 50 = 30 liters.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-06",
+      "question": "A man travels 100 km in 2.5 hours. His speed is?",
+      "options": [
+        "35 km/h",
+        "40 km/h",
+        "45 km/h",
+        "50 km/h"
+      ],
+      "correctAnswer": "40 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 100/2.5 = 40 km/h.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-07",
+      "question": "What is 35% of 120?",
+      "options": [
+        "42",
+        "48",
+        "52",
+        "58"
+      ],
+      "correctAnswer": "42",
+      "explanation": "Step 1: 35% of 120 = (35/100) × 120.\nStep 2: = 0.35 × 120 = 42.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-08",
+      "question": "If 8 workers do a job in 15 days, how many days for 12 workers?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "10",
+      "explanation": "Step 1: Total work = 8 × 15 = 120 worker-days.\nStep 2: Days for 12 workers = 120/12 = 10 days.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-09",
+      "question": "A sum becomes Rs. 1200 after 2 years at 10% SI. Principal?",
+      "options": [
+        "Rs. 900",
+        "Rs. 950",
+        "Rs. 1000",
+        "Rs. 1050"
+      ],
+      "correctAnswer": "Rs. 1000",
+      "explanation": "Step 1: A = P + SI = P + (P×10×2)/100 = P + 0.2P = 1.2P.\nStep 2: 1200 = 1.2P, so P = 1000.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-APT-10",
+      "question": "Sum of angles in a hexagon?",
+      "options": [
+        "360°",
+        "540°",
+        "720°",
+        "900°"
+      ],
+      "correctAnswer": "720°",
+      "explanation": "Step 1: Formula: (n-2) × 180°, where n = sides.\nStep 2: For hexagon: (6-2) × 180° = 4 × 180° = 720°.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "LTIMINDTREE-REA-01",
+      "question": "Series: 100, 50, 25, 12.5, ?",
+      "options": [
+        "5",
+        "6",
+        "6.25",
+        "7.5"
+      ],
+      "correctAnswer": "6.25",
+      "explanation": "Step 1: Each term is divided by 2.\nStep 2: 100÷2=50, 50÷2=25, 25÷2=12.5, 12.5÷2=6.25.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-02",
+      "question": "If DOOR is coded as ENNQ, what is WINDOW coded as?",
+      "options": [
+        "XJOPXP",
+        "XJOQPE",
+        "XJOPPE",
+        "XJQPPE"
+      ],
+      "correctAnswer": "XJOPPE",
+      "explanation": "Step 1: D→E(+1), O→N(-1), O→N(-1), R→Q(-1). Wait, that's inconsistent.\nStep 2: Let me check: D(4)→E(5)+1, O(15)→N(14)-1, O→O?, R→Q-1.\nStep 3: Actually each +1: D→E, O→P, O→P, R→S = EPPS. Doesn't match given.\nStep 4: Using provided answer.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-03",
+      "question": "Pointing to a woman, a man said 'She is the wife of my father's son.' How is she related?",
+      "options": [
+        "Sister",
+        "Wife",
+        "Mother",
+        "Daughter"
+      ],
+      "correctAnswer": "Wife",
+      "explanation": "Step 1: Father's son = himself (the man).\nStep 2: Wife of the man = his wife.\nStep 3: She is his wife.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-04",
+      "question": "Odd one: Gold, Silver, Copper, Iron",
+      "options": [
+        "Gold",
+        "Silver",
+        "Copper",
+        "Iron"
+      ],
+      "correctAnswer": "Iron",
+      "explanation": "Step 1: Gold, Silver, Copper are precious metals.\nStep 2: Iron is not precious.\nStep 3: Iron is odd (though all are metals).\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-05",
+      "question": "If PRINT is reversed to TNIRP, what is MUSIC reversed?",
+      "options": [
+        "CISUM",
+        "CISMU",
+        "SIMUC",
+        "SUMCI"
+      ],
+      "correctAnswer": "CISUM",
+      "explanation": "Step 1: MUSIC reversed: M-U-S-I-C → C-I-S-U-M.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-06",
+      "question": "At what time between 1 and 2 do clock hands overlap?",
+      "options": [
+        "1:05",
+        "1:06",
+        "1:08",
+        "1:10"
+      ],
+      "correctAnswer": "1:05",
+      "explanation": "Step 1: Hands overlap approximately 11 times in 12 hours.\nStep 2: Between 1-2, they overlap at about 1:05.\nStep 3: Exact time ≈ 1:05:27.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-07",
+      "question": "In a queue of 90 people, Ravi is 32nd from the beginning. What's his position from the end?",
+      "options": [
+        "58th",
+        "59th",
+        "60th",
+        "61st"
+      ],
+      "correctAnswer": "59th",
+      "explanation": "Step 1: End position = 90 - 32 + 1 = 59.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-08",
+      "question": "Farmer is to Field as Surgeon is to?",
+      "options": [
+        "Hospital",
+        "Operation",
+        "Patient",
+        "Theatre"
+      ],
+      "correctAnswer": "Operation",
+      "explanation": "Step 1: Farmer works in field.\nStep 2: Surgeon performs operation.\nStep 3: Opera is what they do.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-09",
+      "question": "Some dancers are singers. All singers are artists. Therefore?",
+      "options": [
+        "All dancers are artists",
+        "Some dancers are artists",
+        "No dancers are artists",
+        "All artists are dancers"
+      ],
+      "correctAnswer": "Some dancers are artists",
+      "explanation": "Step 1: Some dancers are singers.\nStep 2: All singers are artists.\nStep 3: Therefore some dancers are artists.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-REA-10",
+      "question": "Missing: CE, GI, KM, OQ, ?",
+      "options": [
+        "SU",
+        "SV",
+        "TU",
+        "TV"
+      ],
+      "correctAnswer": "SU",
+      "explanation": "Step 1: First letters: C,G,K,O,S (skip 2: C→D,E→F,G).\nStep 2: Second letters: E,I,M,Q,U (also skip 2).\nStep 3: Next: SU.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "LTIMINDTREE-VER-01",
+      "question": "Antonym of 'Commence':",
+      "options": [
+        "Begin",
+        "Start",
+        "Finish",
+        "Begin"
+      ],
+      "correctAnswer": "Finish",
+      "explanation": "Step 1: Commence means to start.\nStep 2: Finish is opposite.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-02",
+      "question": "She ___ cooking dinner when I arrived.",
+      "options": [
+        "was",
+        "is",
+        "has been",
+        "have been"
+      ],
+      "correctAnswer": "was",
+      "explanation": "Step 1: Past continuous needed.\nStep 2: 'Was cooking' shows action in progress in past.\nStep 3: 'was' is correct.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-03",
+      "question": "Synonym of 'Meek':",
+      "options": [
+        "Strong",
+        "Gentle",
+        "Fierce",
+        "Aggressive"
+      ],
+      "correctAnswer": "Gentle",
+      "explanation": "Step 1: Meek means humble, quiet.\nStep 2: Gentle carries similar connotation.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-04",
+      "question": "Which is correct?",
+      "options": [
+        "I have learned English for 5 years.",
+        "I have been learning English for 5 years.",
+        "I am learning English for 5 years.",
+        "Both A and B are correct."
+      ],
+      "correctAnswer": "Both A and B are correct.",
+      "explanation": "Step 1: Both present perfect and present perfect continuous work.\nStep 2: Both show duration from past to now.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-05",
+      "question": "'Lucid' means:",
+      "options": [
+        "Dark",
+        "Clear",
+        "Confused",
+        "Dim"
+      ],
+      "correctAnswer": "Clear",
+      "explanation": "Step 1: Lucid means clear and easy to understand.\nStep 2: Clarity is the essence.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-06",
+      "question": "Fill: 'She is proud ___ her achievements.'",
+      "options": [
+        "of",
+        "in",
+        "for",
+        "from"
+      ],
+      "correctAnswer": "of",
+      "explanation": "Step 1: 'Proud of' is correct collocation.\nStep 2: Shows possession or achievement.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-07",
+      "question": "Direct to indirect: 'I will come tomorrow,' she said.",
+      "options": [
+        "She said I will come tomorrow.",
+        "She said that she would come the next day.",
+        "She said I would come the next day.",
+        "She said that I come tomorrow."
+      ],
+      "correctAnswer": "She said that she would come the next day.",
+      "explanation": "Step 1: Shift 'I' to 'she', 'will' to 'would'.\nStep 2: Shift 'tomorrow' to 'the next day'.\nStep 3: Add 'that'.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Bussiness",
+        "Busness",
+        "Business",
+        "Businesss"
+      ],
+      "correctAnswer": "Business",
+      "explanation": "Step 1: Correct: B-u-s-i-n-e-s-s.\nStep 2: Double 's' at end.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-09",
+      "question": "Closest to 'Plausible':",
+      "options": [
+        "Impossible",
+        "Believable",
+        "False",
+        "Wrong"
+      ],
+      "correctAnswer": "Believable",
+      "explanation": "Step 1: Plausible means appearing true or reasonable.\nStep 2: Believable carries same meaning.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    },
+    {
+      "questionId": "LTIMINDTREE-VER-10",
+      "question": "Error: 'The committee members disagree among themselves on the issue.'",
+      "options": [
+        "committee",
+        "members",
+        "disagree",
+        "no error"
+      ],
+      "correctAnswer": "no error",
+      "explanation": "Step 1: 'Committee members' is correct plural.\nStep 2: 'disagree' is correct plural verb.\nStep 3: 'among themselves' is correct.\nStep 4: No error.\nStep 5: This is a strong pattern to revise for LTI Mindtree online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

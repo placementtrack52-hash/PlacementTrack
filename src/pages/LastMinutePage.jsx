@@ -10,7 +10,7 @@ const LastMinutePage = () => {
       actions={
         <Link
           to="/dashboard"
-          className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-[#172430] dark:text-slate-100"
+          className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]"
         >
           Back to Dashboard
         </Link>

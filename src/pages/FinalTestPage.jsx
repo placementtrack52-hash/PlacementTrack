@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ConfettiBurst from '../components/ConfettiBurst'
 import PageShell from '../components/PageShell'
@@ -77,6 +77,13 @@ const FinalTestPage = () => {
   const progressValue = Math.round((answeredCount / questionSet.length) * 100)
   const timeLabel = `${String(Math.floor(secondsLeft / 60)).padStart(2, '0')}:${String(secondsLeft % 60).padStart(2, '0')}`
   const analysisLabel = result.score >= 80 ? 'Strong retention' : result.score >= 60 ? 'Steady but patchy' : 'Needs revision first'
+  const resultRef = useRef(null)
+
+  useEffect(() => {
+    if (submitted && resultRef.current) {
+      resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [submitted])
 
   const handleSubmit = () => {
     setSubmitted(true)
@@ -89,19 +96,19 @@ const FinalTestPage = () => {
     <PageShell
       title={`${meta.topic.name} - Final test`}
       subtitle="Timed exam-style wrap-up with performance analysis, speed tracking, and mistake capture."
-      actions={<Link to={`/subjects/${subjectId}/topics/${topicId}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-[#172430] dark:text-slate-100">Back to topic</Link>}
+      actions={<Link to={`/subjects/${subjectId}/topics/${topicId}`} className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]">Back to topic</Link>}
     >
-      <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <section className="relative rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
+      <div className="space-y-6">
+        <section className="relative rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-gradient-to-br dark:from-zinc-900 dark:via-black dark:to-zinc-900">
           {submitted && result.score >= 80 ? <ConfettiBurst /> : null}
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Final test questions</h2>
             <div className="flex items-center gap-3">
-              <label className="inline-flex items-center gap-2 text-sm text-slate dark:text-slate-300">
+              <label className="inline-flex items-center gap-2 text-sm text-slate dark:text-white">
                 <input type="checkbox" checked={timerEnabled} onChange={(event) => setTimerEnabled(event.target.checked)} className="h-4 w-4 rounded border-ink/20 text-moss focus:ring-moss" />
                 Timer
               </label>
-              <span className="rounded-full bg-sand px-4 py-2 text-sm font-semibold text-ink dark:bg-[#223244] dark:text-slate-100">{timeLabel}</span>
+              <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink dark:bg-white dark:text-[#0f1720]">{timeLabel}</span>
             </div>
           </div>
           <div className="mt-4">
@@ -110,13 +117,13 @@ const FinalTestPage = () => {
 
           <div className="mt-6 space-y-5">
             {questionSet.map((question, index) => (
-              <div key={question.id} className="rounded-[1.5rem] bg-[#faf6f0] p-5 dark:bg-[#111b25]">
+              <div key={question.id} className="rounded-[1.5rem] bg-[#faf6f0] p-5 dark:bg-black">
                 <p className="font-semibold text-ink dark:text-white">{index + 1}. {question.question}</p>
                 <div className="mt-4 space-y-3">
                   {question.options.map((option, optionIndex) => (
-                    <label key={option} className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm transition ${answers[index] === optionIndex ? 'border-moss bg-emerald-50 dark:bg-[#10281f]' : 'border-black/5 bg-white dark:border-white/10 dark:bg-[#172430]'}`}>
+                    <label key={option} className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm transition ${answers[index] === optionIndex ? 'border-moss bg-emerald-50 dark:border-emerald-500 dark:bg-emerald-500/20' : 'border-black/5 bg-white dark:border-white/10 dark:bg-zinc-800'}`}>
                       <input type="radio" name={`final-question-${index}`} checked={answers[index] === optionIndex} onChange={() => setAnswers((current) => ({ ...current, [index]: optionIndex }))} className="h-4 w-4 border-ink/20 text-moss focus:ring-moss" />
-                      <span className="text-slate dark:text-slate-200">{option}</span>
+                      <span className="text-slate dark:text-white">{option}</span>
                     </label>
                   ))}
                 </div>
@@ -129,30 +136,23 @@ const FinalTestPage = () => {
           </button>
         </section>
 
-        <section className="space-y-6">
-          <div className="rounded-[1.75rem] bg-ink p-6 text-white shadow-soft dark:bg-[#111b25]">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/70">Performance lens</p>
-            <p className="mt-4 text-sm leading-7 text-white/85">This final test blends topic practice into an exam-like snapshot. It is great for checking retention after notes plus quizzes.</p>
-          </div>
-
-          {submitted ? (
-            <>
-              <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
-                <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Final score</h2>
-                <p className="mt-3 text-4xl font-bold text-moss">{result.score}%</p>
-                <p className="mt-2 text-sm text-slate dark:text-slate-300">{result.correctAnswers} of {result.totalQuestions} correct</p>
-                <p className="mt-2 text-sm text-slate dark:text-slate-300">Average pace: {result.averageTimePerQuestion}s per question</p>
-                <p className="mt-4 rounded-2xl bg-[#fff4e9] px-4 py-4 text-sm text-ink dark:bg-[#2a1f18] dark:text-slate-100">Performance analysis: {analysisLabel}. Recommended next step: review mistakes, then retry a hard quiz in accuracy mode.</p>
+        {submitted ? (
+          <>
+            <div ref={resultRef} className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-zinc-900">
+              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Final score</h2>
+              <p className="mt-3 text-4xl font-bold text-moss dark:text-emerald-400">{result.score}%</p>
+              <p className="mt-2 text-sm text-slate dark:text-white/70">{result.correctAnswers} of {result.totalQuestions} correct</p>
+              <p className="mt-2 text-sm text-slate dark:text-white/70">Average pace: {result.averageTimePerQuestion}s per question</p>
+              <p className="mt-4 rounded-2xl bg-white px-4 py-4 text-sm text-ink dark:bg-zinc-800 dark:text-white">Performance analysis: {analysisLabel}. Recommended next step: review mistakes, then retry a hard quiz in accuracy mode.</p>
+            </div>
+            <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-zinc-900">
+              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Answer review</h2>
+              <div className="mt-5">
+                <QuizReview questions={questionSet} answers={answers} />
               </div>
-              <div className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-[#172430]">
-                <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">Answer review</h2>
-                <div className="mt-5">
-                  <QuizReview questions={questionSet} answers={answers} />
-                </div>
-              </div>
-            </>
-          ) : null}
-        </section>
+            </div>
+          </>
+        ) : null}
       </div>
     </PageShell>
   )

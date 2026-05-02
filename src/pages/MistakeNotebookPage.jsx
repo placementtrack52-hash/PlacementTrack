@@ -3,7 +3,7 @@ import PageShell from '../components/PageShell'
 import { useProgress } from '../context/ProgressContext'
 
 const MistakeNotebookPage = () => {
-  const { progress } = useProgress()
+  const { progress, dismissMistake } = useProgress()
 
   return (
     <PageShell
@@ -29,6 +29,13 @@ const MistakeNotebookPage = () => {
                 <span className="rounded-full bg-[#faf6f0] px-3 py-2 text-xs font-semibold text-ink dark:bg-[#111b25] dark:text-slate-100">Weakness: {mistake.weaknessLabel}</span>
                 <span className="rounded-full bg-[#edf4ff] px-3 py-2 text-xs font-semibold text-ink dark:bg-[#142133] dark:text-slate-100">{mistake.timeTakenSeconds}s spent</span>
                 <Link to={`/subjects/${mistake.subjectId}/topics/${mistake.topicKey.split(':')[1]}`} className="text-sm font-semibold text-moss dark:text-emerald-300">Review related notes</Link>
+                <button
+                  type="button"
+                  onClick={() => dismissMistake(mistake.id)}
+                  className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                >
+                  Yes, understand
+                </button>
               </div>
             </div>
           ))

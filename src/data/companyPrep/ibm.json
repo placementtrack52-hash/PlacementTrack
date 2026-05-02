@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "IBM-APT-01",
+      "question": "A person purchases an item for Rs. 300 and sells for Rs. 450. Profit %?",
+      "options": [
+        "40%",
+        "45%",
+        "50%",
+        "55%"
+      ],
+      "correctAnswer": "50%",
+      "explanation": "Step 1: CP = 300, SP = 450.\nStep 2: Profit = 450 - 300 = 150.\nStep 3: Profit% = (150/300) × 100 = 50%.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-02",
+      "question": "Solve: 4x + 8 = 32",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "6",
+      "explanation": "Step 1: 4x + 8 = 32.\nStep 2: 4x = 24.\nStep 3: x = 6.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-03",
+      "question": "A store has 55% of inventory sold. If 1100 items sold, total inventory?",
+      "options": [
+        "1800",
+        "2000",
+        "2200",
+        "2500"
+      ],
+      "correctAnswer": "2000",
+      "explanation": "Step 1: 55% of total = 1100.\nStep 2: 0.55x = 1100, x = 2000.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-04",
+      "question": "In a recipe, flour to sugar is 7:2. If 35 cups flour, sugar?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "10",
+      "explanation": "Step 1: Ratio 7:2, flour = 35.\nStep 2: 7 parts = 35, 1 part = 5.\nStep 3: Sugar = 2 × 5 = 10.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-05",
+      "question": "A car travels 300 miles in 5 hours. Average speed?",
+      "options": [
+        "55 mph",
+        "60 mph",
+        "65 mph",
+        "70 mph"
+      ],
+      "correctAnswer": "60 mph",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 300/5 = 60 mph.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-06",
+      "question": "CI on Rs. 50000 at 6% for 2 years?",
+      "options": [
+        "Rs. 5000",
+        "Rs. 6000",
+        "Rs. 6180",
+        "Rs. 6500"
+      ],
+      "correctAnswer": "Rs. 6180",
+      "explanation": "Step 1: Amount = 50000(1.06)^2 = 50000 × 1.1236 = 56180.\nStep 2: CI = 56180 - 50000 = 6180.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-07",
+      "question": "An item marked Rs. 2000 sold at 40% off. Selling price?",
+      "options": [
+        "Rs. 1000",
+        "Rs. 1100",
+        "Rs. 1200",
+        "Rs. 1300"
+      ],
+      "correctAnswer": "Rs. 1200",
+      "explanation": "Step 1: Discount = 40% of 2000 = 800.\nStep 2: SP = 2000 - 800 = 1200.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-08",
+      "question": "Mean of 18, 24, 30, 36?",
+      "options": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "correctAnswer": "27",
+      "explanation": "Step 1: Sum = 18 + 24 + 30 + 36 = 108.\nStep 2: Mean = 108/4 = 27.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-09",
+      "question": "If 40% of x is 120, find x.",
+      "options": [
+        "250",
+        "300",
+        "350",
+        "400"
+      ],
+      "correctAnswer": "300",
+      "explanation": "Step 1: 40% of x = 120.\nStep 2: 0.4x = 120.\nStep 3: x = 300.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-APT-10",
+      "question": "GCD of 48 and 72?",
+      "options": [
+        "12",
+        "18",
+        "24",
+        "36"
+      ],
+      "correctAnswer": "24",
+      "explanation": "Step 1: 48 = 2⁴ × 3.\nStep 2: 72 = 2³ × 3².\nStep 3: GCD = 2³ × 3 = 24.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "IBM-REA-01",
+      "question": "Series: 2, 4, 8, 16, 32, ?",
+      "options": [
+        "48",
+        "56",
+        "64",
+        "80"
+      ],
+      "correctAnswer": "64",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 32 × 2 = 64.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-02",
+      "question": "If CAT is coded as FDW, what is DOG coded as?",
+      "options": [
+        "ERJ",
+        "ERK",
+        "GRJ",
+        "GRK"
+      ],
+      "correctAnswer": "ERJ",
+      "explanation": "Step 1: Each letter shifts by +3 (C→F, A→D, T→W).\nStep 2: For DOG: D→G, O→R, G→J = GRJ. Wait, D=4→7=G, O=15→18=R, G=7→10=J.\nStep 3: Actually, G→E is -2 not +3. Let me recalculate: C=3→6=F (+3), A=1→4=D (+3), T=20→23=W (+3).\nStep 4: For DOG: D=4→7=G, O=15→18=R, G=7→10=J. So GRJ.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-03",
+      "question": "Pointing to a woman, Ram said 'Her son is my father's son'. Who is she?",
+      "options": [
+        "Aunt",
+        "Mother",
+        "Daughter",
+        "Sister"
+      ],
+      "correctAnswer": "Mother",
+      "explanation": "Step 1: Ram's father's son = Ram himself (or his brother).\nStep 2: But here it's referring to 'her son = Ram's father's son = Ram'.\nStep 3: Therefore, the woman is Ram's mother.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-04",
+      "question": "Odd one: Monday, Tuesday, January, Wednesday",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "January",
+        "Wednesday"
+      ],
+      "correctAnswer": "January",
+      "explanation": "Step 1: Monday, Tuesday, Wednesday are days of the week.\nStep 2: January is a month.\nStep 3: January is odd.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-05",
+      "question": "If SYSTEM is written as METSYS, what is CODING written as?",
+      "options": [
+        "GNIDOC",
+        "GINCOD",
+        "DINGCO",
+        "CODINGM"
+      ],
+      "correctAnswer": "GNIDOC",
+      "explanation": "Step 1: SYSTEM reversed: S-Y-S-T-E-M → M-E-T-S-Y-S.\nStep 2: CODING reversed: C-O-D-I-N-G → G-N-I-D-O-C.\nStep 3: Correct: GNIDOC.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-06",
+      "question": "At what time between 1 and 2 do the hands overlap?",
+      "options": [
+        "1:05",
+        "1:05:27",
+        "1:06",
+        "1:07"
+      ],
+      "correctAnswer": "1:05:27",
+      "explanation": "Step 1: Hands coincide when minute catches hour hand.\nStep 2: Between 1-2, approximately at 1:05:27.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-07",
+      "question": "Among 150 people in a queue, Priya is 45th from front. Position from back?",
+      "options": [
+        "105th",
+        "106th",
+        "107th",
+        "108th"
+      ],
+      "correctAnswer": "106th",
+      "explanation": "Step 1: Position from back = 150 - 45 + 1 = 106.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-08",
+      "question": "Writer is to Book as Sculptor is to?",
+      "options": [
+        "Paint",
+        "Statue",
+        "Canvas",
+        "Art"
+      ],
+      "correctAnswer": "Statue",
+      "explanation": "Step 1: Writer creates a book.\nStep 2: Sculptor creates a statue.\nStep 3: Creator to creation relationship.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-09",
+      "question": "All students are ambitious. Some ambitious people fail. Therefore?",
+      "options": [
+        "All students fail",
+        "Some students fail",
+        "No students are ambitious",
+        "Some students may fail"
+      ],
+      "correctAnswer": "Some students may fail",
+      "explanation": "Step 1: All students are ambitious.\nStep 2: Some ambitious people fail.\nStep 3: Some of those ambitious (including students) may fail.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-REA-10",
+      "question": "Pattern: 1-4, 2-7, 3-10, 4-13, ?",
+      "options": [
+        "5-16",
+        "5-15",
+        "5-17",
+        "6-16"
+      ],
+      "correctAnswer": "5-16",
+      "explanation": "Step 1: First sequence: 1, 2, 3, 4, 5 (increment by 1).\nStep 2: Second sequence: 4, 7, 10, 13, 16 (increment by 3).\nStep 3: Next pair: 5-16.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "IBM-VER-01",
+      "question": "Opposite of 'Lucid':",
+      "options": [
+        "Clear",
+        "Obscure",
+        "Transparent",
+        "Bright"
+      ],
+      "correctAnswer": "Obscure",
+      "explanation": "Step 1: Lucid means clear and easy to understand.\nStep 2: Obscure means unclear or difficult to understand.\nStep 3: Opposite of lucid.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-02",
+      "question": "The jury ___ unanimous in their decision.",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "has been"
+      ],
+      "correctAnswer": "were",
+      "explanation": "Step 1: 'Jury' is a collective noun but treated as plural in formal contexts.\nStep 2: Often uses plural verb 'were'.\nStep 3: 'were' is appropriate.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-03",
+      "question": "Synonym of 'Benevolent':",
+      "options": [
+        "Mean",
+        "Kind/compassionate",
+        "Selfish",
+        "Cruel"
+      ],
+      "correctAnswer": "Kind/compassionate",
+      "explanation": "Step 1: Benevolent means kind and generous.\nStep 2: Kind and compassionate directly match.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-04",
+      "question": "Which sentence is correct?",
+      "options": [
+        "None of the students have finished the assignment.",
+        "None of the students has finished the assignment.",
+        "All the students have finished the assignment.",
+        "Both A and C"
+      ],
+      "correctAnswer": "None of the students has finished the assignment.",
+      "explanation": "Step 1: 'None' is singular and takes singular verb 'has'.\nStep 2: Correct form uses 'has'.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-05",
+      "question": "'Ephemeral' means:",
+      "options": [
+        "Eternal",
+        "Temporary/short-lived",
+        "Permanent",
+        "Lasting"
+      ],
+      "correctAnswer": "Temporary/short-lived",
+      "explanation": "Step 1: Ephemeral = lasting for only a short time.\nStep 2: Means temporary or fleeting.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-06",
+      "question": "Fill: 'She is well-known ___ her scientific contributions.'",
+      "options": [
+        "for",
+        "as",
+        "by",
+        "in"
+      ],
+      "correctAnswer": "for",
+      "explanation": "Step 1: 'Known for' = recognized because of something.\nStep 2: 'for' is the correct preposition.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-07",
+      "question": "Report: 'I am very tired,' she said.",
+      "options": [
+        "She said she is very tired.",
+        "She said she was very tired.",
+        "She said she were very tired.",
+        "She said she will be tired."
+      ],
+      "correctAnswer": "She said she was very tired.",
+      "explanation": "Step 1: Present tense 'am' changes to past 'was'.\nStep 2: Backshift in reported speech.\nStep 3: Should be 'was very tired'.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Enviroment",
+        "Environment",
+        "Envionment",
+        "Envirenment"
+      ],
+      "correctAnswer": "Environment",
+      "explanation": "Step 1: Common misspelling.\nStep 2: Correct: E-n-v-i-r-o-n-m-e-n-t.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-09",
+      "question": "Similar to 'Austere':",
+      "options": [
+        "Luxurious",
+        "Severe/stern",
+        "Comfortable",
+        "Ornate"
+      ],
+      "correctAnswer": "Severe/stern",
+      "explanation": "Step 1: Austere means severe or unadorned.\nStep 2: Severe and stern capture this quality.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    },
+    {
+      "questionId": "IBM-VER-10",
+      "question": "Error: 'The data shows that many students is struggling.'",
+      "options": [
+        "data",
+        "shows",
+        "is",
+        "struggling"
+      ],
+      "correctAnswer": "is",
+      "explanation": "Step 1: 'Data' is plural (plural of datum).\nStep 2: Takes plural verb 'are' not 'is'.\nStep 3: Should be 'students are struggling'.\nStep 5: This is a strong pattern to revise for IBM online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

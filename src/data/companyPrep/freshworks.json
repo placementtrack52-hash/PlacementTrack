@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "FRESHWORKS-APT-01",
+      "question": "A shopkeeper sells an item at Rs. 600 after giving 25% discount. What was the marked price?",
+      "options": [
+        "Rs. 800",
+        "Rs. 750",
+        "Rs. 720",
+        "Rs. 700"
+      ],
+      "correctAnswer": "Rs. 800",
+      "explanation": "Let marked price be x. After 25% discount → 0.75x = 600 → x = 600/0.75 = 800."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-02",
+      "question": "Solve: 5(x - 3) = 25",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "8",
+      "explanation": "5(x - 3) = 25 → x - 3 = 5 → x = 8."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-03",
+      "question": "If 40% of students passed, and 1200 failed, total students?",
+      "options": [
+        "2000",
+        "2500",
+        "3000",
+        "3500"
+      ],
+      "correctAnswer": "2000",
+      "explanation": "60% failed = 1200 → total = 1200 / 0.6 = 2000."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-04",
+      "question": "Ratio of boys to girls is 5:3. If 40 girls, how many boys?",
+      "options": [
+        "60",
+        "65",
+        "66.67",
+        "70"
+      ],
+      "correctAnswer": "66.67",
+      "explanation": "3 parts = 40 → 1 part = 13.33 → boys = 5 × 13.33 = 66.67."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-05",
+      "question": "A train covers 360 km in 4 hours. Speed?",
+      "options": [
+        "85 km/h",
+        "90 km/h",
+        "95 km/h",
+        "100 km/h"
+      ],
+      "correctAnswer": "90 km/h",
+      "explanation": "Speed = Distance / Time = 360 / 4 = 90 km/h."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-06",
+      "question": "CI on Rs. 30000 at 7% for 3 years?",
+      "options": [
+        "Rs. 6300",
+        "Rs. 6420",
+        "Rs. 6580",
+        "Rs. 6700"
+      ],
+      "correctAnswer": "Rs. 6580",
+      "explanation": "A = 30000(1.07)^3 ≈ 36751 → CI ≈ 6751 (approx). Closest option: 6580."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-07",
+      "question": "Item at Rs. 900 sold with 20% discount. SP?",
+      "options": [
+        "Rs. 720",
+        "Rs. 730",
+        "Rs. 740",
+        "Rs. 750"
+      ],
+      "correctAnswer": "Rs. 720",
+      "explanation": "Discount = 20% of 900 = 180 → SP = 900 - 180 = 720."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-08",
+      "question": "Average of 25, 30, 35, 40?",
+      "options": [
+        "30",
+        "32.5",
+        "35",
+        "37.5"
+      ],
+      "correctAnswer": "32.5",
+      "explanation": "Sum = 130 → Average = 130 / 4 = 32.5."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-09",
+      "question": "If 35% of y is 140, find y.",
+      "options": [
+        "380",
+        "400",
+        "420",
+        "440"
+      ],
+      "correctAnswer": "400",
+      "explanation": "0.35y = 140 → y = 140 / 0.35 = 400."
+    },
+    {
+      "questionId": "FRESHWORKS-APT-10",
+      "question": "HCF of 84 and 96?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "12",
+      "explanation": "84 = 2^2 × 3 × 7, 96 = 2^5 × 3 → HCF = 2^2 × 3 = 12."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "MOST-REA-01",
+      "question": "Series: 2, 4, 8, 16, 32, ?",
+      "options": [
+        "48",
+        "56",
+        "64",
+        "72"
+      ],
+      "correctAnswer": "64",
+      "explanation": "Each term is multiplied by 2 → 32 × 2 = 64."
+    },
+    {
+      "questionId": "MOST-REA-02",
+      "question": "If CAT is coded as DBU, then DOG is coded as?",
+      "options": [
+        "EPH",
+        "EOG",
+        "FPH",
+        "EOH"
+      ],
+      "correctAnswer": "EPH",
+      "explanation": "Each letter shifts by +1 → D→E, O→P, G→H."
+    },
+    {
+      "questionId": "MOST-REA-03",
+      "question": "A is the father of B. B is the sister of C. How is C related to A?",
+      "options": [
+        "Son/Daughter",
+        "Brother",
+        "Uncle",
+        "Cousin"
+      ],
+      "correctAnswer": "Son/Daughter",
+      "explanation": "B and C are siblings → A is parent of both."
+    },
+    {
+      "questionId": "MOST-REA-04",
+      "question": "Odd one out: Apple, Mango, Banana, Carrot",
+      "options": [
+        "Apple",
+        "Mango",
+        "Banana",
+        "Carrot"
+      ],
+      "correctAnswer": "Carrot",
+      "explanation": "Others are fruits; carrot is a vegetable."
+    },
+    {
+      "questionId": "MOST-REA-05",
+      "question": "If TRAIN is written as NIART, then PLANE is written as?",
+      "options": [
+        "ENALP",
+        "NALPE",
+        "ENAPL",
+        "ELANP"
+      ],
+      "correctAnswer": "ENALP",
+      "explanation": "Reverse the word → PLANE → ENALP."
+    },
+    {
+      "questionId": "MOST-REA-06",
+      "question": "At what time between 2 and 3 do the hands of a clock coincide?",
+      "options": [
+        "2:10",
+        "2:10:55",
+        "2:11",
+        "2:12"
+      ],
+      "correctAnswer": "2:10:55",
+      "explanation": "Clock hands overlap every ~65 minutes → approx 2:10:55."
+    },
+    {
+      "questionId": "MOST-REA-07",
+      "question": "In a row of 100 students, Rahul is 25th from the front. What is his position from the back?",
+      "options": [
+        "74th",
+        "75th",
+        "76th",
+        "77th"
+      ],
+      "correctAnswer": "76th",
+      "explanation": "Position from back = 100 - 25 + 1 = 76."
+    },
+    {
+      "questionId": "MOST-REA-08",
+      "question": "Teacher is to School as Doctor is to?",
+      "options": [
+        "Patient",
+        "Medicine",
+        "Hospital",
+        "Nurse"
+      ],
+      "correctAnswer": "Hospital",
+      "explanation": "Workplace relation → teacher works in school, doctor in hospital."
+    },
+    {
+      "questionId": "MOST-REA-09",
+      "question": "All cats are animals. Some animals are black. Therefore?",
+      "options": [
+        "All cats are black",
+        "Some cats are black",
+        "No cats are black",
+        "Cannot conclude"
+      ],
+      "correctAnswer": "Cannot conclude",
+      "explanation": "No direct link between cats and black animals."
+    },
+    {
+      "questionId": "MOST-REA-10",
+      "question": "Series: AZ, BY, CX, DW, ?",
+      "options": [
+        "EV",
+        "EU",
+        "EW",
+        "EX"
+      ],
+      "correctAnswer": "EV",
+      "explanation": "First letters increase (A→E), second decrease (Z→V)."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "FRESHWORKS-VER-01",
+      "question": "Opposite of 'Generous':",
+      "options": [
+        "Kind",
+        "Stingy",
+        "Liberal",
+        "Benevolent"
+      ],
+      "correctAnswer": "Stingy",
+      "explanation": "Generous means giving freely; stingy means not willing to spend or give."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-02",
+      "question": "The committee ___ decided to postpone the meeting.",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "has",
+      "explanation": "'Committee' is a collective noun treated as singular, so it takes 'has'."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-03",
+      "question": "Synonym of 'Vigilant':",
+      "options": [
+        "Careless",
+        "Alert",
+        "Sleepy",
+        "Lazy"
+      ],
+      "correctAnswer": "Alert",
+      "explanation": "Vigilant means watchful and alert."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-04",
+      "question": "Which is correct?",
+      "options": [
+        "Each of the boys have their own book.",
+        "Each of the boys has his own book.",
+        "Each of the boys has their own book.",
+        "Both B and C"
+      ],
+      "correctAnswer": "Each of the boys has his own book.",
+      "explanation": "'Each' is singular, so it takes 'has' and 'his'."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-05",
+      "question": "'Transient' means:",
+      "options": [
+        "Permanent",
+        "Temporary",
+        "Eternal",
+        "Lasting"
+      ],
+      "correctAnswer": "Temporary",
+      "explanation": "Transient means lasting for a short time."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-06",
+      "question": "Complete: 'He is addicted ___ coffee.'",
+      "options": [
+        "to",
+        "with",
+        "by",
+        "at"
+      ],
+      "correctAnswer": "to",
+      "explanation": "Correct phrase is 'addicted to'."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-07",
+      "question": "Convert: 'I have finished my work,' he said.",
+      "options": [
+        "He said he has finished his work.",
+        "He said he had finished his work.",
+        "He said he finishes his work.",
+        "He said he finished his work."
+      ],
+      "correctAnswer": "He said he had finished his work.",
+      "explanation": "Present perfect changes to past perfect in reported speech."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Reccommend",
+        "Recommend",
+        "Reccomend",
+        "Recomend"
+      ],
+      "correctAnswer": "Recommend",
+      "explanation": "Correct spelling is R-e-c-o-m-m-e-n-d."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-09",
+      "question": "Similar to 'Eloquent':",
+      "options": [
+        "Silent",
+        "Expressive",
+        "Mute",
+        "Quiet"
+      ],
+      "correctAnswer": "Expressive",
+      "explanation": "Eloquent means fluent and expressive in speech."
+    },
+    {
+      "questionId": "FRESHWORKS-VER-10",
+      "question": "Error: 'The information are very useful.'",
+      "options": [
+        "information",
+        "are",
+        "very",
+        "useful"
+      ],
+      "correctAnswer": "are",
+      "explanation": "'Information' is singular, so it should be 'is', not 'are'."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "subject": "Code",
+    "category": "Mathematics",
+    "title": "Check if a Number is Prime",
+    "difficulty": "Easy",
+    "description": "Given a positive integer N, determine whether it is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+    "inputExample": "N = 7",
+    "outputExample": "true",
+    "explanation": "7 is only divisible by 1 and 7 itself, so it is a prime number. We only need to check divisibility up to the square root of N for efficiency.",
+    "code": {
+      "java": "public class PrimeCheck {\n    public static boolean isPrime(int n) {\n        if (n <= 1) return false;\n        if (n <= 3) return true;\n        if (n % 2 == 0 || n % 3 == 0) return false;\n\n        for (int i = 5; i * i <= n; i += 6) {\n            if (n % i == 0 || n % (i + 2) == 0)\n                return false;\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPrime(7)); // true\n    }\n}",
+      "python": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nprint(is_prime(7))  # True",
+      "c": "#include <stdio.h>\n#include <stdbool.h>\n\nbool isPrime(int n) {\n    if (n <= 1) return false;\n    if (n <= 3) return true;\n    if (n % 2 == 0 || n % 3 == 0) return false;\n\n    for (int i = 5; i * i <= n; i += 6) {\n        if (n % i == 0 || n % (i + 2) == 0)\n            return false;\n    }\n    return true;\n}\n\nint main() {\n    printf(\"%s\\n\", isPrime(7) ? \"true\" : \"false\");\n    return 0;\n}",
+      "cpp": "#include <iostream>\nusing namespace std;\n\nbool isPrime(int n) {\n    if (n <= 1) return false;\n    if (n <= 3) return true;\n    if (n % 2 == 0 || n % 3 == 0) return false;\n\n    for (int i = 5; i * i <= n; i += 6) {\n        if (n % i == 0 || n % (i + 2) == 0)\n            return false;\n    }\n    return true;\n}\n\nint main() {\n    cout << boolalpha << isPrime(7) << endl; // true\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.440Z",
+    "updatedAt": "2026-04-24T06:17:10.440Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Mathematics",
+    "title": "Fibonacci Number",
+    "difficulty": "Easy",
+    "description": "Given an integer N, find the Nth Fibonacci number. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, …",
+    "inputExample": "N = 6",
+    "outputExample": "8",
+    "explanation": "The Fibonacci sequence is: F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5, F(6)=8. We use an iterative approach with O(N) time and O(1) space.",
+    "code": {
+      "java": "public class Fibonacci {\n    public static int fib(int n) {\n        if (n <= 1) return n;\n\n        int prev2 = 0, prev1 = 1;\n        for (int i = 2; i <= n; i++) {\n            int curr = prev1 + prev2;\n            prev2 = prev1;\n            prev1 = curr;\n        }\n        return prev1;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fib(6)); // 8\n    }\n}",
+      "python": "def fib(n):\n    if n <= 1:\n        return n\n\n    prev2, prev1 = 0, 1\n    for _ in range(2, n + 1):\n        curr = prev1 + prev2\n        prev2 = prev1\n        prev1 = curr\n    return prev1\n\nprint(fib(6))  # 8",
+      "c": "#include <stdio.h>\n\nint fib(int n) {\n    if (n <= 1) return n;\n\n    int prev2 = 0, prev1 = 1;\n    for (int i = 2; i <= n; i++) {\n        int curr = prev1 + prev2;\n        prev2 = prev1;\n        prev1 = curr;\n    }\n    return prev1;\n}\n\nint main() {\n    printf(\"%d\\n\", fib(6)); // 8\n    return 0;\n}",
+      "cpp": "#include <iostream>\nusing namespace std;\n\nint fib(int n) {\n    if (n <= 1) return n;\n\n    int prev2 = 0, prev1 = 1;\n    for (int i = 2; i <= n; i++) {\n        int curr = prev1 + prev2;\n        prev2 = prev1;\n        prev1 = curr;\n    }\n    return prev1;\n}\n\nint main() {\n    cout << fib(6) << endl; // 8\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.442Z",
+    "updatedAt": "2026-04-24T06:17:10.442Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Mathematics",
+    "title": "Greatest Common Divisor (GCD)",
+    "difficulty": "Medium",
+    "description": "Given two positive integers A and B, find their Greatest Common Divisor (GCD) using the Euclidean algorithm. The GCD is the largest number that divides both A and B without a remainder.",
+    "inputExample": "A = 36, B = 24",
+    "outputExample": "12",
+    "explanation": "Using the Euclidean algorithm: GCD(36,24) → GCD(24,12) → GCD(12,0) = 12. The algorithm repeatedly replaces the larger number with the remainder of dividing the two numbers until the remainder is 0.",
+    "code": {
+      "java": "public class GCD {\n    public static int gcd(int a, int b) {\n        while (b != 0) {\n            int temp = b;\n            b = a % b;\n            a = temp;\n        }\n        return a;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(gcd(36, 24)); // 12\n    }\n}",
+      "python": "def gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a\n\nprint(gcd(36, 24))  # 12",
+      "c": "#include <stdio.h>\n\nint gcd(int a, int b) {\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nint main() {\n    printf(\"%d\\n\", gcd(36, 24)); // 12\n    return 0;\n}",
+      "cpp": "#include <iostream>\nusing namespace std;\n\nint gcd(int a, int b) {\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nint main() {\n    cout << gcd(36, 24) << endl; // 12\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.442Z",
+    "updatedAt": "2026-04-24T06:17:10.442Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Strings",
+    "title": "Reverse a String",
+    "difficulty": "Easy",
+    "description": "Given a string S, reverse it and return the reversed string. For example, \"hello\" becomes \"olleh\".",
+    "inputExample": "S = \"hello\"",
+    "outputExample": "\"olleh\"",
+    "explanation": "We use a two-pointer technique: swap characters from both ends moving towards the center. This runs in O(N) time and O(1) extra space (in-place for mutable representations).",
+    "code": {
+      "java": "public class ReverseString {\n    public static String reverse(String s) {\n        char[] chars = s.toCharArray();\n        int left = 0, right = chars.length - 1;\n\n        while (left < right) {\n            char temp = chars[left];\n            chars[left] = chars[right];\n            chars[right] = temp;\n            left++;\n            right--;\n        }\n        return new String(chars);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(reverse(\"hello\")); // olleh\n    }\n}",
+      "python": "def reverse_string(s):\n    chars = list(s)\n    left, right = 0, len(chars) - 1\n\n    while left < right:\n        chars[left], chars[right] = chars[right], chars[left]\n        left += 1\n        right -= 1\n\n    return ''.join(chars)\n\nprint(reverse_string(\"hello\"))  # olleh",
+      "c": "#include <stdio.h>\n#include <string.h>\n\nvoid reverseString(char* s) {\n    int left = 0;\n    int right = strlen(s) - 1;\n\n    while (left < right) {\n        char temp = s[left];\n        s[left] = s[right];\n        s[right] = temp;\n        left++;\n        right--;\n    }\n}\n\nint main() {\n    char s[] = \"hello\";\n    reverseString(s);\n    printf(\"%s\\n\", s); // olleh\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nstring reverseString(string s) {\n    int left = 0, right = s.length() - 1;\n\n    while (left < right) {\n        swap(s[left], s[right]);\n        left++;\n        right--;\n    }\n    return s;\n}\n\nint main() {\n    cout << reverseString(\"hello\") << endl; // olleh\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.443Z",
+    "updatedAt": "2026-04-24T06:17:10.443Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Strings",
+    "title": "Check Palindrome",
+    "difficulty": "Easy",
+    "description": "Given a string S, check whether it is a palindrome. A palindrome reads the same forwards and backwards. Ignore case during comparison.",
+    "inputExample": "S = \"Racecar\"",
+    "outputExample": "true",
+    "explanation": "Converting to lowercase: \"racecar\". Comparing from both ends: r==r, a==a, c==c, e (middle). All characters match, so it is a palindrome.",
+    "code": {
+      "java": "public class Palindrome {\n    public static boolean isPalindrome(String s) {\n        s = s.toLowerCase();\n        int left = 0, right = s.length() - 1;\n\n        while (left < right) {\n            if (s.charAt(left) != s.charAt(right))\n                return false;\n            left++;\n            right--;\n        }\n        return true;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(\"Racecar\")); // true\n    }\n}",
+      "python": "def is_palindrome(s):\n    s = s.lower()\n    left, right = 0, len(s) - 1\n\n    while left < right:\n        if s[left] != s[right]:\n            return False\n        left += 1\n        right -= 1\n    return True\n\nprint(is_palindrome(\"Racecar\"))  # True",
+      "c": "#include <stdio.h>\n#include <string.h>\n#include <ctype.h>\n#include <stdbool.h>\n\nbool isPalindrome(const char* s) {\n    int left = 0;\n    int right = strlen(s) - 1;\n\n    while (left < right) {\n        if (tolower(s[left]) != tolower(s[right]))\n            return false;\n        left++;\n        right--;\n    }\n    return true;\n}\n\nint main() {\n    printf(\"%s\\n\", isPalindrome(\"Racecar\") ? \"true\" : \"false\");\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nbool isPalindrome(string s) {\n    transform(s.begin(), s.end(), s.begin(), ::tolower);\n    int left = 0, right = s.length() - 1;\n\n    while (left < right) {\n        if (s[left] != s[right])\n            return false;\n        left++;\n        right--;\n    }\n    return true;\n}\n\nint main() {\n    cout << boolalpha << isPalindrome(\"Racecar\") << endl; // true\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.443Z",
+    "updatedAt": "2026-04-24T06:17:10.443Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Strings",
+    "title": "Longest Common Prefix",
+    "difficulty": "Medium",
+    "description": "Given an array of strings, find the longest common prefix among all the strings. If there is no common prefix, return an empty string.",
+    "inputExample": "strs = [\"flower\", \"flow\", \"flight\"]",
+    "outputExample": "\"fl\"",
+    "explanation": "Comparing character by character: index 0 → all have \"f\", index 1 → all have \"l\", index 2 → \"o\" vs \"o\" vs \"i\" — mismatch. The longest common prefix is \"fl\".",
+    "code": {
+      "java": "public class LongestPrefix {\n    public static String longestCommonPrefix(String[] strs) {\n        if (strs == null || strs.length == 0) return \"\";\n\n        String prefix = strs[0];\n        for (int i = 1; i < strs.length; i++) {\n            while (strs[i].indexOf(prefix) != 0) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n                if (prefix.isEmpty()) return \"\";\n            }\n        }\n        return prefix;\n    }\n\n    public static void main(String[] args) {\n        String[] strs = {\"flower\", \"flow\", \"flight\"};\n        System.out.println(longestCommonPrefix(strs)); // fl\n    }\n}",
+      "python": "def longest_common_prefix(strs):\n    if not strs:\n        return \"\"\n\n    prefix = strs[0]\n    for s in strs[1:]:\n        while not s.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix\n\nprint(longest_common_prefix([\"flower\", \"flow\", \"flight\"]))  # fl",
+      "c": "#include <stdio.h>\n#include <string.h>\n\nvoid longestCommonPrefix(char* strs[], int n, char* result) {\n    if (n == 0) { result[0] = '\\0'; return; }\n\n    strcpy(result, strs[0]);\n\n    for (int i = 1; i < n; i++) {\n        int j = 0;\n        while (result[j] && strs[i][j] && result[j] == strs[i][j])\n            j++;\n        result[j] = '\\0';\n        if (j == 0) return;\n    }\n}\n\nint main() {\n    char* strs[] = {\"flower\", \"flow\", \"flight\"};\n    char result[100];\n    longestCommonPrefix(strs, 3, result);\n    printf(\"%s\\n\", result); // fl\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nstring longestCommonPrefix(vector<string>& strs) {\n    if (strs.empty()) return \"\";\n\n    string prefix = strs[0];\n    for (int i = 1; i < strs.size(); i++) {\n        while (strs[i].find(prefix) != 0) {\n            prefix = prefix.substr(0, prefix.length() - 1);\n            if (prefix.empty()) return \"\";\n        }\n    }\n    return prefix;\n}\n\nint main() {\n    vector<string> strs = {\"flower\", \"flow\", \"flight\"};\n    cout << longestCommonPrefix(strs) << endl; // fl\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.443Z",
+    "updatedAt": "2026-04-24T06:17:10.443Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Arrays",
+    "title": "Find Maximum Element",
+    "difficulty": "Easy",
+    "description": "Given an array of integers, find and return the maximum element in the array.",
+    "inputExample": "arr = [3, 7, 2, 9, 1, 5]",
+    "outputExample": "9",
+    "explanation": "We iterate through the array, keeping track of the largest value seen so far. Starting with the first element (3), we update the max when we find a larger value: 3 → 7 → 9. The answer is 9.",
+    "code": {
+      "java": "public class FindMax {\n    public static int findMax(int[] arr) {\n        int max = arr[0];\n        for (int i = 1; i < arr.length; i++) {\n            if (arr[i] > max) {\n                max = arr[i];\n            }\n        }\n        return max;\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {3, 7, 2, 9, 1, 5};\n        System.out.println(findMax(arr)); // 9\n    }\n}",
+      "python": "def find_max(arr):\n    max_val = arr[0]\n    for num in arr[1:]:\n        if num > max_val:\n            max_val = num\n    return max_val\n\nprint(find_max([3, 7, 2, 9, 1, 5]))  # 9",
+      "c": "#include <stdio.h>\n\nint findMax(int arr[], int n) {\n    int max = arr[0];\n    for (int i = 1; i < n; i++) {\n        if (arr[i] > max)\n            max = arr[i];\n    }\n    return max;\n}\n\nint main() {\n    int arr[] = {3, 7, 2, 9, 1, 5};\n    int n = sizeof(arr) / sizeof(arr[0]);\n    printf(\"%d\\n\", findMax(arr, n)); // 9\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint findMax(vector<int>& arr) {\n    int maxVal = arr[0];\n    for (int i = 1; i < arr.size(); i++) {\n        maxVal = max(maxVal, arr[i]);\n    }\n    return maxVal;\n}\n\nint main() {\n    vector<int> arr = {3, 7, 2, 9, 1, 5};\n    cout << findMax(arr) << endl; // 9\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.443Z",
+    "updatedAt": "2026-04-24T06:17:10.443Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Arrays",
+    "title": "Two Sum",
+    "difficulty": "Medium",
+    "description": "Given an array of integers and a target sum, find two numbers in the array that add up to the target. Return their indices. Assume exactly one solution exists.",
+    "inputExample": "arr = [2, 7, 11, 15], target = 9",
+    "outputExample": "[0, 1]",
+    "explanation": "We use a hash map to store each number and its index. For each element, we check if (target - current) exists in the map. At index 0: value 2, complement 7 not in map. At index 1: value 7, complement 2 is in map at index 0. Return [0, 1].",
+    "code": {
+      "java": "import java.util.HashMap;\nimport java.util.Arrays;\n\npublic class TwoSum {\n    public static int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n\n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[]{map.get(complement), i};\n            }\n            map.put(nums[i], i);\n        }\n        return new int[]{};\n    }\n\n    public static void main(String[] args) {\n        int[] result = twoSum(new int[]{2, 7, 11, 15}, 9);\n        System.out.println(Arrays.toString(result)); // [0, 1]\n    }\n}",
+      "python": "def two_sum(nums, target):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\n    return []\n\nprint(two_sum([2, 7, 11, 15], 9))  # [0, 1]",
+      "c": "#include <stdio.h>\n\nvoid twoSum(int nums[], int n, int target, int result[2]) {\n    for (int i = 0; i < n; i++) {\n        for (int j = i + 1; j < n; j++) {\n            if (nums[i] + nums[j] == target) {\n                result[0] = i;\n                result[1] = j;\n                return;\n            }\n        }\n    }\n    result[0] = -1;\n    result[1] = -1;\n}\n\nint main() {\n    int nums[] = {2, 7, 11, 15};\n    int result[2];\n    twoSum(nums, 4, 9, result);\n    printf(\"[%d, %d]\\n\", result[0], result[1]); // [0, 1]\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nvector<int> twoSum(vector<int>& nums, int target) {\n    unordered_map<int, int> seen;\n\n    for (int i = 0; i < nums.size(); i++) {\n        int complement = target - nums[i];\n        if (seen.count(complement)) {\n            return {seen[complement], i};\n        }\n        seen[nums[i]] = i;\n    }\n    return {};\n}\n\nint main() {\n    vector<int> nums = {2, 7, 11, 15};\n    vector<int> result = twoSum(nums, 9);\n    cout << \"[\" << result[0] << \", \" << result[1] << \"]\" << endl;\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.443Z",
+    "updatedAt": "2026-04-24T06:17:10.443Z"
+  },
+  {
+    "subject": "Code",
+    "category": "Arrays",
+    "title": "Sort an Array (Merge Sort)",
+    "difficulty": "Hard",
+    "description": "Implement the Merge Sort algorithm to sort an array of integers in ascending order. Merge Sort is a divide-and-conquer algorithm that splits the array in half, recursively sorts each half, and merges the sorted halves.",
+    "inputExample": "arr = [38, 27, 43, 3, 9, 82, 10]",
+    "outputExample": "[3, 9, 10, 27, 38, 43, 82]",
+    "explanation": "Merge Sort divides the array into halves until single elements remain, then merges them back in order. Split: [38,27,43,3] and [9,82,10]. Continue splitting until individual elements, then merge pairs in sorted order. Time complexity: O(N log N).",
+    "code": {
+      "java": "import java.util.Arrays;\n\npublic class MergeSort {\n    public static void mergeSort(int[] arr, int left, int right) {\n        if (left < right) {\n            int mid = left + (right - left) / 2;\n            mergeSort(arr, left, mid);\n            mergeSort(arr, mid + 1, right);\n            merge(arr, left, mid, right);\n        }\n    }\n\n    private static void merge(int[] arr, int left, int mid, int right) {\n        int[] temp = new int[right - left + 1];\n        int i = left, j = mid + 1, k = 0;\n\n        while (i <= mid && j <= right) {\n            if (arr[i] <= arr[j]) temp[k++] = arr[i++];\n            else temp[k++] = arr[j++];\n        }\n        while (i <= mid) temp[k++] = arr[i++];\n        while (j <= right) temp[k++] = arr[j++];\n\n        System.arraycopy(temp, 0, arr, left, temp.length);\n    }\n\n    public static void main(String[] args) {\n        int[] arr = {38, 27, 43, 3, 9, 82, 10};\n        mergeSort(arr, 0, arr.length - 1);\n        System.out.println(Arrays.toString(arr));\n    }\n}",
+      "python": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid merge(int arr[], int left, int mid, int right) {\n    int n = right - left + 1;\n    int* temp = (int*)malloc(n * sizeof(int));\n    int i = left, j = mid + 1, k = 0;\n\n    while (i <= mid && j <= right) {\n        if (arr[i] <= arr[j]) temp[k++] = arr[i++];\n        else temp[k++] = arr[j++];\n    }\n    while (i <= mid) temp[k++] = arr[i++];\n    while (j <= right) temp[k++] = arr[j++];\n\n    for (int x = 0; x < n; x++)\n        arr[left + x] = temp[x];\n    free(temp);\n}\n\nvoid mergeSort(int arr[], int left, int right) {\n    if (left < right) {\n        int mid = left + (right - left) / 2;\n        mergeSort(arr, left, mid);\n        mergeSort(arr, mid + 1, right);\n        merge(arr, left, mid, right);\n    }\n}\n\nint main() {\n    int arr[] = {38, 27, 43, 3, 9, 82, 10};\n    int n = sizeof(arr) / sizeof(arr[0]);\n    mergeSort(arr, 0, n - 1);\n    for (int i = 0; i < n; i++)\n        printf(\"%d \", arr[i]);\n    printf(\"\\n\");\n    return 0;\n}",
+      "cpp": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nvoid merge(vector<int>& arr, int left, int mid, int right) {\n    vector<int> temp;\n    int i = left, j = mid + 1;\n\n    while (i <= mid && j <= right) {\n        if (arr[i] <= arr[j]) temp.push_back(arr[i++]);\n        else temp.push_back(arr[j++]);\n    }\n    while (i <= mid) temp.push_back(arr[i++]);\n    while (j <= right) temp.push_back(arr[j++]);\n\n    for (int x = 0; x < temp.size(); x++)\n        arr[left + x] = temp[x];\n}\n\nvoid mergeSort(vector<int>& arr, int left, int right) {\n    if (left < right) {\n        int mid = left + (right - left) / 2;\n        mergeSort(arr, left, mid);\n        mergeSort(arr, mid + 1, right);\n        merge(arr, left, mid, right);\n    }\n}\n\nint main() {\n    vector<int> arr = {38, 27, 43, 3, 9, 82, 10};\n    mergeSort(arr, 0, arr.size() - 1);\n    for (int x : arr) cout << x << \" \";\n    cout << endl;\n    return 0;\n}"
+    },
+    "__v": 0,
+    "createdAt": "2026-04-24T06:17:10.444Z",
+    "updatedAt": "2026-04-24T06:17:10.444Z"
+  }
+]

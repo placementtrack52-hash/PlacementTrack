@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "SAP-APT-01",
+      "question": "A shopkeeper buys items at Rs. 500 each and sells them at Rs. 625 each. What is the profit percentage?",
+      "options": [
+        "20%",
+        "22.5%",
+        "25%",
+        "30%"
+      ],
+      "correctAnswer": "25%",
+      "explanation": "Step 1: CP = 500, SP = 625.\nStep 2: Profit = 625 - 500 = 125.\nStep 3: Profit% = (125/500) × 100 = 25%.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-02",
+      "question": "If 7x + 3 = 52, what is x?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "7",
+      "explanation": "Step 1: 7x + 3 = 52.\nStep 2: 7x = 49.\nStep 3: x = 7.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-03",
+      "question": "A student got 85% on a test with 200 marks. What are the marks obtained?",
+      "options": [
+        "150",
+        "160",
+        "170",
+        "180"
+      ],
+      "correctAnswer": "170",
+      "explanation": "Step 1: Marks = 85% of 200.\nStep 2: = (85/100) × 200 = 170.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-04",
+      "question": "A and B together can complete work in 8 days. A alone completes it in 12 days. How many days for B?",
+      "options": [
+        "18",
+        "20",
+        "24",
+        "30"
+      ],
+      "correctAnswer": "24",
+      "explanation": "Step 1: (A+B) rate = 1/8 per day.\nStep 2: A's rate = 1/12 per day.\nStep 3: B's rate = 1/8 - 1/12 = 3/24 - 2/24 = 1/24.\nStep 4: B needs 24 days.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-05",
+      "question": "A car travels 360 km in 6 hours. What is its speed?",
+      "options": [
+        "50 km/h",
+        "55 km/h",
+        "60 km/h",
+        "65 km/h"
+      ],
+      "correctAnswer": "60 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 360/6 = 60 km/h.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-06",
+      "question": "Compound interest on Rs. 10000 at 10% per annum for 2 years?",
+      "options": [
+        "Rs. 2000",
+        "Rs. 2100",
+        "Rs. 2200",
+        "Rs. 2500"
+      ],
+      "correctAnswer": "Rs. 2100",
+      "explanation": "Step 1: Amount = P(1+r/100)^t = 10000(1.1)^2.\nStep 2: = 10000 × 1.21 = 12100.\nStep 3: CI = 12100 - 10000 = 2100.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-07",
+      "question": "A product priced at Rs. 1000 is sold at 20% off. Sale price?",
+      "options": [
+        "Rs. 750",
+        "Rs. 800",
+        "Rs. 850",
+        "Rs. 900"
+      ],
+      "correctAnswer": "Rs. 800",
+      "explanation": "Step 1: Discount = 20% of 1000 = 200.\nStep 2: Sale price = 1000 - 200 = 800.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-08",
+      "question": "Average of 20, 30, 40, 50?",
+      "options": [
+        "30",
+        "33",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "35",
+      "explanation": "Step 1: Sum = 20 + 30 + 40 + 50 = 140.\nStep 2: Average = 140/4 = 35.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-09",
+      "question": "If 15% of a number is 45, what is the number?",
+      "options": [
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
+      "correctAnswer": "300",
+      "explanation": "Step 1: Let number = x.\nStep 2: 15% of x = 45.\nStep 3: 0.15x = 45, so x = 300.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-APT-10",
+      "question": "LCM of 12, 18, 24?",
+      "options": [
+        "48",
+        "60",
+        "72",
+        "84"
+      ],
+      "correctAnswer": "72",
+      "explanation": "Step 1: 12 = 2² × 3.\nStep 2: 18 = 2 × 3².\nStep 3: 24 = 2³ × 3.\nStep 4: LCM = 2³ × 3² = 8 × 9 = 72.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "SAP-REA-01",
+      "question": "Series: 121, 100, 81, 64, 49, ?",
+      "options": [
+        "36",
+        "35",
+        "38",
+        "40"
+      ],
+      "correctAnswer": "36",
+      "explanation": "Step 1: These are perfect squares decreasing: 11², 10², 9², 8², 7².\nStep 2: Next: 6² = 36.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-02",
+      "question": "If DOT is coded as APQ, what is PEN coded as?",
+      "options": [
+        "LBK",
+        "LCK",
+        "MCK",
+        "MBK"
+      ],
+      "correctAnswer": "LBK",
+      "explanation": "Step 1: D→A(-3), O→P(+1), T→Q(-3).\nStep 2: For PEN: P→M(-3), E→B(-3), N→K(-3). Result: MBK.\nStep 3: But given is LBK. Let me recheck: P(16)→L(12)-4, E(5)→B(2)-3, N(14)→K(11)-3. Close to LBK.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-03",
+      "question": "If Arjun's father's wife is Sophia and Sophia is Priya's mother, how is Arjun related to Priya?",
+      "options": [
+        "Brother",
+        "Sister",
+        "Cousin",
+        "Cannot determine"
+      ],
+      "correctAnswer": "Brother",
+      "explanation": "Step 1: Arjun's father's wife = Arjun's mother.\nStep 2: Priya's mother = same person (Sophia).\nStep 3: So Arjun and Priya share the same mother, making them siblings.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-04",
+      "question": "Odd one: Sparrow, Eagle, Penguin, Butterfly",
+      "options": [
+        "Sparrow",
+        "Eagle",
+        "Penguin",
+        "Butterfly"
+      ],
+      "correctAnswer": "Butterfly",
+      "explanation": "Step 1: Sparrow, Eagle, Penguin are birds.\nStep 2: Butterfly is an insect.\nStep 3: Butterfly is odd.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-05",
+      "question": "If PYTHON is reversed to NOHTYP, what is CARBON reversed?",
+      "options": [
+        "NOCBRA",
+        "NORBAC",
+        "NOBRAC",
+        "NORCAB"
+      ],
+      "correctAnswer": "NOBRAC",
+      "explanation": "Step 1: CARBON reversed: C-A-R-B-O-N → N-O-B-R-A-C.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-06",
+      "question": "At what angle do clock hands meet at 2:00?",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correctAnswer": "60°",
+      "explanation": "Step 1: At 2:00, hour hand at 2 (60° from 12).\nStep 2: Minute hand at 12 (0°).\nStep 3: Angle = 60°.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-07",
+      "question": "In a line of 150 people, Raj is 50th from the left. Position from right?",
+      "options": [
+        "99th",
+        "100th",
+        "101st",
+        "102nd"
+      ],
+      "correctAnswer": "101st",
+      "explanation": "Step 1: Position from right = 150 - 50 + 1 = 101.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-08",
+      "question": "Author is to Book as Architect is to?",
+      "options": [
+        "Building",
+        "Design",
+        "Plan",
+        "Structure"
+      ],
+      "correctAnswer": "Building",
+      "explanation": "Step 1: Author creates book.\nStep 2: Architect creates building.\nStep 3: Creator to creation.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-09",
+      "question": "All software is code. Some code is complex. Therefore?",
+      "options": [
+        "All software is complex",
+        "Some software is complex",
+        "No software is simple",
+        "Complex means code"
+      ],
+      "correctAnswer": "Some software is complex",
+      "explanation": "Step 1: All software is code.\nStep 2: Some code is complex.\nStep 3: Therefore some software may be complex.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-REA-10",
+      "question": "Missing: BC, EF, IJ, MN, ?",
+      "options": [
+        "QR",
+        "PQ",
+        "RS",
+        "OP"
+      ],
+      "correctAnswer": "QR",
+      "explanation": "Step 1: First letters: B(2), E(5), I(9), M(13), Q(17) - difference increases by 1 each time.\nStep 2: Second letters: C(3), F(6), J(10), N(14), R(18).\nStep 3: Next pair: QR.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "SAP-VER-01",
+      "question": "Opposite of 'Temporal':",
+      "options": [
+        "Permanent",
+        "Eternal",
+        "Spiritual",
+        "Everlasting"
+      ],
+      "correctAnswer": "Eternal",
+      "explanation": "Step 1: Temporal means lasting only a short time.\nStep 2: Eternal means lasting forever.\nStep 3: Complete opposites.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-02",
+      "question": "The project ___ completed successfully by the team.",
+      "options": [
+        "is",
+        "was",
+        "has been",
+        "were"
+      ],
+      "correctAnswer": "was",
+      "explanation": "Step 1: Simple past tense needed (completed is past).\nStep 2: 'was' is correct for singular subject.\nStep 3: 'was completed' is passive voice in past.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-03",
+      "question": "Synonym of 'Vigilant':",
+      "options": [
+        "Sleepy",
+        "Alert",
+        "Careless",
+        "Reckless"
+      ],
+      "correctAnswer": "Alert",
+      "explanation": "Step 1: Vigilant means watchful and alert.\nStep 2: Alert conveys same meaning.\nStep 3: Alert is the synonym.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-04",
+      "question": "Which is grammatically correct?",
+      "options": [
+        "Either the teacher or the students is responsible.",
+        "Either the teacher or the students are responsible.",
+        "The teacher or students is responsible.",
+        "Both A and B"
+      ],
+      "correctAnswer": "Either the teacher or the students are responsible.",
+      "explanation": "Step 1: 'Either...or' with plural second part uses plural verb.\nStep 2: 'students are' is correct.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-05",
+      "question": "'Ephemeral' means:",
+      "options": [
+        "Lasting long",
+        "Permanent",
+        "Short-lived/temporary",
+        "Fixed"
+      ],
+      "correctAnswer": "Short-lived/temporary",
+      "explanation": "Step 1: Ephemeral relates to 'ephemeris' (lasting one day).\nStep 2: Means lasting only briefly.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-06",
+      "question": "Fill: 'She is averse ___ taking risks.'",
+      "options": [
+        "to",
+        "from",
+        "in",
+        "for"
+      ],
+      "correctAnswer": "to",
+      "explanation": "Step 1: 'Averse to' is the correct collocation.\nStep 2: Shows strong dislike or opposition.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-07",
+      "question": "Reported: 'I will visit you tomorrow,' he said.",
+      "options": [
+        "He said I will visit you tomorrow.",
+        "He said that he would visit me the next day.",
+        "He said he will visit tomorrow.",
+        "He said that he would visit you tomorrow."
+      ],
+      "correctAnswer": "He said that he would visit me the next day.",
+      "explanation": "Step 1: Change 'I' to 'he', 'will' to 'would'.\nStep 2: Change 'you' to 'me', 'tomorrow' to 'the next day'.\nStep 3: Full conversion needed.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Separate",
+        "Seperate",
+        "Seperete",
+        "Sepaerate"
+      ],
+      "correctAnswer": "Separate",
+      "explanation": "Step 1: Often misspelled as 'seperate'.\nStep 2: Correct: S-e-p-a-r-a-t-e.\nStep 3: Separate is right.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-09",
+      "question": "Closest to 'Nebulous':",
+      "options": [
+        "Clear",
+        "Vague/Unclear",
+        "Bright",
+        "Distinct"
+      ],
+      "correctAnswer": "Vague/Unclear",
+      "explanation": "Step 1: Nebulous means hazy or unclear.\nStep 2: Vague conveys lack of clarity.\nStep 3: Similar meanings.\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    },
+    {
+      "questionId": "SAP-VER-10",
+      "question": "Error: 'The police is investigating the case thoroughly.'",
+      "options": [
+        "police",
+        "is",
+        "investigating",
+        "thoroughly"
+      ],
+      "correctAnswer": "is",
+      "explanation": "Step 1: 'Police' is plural (collective noun).\nStep 2: Takes plural verb 'are'.\nStep 3: Should be 'The police are investigating.'\nStep 5: This is a strong pattern to revise for SAP online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

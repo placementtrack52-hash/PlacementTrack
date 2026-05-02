@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { useAuth } from './AuthContext'
-import { getData, saveData, updateData } from '../utils/localStorage'
+import { userDataApi } from '../services/api'
 import {
   accuracyFromResults,
   averageSecondsPerQuestion,
@@ -8,6 +8,7 @@ import {
   buildFakeRanking,
   buildQuizMasterySummary,
   buildRevisionReminders,
+  buildSubjectQuizProgressMap,
   buildSpeedScore,
   buildSubjectCompletionMap,
   getDailyChallengeQuestions,
@@ -17,11 +18,10 @@ import {
 
 const ProgressContext = createContext(null)
 
-const buildProgressKey = (email) => `prepMasterProgress:${email}`
-const FEEDBACK_KEY = 'prepMasterFeedback'
-
 const defaultProgress = {
   completedTopics: {},
+  completedProjects: {},
+  completedPYQs: {},
   quizResults: {},
   finalTests: {},
   points: 0,
@@ -82,25 +82,67 @@ const normalizeProgress = (stored = {}) => ({
 export const ProgressProvider = ({ children }) => {
   const { user } = useAuth()
   const [progress, setProgress] = useState(defaultProgress)
+  const [feedback, setFeedback] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if (!user) {
       setProgress(defaultProgress)
+      setFeedback([])
       setIsLoading(false)
       return
     }
 
-    const stored = getData(buildProgressKey(user.email), defaultProgress)
-    setProgress(normalizeProgress(stored))
-    setIsLoading(false)
+    let cancelled = false
+
+    const loadUserData = async () => {
+      setIsLoading(true)
+
+      try {
+        const { userData } = await userDataApi.getMe()
+
+        if (!cancelled) {
+          const normalized = normalizeProgress(userData?.progress)
+          const updatedStreak = updateStreak(normalized.streak)
+          const streakChanged =
+            updatedStreak.lastActiveDate !== (normalized.streak?.lastActiveDate ?? null)
+          const finalProgress = { ...normalized, streak: updatedStreak }
+
+          // Silently persist streak if today is a new active day
+          if (streakChanged) {
+            userDataApi.saveProgress(finalProgress).catch(() => {})
+          }
+
+          setProgress(finalProgress)
+          setFeedback(userData?.feedback ?? [])
+        }
+      } catch {
+        if (!cancelled) {
+          setProgress(defaultProgress)
+          setFeedback([])
+        }
+      } finally {
+        if (!cancelled) {
+          setIsLoading(false)
+        }
+      }
+    }
+
+    loadUserData()
+
+    return () => {
+      cancelled = true
+    }
   }, [user])
 
   const persistProgress = (updater) => {
     if (!user) return
-    const key = buildProgressKey(user.email)
-    const nextValue = updateData(key, (current) => updater(normalizeProgress(current)), defaultProgress)
-    setProgress(nextValue)
+
+    setProgress((current) => {
+      const nextValue = normalizeProgress(updater(normalizeProgress(current)))
+      userDataApi.saveProgress(nextValue).catch(() => {})
+      return nextValue
+    })
   }
 
   const recordLearningActivity = (current, topicKey) => ({
@@ -128,6 +170,40 @@ export const ProgressProvider = ({ children }) => {
       }
 
       return recordLearningActivity(nextState, topicKey)
+    })
+  }
+
+  const toggleProjectCompletion = (projectId, completed) => {
+    persistProgress((current) => {
+      const nextState = {
+        ...current,
+        completedProjects: {
+          ...current.completedProjects,
+          [projectId]: completed,
+        },
+        points: completed
+          ? current.points + (current.completedProjects?.[projectId] ? 0 : 50) // More points for a project!
+          : Math.max(0, current.points - (current.completedProjects?.[projectId] ? 50 : 0)),
+      }
+
+      return recordLearningActivity(nextState, `project_${projectId}`)
+    })
+  }
+
+  const togglePYQCompletion = (pyqId, completed) => {
+    persistProgress((current) => {
+      const nextState = {
+        ...current,
+        completedPYQs: {
+          ...current.completedPYQs,
+          [pyqId]: completed,
+        },
+        points: completed
+          ? current.points + (current.completedPYQs?.[pyqId] ? 0 : 30) // 30 points for a PYQ
+          : Math.max(0, current.points - (current.completedPYQs?.[pyqId] ? 30 : 0)),
+      }
+
+      return recordLearningActivity(nextState, `pyq_${pyqId}`)
     })
   }
 
@@ -226,23 +302,24 @@ export const ProgressProvider = ({ children }) => {
     })
   }
 
-  const submitFeedback = ({ rating, message }) => {
-    if (!user) return
-
-    const nextFeedback = {
-      id: crypto.randomUUID(),
-      userEmail: user.email,
-      userName: user.name,
-      rating,
-      message,
-      createdAt: new Date().toISOString(),
-    }
-
-    const current = getData(FEEDBACK_KEY, [])
-    saveData(FEEDBACK_KEY, [nextFeedback, ...current])
+  const dismissMistake = (mistakeId) => {
+    persistProgress((current) => ({
+      ...current,
+      mistakes: current.mistakes.filter((mistake) => mistake.id !== mistakeId),
+    }))
   }
 
-  const feedback = getData(FEEDBACK_KEY, []).filter((item) => (user ? item.userEmail === user.email : true))
+  const submitFeedback = async ({ rating, message }) => {
+    if (!user) return { success: false, message: 'You must be logged in to submit feedback.' }
+
+    try {
+      const response = await userDataApi.submitFeedback({ rating, message })
+      setFeedback(response.feedback ?? [])
+      return { success: true, message: response.message }
+    } catch (error) {
+      return { success: false, message: error.message }
+    }
+  }
 
   const allResults = [
     ...Object.values(progress.quizResults).flatMap((levels) => Object.values(levels)),
@@ -255,6 +332,7 @@ export const ProgressProvider = ({ children }) => {
   const averageTimePerQuestion = averageSecondsPerQuestion(allResults)
   const speedScore = buildSpeedScore(averageTimePerQuestion)
   const subjectCompletion = buildSubjectCompletionMap(progress.completedTopics)
+  const subjectQuizProgress = buildSubjectQuizProgressMap(progress.quizResults)
   const masterySummary = buildQuizMasterySummary(progress.quizResults)
   const streakDays = progress.streak?.current ?? 0
   const weaknessSummary = summarizeWeaknesses(progress.mistakes)
@@ -268,6 +346,10 @@ export const ProgressProvider = ({ children }) => {
     savedResult: progress.dailyChallenges[todayKey] ?? null,
   }
 
+  // Calculate additional stats for badges
+  const totalQuestionsAnswered = allResults.reduce((sum, r) => sum + (r.totalQuestions ?? 0), 0)
+  const perfectQuizzes = allResults.filter((r) => r.totalQuestions > 0 && r.correctAnswers === r.totalQuestions).length
+  
   const badges = buildBadgeCollection({
     completedCount,
     points: progress.points,
@@ -275,6 +357,10 @@ export const ProgressProvider = ({ children }) => {
     subjectCompletion,
     streakDays,
     masterySummary,
+    totalQuestionsAnswered,
+    perfectQuizzes,
+    averageTimePerQuestion,
+    accuracyImprovement: 0, // Could track improvement over time
   })
 
   useEffect(() => {
@@ -300,6 +386,7 @@ export const ProgressProvider = ({ children }) => {
       speedScore,
       badges,
       subjectCompletion,
+      subjectQuizProgress,
       masterySummary,
       streakDays,
       weaknessSummary,
@@ -308,12 +395,15 @@ export const ProgressProvider = ({ children }) => {
       fakeRanking,
       dailyChallenge,
       toggleTopicCompletion,
+      toggleProjectCompletion,
+      togglePYQCompletion,
       toggleImportantNote,
       saveNoteForLater,
       saveNotePosition,
       saveQuizResult,
       saveFinalTestResult,
       saveDailyChallengeResult,
+      dismissMistake,
       submitFeedback,
     }),
     [
@@ -326,6 +416,7 @@ export const ProgressProvider = ({ children }) => {
       speedScore,
       badges,
       subjectCompletion,
+      subjectQuizProgress,
       masterySummary,
       streakDays,
       weaknessSummary,

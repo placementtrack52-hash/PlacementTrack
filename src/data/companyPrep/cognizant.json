@@ -1,0 +1,488 @@
+{
+  "aptitude": [
+    {
+      "questionId": "COGNIZANT-APT-01",
+      "question": "If A:B = 3:5 and B:C = 4:7, then what is A:C?",
+      "options": [
+        "12:35",
+        "3:7",
+        "15:28",
+        "12:28"
+      ],
+      "correctAnswer": "12:35",
+      "explanation": "A/B = 3/5 and B/C = 4/7, so A/C = (3/5) × (4/7) = 12/35."
+    },
+    {
+      "questionId": "COGNIZANT-APT-02",
+      "question": "A quantity increases from 100 to 156. What is the percentage increase?",
+      "options": [
+        "50%",
+        "55%",
+        "56%",
+        "60%"
+      ],
+      "correctAnswer": "56%",
+      "explanation": "Increase = 156 - 100 = 56. Percentage increase = (56/100) × 100 = 56%."
+    },
+    {
+      "questionId": "COGNIZANT-APT-03",
+      "question": "A man invested Rs. 5,000 at 10% per annum for 2 years. What is the compound interest?",
+      "options": [
+        "Rs. 1,050",
+        "Rs. 1,150",
+        "Rs. 1,100",
+        "Rs. 1,000"
+      ],
+      "correctAnswer": "Rs. 1,050",
+      "explanation": "Amount = 5000(1.1)^2 = 6050. Compound interest = 6050 - 5000 = 1050."
+    },
+    {
+      "questionId": "COGNIZANT-APT-04",
+      "question": "If 3x + 5 = 20, then x = ?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "10"
+      ],
+      "correctAnswer": "5",
+      "explanation": "3x = 20 - 5 = 15, so x = 15/3 = 5."
+    },
+    {
+      "questionId": "COGNIZANT-APT-05",
+      "question": "The average age of three people is 28 years. If two of them are 24 and 32, what is the third person's age?",
+      "options": [
+        "26",
+        "28",
+        "30",
+        "32"
+      ],
+      "correctAnswer": "28",
+      "explanation": "Total age = 28 × 3 = 84. Third age = 84 - (24 + 32) = 28."
+    },
+    {
+      "questionId": "COGNIZANT-APT-06",
+      "question": "A book costs Rs. 250. After a 20% discount, what is the selling price?",
+      "options": [
+        "Rs. 180",
+        "Rs. 190",
+        "Rs. 200",
+        "Rs. 210"
+      ],
+      "correctAnswer": "Rs. 200",
+      "explanation": "Discount = 20% of 250 = 50. Selling price = 250 - 50 = 200."
+    },
+    {
+      "questionId": "COGNIZANT-APT-07",
+      "question": "If 40% of X is 320, then X = ?",
+      "options": [
+        "600",
+        "700",
+        "800",
+        "900"
+      ],
+      "correctAnswer": "800",
+      "explanation": "0.4 × X = 320, so X = 320 / 0.4 = 800."
+    },
+    {
+      "questionId": "COGNIZANT-APT-08",
+      "question": "HCF of 48, 64, and 80 is?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "correctAnswer": "16",
+      "explanation": "Common factor is 2^4 = 16."
+    },
+    {
+      "questionId": "COGNIZANT-APT-09",
+      "question": "A train covers 240 km in 5 hours. What is its speed?",
+      "options": [
+        "40 km/h",
+        "45 km/h",
+        "48 km/h",
+        "50 km/h"
+      ],
+      "correctAnswer": "48 km/h",
+      "explanation": "Speed = Distance / Time = 240 / 5 = 48 km/h."
+    },
+    {
+      "questionId": "COGNIZANT-APT-10",
+      "question": "A sells a watch to B at 20% profit. B sells it to C at 25% profit. If C pays Rs. 3,000, what did A pay for it?",
+      "options": [
+        "Rs. 1,800",
+        "Rs. 2,000",
+        "Rs. 2,200",
+        "Rs. 2,500"
+      ],
+      "correctAnswer": "Rs. 2,000",
+      "explanation": "Let cost = x. Final price = 1.2 × 1.25 × x = 1.5x = 3000, so x = 2000."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "COGNIZANT-REA-01",
+      "question": "Find next: 1, 4, 9, 16, 25, ?",
+      "options": [
+        "34",
+        "36",
+        "42",
+        "49"
+      ],
+      "correctAnswer": "36",
+      "explanation": "The series is squares: 1², 2², 3², 4², 5². Next is 6² = 36."
+    },
+    {
+      "questionId": "COGNIZANT-REA-02",
+      "question": "If FRUIT is coded as GSYJU, what is PLANT coded as?",
+      "options": [
+        "QMBOY",
+        "QMBOU",
+        "QMBNO",
+        "QMBRQ"
+      ],
+      "correctAnswer": "QMBOU",
+      "explanation": "Each letter is shifted by +1: P→Q, L→M, A→B, N→O, T→U → QMBOU."
+    },
+    {
+      "questionId": "COGNIZANT-REA-03",
+      "question": "X is Y's father. Y is Z's mother. How is Z related to X?",
+      "options": [
+        "Son",
+        "Daughter",
+        "Grandson/Granddaughter",
+        "Nephew"
+      ],
+      "correctAnswer": "Grandson/Granddaughter",
+      "explanation": "X is Y’s father and Y is Z’s mother, so Z is X’s grandchild."
+    },
+    {
+      "questionId": "COGNIZANT-REA-04",
+      "question": "Choose the odd: Orange, Banana, Lemon, Carrot",
+      "options": [
+        "Orange",
+        "Banana",
+        "Lemon",
+        "Carrot"
+      ],
+      "correctAnswer": "Carrot",
+      "explanation": "Orange, Banana, Lemon are fruits; Carrot is a vegetable."
+    },
+    {
+      "questionId": "COGNIZANT-REA-05",
+      "question": "If WATER is coded as 67364, then what does 3476 represent?",
+      "options": [
+        "WERT",
+        "ERAT",
+        "TARE",
+        "RATE"
+      ],
+      "correctAnswer": "TARE",
+      "explanation": "Mapping: W=6, A=7, T=3, E=4, R=6. So 3=T, 4=E, 7=A, 6=R → TARE."
+    },
+    {
+      "questionId": "COGNIZANT-REA-06",
+      "question": "At what time between 1 and 2 do clock hands overlap?",
+      "options": [
+        "1:05",
+        "1:05:27",
+        "1:10",
+        "1:11"
+      ],
+      "correctAnswer": "1:05:27",
+      "explanation": "Hands overlap at 1 + 1/11 hour ≈ 1:05:27."
+    },
+    {
+      "questionId": "COGNIZANT-REA-07",
+      "question": "In a line of 60 students, Ram is 22nd from left. What is his position from right?",
+      "options": [
+        "38th",
+        "39th",
+        "40th",
+        "41st"
+      ],
+      "correctAnswer": "39th",
+      "explanation": "Position from right = 60 - 22 + 1 = 39."
+    },
+    {
+      "questionId": "COGNIZANT-REA-08",
+      "question": "Cup is to Tea as Bowl is to ?",
+      "options": [
+        "Plate",
+        "Spoon",
+        "Soup",
+        "Food"
+      ],
+      "correctAnswer": "Soup",
+      "explanation": "A cup holds tea, similarly a bowl holds soup."
+    },
+    {
+      "questionId": "COGNIZANT-REA-09",
+      "question": "All doctors are professionals. Some professionals are not ethical. Therefore?",
+      "options": [
+        "All doctors are ethical",
+        "Some doctors are not ethical",
+        "All professionals are doctors",
+        "Cannot conclude"
+      ],
+      "correctAnswer": "Cannot conclude",
+      "explanation": "We cannot say anything definite about doctors being ethical or not."
+    },
+    {
+      "questionId": "COGNIZANT-REA-10",
+      "question": "Complete series: SE, RG, PI, ?, TW",
+      "options": [
+        "NK",
+        "ML",
+        "NL",
+        "OM"
+      ],
+      "correctAnswer": "NL",
+      "explanation": "First letters: S, R, P, N, T (pattern of skipping backward). Second letters: E, G, I, L, W (increasing pattern). So missing term is NL."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "COGNIZANT-VER-01",
+      "question": "Choose the synonym for 'Eloquent'.",
+      "options": [
+        "Silent",
+        "Expressive",
+        "Quiet",
+        "Weak"
+      ],
+      "correctAnswer": "Expressive"
+    },
+    {
+      "questionId": "COGNIZANT-VER-02",
+      "question": "Fill in the blank: The teacher ___ the students about the upcoming exam.",
+      "options": [
+        "inform",
+        "informs",
+        "informing",
+        "informed"
+      ],
+      "correctAnswer": "informs"
+    },
+    {
+      "questionId": "COGNIZANT-VER-03",
+      "question": "Antonym of 'Verbose':",
+      "options": [
+        "Detailed",
+        "Long",
+        "Concise",
+        "Wordy"
+      ],
+      "correctAnswer": "Concise"
+    },
+    {
+      "questionId": "COGNIZANT-VER-04",
+      "question": "Identify the correct sentence:",
+      "options": [
+        "Neither John nor Mary are going.",
+        "Neither John nor Mary is going.",
+        "Niether John nor Mary are going.",
+        "Neither John nor Mary goes."
+      ],
+      "correctAnswer": "Neither John nor Mary is going."
+    },
+    {
+      "questionId": "COGNIZANT-VER-05",
+      "question": "'Serendipity' means:",
+      "options": [
+        "Planning",
+        "Finding good things by chance",
+        "Money",
+        "Luck always"
+      ],
+      "correctAnswer": "Finding good things by chance"
+    },
+    {
+      "questionId": "COGNIZANT-VER-06",
+      "question": "Choose the correct article: ___ honest person tells the truth.",
+      "options": [
+        "A",
+        "An",
+        "The",
+        "No article"
+      ],
+      "correctAnswer": "An"
+    },
+    {
+      "questionId": "COGNIZANT-VER-07",
+      "question": "Convert to indirect speech: He said, 'I am learning English.'",
+      "options": [
+        "He said that he was learning English.",
+        "He said that he is learning English.",
+        "He said that I am learning English.",
+        "He said that he learn English."
+      ],
+      "correctAnswer": "He said that he was learning English."
+    },
+    {
+      "questionId": "COGNIZANT-VER-08",
+      "question": "Choose the correctly spelt word:",
+      "options": [
+        "Seperate",
+        "Sepearte",
+        "Separate",
+        "Seperete"
+      ],
+      "correctAnswer": "Separate"
+    },
+    {
+      "questionId": "COGNIZANT-VER-09",
+      "question": "Word closest in meaning to 'Benevolent':",
+      "options": [
+        "Cruel",
+        "Kind",
+        "Strict",
+        "Neutral"
+      ],
+      "correctAnswer": "Kind"
+    },
+    {
+      "questionId": "COGNIZANT-VER-10",
+      "question": "Identify the error: The students was working hard for their exam.",
+      "options": [
+        "was",
+        "students",
+        "working",
+        "their"
+      ],
+      "correctAnswer": "was"
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

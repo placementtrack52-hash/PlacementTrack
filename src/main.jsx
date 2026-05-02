@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
+import { store } from './app/store'
 import App from './App'
 import { AuthProvider } from './context/AuthContext'
 import { ProgressProvider } from './context/ProgressContext'
@@ -9,14 +11,21 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <UIProvider>
-      <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <AuthProvider>
-          <ProgressProvider>
-            <App />
-          </ProgressProvider>
+          <UIProvider>
+            <ProgressProvider>
+              <App />
+            </ProgressProvider>
+          </UIProvider>
         </AuthProvider>
       </BrowserRouter>
-    </UIProvider>
+    </Provider>
   </React.StrictMode>,
 )

@@ -6,7 +6,7 @@
     "shortcuts": ["Check divisibility by 3 or 9 using sum of digits", "Use cyclicity of powers to find unit digits fast", "For consecutive integers, compare parity before doing heavy calculation"],
     "examples": ["Find the remainder when 2^10 is divided by 3. Since 2 mod 3 = -1, (-1)^10 = 1. Remainder = 1.", "How many factors does 72 have? 72 = 2^3 x 3^2, so factors = (3+1)(2+1) = 12."]
   },
-  "percentages": {
+  "percentage": {
     "overview": "Percentages turn comparison problems into a common language. They connect directly to ratios, profit-loss, and data interpretation.",
     "advanced": "Use percentage points versus percent change carefully. Reverse percentages and successive changes are where most students lose accuracy.",
     "formulas": ["x% of y = (x/100) x y", "New value = Original x (1 +/- change/100)", "Successive changes a% and b% = a + b + ab/100"],
@@ -20,9 +20,219 @@
     "shortcuts": ["Use assumed CP = 100 in percentage-heavy questions", "For discount and profit chained together, move one step at a time", "When profit % and loss % are equal in two cases, average is not enough; compute actual values"],
     "examples": ["An item bought for 500 and sold for 575 gives profit 75, so profit% = 15%.", "If SP is 80 after 20% loss, CP = 80/0.8 = 100."]
   },
+  "hcf-lcm": {
+    "overview": "HCF (Highest Common Factor) finds the largest number dividing both numbers. LCM (Least Common Multiple) finds the smallest number divisible by both.",
+    "advanced": "For three or more numbers, find HCF/LCM pairwise. Remember: HCF × LCM = product of two numbers only for two numbers.",
+    "formulas": ["HCF = product of common prime factors with minimum powers", "LCM = product of prime factors with maximum powers", "HCF × LCM = a × b (for two numbers)"],
+    "shortcuts": ["Use prime factorization method for quick HCF/LCM", "For co-prime numbers, HCF = 1, LCM = product", "Divide larger by smaller repeatedly to find HCF (Euclidean algorithm)"],
+    "examples": ["HCF of 12 and 18: 12=2²×3, 18=2×3² → HCF=2×3=6.", "LCM of 4 and 5: co-prime → LCM=4×5=20."]
+  },
+  "decimal-fraction": {
+    "overview": "Decimals and fractions represent parts of a whole. Converting between them is essential for comparison and calculation.",
+    "advanced": "Recurring decimals (like 0.333...) convert to fractions using algebraic method. Be careful with decimal placement in multiplication/division.",
+    "formulas": ["Decimal to fraction: write as fraction with denominator power of 10, then simplify", "Fraction to decimal: divide numerator by denominator", "0.ab = ab/100, 0.abc = abc/1000"],
+    "shortcuts": ["Multiply decimals by powers of 10 to remove decimal point", "For division, move decimal point same direction in both numbers", "0.5 = 1/2, 0.25 = 1/4, 0.75 = 3/4 are common conversions"],
+    "examples": ["0.75 = 75/100 = 3/4.", "2.5 = 25/10 = 5/2 = 2 1/2."]
+  },
+  "simplification": {
+    "overview": "Simplification involves reducing expressions to their simplest form using the correct order of operations (BODMAS/PEMDAS).",
+    "advanced": "Always follow BODMAS: Brackets, Of (powers), Division, Multiplication, Addition, Subtraction. Work from inside out.",
+    "formulas": ["BODMAS: Brackets → Orders → Division → Multiplication → Addition → Subtraction", "PEMDAS: Parentheses → Exponents → Multiplication → Division → Addition → Subtraction"],
+    "shortcuts": ["Solve brackets first, then powers, then division/multiplication left to right, then addition/subtraction left to right", "Look for patterns like (a+b)² or (a-b)(a+b) to simplify faster", "Convert mixed operations to single operations step by step"],
+    "examples": ["15 + 5 × 2 = 15 + 10 = 25 (not 40).", "(10 + 5) × 2 = 15 × 2 = 30."]
+  },
+  "square-root-cube-root": {
+    "overview": "Square root (√) finds a number that when squared gives the original. Cube root (∛) finds a number that when cubed gives the original.",
+    "advanced": "Memorize squares up to 30 and cubes up to 15. For non-perfect squares/cubes, use approximation or prime factorization.",
+    "formulas": ["√(a²) = a", "∛(a³) = a", "√ab = √a × √b", "√(a/b) = √a/√b"],
+    "shortcuts": ["Memorize perfect squares: 1²=1 to 30²=900", "Memorize perfect cubes: 1³=1 to 15³=3375", "For √(a²×b) = a√b, extract perfect squares"],
+    "examples": ["√144 = 12 because 12²=144.", "∛64 = 4 because 4³=64."]
+  },
+  "average": {
+    "overview": "Average is the sum of values divided by the count. It represents the central value in a dataset.",
+    "advanced": "When values change, recalculate total. For consecutive numbers, average is the middle number. Weighted average considers different weights.",
+    "formulas": ["Average = Sum of values / Number of values", "Sum = Average × Number of values", "New average = (Old total ± change) / New count"],
+    "shortcuts": ["For consecutive numbers, average is the middle number", "If each value increases by k, average increases by k", "Sum of first n natural numbers = n(n+1)/2"],
+    "examples": ["Average of 4, 6, 8 = (4+6+8)/3 = 18/3 = 6.", "If average of 5 numbers is 20, sum = 5 × 20 = 100."]
+  },
+  "problems-on-number": {
+    "overview": "Problems on numbers involve finding unknown numbers from given conditions like sum, difference, product, or ratio.",
+    "advanced": "Translate word problems into algebraic equations. Check if the answer satisfies all conditions.",
+    "formulas": ["Let the number be x, then form equation from condition", "Consecutive numbers: x, x+1, x+2", "Sum of digits: 10a + b for two-digit number"],
+    "shortcuts": ["Read carefully: 'is' means equals, 'more than' means add", "For digit problems, let digits be a and b", "Always verify your answer in the original condition"],
+    "examples": ["A number doubled is 24: 2x = 24 → x = 12.", "Sum of two numbers is 30, one is twice other: x + 2x = 30 → 3x = 30 → x = 10."]
+  },
+  "problems-on-ages": {
+    "overview": "Problems on ages involve finding present or future/past ages using given relationships between ages.",
+    "advanced": "Always consider the time factor - present, past, or future. Use equations to relate ages at different times.",
+    "formulas": ["Present age relationships", "Age after n years = present + n", "Age n years ago = present - n"],
+    "shortcuts": ["Let present ages be variables", "If ratio given, use multiplier method", "Check if question asks for present, past, or future"],
+    "examples": ["Father is 3 times son's age. Son is 10. Father = 3 × 10 = 30.", "5 years ago, A was 20. A's present age = 20 + 5 = 25."]
+  },
+  "surds-indices": {
+    "overview": "Surds are irrational roots (like √2). Indices (exponents) follow specific laws for multiplication, division, and powers.",
+    "advanced": "Remember all index laws: a^m × a^n = a^(m+n), (a^m)^n = a^(mn), a^0 = 1. Simplify surds by factoring out perfect squares.",
+    "formulas": ["a^m × a^n = a^(m+n)", "a^m ÷ a^n = a^(m-n)", "(a^m)^n = a^(mn)", "a^0 = 1", "√a × √b = √(ab)"],
+    "shortcuts": ["Convert mixed surds to simplest form", "Use exponent rules to simplify expressions", "Remember: √a × √a = a"],
+    "examples": ["2³ = 8.", "√16 = 4.", "3² × 3³ = 3^5 = 243."]
+  },
+  "ratio-proportion": {
+    "overview": "Ratio compares two quantities. Proportion states two ratios are equal. Direct proportion: as one increases, other increases.",
+    "advanced": "For multiple ratios, find common terms. For continued proportion, a:b = b:c. Use unitary method for solving.",
+    "formulas": ["a:b = a/b", "If a:b = c:d, then a×d = b×c", "Compound ratio: (a×c):(b×d)"],
+    "shortcuts": ["Simplify ratios by dividing by GCD", "For a:b and b:c, find a:b:c by making b equal", "Multiply or divide both terms by same number"],
+    "examples": ["Ratio 8:4 simplifies to 2:1.", "If 2:3 = x:12, then x = 8."]
+  },
+  "partnership": {
+    "overview": "Partnership involves two or more people investing money or time to run a business and share profits/losses.",
+    "advanced": "Profit/loss is divided based on the product of investment and time (capital × time). Equal investment means equal profit share.",
+    "formulas": ["Profit share = (Investment × Time) / Total (Investment × Time)", "Ratio of profit = ratio of capital × time"],
+    "shortcuts": ["Calculate capital-months for each partner", "If time is same, profit divided by investment ratio", "If investment same, profit divided by time ratio"],
+    "examples": ["A invests 1000 for 1 year, B invests 2000 for 6 months. A: 1000×12 = 12000, B: 2000×6 = 12000 → 1:1."]
+  },
+  "chain-rule": {
+    "overview": "Chain rule deals with direct and inverse proportion. More workers = less time (inverse). More work = more time (direct).",
+    "advanced": "Set up proportion carefully. If more of A leads to more of B → direct. If more of A leads to less of B → inverse.",
+    "formulas": ["Direct: A ∝ B → A = kB", "Inverse: A ∝ 1/B → A = k/B", "Work = Men × Days (constant)"],
+    "shortcuts": ["More men → less days (inverse)", "More machines → less time (inverse)", "More work → more time (direct)"],
+    "examples": ["5 men do work in 10 days → 1 man = 5×10 = 50 days.", "10 workers in 6 days → 5 workers = 10×6/5 = 12 days."]
+  },
+  "time-work": {
+    "overview": "Time and work problems involve finding time taken by one or more workers to complete a job, either individually or together.",
+    "advanced": "Work is considered as 1 unit. If A does work in x days, A's work per day = 1/x. Combined work = sum of individual works.",
+    "formulas": ["A's work per day = 1/A's days", "Combined work = 1/A + 1/B + ...", "Time = 1/Work rate"],
+    "shortcuts": ["If A is twice as efficient as B, A takes half the time", "For alternate days work, calculate work done in 2 days cycle", "If workers leave/join, recalculate remaining work"],
+    "examples": ["A in 5 days, B in 10 days → together = 1/5 + 1/10 = 3/10 → 10/3 = 3.33 days."]
+  },
+  "pipes-and-cistern": {
+    "overview": "Pipes and cistern problems are similar to time and work, but involve filling or emptying tanks. Inlet pipes fill, outlet pipes empty.",
+    "advanced": "Net work rate = fill rate - empty rate. If both fill and empty pipes are open, calculate net effect per hour.",
+    "formulas": ["Fill pipe rate = 1/time (in hours)", "Empty pipe rate = -1/time", "Combined rate = sum of all rates", "Time = 1/Net rate"],
+    "shortcuts": ["If pipe fills in x hours, in 1 hour it fills 1/x of tank", "Two fill pipes: time = 1/(1/a + 1/b)", "Fill + empty: net = 1/a - 1/b"],
+    "examples": ["Pipe fills in 10h, another empties in 20h → net = 1/10 - 1/20 = 1/20 → 20 hours to fill."]
+  },
+  "time-and-distance": {
+    "overview": "Time and distance problems involve speed, time, and distance relationships. Key is understanding units and conversions.",
+    "advanced": "Average speed = total distance / total time. For round trips, use harmonic mean formula: 2ab/(a+b).",
+    "formulas": ["Speed = Distance/Time", "Distance = Speed × Time", "Time = Distance/Speed", "km/h to m/s = ×5/18", "m/s to km/h = ×18/5"],
+    "shortcuts": ["For equal distances at different speeds, avg speed = 2ab/(a+b)", "Relative speed for opposite directions = sum", "Relative speed for same direction = difference"],
+    "examples": ["Car travels 200km at 50km/h and 100km at 40km/h → Total 300km in 7h → avg ≈ 43km/h."]
+  },
+  "problems-on-train": {
+    "overview": "Train problems involve finding time to cross platforms, poles, or other trains. Key is converting length to distance covered.",
+    "advanced": "When train passes a platform, total distance = train length + platform length. Speed must be in m/s for time in seconds.",
+    "formulas": ["Time to cross pole = Length of train / Speed in m/s", "Time to cross platform = (Train + Platform) / Speed", "Time to cross another train = (L1 + L2) / Relative speed"],
+    "shortcuts": ["Convert km/h to m/s: multiply by 5/18", "For opposite direction, add speeds; for same direction, subtract", "Always add lengths when crossing stationary objects or other trains"],
+    "examples": ["200m train at 54 km/h (15 m/s) → time = 200/15 = 13.33 seconds."]
+  },
+  "boats-and-streams": {
+    "overview": "Boats and streams problems involve downstream (with current) and upstream (against current) speeds. Current reduces upstream speed.",
+    "advanced": "Speed in still water = (downstream + upstream)/2. Stream speed = (downstream - upstream)/2.",
+    "formulas": ["Downstream speed = Boat speed + Stream speed", "Upstream speed = Boat speed - Stream speed", "Still water speed = (D + U)/2", "Stream speed = (D - U)/2"],
+    "shortcuts": ["Always add current for downstream, subtract for upstream", "For round trip, calculate each leg separately", "If time downstream and upstream given, can find both speeds"],
+    "examples": ["Downstream 18 km/h, upstream 12 km/h → still water = (18+12)/2 = 15 km/h, stream = 3 km/h."]
+  },
+  "alligation-or-mixture": {
+    "overview": "Alligation is a method to find the ratio in which two or more ingredients of different prices should be mixed to get a desired price.",
+    "advanced": "Alligation formula: (Cost of cheaper - Mean) : (Mean - Cost of costlier). For multiple items, use pairwise alligation.",
+    "formulas": ["Mean price = (Quantity1 × Price1 + Quantity2 × Price2) / (Q1 + Q2)", "Ratio = (D - M) : (M - C) where D = dearer, C = cheaper, M = mean"],
+    "shortcuts": ["For equal quantities, mean is simple average", "If one component is pure (no mixture), treat its price as the boundary", "For concentration problems, treat water as zero-cost component"],
+    "examples": ["Mix Rs 40 and Rs 50 rice → mean = (40+50)/2 = 45. Ratio = 1:1."]
+  },
+  "simple-interest": {
+    "overview": "Simple interest is calculated only on the principal amount. Formula involves principal, rate, and time.",
+    "advanced": "Amount = Principal + Interest. For same principal and rate, interest is proportional to time.",
+    "formulas": ["SI = (P × R × T) / 100", "Amount = P + SI = P(1 + RT/100)", "Rate = (SI × 100) / (P × T)", "Time = (SI × 100) / (P × R)"],
+    "shortcuts": ["For same principal, double time doubles interest", "For same time and rate, double principal doubles interest", "Convert annual rate to monthly by dividing by 12"],
+    "examples": ["P=1000, R=5%, T=2 years → SI = (1000×5×2)/100 = 100."]
+  },
+  "compound-interest": {
+    "overview": "Compound interest calculates interest on both principal and accumulated interest. Interest is added to principal at each period.",
+    "advanced": "For different compounding periods (half-yearly, quarterly), adjust rate and time accordingly. Amount = P(1 + r/n)^(nt).",
+    "formulas": ["A = P(1 + R/100)^T", "CI = A - P", "For half-yearly: A = P(1 + R/200)^(2T)", "For quarterly: A = P(1 + R/400)^(4T)"],
+    "shortcuts": ["Double time doesn't double amount", "Use (1+R/100)^T directly", "For rate doubling time: use log or approximation"],
+    "examples": ["P=1000, R=10%, T=2 years → A = 1000 × 1.1² = 1210, CI = 210."]
+  },
+  "logarithms": {
+    "overview": "Logarithms are the inverse of exponentiation. If a^x = b, then logₐ(b) = x. They simplify large number calculations.",
+    "advanced": "Logarithm properties: log(ab) = log a + log b, log(a/b) = log a - log b, log(a^n) = n log a.",
+    "formulas": ["logₐ(b) = x means a^x = b", "log(ab) = log a + log b", "log(a/b) = log a - log b", "log(a^n) = n log a", "logₐ(a) = 1", "logₐ(1) = 0"],
+    "shortcuts": ["log₁₀ is common logarithm (base 10)", "logₐ(a^n) = n", "Change of base: logₐ(b) = log(b)/log(a)"],
+    "examples": ["log₁₀100 = 2 because 10² = 100.", "log₂8 = 3 because 2³ = 8."]
+  },
+  "area": {
+    "overview": "Area deals with measuring the surface enclosed by different geometric shapes. Key formulas for common shapes are essential.",
+    "advanced": "For composite figures, break into known shapes. For triangles, use Heron's formula when all sides are known.",
+    "formulas": ["Rectangle: A = l × w", "Square: A = a²", "Triangle: A = ½ × base × height", "Circle: A = πr²", "Parallelogram: A = base × height", "Trapezium: A = ½ × (a+b) × h"],
+    "shortcuts": ["Diagonal of rectangle = √(l² + w²)", "Area of equilateral triangle = (√3/4)a²", "Circumference of circle = 2πr"],
+    "examples": ["Rectangle 5×3 = 15 sq units.", "Circle radius 7: 22/7 × 49 = 154."]
+  },
+  "volume-and-surface-areas": {
+    "overview": "Volume measures space occupied by 3D objects. Surface area is the total area of all faces.",
+    "advanced": "For combined solids, add or subtract volumes. For hollow objects, subtract inner from outer volume.",
+    "formulas": ["Cube: V = a³, SA = 6a²", "Cuboid: V = l×b×h, SA = 2(lb+bh+hl)", "Cylinder: V = πr²h, CSA = 2πrh", "Sphere: V = (4/3)πr³, SA = 4πr²", "Cone: V = ⅓πr²h, CSA = πrl"],
+    "shortcuts": ["Total surface area includes all faces", "Curved surface area excludes bases", "1 liter = 1000 cm³"],
+    "examples": ["Cube side 4: V = 64 cm³, SA = 96 cm².", "Cylinder r=7, h=10: V = 1540 cm³."]
+  },
+  "races-and-games-of-skill": {
+    "overview": "Race problems involve comparing speeds and distances when competitors start together or have head starts.",
+    "advanced": "When A beats B by x meters, in same time A covers full distance while B covers (D-x). Speed ratio = D:(D-x).",
+    "formulas": ["Speed ratio = Distance covered by A : Distance covered by B", "If A gives B 'd' meter start: B runs (D-d) when A runs D", "Time difference = (Distance × Time difference) / Distance covered by loser"],
+    "shortcuts": ["A beats B by x meters → B's speed = (D-x)/D × A's speed", "A gives B 't' seconds start → A's time = B's time - t", "For three persons A, B, C: use pairwise comparisons"],
+    "examples": ["100m race, A beats B by 10m → B runs 90m when A runs 100m → speed ratio 10:9."]
+  },
+  "calendar": {
+    "overview": "Calendar problems involve finding days of the week for given dates. Key is understanding odd days.",
+    "advanced": "Odd days = number of days beyond complete weeks. 365 days = 52 weeks + 1 odd day. 366 days = 52 weeks + 2 odd days.",
+    "formulas": ["Leap year: divisible by 4 (except century not divisible by 400)", "Days in month: 31 (Jan,Mar,May,Jul,Aug,Oct,Dec), 30 (Apr,Jun,Sep,Nov), 28/29 (Feb)", "Day = (Date + Month code + Year code) mod 7"],
+    "shortcuts": ["Century leap year: divisible by 400", "For any year, odd days = (year-1 + leap count) mod 7", "Reference: 1 Jan 2000 was Saturday."],
+    "examples": ["2024 is leap (divisible by 4), has 366 days, 2 odd days.", "Jan 1 2024 (leap, Monday) → find other dates using offset."]
+  },
+  "clocks": {
+    "overview": "Clock problems involve finding angles between hour and minute hands and times when hands are in specific positions.",
+    "advanced": "Relative speed of minute hand vs hour hand = 5.5°/minute. Hour hand moves 0.5° per minute.",
+    "formulas": ["Angle = |30H - 5.5M| (where H = hour, M = minutes)", "Hands together: M = (60/11) × H", "Hands opposite: M = (60/11) × (H + 6)", "Hands 90° apart: M = (60/11) × (H ± 3)"],
+    "shortcuts": ["At n o'clock, angle = 30n (if minute at 12)", "Minute hand gains on hour hand 5.5° per minute", "For reflex angle, subtract from 360°"],
+    "examples": ["3:00 → angle = 90°.", "3:30 → hour at 3+0.5×30=105°, minute at 180°, angle = 75°."]
+  },
+  "stocks-and-shares": {
+    "overview": "Stock and share problems involve calculating investment returns, dividends, and profit/loss on share transactions.",
+    "advanced": "Face value is the original value. Market value is the trading price. Dividend is calculated on face value.",
+    "formulas": ["Investment = Number of shares × Market price", "Dividend = (Rate% × Face value) × Number of shares", "Profit% = (SP - CP)/CP × 100", "Yield = Annual income / Investment × 100"],
+    "shortcuts": ["At discount: buy below face value", "At premium: buy above face value", "Stock dividend is always on face value, not market value"],
+    "examples": ["Buy 100 shares at Rs 50 (discount from 100): investment = 5000.", "8% stock at 80: yield = 8/80 × 100 = 10%."]
+  },
+  "permutations-and-combinations": {
+    "overview": "Permutations (order matters) and combinations (order doesn't matter) are fundamental counting techniques.",
+    "advanced": "For permutations with repeated elements, divide by factorials of repeated items. For circular arrangements, use (n-1)!.",
+    "formulas": ["nPr = n!/(n-r)!", "nCr = n!/r!(n-r)!", "n! = n × (n-1) × ... × 1", "0! = 1", "nCn = 1, nC0 = 1"],
+    "shortcuts": ["Use permutation for arrangements, combination for selections", "For repeated elements: divide by factorial of each repeated count", "Circular: (n-1)! for distinct items"],
+    "examples": ["4P2 = 4×3 = 12.", "5C2 = 5×4/2 = 10.", "Arrange 'AA': 2!/2! = 1."]
+  },
+  "probability": {
+    "overview": "Probability measures the likelihood of an event occurring, expressed as a fraction between 0 and 1.",
+    "advanced": "For dependent events, multiply probabilities sequentially. For mutually exclusive events, add probabilities.",
+    "formulas": ["P(E) = Favorable outcomes / Total outcomes", "P(A or B) = P(A) + P(B) (if mutually exclusive)", "P(A and B) = P(A) × P(B) (if independent)", "P(not E) = 1 - P(E)"],
+    "shortcuts": ["Without replacement: reduce sample space after each draw", "With replacement: sample space stays same", "Odds in favor = favorable:unfavorable"],
+    "examples": ["Dice: P(4) = 1/6.", "Two dice: P(sum=7) = 6/36 = 1/6.", "Cards: P(red) = 26/52 = 1/2."]
+  },
+  "heights-and-distance": {
+    "overview": "Height and distance problems use trigonometry to find heights of objects and distances between points.",
+    "advanced": "For objects with base inaccessible, use two observations. Angle of elevation increases as you get closer.",
+    "formulas": ["tan θ = Opposite/Adjacent = Height/Distance", "sin θ = Opposite/Hypotenuse", "cos θ = Adjacent/Hypotenuse", "Height = Distance × tan(elevation angle)"],
+    "shortcuts": ["45° angle: height = distance", "30-60-90 triangle: sides in ratio 1:√3:2", "Use angle of depression for looking down"],
+    "examples": ["Shadow 10m, height 10m → tan θ = 1 → θ = 45°.", "From 100m, angle 30° → height = 100 × tan30 = 57.7m."]
+  },
+  "odd-man-out-and-series": {
+    "overview": "Odd man out finds the element that doesn't follow the pattern. Series asks for the next number in a sequence.",
+    "advanced": "Look for patterns in prime/composite, squares/cubes, arithmetic/geometric, divisibility, or position.",
+    "formulas": ["Arithmetic: add constant", "Geometric: multiply constant", "Fibonacci: sum of previous two", "Square/Cube: perfect powers", "Prime: only divisible by 1 and itself"],
+    "shortcuts": ["Check number properties first (prime, even, odd)", "Check mathematical relationships", "Check digit patterns", "Check position in alphabet for letter series"],
+    "examples": ["2,4,6,9 → 9 is odd (not divisible by 2).", "1,4,9,16 → next is 25 (perfect squares)."]
+  },
   "reading-comprehension": {
     "overview": "Reading comprehension is about extracting meaning, structure, and tone under time pressure. Accuracy beats speed at the start.",
-    "advanced": "Look for the author�s intent, transitions, and scope. Trap options often sound intelligent but go beyond the passage.",
+    "advanced": "Look for the author�s intent, transitions, and scope. Trap options often sound intelligent but go beyond the passage.",
     "formulas": ["Read question stems before re-reading key paragraph sections", "Main idea = repeated theme + author purpose", "Tone = word choice + stance + emotional distance"],
     "shortcuts": ["Underline transition words like however, therefore, similarly", "Eliminate options with extreme language unless passage supports it", "For vocabulary-in-context, replace the word inside the sentence"],
     "examples": ["If a paragraph contrasts old and new policy, the main idea is likely the shift, not a detail inside one side.", "If the author uses cautious words like perhaps or suggests, tone is likely analytical rather than aggressive."]
@@ -61,5 +271,287 @@
     "formulas": ["Brother/Sister share parents", "Father's brother = uncle", "Mother's daughter = sister"],
     "shortcuts": ["Start from the named person and move outward", "Mark gender only when given; do not assume", "For coded relations, decode each symbol before combining"],
     "examples": ["A is the mother of B and B is the brother of C, so A is also mother of C.", "If P is Q's father's sister, P is Q's aunt."]
+  },
+  "tenses": {
+    "overview": "Tenses show time relationships in English. Present for now, past for completed actions, future for upcoming events.",
+    "advanced": "Perfect tenses add completion aspect. Continuous tenses add ongoing nature. Choose based on both time and aspect.",
+    "formulas": ["Present Simple: facts, habits (I eat)", "Past Simple: completed actions (I ate)", "Future Simple: predictions (I will eat)"],
+    "shortcuts": ["Time words guide tense: yesterday=past, tomorrow=future", "Perfect tenses use 'have/has/had + past participle'", "Continuous tenses use 'be + present participle (-ing)'"],
+    "examples": ["I eat breakfast daily. (habit)", "I ate breakfast yesterday. (completed)", "I will eat breakfast tomorrow. (future)"]
+  },
+  "articles": {
+    "overview": "Articles (a/an/the) specify nouns. 'A/an' for general singular, 'the' for specific, no article for plural general.",
+    "advanced": "Use 'an' before vowel sounds, not just vowels. 'The' for unique items, previously mentioned nouns, or superlatives.",
+    "formulas": ["A before consonant sounds: a book, a university", "An before vowel sounds: an apple, an hour", "The for specific: the book on the table"],
+    "shortcuts": ["Test sound, not spelling: 'an honest' (h silent)", "No article with plural general: Books are good", "The with superlatives: the best book"],
+    "examples": ["I need a book. (any book)", "I need the book. (specific book)", "Books are expensive. (general)"]
+  },
+  "prepositions": {
+    "overview": "Prepositions show relationships between nouns. Common ones: in/on/at (time/place), to/for/with (purpose/means).",
+    "advanced": "Choose based on context, not rules. Some prepositions are fixed with certain verbs (listen to, depend on).",
+    "formulas": ["Time: at + point, on + day/date, in + month/year", "Place: at + point, on + surface, in + enclosed space", "Movement: to + destination, from + origin"],
+    "shortcuts": ["Think of prepositions as bridges connecting ideas", "Learn verb + preposition combinations", "Use location logic: inside=in, surface=on, point=at"],
+    "examples": ["I live in Mumbai. (city)", "The book is on the table. (surface)", "Meet me at 5 PM. (time point)"]
+  },
+  "subject-verb-agreement": {
+    "overview": "Subject and verb must agree in number. Singular subjects take singular verbs, plural take plural.",
+    "advanced": "Watch for compound subjects, collective nouns, and intervening phrases. Distance doesn't break agreement.",
+    "formulas": ["Singular: subject + verb-s (He goes)", "Plural: subjects + verb (They go)", "Either/or: verb agrees with nearer subject"],
+    "shortcuts": ["Ignore phrases between subject and verb", "Each/every = singular, some = plural", "Collective nouns usually singular"],
+    "examples": ["The boy runs. (singular)", "The boys run. (plural)", "Either the teacher or the students are coming. (plural nearer)"]
+  },
+  "active-passive-voice": {
+    "overview": "Active: subject does action. Passive: subject receives action. Convert by switching subject and object.",
+    "advanced": "Passive uses 'be + past participle'. Agent (by + doer) is optional. Use passive for unknown doer or emphasis.",
+    "formulas": ["Active: Subject + verb + object", "Passive: Object + be + past participle + by + subject", "Tense stays same, just form changes"],
+    "shortcuts": ["Identify doer (subject) and receiver (object)", "Add 'by' before original subject in passive", "Keep same tense auxiliaries"],
+    "examples": ["Active: He wrote the letter.", "Passive: The letter was written by him."]
+  },
+  "direct-indirect-speech": {
+    "overview": "Direct speech quotes exact words. Indirect speech reports meaning with changes in tense, pronouns, time expressions.",
+    "advanced": "Tense shifts back one step. Pronouns change to third person. Time/place words adjust relative to reporting time.",
+    "formulas": ["Present → Past: is/am/are → was/were", "Past → Past Perfect: was/were → had been", "Now → Then, Here → There, Today → That day"],
+    "shortcuts": ["Change tense only if reporting verb is past", "Pronouns: I/you → he/she/they as appropriate", "Questions lose question marks, become statements"],
+    "examples": ["Direct: He said, 'I am happy.'", "Indirect: He said that he was happy."]
+  },
+  "conjunctions": {
+    "overview": "Conjunctions connect clauses. Coordinating (and/but/or) join equals. Subordinating (because/although) join unequal clauses.",
+    "advanced": "Use commas with coordinating conjunctions between independent clauses. No comma with subordinating if dependent clause follows.",
+    "formulas": ["Coordinating: FANBOYS (for, and, nor, but, or, yet, so)", "Subordinating: because, although, since, while, if", "Correlative: either...or, neither...nor, both...and"],
+    "shortcuts": ["FANBOYS need comma before them in compound sentences", "Subordinating conjunctions can start dependent clauses", "Use correlatives in pairs"],
+    "examples": ["I study and I work. (coordinating)", "I study because I want to learn. (subordinating)"]
+  },
+  "modals": {
+    "overview": "Modal verbs express possibility, necessity, permission, ability. They don't change with person or number.",
+    "advanced": "Each modal has specific meaning: can=ability, may=permission/possibility, must=necessity, should=advice.",
+    "formulas": ["Ability: can/could (present/past)", "Possibility: may/might, can/could", "Necessity: must, have to", "Advice: should, ought to"],
+    "shortcuts": ["Modals + base verb (no 'to' except 'ought')", "Past modals: could, might, should + have + past participle", "Negative: can't, mustn't, shouldn't"],
+    "examples": ["I can swim. (ability)", "You should study. (advice)", "It may rain. (possibility)"]
+  },
+  "synonyms": {
+    "overview": "Synonyms are words with similar meanings. They help avoid repetition and add variety to writing.",
+    "advanced": "Choose synonyms based on context, tone, and formality. Some synonyms differ in intensity or connotation.",
+    "formulas": ["Happy synonyms: joyful, glad, pleased, delighted", "Big synonyms: large, huge, enormous, massive", "Quick synonyms: fast, rapid, swift, speedy"],
+    "shortcuts": ["Use thesaurus for variety, but check context", "Consider formality: happy (neutral) vs ecstatic (intense)", "Watch for slight meaning differences"],
+    "examples": ["Happy = joyful (positive emotion)", "Quick = rapid (fast movement)", "Strong = powerful (great strength)"]
+  },
+  "antonyms": {
+    "overview": "Antonyms are words with opposite meanings. They create contrast and help define concepts by opposition.",
+    "advanced": "Some words have multiple antonyms depending on context. Gradable antonyms allow degrees (hot/cold).",
+    "formulas": ["Happy antonyms: sad, unhappy, miserable", "Big antonyms: small, little, tiny", "Quick antonyms: slow, gradual, leisurely"],
+    "shortcuts": ["Think of word pairs: hot/cold, fast/slow, good/bad", "Use antonyms for contrast in writing", "Context determines which antonym fits best"],
+    "examples": ["Happy ↔ Sad", "Big ↔ Small", "Quick ↔ Slow"]
+  },
+  "one-word-substitution": {
+    "overview": "One word substitution replaces a phrase with a single word. Common in competitive exams for concise expression.",
+    "advanced": "Learn common categories: people, qualities, actions, places. Many come from Greek/Latin roots.",
+    "formulas": ["Person who...: Philanthropist (loves mankind)", "Study of...: Ornithology (birds)", "Fear of...: Acrophobia (heights)"],
+    "shortcuts": ["Group by categories: professions, fears, sciences", "Learn roots: psycho (mind), hydro (water), chrono (time)", "Practice with flashcards for memorization"],
+    "examples": ["One who studies birds: Ornithologist", "Fear of water: Hydrophobia", "Study of mind: Psychology"]
+  },
+  "idioms-phrases": {
+    "overview": "Idioms are expressions with figurative meanings different from literal words. Common in English communication.",
+    "advanced": "Idioms often come from historical contexts. Learn meaning first, then usage. Don't translate literally.",
+    "formulas": ["Break the ice: initiate conversation", "Piece of cake: very easy", "Hit the books: study hard"],
+    "shortcuts": ["Learn idioms in context, not isolation", "Group by themes: time, money, emotions", "Use in writing for natural expression"],
+    "examples": ["Break the ice = start conversation", "Spill the beans = reveal secret", "Cost an arm and a leg = very expensive"]
+  },
+  "word-meaning": {
+    "overview": "Vocabulary building focuses on word meanings, roots, and usage. Context helps determine correct meaning.",
+    "advanced": "Learn word families, prefixes, suffixes. Multiple meanings exist for many words - choose contextually.",
+    "formulas": ["Bene- (good): benevolent, beneficial", "Mal- (bad): malicious, malignant", "Pre- (before): predict, prevent"],
+    "shortcuts": ["Learn roots for multiple words at once", "Use context clues in sentences", "Practice with word lists and quizzes"],
+    "examples": ["Benevolent = kind and well-meaning", "Meticulous = very careful about details", "Ubiquitous = present everywhere"]
+  },
+  "para-jumbles": {
+    "overview": "Para jumbles test your ability to arrange sentences in logical order. Identify the flow of ideas and sequence.",
+    "advanced": "Look for pronouns, references, time indicators, and cause-effect relationships. The first and last sentences are often easiest to identify.",
+    "formulas": ["First sentence often introduces topic or context", "Last sentence often concludes or summarizes", "Middle sentences show progression or explanation"],
+    "shortcuts": ["Identify common words/references between sentences", "Look for transition words: therefore, however, similarly", "Test each option quickly - eliminate wrong sequences"],
+    "examples": ["Context → Event → Result order is common", "Pronouns like 'he/she/it' refer to previously mentioned nouns"]
+  },
+  "fill-in-blanks": {
+    "overview": "Fill-in-the-blanks tests grammar, vocabulary, and logical thinking. Choose words that fit grammatically and semantically.",
+    "advanced": "Check subject-verb agreement, tense consistency, preposition usage, and article rules. Context is key.",
+    "formulas": ["Verb form depends on subject and tense", "Prepositions show relationships: location, time, means", "Articles (a/an/the) depend on noun specificity"],
+    "shortcuts": ["Identify the blank's grammatical role (noun, verb, etc.)", "Test each option for grammar and meaning fit", "Pay attention to surrounding words and punctuation"],
+    "examples": ["She goes to school. (present tense, third person)", "The book is on the table. (preposition 'on' for surface)"]
+  },
+  "error-detection": {
+    "overview": "Error detection requires identifying grammatical, spelling, or usage mistakes in sentences. Common errors involve agreement, tense, and word choice.",
+    "advanced": "Focus on subject-verb agreement, pronoun references, verb tenses, prepositions, and articles. Minor punctuation changes indicate possible errors.",
+    "formulas": ["Subject and verb must agree in number and person", "Verb tense should be consistent throughout", "Pronouns must refer clearly to nouns"],
+    "shortcuts": ["Read each option in the sentence", "Check for common errors: is/are, has/have, subject distance issues", "Watch for inconsistent tenses in multi-clause sentences"],
+    "examples": ["Error: 'He go to school.' (should be 'goes')", "Error: 'The dogs runs.' (should be 'run')"]
+  },
+  "sentence-completion": {
+    "overview": "Sentence completion requires choosing a phrase that logically completes a sentence. Focus on logic, tense, and meaning flow.",
+    "advanced": "Consider cause-effect relationships, temporal sequences, and logical consequences. Look for transition signals like 'although', 'because', 'therefore'.",
+    "formulas": ["Parallel structure: similar constructions for coordinate elements", "Verb tense must match overall sentence time", "Logic must follow from the setup (cause before effect)"],
+    "shortcuts": ["Identify the logical relationship (cause, contrast, result)", "Match tense with the sentence's time frame", "Eliminate options that change the meaning direction"],
+    "examples": ["If he studied → then he passed (cause-effect)", "The book was interesting → so she read it completely (consequence)"]
+  },
+  "cloze-test": {
+    "overview": "Cloze tests present a passage with multiple blanks. Fill blanks using context, grammar, and vocabulary knowledge. Tests overall comprehension.",
+    "advanced": "Consider paragraph-wide coherence, not just individual blanks. Pronouns, references, and tense consistency span multiple sentences.",
+    "formulas": ["Grammatical fill: tense, agreement, article, preposition", "Semantic fill: word meaning must fit context", "Cohesive devices: pronouns, transitions, references"],
+    "shortcuts": ["Read entire passage first for general idea", "Fill easier blanks first to build context", "Check consistency: if one verb is past tense, check others"],
+    "examples": ["The cat _____ (sat/sit/sitting) on the table. → 'sat' (past, matches narrative)", "She enjoys _____ (read/reading/reads) books. → 'reading' (gerund after 'enjoys')"]
+  },
+  "direction-sense": {
+    "overview": "Direction sense tests spatial reasoning and your ability to visualize paths and positions. Critical skills: tracking turns, calculating distances, and maintaining directional awareness.",
+    "advanced": "Use fixed reference points (North/South/East/West). Draw diagrams for complex paths. Break multi-step routes into segments and track net displacement.",
+    "formulas": ["Cardinal directions: N, S, E, W form a +shape; NE, SE, SW, NW are diagonals", "Left turn from any direction rotates 90° counter-clockwise", "Right turn from any direction rotates 90° clockwise", "Pythagorean theorem: distance = √(horizontal² + vertical²)"],
+    "shortcuts": ["Turn 180° = reverse direction", "Two left turns (or right) = reversed direction", "Write down turns instead of visualizing mentally", "Use coordinate system: North = +Y, East = +X"],
+    "examples": ["Start North, turn right 90°, now facing East", "Walk 3m East, 4m North. Distance = √(9+16) = 5m", "From North: right-right = South; left-left = South; right-left = North"]
+  },
+  "alphabet-series": {
+    "overview": "Alphabet series test pattern recognition with letters. Patterns involve position shifts, skipping letters, reversals, or mixed number-letter combinations.",
+    "advanced": "Convert letters to positions (A=1, Z=26) for easier calculation. Check for primary pattern in first sub-series before testing secondary patterns.",
+    "formulas": ["Letter position in alphabet: A=1, B=2...Z=26", "Arithmetic series: constant difference between positions", "Alternating series: even and odd positions form separate series", "Reverse: Z-series goes backwards (Z=26, Y=25, etc.)"],
+    "shortcuts": ["Split alternating patterns into two series", "Look for skip patterns: skip 1, skip 2, skip 3, etc.", "If differences increase, test n, n+1, n+2, etc.", "Check position math before overthinking"],
+    "examples": ["A, C, E, G = skip 1 letter each time", "AZ, BY, CX = first advances, second reverses simultaneously", "A, B, D, G = differences are 1, 2, 3 (increasing)"]
+  },
+  "syllogisms": {
+    "overview": "Syllogisms are logical arguments with two premises and a conclusion. Master: All/Some/No relationships and valid deduction chains.",
+    "advanced": "Use Venn diagrams mentally. 'All A are B' means A is subset of B. 'No A is B' means no overlap. 'Some A is B' means partial overlap.",
+    "formulas": ["All A are B + X is A → X is B (universal affirmative→ conclusion valid)", "No A is B + X is A → X is not B (universal negative→ conclusion valid)", "Some A are B + All B are C → Some A are C (particular+universal→ some conclusion valid)"],
+    "shortcuts": ["Two negative premises = no valid conclusion", "Particular premise + Particular premise = no valid conclusion", "If both premises have 'some', conclusion can't use 'all'", "The middle term must be distributed at least once"],
+    "examples": ["All doctors are educated. Some educated people are doctors. Can't conclude All educated are doctors", "No criminal is innocent. Some innocent people are poor. No direct link between criminals and poor"]
+  },
+  "statement-conclusion": {
+    "overview": "Statement-conclusion questions test whether a conclusion logically follows from given statements. Separates valid logical deduction from common assumptions.",
+    "advanced": "Question whether the conclusion necessarily follows, not whether it's possibly true. One counter-example invalidates a conclusion.",
+    "formulas": ["Valid only if statement guarantees conclusion", "Converse (A→B doesn't mean B→A)", "Premises must cover all cases for 'All' conclusion"],
+    "shortcuts": ["'Some' premises can't lead to 'All' conclusions", "'All' premises with disjoint categories lead to 'No' conclusions", "Look for hidden converse errors and over-generalizations"],
+    "examples": ["'All students study' + 'Ram is a student' → 'Ram studies' (valid)", "'Some doctors are rich' can't conclude 'All doctors are rich'"]
+  },
+  "statement-assumption": {
+    "overview": "Statement-assumption tests whether a statement relies on an unstated assumption. Assumptions are premises needed for the statement to hold.",
+    "advanced": "An assumption is necessary if removing it breaks the statement's logic. Test: 'If assumption is false, is statement still valid?' If no, it's an assumption.",
+    "formulas": ["Direct assumption: explicitly needed for logic", "Implied assumption: context assumes something not stated", "Correlation ≠ Causation: causation assumes non-correlation causes"],
+    "shortcuts": ["Assumptions connect cause to effect", "Price/popularity don't guarantee quality—watch for this assumption", "Assumptions fill logical gaps between premise and conclusion"],
+    "examples": ["'He's rich so he's happy' assumes wealth→happiness", "'The product sold more' assumes quality not marketing or price"]
+  },
+  "cause-effect": {
+    "overview": "Cause-effect relationships identify what produces an outcome. Critical: distinguish true causation from correlation, sequence, or coincidence.",
+    "advanced": "Causation requires mechanism (how cause leads to effect). Correlation ≠ Causation. Temporal order matters: cause before effect.",
+    "formulas": ["Causation: A→B (A must precede B, mechanism exists, no third variable)", "Correlation: A and B both rise but may not relate", "Reverse causality: B causes A, not A→B"],
+    "shortcuts": ["Ask: How does cause produce effect? If no mechanism, not causal", "Multiple causes can produce one effect", "One cause can have multiple effects", "Bidirectional relationships exist (stress↔insomnia)"],
+    "examples": ["Rain causes wet ground (mechanism: water contact)", "Ice cream sales ↑ and temperature ↑ (correlation; temperature causes both)"]
+  },
+  "visual-reasoning": {
+    "overview": "Visual reasoning tests shape recognition, pattern detection, spatial relationships, and mental rotation. Critical for competitive exams and IQ assessments.",
+    "advanced": "Master 2D to 3D transformations, tessellations, and rotation mechanics. Practice mental folding and unfolding of nets. Common tricks: mirror images, rotated views, overlapping shapes.",
+    "formulas": ["Rotation: multiply rotation angle by number of steps", "Mirror reflection: coordinates flip across axis", "Polygon interior angles: (n-2)×180° for n-sided polygon"],
+    "shortcuts": ["Trace finger path in visual puzzles to avoid errors", "Check symmetry first before complex analysis", "Rotation patterns often repeat every 90°, 120°, or 180°"],
+    "examples": ["Shape sequence 3-4-5 sides suggests pentagon (5) next", "Color repeating R-G-B pattern continues cyclically", "Isometric cube shows 9 of 12 edges; 3 hidden"]
+  },
+  "seating-arrangement-linear": {
+    "overview": "Linear seating arrangement tests logical ordering and positioning. Key: use left/right orientation, count positions, and identify neighbors accurately.",
+    "advanced": "For complex scenarios, use notation like 'Position 1, 2, 3...' or draw lines. Distance calculations in linear seating: positions count from left and right simultaneously.",
+    "formulas": ["Position from left = N (where N=1,2,3...)", "Position from right = Total - Position from left + 1", "Distance between positions = |Pos A - Pos B|"],
+    "shortcuts": ["Start with leftmost/rightmost (easiest to place)", "Use relative positions (X is left of Y) to anchor others", "For 'between' questions: count positions exclusive of endpoints"],
+    "examples": ["5 people, X 3rd from left → X at position 3; from right = 5-3+1=3rd from right", "Place A at end → then B next to A → then C relative to B"]
+  },
+  "seating-arrangement-circular": {
+    "overview": "Circular seating tests 2D spatial reasoning. Key difference from linear: no fixed ends, all directions relative to observer, and opposite positions exist.",
+    "advanced": "Mental circular arrangement: imagine sitting in the circle. Left/right is relative to each person's facing. Use 'clockwise' and 'counterclockwise' consistently.",
+    "formulas": ["Opposite in N-person circle (even N): position + N/2 = opposite", "Distance clockwise vs counterclockwise: total = N - distance one way", "Angles per person: 360°/N"],
+    "shortcuts": ["Imagine yourself in the circle facing center", "Use clock analogy: 12 positions on clock face", "For odd-number circles, no true opposite; closest is (N+1)/2 away"],
+    "examples": ["8-person circle, person at 1 opposite to 5 (1+4=5)", "Person at 2nd clockwise from A: go 2 steps clockwise from A", "5 people, left 2 steps from any = same as right 3 steps"]
+  },
+  "floor-puzzles": {
+    "overview": "Floor-based puzzles involve multi-story buildings and room assignments. Critical: track vertical positions, count floors correctly, and use constraints to eliminate options.",
+    "advanced": "Use inequality chains (A > B > C) to order. For complex constraints, draw a building diagram or use floor notation (L1, L2, L3...).",
+    "formulas": ["If total N floors and person X on floor n, max above = N-n, max below = n-1", "Distance between floors = |Floor A - Floor B|"],
+    "shortcuts": ["Place people with most constraints first", "Use 'above/below' to build inequality chains", "Count floors carefully; off-by-one errors common"],
+    "examples": ["Building 7 floors, C on L2 above D, D above E → if E=L1, then D=L2 (impossible if C also on L2), must recheck", "4 floors, A not top, B on 2nd or 3rd: map possibilities"]
+  },
+  "box-puzzles": {
+    "overview": "Box puzzles involve items in containers, with patterns or logical relationships. Tests counting, categorization, and sometimes probabilistic thinking.",
+    "advanced": "Identify pattern (material, color, quantity) across boxes. Some puzzles require Venn diagram logic or set theory for overlapping categories.",
+    "formulas": ["Probability of selecting correct box: favorable/total", "Permutations if order matters: n! / (n-k)!", "Combinations if order doesn't: C(n,k) = n! / (k!(n-k)!)"],
+    "shortcuts": ["List all boxes and their properties systematically", "For weight/value patterns, check arithmetic progressions", "Probability = count favorable outcomes / total outcomes"],
+    "examples": ["5 boxes, 2 have prize, 1st selection = 2/5 probability", "Pattern: Box N contains N items → Box 5 has 5 items"]
+  },
+  "scheduling-puzzles": {
+    "overview": "Scheduling tests task sequencing, dependency management, and optimization under constraints. Key: identify dependencies, parallel tasks, and critical path.",
+    "advanced": "Use Critical Path Method (CPM) for complex projects. Identify bottlenecks. Understand precedence (A before B affects sequencing). Account for parallel execution.",
+    "formulas": ["Sequential time: sum of all task durations", "Parallel time: max(min duration among groups)", "Total time if A-B sequence: duration(A) + duration(B)", "Minimum time with N workers, M tasks: ceiling(sum of all durations / N)"],
+    "shortcuts": ["Identify tasks with no dependencies (can start immediately)", "Find critical path (longest chain of dependent tasks)", "Overlapping allowed unless explicitly sequential"],
+    "examples": ["A(2h) then B(3h) then C(1h) = 6h total sequential", "A and B parallel (each 2h), then C(1h) = 2+1 = 3h total"]
+  },
+  "calendar-clock": {
+    "overview": "Calendar and clock problems test date calculations, day-of-week determinations, and time arithmetic. Key: handle leap years, modulo arithmetic, and 12/24-hour formats.",
+    "advanced": "Use modulo 7 for day-of-week calculations. Know leap year rules (divisible by 4, except centuries need divisibility by 400). Use Zeller's congruence for complex dates.",
+    "formulas": ["Days between two dates: subtract date numbers", "Day of week: (initial day + days elapsed) mod 7", "Leap year: divisible by 400 OR (divisible by 4 AND not by 100)", "Hour hand and minute hand overlap 11 times in 12 hours"],
+    "shortcuts": ["Week = 7 days; same day after 7 days", "Every 4 years is leap year (mostly)", "Clock hands perpendicular 44 times in 12 hours", "Hands overlap: approximately every 12/11 hours"],
+    "examples": ["If Jan 1 is Monday, Jan 15 is Monday (14 days = 2 weeks later)", "Feb 29 only exists in leap years (2024, 2020, etc.)", "3:00 + 45 min = 3:45"]
+  },
+  "decision-making": {
+    "overview": "Decision-making tests logical reasoning under uncertainty, trade-off analysis, and strategic thinking. Tests evaluation of options given constraints and criteria.",
+    "advanced": "Use decision matrices, payoff tables, and expected value calculations. Understand risk vs. reward. Consider opportunity costs and sunk costs (irrelevant).",
+    "formulas": ["Expected Value (EV) = Probability × Outcome", "Profit/Loss payoff = (Outcome | Decision) − Cost", "Weighted score = Σ(Weight × Score) for each criteria"],
+    "shortcuts": ["List all options and all criteria", "Eliminate dominated options (worse in all ways)", "Calculate EV for high-stakes decisions", "Consider reversibility: reversible decisions need less analysis"],
+    "examples": ["Job A: $50k secure vs Job B: $70k risky → depends on risk tolerance", "EV = 0.7×100 + 0.3×0 = 70 for uncertain option with 70% win", "Risk-averse: choose lower risk even if slightly lower return"]
+  },
+  "python": {
+    "overview": "Python focuses on readable syntax, dynamic typing, and fast problem solving. It is heavily used in automation, data work, web development, and interview coding rounds.",
+    "advanced": "Pay attention to indentation, mutability, built-in data structures, and how functions and loops behave. Interview questions often test lists, dictionaries, strings, and time complexity.",
+    "formulas": ["List index access: list[i]", "Dictionary lookup average case: O(1)", "String slicing: text[start:end:step]"],
+    "shortcuts": ["Use tuples for immutable grouped values", "Prefer dictionaries for quick key-based access", "Remember that Python uses indentation instead of braces"],
+    "examples": ["len('prep') returns 4", "A tuple like (1, 2, 3) cannot be modified", "A dictionary stores data as key-value pairs"]
+  },
+  "c": {
+    "overview": "C builds strong fundamentals in memory, pointers, data types, and procedural programming. It is a core language for systems and interview basics.",
+    "advanced": "Common questions revolve around pointers, arrays, functions, header files, and memory layout. Understanding dereferencing and address operators is essential.",
+    "formulas": ["Address-of operator: &x", "Dereference operator: *ptr", "Array indexing: arr[i]"],
+    "shortcuts": ["Include stdio.h for printf and scanf", "Use * to access the value stored by a pointer", "Remember that arrays and pointers are closely related but not identical"],
+    "examples": ["int *p points to an integer variable", "printf() prints formatted output", "scanf() reads input into memory addresses"]
+  },
+  "cpp": {
+    "overview": "C++ adds object-oriented programming, constructors, destructors, overloading, and the STL on top of C-style foundations.",
+    "advanced": "Interview rounds often cover classes, inheritance, polymorphism, references, and STL containers like vector, stack, and map.",
+    "formulas": ["Class inheritance: class Child : public Parent", "Reference syntax: int &ref = value", "Vector push: vec.push_back(x)"],
+    "shortcuts": ["Use constructors to initialize objects", "Destructors help release resources automatically", "Function overloading is a common example of compile-time polymorphism"],
+    "examples": ["vector<int> stores dynamic integer arrays", "A destructor runs when an object goes out of scope", "A derived class can extend a base class"]
+  },
+  "java": {
+    "overview": "Java emphasizes object-oriented programming, platform independence, strong typing, and class-based design. It is common in enterprise and placement preparation.",
+    "advanced": "Expect questions on classes, inheritance, interfaces, JVM basics, collections, and the difference between primitive and reference types.",
+    "formulas": ["Inheritance keyword: extends", "Entry method: public static void main(String[] args)", "Object creation: new ClassName()"],
+    "shortcuts": ["Every Java program starts from main()", "Use extends for class inheritance and implements for interfaces", "Java is compiled to bytecode and runs on the JVM"],
+    "examples": ["System.out.println() prints output", "String is a class, not a primitive type", "ArrayList grows dynamically"]
+  },
+  "sql": {
+    "overview": "SQL is used to store, query, filter, sort, and aggregate relational data. It is a high-frequency topic in technical screening rounds.",
+    "advanced": "Focus on SELECT queries, WHERE filtering, ORDER BY sorting, GROUP BY aggregation, joins, and basic normalization ideas.",
+    "formulas": ["Read data: SELECT column FROM table", "Filter rows: WHERE condition", "Sort rows: ORDER BY column ASC|DESC"],
+    "shortcuts": ["Use WHERE before GROUP BY for row filtering", "Use COUNT(*) to count rows", "INNER JOIN returns matching rows from both tables"],
+    "examples": ["SELECT * FROM students returns all columns", "WHERE marks > 70 filters high-scoring rows", "ORDER BY name sorts results alphabetically"]
+  },
+  "dsa": {
+    "overview": "Data Structures and Algorithms (DSA) is the foundation of computer science, covering how data is organized and how problems are solved efficiently.",
+    "advanced": "Focus on time/space complexity, asymptotic notation, common patterns, and selecting the right data structure for a given problem.",
+    "formulas": [
+      "Time Complexity: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) log-linear, O(n^2) quadratic, etc.",
+      "Space Complexity: Same categories as time complexity.",
+      "Fibonacci F(n) = F(n-1) + F(n-2)"
+    ],
+    "shortcuts": [
+      "For sorted arrays, use binary search for O(log n) lookups.",
+      "Use hash tables (maps) for O(1) average case insertions and lookups.",
+      "For graph traversal, BFS is used for shortest paths in unweighted graphs, DFS for connectivity.",
+      "Two pointers technique speeds up array traversal."
+    ],
+    "examples": [
+      "Binary Search on a sorted array: O(log n)",
+      "Finding duplicates using a hash set: O(n)",
+      "Merge Sort: O(n log n)",
+      "Bubble Sort: O(n^2)",
+      "Linked List reversal: O(n)",
+      "Matrix traversal: O(rows × cols)"
+    ]
   }
 }

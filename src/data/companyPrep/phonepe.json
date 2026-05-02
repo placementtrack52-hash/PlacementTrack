@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "PHONEPE-APT-01",
+      "question": "A shopkeeper marks up by 50% and gives 20% discount. Net profit/loss?",
+      "options": [
+        "20% profit",
+        "25% profit",
+        "30% profit",
+        "No profit no loss"
+      ],
+      "correctAnswer": "20% profit",
+      "explanation": "Step 1: Let CP = 100.\nStep 2: Marked price = 150.\nStep 3: Discount = 20% of 150 = 30.\nStep 4: SP = 150 - 30 = 120.\nStep 5: Profit = 20%. This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-02",
+      "question": "Solve: 7x + 14 = 49",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Step 1: 7x + 14 = 49.\nStep 2: 7x = 35.\nStep 3: x = 5.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-03",
+      "question": "If 25% of students are absent, and 225 are present, total students?",
+      "options": [
+        "280",
+        "300",
+        "320",
+        "350"
+      ],
+      "correctAnswer": "300",
+      "explanation": "Step 1: 75% present = 225.\nStep 2: 0.75x = 225, x = 300.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-04",
+      "question": "Ratio of boys to girls is 4:5. If 40 boys, how many girls?",
+      "options": [
+        "45",
+        "48",
+        "50",
+        "52"
+      ],
+      "correctAnswer": "50",
+      "explanation": "Step 1: 4 parts = 40 boys.\nStep 2: 1 part = 10.\nStep 3: Girls = 5 × 10 = 50.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-05",
+      "question": "A car travels 420 km in 7 hours. Speed?",
+      "options": [
+        "55 km/h",
+        "60 km/h",
+        "65 km/h",
+        "70 km/h"
+      ],
+      "correctAnswer": "60 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 420/7 = 60 km/h.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-06",
+      "question": "CI on Rs. 30000 at 8% for 2 years?",
+      "options": [
+        "Rs. 4800",
+        "Rs. 4920",
+        "Rs. 5000",
+        "Rs. 5100"
+      ],
+      "correctAnswer": "Rs. 4920",
+      "explanation": "Step 1: Amount = 30000(1.08)^2 = 30000 × 1.1664 = 34992.\nStep 2: CI = 34992 - 30000 = 4992.\nStep 3: Wait, 1.08² = 1.1664, 30000 × 1.1664 = 34992, yes 4992.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-07",
+      "question": "Item at Rs. 1500 sold with 30% discount. SP?",
+      "options": [
+        "Rs. 1000",
+        "Rs. 1050",
+        "Rs. 1100",
+        "Rs. 1150"
+      ],
+      "correctAnswer": "Rs. 1050",
+      "explanation": "Step 1: Discount = 30% of 1500 = 450.\nStep 2: SP = 1500 - 450 = 1050.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-08",
+      "question": "Average of 18, 22, 26, 30?",
+      "options": [
+        "22",
+        "24",
+        "26",
+        "28"
+      ],
+      "correctAnswer": "24",
+      "explanation": "Step 1: Sum = 96.\nStep 2: Average = 96/4 = 24.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-09",
+      "question": "If 50% of a is 150, find a.",
+      "options": [
+        "250",
+        "300",
+        "350",
+        "400"
+      ],
+      "correctAnswer": "300",
+      "explanation": "Step 1: 50% of a = 150.\nStep 2: 0.5a = 150.\nStep 3: a = 300.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-APT-10",
+      "question": "GCD of 36 and 48?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "12",
+      "explanation": "Step 1: 36 = 2² × 3².\nStep 2: 48 = 2^4 × 3.\nStep 3: GCD = 2² × 3 = 12.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "PHONEPE-REA-01",
+      "question": "Series: 6, 12, 24, 48, 96, ?",
+      "options": [
+        "144",
+        "168",
+        "192",
+        "216"
+      ],
+      "correctAnswer": "192",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 96 × 2 = 192.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-02",
+      "question": "If TREE is coded as VUGG, what is BUSH coded as?",
+      "options": [
+        "DWVK",
+        "DWUJ",
+        "DVWK",
+        "DVUJ"
+      ],
+      "correctAnswer": "DWUJ",
+      "explanation": "Step 1: Each letter shifts by +2 (T→V, R→T, E→G, E→G).\nStep 2: For BUSH: B→D, U→W, S→U, H→J = DWUJ.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-03",
+      "question": "Pointing to a lady, Raj said 'She is my mother's only brother's daughter.' Who is she?",
+      "options": [
+        "Cousin",
+        "Sister",
+        "Aunt",
+        "Niece"
+      ],
+      "correctAnswer": "Cousin",
+      "explanation": "Step 1: Mother's only brother = maternal uncle.\nStep 2: Uncle's daughter = cousin.\nStep 3: She is Raj's cousin.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-04",
+      "question": "Odd one: Mango, Apple, Orange, Potato",
+      "options": [
+        "Mango",
+        "Apple",
+        "Orange",
+        "Potato"
+      ],
+      "correctAnswer": "Potato",
+      "explanation": "Step 1: Mango, Apple, Orange are fruits.\nStep 2: Potato is a vegetable.\nStep 3: Potato is odd.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-05",
+      "question": "If MOBILE is written as ELIBOM, what is PHONE written as?",
+      "options": [
+        "ENOH P",
+        "EN OHP",
+        "ENOHP",
+        "ENOPH"
+      ],
+      "correctAnswer": "ENOPH",
+      "explanation": "Step 1: MOBILE reversed: E-L-I-B-O-M.\nStep 2: PHONE reversed: E-N-O-H-P.\nStep 3: Correct: ENOPH.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-06",
+      "question": "At what time between 5 and 6 do hands coincide?",
+      "options": [
+        "5:27:16",
+        "5:28",
+        "5:29",
+        "5:30"
+      ],
+      "correctAnswer": "5:27:16",
+      "explanation": "Step 1: Hands coincide when minute catches hour hand.\nStep 2: Between 5-6, approximately at 5:27:16.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-07",
+      "question": "In a line of 250 people, Sita is 75th from front. Position from back?",
+      "options": [
+        "174th",
+        "175th",
+        "176th",
+        "177th"
+      ],
+      "correctAnswer": "176th",
+      "explanation": "Step 1: Position from back = 250 - 75 + 1 = 176.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-08",
+      "question": "Pilot is to Plane as Driver is to?",
+      "options": [
+        "Car",
+        "Road",
+        "Wheel",
+        "Engine"
+      ],
+      "correctAnswer": "Car",
+      "explanation": "Step 1: Pilot flies plane.\nStep 2: Driver drives car.\nStep 3: Operator to vehicle.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-09",
+      "question": "All roses are flowers. Some flowers fade quickly. Therefore?",
+      "options": [
+        "All roses fade quickly",
+        "Some roses fade quickly",
+        "No roses fade quickly",
+        "Flowers are roses"
+      ],
+      "correctAnswer": "Some roses fade quickly",
+      "explanation": "Step 1: All roses are flowers.\nStep 2: Some flowers fade quickly.\nStep 3: Some roses (flowers) may fade quickly.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-REA-10",
+      "question": "Pattern: 5-8, 6-11, 7-14, 8-17, ?",
+      "options": [
+        "9-20",
+        "9-19",
+        "9-21",
+        "10-20"
+      ],
+      "correctAnswer": "9-20",
+      "explanation": "Step 1: First sequence: 5, 6, 7, 8, 9 (+1).\nStep 2: Second sequence: 8, 11, 14, 17, 20 (+3).\nStep 3: Next: 9-20.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "PHONEPE-VER-01",
+      "question": "Opposite of 'Optimistic':",
+      "options": [
+        "Hopeful",
+        "Pessimistic",
+        "Positive",
+        "Confident"
+      ],
+      "correctAnswer": "Pessimistic",
+      "explanation": "Step 1: Optimistic means hopeful.\nStep 2: Pessimistic means expecting bad outcomes.\nStep 3: Opposite of optimistic.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-02",
+      "question": "The team ___ won the championship.",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "has",
+      "explanation": "Step 1: 'Team' is singular.\nStep 2: Takes 'has'.\nStep 3: 'has won' is correct.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-03",
+      "question": "Synonym of 'Meticulous':",
+      "options": [
+        "Careless",
+        "Careful",
+        "Sloppy",
+        "Hasty"
+      ],
+      "correctAnswer": "Careful",
+      "explanation": "Step 1: Meticulous means very careful.\nStep 2: Careful matches.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-04",
+      "question": "Which is correct?",
+      "options": [
+        "Each of the students were given a book.",
+        "Each of the students was given a book.",
+        "All the students were given books.",
+        "Both A and C"
+      ],
+      "correctAnswer": "Each of the students was given a book.",
+      "explanation": "Step 1: 'Each' is singular.\nStep 2: Takes 'was'.\nStep 3: Correct form.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-05",
+      "question": "'Ambiguous' means:",
+      "options": [
+        "Clear",
+        "Uncertain",
+        "Definite",
+        "Obvious"
+      ],
+      "correctAnswer": "Uncertain",
+      "explanation": "Step 1: Ambiguous = open to more than one interpretation.\nStep 2: Uncertain matches.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-06",
+      "question": "Complete: 'He is interested ___ photography.'",
+      "options": [
+        "in",
+        "with",
+        "by",
+        "at"
+      ],
+      "correctAnswer": "in",
+      "explanation": "Step 1: 'Interested in' is the correct phrase.\nStep 2: 'in' is the preposition.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-07",
+      "question": "Convert: 'I will help you,' she said.",
+      "options": [
+        "She said she will help me.",
+        "She said she would help me.",
+        "She said she helps me.",
+        "She said she helped me."
+      ],
+      "correctAnswer": "She said she would help me.",
+      "explanation": "Step 1: Future 'will help' becomes 'would help'.\nStep 2: Backshift in reported speech.\nStep 3: Correct form.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Acommodate",
+        "Accommodate",
+        "Acomodate",
+        "Accomodate"
+      ],
+      "correctAnswer": "Accommodate",
+      "explanation": "Step 1: Common misspelling.\nStep 2: Correct: A-c-c-o-m-m-o-d-a-t-e.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-09",
+      "question": "Similar to 'Concise':",
+      "options": [
+        "Verbose",
+        "Brief",
+        "Wordy",
+        "Lengthy"
+      ],
+      "correctAnswer": "Brief",
+      "explanation": "Step 1: Concise means brief and to the point.\nStep 2: Brief means short.\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    },
+    {
+      "questionId": "PHONEPE-VER-10",
+      "question": "Error: 'The furniture are expensive.'",
+      "options": [
+        "furniture",
+        "are",
+        "expensive",
+        "none"
+      ],
+      "correctAnswer": "are",
+      "explanation": "Step 1: 'Furniture' is singular (uncountable).\nStep 2: Takes 'is' not 'are'.\nStep 3: Should be 'The furniture is expensive.'\nStep 5: This is a strong pattern to revise for PhonePe online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

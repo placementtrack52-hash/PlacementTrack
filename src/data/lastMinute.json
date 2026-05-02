@@ -1,37 +1,87 @@
 [
   {
-    "subject": "aptitude",
+    "subject": "Aptitude",
     "topics": [
       {
-        "name": "number-system",
-        "pdf": "/pdfs/last-minute-aptitude-number.pdf"
-      },
-      {
-        "name": "time-work",
-        "pdf": "/pdfs/last-minute-aptitude-time.pdf"
+        "name": "aptitude last minutes",
+        "pdf": "/pdfs/aptitudelastminutes.pdf"
       }
     ]
   },
   {
-    "subject": "verbal",
+    "subject": "Verbal",
     "topics": [
       {
-        "name": "grammar",
-        "pdf": "/pdfs/last-minute-verbal-grammar.pdf"
-      },
-      {
-        "name": "vocabulary",
-        "pdf": "/pdfs/last-minute-verbal-vocab.pdf"
+        "name": "verbal last minutes",
+        "pdf": "/pdfs/verballastminutes.pdf"
       }
     ]
   },
   {
-    "subject": "reasoning",
+    "subject": "Reasoning",
     "topics": [
       {
-        "name": "logical-reasoning",
-        "pdf": "/pdfs/last-minute-reasoning-logical.pdf"
+        "name": "reasoning last minutes",
+        "pdf": "/pdfs/reasoninglast.pdf"
       }
+    ]
+  },
+  {
+    "subject": "Technical",
+    "topics": [
+      {
+        "name": "Java",
+        "pdf": "/pdfs/java (2).pdf"
+      },
+       {
+        "name": "Python",
+        "pdf": "/pdfs/lpython.pdf"
+      },
+       {
+        "name": "SQL",
+        "pdf": "/pdfs/sql (1).pdf"
+      },
+      {
+        "name": "C",
+        "pdf": "/pdfs/c.pdf"
+      },
+       {
+        "name": "C++",
+        "pdf": "/pdfs/c++.pdf"
+      },
+      {
+        "name": "HTML",
+        "pdf": "/pdfs/html.pdf"
+      },
+      {
+        "name": "CSS",
+        "pdf": "/pdfs/css.pdf"
+      },
+      {
+        "name": "Javascript",
+        "pdf": "/pdfs/javascript.pdf"
+      },
+      {
+        "name": "React js",
+        "pdf": "/pdfs/react.pdf"
+      },
+      {
+        "name": "Mongo DB",
+        "pdf": "/pdfs/mongodb.pdf"
+      },
+      {
+        "name": "Git & Github",
+        "pdf": "/pdfs/git & github.pdf"
+      },
+      {
+        "name": "AWS",
+        "pdf": "/pdfs/aws.pdf"
+      },
+       {
+        "name": "Prompt Engineering",
+        "pdf": "/pdfs/prompt engineering.pdf"
+      }
+     
     ]
   }
 ]

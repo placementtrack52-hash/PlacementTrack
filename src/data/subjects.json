@@ -6,9 +6,171 @@
     "color": "from-amber-200 via-orange-100 to-white",
     "icon": "Sigma",
     "topics": [
-      { "id": "number-system", "name": "Number System",  "estimatedMinutes": 40 },
-      { "id": "percentages", "name": "Percentages",  "estimatedMinutes": 35 },
-      { "id": "profit-loss", "name": "Profit & Loss",  "estimatedMinutes": 30 }
+      {
+        "id": "number-system",
+        "name": "Number System",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "percentage",
+        "name": "Percentages",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "profit-loss",
+        "name": "Profit & Loss",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "hcf-lcm",
+        "name": "HCF & LCM",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "decimal-fraction",
+        "name": "Decimal Fraction",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "simplification",
+        "name": "Simplification",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "square-root-cube-root",
+        "name": "Square Root & Cube Root",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "average",
+        "name": "Average",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "problems-on-number",
+        "name": "Problems on Number",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "problems-on-ages",
+        "name": "Problems on Ages",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "surds-indices",
+        "name": "Surds & Indices",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "ratio-proportion",
+        "name": "Ratio & Proportion",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "partnership",
+        "name": "Partnership",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "chain-rule",
+        "name": "Chain Rule",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "time-work",
+        "name": "Time & Work",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "pipes-and-cistern",
+        "name": "Pipes & Cistern",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "time-and-distance",
+        "name": "Time & Distance",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "problems-on-train",
+        "name": "Problems on Train",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "boats-and-streams",
+        "name": "Boats & Streams",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "alligation-or-mixture",
+        "name": "Alligation or Mixture",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "simple-interest",
+        "name": "Simple Interest",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "compound-interest",
+        "name": "Compound Interest",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "logarithms",
+        "name": "Logarithms",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "area",
+        "name": "Area",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "volume-and-surface-areas",
+        "name": "Volume & Surface Areas",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "races-and-games-of-skill",
+        "name": "Races & Games of Skill",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "calendar",
+        "name": "Calendar",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "clocks",
+        "name": "Clocks",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "stocks-and-shares",
+        "name": "Stocks & Shares",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "permutations-and-combinations",
+        "name": "Permutations & Combinations",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "probability",
+        "name": "Probability",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "heights-and-distance",
+        "name": "Heights & Distance",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "odd-man-out-and-series",
+        "name": "Odd Man Out & Series",
+        "estimatedMinutes": 30
+      }
     ]
   },
   {
@@ -18,9 +180,132 @@
     "color": "from-emerald-200 via-teal-100 to-white",
     "icon": "BookOpen",
     "topics": [
-      { "id": "reading-comprehension", "name": "Reading Comprehension", "difficulty": "Core", "estimatedMinutes": 45 },
-      { "id": "sentence-correction", "name": "Sentence Correction", "difficulty": "Applied", "estimatedMinutes": 30 },
-      { "id": "synonyms-antonyms", "name": "Synonyms & Antonyms", "difficulty": "Scoring", "estimatedMinutes": 25 }
+      {
+        "id": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "difficulty": "Core",
+        "estimatedMinutes": 45
+      },
+      {
+        "id": "sentence-correction",
+        "name": "Sentence Correction",
+        "difficulty": "Applied",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "synonyms-antonyms",
+        "name": "Synonyms & Antonyms",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "tenses",
+        "name": "Tenses",
+        "difficulty": "Core",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "articles",
+        "name": "Articles (a, an, the)",
+        "difficulty": "Applied",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "prepositions",
+        "name": "Prepositions",
+        "difficulty": "Applied",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "subject-verb-agreement",
+        "name": "Subject–Verb Agreement",
+        "difficulty": "Core",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "active-passive-voice",
+        "name": "Active & Passive Voice",
+        "difficulty": "Applied",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "direct-indirect-speech",
+        "name": "Direct & Indirect Speech",
+        "difficulty": "Applied",
+        "estimatedMinutes": 32
+      },
+      {
+        "id": "conjunctions",
+        "name": "Conjunctions",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "modals",
+        "name": "Modals (can, could, should, etc.)",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "synonyms",
+        "name": "Synonyms (same meaning)",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 20
+      },
+      {
+        "id": "antonyms",
+        "name": "Antonyms (opposite meaning)",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 20
+      },
+      {
+        "id": "one-word-substitution",
+        "name": "One-word Substitution",
+        "difficulty": "Applied",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "idioms-phrases",
+        "name": "Idioms & Phrases",
+        "difficulty": "Applied",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "word-meaning",
+        "name": "Word Meaning",
+        "difficulty": "Core",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "para-jumbles",
+        "name": "Para Jumbles",
+        "difficulty": "Applied",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "fill-in-blanks",
+        "name": "Fill in the Blanks",
+        "difficulty": "Core",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "error-detection",
+        "name": "Error Detection",
+        "difficulty": "Applied",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "sentence-completion",
+        "name": "Sentence Completion",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 22
+      },
+      {
+        "id": "cloze-test",
+        "name": "Cloze Test",
+        "difficulty": "Applied",
+        "estimatedMinutes": 35
+      }
     ]
   },
   {
@@ -30,9 +315,312 @@
     "color": "from-sky-200 via-cyan-100 to-white",
     "icon": "Brain",
     "topics": [
-      { "id": "series", "name": "Series", "difficulty": "Core", "estimatedMinutes": 35 },
-      { "id": "coding-decoding", "name": "Coding-Decoding", "difficulty": "Applied", "estimatedMinutes": 30 },
-      { "id": "blood-relations", "name": "Blood Relations", "difficulty": "Scoring", "estimatedMinutes": 28 }
+      {
+        "id": "series",
+        "name": "Series",
+        "difficulty": "Core",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "coding-decoding",
+        "name": "Coding-Decoding",
+        "difficulty": "Applied",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "blood-relations",
+        "name": "Blood Relations",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "direction-sense",
+        "name": "Direction Sense",
+        "difficulty": "Core",
+        "estimatedMinutes": 32
+      },
+      {
+        "id": "alphabet-series",
+        "name": "Alphabet Series",
+        "difficulty": "Applied",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "syllogisms",
+        "name": "Syllogisms",
+        "difficulty": "Core",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "statement-conclusion",
+        "name": "Statement & Conclusion",
+        "difficulty": "Applied",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "statement-assumption",
+        "name": "Statement & Assumption",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "cause-effect",
+        "name": "Cause & Effect",
+        "difficulty": "Applied",
+        "estimatedMinutes": 25
+      },
+      {
+        "id": "data-sufficiency",
+        "name": "Data Sufficiency",
+        "difficulty": "Core",
+        "estimatedMinutes": 38
+      },
+      {
+        "id": "seating-arrangement-linear",
+        "name": "Seating Arrangement (Linear)",
+        "difficulty": "Core",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "seating-arrangement-circular",
+        "name": "Seating Arrangement (Circular)",
+        "difficulty": "Applied",
+        "estimatedMinutes": 42
+      },
+      {
+        "id": "floor-puzzles",
+        "name": "Floor-based Puzzles",
+        "difficulty": "Applied",
+        "estimatedMinutes": 38
+      },
+      {
+        "id": "box-puzzles",
+        "name": "Box-based Puzzles",
+        "difficulty": "Applied",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "scheduling-puzzles",
+        "name": "Scheduling Puzzles",
+        "difficulty": "Core",
+        "estimatedMinutes": 40
+      },
+      {
+        "id": "calendar-clock",
+        "name": "Calendar and Clock",
+        "difficulty": "Applied",
+        "estimatedMinutes": 35
+      },
+      {
+        "id": "decision-making",
+        "name": "Decision Making",
+        "difficulty": "Scoring",
+        "estimatedMinutes": 38
+      },
+      {
+        "id": "visual-reasoning",
+        "name": "Visual Reasoning",
+        "difficulty": "Applied",
+        "estimatedMinutes": 40
+      }
+    ]
+  },
+  {
+    "id": "technical",
+    "name": "Technical",
+    "description": "Practice core programming and database fundamentals topic by topic.",
+    "color": "from-indigo-200 via-blue-100 to-white",
+    "icon": "Code",
+    "topics": [
+      {
+        "id": "python",
+        "name": "Python",
+        "difficulty": "Core",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "c",
+        "name": "C",
+        "difficulty": "Core",
+        "estimatedMinutes": 30
+      },
+      {
+        "id": "cpp",
+        "name": "C++",
+        "difficulty": "Applied",
+        "estimatedMinutes": 32
+      },
+      {
+        "id": "java",
+        "name": "Java",
+        "difficulty": "Core",
+        "estimatedMinutes": 32
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "difficulty": "Applied",
+        "estimatedMinutes": 28
+      },
+      {
+        "id": "dsa",
+        "name": "DSA",
+        "difficulty": "Applied",
+        "estimatedMinutes": 28
+      }
+    ]
+  },
+  {
+    "id": "interview-question",
+    "name": "Interview Question",
+    "description": "Read direct interview questions and answers topic by topic in one scrollable section.",
+    "color": "from-rose-200 via-orange-100 to-white",
+    "icon": "MessageSquareQuote",
+    "topics": [
+      {
+        "id": "java",
+        "name": "Java",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "python",
+        "name": "Python",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "html",
+        "name": "HTML",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "css",
+        "name": "CSS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "js",
+        "name": "JS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "react-js",
+        "name": "React JS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "node-js",
+        "name": "Node JS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "spring-boot",
+        "name": "Spring Boot",
+        "difficulty": "Interview",
+        "estimatedMinutes": 12
+      },
+      {
+        "id": "mongodb",
+        "name": "MongoDB",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "al",
+        "name": "AI",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "dbms",
+        "name": "DBMS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "os",
+        "name": "OS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "mysql",
+        "name": "MySQL",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "c",
+        "name": "C",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "cpp",
+        "name": "C++",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "computer_networks",
+        "name": "Computer Networks",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "git_github",
+        "name": "Git & GitHub",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "express-js",
+        "name": "Express.js",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "next-js",
+        "name": "Next.js",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "angular-js",
+        "name": "Angular JS",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "ci_cd",
+        "name": "CI/CD",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "php",
+        "name": "PHP",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "devops",
+        "name": "DevOps",
+        "difficulty": "Interview",
+        "estimatedMinutes": 10
+      }
     ]
   }
 ]

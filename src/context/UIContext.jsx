@@ -1,18 +1,59 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import { getData, saveData } from '../utils/localStorage'
+import { useAuth } from './AuthContext'
+import { userDataApi } from '../services/api'
 
 const UIContext = createContext(null)
-const THEME_KEY = 'prepMasterTheme'
 
 export const UIProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => getData(THEME_KEY, 'light'))
+  const { isAuthenticated, isHydrating } = useAuth()
+  const [theme, setThemeState] = useState('light')
+
+  useEffect(() => {
+    if (isHydrating) return
+
+    if (!isAuthenticated) {
+      setThemeState('light')
+      return
+    }
+
+    let cancelled = false
+
+    const loadPreferences = async () => {
+      try {
+        const { preferences } = await userDataApi.getPreferences()
+        if (!cancelled) {
+          setThemeState(preferences?.theme ?? 'light')
+        }
+      } catch {
+        if (!cancelled) {
+          setThemeState('light')
+        }
+      }
+    }
+
+    loadPreferences()
+
+    return () => {
+      cancelled = true
+    }
+  }, [isAuthenticated, isHydrating])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark')
-    saveData(THEME_KEY, theme)
   }, [theme])
 
-  const toggleTheme = () => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))
+  const setTheme = (nextTheme) => {
+    setThemeState(nextTheme)
+
+    if (isAuthenticated) {
+      userDataApi.savePreferences({ theme: nextTheme }).catch(() => {})
+    }
+  }
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(nextTheme)
+  }
 
   const value = useMemo(
     () => ({ theme, isDark: theme === 'dark', setTheme, toggleTheme }),

@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "TCS-APT-01",
+      "question": "If 20% of a number is 48, what is the number?",
+      "options": [
+        "180",
+        "220",
+        "240",
+        "260"
+      ],
+      "correctAnswer": "240",
+      "explanation": "Step 1: Let the number be x.\nStep 2: 20% of x means 0.2x.\nStep 3: 0.2x = 48, so x = 48 / 0.2.\nStep 4: x = 240."
+    },
+    {
+      "questionId": "TCS-APT-02",
+      "question": "A train travels 360 km in 4.5 hours. What is its average speed?",
+      "options": [
+        "70 km/h",
+        "75 km/h",
+        "80 km/h",
+        "90 km/h"
+      ],
+      "correctAnswer": "80 km/h",
+      "explanation": "Step 1: Average speed = Distance / Time.\nStep 2: 360 / 4.5 = 80.\nStep 3: The average speed is 80 km/h."
+    },
+    {
+      "questionId": "TCS-APT-03",
+      "question": "What is the simple interest on Rs. 8,000 at 5% per annum for 3 years?",
+      "options": [
+        "Rs. 1,000",
+        "Rs. 1,200",
+        "Rs. 1,400",
+        "Rs. 1,600"
+      ],
+      "correctAnswer": "Rs. 1,200",
+      "explanation": "Step 1: Use SI = (P x R x T) / 100.\nStep 2: Substitute 8000 x 5 x 3.\nStep 3: 8000 x 15 = 120000.\nStep 4: 120000 / 100 = 1200."
+    },
+    {
+      "questionId": "TCS-APT-04",
+      "question": "A sum becomes Rs. 12,100 in 2 years at 10% simple interest. What was the principal?",
+      "options": [
+        "Rs. 10,000",
+        "Rs. 10,500",
+        "Rs. 11,000",
+        "Rs. 11,500"
+      ],
+      "correctAnswer": "Rs. 11,000",
+      "explanation": "Step 1: Amount = Principal + Simple Interest.\nStep 2: 10% for 2 years gives 20% of principal as interest.\nStep 3: Amount = 120% of principal.\nStep 4: Principal = 12100 / 1.2 = 11000."
+    },
+    {
+      "questionId": "TCS-APT-05",
+      "question": "What is 35% of 640?",
+      "options": [
+        "214",
+        "224",
+        "234",
+        "244"
+      ],
+      "correctAnswer": "224",
+      "explanation": "Step 1: 35% means 35/100.\nStep 2: (35/100) x 640 = 35 x 6.4.\nStep 3: 35 x 6.4 = 224."
+    },
+    {
+      "questionId": "TCS-APT-06",
+      "question": "Two numbers are in the ratio 3:5 and their sum is 64. What is the larger number?",
+      "options": [
+        "24",
+        "36",
+        "40",
+        "48"
+      ],
+      "correctAnswer": "40",
+      "explanation": "Step 1: Total parts = 3 + 5 = 8.\nStep 2: One part = 64 / 8 = 8.\nStep 3: Larger number = 5 x 8 = 40."
+    },
+    {
+      "questionId": "TCS-APT-07",
+      "question": "A shopkeeper gives a 10% discount on a Rs. 2,500 item. What is the selling price?",
+      "options": [
+        "Rs. 2,150",
+        "Rs. 2,200",
+        "Rs. 2,250",
+        "Rs. 2,300"
+      ],
+      "correctAnswer": "Rs. 2,250",
+      "explanation": "Step 1: Discount = 10% of 2500 = 250.\nStep 2: Selling price = 2500 - 250.\nStep 3: Selling price = 2250."
+    },
+    {
+      "questionId": "TCS-APT-08",
+      "question": "A man completes a work in 12 days. How much work does he complete in 3 days?",
+      "options": [
+        "1/6",
+        "1/4",
+        "1/3",
+        "1/2"
+      ],
+      "correctAnswer": "1/4",
+      "explanation": "Step 1: One day work = 1/12.\nStep 2: In 3 days, work done = 3/12.\nStep 3: 3/12 simplifies to 1/4."
+    },
+    {
+      "questionId": "TCS-APT-09",
+      "question": "If the cost price of 15 pens is equal to the selling price of 12 pens, what is the profit percentage?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "35%"
+      ],
+      "correctAnswer": "25%",
+      "explanation": "Step 1: Let CP of one pen be 1 unit.\nStep 2: CP of 15 pens = 15 units = SP of 12 pens.\nStep 3: SP of one pen = 15/12 = 1.25 units.\nStep 4: Profit = 0.25 on cost 1, so profit% = 25%."
+    },
+    {
+      "questionId": "TCS-APT-10",
+      "question": "What is the average of 18, 24, 30, 36, and 42?",
+      "options": [
+        "28",
+        "30",
+        "32",
+        "34"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Step 1: Add the numbers: 18 + 24 + 30 + 36 + 42 = 150.\nStep 2: Divide by total count 5.\nStep 3: 150 / 5 = 30."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "TCS-REA-01",
+      "question": "Find the next number in the series: 3, 6, 12, 24, ?",
+      "options": [
+        "36",
+        "42",
+        "48",
+        "54"
+      ],
+      "correctAnswer": "48",
+      "explanation": "Step 1: Each term is multiplied by 2.\nStep 2: 24 x 2 = 48.\nStep 3: The next number is 48."
+    },
+    {
+      "questionId": "TCS-REA-02",
+      "question": "If CAT is coded as DBU, how is DOG coded in the same pattern?",
+      "options": [
+        "EPH",
+        "EPI",
+        "FPH",
+        "FOH"
+      ],
+      "correctAnswer": "EPH",
+      "explanation": "Step 1: Each letter is moved one step forward.\nStep 2: D becomes E, O becomes P, G becomes H.\nStep 3: DOG becomes EPH."
+    },
+    {
+      "questionId": "TCS-REA-03",
+      "question": "Pointing to a boy, Riya said, \"He is the son of my grandfather's only son.\" How is the boy related to Riya?",
+      "options": [
+        "Brother",
+        "Cousin",
+        "Uncle",
+        "Nephew"
+      ],
+      "correctAnswer": "Brother",
+      "explanation": "Step 1: Grandfather's only son is Riya's father.\nStep 2: The boy is the son of Riya's father.\nStep 3: Therefore, the boy is Riya's brother."
+    },
+    {
+      "questionId": "TCS-REA-04",
+      "question": "Choose the odd one out: Square, Rectangle, Triangle, Circle",
+      "options": [
+        "Square",
+        "Rectangle",
+        "Triangle",
+        "Circle"
+      ],
+      "correctAnswer": "Triangle",
+      "explanation": "Step 1: Triangle is the only three-sided figure listed.\nStep 2: The others are not triangles.\nStep 3: Therefore, Triangle is the odd one out."
+    },
+    {
+      "questionId": "TCS-REA-05",
+      "question": "If SOUTH is written as HTUOS, then EAST is written as:",
+      "options": [
+        "TSAE",
+        "TASE",
+        "ETAS",
+        "SAET"
+      ],
+      "correctAnswer": "TSAE",
+      "explanation": "Step 1: SOUTH becomes HTUOS by reversing the letters.\nStep 2: Apply the same rule to EAST.\nStep 3: EAST reversed is TSAE."
+    },
+    {
+      "questionId": "TCS-REA-06",
+      "question": "A clock shows 3:15. What is the angle between the hour and minute hands?",
+      "options": [
+        "0 degrees",
+        "7.5 degrees",
+        "15 degrees",
+        "22.5 degrees"
+      ],
+      "correctAnswer": "7.5 degrees",
+      "explanation": "Step 1: Minute hand at 15 minutes is at 90 degrees.\nStep 2: Hour hand at 3:15 is at 3 x 30 + 15 x 0.5 = 97.5 degrees.\nStep 3: Difference = 97.5 - 90 = 7.5 degrees."
+    },
+    {
+      "questionId": "TCS-REA-07",
+      "question": "In a row of 40 students, Aman is 12th from the left. What is his position from the right?",
+      "options": [
+        "27th",
+        "28th",
+        "29th",
+        "30th"
+      ],
+      "correctAnswer": "29th",
+      "explanation": "Step 1: Position from right = Total students - Position from left + 1.\nStep 2: 40 - 12 + 1 = 29.\nStep 3: Aman is 29th from the right."
+    },
+    {
+      "questionId": "TCS-REA-08",
+      "question": "Which option completes the analogy: Book : Read :: Song : ?",
+      "options": [
+        "Write",
+        "Sing",
+        "Listen",
+        "Dance"
+      ],
+      "correctAnswer": "Listen",
+      "explanation": "Step 1: A book is something we read.\nStep 2: A song is something we listen to.\nStep 3: The best matching relation is Listen."
+    },
+    {
+      "questionId": "TCS-REA-09",
+      "question": "If all pens are pencils and all pencils are boxes, then which statement is definitely true?",
+      "options": [
+        "All boxes are pens",
+        "All pens are boxes",
+        "All pencils are pens",
+        "No pen is a box"
+      ],
+      "correctAnswer": "All pens are boxes",
+      "explanation": "Step 1: Pens are inside the set of pencils.\nStep 2: Pencils are inside the set of boxes.\nStep 3: Therefore, all pens are boxes."
+    },
+    {
+      "questionId": "TCS-REA-10",
+      "question": "Find the missing term: AZ, BY, CX, ?",
+      "options": [
+        "DW",
+        "DV",
+        "EW",
+        "DX"
+      ],
+      "correctAnswer": "DW",
+      "explanation": "Step 1: First letters move forward: A, B, C, D.\nStep 2: Second letters move backward: Z, Y, X, W.\nStep 3: The missing term is DW."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "TCS-VER-01",
+      "question": "Choose the correct synonym of \"Abundant\".",
+      "options": [
+        "Scarce",
+        "Plentiful",
+        "Empty",
+        "Rigid"
+      ],
+      "correctAnswer": "Plentiful",
+      "explanation": "Step 1: Abundant means existing in large quantity.\nStep 2: Plentiful has the same meaning.\nStep 3: So the correct synonym is Plentiful."
+    },
+    {
+      "questionId": "TCS-VER-02",
+      "question": "Select the correctly spelt word.",
+      "options": [
+        "Definately",
+        "Definetly",
+        "Definitely",
+        "Defanatly"
+      ],
+      "correctAnswer": "Definitely",
+      "explanation": "Step 1: Check the standard spelling carefully.\nStep 2: The correct form is D-e-f-i-n-i-t-e-l-y.\nStep 3: Therefore, Definitely is correct."
+    },
+    {
+      "questionId": "TCS-VER-03",
+      "question": "Fill in the blank: She has been working here ___ 2019.",
+      "options": [
+        "for",
+        "from",
+        "since",
+        "by"
+      ],
+      "correctAnswer": "since",
+      "explanation": "Step 1: \"Since\" is used with a specific starting point in time.\nStep 2: 2019 is a fixed point in time.\nStep 3: Therefore, \"since\" is correct."
+    },
+    {
+      "questionId": "TCS-VER-04",
+      "question": "Choose the antonym of \"Expand\".",
+      "options": [
+        "Grow",
+        "Stretch",
+        "Contract",
+        "Increase"
+      ],
+      "correctAnswer": "Contract",
+      "explanation": "Step 1: Expand means to become larger.\nStep 2: The opposite idea is to shrink or contract.\nStep 3: Contract is the antonym."
+    },
+    {
+      "questionId": "TCS-VER-05",
+      "question": "Identify the grammatically correct sentence.",
+      "options": [
+        "Each of the players have a kit.",
+        "Each of the players has a kit.",
+        "Each of the players are having a kit.",
+        "Each of the players were given a kit."
+      ],
+      "correctAnswer": "Each of the players has a kit.",
+      "explanation": "Step 1: \"Each\" is singular.\nStep 2: A singular subject takes a singular verb.\nStep 3: So \"has\" is the correct verb."
+    },
+    {
+      "questionId": "TCS-VER-06",
+      "question": "Choose the word that best fits: The manager appreciated her ___ response to the client issue.",
+      "options": [
+        "prompt",
+        "rough",
+        "silent",
+        "lazy"
+      ],
+      "correctAnswer": "prompt",
+      "explanation": "Step 1: Appreciation usually relates to a helpful quality.\nStep 2: A prompt response means a quick and effective response.\nStep 3: So prompt fits best."
+    },
+    {
+      "questionId": "TCS-VER-07",
+      "question": "Choose the correct indirect form: He said, \"I am busy.\"",
+      "options": [
+        "He said that he was busy.",
+        "He said that I am busy.",
+        "He said that he is busy.",
+        "He told he was busy."
+      ],
+      "correctAnswer": "He said that he was busy.",
+      "explanation": "Step 1: In indirect speech, present tense often shifts back when reporting in the past.\nStep 2: \"I\" changes to \"he\" according to the speaker.\nStep 3: The correct sentence is \"He said that he was busy.\""
+    },
+    {
+      "questionId": "TCS-VER-08",
+      "question": "Pick the option with the correct article usage.",
+      "options": [
+        "She is an university student.",
+        "She is a university student.",
+        "She is the university student.",
+        "She is university student."
+      ],
+      "correctAnswer": "She is a university student.",
+      "explanation": "Step 1: \"University\" starts with a consonant sound \"yu\".\nStep 2: Words with consonant sound take \"a\", not \"an\".\nStep 3: So \"a university student\" is correct."
+    },
+    {
+      "questionId": "TCS-VER-09",
+      "question": "Select the sentence with proper punctuation.",
+      "options": [
+        "If you work hard you will succeed.",
+        "If you work hard, you will succeed.",
+        "If, you work hard you will succeed.",
+        "If you work hard you, will succeed."
+      ],
+      "correctAnswer": "If you work hard, you will succeed.",
+      "explanation": "Step 1: A comma is needed after the introductory dependent clause.\nStep 2: \"If you work hard\" is the clause introducing the main statement.\nStep 3: Therefore the second sentence is correctly punctuated."
+    },
+    {
+      "questionId": "TCS-VER-10",
+      "question": "Choose the best summary word for \"to make something easier to understand\".",
+      "options": [
+        "Clarify",
+        "Complicate",
+        "Ignore",
+        "Refuse"
+      ],
+      "correctAnswer": "Clarify",
+      "explanation": "Step 1: To make something easier to understand means to explain it clearly.\nStep 2: Clarify directly carries that meaning.\nStep 3: Hence, Clarify is correct."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

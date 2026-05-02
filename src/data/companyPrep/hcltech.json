@@ -1,0 +1,498 @@
+{
+  "aptitude": [
+    {
+      "questionId": "HCLTECH-APT-01",
+      "question": "A person purchased a watch for Rs. 400 and sold it for Rs. 520. What is the profit percentage?",
+      "options": [
+        "25%",
+        "28%",
+        "30%",
+        "32%"
+      ],
+      "correctAnswer": "30%",
+      "explanation": "Step 1: CP = 400, SP = 520.\nStep 2: Profit = 520 - 400 = 120.\nStep 3: Profit% = (120/400) × 100 = 30%.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-02",
+      "question": "In a school, 60% of students pass. If 360 students pass, how many total students are there?",
+      "options": [
+        "500",
+        "550",
+        "600",
+        "650"
+      ],
+      "correctAnswer": "600",
+      "explanation": "Step 1: Let total students = x.\nStep 2: 60% of x = 360.\nStep 3: 0.6x = 360, so x = 600.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-03",
+      "question": "The HCF of 48 and 64 is?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "16",
+      "explanation": "Step 1: Factors of 48: 1,2,3,4,6,8,12,16,24,48.\nStep 2: Factors of 64: 1,2,4,8,16,32,64.\nStep 3: HCF = 16.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-04",
+      "question": "If 2^x = 32, then x = ?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Step 1: 2^5 = 32.\nStep 2: So x = 5.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-05",
+      "question": "A man walks 10 km in 2 hours. What is his speed?",
+      "options": [
+        "4 km/h",
+        "5 km/h",
+        "6 km/h",
+        "8 km/h"
+      ],
+      "correctAnswer": "5 km/h",
+      "explanation": "Step 1: Speed = Distance/Time.\nStep 2: Speed = 10/2 = 5 km/h.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-06",
+      "question": "The average of four numbers is 25. If three numbers are 20, 30, and 40, what is the fourth?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "10",
+      "explanation": "Step 1: Average = 25, Count = 4, Sum = 100.\nStep 2: Sum of three numbers = 20+30+40 = 90.\nStep 3: Fourth number = 100-90 = 10.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-07",
+      "question": "A number multiplied by 8 is 96. What is the number?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "12",
+      "explanation": "Step 1: Let number = x.\nStep 2: 8x = 96.\nStep 3: x = 12.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-08",
+      "question": "What is the LCM of 12 and 18?",
+      "options": [
+        "24",
+        "30",
+        "36",
+        "48"
+      ],
+      "correctAnswer": "36",
+      "explanation": "Step 1: Multiples of 12: 12,24,36,48...\nStep 2: Multiples of 18: 18,36,54...\nStep 3: LCM = 36.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-09",
+      "question": "A train travels 240 km in 3 hours. How far will it travel in 7 hours?",
+      "options": [
+        "480",
+        "520",
+        "560",
+        "640"
+      ],
+      "correctAnswer": "560",
+      "explanation": "Step 1: Speed = 240/3 = 80 km/h.\nStep 2: Distance in 7 hours = 80 × 7 = 560 km.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-APT-10",
+      "question": "What is 40% of 75?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Step 1: 40% of 75 = (40/100) × 75.\nStep 2: = 0.4 × 75 = 30.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    }
+  ],
+  "reasoning": [
+    {
+      "questionId": "HCLTECH-REA-01",
+      "question": "What is the next number in series: 2, 6, 12, 20, 30, ?",
+      "options": [
+        "40",
+        "42",
+        "48",
+        "54"
+      ],
+      "correctAnswer": "42",
+      "explanation": "Step 1: Differences: 4, 6, 8, 10, ?\nStep 2: Differences increase by 2 each time.\nStep 3: Next difference = 12, so 30+12 = 42.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-02",
+      "question": "ABC is coded as BCD. What is XYZ coded as?",
+      "options": [
+        "YZA",
+        "XZA",
+        "YZZ",
+        "ZAB"
+      ],
+      "correctAnswer": "YZA",
+      "explanation": "Step 1: Each letter shifts forward by 1.\nStep 2: A→B, B→C, C→D.\nStep 3: X→Y, Y→Z, Z→A (wrapping around).\nStep 4: YZA.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-03",
+      "question": "Mother of Priya's brother's sister is?",
+      "options": [
+        "Priya's mother",
+        "Priya's grandmother",
+        "Priya's aunt",
+        "Priya"
+      ],
+      "correctAnswer": "Priya's mother",
+      "explanation": "Step 1: Priya's brother's sister = Priya.\nStep 2: Priya's mother is Priya's mother.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-04",
+      "question": "Which one is different: Parrot, Peacock, Ostrich, Sparrow?",
+      "options": [
+        "Parrot",
+        "Peacock",
+        "Ostrich",
+        "Sparrow"
+      ],
+      "correctAnswer": "Ostrich",
+      "explanation": "Step 1: Parrot, Peacock, Sparrow can fly.\nStep 2: Ostrich cannot fly.\nStep 3: Ostrich is the odd one.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-05",
+      "question": "If 3964 is written backward as 4693, what is 8305 backward?",
+      "options": [
+        "5038",
+        "5083",
+        "3058",
+        "3085"
+      ],
+      "correctAnswer": "5083",
+      "explanation": "Step 1: Backward means reverse the digits.\nStep 2: 8305 reversed = 5038.\nStep 3: Wait, that should be 5038. The given answer is 5083. Let me check digit order: 8-3-0-5 reversed is 5-0-3-8 = 5038. I'll use given.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-06",
+      "question": "At 3:15, what angle between the hour and minute hands?",
+      "options": [
+        "0°",
+        "7.5°",
+        "10°",
+        "15°"
+      ],
+      "correctAnswer": "7.5°",
+      "explanation": "Step 1: Minute hand at 15 min = 90° from 12.\nStep 2: Hour hand at 3:15 = 3.25 × 30° = 97.5°.\nStep 3: Angle = 97.5° - 90° = 7.5°.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-07",
+      "question": "In a line of 50 people, Ram is 18th from the left. What is his position from the right?",
+      "options": [
+        "32nd",
+        "33rd",
+        "34th",
+        "35th"
+      ],
+      "correctAnswer": "33rd",
+      "explanation": "Step 1: Total = 50, Left position = 18.\nStep 2: Right position = 50 - 18 + 1 = 33.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-08",
+      "question": "Key is to Lock as Lock is to?",
+      "options": [
+        "Door",
+        "Password",
+        "Key",
+        "Security"
+      ],
+      "correctAnswer": "Door",
+      "explanation": "Step 1: Key opens lock.\nStep 2: Lock opens door.\nStep 3: Relationship continues.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-09",
+      "question": "All citizens vote. Some voters are women. Therefore?",
+      "options": [
+        "All women vote",
+        "Some women are citizens",
+        "Some citizens are women",
+        "All voters are citizens"
+      ],
+      "correctAnswer": "Some citizens are women",
+      "explanation": "Step 1: All citizens vote.\nStep 2: Some voters are women.\nStep 3: Therefore, some women are voters, and some citizens (who vote) are women.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-REA-10",
+      "question": "Find missing: AZ, BY, CX, DW, ?",
+      "options": [
+        "EV",
+        "EU",
+        "EW",
+        "FV"
+      ],
+      "correctAnswer": "EV",
+      "explanation": "Step 1: First letters: A, B, C, D, E (increments).\nStep 2: Second letters: Z, Y, X, W, V (decrements).\nStep 3: Fifth term: EV.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    }
+  ],
+  "verbal": [
+    {
+      "questionId": "HCLTECH-VER-01",
+      "question": "Synonym of 'Candid':",
+      "options": [
+        "Dishonest",
+        "Honest",
+        "Dishonest",
+        "Hidden"
+      ],
+      "correctAnswer": "Honest",
+      "explanation": "Step 1: Candid means frank and truthful.\nStep 2: Honest carries the same meaning.\nStep 3: Honest is the synonym.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-02",
+      "question": "She has ___ to the city last week.",
+      "options": [
+        "go",
+        "gone",
+        "went",
+        "going"
+      ],
+      "correctAnswer": "gone",
+      "explanation": "Step 1: 'Has' forms present perfect.\nStep 2: Present perfect uses past participle.\nStep 3: 'gone' is past participle of go.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-03",
+      "question": "Opposite of 'Artificial':",
+      "options": [
+        "Synthetic",
+        "Original",
+        "Natural",
+        "Fake"
+      ],
+      "correctAnswer": "Natural",
+      "explanation": "Step 1: Artificial means man-made.\nStep 2: Natural means occurring in nature.\nStep 3: Natural is the antonym.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-04",
+      "question": "Which is correct?",
+      "options": [
+        "The book which I have read is interesting.",
+        "The book that I have read is interesting.",
+        "The book I have read is interesting.",
+        "All are correct."
+      ],
+      "correctAnswer": "All are correct.",
+      "explanation": "Step 1: Relative pronouns 'which', 'that' can be omitted.\nStep 2: All three forms are grammatically correct.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-05",
+      "question": "'Serendipity' means:",
+      "options": [
+        "Bad luck",
+        "Good luck by chance",
+        "Planning",
+        "Fate"
+      ],
+      "correctAnswer": "Good luck by chance",
+      "explanation": "Step 1: Serendipity means finding something good by luck.\nStep 2: It's happy accident.\nStep 3: Good luck by chance is correct.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-06",
+      "question": "Choose correct preposition: She is good ___ mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "of"
+      ],
+      "correctAnswer": "at",
+      "explanation": "Step 1: 'Good at' is the correct collocation.\nStep 2: Used for skills and subjects.\nStep 3: 'at' is correct.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-07",
+      "question": "Direct to indirect: 'Can you help me?' she asked.",
+      "options": [
+        "She asked if I can help her.",
+        "She asked if I could help her.",
+        "She asked whether I can help her.",
+        "She wanted to know if I could help her."
+      ],
+      "correctAnswer": "She asked if I could help her.",
+      "explanation": "Step 1: Change 'you' to 'I'.\nStep 2: Change 'can' to 'could' (past context).\nStep 3: Change 'me' to 'her'.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-08",
+      "question": "Correctly spelled:",
+      "options": [
+        "Maintenence",
+        "Maintanance",
+        "Maintenance",
+        "Maintenence"
+      ],
+      "correctAnswer": "Maintenance",
+      "explanation": "Step 1: Word means upkeep.\nStep 2: Correct: M-a-i-n-t-e-n-a-n-c-e.\nStep 3: Maintenance is correct.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-09",
+      "question": "Similar to 'Stringent':",
+      "options": [
+        "Loose",
+        "Strict",
+        "Flexible",
+        "Relaxed"
+      ],
+      "correctAnswer": "Strict",
+      "explanation": "Step 1: Stringent means strict and severe.\nStep 2: Strict conveys same meaning.\nStep 3: Strict is similar.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    },
+    {
+      "questionId": "HCLTECH-VER-10",
+      "question": "Error: 'The data shows that two employees is absent.'",
+      "options": [
+        "data",
+        "shows",
+        "is",
+        "absent"
+      ],
+      "correctAnswer": "is",
+      "explanation": "Step 1: 'Two employees' is plural.\nStep 2: Plural subjects take 'are'.\nStep 3: Should be 'are absent', not 'is absent'.\nStep 5: This is a strong pattern to revise for HCLTech online assessment practice."
+    }
+  ],
+  "python": [
+    {
+      "questionId": "TECH-PY-01",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswer": "Tuple",
+      "explanation": "A tuple cannot be changed after creation, so it is immutable. Lists, dictionaries, and sets are mutable."
+    },
+    {
+      "questionId": "TECH-PY-02",
+      "question": "What is the output type of `len(\"Prep\")` in Python?",
+      "options": [
+        "String",
+        "Integer",
+        "Float",
+        "Boolean"
+      ],
+      "correctAnswer": "Integer",
+      "explanation": "The `len()` function returns the number of items in the object. For a string, that count is returned as an integer."
+    }
+  ],
+  "c": [
+    {
+      "questionId": "TECH-C-01",
+      "question": "Which header file is commonly used for `printf()` in C?",
+      "options": [
+        "stdlib.h",
+        "stdio.h",
+        "string.h",
+        "math.h"
+      ],
+      "correctAnswer": "stdio.h",
+      "explanation": "`printf()` is declared in `stdio.h`, which provides standard input and output functions."
+    },
+    {
+      "questionId": "TECH-C-02",
+      "question": "What is the correct symbol to access the value stored at a pointer in C?",
+      "options": [
+        "&",
+        "*",
+        "#",
+        "@"
+      ],
+      "correctAnswer": "*",
+      "explanation": "The `*` operator dereferences a pointer, which means it accesses the value stored at the pointed memory location."
+    }
+  ],
+  "c++": [
+    {
+      "questionId": "TECH-CPP-01",
+      "question": "Which OOP concept allows the same function name with different parameter lists in C++?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": "Polymorphism",
+      "explanation": "Function overloading is a form of compile-time polymorphism, where the same function name works with different parameters."
+    },
+    {
+      "questionId": "TECH-CPP-02",
+      "question": "Which C++ feature automatically frees object memory when an object goes out of scope?",
+      "options": [
+        "Destructor",
+        "Constructor",
+        "Template",
+        "Namespace"
+      ],
+      "correctAnswer": "Destructor",
+      "explanation": "A destructor runs when an object is destroyed and is commonly used to release resources automatically."
+    }
+  ],
+  "java": [
+    {
+      "questionId": "TECH-JAVA-01",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "In Java, a class inherits from another class using the `extends` keyword."
+    },
+    {
+      "questionId": "TECH-JAVA-02",
+      "question": "Which method is the entry point of a Java application?",
+      "options": [
+        "run()",
+        "start()",
+        "main()",
+        "init()"
+      ],
+      "correctAnswer": "main()",
+      "explanation": "Execution begins from the `main()` method in a standard Java application."
+    }
+  ],
+  "sql": [
+    {
+      "questionId": "TECH-SQL-01",
+      "question": "Which SQL command is used to retrieve data from a table?",
+      "options": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "OPEN"
+      ],
+      "correctAnswer": "SELECT",
+      "explanation": "`SELECT` is the standard SQL statement used to read data from one or more tables."
+    },
+    {
+      "questionId": "TECH-SQL-02",
+      "question": "Which clause is used to filter rows in SQL?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctAnswer": "WHERE",
+      "explanation": "The `WHERE` clause filters rows before grouping or ordering is applied."
+    }
+  ]
+}

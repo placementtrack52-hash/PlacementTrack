@@ -35,6 +35,10 @@ const SubjectTopicsPage = () => {
         {subject.topics.map((topic) => {
           const topicKey = `${subject.id}:${topic.id}`
           const quizProgress = Object.keys(progress.quizResults[topicKey] ?? {}).length
+          const progressText =
+            subject.id === 'interview-question'
+              ? 'Question and answer set'
+              : `Quiz progress: ${quizProgress}/3 levels`
 
           return (
             <TopicCard
@@ -43,6 +47,7 @@ const SubjectTopicsPage = () => {
               subjectId={subject.id}
               completed={Boolean(progress.completedTopics[topicKey])}
               quizProgress={quizProgress}
+              progressText={progressText}
               onToggle={(checked) => toggleTopicCompletion(topicKey, checked)}
             />
           )

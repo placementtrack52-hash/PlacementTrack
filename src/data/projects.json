@@ -1,0 +1,818 @@
+[
+  {
+    "id": "1",
+    "title": "Student Result Management System",
+    "difficulty": "Beginner",
+    "techStack": ["HTML", "CSS", "JavaScript", "MySQL"],
+    "category": "Web",
+    "domain": "EdTech",
+    "timeToComplete": "3–4 days",
+    "resumeWorthy": false,
+    "description": "A system to manage student results where admin can add marks, calculate grades, and generate result reports per semester.",
+    "features": ["Add/edit student marks subject-wise", "Auto-calculate grade and percentage", "Generate printable result card", "Admin login with authentication"],
+    "whatYouWillLearn": ["CRUD operations", "Database design", "Basic authentication", "Report generation"],
+    "steps": [
+      "Design the DB schema — students, subjects, marks, and grades tables",
+      "Build the admin login page with session-based authentication",
+      "Create the marks entry form with subject-wise input fields",
+      "Write grade calculation logic based on percentage ranges (A, B, C, D, F)",
+      "Build the result view page with a clean printable layout",
+      "Test with sample data and handle edge cases like absent/zero marks"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Library Management System",
+    "difficulty": "Beginner",
+    "techStack": ["Java", "MySQL", "Swing / JavaFX"],
+    "category": "Desktop",
+    "domain": "EdTech",
+    "timeToComplete": "4–5 days",
+    "resumeWorthy": false,
+    "description": "A desktop application to manage book inventory, issue/return tracking, and fine calculation for a library.",
+    "features": ["Book add/remove/search", "Issue & return books to students", "Fine calculation for late returns", "Member registration"],
+    "whatYouWillLearn": ["OOP concepts", "Database connectivity (JDBC)", "GUI development", "File handling"],
+    "steps": [
+      "Design DB schema — books, members, issued_books, fines tables",
+      "Build the member registration and search functionality",
+      "Implement book add, remove, and search features",
+      "Create the issue & return flow with date tracking",
+      "Write fine calculation logic for overdue returns",
+      "Test with realistic data and generate monthly reports"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "E-Commerce Website",
+    "difficulty": "Intermediate",
+    "techStack": ["React", "Node.js", "Express", "MongoDB"],
+    "category": "Web",
+    "domain": "E-Commerce",
+    "timeToComplete": "2–3 weeks",
+    "resumeWorthy": true,
+    "description": "A full-stack e-commerce platform with product listings, cart, checkout, and order management.",
+    "features": ["Product catalog with search & filter", "Shopping cart and checkout", "User authentication (login/signup)", "Order history and tracking", "Admin panel for product management"],
+    "whatYouWillLearn": ["REST API design", "State management", "Payment gateway integration", "JWT authentication"],
+    "steps": [
+      "Plan the app architecture — routes, DB models, and API structure",
+      "Build user auth with JWT — signup, login, and protected routes",
+      "Create product catalog APIs with MongoDB and connect to React frontend",
+      "Build the shopping cart with state management (Redux or Context API)",
+      "Integrate Stripe payment gateway and send order confirmation emails",
+      "Build the admin panel for product CRUD and order management",
+      "Deploy frontend on Vercel and backend on Render"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Chat Application",
+    "difficulty": "Intermediate",
+    "techStack": ["React", "Node.js", "Socket.IO", "MongoDB"],
+    "category": "Web",
+    "domain": "Communication",
+    "timeToComplete": "1–2 weeks",
+    "resumeWorthy": true,
+    "description": "A real-time chat app supporting private and group chats with message history and online status.",
+    "features": ["Real-time messaging with WebSockets", "Private & group chat rooms", "Online/offline status indicators", "Message history with pagination", "File/image sharing"],
+    "whatYouWillLearn": ["WebSockets / Socket.IO", "Real-time architecture", "NoSQL database", "Authentication & sessions"],
+    "steps": [
+      "Set up Node.js + Express backend and integrate Socket.IO",
+      "Design MongoDB schema — users, chat rooms, and messages collections",
+      "Build user auth with JWT and socket authentication middleware",
+      "Implement private messaging and group room join/leave events",
+      "Build the React chat UI — message bubbles, online status, typing indicator",
+      "Add message history with infinite scroll pagination",
+      "Deploy and test with multiple browser sessions simultaneously"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Expense Tracker",
+    "difficulty": "Beginner",
+    "techStack": ["React", "LocalStorage / Firebase"],
+    "category": "Web",
+    "domain": "FinTech",
+    "timeToComplete": "2–3 days",
+    "resumeWorthy": false,
+    "description": "A personal finance tracker to log daily expenses, categorize spending, and visualize monthly trends.",
+    "features": ["Add/edit/delete expense entries", "Category-wise grouping", "Monthly summary charts", "Budget limit alerts"],
+    "whatYouWillLearn": ["React hooks", "Chart libraries (Chart.js / Recharts)", "LocalStorage / Cloud storage", "Data visualization"],
+    "steps": [
+      "Design the data model — expense categories, amounts, and dates",
+      "Build the add/edit/delete expense form in React with validation",
+      "Group and filter expenses by category and month",
+      "Integrate Recharts or Chart.js for monthly trend bar/pie charts",
+      "Add budget limit alerts with conditional color-coded warnings",
+      "Connect to Firebase Firestore or use LocalStorage for persistence"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Online Quiz Platform",
+    "difficulty": "Intermediate",
+    "techStack": ["React", "Node.js", "MongoDB", "Express"],
+    "category": "Web",
+    "domain": "EdTech",
+    "timeToComplete": "1–2 weeks",
+    "resumeWorthy": true,
+    "description": "A platform where teachers create quizzes and students attempt them with scoring and leaderboard.",
+    "features": ["Quiz creation with MCQ support", "Timed quiz attempts", "Auto-scoring and result display", "Leaderboard per quiz", "Admin dashboard for quiz management"],
+    "whatYouWillLearn": ["Role-based access control", "Timer logic", "REST APIs", "Score calculation algorithms"],
+    "steps": [
+      "Design DB schema — users, quizzes, questions, attempts, and scores",
+      "Build role-based auth — teacher and student accounts",
+      "Create the quiz builder for teachers — add questions, options, correct answers",
+      "Build the timed quiz attempt page with countdown timer in React",
+      "Implement auto-scoring and instant result display after submission",
+      "Add a per-quiz leaderboard and teacher analytics dashboard"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Attendance Management System",
+    "difficulty": "Beginner",
+    "techStack": ["PHP", "MySQL", "HTML/CSS"],
+    "category": "Web",
+    "domain": "EdTech",
+    "timeToComplete": "3–4 days",
+    "resumeWorthy": false,
+    "description": "A web app for faculty to mark and track student attendance subject-wise with monthly reports.",
+    "features": ["Mark attendance date-wise", "Subject-wise attendance reports", "Shortage alert (below 75%)", "Student attendance view"],
+    "whatYouWillLearn": ["Server-side scripting", "Database queries", "Session management", "Report generation"],
+    "steps": [
+      "Design DB schema — students, subjects, faculty, and attendance records",
+      "Build faculty login with role-based session management",
+      "Create attendance marking form — date-wise, subject-wise input grid",
+      "Calculate attendance percentage per student per subject",
+      "Add shortage alerts — highlight students below 75% in red",
+      "Build student-facing view to see their own attendance history"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Food Delivery App",
+    "difficulty": "Advanced",
+    "techStack": ["React Native", "Node.js", "MongoDB", "Stripe"],
+    "category": "Mobile",
+    "domain": "FoodTech",
+    "timeToComplete": "3–4 weeks",
+    "resumeWorthy": true,
+    "similarTo": "Swiggy, Zomato",
+    "description": "A mobile food delivery application like Zomato/Swiggy with restaurant listings, cart, and order tracking.",
+    "features": ["Browse restaurants & menus", "Cart and checkout with payment", "Real-time order status tracking", "Ratings and reviews", "Delivery person tracking on map"],
+    "whatYouWillLearn": ["Mobile app development", "Maps & Geolocation", "Payment integration", "Real-time updates", "Microservices"],
+    "steps": [
+      "Plan the architecture — user, restaurant, order, and delivery modules",
+      "Design MongoDB schema for restaurants, menus, orders, and delivery agents",
+      "Build restaurant listing with location-based search and filters",
+      "Implement cart, checkout flow, and Stripe payment integration",
+      "Add real-time order status tracking with Socket.IO events",
+      "Integrate Google Maps API for delivery agent live tracking",
+      "Add ratings, reviews system, and push notification support"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Hospital Management System",
+    "difficulty": "Advanced",
+    "techStack": ["React", "Node.js", "Express", "PostgreSQL"],
+    "category": "Web",
+    "domain": "HealthTech",
+    "timeToComplete": "3–4 weeks",
+    "resumeWorthy": true,
+    "description": "A comprehensive system for managing patients, doctors, appointments, billing, and medical records.",
+    "features": ["Patient registration and records", "Doctor appointment scheduling", "OPD & IPD management", "Billing & invoice generation", "Medicine inventory management"],
+    "whatYouWillLearn": ["Complex database design", "Multi-role access", "Scheduling algorithms", "PDF generation", "Advanced REST APIs"],
+    "steps": [
+      "Design complex DB schema — patients, doctors, appointments, billing, medicines",
+      "Build multi-role auth — admin, doctor, receptionist, and patient roles",
+      "Implement patient registration and complete medical record management",
+      "Build appointment scheduling with conflict detection and availability slots",
+      "Create OPD/IPD management module with bed tracking",
+      "Add billing system with automated invoice PDF generation",
+      "Build medicine inventory with expiry tracking and low-stock alerts"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Job Portal",
+    "difficulty": "Intermediate",
+    "techStack": ["React", "Node.js", "MongoDB", "Cloudinary"],
+    "category": "Web",
+    "domain": "HRTech",
+    "timeToComplete": "2–3 weeks",
+    "resumeWorthy": true,
+    "similarTo": "LinkedIn, Indeed, Naukri",
+    "description": "A job board where companies post jobs and candidates apply with resume upload and tracking.",
+    "features": ["Company profile & job posting", "Job search with filters (location, salary, role)", "Resume upload and profile creation", "Application tracking for candidates", "Admin moderation panel"],
+    "whatYouWillLearn": ["File uploads (Cloudinary)", "Advanced search & filters", "Email notifications", "Role-based auth", "PDF resume parsing"],
+    "steps": [
+      "Design DB schema — companies, jobs, candidates, and applications",
+      "Build dual authentication — company accounts and candidate accounts",
+      "Create job posting interface with rich text description for companies",
+      "Build job search with filters — location, salary range, job type, skills",
+      "Implement resume PDF upload using Cloudinary and candidate profile builder",
+      "Add application tracking dashboard for candidates",
+      "Build company-side applicant management and admin moderation panel"
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Blog / Content Platform",
+    "difficulty": "Beginner",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "category": "Web",
+    "domain": "Content",
+    "timeToComplete": "1 week",
+    "resumeWorthy": false,
+    "description": "A blogging platform where users can write, publish, and read articles with likes and comments.",
+    "features": ["Rich text editor for writing", "Publish/draft/delete posts", "Like, comment, and share", "Tag-based categorization", "User follow system"],
+    "whatYouWillLearn": ["Rich text editing (Quill/TipTap)", "CRUD with MongoDB", "Social features", "SEO basics"],
+    "steps": [
+      "Set up Node.js + Express backend and MongoDB for posts, users, comments",
+      "Build user auth — signup, login, and editable profile page",
+      "Integrate a rich text editor (Quill or TipTap) for writing posts",
+      "Create publish, save as draft, and delete post functionality",
+      "Add likes, comments, and tag-based post categorization",
+      "Implement a user follow system and personalized feed"
+    ]
+  },
+  {
+    "id": "12",
+    "title": "URL Shortener",
+    "difficulty": "Beginner",
+    "techStack": ["Node.js", "Express", "MongoDB", "React"],
+    "category": "Web",
+    "domain": "SaaS Tools",
+    "timeToComplete": "2–3 days",
+    "resumeWorthy": false,
+    "description": "A service to shorten long URLs with click tracking, expiry, and QR code generation.",
+    "features": ["Shorten any URL with custom alias", "Click analytics dashboard", "QR code generation", "URL expiry settings", "User account to manage links"],
+    "whatYouWillLearn": ["Hashing & short ID generation", "Redirect logic", "Analytics", "QR code libraries"],
+    "steps": [
+      "Design DB schema — original URLs, short codes, click counts, and expiry",
+      "Generate short unique IDs using nanoid and store URL mappings",
+      "Build the redirect logic — short URL lookup and 301/302 redirect",
+      "Track click analytics — timestamp, device type, and browser info",
+      "Create an analytics dashboard with chart visualization per link",
+      "Add QR code generation using a QR library and URL expiry settings"
+    ]
+  },
+  {
+  "id": "13",
+  "title": "AI Meeting Notes Summarizer",
+  "difficulty": "Intermediate",
+  "techStack": ["Node.js", "Express", "OpenAI API", "React", "MongoDB"],
+  "category": "Web",
+  "domain": "Productivity SaaS",
+  "timeToComplete": "4–6 days",
+  "resumeWorthy": true,
+  "description": "Upload or record meeting audio and automatically generate summarized notes, action items, and decisions.",
+  "features": [
+    "Upload audio or record meeting",
+    "Speech-to-text transcription",
+    "AI-generated summary and action points",
+    "Searchable meeting history",
+    "Export notes as PDF"
+  ],
+  "whatYouWillLearn": [
+    "Speech-to-text APIs",
+    "Prompt engineering",
+    "Text summarization",
+    "File handling",
+    "Real-time processing"
+  ],
+  "steps": [
+    "Build file/audio upload system",
+    "Convert speech to text using API",
+    "Send transcript to AI for summarization",
+    "Store results in DB",
+    "Create UI for viewing/searching notes"
+  ]
+},
+{
+  "id": "14",
+  "title": "Developer Portfolio Analyzer",
+  "difficulty": "Intermediate",
+  "techStack": ["React", "Node.js", "Express", "OpenAI API"],
+  "category": "Web",
+  "domain": "Career Tools",
+  "timeToComplete": "3–5 days",
+  "resumeWorthy": true,
+  "description": "Analyze GitHub or portfolio links and provide suggestions to improve projects, resume, and skills.",
+  "features": [
+    "GitHub profile analyzer",
+    "Project quality scoring",
+    "Resume improvement suggestions",
+    "Skill gap detection",
+    "AI feedback report"
+  ],
+  "whatYouWillLearn": [
+    "GitHub API integration",
+    "AI evaluation systems",
+    "Data parsing",
+    "Scoring algorithms"
+  ],
+  "steps": [
+    "Fetch GitHub data using API",
+    "Analyze repos (stars, commits, tech stack)",
+    "Send data to AI for feedback",
+    "Display improvement suggestions",
+    "Build scoring dashboard"
+  ]
+},
+{
+  "id": "15",
+  "title": "Smart Subscription Tracker",
+  "difficulty": "Beginner-Intermediate",
+  "techStack": ["React", "Node.js", "MongoDB"],
+  "category": "Web",
+  "domain": "FinTech",
+  "timeToComplete": "3–4 days",
+  "resumeWorthy": true,
+  "description": "Track all your subscriptions and get alerts before billing with spending insights.",
+  "features": [
+    "Add and manage subscriptions",
+    "Monthly cost calculation",
+    "Renewal reminders",
+    "Category-wise spending insights",
+    "Email notifications"
+  ],
+  "whatYouWillLearn": [
+    "Date handling",
+    "Cron jobs",
+    "Notification systems",
+    "Data aggregation"
+  ],
+  "steps": [
+    "Design subscription schema",
+    "Create add/edit UI",
+    "Implement reminder system",
+    "Calculate monthly expenses",
+    "Send email alerts"
+  ]
+},
+{
+  "id": "16",
+  "title": "AI Cold Email Generator",
+  "difficulty": "Beginner",
+  "techStack": ["React", "Node.js", "OpenAI API"],
+  "category": "Web",
+  "domain": "Career SaaS",
+  "timeToComplete": "2–3 days",
+  "resumeWorthy": true,
+  "description": "Generate personalized cold emails for internships, jobs, or networking using AI.",
+  "features": [
+    "Input role, company, and skills",
+    "Generate personalized email",
+    "Tone selection (formal, friendly)",
+    "Save templates",
+    "Copy/export emails"
+  ],
+  "whatYouWillLearn": [
+    "Prompt engineering",
+    "Form handling",
+    "User experience design"
+  ],
+  "steps": [
+    "Create input form",
+    "Send prompt to AI API",
+    "Generate email output",
+    "Allow editing and saving",
+    "Add export/copy functionality"
+  ]
+},
+{
+  "id": "17",
+  "title": "Second Brain Knowledge Manager",
+  "difficulty": "Intermediate",
+  "techStack": ["React", "Node.js", "MongoDB"],
+  "category": "Web",
+  "domain": "Productivity",
+  "timeToComplete": "5–7 days",
+  "resumeWorthy": true,
+  "description": "Save, tag, and organize knowledge like links, notes, tweets, and ideas with smart search.",
+  "features": [
+    "Save links, notes, and snippets",
+    "Tagging system",
+    "Full-text search",
+    "Bookmark import",
+    "Smart suggestions"
+  ],
+  "whatYouWillLearn": [
+    "Search indexing",
+    "CRUD operations",
+    "State management",
+    "Data organization"
+  ],
+  "steps": [
+    "Design note schema",
+    "Create CRUD APIs",
+    "Implement tagging system",
+    "Add search functionality",
+    "Build responsive UI"
+  ]
+},
+{
+  "id": "18",
+  "title": "Fake API Generator",
+  "difficulty": "Intermediate",
+  "techStack": ["Node.js", "Express", "React"],
+  "category": "Developer Tool",
+  "domain": "SaaS Tools",
+  "timeToComplete": "4–5 days",
+  "resumeWorthy": true,
+  "description": "Generate mock REST APIs with custom JSON responses for frontend development and testing.",
+  "features": [
+    "Create custom endpoints",
+    "Define JSON responses",
+    "Set delay and status codes",
+    "Public API links",
+    "Dashboard for managing APIs"
+  ],
+  "whatYouWillLearn": [
+    "Dynamic routing",
+    "API design",
+    "JSON handling",
+    "Backend architecture"
+  ],
+  "steps": [
+    "Create API schema storage",
+    "Build dynamic route generator",
+    "Store user-defined responses",
+    "Serve endpoints dynamically",
+    "Create dashboard UI"
+  ]
+},
+{
+  "id": "19",
+  "title": "AI Code Explainer",
+  "difficulty": "Beginner",
+  "techStack": ["React", "Node.js", "OpenAI API"],
+  "category": "Developer Tool",
+  "domain": "EdTech",
+  "timeToComplete": "2–3 days",
+  "resumeWorthy": true,
+  "description": "Paste code and get simple explanations, flow breakdown, and improvements.",
+  "features": [
+    "Paste code input",
+    "Line-by-line explanation",
+    "Complexity analysis",
+    "Bug detection suggestions",
+    "Multi-language support"
+  ],
+  "whatYouWillLearn": [
+    "Prompt engineering",
+    "Code parsing",
+    "UX for developers"
+  ],
+  "steps": [
+    "Create code input UI",
+    "Send code to AI API",
+    "Display structured explanation",
+    "Add improvements section",
+    "Support multiple languages"
+  ]
+},
+{
+  "id": "20",
+  "title": "Distributed Job Queue System",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Redis", "Express", "Docker"],
+  "category": "Backend System",
+  "domain": "Infrastructure",
+  "timeToComplete": "7–10 days",
+  "resumeWorthy": true,
+  "description": "A scalable background job processing system for handling asynchronous tasks like emails, notifications, and file processing.",
+  "features": [
+    "Queue creation and job scheduling",
+    "Retry and failure handling",
+    "Worker scaling (multi-instance)",
+    "Priority queues",
+    "Monitoring dashboard"
+  ],
+  "whatYouWillLearn": [
+    "Distributed systems",
+    "Message queues",
+    "Concurrency handling",
+    "System reliability"
+  ],
+  "steps": [
+    "Design job schema and queue structure",
+    "Integrate Redis for queue management",
+    "Build worker system to process jobs",
+    "Implement retry and backoff strategy",
+    "Create monitoring dashboard"
+  ]
+},
+{
+  "id": "21",
+  "title": "Real-Time Collaborative Code Editor",
+  "difficulty": "Advanced",
+  "techStack": ["React", "Node.js", "WebSockets", "CRDT/Yjs"],
+  "category": "Web",
+  "domain": "Developer Tools",
+  "timeToComplete": "10–14 days",
+  "resumeWorthy": true,
+  "description": "A collaborative coding platform where multiple users can edit code in real-time with conflict-free synchronization.",
+  "features": [
+    "Real-time multi-user editing",
+    "Conflict resolution using CRDT",
+    "Cursor presence tracking",
+    "Code execution sandbox",
+    "Room-based collaboration"
+  ],
+  "whatYouWillLearn": [
+    "WebSockets",
+    "CRDT algorithms",
+    "Real-time sync",
+    "Concurrency issues"
+  ],
+  "steps": [
+    "Set up WebSocket server",
+    "Implement CRDT for document sync",
+    "Build editor UI with Monaco",
+    "Add multi-user cursor tracking",
+    "Integrate code execution sandbox"
+  ]
+},
+{
+  "id": "22",
+  "title": "API Rate Limiter & Gateway",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Redis", "Nginx", "Docker"],
+  "category": "Backend",
+  "domain": "Infrastructure",
+  "timeToComplete": "7–9 days",
+  "resumeWorthy": true,
+  "description": "A middleware system that manages API traffic, rate limits requests, and acts as a gateway for microservices.",
+  "features": [
+    "Rate limiting (IP/user आधारित)",
+    "Token bucket / sliding window algorithms",
+    "API key management",
+    "Request logging",
+    "Load balancing basics"
+  ],
+  "whatYouWillLearn": [
+    "System design",
+    "Traffic control",
+    "Caching with Redis",
+    "API security"
+  ],
+  "steps": [
+    "Implement rate limiting algorithm",
+    "Store request counters in Redis",
+    "Build middleware for request filtering",
+    "Add API key validation",
+    "Log and monitor traffic"
+  ]
+},
+{
+  "id": "23",
+  "title": "Event-Driven Microservices Platform",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Kafka", "Docker", "MongoDB"],
+  "category": "Backend",
+  "domain": "Distributed Systems",
+  "timeToComplete": "10–15 days",
+  "resumeWorthy": true,
+  "description": "A microservices-based system where services communicate asynchronously using events.",
+  "features": [
+    "Event producers and consumers",
+    "Service decoupling",
+    "Retry & dead-letter queues",
+    "Event logging",
+    "Scalable architecture"
+  ],
+  "whatYouWillLearn": [
+    "Event-driven architecture",
+    "Message brokers",
+    "System decoupling",
+    "Fault tolerance"
+  ],
+  "steps": [
+    "Set up Kafka cluster",
+    "Create producer service",
+    "Build consumer services",
+    "Handle retries and failures",
+    "Visualize event flow"
+  ]
+},
+{
+  "id": "24",
+  "title": "Custom Full-Text Search Engine",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "TypeScript", "MongoDB", "Redis"],
+  "category": "Backend",
+  "domain": "Search Systems",
+  "timeToComplete": "8–12 days",
+  "resumeWorthy": true,
+  "description": "Build a search engine that indexes data and provides fast, relevant search results with ranking.",
+  "features": [
+    "Inverted index creation",
+    "Tokenization & stemming",
+    "Ranking algorithm (TF-IDF)",
+    "Autocomplete suggestions",
+    "Search filters"
+  ],
+  "whatYouWillLearn": [
+    "Search algorithms",
+    "Indexing techniques",
+    "Performance optimization",
+    "Data structures"
+  ],
+  "steps": [
+    "Parse and tokenize documents",
+    "Build inverted index",
+    "Implement ranking algorithm",
+    "Add query parser",
+    "Optimize search performance"
+  ]
+},
+{
+  "id": "25",
+  "title": "Feature Flag Management System",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "React", "Redis", "PostgreSQL"],
+  "category": "Backend + Web",
+  "domain": "DevOps Tools",
+  "timeToComplete": "7–10 days",
+  "resumeWorthy": true,
+  "description": "Control feature rollouts dynamically without redeploying code.",
+  "features": [
+    "Enable/disable features in real-time",
+    "User-based targeting",
+    "A/B testing support",
+    "Rollout percentage control",
+    "Dashboard UI"
+  ],
+  "whatYouWillLearn": [
+    "Experimentation systems",
+    "Backend control layers",
+    "Caching strategies",
+    "Real-world deployment practices"
+  ],
+  "steps": [
+    "Design flag schema",
+    "Build evaluation engine",
+    "Implement targeting logic",
+    "Add caching layer",
+    "Create admin dashboard"
+  ]
+},
+{
+  "id": "26",
+  "title": "Observability Platform",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "ElasticSearch", "Kibana", "Docker"],
+  "category": "DevOps",
+  "domain": "Monitoring",
+  "timeToComplete": "10–14 days",
+  "resumeWorthy": true,
+  "description": "Centralized system to collect logs, metrics, and alerts from applications.",
+  "features": [
+    "Log aggregation",
+    "Metrics tracking",
+    "Alerting system",
+    "Searchable logs",
+    "Dashboard visualization"
+  ],
+  "whatYouWillLearn": [
+    "Monitoring systems",
+    "Log pipelines",
+    "Alerting strategies",
+    "DevOps practices"
+  ],
+  "steps": [
+    "Set up log ingestion pipeline",
+    "Store logs in Elasticsearch",
+    "Create dashboards in Kibana",
+    "Implement alert system",
+    "Connect apps to logging service"
+  ]
+},
+{
+  "id": "27",
+  "title": "Distributed Job Queue System (Production-Grade)",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Redis", "Docker", "Express"],
+  "category": "Backend System",
+  "domain": "Infrastructure",
+  "timeToComplete": "10–12 days",
+  "resumeWorthy": true,
+  "description": "A scalable job processing system handling background tasks with retries, prioritization, and distributed workers.",
+  "features": [
+    "Multiple queues with priority levels",
+    "Retry with exponential backoff",
+    "Dead-letter queue for failures",
+    "Distributed workers (horizontal scaling)",
+    "Real-time monitoring dashboard"
+  ],
+  "whatYouWillLearn": [
+    "Concurrency & parallelism",
+    "Distributed architecture",
+    "Failure handling",
+    "Queue design patterns"
+  ],
+  "steps": [
+    "Design queue + job schema",
+    "Implement Redis-based queue system",
+    "Build worker service",
+    "Add retry + failure handling",
+    "Create dashboard with real-time stats"
+  ]
+},
+{
+  "id": "28",
+  "title": "Real-Time Collaborative Code Editor",
+  "difficulty": "Advanced",
+  "techStack": ["React", "Node.js", "WebSockets", "Yjs/CRDT"],
+  "category": "Web",
+  "domain": "Developer Tools",
+  "timeToComplete": "12–15 days",
+  "resumeWorthy": true,
+  "description": "A Google Docs–like coding platform with real-time synchronization and conflict resolution.",
+  "features": [
+    "Multi-user real-time editing",
+    "Conflict-free sync using CRDT",
+    "Live cursor tracking",
+    "Code execution sandbox",
+    "Room-based sessions"
+  ],
+  "whatYouWillLearn": [
+    "CRDT vs OT algorithms",
+    "WebSockets",
+    "Real-time systems",
+    "Concurrency challenges"
+  ],
+  "steps": [
+    "Set up WebSocket server",
+    "Integrate CRDT library",
+    "Build editor UI",
+    "Add presence tracking",
+    "Implement code execution"
+  ]
+},
+{
+  "id": "29",
+  "title": "API Gateway with Rate Limiting & Authentication",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Redis", "Nginx", "Docker"],
+  "category": "Backend",
+  "domain": "Infrastructure",
+  "timeToComplete": "8–10 days",
+  "resumeWorthy": true,
+  "description": "A central gateway that manages API traffic, authentication, and rate limiting across services.",
+  "features": [
+    "Token bucket / sliding window rate limiting",
+    "API key authentication",
+    "Request logging & analytics",
+    "Service routing",
+    "Basic load balancing"
+  ],
+  "whatYouWillLearn": [
+    "Traffic management",
+    "API security",
+    "Caching strategies",
+    "Middleware architecture"
+  ],
+  "steps": [
+    "Build rate limiting logic",
+    "Store counters in Redis",
+    "Create gateway middleware",
+    "Implement API authentication",
+    "Route requests to services"
+  ]
+},
+{
+  "id": "30",
+  "title": "Event-Driven Microservices Platform",
+  "difficulty": "Advanced",
+  "techStack": ["Node.js", "Kafka", "Docker", "MongoDB"],
+  "category": "Backend",
+  "domain": "Distributed Systems",
+  "timeToComplete": "12–15 days",
+  "resumeWorthy": true,
+  "description": "A microservices architecture using event-driven communication with Kafka.",
+  "features": [
+    "Event producers and consumers",
+    "Async communication between services",
+    "Retry + dead-letter queues",
+    "Service decoupling",
+    "Event logging dashboard"
+  ],
+  "whatYouWillLearn": [
+    "Event-driven architecture",
+    "Kafka fundamentals",
+    "Fault tolerance",
+    "System scalability"
+  ],
+  "steps": [
+    "Set up Kafka",
+    "Build producer service",
+    "Create multiple consumers",
+    "Handle failures + retries",
+    "Visualize event flow"
+  ]
+}
+]

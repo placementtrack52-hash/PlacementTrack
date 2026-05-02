@@ -2,7 +2,7 @@
   {
     "type": "frontend",
     "title": "Frontend Developer",
-    "pdf": "/pdfs/frontend.pdf"
+    "pdf": "/pdfs/Frontend.pdf"
   },
   {
     "type": "backend",
@@ -12,6 +12,111 @@
   {
     "type": "java",
     "title": "Java Developer",
-    "pdf": "/pdfs/java.pdf"
+    "pdf": "/pdfs/java_roadmap.pdf"
+  },
+   {
+    "type": "devops",
+    "title": "Devops",
+    "pdf": "/pdfs/devops_roadmaps.pdf"
+  },
+   {
+    "type": "python",
+    "title": "Python",
+    "pdf": "/pdfs/python_roadmap (2).pdf"
+  },
+  {
+    "type": "sql",
+    "title": "Sql",
+    "pdf": "/pdfs/sql (2).pdf"
+  },
+   {
+    "type": "c",
+    "title": "C",
+    "pdf": "/pdfs/c (1).pdf"
+  },
+  {
+    "type": "c++",
+    "title": "C++",
+    "pdf": "/pdfs/c++ (1).pdf"
+  },
+   {
+    "type": "data analytics",
+    "title": "Data Analytics",
+    "pdf": "/pdfs/data analytics.pdf"
+  },
+  {
+    "type": "aws",
+    "title": "AWS",
+    "pdf": "/pdfs/aws (1).pdf"
+  },
+  {
+    "type": "springboot",
+    "title": "Springboot",
+    "pdf": "/pdfs/java springboot.pdf"
+  },
+   {
+    "type": "react",
+    "title": "React",
+    "pdf": "/pdfs/react (1).pdf"
+  },
+  {
+    "type": "cybersecquirty",
+    "title": "Cybersecquirty",
+    "pdf": "/pdfs/cybersecquirty.pdf"
+  },
+  {
+    "type": "data science",
+    "title": "Data Science",
+    "pdf": "/pdfs/data science.pdf"
+  },
+   {
+    "type": "data engineering",
+    "title": "Data Engineering",
+    "pdf": "/pdfs/data engineering.pdf"
+  },
+  {
+    "type": "dsa",
+    "title": "DSA",
+    "pdf": "/pdfs/dsa.pdf"
+  },
+   {
+    "type": "competitive programming",
+    "title": "Competitive Programming",
+    "pdf": "/pdfs/competitive programming.pdf"
+  },
+   {
+    "type": "azure",
+    "title": "Azure",
+    "pdf": "/pdfs/azure.pdf"
+  },
+   {
+    "type": "google cloud",
+    "title": "Google Cloud",
+    "pdf": "/pdfs/google cloud.pdf"
+  },
+   {
+    "type": "kubernetes",
+    "title": "Kubernetes",
+    "pdf": "/pdfs/kubernetes.pdf"
+  },
+  {
+    "type": "docker",
+    "title": "Docker",
+    "pdf": "/pdfs/docker.pdf"
+  },
+  {
+    "type": "game development",
+    "title": "Game Development",
+    "pdf": "/pdfs/game dev.pdf"
+  },
+  {
+    "type": "blockchain",
+    "title": "Blockchain",
+    "pdf": "/pdfs/blockchain.pdf"
+  },
+   {
+    "type": "flutter",
+    "title": "Flutter",
+    "pdf": "/pdfs/flutter.pdf"
   }
 ]

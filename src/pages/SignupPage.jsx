@@ -6,12 +6,28 @@ import { useAuth } from '../context/AuthContext'
 const SignupPage = () => {
   const navigate = useNavigate()
   const { signup } = useAuth()
-  const [form, setForm] = useState({ name: '', email: '', password: '' })
+  const [form, setForm] = useState({ name: '', email: '', password: '', confirmPassword: '' })
   const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = signup(form)
+    setError('')
+
+    // Client-side validation
+    if (form.password.length < 6) {
+      setError('Password must be at least 6 characters.')
+      return
+    }
+
+    if (form.password !== form.confirmPassword) {
+      setError('Passwords do not match. Please check and try again.')
+      return
+    }
+
+    setIsSubmitting(true)
+    const result = await signup({ name: form.name, email: form.email, password: form.password })
+    setIsSubmitting(false)
 
     if (!result.success) {
       setError(result.message)
@@ -20,6 +36,11 @@ const SignupPage = () => {
 
     navigate('/dashboard')
   }
+
+  const field = (key) => ({
+    value: form[key],
+    onChange: (e) => setForm((c) => ({ ...c, [key]: e.target.value })),
+  })
 
   return (
     <AuthShell
@@ -37,49 +58,77 @@ const SignupPage = () => {
       }
     >
       <h2 className="font-display text-3xl font-bold text-ink">Create account</h2>
-      <p className="mt-2 text-sm text-slate">We’ll keep it simple and all in-browser.</p>
+      <p className="mt-2 text-sm text-slate">We'll keep it simple and sync it to your account.</p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+        {/* Full name */}
         <div>
           <label className="text-sm font-medium text-ink">Full name</label>
           <input
             type="text"
             required
-            value={form.name}
-            onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
+            {...field('name')}
             className="mt-2 w-full rounded-2xl border border-black/10 px-4 py-3 outline-none transition focus:border-moss"
             placeholder="Your name"
           />
         </div>
+
+        {/* Email */}
         <div>
           <label className="text-sm font-medium text-ink">Email</label>
           <input
             type="email"
             required
-            value={form.email}
-            onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
+            {...field('email')}
             className="mt-2 w-full rounded-2xl border border-black/10 px-4 py-3 outline-none transition focus:border-moss"
             placeholder="student@college.edu"
           />
         </div>
+
+        {/* Password */}
         <div>
           <label className="text-sm font-medium text-ink">Password</label>
           <input
             type="password"
             minLength={6}
             required
-            value={form.password}
-            onChange={(event) => setForm((current) => ({ ...current, password: event.target.value }))}
+            {...field('password')}
             className="mt-2 w-full rounded-2xl border border-black/10 px-4 py-3 outline-none transition focus:border-moss"
             placeholder="Minimum 6 characters"
           />
         </div>
+
+        {/* Confirm Password */}
+        <div>
+          <label className="text-sm font-medium text-ink">Confirm password</label>
+          <input
+            type="password"
+            minLength={6}
+            required
+            {...field('confirmPassword')}
+            className={`mt-2 w-full rounded-2xl border px-4 py-3 outline-none transition focus:border-moss ${
+              form.confirmPassword && form.confirmPassword !== form.password
+                ? 'border-red-400 bg-red-50'
+                : 'border-black/10'
+            }`}
+            placeholder="Re-enter your password"
+          />
+          {form.confirmPassword && form.confirmPassword !== form.password && (
+            <p className="mt-1 text-xs text-red-500">Passwords do not match</p>
+          )}
+          {form.confirmPassword && form.confirmPassword === form.password && form.password.length >= 6 && (
+            <p className="mt-1 text-xs text-emerald-600">✓ Passwords match</p>
+          )}
+        </div>
+
         {error ? <p className="rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p> : null}
+
         <button
           type="submit"
-          className="w-full rounded-2xl bg-moss px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px]"
+          disabled={isSubmitting}
+          className="w-full rounded-2xl bg-moss px-4 py-3 font-semibold text-white transition hover:translate-y-[-1px] disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Start learning
+          {isSubmitting ? 'Creating account...' : 'Start learning'}
         </button>
       </form>
 

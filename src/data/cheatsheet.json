@@ -3,17 +3,10 @@
     "subject": "aptitude",
     "topics": [
       {
-        "name": "number-system",
-        "pdf": "/pdfs/aptitude-number.pdf"
-      },
-      {
-        "name": "time-work",
-        "pdf": "/pdfs/aptitude-time.pdf"
-      },
-      {
-        "name": "percentage",
-        "pdf": "/pdfs/aptitude-percentage.pdf"
+        "name": "cheatsheet",
+        "pdf": "/pdfs/AptitudeCheatsheet.pdf"
       }
+    
     ]
   },
   {
@@ -21,11 +14,7 @@
     "topics": [
       {
         "name": "logical-reasoning",
-        "pdf": "/pdfs/reasoning-logical.pdf"
-      },
-      {
-        "name": "verbal-reasoning",
-        "pdf": "/pdfs/reasoning-verbal.pdf"
+        "pdf": "/pdfs/reasoning_cheatsheet.pdf"
       }
     ]
   },
@@ -33,12 +22,8 @@
     "subject": "verbal",
     "topics": [
       {
-        "name": "grammar",
-        "pdf": "/pdfs/verbal-grammar.pdf"
-      },
-      {
-        "name": "vocabulary",
-        "pdf": "/pdfs/verbal-vocabulary.pdf"
+        "name": "Verbal Cheatsheet",
+        "pdf": "/pdfs/Verbal Ability Cheat Sheet.pdf"
       }
     ]
   }
