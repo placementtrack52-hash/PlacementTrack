@@ -6,6 +6,8 @@ const router = express.Router()
 
 const defaultProgress = {
   completedTopics: {},
+  completedProjects: {},
+  completedPYQs: {},
   quizResults: {},
   finalTests: {},
   points: 0,
@@ -47,6 +49,8 @@ const normalizeProgress = (stored = {}) => ({
     ...defaultProgress.notePreferences,
     ...(stored?.notePreferences ?? {}),
   },
+  completedProjects: stored?.completedProjects ?? {},
+  completedPYQs: stored?.completedPYQs ?? {},
 })
 
 const ensureUserData = async (userId) => {
@@ -96,6 +100,59 @@ router.put('/progress', async (req, res) => {
     })
   } catch (error) {
     return res.status(500).json({ message: 'Failed to save progress.', error: error.message })
+  }
+})
+
+// Surgical atomic update — only updates specific sub-fields using $set.
+// Body: { fields: { "completedTopics.java:arrays": true, "quizResults.java:arrays.1": {...} } }
+router.patch('/progress', async (req, res) => {
+  try {
+    const { fields } = req.body
+
+    if (!fields || typeof fields !== 'object' || Object.keys(fields).length === 0) {
+      return res.status(400).json({ message: 'fields object is required and must not be empty.' })
+    }
+
+    // Build a MongoDB $set object with dot-notation keys prefixed with "progress."
+    const setPayload = {}
+    for (const [key, value] of Object.entries(fields)) {
+      // Safety: only allow keys that start with known top-level progress fields
+      const allowedPrefixes = [
+        'completedTopics',
+        'completedProjects',
+        'completedPYQs',
+        'quizResults',
+        'finalTests',
+        'streak',
+        'notePreferences',
+        'lastStudied',
+        'mistakes',
+        'dailyChallenges',
+        'points',
+        'unlockedBadges',
+      ]
+      const topLevel = key.split('.')[0]
+      if (!allowedPrefixes.includes(topLevel)) {
+        return res.status(400).json({ message: `Field "${key}" is not allowed.` })
+      }
+      setPayload[`progress.${key}`] = value
+    }
+
+    // Ensure UserData document exists first
+    await ensureUserData(req.user._id)
+
+    const updated = await UserData.findOneAndUpdate(
+      { user: req.user._id },
+      { $set: setPayload },
+      { new: true },
+    )
+
+    return res.json({
+      message: 'Progress patched successfully.',
+      progress: normalizeProgress(updated.progress),
+    })
+  } catch (error) {
+    return res.status(500).json({ message: 'Failed to patch progress.', error: error.message })
   }
 })
 

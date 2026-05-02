@@ -50,6 +50,13 @@ export const userDataApi = {
       method: 'PUT',
       body: JSON.stringify({ progress }),
     }),
+  // Surgically update specific progress sub-fields without overwriting the whole object.
+  // fields: { 'completedTopics.java:arrays': true, 'streak.current': 5 }
+  patchProgress: (fields) =>
+    apiRequest('/user-data/progress', {
+      method: 'PATCH',
+      body: JSON.stringify({ fields }),
+    }),
   submitFeedback: (payload) =>
     apiRequest('/user-data/feedback', {
       method: 'POST',
@@ -97,6 +104,29 @@ export const userDataApi = {
     apiRequest('/user-data/preferences', {
       method: 'PUT',
       body: JSON.stringify({ preferences }),
+    }),
+}
+
+// /api/user/* — spec-aligned endpoints.
+// These provide the exact API surface described in the requirements.
+export const userApi = {
+  // GET /api/user/me — returns { user: { id, name, email } }
+  getMe: () => apiRequest('/user/me'),
+
+  // PUT /api/user/update-progress — updates progress% for a specific subject
+  // body: { subject: 'java', progress: 75 }
+  updateProgress: (subject, progress) =>
+    apiRequest('/user/update-progress', {
+      method: 'PUT',
+      body: JSON.stringify({ subject, progress }),
+    }),
+
+  // PUT /api/user/update-quiz — surgically updates quiz stats for a subject
+  // body: { subject: 'java', levelsDone: 5, accuracy: 88, speedScore: 72 }
+  updateQuiz: (subject, stats) =>
+    apiRequest('/user/update-quiz', {
+      method: 'PUT',
+      body: JSON.stringify({ subject, ...stats }),
     }),
 }
 

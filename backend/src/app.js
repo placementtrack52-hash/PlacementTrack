@@ -6,6 +6,7 @@ import codeRoutes from './routes/codeRoutes.js'
 import companyRoutes from './routes/companyRoutes.js'
 import progressRoutes from './routes/progressRoutes.js'
 import userDataRoutes from './routes/userDataRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 import feedbackRoutes from './routes/feedbackRoutes.js'
 import pyqRoutes from './routes/pyqRoutes.js'
 
@@ -29,6 +30,7 @@ app.use('/api/code', codeRoutes)
 app.use('/api/companies', companyRoutes)
 app.use('/api/progress', progressRoutes)
 app.use('/api/user-data', userDataRoutes)
+app.use('/api/user', userRoutes)
 app.use('/api/feedback', feedbackRoutes)
 app.use('/api/pyq', pyqRoutes)
 

@@ -117,10 +117,10 @@ export const useRealDashboardData = (): { data: StudyDashboardData; loading: boo
 
     const previousWeekAccuracy = previousWeekEntries.length
       ? Math.round(
-          (previousWeekEntries.reduce((sum, entry) => sum + (entry.correctAnswers ?? 0), 0) /
-            Math.max(previousWeekEntries.reduce((sum, entry) => sum + (entry.totalQuestions ?? 0), 0), 1)) *
-            100,
-        )
+        (previousWeekEntries.reduce((sum, entry) => sum + (entry.correctAnswers ?? 0), 0) /
+          Math.max(previousWeekEntries.reduce((sum, entry) => sum + (entry.totalQuestions ?? 0), 0), 1)) *
+        100,
+      )
       : accuracy
     const scoreChange = Math.max(0, accuracy - previousWeekAccuracy)
 

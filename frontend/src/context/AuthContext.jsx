@@ -1,6 +1,26 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { authApi } from '../services/api'
 
+// Clear per-user progress cache from localStorage on logout
+const clearProgressCache = (userId) => {
+  try {
+    if (userId) localStorage.removeItem(`pm_progress_${userId}`)
+  } catch {
+    // ignore
+  }
+}
+
+// Normalize user object so user.id is ALWAYS a string (login, signup, and /me
+// used to return different shapes — this makes the whole app consistent).
+const normalizeUser = (raw) => {
+  if (!raw) return null
+  return {
+    id: (raw.id ?? raw._id)?.toString(),
+    name: raw.name,
+    email: raw.email,
+  }
+}
+
 const AuthContext = createContext(null)
 
 export const AuthProvider = ({ children }) => {
@@ -14,7 +34,7 @@ export const AuthProvider = ({ children }) => {
       try {
         const { user: currentUser } = await authApi.me()
         if (!cancelled) {
-          setUser(currentUser)
+          setUser(normalizeUser(currentUser))
         }
       } catch {
         if (!cancelled) {
@@ -37,13 +57,17 @@ export const AuthProvider = ({ children }) => {
   const signup = async ({ name, email, password }) => {
     try {
       const { user: nextUser, message } = await authApi.signup({ name, email, password })
-      setUser(nextUser)
+      setUser(normalizeUser(nextUser))
       return { success: true, message }
     } catch (error) {
-      const message =
-        error?.message === 'Failed to fetch'
-          ? 'Cannot connect to server. Make sure the backend is running.'
-          : (error?.message ?? 'Signup failed. Please try again.')
+      let message
+      if (error?.message === 'Failed to fetch') {
+        message = 'Cannot connect to server. Make sure the backend is running.'
+      } else if (error?.message?.includes('already exists')) {
+        message = 'An account with this email already exists. Please log in instead.'
+      } else {
+        message = error?.message ?? 'Signup failed. Please try again.'
+      }
       return { success: false, message }
     }
   }
@@ -51,7 +75,7 @@ export const AuthProvider = ({ children }) => {
   const login = async ({ email, password }) => {
     try {
       const { user: nextUser, message } = await authApi.login({ email, password })
-      setUser(nextUser)
+      setUser(normalizeUser(nextUser))
       return { success: true, message }
     } catch (error) {
       const message =
@@ -63,11 +87,14 @@ export const AuthProvider = ({ children }) => {
   }
 
   const logout = async () => {
+    const currentUser = user
     try {
       await authApi.logout()
     } catch {
-      // Clear the local session state even if the logout request fails.
+      // Clear local session state even if the logout request fails.
     }
+    // Clear this user's progress cache so the next login always fetches from DB.
+    if (currentUser?.id) clearProgressCache(currentUser.id)
     setUser(null)
   }
 

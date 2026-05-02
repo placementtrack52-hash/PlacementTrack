@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuth } from './AuthContext'
 import { userDataApi } from '../services/api'
 import {
@@ -18,6 +18,7 @@ import {
 
 const ProgressContext = createContext(null)
 
+// ─── Default shape ────────────────────────────────────────────────────────────
 const defaultProgress = {
   completedTopics: {},
   completedProjects: {},
@@ -41,6 +42,41 @@ const defaultProgress = {
   dailyChallenges: {},
 }
 
+// ─── localStorage helpers (keyed per user so multiple accounts work) ──────────
+// Resolve a stable string ID from either { id } (login/signup) or { _id } (legacy /me)
+const getUserId = (user) => (user?.id ?? user?._id)?.toString()
+
+const storageKey = (userId) => `pm_progress_${userId}`
+
+const loadLocal = (userId) => {
+  if (!userId) return null
+  try {
+    const raw = localStorage.getItem(storageKey(userId))
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+const saveLocal = (userId, progress) => {
+  if (!userId) return
+  try {
+    localStorage.setItem(storageKey(userId), JSON.stringify(progress))
+  } catch {
+    // Quota exceeded or private browsing – silently skip
+  }
+}
+
+const clearLocal = (userId) => {
+  if (!userId) return
+  try {
+    localStorage.removeItem(storageKey(userId))
+  } catch {
+    // ignore
+  }
+}
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 const toDateStamp = (value = new Date()) => value.toISOString().slice(0, 10)
 
 const updateStreak = (streak = defaultProgress.streak) => {
@@ -49,10 +85,7 @@ const updateStreak = (streak = defaultProgress.streak) => {
   const activityDates = Array.isArray(streak.activityDates) ? streak.activityDates : []
 
   if (lastActive === today) {
-    return {
-      ...streak,
-      activityDates,
-    }
+    return { ...streak, activityDates }
   }
 
   const yesterday = new Date()
@@ -62,7 +95,7 @@ const updateStreak = (streak = defaultProgress.streak) => {
   return {
     current: lastActive === yesterdayStamp ? (streak.current ?? 0) + 1 : 1,
     lastActiveDate: today,
-    activityDates: [today, ...activityDates.filter((item) => item !== today)].slice(0, 30),
+    activityDates: [today, ...activityDates.filter((d) => d !== today)].slice(0, 30),
   }
 }
 
@@ -77,27 +110,69 @@ const normalizeProgress = (stored = {}) => ({
     ...defaultProgress.notePreferences,
     ...(stored?.notePreferences ?? {}),
   },
+  // Ensure these are never undefined on fresh accounts
+  completedProjects: stored?.completedProjects ?? {},
+  completedPYQs: stored?.completedPYQs ?? {},
 })
 
+// ─── Provider ─────────────────────────────────────────────────────────────────
 export const ProgressProvider = ({ children }) => {
   const { user } = useAuth()
   const [progress, setProgress] = useState(defaultProgress)
   const [feedback, setFeedback] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  // Track pending DB saves so we can retry failed ones
+  const pendingSaveRef = useRef(null)
+  
+  // Track hydration synchronously to prevent race condition overwrites
+  const isHydratingRef = useRef(true)
   useEffect(() => {
-    if (!user) {
-      setProgress(defaultProgress)
-      setFeedback([])
-      setIsLoading(false)
-      return
-    }
+    isHydratingRef.current = isLoading
+  }, [isLoading])
 
+  // ── Persist to DB (with localStorage as immediate backup) ──────────────────
+  // We keep a ref to the latest progress so the debounced save always has fresh data.
+  const latestProgressRef = useRef(progress)
+  useEffect(() => {
+    latestProgressRef.current = progress
+  }, [progress])
+
+  // ── Load data on login or guest session ────────────────────────────────────
+  useEffect(() => {
     let cancelled = false
 
     const loadUserData = async () => {
-      setIsLoading(true)
+      // Synchronously lock the DB while we transition states (login/logout)
+      if (user) isHydratingRef.current = true
+      
+      const userId = user ? getUserId(user) : 'guest'
 
+      // 1. Show localStorage data immediately so the UI is never blank on refresh.
+      // For guests, this is their only data source!
+      const cached = loadLocal(userId)
+      if (cached) {
+        const normalized = normalizeProgress(cached)
+        if (!cancelled) {
+          setProgress(normalized)
+          setIsLoading(!user ? false : true) // If guest, we're done loading!
+        }
+      } else {
+        if (!cancelled) {
+          setProgress(defaultProgress)
+          setIsLoading(!!user)
+        }
+      }
+
+      if (!user) {
+        if (!cancelled) {
+          setFeedback([])
+          setIsLoading(false)
+        }
+        return // Guests don't fetch from DB
+      }
+
+      // 2. Fetch authoritative data from the database.
       try {
         const { userData } = await userDataApi.getMe()
 
@@ -108,9 +183,15 @@ export const ProgressProvider = ({ children }) => {
             updatedStreak.lastActiveDate !== (normalized.streak?.lastActiveDate ?? null)
           const finalProgress = { ...normalized, streak: updatedStreak }
 
-          // Silently persist streak if today is a new active day
+          // DB is always source of truth – overwrite local cache with fresh data.
+          saveLocal(userId, finalProgress)
+
+          // Silently persist streak bump back to DB if today is a new active day.
           if (streakChanged) {
-            userDataApi.saveProgress(finalProgress).catch(() => {})
+            userDataApi.saveProgress(finalProgress).catch(() => {
+              // If this fails, the streak is still correct in localStorage
+              // and will be re-tried the next time any progress is saved.
+            })
           }
 
           setProgress(finalProgress)
@@ -118,7 +199,11 @@ export const ProgressProvider = ({ children }) => {
         }
       } catch {
         if (!cancelled) {
-          setProgress(defaultProgress)
+          // DB unreachable – keep showing localStorage data if we have it.
+          // If there was no local cache either, show defaults.
+          if (!cached) {
+            setProgress(defaultProgress)
+          }
           setFeedback([])
         }
       } finally {
@@ -135,40 +220,75 @@ export const ProgressProvider = ({ children }) => {
     }
   }, [user])
 
-  const persistProgress = (updater) => {
-    if (!user) return
+  // ── Core save helper ───────────────────────────────────────────────────────
+  // 1. Immediately write to localStorage (synchronous, never fails).
+  // 2. Asynchronously persist to the DB.
+  // Returns the next progress value so callers can use it directly.
+  const persistToDB = useCallback(
+    (nextValue) => {
+      const userId = user ? getUserId(user) : 'guest'
+      // Write to localStorage first – this is instant and reliable.
+      // This works for both logged-in users and guests.
+      saveLocal(userId, nextValue)
 
-    setProgress((current) => {
-      const nextValue = normalizeProgress(updater(normalizeProgress(current)))
-      userDataApi.saveProgress(nextValue).catch(() => {})
-      return nextValue
-    })
-  }
+      // If guest OR still hydrating DB state, we are done! No DB to push to.
+      // Blocking DB pushes during hydration is CRITICAL to prevent the badge 
+      // effect from wiping the DB with empty guest cache data on first render.
+      if (!user || isHydratingRef.current) return
 
+      // Then push to DB. If it fails the data is safe in localStorage and will
+      // be written on the next successful save.
+      userDataApi.saveProgress(nextValue).catch(() => {
+        // Retry once after 3 seconds in case of a transient network error.
+        pendingSaveRef.current = setTimeout(() => {
+          userDataApi.saveProgress(latestProgressRef.current).catch(() => {})
+          pendingSaveRef.current = null
+        }, 3000)
+      })
+    },
+    [user],
+  )
+
+  // Cleanup any pending retry timer on unmount
+  useEffect(() => {
+    return () => {
+      if (pendingSaveRef.current) clearTimeout(pendingSaveRef.current)
+    }
+  }, [])
+
+  // ── persistProgress ────────────────────────────────────────────────────────
+  // All progress mutations go through this function.
+  const persistProgress = useCallback(
+    (updater) => {
+      // Allow guests to make progress!
+      setProgress((current) => {
+        const nextValue = normalizeProgress(updater(normalizeProgress(current)))
+        persistToDB(nextValue)
+        return nextValue
+      })
+    },
+    [user, persistToDB],
+  )
+
+  // ── Activity helpers ───────────────────────────────────────────────────────
   const recordLearningActivity = (current, topicKey) => ({
     ...current,
     streak: updateStreak(current.streak),
     lastStudied: topicKey
-      ? {
-          ...current.lastStudied,
-          [topicKey]: new Date().toISOString(),
-        }
+      ? { ...current.lastStudied, [topicKey]: new Date().toISOString() }
       : current.lastStudied,
   })
 
+  // ── Progress mutators ──────────────────────────────────────────────────────
   const toggleTopicCompletion = (topicKey, completed) => {
     persistProgress((current) => {
       const nextState = {
         ...current,
-        completedTopics: {
-          ...current.completedTopics,
-          [topicKey]: completed,
-        },
+        completedTopics: { ...current.completedTopics, [topicKey]: completed },
         points: completed
           ? current.points + (current.completedTopics[topicKey] ? 0 : 20)
           : Math.max(0, current.points - (current.completedTopics[topicKey] ? 20 : 0)),
       }
-
       return recordLearningActivity(nextState, topicKey)
     })
   }
@@ -177,15 +297,11 @@ export const ProgressProvider = ({ children }) => {
     persistProgress((current) => {
       const nextState = {
         ...current,
-        completedProjects: {
-          ...current.completedProjects,
-          [projectId]: completed,
-        },
+        completedProjects: { ...current.completedProjects, [projectId]: completed },
         points: completed
-          ? current.points + (current.completedProjects?.[projectId] ? 0 : 50) // More points for a project!
+          ? current.points + (current.completedProjects?.[projectId] ? 0 : 50)
           : Math.max(0, current.points - (current.completedProjects?.[projectId] ? 50 : 0)),
       }
-
       return recordLearningActivity(nextState, `project_${projectId}`)
     })
   }
@@ -194,15 +310,11 @@ export const ProgressProvider = ({ children }) => {
     persistProgress((current) => {
       const nextState = {
         ...current,
-        completedPYQs: {
-          ...current.completedPYQs,
-          [pyqId]: completed,
-        },
+        completedPYQs: { ...current.completedPYQs, [pyqId]: completed },
         points: completed
-          ? current.points + (current.completedPYQs?.[pyqId] ? 0 : 30) // 30 points for a PYQ
+          ? current.points + (current.completedPYQs?.[pyqId] ? 0 : 30)
           : Math.max(0, current.points - (current.completedPYQs?.[pyqId] ? 30 : 0)),
       }
-
       return recordLearningActivity(nextState, `pyq_${pyqId}`)
     })
   }
@@ -238,10 +350,7 @@ export const ProgressProvider = ({ children }) => {
       ...current,
       notePreferences: {
         ...current.notePreferences,
-        positions: {
-          ...current.notePreferences.positions,
-          [topicKey]: scrollTop,
-        },
+        positions: { ...current.notePreferences.positions, [topicKey]: scrollTop },
       },
     }))
   }
@@ -250,20 +359,15 @@ export const ProgressProvider = ({ children }) => {
     persistProgress((current) => {
       const previousScore = current.quizResults?.[topicKey]?.[level]?.score ?? 0
       const delta = Math.max(0, payload.score - previousScore)
-
       const nextState = {
         ...current,
         quizResults: {
           ...current.quizResults,
-          [topicKey]: {
-            ...(current.quizResults?.[topicKey] ?? {}),
-            [level]: payload,
-          },
+          [topicKey]: { ...(current.quizResults?.[topicKey] ?? {}), [level]: payload },
         },
         mistakes: [...payload.incorrectAnswers, ...current.mistakes].slice(0, 100),
         points: current.points + delta + 10,
       }
-
       return recordLearningActivity(nextState, topicKey)
     })
   }
@@ -272,17 +376,12 @@ export const ProgressProvider = ({ children }) => {
     persistProgress((current) => {
       const previousScore = current.finalTests?.[topicKey]?.score ?? 0
       const delta = Math.max(0, payload.score - previousScore)
-
       const nextState = {
         ...current,
-        finalTests: {
-          ...current.finalTests,
-          [topicKey]: payload,
-        },
+        finalTests: { ...current.finalTests, [topicKey]: payload },
         mistakes: [...payload.incorrectAnswers, ...current.mistakes].slice(0, 100),
         points: current.points + delta + 15,
       }
-
       return recordLearningActivity(nextState, topicKey)
     })
   }
@@ -291,13 +390,9 @@ export const ProgressProvider = ({ children }) => {
     persistProgress((current) => {
       const nextState = {
         ...current,
-        dailyChallenges: {
-          ...current.dailyChallenges,
-          [dateKey]: payload,
-        },
+        dailyChallenges: { ...current.dailyChallenges, [dateKey]: payload },
         points: current.points + payload.correctAnswers * 4 + 6,
       }
-
       return recordLearningActivity(nextState)
     })
   }
@@ -305,13 +400,12 @@ export const ProgressProvider = ({ children }) => {
   const dismissMistake = (mistakeId) => {
     persistProgress((current) => ({
       ...current,
-      mistakes: current.mistakes.filter((mistake) => mistake.id !== mistakeId),
+      mistakes: current.mistakes.filter((m) => m.id !== mistakeId),
     }))
   }
 
   const submitFeedback = async ({ rating, message }) => {
     if (!user) return { success: false, message: 'You must be logged in to submit feedback.' }
-
     try {
       const response = await userDataApi.submitFeedback({ rating, message })
       setFeedback(response.feedback ?? [])
@@ -321,6 +415,7 @@ export const ProgressProvider = ({ children }) => {
     }
   }
 
+  // ── Derived stats ──────────────────────────────────────────────────────────
   const allResults = [
     ...Object.values(progress.quizResults).flatMap((levels) => Object.values(levels)),
     ...Object.values(progress.finalTests),
@@ -346,10 +441,11 @@ export const ProgressProvider = ({ children }) => {
     savedResult: progress.dailyChallenges[todayKey] ?? null,
   }
 
-  // Calculate additional stats for badges
   const totalQuestionsAnswered = allResults.reduce((sum, r) => sum + (r.totalQuestions ?? 0), 0)
-  const perfectQuizzes = allResults.filter((r) => r.totalQuestions > 0 && r.correctAnswers === r.totalQuestions).length
-  
+  const perfectQuizzes = allResults.filter(
+    (r) => r.totalQuestions > 0 && r.correctAnswers === r.totalQuestions,
+  ).length
+
   const badges = buildBadgeCollection({
     completedCount,
     points: progress.points,
@@ -360,21 +456,26 @@ export const ProgressProvider = ({ children }) => {
     totalQuestionsAnswered,
     perfectQuizzes,
     averageTimePerQuestion,
-    accuracyImprovement: 0, // Could track improvement over time
+    accuracyImprovement: 0,
   })
+
+  // ── Badge unlock sync ──────────────────────────────────────────────────────
+  // Stable serialised value so the effect only fires on real badge changes.
+  const unlockedBadgeIds = badges
+    .filter((b) => b.unlocked)
+    .map((b) => b.id)
+    .join(',')
 
   useEffect(() => {
     if (!user) return
-
-    const unlockedBadges = badges.filter((badge) => badge.unlocked).map((badge) => badge.id)
+    const unlockedBadges = unlockedBadgeIds ? unlockedBadgeIds.split(',') : []
     if (JSON.stringify(unlockedBadges) !== JSON.stringify(progress.unlockedBadges ?? [])) {
-      persistProgress((current) => ({
-        ...current,
-        unlockedBadges,
-      }))
+      persistProgress((current) => ({ ...current, unlockedBadges }))
     }
-  }, [badges, progress.unlockedBadges, user])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [unlockedBadgeIds, user])
 
+  // ── Context value ──────────────────────────────────────────────────────────
   const value = useMemo(
     () => ({
       progress,

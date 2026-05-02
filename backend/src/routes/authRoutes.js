@@ -7,10 +7,12 @@ import { protect } from '../middleware/authMiddleware.js'
 const router = express.Router()
 const cookieName = 'prepMasterToken'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const cookieOptions = {
   httpOnly: true,
-  sameSite: 'lax',
-  secure: false,
+  sameSite: isProduction ? 'none' : 'lax',
+  secure: isProduction,
   maxAge: 7 * 24 * 60 * 60 * 1000,
 }
 
@@ -94,7 +96,14 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/me', protect, async (req, res) => {
-  return res.json({ user: req.user })
+  // Return the same shape as login/signup so frontend always gets { id, name, email }
+  return res.json({
+    user: {
+      id: req.user._id.toString(),
+      name: req.user.name,
+      email: req.user.email,
+    },
+  })
 })
 
 router.post('/logout', async (_req, res) => {
