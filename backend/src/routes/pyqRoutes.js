@@ -11,13 +11,14 @@ const __dirname = path.dirname(__filename)
 
 // Upload directory: backend/uploads/pyq/<company>/
 const UPLOAD_DIR = path.join(__dirname, '..', '..', 'uploads', 'pyq')
+const PUBLIC_PYQ_DIR = path.join(__dirname, '..', '..', '..', 'frontend', 'public', 'pdfs', 'pyq')
 
 // Ensure upload directory exists
 if (!fs.existsSync(UPLOAD_DIR)) {
   fs.mkdirSync(UPLOAD_DIR, { recursive: true })
 }
 
-// Multer storage — saves to uploads/pyq/<company>/filename.pdf
+// Multer storage - saves to uploads/pyq/<company>/filename.pdf
 const storage = multer.diskStorage({
   destination: (req, _file, cb) => {
     const company = (req.body.company || 'general')
@@ -48,7 +49,6 @@ const upload = multer({
   limits: { fileSize: 50 * 1024 * 1024 }, // 50 MB max
 })
 
-// ─── GET /api/pyq/companies ──────────────────────────────────────────────────
 // Returns list of companies that have PDFs uploaded
 router.get('/companies', protect, (_req, res) => {
   try {
@@ -72,13 +72,14 @@ router.get('/companies', protect, (_req, res) => {
   }
 })
 
-// ─── GET /api/pyq/view/:company/:filename ────────────────────────────────────
-// Serves the PDF inline — NO download allowed
+// Serves the PDF inline from uploads first, then bundled public company PYQs.
 router.get('/view/:company/:filename', protect, (req, res) => {
   try {
     const company = req.params.company.replace(/[^a-zA-Z0-9_-]/g, '_')
     const filename = req.params.filename.replace(/[^a-zA-Z0-9._-]/g, '_')
-    const filePath = path.join(UPLOAD_DIR, company, filename)
+    const uploadedPath = path.join(UPLOAD_DIR, company, filename)
+    const publicPath = path.join(PUBLIC_PYQ_DIR, filename)
+    const filePath = fs.existsSync(uploadedPath) ? uploadedPath : publicPath
 
     if (!fs.existsSync(filePath) || !filename.endsWith('.pdf')) {
       return res.status(404).json({ message: 'PDF not found' })
@@ -86,12 +87,10 @@ router.get('/view/:company/:filename', protect, (req, res) => {
 
     const stat = fs.statSync(filePath)
 
-    // Force inline viewing — prevent download
     res.setHeader('Content-Type', 'application/pdf')
     res.setHeader('Content-Disposition', `inline; filename="${filename}"`)
     res.setHeader('Content-Length', stat.size)
     res.setHeader('X-Content-Type-Options', 'nosniff')
-    // Prevent caching of the direct URL so users can't easily grab the link
     res.setHeader('Cache-Control', 'no-store')
 
     fs.createReadStream(filePath).pipe(res)
@@ -100,8 +99,7 @@ router.get('/view/:company/:filename', protect, (req, res) => {
   }
 })
 
-// ─── POST /api/pyq/upload ────────────────────────────────────────────────────
-// Admin only — upload a PDF for a company
+// Admin only - upload a PDF for a company
 router.post('/upload', protect, upload.single('pdf'), (req, res) => {
   try {
     if (!req.file) {
@@ -117,8 +115,7 @@ router.post('/upload', protect, upload.single('pdf'), (req, res) => {
   }
 })
 
-// ─── DELETE /api/pyq/:company/:filename ──────────────────────────────────────
-// Admin only — delete a PDF
+// Admin only - delete a PDF
 router.delete('/:company/:filename', protect, (req, res) => {
   try {
     const company = req.params.company.replace(/[^a-zA-Z0-9_-]/g, '_')

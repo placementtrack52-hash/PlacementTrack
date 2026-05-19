@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuth } from './AuthContext'
 import { userDataApi } from '../services/api'
 
@@ -7,6 +7,8 @@ const UIContext = createContext(null)
 export const UIProvider = ({ children }) => {
   const { isAuthenticated, isHydrating } = useAuth()
   const [theme, setThemeState] = useState('light')
+  const hasMountedRef = useRef(false)
+  const themeTransitionTimeoutRef = useRef(null)
 
   useEffect(() => {
     if (isHydrating) return
@@ -39,7 +41,23 @@ export const UIProvider = ({ children }) => {
   }, [isAuthenticated, isHydrating])
 
   useEffect(() => {
+    const root = document.documentElement
+
+    if (hasMountedRef.current) {
+      root.classList.add('theme-transition')
+      window.clearTimeout(themeTransitionTimeoutRef.current)
+      themeTransitionTimeoutRef.current = window.setTimeout(() => {
+        root.classList.remove('theme-transition')
+      }, 350)
+    } else {
+      hasMountedRef.current = true
+    }
+
     document.documentElement.classList.toggle('dark', theme === 'dark')
+
+    return () => {
+      window.clearTimeout(themeTransitionTimeoutRef.current)
+    }
   }, [theme])
 
   const setTheme = (nextTheme) => {

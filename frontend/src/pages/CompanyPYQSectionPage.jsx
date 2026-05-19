@@ -5,6 +5,8 @@ import { useProgress } from '../context/ProgressContext'
 import PageShell from '../components/PageShell'
 import companies from '../data/companyPYQIndex.json'
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+
 const CompanyPYQSectionPage = () => {
   const { company, section } = useParams()
   const iframeRef = useRef(null)
@@ -13,6 +15,11 @@ const CompanyPYQSectionPage = () => {
   const companyMeta = companies.find((c) => c.slug === company)
   const pdfMeta = companyMeta?.pdfs?.find((p) => p.slug === section)
   const isCompleted = progress?.completedPYQs?.[section] || false
+  const pdfFilename = pdfMeta?.path?.split('/').pop()
+  const viewerSrc =
+    companyMeta && pdfFilename
+      ? `${API_BASE}/pyq/view/${encodeURIComponent(companyMeta.slug)}/${encodeURIComponent(pdfFilename)}#toolbar=0&navpanes=0&scrollbar=1`
+      : ''
 
   if (!companyMeta || !pdfMeta) {
     return (
@@ -23,7 +30,7 @@ const CompanyPYQSectionPage = () => {
             to={`/subjects/pyq/${company}`}
             className="mt-4 inline-block text-emerald-600 dark:text-emerald-400"
           >
-            ← Back to {companyMeta?.displayName ?? 'Company'}
+            Back to {companyMeta?.displayName ?? 'Company'}
           </Link>
         </div>
       </PageShell>
@@ -33,7 +40,7 @@ const CompanyPYQSectionPage = () => {
   return (
     <PageShell
       title={pdfMeta.title}
-      subtitle={`${companyMeta.displayName} · View only — right-click and download are disabled.`}
+      subtitle={`${companyMeta.displayName} · View only - opened inline in Chrome with download controls minimized.`}
       actions={
         <div className="flex items-center gap-3">
           <button
@@ -51,14 +58,13 @@ const CompanyPYQSectionPage = () => {
             to={`/subjects/pyq/${company}`}
             className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:bg-slate-50 dark:bg-zinc-800 dark:text-white dark:hover:bg-zinc-700"
           >
-            ← Back to {companyMeta.displayName}
+            Back to {companyMeta.displayName}
           </Link>
         </div>
       }
     >
-      <div className="rounded-[1.75rem] overflow-hidden bg-white shadow-soft dark:bg-zinc-800">
-        {/* Header bar */}
-        <div className="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-zinc-700 px-6 py-4">
+      <div className="overflow-hidden rounded-[1.75rem] bg-white shadow-soft dark:bg-zinc-800">
+        <div className="flex items-center justify-between gap-4 border-b border-slate-100 px-6 py-4 dark:border-zinc-700">
           <div className="flex items-center gap-3">
             <div
               className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${companyMeta.gradient} shadow`}
@@ -73,11 +79,10 @@ const CompanyPYQSectionPage = () => {
             </div>
           </div>
           <span className="rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-600 dark:bg-red-900/30 dark:text-red-400">
-            🔒 No Download
+            No Download
           </span>
         </div>
 
-        {/* PDF iframe — toolbar hidden, right-click blocked */}
         <div
           className="relative"
           style={{ height: 'calc(100vh - 280px)', minHeight: '520px' }}
@@ -85,16 +90,9 @@ const CompanyPYQSectionPage = () => {
         >
           <iframe
             ref={iframeRef}
-            src={`${pdfMeta.path}#toolbar=0&navpanes=0&scrollbar=1`}
+            src={viewerSrc}
             title={pdfMeta.title}
             className="h-full w-full border-0"
-            sandbox="allow-same-origin allow-scripts"
-          />
-          {/* Transparent overlay — blocks right-click and drag on PDF content */}
-          <div
-            className="absolute inset-0 z-10"
-            onContextMenu={(e) => e.preventDefault()}
-            style={{ pointerEvents: 'none' }}
           />
         </div>
       </div>
