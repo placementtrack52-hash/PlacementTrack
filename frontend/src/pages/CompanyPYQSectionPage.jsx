@@ -5,7 +5,7 @@ import { useProgress } from '../context/ProgressContext'
 import PageShell from '../components/PageShell'
 import companies from '../data/companyPYQIndex.json'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API_BASE = import.meta.env.VITE_API_URL?.replace(/\/$/, '')
 
 const CompanyPYQSectionPage = () => {
   const { company, section } = useParams()
