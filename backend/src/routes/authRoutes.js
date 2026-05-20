@@ -7,12 +7,14 @@ import { protect } from '../middleware/authMiddleware.js'
 const router = express.Router()
 const cookieName = 'prepMasterToken'
 
-const isProduction = process.env.NODE_ENV === 'production'
+const clientUrl = (process.env.CLIENT_URL || '').trim()
+const usesCrossSiteHttps =
+  clientUrl.startsWith('https://') && !clientUrl.includes('localhost')
 
 const cookieOptions = {
   httpOnly: true,
-  sameSite: isProduction ? 'none' : 'lax',
-  secure: isProduction,
+  sameSite: usesCrossSiteHttps ? 'none' : 'lax',
+  secure: usesCrossSiteHttps,
   maxAge: 7 * 24 * 60 * 60 * 1000,
 }
 

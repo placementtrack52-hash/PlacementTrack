@@ -2,10 +2,10 @@ import 'dotenv/config'
 import mongoose from 'mongoose'
 import CodeProblem from './models/CodeProblem.js'
 
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.MONGO_URI || process.env.MONGODB_URI
 
 if (!MONGODB_URI) {
-  console.error('MONGODB_URI is missing. Add it to backend/.env')
+  console.error('MONGO_URI is missing. Add it to backend/.env')
   process.exit(1)
 }
 

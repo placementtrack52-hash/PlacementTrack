@@ -1519,7 +1519,7 @@ void fourSum(vector<int>& nums,int target){
 
 const seed = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI)
+        await mongoose.connect((process.env.MONGO_URI || process.env.MONGODB_URI))
         console.log('Connected to MongoDB')
 
         // Using bulkWrite with upsert prevents duplicate questions if you run this script multiple times!

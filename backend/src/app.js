@@ -12,9 +12,31 @@ import pyqRoutes from './routes/pyqRoutes.js'
 
 const app = express()
 
+const configuredOrigins = [
+  process.env.CLIENT_URL,
+  process.env.CLIENT_URLS,
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+]
+  .filter(Boolean)
+  .flatMap((value) => value.split(','))
+  .map((origin) => origin.trim())
+  .filter(Boolean)
+
+const allowedOrigins = [...new Set(configuredOrigins)]
+
+app.set('trust proxy', 1)
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true)
+        return
+      }
+
+      callback(new Error(`CORS blocked for origin: ${origin}`))
+    },
     credentials: true,
   }),
 )
