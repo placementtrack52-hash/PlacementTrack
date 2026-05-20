@@ -446,9 +446,10 @@ const DashboardPage = () => {
                 const subjectProgress = summary?.progressPercent ?? 0
 
                 return (
-                  <div
+                  <Link
                     key={subject.id}
-                    className="rounded-xl bg-[#faf6f0] p-4 dark:border dark:border-slate-700/50 dark:bg-[#162235]"
+                    to={`/subjects/${subject.id}`}
+                    className="block rounded-xl bg-[#faf6f0] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f6efe6] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 dark:border dark:border-slate-700/50 dark:bg-[#162235] dark:hover:bg-[#1b2b42] dark:focus:ring-offset-[#0f1b2d]"
                   >
                     <div className="mb-3 flex items-center justify-between text-sm text-slate dark:text-slate-300">
                       <span className="font-semibold text-ink dark:text-white">
@@ -459,10 +460,13 @@ const DashboardPage = () => {
                       </span>
                     </div>
                     <ProgressBar value={subjectProgress} />
-                  </div>
+                  </Link>
                 )
               })}
-            <div className="rounded-xl bg-[#faf6f0] p-4 dark:border dark:border-slate-700/50 dark:bg-[#162235]">
+            <Link
+              to="/company-prep"
+              className="block rounded-xl bg-[#faf6f0] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f6efe6] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 dark:border dark:border-slate-700/50 dark:bg-[#162235] dark:hover:bg-[#1b2b42] dark:focus:ring-offset-[#0f1b2d]"
+            >
               <div className="mb-3 flex items-center justify-between text-sm text-slate dark:text-slate-300">
                 <span className="font-semibold text-ink dark:text-white">
                   Company Preparation
@@ -472,7 +476,7 @@ const DashboardPage = () => {
                 </span>
               </div>
               <ProgressBar value={companyPrepProgress.progressPercent} />
-            </div>
+            </Link>
           </div>
         </section>
 
