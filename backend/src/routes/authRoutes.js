@@ -3,18 +3,15 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import User from '../models/User.js'
 import { protect } from '../middleware/authMiddleware.js'
+import { shouldUseSecureCookies } from '../config/clientOrigins.js'
 
 const router = express.Router()
 const cookieName = 'prepMasterToken'
 
-const clientUrl = (process.env.CLIENT_URL || '').trim()
-const usesCrossSiteHttps =
-  clientUrl.startsWith('https://') && !clientUrl.includes('localhost')
-
 const cookieOptions = {
   httpOnly: true,
-  sameSite: usesCrossSiteHttps ? 'none' : 'lax',
-  secure: usesCrossSiteHttps,
+  sameSite: shouldUseSecureCookies ? 'none' : 'lax',
+  secure: shouldUseSecureCookies,
   maxAge: 7 * 24 * 60 * 60 * 1000,
 }
 

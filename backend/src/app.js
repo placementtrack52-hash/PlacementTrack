@@ -9,28 +9,16 @@ import userDataRoutes from './routes/userDataRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import feedbackRoutes from './routes/feedbackRoutes.js'
 import pyqRoutes from './routes/pyqRoutes.js'
+import { isAllowedOrigin } from './config/clientOrigins.js'
 
 const app = express()
-
-const configuredOrigins = [
-  process.env.CLIENT_URL,
-  process.env.CLIENT_URLS,
-  'http://localhost:5173',
-  'http://127.0.0.1:5173',
-]
-  .filter(Boolean)
-  .flatMap((value) => value.split(','))
-  .map((origin) => origin.trim())
-  .filter(Boolean)
-
-const allowedOrigins = [...new Set(configuredOrigins)]
 
 app.set('trust proxy', 1)
 
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         callback(null, true)
         return
       }
