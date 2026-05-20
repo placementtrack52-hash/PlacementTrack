@@ -9,7 +9,7 @@ import Logo from './Logo'
 const navItems = [
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/subjects', label: 'Subjects' },
-  { to: '/company-prep', label: 'Company Prep' },
+  { to: '/subjects/code', label: 'Code Learning' },
   { to: '/challenge', label: 'Daily Challenge' },
 ]
 
