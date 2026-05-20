@@ -1,15 +1,9 @@
 import 'dotenv/config'
 import mongoose from 'mongoose'
 import CodeProblem from './models/CodeProblem.js'
+import { fileURLToPath } from 'url'
 
-const MONGODB_URI = process.env.MONGO_URI || process.env.MONGODB_URI
-
-if (!MONGODB_URI) {
-  console.error('MONGO_URI is missing. Add it to backend/.env')
-  process.exit(1)
-}
-
-const problems = [
+export const problems = [
 {
     subject: 'Code',
     category: 'Arrays',
@@ -326,7 +320,14 @@ int main() {
 
 const seed = async () => {
   try {
-    await mongoose.connect(MONGODB_URI)
+    const mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI
+
+    if (!mongoUri) {
+      console.error('MONGO_URI is missing. Add it to backend/.env')
+      process.exit(1)
+    }
+
+    await mongoose.connect(mongoUri)
     console.log('Connected to MongoDB')
 
     const ops = problems.map(p => ({
@@ -349,4 +350,6 @@ const seed = async () => {
   }
 }
 
-seed()
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  seed()
+}

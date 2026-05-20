@@ -1,8 +1,9 @@
 import 'dotenv/config'
 import mongoose from 'mongoose'
 import CodeProblem from './models/CodeProblem.js'
+import { fileURLToPath } from 'url'
 
-const problems = [
+export const problems = [
   {
     subject: 'Code',
     category: 'Binary Search Trees',
@@ -1331,4 +1332,6 @@ const seed = async () => {
     }
 }
 
-seed()
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  seed()
+}
