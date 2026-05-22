@@ -53,6 +53,8 @@ import ResumeCheckerPage from './pages/ResumeCheckerPage'
 import DreamRoadmapPage from './pages/DreamRoadmapPage'
 
 const DashboardPage = lazy(() => import('./pages/DashboardPage'))
+const PlacementNotesPage = lazy(() => import('./pages/PlacementNotesPage'))
+const PlacementNotesLearnPage = lazy(() => import('./pages/PlacementNotesLearnPage'))
 
 const PublicOnlyRoute = ({ children }) => {
   const { isAuthenticated, isHydrating } = useAuth()
@@ -154,6 +156,26 @@ const AppContent = () => {
       <Route path="/subjects/current-affairs" element={<ProtectedRoute><CurrentAffairsPage /></ProtectedRoute>} />
       <Route path="/subjects/current-affairs/:categoryId" element={<ProtectedRoute><CurrentAffairsCategoryPage /></ProtectedRoute>} />
       <Route path="/dream-roadmap" element={<ProtectedRoute><DreamRoadmapPage /></ProtectedRoute>} />
+      <Route
+        path="/placement-notes"
+        element={
+          <ProtectedRoute>
+            <Suspense fallback={<LoadingScreen label="Loading placement notes..." />}>
+              <PlacementNotesPage />
+            </Suspense>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/placement-notes/:language/:slug"
+        element={
+          <ProtectedRoute>
+            <Suspense fallback={<LoadingScreen label="Loading topic..." />}>
+              <PlacementNotesLearnPage />
+            </Suspense>
+          </ProtectedRoute>
+        }
+      />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
     <FeedbackWidget />

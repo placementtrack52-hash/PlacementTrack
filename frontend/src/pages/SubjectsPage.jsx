@@ -9,10 +9,13 @@ import PageShell from '../components/PageShell'
 import SubjectCard from '../components/SubjectCard'
 import { useProgress } from '../context/ProgressContext'
 import { codeApi } from '../services/api'
+import { usePlacementNotesProgress } from '../features/placementNotes/hooks/usePlacementNotesProgress'
 
 const SubjectsPage = () => {
   const { progress, subjectCompletion, subjectQuizProgress } = useProgress()
   const companyPrepProgress = useAppSelector(selectOverallCompanyPrepProgress)
+  const { completedCount: notesCompleted, totalTopics: notesTotal, progressPercent: notesProgress } =
+    usePlacementNotesProgress()
   const [codeStats, setCodeStats] = useState({ total: 0, loading: true })
 
   useEffect(() => {
@@ -262,6 +265,42 @@ const SubjectsPage = () => {
           </div>
           <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
             Analyze Resume
+          </span>
+        </Link>
+
+        <Link
+          to="/placement-notes"
+          className="rounded-[1.75rem] bg-gradient-to-br from-violet-200 via-fuchsia-100 to-white p-6 shadow-soft transition hover:translate-y-[-2px] dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">🚀</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">Placement Notes</h3>
+              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                Structured topic-wise learning with progress tracking, examples, quizzes, and interview preparation.
+              </p>
+            </div>
+            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-violet-300">
+              {notesTotal} topics
+            </span>
+          </div>
+          <div className="mt-6">
+            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
+              <span>Progress</span>
+              <span>{notesCompleted}/{notesTotal} done</span>
+            </div>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-500 transition-all duration-500"
+                style={{ width: `${notesProgress}%` }}
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate dark:text-white/70">
+              Java & Python · MCQs · Interview Qs
+            </p>
+          </div>
+          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
+            Open Notes
           </span>
         </Link>
 
