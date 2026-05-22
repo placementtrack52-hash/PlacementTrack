@@ -7,6 +7,7 @@ import currentAffairs from '../data/currentAffairs.json'
 const CurrentAffairsCategoryPage = () => {
   const { categoryId } = useParams()
   const category = currentAffairs.find((c) => c.id === categoryId)
+  const [activeTab, setActiveTab] = useState('headlines')
   const [expandedHeadline, setExpandedHeadline] = useState(null)
   const [selectedAnswers, setSelectedAnswers] = useState({})
 
@@ -32,6 +33,12 @@ const CurrentAffairsCategoryPage = () => {
     return question && question.answer === optionIndex
   }
 
+  const tabs = [
+    { id: 'headlines', label: '📰 Top Headlines', count: category.headlines.length },
+    { id: 'facts', label: '⚡ Quick Facts', count: category.quickFacts.length },
+    { id: 'mcq', label: '📝 MCQ Practice', count: category.mcqs.length },
+  ]
+
   return (
     <PageShell
       title={category.name}
@@ -46,126 +53,181 @@ const CurrentAffairsCategoryPage = () => {
       }
     >
       <div className="max-w-4xl space-y-8">
-        {/* Headlines Section */}
-        <section className="space-y-4">
-          <div className="mb-6 border-b border-slate-200 dark:border-zinc-700 pb-4">
-            <h2 className="text-2xl font-bold text-ink dark:text-white">📰 Top Headlines</h2>
-          </div>
-          {category.headlines.map((headline) => (
-            <div
-              key={headline.id}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-soft dark:border-zinc-700 dark:bg-zinc-900"
+        {/* Tabs Navigation */}
+        <div className="flex flex-wrap gap-2 border-b border-slate-200 dark:border-zinc-700">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center gap-2 rounded-t-lg px-4 py-3 text-sm font-medium transition ${
+                activeTab === tab.id
+                  ? 'border-b-2 border-orange-500 bg-orange-50 text-orange-600 dark:border-orange-400 dark:bg-orange-900/20 dark:text-orange-400'
+                  : 'text-slate hover:text-ink dark:text-white/60 dark:hover:text-white'
+              }`}
             >
-              <button
-                onClick={() =>
-                  setExpandedHeadline(expandedHeadline === headline.id ? null : headline.id)
-                }
-                className="flex w-full items-start justify-between gap-4 text-left transition hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <div className="flex-1">
-                  <h3 className="font-display text-lg font-bold text-ink dark:text-white">
-                    {headline.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate dark:text-white/70">{headline.date}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
-                    {headline.summary}
-                  </p>
-                </div>
-                {expandedHeadline === headline.id ? (
-                  <ChevronUp className="h-5 w-5 shrink-0" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 shrink-0" />
-                )}
-              </button>
-
-              {expandedHeadline === headline.id && (
-                <div className="mt-4 border-t border-slate-200 pt-4 dark:border-zinc-700">
-                  <p className="text-sm leading-6 text-slate dark:text-white/70">{headline.content}</p>
-                </div>
-              )}
-            </div>
+              {tab.label}
+              <span className="ml-1 inline-flex rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold text-slate-700 dark:bg-zinc-700 dark:text-white/70">
+                {tab.count}
+              </span>
+            </button>
           ))}
-        </section>
+        </div>
 
-        {/* Quick Facts Section */}
-        <section className="space-y-4">
-          <div className="mb-6 border-b border-slate-200 dark:border-zinc-700 pb-4">
-            <h2 className="text-2xl font-bold text-ink dark:text-white">⚡ Quick Facts</h2>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {category.quickFacts.map((fact, idx) => (
-              <div
-                key={idx}
-                className="rounded-lg bg-gradient-to-br from-emerald-50 to-teal-50 p-4 dark:from-emerald-900/20 dark:to-teal-900/20"
-              >
-                <p className="text-sm leading-6 text-slate dark:text-white/80">✓ {fact}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* MCQ Practice Section */}
-        <section className="space-y-4">
-          <div className="mb-6 border-b border-slate-200 dark:border-zinc-700 pb-4">
-            <h2 className="text-2xl font-bold text-ink dark:text-white">📝 MCQ Practice</h2>
-          </div>
-          {category.mcqs.map((question, idx) => (
-            <div
-              key={question.id}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-soft dark:border-zinc-700 dark:bg-zinc-900"
-            >
-              <div className="mb-4">
-                <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
-                  Question {idx + 1}
-                </span>
-                <h3 className="mt-3 text-lg font-semibold text-ink dark:text-white">
-                  {question.question}
-                </h3>
-              </div>
-
-              <div className="space-y-2">
-                {question.options.map((option, optionIdx) => {
-                  const isSelected = selectedAnswers[question.id] === optionIdx
-                  const isCorrect = isAnswerCorrect(question.id, optionIdx)
-                  const isWrong = isSelected && !isCorrect
-                  const showCorrect = selectedAnswers[question.id] !== undefined && isCorrect
-
-                  return (
+        {/* Tab Content */}
+        <div className="min-h-96 space-y-4">
+          {/* Headlines Tab */}
+          {activeTab === 'headlines' && (
+            <div className="space-y-4">
+              {category.headlines.length === 0 ? (
+                <div className="rounded-lg bg-slate-50 p-8 text-center text-slate-500 dark:bg-zinc-900 dark:text-zinc-400">
+                  <p>No headlines available</p>
+                </div>
+              ) : (
+                category.headlines.map((headline) => (
+                  <div
+                    key={headline.id}
+                    className="rounded-xl border border-slate-200 bg-white p-6 shadow-soft transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900"
+                  >
                     <button
-                      key={optionIdx}
-                      onClick={() => handleAnswerSelect(question.id, optionIdx)}
-                      className={`w-full rounded-lg border-2 p-3 text-left transition ${
-                        isSelected
-                          ? isCorrect
-                            ? 'border-emerald-500 bg-emerald-50 dark:border-emerald-400 dark:bg-emerald-900/20'
-                            : 'border-red-500 bg-red-50 dark:border-red-400 dark:bg-red-900/20'
-                          : showCorrect
-                          ? 'border-emerald-500 bg-emerald-50 dark:border-emerald-400 dark:bg-emerald-900/20'
-                          : 'border-slate-200 bg-white hover:border-slate-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600'
-                      }`}
+                      onClick={() =>
+                        setExpandedHeadline(expandedHeadline === headline.id ? null : headline.id)
+                      }
+                      className="flex w-full items-start justify-between gap-4 text-left"
                     >
-                      <span className="text-sm font-medium">
-                        {String.fromCharCode(65 + optionIdx)}.{' '}
-                        <span className={isWrong ? 'text-red-600 dark:text-red-400' : 'text-ink dark:text-white'}>
-                          {option}
-                        </span>
-                      </span>
+                      <div className="flex-1">
+                        <h3 className="font-display text-lg font-bold text-ink dark:text-white">
+                          {headline.title}
+                        </h3>
+                        <p className="mt-1 text-xs font-medium text-orange-600 dark:text-orange-400">
+                          {headline.date}
+                        </p>
+                        <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                          {headline.summary}
+                        </p>
+                      </div>
+                      <div className="mt-2 shrink-0">
+                        {expandedHeadline === headline.id ? (
+                          <ChevronUp className="h-5 w-5 text-slate dark:text-white/60" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5 text-slate dark:text-white/60" />
+                        )}
+                      </div>
                     </button>
-                  )
-                })}
-              </div>
 
-              {selectedAnswers[question.id] !== undefined && (
-                <div className="mt-4 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
-                  <p className="text-sm font-semibold text-blue-900 dark:text-blue-300">
-                    {isAnswerCorrect(question.id, selectedAnswers[question.id]) ? '✓ Correct!' : '✗ Incorrect'}
-                  </p>
-                  <p className="mt-1 text-sm text-blue-700 dark:text-blue-400">{question.explanation}</p>
+                    {expandedHeadline === headline.id && (
+                      <div className="mt-4 border-t border-slate-200 pt-4 dark:border-zinc-700">
+                        <p className="text-sm leading-7 text-slate dark:text-white/80">
+                          {headline.content}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+
+          {/* Quick Facts Tab */}
+          {activeTab === 'facts' && (
+            <div className="space-y-3">
+              {category.quickFacts.length === 0 ? (
+                <div className="rounded-lg bg-slate-50 p-8 text-center text-slate-500 dark:bg-zinc-900 dark:text-zinc-400">
+                  <p>No quick facts available</p>
+                </div>
+              ) : (
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {category.quickFacts.map((fact, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-lg border border-emerald-200 bg-gradient-to-br from-emerald-50 to-teal-50 p-4 dark:border-emerald-900 dark:from-emerald-900/30 dark:to-teal-900/30"
+                    >
+                      <p className="text-sm font-medium leading-6 text-slate dark:text-white/80">
+                        ✓ {fact}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
-          ))}
-        </section>
+          )}
+
+          {/* MCQ Practice Tab */}
+          {activeTab === 'mcq' && (
+            <div className="space-y-6">
+              {category.mcqs.length === 0 ? (
+                <div className="rounded-lg bg-slate-50 p-8 text-center text-slate-500 dark:bg-zinc-900 dark:text-zinc-400">
+                  <p>No MCQs available</p>
+                </div>
+              ) : (
+                category.mcqs.map((question, idx) => (
+                  <div
+                    key={question.id}
+                    className="rounded-xl border border-slate-200 bg-white p-6 shadow-soft dark:border-zinc-700 dark:bg-zinc-900"
+                  >
+                    <div className="mb-4">
+                      <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+                        Question {idx + 1}
+                      </span>
+                      <h3 className="mt-3 text-base font-semibold text-ink dark:text-white">
+                        {question.question}
+                      </h3>
+                    </div>
+
+                    <div className="space-y-2">
+                      {question.options.map((option, optionIdx) => {
+                        const isSelected = selectedAnswers[question.id] === optionIdx
+                        const isCorrect = isAnswerCorrect(question.id, optionIdx)
+                        const isWrong = isSelected && !isCorrect
+                        const showCorrect =
+                          selectedAnswers[question.id] !== undefined && isCorrect
+
+                        return (
+                          <button
+                            key={optionIdx}
+                            onClick={() => handleAnswerSelect(question.id, optionIdx)}
+                            className={`w-full rounded-lg border-2 p-3 text-left transition ${
+                              isSelected
+                                ? isCorrect
+                                  ? 'border-emerald-500 bg-emerald-50 dark:border-emerald-400 dark:bg-emerald-900/20'
+                                  : 'border-red-500 bg-red-50 dark:border-red-400 dark:bg-red-900/20'
+                                : showCorrect
+                                ? 'border-emerald-500 bg-emerald-50 dark:border-emerald-400 dark:bg-emerald-900/20'
+                                : 'border-slate-200 bg-white hover:border-slate-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600'
+                            }`}
+                          >
+                            <span className="text-sm font-medium">
+                              {String.fromCharCode(65 + optionIdx)}.{' '}
+                              <span
+                                className={
+                                  isWrong ? 'text-red-600 dark:text-red-400' : 'text-ink dark:text-white'
+                                }
+                              >
+                                {option}
+                              </span>
+                            </span>
+                          </button>
+                        )
+                      })}
+                    </div>
+
+                    {selectedAnswers[question.id] !== undefined && (
+                      <div className="mt-4 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
+                        <p className="text-sm font-semibold text-blue-900 dark:text-blue-300">
+                          {isAnswerCorrect(question.id, selectedAnswers[question.id])
+                            ? '✓ Correct!'
+                            : '✗ Incorrect'}
+                        </p>
+                        <p className="mt-1 text-sm text-blue-700 dark:text-blue-400">
+                          {question.explanation}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </PageShell>
   )
