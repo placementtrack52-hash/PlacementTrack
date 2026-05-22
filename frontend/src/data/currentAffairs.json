@@ -1,0 +1,317 @@
+[
+  {
+    "id": "national",
+    "name": "National",
+    "icon": "🇮🇳",
+    "description": "Latest news, policies, and developments in India",
+    "color": "from-orange-200 via-yellow-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "National Education Policy 2023 Implementation",
+        "date": "May 2024",
+        "summary": "Ministry of Education rolls out NEP 2023 with new curriculum framework",
+        "content": "The National Education Policy 2023 implementation has entered Phase 2. Key highlights include integration of vocational training with academics, multilingual education options, and skill-based learning modules. This affects all school boards and higher educational institutions across India."
+      },
+      {
+        "id": 2,
+        "title": "India's Monsoon Forecast for 2024",
+        "date": "April 2024",
+        "summary": "IMD predicts normal monsoon with 102% of long-period average rainfall",
+        "content": "The India Meteorological Department (IMD) has predicted a normal monsoon season for 2024 with approximately 102% of the long-period average (LPA) rainfall expected. This is crucial for agriculture and water resources management across the country."
+      }
+    ],
+    "quickFacts": [
+      "India's GDP growth rate is projected at 6.2% for FY 2024-25",
+      "Union Budget 2024 allocates Rs. 2.14 lakh crore for capital expenditure",
+      "India's manufacturing sector contributes 17.3% to GDP",
+      "New Parliament Building inaugurated on September 18, 2023"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "Who is the current Chief Election Commissioner of India?",
+        "options": ["Rajiv Kumar", "Arunesh Kumar", "Sukhbir Singh Sandhu", "None of the above"],
+        "answer": 0,
+        "explanation": "Rajiv Kumar is the current Chief Election Commissioner of India, appointed in October 2022."
+      },
+      {
+        "id": 2,
+        "question": "In which year was the National Disaster Management Act enacted?",
+        "options": ["2003", "2005", "2007", "2009"],
+        "answer": 1,
+        "explanation": "The Disaster Management Act was enacted in 2005 and provides a comprehensive mechanism for disaster management in the country."
+      }
+    ]
+  },
+  {
+    "id": "international",
+    "name": "International",
+    "icon": "🌍",
+    "description": "Global news, international relations, and world events",
+    "color": "from-blue-200 via-cyan-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "Global Economic Growth Slowdown",
+        "date": "May 2024",
+        "summary": "IMF revises global growth forecast amid geopolitical tensions",
+        "content": "The International Monetary Fund has revised its global growth forecast downward to 3.2% for 2024, citing ongoing geopolitical tensions, inflation concerns, and trade uncertainties as major factors."
+      },
+      {
+        "id": 2,
+        "title": "UN Climate Summit Agreements",
+        "date": "April 2024",
+        "summary": "Nations commit to new climate action targets for 2025-2030",
+        "content": "At the latest UN climate summit, 195 countries agreed on enhanced climate commitments. The agreement focuses on reducing carbon emissions by 45% by 2030 and transitioning to renewable energy sources."
+      }
+    ],
+    "quickFacts": [
+      "USA remains the world's largest economy with GDP of $27.4 trillion",
+      "China's economy grew at 5.3% in 2023",
+      "EU approved €50 billion recovery package for Eastern Europe",
+      "BRICS expands with new member countries joining the bloc"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "Which country recently became the largest economy by GDP (as of 2024)?",
+        "options": ["China", "USA", "Japan", "Germany"],
+        "answer": 1,
+        "explanation": "The United States remains the world's largest economy with a nominal GDP exceeding $27 trillion."
+      },
+      {
+        "id": 2,
+        "question": "Who is the current UN Secretary-General?",
+        "options": ["Ban Ki-moon", "António Guterres", "Kofi Annan", "Dag Hammarskjöld"],
+        "answer": 1,
+        "explanation": "António Guterres has been serving as the UN Secretary-General since January 2017."
+      }
+    ]
+  },
+  {
+    "id": "economy",
+    "name": "Economy",
+    "icon": "💰",
+    "description": "Economic indicators, markets, and financial news",
+    "color": "from-emerald-200 via-green-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "RBI Maintains Repo Rate at 6.5%",
+        "date": "May 2024",
+        "summary": "Reserve Bank keeps benchmark rate unchanged to manage inflation",
+        "content": "The Reserve Bank of India's Monetary Policy Committee has decided to maintain the repo rate at 6.5%, citing inflation concerns and economic stability. The decision was expected by market analysts."
+      },
+      {
+        "id": 2,
+        "title": "Stock Markets Hit New Highs",
+        "date": "April 2024",
+        "summary": "Sensex and Nifty reach record levels on strong corporate earnings",
+        "content": "Indian stock markets have reached new all-time highs with the Sensex crossing 75,000 and Nifty 50 surpassing 22,500 marks, driven by strong Q4 earnings and positive FPI inflows."
+      }
+    ],
+    "quickFacts": [
+      "India's inflation rate stands at 4.2% (WPI basis)",
+      "Foreign Direct Investment in FY 2024 reached $85.1 billion",
+      "Rupee strengthened to 82.5 against US Dollar",
+      "National Stock Exchange is the world's largest exchange by trading volume"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "What is the current RBI Repo Rate (as of May 2024)?",
+        "options": ["6.0%", "6.5%", "7.0%", "5.5%"],
+        "answer": 1,
+        "explanation": "The RBI maintains the repo rate at 6.5% to balance inflation control and economic growth."
+      },
+      {
+        "id": 2,
+        "question": "Which ministry is responsible for Foreign Direct Investment (FDI) policies in India?",
+        "options": ["Ministry of Finance", "Ministry of External Affairs", "Ministry of Commerce & Industry", "Ministry of Corporate Affairs"],
+        "answer": 2,
+        "explanation": "The Ministry of Commerce & Industry handles FDI policies and foreign investment promotion in India."
+      }
+    ]
+  },
+  {
+    "id": "science-technology",
+    "name": "Science & Technology",
+    "icon": "🔬",
+    "description": "Scientific breakthroughs, tech innovations, and space exploration",
+    "color": "from-violet-200 via-purple-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "India's Chandrayaan-3 Success",
+        "date": "April 2024",
+        "summary": "ISRO's lunar lander completes successful mission operations",
+        "content": "Chandrayaan-3 has completed its mission objectives with successful deployment of scientific instruments on the lunar surface. This marks a significant achievement in India's space exploration program."
+      },
+      {
+        "id": 2,
+        "title": "Breakthrough in Quantum Computing",
+        "date": "May 2024",
+        "summary": "New quantum processor achieves error correction milestone",
+        "content": "Researchers have developed a quantum processor with significantly improved error correction capabilities, moving closer to practical quantum computing applications."
+      }
+    ],
+    "quickFacts": [
+      "ISRO successfully launched 36 Starlink satellites",
+      "India's space program budget allocation increased by 15%",
+      "5G networks now cover 95% of urban India",
+      "India ranks 4th in global AI research publications"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "Which Indian space mission successfully landed on the Moon's South Pole?",
+        "options": ["Chandrayaan-1", "Chandrayaan-2", "Chandrayaan-3", "Mangalyaan"],
+        "answer": 2,
+        "explanation": "Chandrayaan-3 successfully demonstrated soft landing and payload deployment on the lunar surface."
+      },
+      {
+        "id": 2,
+        "question": "What does ISRO stand for?",
+        "options": ["Indian Space Research Office", "Indian Space Research Organization", "Indian Scientific Research Office", "Indian Space Resources Organization"],
+        "answer": 1,
+        "explanation": "ISRO stands for Indian Space Research Organization, the national space agency of India."
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "icon": "⚽",
+    "description": "Sports events, player achievements, and sporting news",
+    "color": "from-red-200 via-rose-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "India Wins ICC T20 World Cup 2024",
+        "date": "June 2024",
+        "summary": "Team India defeats Australia in thrilling final",
+        "content": "India's cricket team won the ICC T20 World Cup 2024 after defeating Australia in the final. Virat Kohli's outstanding century played a crucial role in the victory."
+      },
+      {
+        "id": 2,
+        "title": "Paris Olympics 2024 Preparations",
+        "date": "May 2024",
+        "summary": "Indian athletes complete final training for upcoming games",
+        "content": "With just months to go, Indian athletes across various sports are intensifying their training for the Paris Olympics 2024, aiming to exceed the Tokyo 2020 medal tally."
+      }
+    ],
+    "quickFacts": [
+      "India won 7 medals at the Tokyo Olympics (2021)",
+      "Neeraj Chopra is India's first javelin throw Olympic gold medalist",
+      "IPL 2024 viewership increased by 28% over previous season",
+      "Badminton is India's fastest growing Olympic sport"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "Who is the captain of the Indian cricket team (as of 2024)?",
+        "options": ["Virat Kohli", "Rohit Sharma", "Rishabh Pant", "KL Rahul"],
+        "answer": 1,
+        "explanation": "Rohit Sharma is the captain of the Indian cricket team across all formats."
+      },
+      {
+        "id": 2,
+        "question": "In which sport did Neeraj Chopra win India's first Olympic gold (2021)?",
+        "options": ["Wrestling", "Javelin Throw", "Badminton", "Weightlifting"],
+        "answer": 1,
+        "explanation": "Neeraj Chopra won India's first individual Olympic gold medal in javelin throw at Tokyo 2021."
+      }
+    ]
+  },
+  {
+    "id": "awards",
+    "name": "Awards",
+    "icon": "🏆",
+    "description": "Prestigious awards, recognitions, and honors",
+    "color": "from-amber-200 via-orange-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "Padma Awards 2024 Announced",
+        "date": "January 2024",
+        "summary": "President honors 121 individuals with Padma Awards",
+        "content": "The President of India has announced 121 Padma Awards including 16 Padma Vibhushan, 93 Padma Bhushan, and 12 Padma Shri awards to recognize exceptional contributions in various fields."
+      },
+      {
+        "id": 2,
+        "title": "Bharat Ratna 2024 Bestowed",
+        "date": "March 2024",
+        "summary": "Three distinguished individuals receive India's highest civilian award",
+        "content": "The President has conferred the Bharat Ratna, India's highest civilian honor, to three deserving individuals for their extraordinary contributions to national development."
+      }
+    ],
+    "quickFacts": [
+      "Padma Vibhushan is the 2nd highest civilian award",
+      "Bharat Ratna recipients are announced on Republic Day",
+      "Ashoka Chakra is awarded for bravery in wartime",
+      "Kirti Chakra is awarded for bravery in peacetime"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "Which is India's highest civilian award?",
+        "options": ["Padma Vibhushan", "Padma Bhushan", "Bharat Ratna", "Padma Shri"],
+        "answer": 2,
+        "explanation": "Bharat Ratna is India's highest civilian honor awarded for exceptional service to the nation."
+      },
+      {
+        "id": 2,
+        "question": "On which date are Padma Awards announced annually?",
+        "options": ["January 26", "August 15", "October 2", "November 1"],
+        "answer": 0,
+        "explanation": "Padma Awards are traditionally announced on Republic Day, January 26."
+      }
+    ]
+  },
+  {
+    "id": "government-schemes",
+    "name": "Government Schemes",
+    "icon": "📋",
+    "description": "Government programs, schemes, and policy updates",
+    "color": "from-teal-200 via-cyan-100 to-white",
+    "headlines": [
+      {
+        "id": 1,
+        "title": "PM-Kisan Samman Nidhi Extended",
+        "date": "April 2024",
+        "summary": "Scheme now covers additional categories of farmers",
+        "content": "The government has extended PM-Kisan Samman Nidhi to include marginal landholders and tenant farmers, ensuring more farmers benefit from the Rs. 6,000 annual support."
+      },
+      {
+        "id": 2,
+        "title": "Ayushman Bharat Coverage Expands",
+        "date": "May 2024",
+        "summary": "Healthcare scheme reaches 50 million additional beneficiaries",
+        "content": "The Ayushman Bharat scheme has been expanded to provide health coverage to 50 million additional families, strengthening the healthcare delivery system across rural and semi-urban areas."
+      }
+    ],
+    "quickFacts": [
+      "Pradhan Mantri Jan Dhan Yojana has 500+ million beneficiaries",
+      "Ujwala scheme has distributed 100+ million LPG connections",
+      "Pradhan Mantri Kaushal Vikas Yojana has trained 15 million youth",
+      "Start-up India scheme has supported 100,000+ startups"
+    ],
+    "mcqs": [
+      {
+        "id": 1,
+        "question": "How much annual financial support does PM-Kisan provide to farmers?",
+        "options": ["Rs. 2,000", "Rs. 4,000", "Rs. 6,000", "Rs. 8,000"],
+        "answer": 2,
+        "explanation": "PM-Kisan Samman Nidhi provides Rs. 6,000 per year in three installments to eligible farmers."
+      },
+      {
+        "id": 2,
+        "question": "What is the maximum coverage amount under Ayushman Bharat?",
+        "options": ["Rs. 1 lakh", "Rs. 3 lakhs", "Rs. 5 lakhs", "Rs. 10 lakhs"],
+        "answer": 3,
+        "explanation": "Ayushman Bharat provides health coverage up to Rs. 5 lakh per family per year for hospitalization."
+      }
+    ]
+  }
+]

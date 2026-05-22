@@ -230,6 +230,80 @@ const SubjectsPage = () => {
             Explore Projects
           </span>
         </Link>
+
+        {/* ── Current Affairs Card ── */}
+        <Link
+          to="/subjects/current-affairs"
+          className="rounded-[1.75rem] bg-gradient-to-br from-orange-200 via-red-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">📰</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">Current Affairs</h3>
+              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                Stay updated with national, international, economic, and scientific news. Practice MCQs and quick facts.
+              </p>
+            </div>
+            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-emerald-300">
+              7 categories
+            </span>
+          </div>
+          <div className="mt-6">
+            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
+              <span>Categories</span>
+              <span>Stay Updated</span>
+            </div>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-500"
+                style={{ width: '100%' }}
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate dark:text-white/70">
+              National • International • Economy • Science • Sports • Awards • Schemes
+            </p>
+          </div>
+          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
+            Read Latest News
+          </span>
+        </Link>
+
+        {/* ── Government Exams Card ── */}
+        <Link
+          to="/subjects/government-exams"
+          className="rounded-[1.75rem] bg-gradient-to-br from-blue-200 via-indigo-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">🏛️</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">Government Exams</h3>
+              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                Comprehensive preparation for UPSC, SSC, Banking, Railways, Defence, Police, Teaching, and State PSCs.
+              </p>
+            </div>
+            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-emerald-300">
+              8 exams
+            </span>
+          </div>
+          <div className="mt-6">
+            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
+              <span>Coverage</span>
+              <span>Complete Prep</span>
+            </div>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-blue-400 to-indigo-600 transition-all duration-500"
+                style={{ width: '100%' }}
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate dark:text-white/70">
+              Syllabus • PYQ • Quiz • Notes • Roadmap • Mock Tests
+            </p>
+          </div>
+          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
+            Explore Exams
+          </span>
+        </Link>
       </div>
     </PageShell>
   )

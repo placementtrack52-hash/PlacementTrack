@@ -47,6 +47,10 @@ import CompanyPYQDetailPage from './pages/CompanyPYQDetailPage'
 import CompanyPYQSectionPage from './pages/CompanyPYQSectionPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import CurrentAffairsPage from './pages/CurrentAffairsPage'
+import CurrentAffairsCategoryPage from './pages/CurrentAffairsCategoryPage'
+import GovernmentExamsPage from './pages/GovernmentExamsPage'
+import GovernmentExamDetailPage from './pages/GovernmentExamDetailPage'
 
 const DashboardPage = lazy(() => import('./pages/DashboardPage'))
 
@@ -146,6 +150,10 @@ const AppContent = () => {
       <Route path="/subjects/pyq" element={<ProtectedRoute><CompanyPYQPage /></ProtectedRoute>} />
       <Route path="/subjects/projects" element={<ProtectedRoute><ProjectsPage /></ProtectedRoute>} />
       <Route path="/subjects/projects/:id" element={<ProtectedRoute><ProjectDetailPage /></ProtectedRoute>} />
+      <Route path="/subjects/current-affairs" element={<ProtectedRoute><CurrentAffairsPage /></ProtectedRoute>} />
+      <Route path="/subjects/current-affairs/:categoryId" element={<ProtectedRoute><CurrentAffairsCategoryPage /></ProtectedRoute>} />
+      <Route path="/subjects/government-exams" element={<ProtectedRoute><GovernmentExamsPage /></ProtectedRoute>} />
+      <Route path="/subjects/government-exams/:examId" element={<ProtectedRoute><GovernmentExamDetailPage /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
     <FeedbackWidget />
