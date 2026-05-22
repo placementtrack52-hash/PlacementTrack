@@ -46,7 +46,7 @@ const GovernmentExamsPage = () => {
             <div className="mt-6 grid grid-cols-2 gap-2 text-xs">
               <div className="rounded-lg bg-white/50 p-2 dark:bg-zinc-800/50">
                 <div className="font-semibold text-slate dark:text-white/70">
-                  {exam.sections.mcqs.totalQuizzes}
+                  {((exam.sections.quiz && exam.sections.quiz.totalQuizzes) || (exam.sections.mcqs && exam.sections.mcqs.totalQuizzes) || 0)}
                 </div>
                 <div className="text-slate dark:text-white/60">Quizzes</div>
               </div>
