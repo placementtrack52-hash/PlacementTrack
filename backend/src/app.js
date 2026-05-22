@@ -9,6 +9,7 @@ import userDataRoutes from './routes/userDataRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import feedbackRoutes from './routes/feedbackRoutes.js'
 import pyqRoutes from './routes/pyqRoutes.js'
+import resumeRoutes from './routes/resumeRoutes.js'
 import { isAllowedOrigin } from './config/clientOrigins.js'
 
 const app = express()
@@ -43,5 +44,6 @@ app.use('/api/user-data', userDataRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/feedback', feedbackRoutes)
 app.use('/api/pyq', pyqRoutes)
+app.use('/api/resume', resumeRoutes)
 
 export default app

@@ -8,7 +8,7 @@ const buildOptions = (options = {}) => ({
   credentials: 'include',
   ...options,
   headers: {
-    ...defaultHeaders,
+    ...(options.body instanceof FormData ? {} : defaultHeaders),
     ...(options.headers ?? {}),
   },
 })
@@ -167,4 +167,17 @@ export const feedbackApi = {
       method: 'PATCH',
       body: JSON.stringify(payload),
     }),
+}
+
+export const resumeApi = {
+  analyze: (file) => {
+    const formData = new FormData()
+    formData.append('resume', file)
+
+    return apiRequest('/resume/analyze', {
+      method: 'POST',
+      body: formData,
+    })
+  },
+  analyzeDemo: () => apiRequest('/resume/demo'),
 }

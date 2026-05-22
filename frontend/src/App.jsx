@@ -49,6 +49,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
 import CurrentAffairsPage from './pages/CurrentAffairsPage'
 import CurrentAffairsCategoryPage from './pages/CurrentAffairsCategoryPage'
+import ResumeCheckerPage from './pages/ResumeCheckerPage'
 
 const DashboardPage = lazy(() => import('./pages/DashboardPage'))
 
@@ -125,6 +126,7 @@ const AppContent = () => {
       <Route path="/subjects/code/problem/:id" element={<ProtectedRoute><CodeProblemPage /></ProtectedRoute>} />
       <Route path="/subjects/pyq/:company/:section" element={<ProtectedRoute><CompanyPYQSectionPage /></ProtectedRoute>} />
       <Route path="/subjects/pyq/:company" element={<ProtectedRoute><CompanyPYQDetailPage /></ProtectedRoute>} />
+      <Route path="/subjects/ats-resume-checker" element={<ProtectedRoute><ResumeCheckerPage /></ProtectedRoute>} />
       <Route path="/subjects/:subjectId" element={<ProtectedRoute><SubjectTopicsPage /></ProtectedRoute>} />
       <Route path="/subjects/:subjectId/topics/:topicId" element={<ProtectedRoute><TopicDetailPage /></ProtectedRoute>} />
       <Route path="/subjects/:subjectId/topics/:topicId/quiz/:level" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} />

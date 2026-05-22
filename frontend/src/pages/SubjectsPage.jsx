@@ -268,6 +268,42 @@ const SubjectsPage = () => {
           </span>
         </Link>
 
+        <Link
+          to="/subjects/ats-resume-checker"
+          className="rounded-[1.75rem] bg-gradient-to-br from-emerald-200 via-teal-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">ATS</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">ATS Resume Checker</h3>
+              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                Analyze resume quality, ATS compatibility, keywords, missing sections, and placement readiness.
+              </p>
+            </div>
+            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-emerald-300">
+              ATS Score
+            </span>
+          </div>
+          <div className="mt-6">
+            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
+              <span>Review Areas</span>
+              <span>8 checks</span>
+            </div>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-teal-500 to-sky-500 transition-all duration-500"
+                style={{ width: '82%' }}
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate dark:text-white/70">
+              Resume Analyzer • Smart Review • Placement Ready
+            </p>
+          </div>
+          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
+            Analyze Resume
+          </span>
+        </Link>
+
       </div>
     </PageShell>
   )
