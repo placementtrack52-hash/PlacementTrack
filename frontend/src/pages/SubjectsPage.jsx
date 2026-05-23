@@ -270,7 +270,7 @@ const SubjectsPage = () => {
 
         <Link
           to="/placement-notes"
-          className="rounded-[1.75rem] bg-gradient-to-br from-violet-200 via-fuchsia-100 to-white p-6 shadow-soft transition hover:translate-y-[-2px] dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+          className="rounded-[1.75rem] bg-gradient-to-br from-violet-200 via-fuchsia-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
         >
           <div className="flex items-start justify-between gap-4">
             <div>

@@ -7,8 +7,8 @@ export const NOTES_LANGUAGES = [
     name: 'Java',
     emoji: '☕',
     description: 'Core Java for campus placements — JVM, OOP, collections, and interview MCQs.',
-    gradient: 'from-amber-500/20 via-orange-500/10 to-zinc-900',
-    accent: 'from-amber-400 to-orange-500',
+    color: 'from-amber-200 via-orange-100 to-white',
+    progressBar: 'from-amber-400 to-orange-500',
     notes: javaNotes,
   },
   {
@@ -16,8 +16,8 @@ export const NOTES_LANGUAGES = [
     name: 'Python',
     emoji: '🐍',
     description: 'Python fundamentals — syntax, data structures, and coding round patterns.',
-    gradient: 'from-sky-500/20 via-blue-500/10 to-zinc-900',
-    accent: 'from-sky-400 to-blue-500',
+    color: 'from-sky-200 via-cyan-100 to-white',
+    progressBar: 'from-sky-400 to-blue-500',
     notes: pythonNotes,
   },
 ]

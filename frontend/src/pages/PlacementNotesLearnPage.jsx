@@ -6,6 +6,7 @@ import {
   getPreviousTopic,
   getTopicBySlug,
 } from '../data/notes/index.js'
+import PageShell from '../components/PageShell'
 import NotesSidebar from '../features/placementNotes/components/NotesSidebar'
 import TopicMainContent from '../features/placementNotes/components/TopicMainContent'
 import { usePlacementNotesProgress } from '../features/placementNotes/hooks/usePlacementNotesProgress'
@@ -36,6 +37,8 @@ const PlacementNotesLearnPage = () => {
     return set
   }, [topics, language, isCompleted, state])
 
+  const topicDone = topic ? isCompleted(language, topic.slug) : false
+
   useEffect(() => {
     if (language && slug && topic) {
       markVisited(language, slug)
@@ -55,30 +58,45 @@ const PlacementNotesLearnPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-zinc-950/95 px-4 py-3 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4">
+    <PageShell
+      title={topic?.title ?? `${langConfig.name} Notes`}
+      subtitle={
+        topic?.description ??
+        `Study ${langConfig.name} topics with notes, examples, quizzes, and interview questions.`
+      }
+      actions={
+        topic ? (
+          <>
+            <label className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-medium text-ink dark:bg-white dark:text-[#0f1720]">
+              <input
+                type="checkbox"
+                checked={topicDone}
+                onChange={(e) => handleToggleComplete(topic.slug, e.target.checked)}
+                className="h-4 w-4 rounded border-ink/20 text-moss focus:ring-moss"
+              />
+              Mark as completed
+            </label>
+            <Link
+              to="/placement-notes"
+              className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-[#0f1720]"
+            >
+              All languages
+            </Link>
+          </>
+        ) : (
           <Link
             to="/placement-notes"
-            className="text-sm font-medium text-violet-400 hover:text-violet-300"
+            className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-[#0f1720]"
           >
-            Placement Notes
+            All languages
           </Link>
-          <span className="hidden text-sm text-zinc-500 sm:inline">
-            {langConfig.emoji} {langConfig.name}
-          </span>
-          <Link
-            to="/subjects"
-            className="text-sm text-zinc-400 hover:text-white"
-          >
-            Subjects
-          </Link>
-        </div>
-      </header>
-
-      <div className="mx-auto flex max-w-[1600px]">
+        )
+      }
+    >
+      <div className="grid gap-6 lg:grid-cols-[18rem_1fr]">
         <NotesSidebar
           language={language}
+          languageName={langConfig.name}
           topics={topics}
           activeSlug={slug}
           search={search}
@@ -88,6 +106,7 @@ const PlacementNotesLearnPage = () => {
           onToggleComplete={handleToggleComplete}
           lastVisited={state.lastVisited}
           mobileOpen={mobileOpen}
+          onOpenMobile={() => setMobileOpen(true)}
           onCloseMobile={() => setMobileOpen(false)}
         />
         <TopicMainContent
@@ -95,10 +114,9 @@ const PlacementNotesLearnPage = () => {
           language={language}
           previousTopic={previousTopic}
           nextTopic={nextTopic}
-          onOpenSidebar={() => setMobileOpen(true)}
         />
       </div>
-    </div>
+    </PageShell>
   )
 }
 

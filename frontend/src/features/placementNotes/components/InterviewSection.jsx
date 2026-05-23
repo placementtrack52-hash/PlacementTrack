@@ -7,13 +7,15 @@ const InterviewSection = ({ questions = [] }) => {
   if (!questions.length) return null
 
   return (
-    <section className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6 backdrop-blur-md">
+    <section className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-gradient-to-br dark:from-zinc-900 dark:via-black dark:to-zinc-900">
       <div className="flex items-center gap-2">
-        <MessageCircle className="h-5 w-5 text-violet-400" />
-        <h3 className="font-display text-xl font-bold text-white">Interview Questions</h3>
+        <MessageCircle className="h-5 w-5 text-moss dark:text-emerald-400" />
+        <h3 className="font-display text-xl font-semibold text-ink dark:text-white">Interview questions</h3>
       </div>
-      <p className="mt-1 text-sm text-zinc-400">Common placement interview prompts for this topic.</p>
-      <div className="mt-4 divide-y divide-white/10">
+      <p className="mt-1 text-sm text-slate dark:text-white/70">
+        Common placement interview prompts for this topic.
+      </p>
+      <div className="mt-4 divide-y divide-[#f1e6d8] dark:divide-white/10">
         {questions.map((item, index) => {
           const isOpen = openIndex === index
           return (
@@ -23,13 +25,13 @@ const InterviewSection = ({ questions = [] }) => {
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 className="flex w-full items-center justify-between gap-3 text-left"
               >
-                <span className="font-medium text-zinc-100">{item.question}</span>
+                <span className="font-medium text-ink dark:text-white">{item.question}</span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 text-zinc-500 transition ${isOpen ? 'rotate-180' : ''}`}
+                  className={`h-5 w-5 shrink-0 text-slate transition dark:text-white/50 ${isOpen ? 'rotate-180' : ''}`}
                 />
               </button>
               {isOpen ? (
-                <p className="mt-3 rounded-lg bg-zinc-950/60 p-4 text-sm leading-relaxed text-zinc-300">
+                <p className="mt-3 rounded-[1.25rem] border border-[#f1e6d8] bg-sand/40 p-4 text-sm leading-relaxed text-slate dark:border-white/10 dark:bg-zinc-950 dark:text-white/80">
                   {item.answer}
                 </p>
               ) : null}
