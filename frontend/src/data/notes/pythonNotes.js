@@ -6,7 +6,8 @@ export const pythonNotes = [
     image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200&h=400&fit=crop',
     readTime: '7 min',
     difficulty: 'Beginner',
-    description: 'Learn Python syntax, interpreter workflow, and why it dominates data + automation interviews.',
+    description:
+      'Learn **Python** syntax, interpreter workflow, and why this **programming language** dominates data and automation interviews.',
     companyTags: ['TCS', 'Wipro', 'IBM', 'Startups'],
     sections: [
       {

@@ -35,47 +35,46 @@ const FakeCompiler = ({ language = 'java', sampleOutput = 'Run to simulate outpu
   const monacoLang = language === 'python' ? 'python' : 'java'
 
   return (
-    <section className="overflow-hidden rounded-[1.75rem] border border-black/10 bg-white shadow-soft dark:border-white/10 dark:bg-zinc-900">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 px-4 py-3 dark:border-white/10">
-        <p className="text-sm font-semibold text-ink dark:text-white">Code playground</p>
+    <div className="overflow-hidden rounded-md border border-slate-200 dark:border-zinc-700">
+      <div className="flex items-center justify-between border-b border-slate-200 bg-[#f5f7fa] px-3 py-2 dark:border-zinc-700 dark:bg-zinc-950">
+        <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Playground</span>
         <button
           type="button"
           onClick={handleRun}
           disabled={running}
-          className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white disabled:opacity-60 dark:bg-white dark:text-[#0f1720]"
+          className="inline-flex items-center gap-1.5 rounded bg-[#2563eb] px-3 py-1 text-xs font-semibold text-white disabled:opacity-60"
         >
-          <Play className="h-4 w-4" />
+          <Play className="h-3.5 w-3.5" />
           {running ? 'Running...' : 'Run'}
         </button>
       </div>
-      <div className="min-h-[200px] border-b border-black/10 dark:border-white/10">
+      <div className="min-h-[180px] border-b border-slate-200 dark:border-zinc-700">
         <Editor
-          height="200px"
+          height="180px"
           language={monacoLang}
           theme="vs-dark"
           value={code}
           onChange={(value) => setCode(value ?? '')}
           options={{
             minimap: { enabled: false },
-            fontSize: 14,
-            padding: { top: 12 },
+            fontSize: 13,
             scrollBeyondLastLine: false,
             lineNumbers: 'on',
           }}
         />
       </div>
-      <div className="bg-[#f8fafc] p-4 dark:bg-zinc-950">
-        <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate dark:text-white/50">
-          <Terminal className="h-4 w-4" />
-          Terminal (simulated)
+      <div className="bg-[#f8fafc] p-3 dark:bg-zinc-950">
+        <div className="mb-1 flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+          <Terminal className="h-3.5 w-3.5" />
+          Output
         </div>
-        <div className="rounded-[1rem] bg-zinc-900 p-3 font-mono text-sm text-emerald-400/90">
+        <pre className="rounded bg-zinc-900 p-2 font-mono text-xs text-emerald-400">
           {terminalLines.map((line, i) => (
             <div key={i}>{line}</div>
           ))}
-        </div>
+        </pre>
       </div>
-    </section>
+    </div>
   )
 }
 

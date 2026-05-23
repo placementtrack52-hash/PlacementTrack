@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Check, Search, BookOpen, List } from 'lucide-react'
-import ProgressBar from '../../../components/ProgressBar'
+import { Check, Search, List } from 'lucide-react'
 
 const NotesSidebar = ({
   language,
@@ -12,7 +11,6 @@ const NotesSidebar = ({
   progressPercent,
   completedSlugs,
   onToggleComplete,
-  lastVisited,
   mobileOpen,
   onOpenMobile,
   onCloseMobile,
@@ -23,122 +21,109 @@ const NotesSidebar = ({
       t.slug.toLowerCase().includes(search.toLowerCase()),
   )
 
-  const continueTopic =
-    lastVisited?.language === language
-      ? topics.find((t) => t.slug === lastVisited.slug)
-      : topics[0]
-
-  const sidebarContent = (
-    <div className="rounded-[1.75rem] bg-white p-4 shadow-soft dark:bg-gradient-to-br dark:from-zinc-900 dark:via-black dark:to-zinc-900">
-      <Link
-        to="/placement-notes"
-        onClick={onCloseMobile}
-        className="text-xs font-semibold uppercase tracking-[0.2em] text-moss hover:underline dark:text-emerald-400"
-      >
-        ← All languages
-      </Link>
-      <h2 className="mt-2 font-display text-lg font-bold text-ink dark:text-white">
-        {languageName} topics
-      </h2>
-      <div className="mt-4">
-        <div className="mb-2 flex justify-between text-xs text-slate dark:text-white/70">
-          <span>Progress</span>
-          <span>{progressPercent}%</span>
-        </div>
-        <ProgressBar value={progressPercent} />
-      </div>
-
-      {continueTopic ? (
-        <div className="mt-4 rounded-[1.25rem] border border-[#f1e6d8] bg-sand/50 p-3 dark:border-white/10 dark:bg-zinc-950/50">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate dark:text-white/60">
-            Continue learning
-          </p>
-          <Link
-            to={`/placement-notes/${language}/${continueTopic.slug}`}
-            onClick={onCloseMobile}
-            className="mt-2 block text-sm font-semibold text-ink hover:underline dark:text-white"
-          >
-            {continueTopic.title}
-          </Link>
-          <p className="mt-1 text-xs text-slate dark:text-white/60">{continueTopic.readTime}</p>
-        </div>
-      ) : null}
-
-      <div className="relative mt-4">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate dark:text-white/50" />
-        <input
-          type="search"
-          placeholder="Search topics..."
-          value={search}
-          onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full rounded-full border border-black/10 bg-white py-2 pl-9 pr-3 text-sm text-ink placeholder:text-slate focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss/30 dark:border-white/10 dark:bg-zinc-950 dark:text-white dark:placeholder:text-white/40"
-        />
-      </div>
-
-      <nav className="mt-4 max-h-[min(24rem,50vh)] space-y-2 overflow-y-auto pr-1">
-        {filtered.map((topic) => {
-          const isActive = topic.slug === activeSlug
-          const done = completedSlugs.has(topic.slug)
-          return (
+  const sidebarInner = (
+    <>
+      <div className="border-b border-slate-200 bg-white px-4 py-4 dark:border-zinc-800 dark:bg-zinc-900">
+        <Link
+          to="/placement-notes"
+          onClick={onCloseMobile}
+          className="text-xs font-medium text-[#2563eb] hover:underline dark:text-blue-400"
+        >
+          ← All languages
+        </Link>
+        <h2 className="mt-2 text-lg font-bold text-slate-800 dark:text-white">
+          {languageName} Tutorial
+        </h2>
+        <div className="mt-3">
+          <div className="mb-1 flex justify-between text-xs text-slate-500 dark:text-slate-400">
+            <span>Progress</span>
+            <span>{progressPercent}%</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-zinc-700">
             <div
-              key={topic.slug}
-              className={`flex items-start gap-2 rounded-[1.25rem] border px-2 py-2 transition ${
-                isActive
-                  ? 'border-moss/40 bg-[#eef7f2] dark:border-emerald-500/40 dark:bg-emerald-950/30'
-                  : 'border-transparent hover:border-black/10 hover:bg-sand/40 dark:hover:border-white/10 dark:hover:bg-zinc-900'
-              }`}
-            >
-              <button
-                type="button"
-                onClick={() => onToggleComplete(topic.slug, !done)}
-                className={`mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded border ${
-                  done
-                    ? 'border-moss bg-moss text-white dark:border-emerald-500 dark:bg-emerald-600'
-                    : 'border-ink/20 dark:border-white/30'
-                }`}
-                aria-label={done ? 'Mark incomplete' : 'Mark complete'}
-              >
-                {done ? <Check className="h-2.5 w-2.5" /> : null}
-              </button>
-              <Link
-                to={`/placement-notes/${language}/${topic.slug}`}
-                onClick={onCloseMobile}
-                className="min-w-0 flex-1"
-              >
-                <p className="text-sm font-medium text-ink dark:text-white">{topic.title}</p>
-                <p className="text-xs text-slate dark:text-white/60">
-                  {topic.difficulty} · {topic.readTime}
-                </p>
-              </Link>
-            </div>
-          )
-        })}
+              className="h-full rounded-full bg-[#2e7d32] transition-all duration-300 dark:bg-emerald-500"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="border-b border-slate-200 px-3 py-3 dark:border-zinc-800">
+        <div className="relative">
+          <Search className="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+          <input
+            type="search"
+            placeholder="Search topics..."
+            value={search}
+            onChange={(e) => onSearchChange(e.target.value)}
+            className="w-full rounded border border-slate-200 bg-white py-2 pl-8 pr-2 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#2563eb] focus:outline-none focus:ring-1 focus:ring-[#2563eb]/30 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white"
+          />
+        </div>
+      </div>
+
+      <nav className="flex-1 overflow-y-auto py-2">
+        <ul>
+          {filtered.map((topic) => {
+            const isActive = topic.slug === activeSlug
+            const done = completedSlugs.has(topic.slug)
+            return (
+              <li key={topic.slug}>
+                <div
+                  className={`group flex items-center gap-1 border-l-[3px] ${
+                    isActive
+                      ? 'border-l-[#2563eb] bg-white dark:border-l-blue-400 dark:bg-zinc-800'
+                      : 'border-l-transparent hover:bg-white/80 dark:hover:bg-zinc-800/60'
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => onToggleComplete(topic.slug, !done)}
+                    className={`ml-2 flex h-4 w-4 shrink-0 items-center justify-center rounded border ${
+                      done
+                        ? 'border-[#2e7d32] bg-[#2e7d32] text-white'
+                        : 'border-slate-300 bg-white dark:border-zinc-600 dark:bg-zinc-900'
+                    }`}
+                    aria-label={done ? 'Mark incomplete' : 'Mark complete'}
+                  >
+                    {done ? <Check className="h-2.5 w-2.5" /> : null}
+                  </button>
+                  <Link
+                    to={`/placement-notes/${language}/${topic.slug}`}
+                    onClick={onCloseMobile}
+                    className={`min-w-0 flex-1 py-2.5 pr-4 text-sm leading-snug ${
+                      isActive
+                        ? 'font-semibold text-[#2563eb] dark:text-blue-400'
+                        : 'text-slate-700 hover:text-[#2563eb] dark:text-slate-300 dark:hover:text-blue-400'
+                    }`}
+                  >
+                    {topic.title}
+                  </Link>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
         {filtered.length === 0 ? (
-          <p className="py-4 text-center text-sm text-slate dark:text-white/60">No topics found.</p>
+          <p className="px-4 py-6 text-center text-sm text-slate-500">No topics found.</p>
         ) : null}
       </nav>
-
-      <p className="mt-4 flex items-center gap-2 text-xs text-slate dark:text-white/60">
-        <BookOpen className="h-3.5 w-3.5" />
-        {topics.length} topics
-      </p>
-    </div>
+    </>
   )
 
   return (
     <>
-      <div className="hidden lg:block">
-        <div className="sticky top-[140px]">{sidebarContent}</div>
-      </div>
+      <aside className="hidden w-[260px] shrink-0 flex-col border-r border-slate-200 bg-[#f5f7fa] lg:flex dark:border-zinc-800 dark:bg-zinc-950">
+        {sidebarInner}
+      </aside>
 
       <div className="lg:hidden">
         <button
           type="button"
           onClick={onOpenMobile}
-          className="mb-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-ink dark:border-white/10 dark:bg-zinc-900 dark:text-white"
+          className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded border border-slate-200 bg-[#f5f7fa] px-4 py-2.5 text-sm font-medium text-slate-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white"
         >
           <List className="h-4 w-4" />
-          Browse topics
+          Table of contents
         </button>
       </div>
 
@@ -150,16 +135,16 @@ const NotesSidebar = ({
             onClick={onCloseMobile}
             aria-label="Close menu"
           />
-          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto rounded-t-3xl bg-white p-4 shadow-2xl dark:bg-zinc-900">
-            {sidebarContent}
+          <aside className="absolute left-0 top-0 flex h-full w-[min(100%,280px)] flex-col border-r border-slate-200 bg-[#f5f7fa] shadow-xl dark:border-zinc-800 dark:bg-zinc-950">
+            {sidebarInner}
             <button
               type="button"
               onClick={onCloseMobile}
-              className="mt-4 w-full rounded-full bg-ink py-3 text-sm font-semibold text-white dark:bg-white dark:text-black"
+              className="m-3 rounded border border-slate-200 bg-white py-2 text-sm font-medium dark:border-zinc-700 dark:bg-zinc-900 dark:text-white"
             >
               Close
             </button>
-          </div>
+          </aside>
         </div>
       ) : null}
     </>

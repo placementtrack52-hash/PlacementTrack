@@ -1,37 +1,36 @@
 import { useState } from 'react'
-import { ChevronDown, MessageCircle } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 const InterviewSection = ({ questions = [] }) => {
-  const [openIndex, setOpenIndex] = useState(null)
+  const [openIndex, setOpenIndex] = useState(0)
 
   if (!questions.length) return null
 
   return (
-    <section className="rounded-[1.75rem] bg-white p-6 shadow-soft dark:bg-gradient-to-br dark:from-zinc-900 dark:via-black dark:to-zinc-900">
-      <div className="flex items-center gap-2">
-        <MessageCircle className="h-5 w-5 text-moss dark:text-emerald-400" />
-        <h3 className="font-display text-xl font-semibold text-ink dark:text-white">Interview questions</h3>
-      </div>
-      <p className="mt-1 text-sm text-slate dark:text-white/70">
+    <section className="mb-8 border-t border-slate-200 pt-8 dark:border-zinc-800">
+      <h2 className="text-xl font-bold text-slate-900 dark:text-white">Interview questions</h2>
+      <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
         Common placement interview prompts for this topic.
       </p>
-      <div className="mt-4 divide-y divide-[#f1e6d8] dark:divide-white/10">
+      <div className="mt-4 divide-y divide-slate-200 dark:divide-zinc-800">
         {questions.map((item, index) => {
           const isOpen = openIndex === index
           return (
             <div key={index} className="py-3">
               <button
                 type="button"
-                onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="flex w-full items-center justify-between gap-3 text-left"
+                onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                className="flex w-full items-start justify-between gap-3 text-left"
               >
-                <span className="font-medium text-ink dark:text-white">{item.question}</span>
+                <span className="font-medium text-slate-800 dark:text-white">
+                  Q{index + 1}. {item.question}
+                </span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 text-slate transition dark:text-white/50 ${isOpen ? 'rotate-180' : ''}`}
+                  className={`mt-1 h-5 w-5 shrink-0 text-slate-400 transition ${isOpen ? 'rotate-180' : ''}`}
                 />
               </button>
               {isOpen ? (
-                <p className="mt-3 rounded-[1.25rem] border border-[#f1e6d8] bg-sand/40 p-4 text-sm leading-relaxed text-slate dark:border-white/10 dark:bg-zinc-950 dark:text-white/80">
+                <p className="mt-3 rounded border border-slate-100 bg-[#f8fafc] p-4 text-sm leading-relaxed text-slate-700 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-300">
                   {item.answer}
                 </p>
               ) : null}

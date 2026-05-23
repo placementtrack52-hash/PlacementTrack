@@ -59,62 +59,55 @@ const PlacementNotesLearnPage = () => {
 
   return (
     <PageShell
-      title={topic?.title ?? `${langConfig.name} Notes`}
-      subtitle={
-        topic?.description ??
-        `Study ${langConfig.name} topics with notes, examples, quizzes, and interview questions.`
-      }
+      title={`${langConfig.name} Tutorial`}
+      subtitle="Topic-wise notes for placement preparation — read, practice, and track progress."
       actions={
-        topic ? (
-          <>
-            <label className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-medium text-ink dark:bg-white dark:text-[#0f1720]">
+        <>
+          {topic ? (
+            <label className="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-ink dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
               <input
                 type="checkbox"
                 checked={topicDone}
                 onChange={(e) => handleToggleComplete(topic.slug, e.target.checked)}
                 className="h-4 w-4 rounded border-ink/20 text-moss focus:ring-moss"
               />
-              Mark as completed
+              Mark completed
             </label>
-            <Link
-              to="/placement-notes"
-              className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-[#0f1720]"
-            >
-              All languages
-            </Link>
-          </>
-        ) : (
+          ) : null}
           <Link
             to="/placement-notes"
             className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-[#0f1720]"
           >
             All languages
           </Link>
-        )
+        </>
       }
     >
-      <div className="grid gap-6 lg:grid-cols-[18rem_1fr]">
-        <NotesSidebar
-          language={language}
-          languageName={langConfig.name}
-          topics={topics}
-          activeSlug={slug}
-          search={search}
-          onSearchChange={setSearch}
-          progressPercent={langProgressPercent}
-          completedSlugs={completedSlugs}
-          onToggleComplete={handleToggleComplete}
-          lastVisited={state.lastVisited}
-          mobileOpen={mobileOpen}
-          onOpenMobile={() => setMobileOpen(true)}
-          onCloseMobile={() => setMobileOpen(false)}
-        />
-        <TopicMainContent
-          topic={topic}
-          language={language}
-          previousTopic={previousTopic}
-          nextTopic={nextTopic}
-        />
+      <div className="overflow-hidden rounded-lg border border-slate-200 shadow-sm dark:border-zinc-800">
+        <div className="flex min-h-[32rem] flex-col lg:flex-row">
+          <NotesSidebar
+            language={language}
+            languageName={langConfig.name}
+            topics={topics}
+            activeSlug={slug}
+            search={search}
+            onSearchChange={setSearch}
+            progressPercent={langProgressPercent}
+            completedSlugs={completedSlugs}
+            onToggleComplete={handleToggleComplete}
+            lastVisited={state.lastVisited}
+            mobileOpen={mobileOpen}
+            onOpenMobile={() => setMobileOpen(true)}
+            onCloseMobile={() => setMobileOpen(false)}
+          />
+          <TopicMainContent
+            topic={topic}
+            language={language}
+            languageName={langConfig.name}
+            previousTopic={previousTopic}
+            nextTopic={nextTopic}
+          />
+        </div>
       </div>
     </PageShell>
   )

@@ -6,13 +6,14 @@ export const javaNotes = [
     image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&h=400&fit=crop',
     readTime: '8 min',
     difficulty: 'Beginner',
-    description: 'Understand JVM, JDK, JRE, and how Java powers enterprise placement interviews.',
+    description:
+      'Understand JVM, JDK, JRE, and how **Java** — a popular **object-oriented** **programming language** — powers enterprise placement interviews.',
     companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture'],
     sections: [
       {
         heading: 'What is Java?',
         content:
-          'Java is a high-level, object-oriented programming language designed for portability. Write once, run anywhere (WORA) is achieved through the Java Virtual Machine (JVM), which executes bytecode on any supported platform.',
+          '**Java** is a high-level, **object-oriented** **programming language** designed for portability. Write once, run anywhere (WORA) is achieved through the **Java Virtual Machine (JVM)**, which executes bytecode on any supported platform.',
       },
       {
         heading: 'JDK vs JRE vs JVM',
