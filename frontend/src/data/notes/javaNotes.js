@@ -1118,4 +1118,1196 @@ System.out.println(++x);`,
 
     nextTopic: 'java-datatypes',
   },
+
+  {
+    id: 'java-datatypes',
+
+    title: 'Java Data Types',
+
+    slug: 'java-datatypes',
+
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop',
+
+    readTime: '28 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Understand primitive and non-primitive data types in Java, memory usage, ranges, default values, and interview-focused concepts frequently asked in coding rounds.',
+
+    companyTags: [
+      'TCS Digital',
+      'Infosys',
+      'Capgemini',
+      'Amazon',
+      'Wipro',
+    ],
+
+    realWorldUse: [
+      'Storing application data',
+      'Handling user input',
+      'Performing calculations',
+      'Managing memory efficiently',
+    ],
+
+    revisionNotes: [
+      'Java has 8 primitive data types',
+      'Primitive types store actual values',
+      'Non-primitive types store references',
+      'double is default decimal type',
+      'int is default integer type',
+    ],
+
+    commonMistakes: [
+      'Using int for very large values',
+      'Confusing char with String',
+      'Using float without f suffix',
+    ],
+
+    memoryTricks: [
+      'byte → small integer',
+      'int → normal integer',
+      'long → large integer',
+      'double → decimal precision',
+      'char → single character',
+    ],
+
+    sections: [
+      {
+        heading: 'What are Data Types?',
+
+        content: `
+Data types define what kind of value a variable can store.
+
+Java is a strongly typed language.
+
+This means every variable must have a specific data type before storing data.
+
+Example:
+
+int age = 20;
+
+Here:
+• int → data type
+• age → variable
+• 20 → value
+
+Data types improve:
+• Memory management
+• Program safety
+• Error detection
+• Performance
+`,
+      },
+
+      {
+        heading: 'Types of Data Types in Java',
+
+        content: `
+Java data types are divided into two categories:
+
+1. Primitive Data Types
+
+These store actual values directly.
+
+Examples:
+• int
+• double
+• char
+• boolean
+
+2. Non-Primitive Data Types
+
+These store references to objects.
+
+Examples:
+• String
+• Arrays
+• Classes
+• Interfaces
+`,
+      },
+
+      {
+        heading: 'Primitive Data Types',
+
+        content: `
+Java provides 8 primitive data types.
+
+1. byte
+
+• Size: 1 byte
+• Range: -128 to 127
+
+2. short
+
+• Size: 2 bytes
+
+3. int
+
+• Size: 4 bytes
+• Most commonly used integer type
+
+4. long
+
+• Size: 8 bytes
+• Used for large numbers
+
+5. float
+
+• Stores decimal values
+• Requires f suffix
+
+6. double
+
+• Better decimal precision
+• Default decimal type
+
+7. char
+
+• Stores single character
+
+8. boolean
+
+• Stores true or false values
+`,
+      },
+
+      {
+        heading: 'Non-Primitive Data Types',
+
+        content: `
+Non-primitive data types are created by programmers or provided by Java libraries.
+
+These types store memory addresses instead of direct values.
+
+Examples:
+
+• String
+• Arrays
+• Classes
+• Objects
+
+Important:
+
+Non-primitive types can call methods while primitive types cannot.
+`,
+      },
+
+      {
+        heading: 'Default Values of Primitive Types',
+
+        content: `
+byte → 0
+short → 0
+int → 0
+long → 0L
+float → 0.0f
+double → 0.0
+char → '\\u0000'
+boolean → false
+
+These default values mainly apply to instance variables.
+`,
+      },
+    ],
+
+    tips: [
+      'Use int for normal integer operations.',
+      'Use double for decimal precision.',
+      'Remember float requires f suffix.',
+      'Practice data-type output questions.',
+    ],
+
+    warnings: [
+      'char stores single character only.',
+      'float without f causes compilation issues.',
+      'Primitive types cannot store null.',
+    ],
+
+    codeExamples: [
+      {
+        title: 'Primitive Data Types Example',
+
+        language: 'java',
+
+        code: `public class DataTypeDemo {
+
+    public static void main(String[] args) {
+
+        int age = 21;
+
+        double percentage = 92.5;
+
+        char grade = 'A';
+
+        boolean passed = true;
+
+        System.out.println(age);
+
+        System.out.println(percentage);
+
+        System.out.println(grade);
+
+        System.out.println(passed);
+
+    }
+
+}`,
+
+        output: `21
+92.5
+A
+true`,
+      },
+    ],
+
+    outputQuestions: [
+      {
+        question: 'Predict the output',
+
+        code: `char ch = 65;
+System.out.println(ch);`,
+
+        answer: 'A',
+
+        explanation:
+          'ASCII value 65 represents character A.',
+      },
+    ],
+
+    mcqs: [
+      {
+        question:
+          'Which data type is used for single character storage?',
+
+        options: ['String', 'char', 'text', 'character'],
+
+        answer: 1,
+
+        explanation:
+          'char stores a single Unicode character.',
+      },
+    ],
+
+    interviewQuestions: [
+      {
+        question:
+          'Difference between primitive and non-primitive data types?',
+
+        answer:
+          'Primitive types store actual values while non-primitive types store references to memory locations.',
+      },
+    ],
+
+    nextTopic: 'java-type-casting',
+  },
+
+  {
+    id: 'java-type-casting',
+
+    title: 'Java Type Casting',
+
+    slug: 'java-type-casting',
+
+    image:
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa90?w=1200&h=400&fit=crop',
+
+    readTime: '24 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Learn widening and narrowing type casting in Java with interview-focused examples, memory conversion concepts, and output-based questions.',
+
+    companyTags: [
+      'Infosys',
+      'TCS',
+      'Capgemini',
+      'Cognizant',
+    ],
+
+    realWorldUse: [
+      'Data conversion',
+      'Mathematical calculations',
+      'API response handling',
+      'Database value processing',
+    ],
+
+    revisionNotes: [
+      'Widening → automatic conversion',
+      'Narrowing → manual conversion',
+      'Narrowing may lose data',
+    ],
+
+    commonMistakes: [
+      'Forgetting explicit casting',
+      'Assuming decimal values remain after int conversion',
+    ],
+
+    sections: [
+      {
+        heading: 'What is Type Casting?',
+
+        content: `
+Type casting means converting one data type into another.
+
+Java supports two types of casting:
+
+• Widening Casting
+• Narrowing Casting
+`,
+      },
+
+      {
+        heading: 'Widening Casting',
+
+        content: `
+Widening converts smaller data type into larger data type automatically.
+
+Example:
+
+int → long
+float → double
+
+No data loss occurs.
+`,
+      },
+
+      {
+        heading: 'Narrowing Casting',
+
+        content: `
+Narrowing converts larger data type into smaller type manually.
+
+Example:
+
+double → int
+
+Syntax:
+
+int num = (int) 9.99;
+
+Data loss may occur during narrowing conversion.
+`,
+      },
+    ],
+
+    tips: [
+      'Remember narrowing needs explicit casting.',
+      'Most MCQs focus on output prediction.',
+    ],
+
+    warnings: [
+      'Decimal values are removed during int conversion.',
+    ],
+
+    codeExamples: [
+      {
+        title: 'Type Casting Example',
+
+        language: 'java',
+
+        code: `public class CastingDemo {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+
+        double b = a;
+
+        double x = 9.99;
+
+        int y = (int) x;
+
+        System.out.println(b);
+
+        System.out.println(y);
+
+    }
+
+}`,
+
+        output: `10.0
+9`,
+      },
+    ],
+
+    outputQuestions: [
+      {
+        question: 'Predict the output',
+
+        code: `int x = (int) 5.8;
+System.out.println(x);`,
+
+        answer: '5',
+
+        explanation:
+          'Decimal portion gets removed during narrowing.',
+      },
+    ],
+
+    mcqs: [
+      {
+        question:
+          'Which type casting happens automatically?',
+
+        options: [
+          'Narrowing',
+          'Widening',
+          'Explicit',
+          'Manual',
+        ],
+
+        answer: 1,
+
+        explanation:
+          'Widening conversion occurs automatically.',
+      },
+    ],
+
+    interviewQuestions: [
+      {
+        question:
+          'What is narrowing type casting?',
+
+        answer:
+          'It converts larger data type into smaller type manually and may cause data loss.',
+      },
+    ],
+
+    nextTopic: 'java-operators',
+  },
+
+  {
+    id: 'java-operators',
+
+    title: 'Java Operators',
+
+    slug: 'java-operators',
+
+    image:
+      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=400&fit=crop',
+
+    readTime: '35 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Master arithmetic, relational, logical, assignment, unary, and ternary operators with deep explanations and tricky output-based questions.',
+
+    companyTags: [
+      'Amazon',
+      'TCS Digital',
+      'Infosys',
+      'Accenture',
+    ],
+
+    realWorldUse: [
+      'Performing calculations',
+      'Making decisions',
+      'Creating conditions',
+      'Building application logic',
+    ],
+
+    revisionNotes: [
+      '+ → addition',
+      '== → comparison',
+      '&& → logical AND',
+      '|| → logical OR',
+      '++ → increment',
+    ],
+
+    commonMistakes: [
+      'Confusing = and ==',
+      'Misunderstanding pre/post increment',
+      'Ignoring operator precedence',
+    ],
+
+    sections: [
+      {
+        heading: 'What are Operators?',
+
+        content: `
+Operators are symbols used to perform operations on variables and values.
+
+Example:
+
+int sum = 10 + 20;
+
+Here:
++ is operator
+`,
+      },
+
+      {
+        heading: 'Arithmetic Operators',
+
+        content: `
+Used for mathematical operations.
+
+Operators:
+• +
+• -
+• *
+• /
+• %
+
+Example:
+10 + 5 = 15
+`,
+      },
+
+      {
+        heading: 'Relational Operators',
+
+        content: `
+Used for comparison.
+
+Operators:
+• ==
+• !=
+• >
+• <
+• >=
+• <=
+
+These operators return boolean values.
+`,
+      },
+
+      {
+        heading: 'Logical Operators',
+
+        content: `
+Used for combining conditions.
+
+Operators:
+• &&
+• ||
+• !
+
+Important for interview conditions and loops.
+`,
+      },
+
+      {
+        heading: 'Increment and Decrement Operators',
+
+        content: `
+++ increases value by 1
+-- decreases value by 1
+
+Pre-increment:
+++x
+
+Post-increment:
+x++
+
+These are extremely important for output questions.
+`,
+      },
+
+      {
+        heading: 'Ternary Operator',
+
+        content: `
+Short form of if-else.
+
+Syntax:
+
+condition ? value1 : value2;
+`,
+      },
+    ],
+
+    tips: [
+      'Practice increment/decrement questions daily.',
+      'Focus heavily on precedence-based outputs.',
+    ],
+
+    warnings: [
+      '== compares values while = assigns values.',
+      'Post-increment uses value first then increments.',
+    ],
+
+    codeExamples: [
+      {
+        title: 'Operators Example',
+
+        language: 'java',
+
+        code: `public class OperatorDemo {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+
+        int b = 5;
+
+        System.out.println(a + b);
+
+        System.out.println(a > b);
+
+        System.out.println(a == b);
+
+    }
+
+}`,
+
+        output: `15
+true
+false`,
+      },
+    ],
+
+    outputQuestions: [
+      {
+        question: 'Predict the output',
+
+        code: `int x = 5;
+System.out.println(x++);
+System.out.println(x);`,
+
+        answer: `5
+6`,
+
+        explanation:
+          'Post-increment uses old value first.',
+      },
+
+      {
+        question: 'Predict the output',
+
+        code: `int x = 5;
+System.out.println(++x);`,
+
+        answer: '6',
+
+        explanation:
+          'Pre-increment increases value before usage.',
+      },
+    ],
+
+    mcqs: [
+      {
+        question:
+          'Which operator is used for comparison?',
+
+        options: ['=', '==', ':=', '=>'],
+
+        answer: 1,
+
+        explanation:
+          '== checks equality between values.',
+      },
+    ],
+
+    interviewQuestions: [
+      {
+        question:
+          'Difference between pre and post increment?',
+
+        answer:
+          'Pre-increment increases value before usage while post-increment uses old value first.',
+      },
+    ],
+
+    nextTopic: 'java-strings',
+  },
+
+  {
+    id: 'java-strings',
+
+    title: 'Java Strings',
+
+    slug: 'java-strings',
+
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=400&fit=crop',
+
+    readTime: '38 min',
+
+    difficulty: 'Intermediate',
+
+    description:
+      'Learn String creation, immutability, methods, memory concepts, String Pool, and interview-based output questions deeply.',
+
+    companyTags: [
+      'Amazon',
+      'Infosys',
+      'Capgemini',
+      'Accenture',
+    ],
+
+    realWorldUse: [
+      'Handling user input',
+      'Text processing',
+      'Data formatting',
+      'API response management',
+    ],
+
+    revisionNotes: [
+      'Strings are immutable',
+      'String Pool improves memory efficiency',
+      'equals() compares content',
+      '== compares references',
+    ],
+
+    commonMistakes: [
+      'Using == for String comparison',
+      'Thinking String changes original object',
+    ],
+
+    sections: [
+      {
+        heading: 'What is String in Java?',
+
+        content: `
+String is a sequence of characters.
+
+In Java, String is a class.
+
+Example:
+
+String name = "Java";
+`,
+      },
+
+      {
+        heading: 'String Immutability',
+
+        content: `
+Strings are immutable.
+
+This means once String object is created, its value cannot be changed.
+
+Instead of modifying existing object, Java creates new object.
+`,
+      },
+
+      {
+        heading: 'String Pool',
+
+        content: `
+Java stores string literals inside special memory area called String Pool.
+
+This improves memory optimization.
+`,
+      },
+
+      {
+        heading: 'Important String Methods',
+
+        content: `
+length()
+toUpperCase()
+toLowerCase()
+charAt()
+substring()
+equals()
+contains()
+`,
+      },
+
+      {
+        heading: '== vs equals()',
+
+        content: `
+== compares memory references.
+
+equals() compares actual content.
+
+This is one of the most repeated interview questions.
+`,
+      },
+    ],
+
+    tips: [
+      'Always use equals() for content comparison.',
+      'Practice String output questions regularly.',
+    ],
+
+    warnings: [
+      'Strings cannot be modified directly.',
+      '== is dangerous for String comparison.',
+    ],
+
+    codeExamples: [
+      {
+        title: 'String Example',
+
+        language: 'java',
+
+        code: `public class StringDemo {
+
+    public static void main(String[] args) {
+
+        String name = "Java";
+
+        System.out.println(name.length());
+
+        System.out.println(name.toUpperCase());
+
+    }
+
+}`,
+
+        output: `4
+JAVA`,
+      },
+    ],
+
+    outputQuestions: [
+      {
+        question: 'Predict the output',
+
+        code: `String a = "Java";
+String b = "Java";
+
+System.out.println(a == b);`,
+
+        answer: 'true',
+
+        explanation:
+          'Both references point to same String Pool object.',
+      },
+    ],
+
+    mcqs: [
+      {
+        question:
+          'Which method compares String content?',
+
+        options: [
+          '==',
+          'equals()',
+          'compare()',
+          'match()',
+        ],
+
+        answer: 1,
+
+        explanation:
+          'equals() compares actual content.',
+      },
+    ],
+
+    interviewQuestions: [
+      {
+        question:
+          'Why are Strings immutable in Java?',
+
+        answer:
+          'Immutability improves security, thread safety, and memory optimization through String Pool.',
+      },
+    ],
+
+    nextTopic: 'java-math',
+  },
+
+  {
+    id: 'java-math',
+
+    title: 'Java Math Class',
+
+    slug: 'java-math',
+
+    image:
+      'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200&h=400&fit=crop',
+
+    readTime: '18 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Learn Java Math class methods used for calculations, rounding, powers, square roots, random numbers, and interview-based coding questions.',
+
+    companyTags: [
+      'TCS',
+      'Infosys',
+      'Wipro',
+    ],
+
+    realWorldUse: [
+      'Scientific calculations',
+      'Game development',
+      'Financial software',
+    ],
+
+    revisionNotes: [
+      'Math.max() → maximum value',
+      'Math.min() → minimum value',
+      'Math.sqrt() → square root',
+      'Math.random() → random number',
+    ],
+
+    sections: [
+      {
+        heading: 'What is Math Class?',
+
+        content: `
+Java provides built-in Math class for mathematical operations.
+
+No object creation required because methods are static.
+`,
+      },
+
+      {
+        heading: 'Important Methods',
+
+        content: `
+Math.max()
+Math.min()
+Math.sqrt()
+Math.abs()
+Math.random()
+Math.pow()
+Math.ceil()
+Math.floor()
+`,
+      },
+    ],
+
+    codeExamples: [
+      {
+        title: 'Math Class Example',
+
+        language: 'java',
+
+        code: `public class MathDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println(Math.max(10, 20));
+
+        System.out.println(Math.sqrt(25));
+
+    }
+
+}`,
+
+        output: `20
+5.0`,
+      },
+    ],
+
+    nextTopic: 'java-booleans',
+  },
+
+  {
+    id: 'java-booleans',
+
+    title: 'Java Booleans',
+
+    slug: 'java-booleans',
+
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop',
+
+    readTime: '16 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Understand boolean values, conditions, logical expressions, and decision-making concepts deeply.',
+
+    companyTags: [
+      'Infosys',
+      'TCS',
+      'Accenture',
+    ],
+
+    revisionNotes: [
+      'Boolean stores true or false',
+      'Used heavily in conditions and loops',
+    ],
+
+    sections: [
+      {
+        heading: 'What is Boolean?',
+
+        content: `
+Boolean is a primitive data type.
+
+It stores only:
+• true
+• false
+
+Used for decision-making.
+`,
+      },
+
+      {
+        heading: 'Boolean Expressions',
+
+        content: `
+Relational operators create boolean expressions.
+
+Example:
+
+10 > 5
+
+Result:
+true
+`,
+      },
+    ],
+
+    codeExamples: [
+      {
+        title: 'Boolean Example',
+
+        language: 'java',
+
+        code: `public class BooleanDemo {
+
+    public static void main(String[] args) {
+
+        boolean isJavaEasy = true;
+
+        System.out.println(isJavaEasy);
+
+        System.out.println(10 > 5);
+
+    }
+
+}`,
+
+        output: `true
+true`,
+      },
+    ],
+
+    nextTopic: 'java-keywords',
+  },
+
+  {
+    id: 'java-keywords',
+
+    title: 'Java Keywords',
+
+    slug: 'java-keywords',
+
+    image:
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa90?w=1200&h=400&fit=crop',
+
+    readTime: '20 min',
+
+    difficulty: 'Beginner',
+
+    description:
+      'Learn Java reserved keywords, their purpose, categories, and important interview-based keyword concepts.',
+
+    companyTags: [
+      'TCS',
+      'Infosys',
+      'Capgemini',
+    ],
+
+    revisionNotes: [
+      'Keywords are reserved words',
+      'Cannot use keywords as identifiers',
+    ],
+
+    sections: [
+      {
+        heading: 'What are Keywords?',
+
+        content: `
+Keywords are reserved words having predefined meaning in Java.
+
+These words are already understood by compiler.
+
+Examples:
+
+class
+public
+static
+void
+int
+if
+else
+return
+`,
+      },
+
+      {
+        heading: 'Important Categories of Keywords',
+
+        content: `
+Access Keywords:
+• public
+• private
+• protected
+
+Data Type Keywords:
+• int
+• double
+• char
+
+Flow Control Keywords:
+• if
+• else
+• switch
+• break
+• continue
+`,
+      },
+    ],
+
+    codeExamples: [
+      {
+        title: 'Keyword Example',
+
+        language: 'java',
+
+        code: `public class KeywordDemo {
+
+    public static void main(String[] args) {
+
+        int number = 10;
+
+        if(number > 5) {
+
+            System.out.println("Valid");
+
+        }
+
+    }
+
+}`,
+
+        output: 'Valid',
+      },
+    ],
+
+    mcqs: [
+      {
+        question:
+          'Can Java keywords be used as variable names?',
+
+        options: ['Yes', 'No'],
+
+        answer: 1,
+
+        explanation:
+          'Keywords are reserved by Java language.',
+      },
+    ],
+
+    interviewQuestions: [
+      {
+        question:
+          'What are reserved keywords in Java?',
+
+        answer:
+          'Reserved keywords are predefined words having special meaning in Java syntax.',
+      },
+    ],
+
+    nextTopic: 'java-if-else',
+  },
+
 ];
