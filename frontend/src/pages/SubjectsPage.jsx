@@ -303,42 +303,6 @@ const SubjectsPage = () => {
             Open Notes
           </span>
         </Link>
-
-        <Link
-          to="/dream-roadmap"
-          className="rounded-[1.75rem] bg-gradient-to-br from-rose-200 via-pink-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
-        >
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">🎯</p>
-              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">Dream Company Roadmap</h3>
-              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
-                Personalized step-by-step placement roadmap based on target company, role, and skill level.
-              </p>
-            </div>
-            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-pink-300">
-              3 phases
-            </span>
-          </div>
-          <div className="mt-6">
-            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
-              <span>Features</span>
-              <span>Complete</span>
-            </div>
-            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-rose-400 to-pink-500 transition-all duration-500"
-                style={{ width: '100%' }}
-              />
-            </div>
-            <p className="mt-3 text-sm text-slate dark:text-white/70">
-              Placement Strategy • Career Roadmap • Job Ready
-            </p>
-          </div>
-          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
-            Build My Roadmap
-          </span>
-        </Link>
       </div>
     </PageShell>
   )
