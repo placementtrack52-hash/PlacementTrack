@@ -258,6 +258,7 @@ const StudySection = () => {
 }
 
 const DashboardPage = () => {
+  const navigate = useNavigate()
   const { user } = useAuth()
   const companyPrepProgress = useAppSelector(selectOverallCompanyPrepProgress)
   const {
@@ -430,7 +431,7 @@ const DashboardPage = () => {
       <div className="mt-6 grid gap-4 lg:grid-cols-2 md:gap-6">
         {/* LEFT: Subject Progress */}
         <section className="h-full rounded-2xl bg-white p-5 shadow-md transition-all duration-300 hover:shadow-xl dark:border dark:border-slate-700/60 dark:bg-[#0f1b2d]">
-          <div className="flex items-center justify-between gap-3 mb-4">
+          <div className="flex items-center justify-between gap-3 mb-5">
             <h2 className="font-display text-2xl font-semibold text-ink dark:text-white">
               Subject-wise progress
             </h2>
@@ -438,45 +439,178 @@ const DashboardPage = () => {
               Overall {completedRatio}%
             </span>
           </div>
-          <div className="space-y-4">
+          
+          <div className="space-y-3 mb-6">
             {subjects
               .filter((subject) => subject.id !== 'interview-question')
               .map((subject) => {
                 const summary = subjectQuizProgress[subject.id]
                 const subjectProgress = summary?.progressPercent ?? 0
+                
+                // Subject-specific accent colors
+                const subjectAccents = {
+                  'aptitude': { bg: 'bg-orange-50 dark:bg-orange-950/20', bar: 'from-orange-400 to-amber-500', hoverBg: 'dark:hover:bg-orange-950/30', label: 'text-orange-700 dark:text-orange-300' },
+                  'reasoning': { bg: 'bg-emerald-50 dark:bg-emerald-950/20', bar: 'from-emerald-400 to-teal-500', hoverBg: 'dark:hover:bg-emerald-950/30', label: 'text-emerald-700 dark:text-emerald-300' },
+                  'verbal': { bg: 'bg-purple-50 dark:bg-purple-950/20', bar: 'from-purple-400 to-violet-500', hoverBg: 'dark:hover:bg-purple-950/30', label: 'text-purple-700 dark:text-purple-300' },
+                  'technical': { bg: 'bg-blue-50 dark:bg-blue-950/20', bar: 'from-blue-400 to-cyan-500', hoverBg: 'dark:hover:bg-blue-950/30', label: 'text-blue-700 dark:text-blue-300' },
+                }
+                const accent = subjectAccents[subject.id] || subjectAccents.aptitude
 
                 return (
                   <Link
                     key={subject.id}
                     to={`/subjects/${subject.id}`}
-                    className="block rounded-xl bg-[#faf6f0] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f6efe6] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 dark:border dark:border-slate-700/50 dark:bg-[#162235] dark:hover:bg-[#1b2b42] dark:focus:ring-offset-[#0f1b2d]"
+                    className={`block rounded-[1.25rem] ${accent.bg} p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${accent.hoverBg} focus:outline-none focus:ring-2 focus:ring-offset-2 dark:border dark:border-slate-700/40`}
                   >
-                    <div className="mb-3 flex items-center justify-between text-sm text-slate dark:text-slate-300">
-                      <span className="font-semibold text-ink dark:text-white">
-                        {subject.name}
-                      </span>
-                      <span>
-                        {summary?.completedLevels ?? 0}/{summary?.totalLevels ?? 0} levels
+                    <div className="mb-3 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0 flex-1">
+                        <span className={`text-sm font-semibold ${accent.label} truncate`}>
+                          {subject.name}
+                        </span>
+                        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap ${accent.label} bg-white/40 dark:bg-white/10`}>
+                          {subjectProgress < 33 ? 'Beginner' : subjectProgress < 66 ? 'Intermediate' : 'Advanced'}
+                        </span>
+                      </div>
+                      <span className="text-xs font-semibold text-slate dark:text-slate-400 whitespace-nowrap">
+                        {summary?.completedLevels ?? 0}/{summary?.totalLevels ?? 0}
                       </span>
                     </div>
-                    <ProgressBar value={subjectProgress} />
+                    <div className="flex items-center gap-2">
+                      <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-white/10">
+                        <div
+                          className={`h-full rounded-full bg-gradient-to-r ${accent.bar} transition-all duration-500`}
+                          style={{ width: `${Math.max(0, Math.min(100, subjectProgress))}%` }}
+                        />
+                      </div>
+                      <span className="text-xs font-bold text-slate dark:text-slate-400 whitespace-nowrap">
+                        {Math.round(subjectProgress)}%
+                      </span>
+                    </div>
                   </Link>
                 )
               })}
+            
+            {/* Company Preparation Row */}
             <Link
               to="/company-prep"
-              className="block rounded-xl bg-[#faf6f0] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f6efe6] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 dark:border dark:border-slate-700/50 dark:bg-[#162235] dark:hover:bg-[#1b2b42] dark:focus:ring-offset-[#0f1b2d]"
+              className="block rounded-[1.25rem] bg-teal-50 dark:bg-teal-950/20 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:hover:bg-teal-950/30 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:border dark:border-slate-700/40"
             >
-              <div className="mb-3 flex items-center justify-between text-sm text-slate dark:text-slate-300">
-                <span className="font-semibold text-ink dark:text-white">
-                  Company Preparation
-                </span>
-                <span>
-                  {companyPrepProgress.completedCount}/{companyPrepProgress.totalCount} sections
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                  <span className="text-sm font-semibold text-teal-700 dark:text-teal-300 truncate">
+                    Company Preparation
+                  </span>
+                  <span className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap text-teal-700 dark:text-teal-300 bg-white/40 dark:bg-white/10">
+                    {companyPrepProgress.progressPercent < 33 ? 'Starting' : companyPrepProgress.progressPercent < 66 ? 'In Progress' : 'Mastering'}
+                  </span>
+                </div>
+                <span className="text-xs font-semibold text-slate dark:text-slate-400 whitespace-nowrap">
+                  {companyPrepProgress.completedCount}/{companyPrepProgress.totalCount}
                 </span>
               </div>
-              <ProgressBar value={companyPrepProgress.progressPercent} />
+              <div className="flex items-center gap-2">
+                <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-white/10">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 transition-all duration-500"
+                    style={{ width: `${Math.max(0, Math.min(100, companyPrepProgress.progressPercent))}%` }}
+                  />
+                </div>
+                <span className="text-xs font-bold text-slate dark:text-slate-400 whitespace-nowrap">
+                  {Math.round(companyPrepProgress.progressPercent)}%
+                </span>
+              </div>
             </Link>
+          </div>
+
+          {/* Smart Feature Cards */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* AI Interview Coach */}
+            <button
+              onClick={() => navigate('/ai-interview')}
+              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-purple-200/40 bg-gradient-to-br from-purple-50/80 to-purple-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-purple-900/30 dark:bg-gradient-to-br dark:from-purple-950/30 dark:to-purple-900/20 dark:hover:from-purple-950/40 dark:hover:to-purple-900/30 text-left"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/0 via-transparent to-purple-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              <div className="relative">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-purple-200/60 dark:bg-purple-800/40 text-base">
+                  🤖
+                </span>
+                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
+                  AI Interview
+                </h3>
+                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
+                  Mock interviews with AI
+                </p>
+                <span className="mt-2.5 inline-flex rounded-full bg-purple-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-purple-700">
+                  Start
+                </span>
+              </div>
+            </button>
+
+            {/* ATS Resume Analyzer */}
+            <button
+              onClick={() => navigate('/ats-resume')}
+              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-green-200/40 bg-gradient-to-br from-green-50/80 to-green-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-green-900/30 dark:bg-gradient-to-br dark:from-green-950/30 dark:to-green-900/20 dark:hover:from-green-950/40 dark:hover:to-green-900/30 text-left"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-300/0 via-transparent to-green-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              <div className="relative">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-green-200/60 dark:bg-green-800/40 text-base">
+                  ✓
+                </span>
+                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
+                  ATS Analyzer
+                </h3>
+                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
+                  Boost your resume score
+                </p>
+                <span className="mt-2.5 inline-flex rounded-full bg-green-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-green-700">
+                  Analyze
+                </span>
+              </div>
+            </button>
+
+            {/* Projects */}
+            <button
+              onClick={() => navigate('/projects')}
+              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-orange-200/40 bg-gradient-to-br from-orange-50/80 to-orange-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-orange-900/30 dark:bg-gradient-to-br dark:from-orange-950/30 dark:to-orange-900/20 dark:hover:from-orange-950/40 dark:hover:to-orange-900/30 text-left"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-300/0 via-transparent to-orange-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              <div className="relative">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-orange-200/60 dark:bg-orange-800/40 text-base">
+                  📦
+                </span>
+                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
+                  Projects
+                </h3>
+                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
+                  Build your portfolio
+                </p>
+                <span className="mt-2.5 inline-flex rounded-full bg-orange-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-orange-700">
+                  Explore
+                </span>
+              </div>
+            </button>
+
+            {/* Placement Notes */}
+            <button
+              onClick={() => navigate('/placement-notes')}
+              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-amber-200/40 bg-gradient-to-br from-amber-50/80 to-amber-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-amber-900/30 dark:bg-gradient-to-br dark:from-amber-950/30 dark:to-amber-900/20 dark:hover:from-amber-950/40 dark:hover:to-amber-900/30 text-left"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-300/0 via-transparent to-amber-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              <div className="relative">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-amber-200/60 dark:bg-amber-800/40 text-base">
+                  📋
+                </span>
+                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
+                  Placement Notes
+                </h3>
+                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
+                  Company-wise resources
+                </p>
+                <span className="mt-2.5 inline-flex rounded-full bg-amber-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-amber-700">
+                  Open
+                </span>
+              </div>
+            </button>
           </div>
         </section>
 
