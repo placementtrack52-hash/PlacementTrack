@@ -1,0 +1,298 @@
+[
+  {
+    "id": "upsc",
+    "name": "UPSC",
+    "icon": "🏛️",
+    "subtitle": "Union Public Service Commission",
+    "color": "from-blue-200 via-indigo-100 to-white",
+    "description": "Civil Services Examination (UPSC CSE) - India's most prestigious exam",
+    "syllabusOverview": "The UPSC Civil Services Exam consists of Preliminary Exam (Objective), Main Exam (Subjective), and Interview. Coverage includes Indian Polity, History, Geography, Economics, Current Affairs, and Optional subjects.",
+    "sections": {
+      "syllabus": [
+        {"title": "Preliminary Exam", "duration": "2 hours", "marks": 200, "details": "General Studies (2 papers)"},
+        {"title": "Main Exam", "duration": "3 hours", "marks": 250, "details": "Essay + General Studies (4 papers) + Optionals (2 papers)"},
+        {"title": "Interview", "duration": "20 minutes", "marks": 275, "details": "Personality test and general knowledge"}
+      ],
+      "pyq": {
+        "totalQuestions": 450,
+        "years": "2015-2024",
+        "formats": ["Previous Year Papers", "Topic-wise Questions", "Difficulty-wise Classification"]
+      },
+      "quiz": {
+        "totalQuizzes": 120,
+        "types": ["Daily Quizzes", "Topic-wise", "Mock Tests"]
+      },
+      "notes": {
+        "subjects": ["Indian Polity", "History", "Geography", "Economics", "Current Affairs"],
+        "format": "Concise, bullet-pointed notes"
+      },
+      "roadmap": {
+        "duration": "12 months",
+        "phases": ["Phase 1: Foundation (3 months)", "Phase 2: Building (4 months)", "Phase 3: Revision (3 months)", "Phase 4: Mock Tests (2 months)"]
+      },
+      "mockTests": {
+        "total": 25,
+        "types": ["Preliminary Mocks", "Main Exam Mocks", "Interview Simulations"]
+      }
+    }
+  },
+  {
+    "id": "ssc",
+    "name": "SSC",
+    "icon": "📚",
+    "subtitle": "Staff Selection Commission",
+    "color": "from-emerald-200 via-teal-100 to-white",
+    "description": "SSC conducts various recruitment exams (CGL, CHSL, MTS, JE, etc.)",
+    "syllabusOverview": "SSC exams cover General Knowledge, General Awareness, Reasoning, Mathematics, and English. Different exams have different difficulty levels and specializations.",
+    "sections": {
+      "syllabus": [
+        {"title": "SSC CGL", "duration": "2 hours", "marks": 200, "details": "4 Tiers of examination"},
+        {"title": "SSC CHSL", "duration": "1.5 hours", "marks": 100, "details": "2 Tiers (Objective + Descriptive)"},
+        {"title": "SSC MTS", "duration": "1.5 hours", "marks": 100, "details": "Single Tier Exam"}
+      ],
+      "pyq": {
+        "totalQuestions": 350,
+        "years": "2010-2024",
+        "formats": ["Section-wise PYQs", "Previous Year Papers", "Difficulty Analysis"]
+      },
+      "quiz": {
+        "totalQuizzes": 100,
+        "types": ["Reasoning", "Quantitative Aptitude", "English", "General Awareness"]
+      },
+      "notes": {
+        "subjects": ["Reasoning", "Quantitative Aptitude", "English Language", "General Awareness"],
+        "format": "Short-form, exam-focused notes"
+      },
+      "roadmap": {
+        "duration": "6-9 months",
+        "phases": ["Phase 1: Topic Mastery (3 months)", "Phase 2: Speed & Accuracy (2 months)", "Phase 3: Mock Practice (2 months)"]
+      },
+      "mockTests": {
+        "total": 30,
+        "types": ["CGL Mocks", "CHSL Mocks", "Topic-wise Tests"]
+      }
+    }
+  },
+  {
+    "id": "banking",
+    "name": "Banking",
+    "icon": "🏦",
+    "subtitle": "Bank Recruitment Exams",
+    "color": "from-amber-200 via-yellow-100 to-white",
+    "description": "SBI, IBPS PO, Clerk, and other banking sector recruitment exams",
+    "syllabusOverview": "Banking exams test Quantitative Aptitude, Reasoning, English, General Awareness, and Banking-specific knowledge. Multiple rounds include Prelims, Mains, and Interview.",
+    "sections": {
+      "syllabus": [
+        {"title": "Preliminary Exam", "duration": "1 hour", "marks": 100, "details": "Quick Aptitude Test"},
+        {"title": "Main Exam", "duration": "3.5 hours", "marks": 200, "details": "Comprehensive assessment"},
+        {"title": "Interview", "duration": "15-20 minutes", "marks": 100, "details": "Final selection round"}
+      ],
+      "pyq": {
+        "totalQuestions": 400,
+        "years": "2015-2024",
+        "formats": ["Memory-based Papers", "Official Papers", "Topic Segregation"]
+      },
+      "quiz": {
+        "totalQuizzes": 150,
+        "types": ["Daily Quizzes", "Subject Tests", "Speed Tests"]
+      },
+      "notes": {
+        "subjects": ["Quantitative Aptitude", "Reasoning", "English", "Banking Awareness"],
+        "format": "Exam-specific, quick reference notes"
+      },
+      "roadmap": {
+        "duration": "4-6 months",
+        "phases": ["Phase 1: Fundamentals (2 months)", "Phase 2: Practice (2 months)", "Phase 3: Mocks (1-2 months)"]
+      },
+      "mockTests": {
+        "total": 40,
+        "types": ["Prelim Mocks", "Main Mocks", "Speed/Accuracy Tests"]
+      }
+    }
+  },
+  {
+    "id": "railways",
+    "name": "Railways",
+    "icon": "🚂",
+    "subtitle": "Railway Recruitment Board",
+    "color": "from-red-200 via-orange-100 to-white",
+    "description": "RRB Group D, Group C, NTPC, and engineering recruitment exams",
+    "syllabusOverview": "Railway exams focus on Mathematics, General Intelligence, General Awareness, and Technical knowledge. Exams are conducted through CBT with normalized scoring.",
+    "sections": {
+      "syllabus": [
+        {"title": "RRB Group D", "duration": "1.5 hours", "marks": 100, "details": "Unskilled workers recruitment"},
+        {"title": "RRB NTPC", "duration": "1.5 hours", "marks": 100, "details": "Non-Technical Popular Categories"},
+        {"title": "RRB Engineers", "duration": "2 hours", "marks": 150, "details": "Technical graduate positions"}
+      ],
+      "pyq": {
+        "totalQuestions": 300,
+        "years": "2018-2024",
+        "formats": ["Official Papers", "Section-wise Analysis", "Difficulty Levels"]
+      },
+      "quiz": {
+        "totalQuizzes": 80,
+        "types": ["Daily Tests", "Section Tests", "Difficulty-wise"]
+      },
+      "notes": {
+        "subjects": ["Mathematics", "General Intelligence & Reasoning", "General Awareness"],
+        "format": "Railway exam-focused notes"
+      },
+      "roadmap": {
+        "duration": "3-4 months",
+        "phases": ["Phase 1: Concept Building (1.5 months)", "Phase 2: Practice (1 month)", "Phase 3: Mock Tests (1-1.5 months)"]
+      },
+      "mockTests": {
+        "total": 25,
+        "types": ["Group D Mocks", "NTPC Mocks", "Engineer Mocks"]
+      }
+    }
+  },
+  {
+    "id": "defence",
+    "name": "Defence",
+    "icon": "🎖️",
+    "subtitle": "Armed Forces Recruitment",
+    "color": "from-teal-200 via-green-100 to-white",
+    "description": "NDA, CDS, AFCAT, and armed forces commission exams",
+    "syllabusOverview": "Defence exams test General Knowledge, Military Science, Reasoning, and Mathematics. Candidates must meet physical fitness and educational qualifications.",
+    "sections": {
+      "syllabus": [
+        {"title": "NDA Exam", "duration": "2.5 hours", "marks": 900, "details": "Written + SSB Interview"},
+        {"title": "CDS Exam", "duration": "2 hours", "marks": 300, "details": "Multiple choice + Interview"},
+        {"title": "AFCAT", "duration": "1.5 hours", "marks": 100, "details": "Air Force officers selection"}
+      ],
+      "pyq": {
+        "totalQuestions": 280,
+        "years": "2012-2024",
+        "formats": ["Official Papers", "Subject-wise segregation", "Trend Analysis"]
+      },
+      "quiz": {
+        "totalQuizzes": 70,
+        "types": ["Military Knowledge", "General Studies", "Mixed Tests"]
+      },
+      "notes": {
+        "subjects": ["General Knowledge", "History", "Geography", "Military Science"],
+        "format": "Defence exam specialized notes"
+      },
+      "roadmap": {
+        "duration": "6 months",
+        "phases": ["Phase 1: Theory (2.5 months)", "Phase 2: Practice (2 months)", "Phase 3: SSB Prep (1.5 months)"]
+      },
+      "mockTests": {
+        "total": 20,
+        "types": ["NDA Mocks", "CDS Mocks", "AFCAT Mocks"]
+      }
+    }
+  },
+  {
+    "id": "police",
+    "name": "Police",
+    "icon": "👮",
+    "subtitle": "Police and Constable Recruitment",
+    "color": "from-slate-200 via-gray-100 to-white",
+    "description": "UPSC (CSE), State Police, and Constable recruitment exams",
+    "syllabusOverview": "Police exams cover General Knowledge, Current Affairs, Reasoning, and Constitution. Candidates must meet physical standards and conduct background checks.",
+    "sections": {
+      "syllabus": [
+        {"title": "Police SI/Constable", "duration": "1.5 hours", "marks": 100, "details": "Written + Physical"},
+        {"title": "CRPF/CISF", "duration": "2 hours", "marks": 150, "details": "Paramilitarty recruitment"},
+        {"title": "State Police", "duration": "1-2 hours", "marks": 100, "details": "State-specific exams"}
+      ],
+      "pyq": {
+        "totalQuestions": 250,
+        "years": "2015-2024",
+        "formats": ["State-wise Papers", "Subject Segregation", "Year-wise Analysis"]
+      },
+      "quiz": {
+        "totalQuizzes": 60,
+        "types": ["General Knowledge", "Constitution", "Current Affairs"]
+      },
+      "notes": {
+        "subjects": ["Indian Constitution", "General Knowledge", "Current Affairs"],
+        "format": "Police exam focused notes"
+      },
+      "roadmap": {
+        "duration": "3-4 months",
+        "phases": ["Phase 1: Knowledge Base (1.5 months)", "Phase 2: Revision (1 month)", "Phase 3: Mocks (1-1.5 months)"]
+      },
+      "mockTests": {
+        "total": 22,
+        "types": ["SI Mocks", "Constable Mocks", "State-wise Tests"]
+      }
+    }
+  },
+  {
+    "id": "teaching",
+    "name": "Teaching",
+    "icon": "🎓",
+    "subtitle": "Teacher Recruitment & Eligibility",
+    "color": "from-pink-200 via-rose-100 to-white",
+    "description": "UPSC TES, CTET, State TET, and teaching eligibility exams",
+    "syllabusOverview": "Teaching exams test subject knowledge, pedagogy, child psychology, and general awareness. Different levels for primary, secondary, and senior secondary teaching.",
+    "sections": {
+      "syllabus": [
+        {"title": "CTET", "duration": "2.5 hours", "marks": 150, "details": "Central Teacher Eligibility Test"},
+        {"title": "State TET", "duration": "2.5 hours", "marks": 150, "details": "State-level teacher exams"},
+        {"title": "UPSC TES", "duration": "2 hours", "marks": 200, "details": "Teacher Service Selection"}
+      ],
+      "pyq": {
+        "totalQuestions": 200,
+        "years": "2014-2024",
+        "formats": ["Paper I & II", "Subject-wise Papers", "Difficulty Levels"]
+      },
+      "quiz": {
+        "totalQuizzes": 90,
+        "types": ["Pedagogy Tests", "Subject Tests", "Child Psychology"]
+      },
+      "notes": {
+        "subjects": ["Pedagogy", "Child Development", "Subject Content", "Professional Ethics"],
+        "format": "Teaching-centric comprehensive notes"
+      },
+      "roadmap": {
+        "duration": "4-5 months",
+        "phases": ["Phase 1: Conceptual (2 months)", "Phase 2: Application (1.5 months)", "Phase 3: Mocks (1-1.5 months)"]
+      },
+      "mockTests": {
+        "total": 35,
+        "types": ["CTET Mocks", "State TET Mocks", "Subject Tests"]
+      }
+    }
+  },
+  {
+    "id": "state-psc",
+    "name": "State PSC",
+    "icon": "🏢",
+    "subtitle": "State Public Service Commissions",
+    "color": "from-violet-200 via-purple-100 to-white",
+    "description": "State-level civil service exams for administrative positions",
+    "syllabusOverview": "State PSC exams are similar to UPSC but focus on state-specific history, geography, and policies. Each state has its own PSC conducting recruitment.",
+    "sections": {
+      "syllabus": [
+        {"title": "Preliminary Exam", "duration": "2 hours", "marks": 200, "details": "State-level General Studies"},
+        {"title": "Main Exam", "duration": "3 hours", "marks": 250, "details": "Subjective + Optionals"},
+        {"title": "Interview", "duration": "20 minutes", "marks": 275, "details": "Final personality test"}
+      ],
+      "pyq": {
+        "totalQuestions": 400,
+        "years": "2012-2024",
+        "formats": ["State-wise Papers", "Trend Analysis", "Subject Segregation"]
+      },
+      "quiz": {
+        "totalQuizzes": 110,
+        "types": ["State GK", "General Studies", "Mock Tests"]
+      },
+      "notes": {
+        "subjects": ["State History & Geography", "Polity", "Economics", "Current Affairs"],
+        "format": "State-specific comprehensive notes"
+      },
+      "roadmap": {
+        "duration": "9-12 months",
+        "phases": ["Phase 1: Foundation (3 months)", "Phase 2: Building (4 months)", "Phase 3: Revision (2-3 months)", "Phase 4: Mocks (2 months)"]
+      },
+      "mockTests": {
+        "total": 28,
+        "types": ["State Prelim Mocks", "State Main Mocks", "Interview Simulations"]
+      }
+    }
+  }
+]
