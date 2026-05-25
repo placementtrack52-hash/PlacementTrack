@@ -606,7 +606,7 @@ const DashboardPage = () => {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {/* AI Interview Coach */}
           <button
-            onClick={() => navigate('/ai-interview')}
+            onClick={() => navigate('/interview-coach')}
             className="group relative flex flex-col overflow-hidden rounded-2xl border border-purple-200/50 bg-gradient-to-br from-purple-50 via-purple-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-purple-300 dark:border-purple-900/40 dark:bg-gradient-to-br dark:from-purple-950/40 dark:via-purple-950/30 dark:to-[#0f1b2d] dark:hover:border-purple-800/60 text-left"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-purple-300/0 via-transparent to-purple-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -628,7 +628,7 @@ const DashboardPage = () => {
 
           {/* ATS Resume Analyzer */}
           <button
-            onClick={() => navigate('/ats-resume')}
+            onClick={() => navigate('/subjects/ats-resume-checker')}
             className="group relative flex flex-col overflow-hidden rounded-2xl border border-green-200/50 bg-gradient-to-br from-green-50 via-green-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-green-300 dark:border-green-900/40 dark:bg-gradient-to-br dark:from-green-950/40 dark:via-green-950/30 dark:to-[#0f1b2d] dark:hover:border-green-800/60 text-left"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-green-300/0 via-transparent to-green-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -650,7 +650,7 @@ const DashboardPage = () => {
 
           {/* Projects */}
           <button
-            onClick={() => navigate('/projects')}
+            onClick={() => navigate('/subjects/projects')}
             className="group relative flex flex-col overflow-hidden rounded-2xl border border-orange-200/50 bg-gradient-to-br from-orange-50 via-orange-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-orange-300 dark:border-orange-900/40 dark:bg-gradient-to-br dark:from-orange-950/40 dark:via-orange-950/30 dark:to-[#0f1b2d] dark:hover:border-orange-800/60 text-left"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-orange-300/0 via-transparent to-orange-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
