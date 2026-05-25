@@ -414,12 +414,15 @@ const TopicPage = () => {
                   question={question}
                   index={index}
                   selectedAnswer={selectedAnswers[index]}
-                  onSelect={(optionIndex) =>
+                  onSelect={(optionIndex) => {
                     setSelectedAnswers((current) => ({
                       ...current,
                       [index]: optionIndex,
                     }))
-                  }
+                    if (!submitted && !isTimerRunning) {
+                      setIsTimerRunning(true)
+                    }
+                  }}
                   submitted={submitted}
                 />
               ))}
