@@ -587,53 +587,6 @@ vector<string> dfs(string s,unordered_set<string>& dict){
   {
     subject: 'Code',
     category: 'BackTracking',
-    title: 'Partition Equal Subset Sum',
-    difficulty: 'Medium',
-    description: `Divide into equal sum subsets.`,
-    inputExample: '[1,5,11,5]',
-    outputExample: 'true',
-    explanation: `Subset sum = total/2.`,
-    code: {
-      java: `class Main{
-  static boolean dfs(int i,int sum,int[] arr,Boolean[][] dp){
-    if(sum==0) return true;
-    if(i==arr.length || sum<0) return false;
-
-    if(dp[i][sum]!=null) return dp[i][sum];
-
-    return dp[i][sum]= dfs(i+1,sum-arr[i],arr,dp) ||
-                       dfs(i+1,sum,arr,dp);
-  }
-}`,
-
-      python: `def canPartition(nums):
-    s=sum(nums)
-    if s%2: return False
-
-    target=s//2
-    dp=set([0])
-
-    for num in nums:
-        dp |= {x+num for x in dp}
-
-    return target in dp`,
-
-      c: `// subset sum`,
-      cpp: `bool dfs(int i,int sum,vector<int>& arr,vector<vector<int>>& dp){
-    if(sum==0) return true;
-    if(i==arr.size() || sum<0) return false;
-
-    if(dp[i][sum]!=-1) return dp[i][sum];
-
-    return dp[i][sum]= dfs(i+1,sum-arr[i],arr,dp) ||
-                       dfs(i+1,sum,arr,dp);
-}`
-    }
-  },
-
-  {
-    subject: 'Code',
-    category: 'BackTracking',
     title: 'Knight’s Tour',
     difficulty: 'Hard',
     description: `Visit all cells once.`,

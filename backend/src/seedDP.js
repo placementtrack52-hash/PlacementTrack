@@ -1446,62 +1446,6 @@ int frogK(int h[],int n,int k){
 }`
     }
   },
-   {
-    subject: 'Code',
-    category: 'Dynamic Programming',
-    title: 'Assign Cookies',
-    difficulty: 'Easy',
-    description: `Maximize number of satisfied children.`,
-    inputExample: 'g=[1,2,3], s=[1,1]',
-    outputExample: '1',
-    explanation: `Sort and assign smallest possible cookie.`,
-    code: {
-      java: `import java.util.*;
-
-class Main{
-  static int find(int[] g,int[] s){
-    Arrays.sort(g);
-    Arrays.sort(s);
-
-    int i=0,j=0,count=0;
-
-    while(i<g.length && j<s.length){
-      if(s[j]>=g[i]){
-        count++; i++; j++;
-      } else j++;
-    }
-    return count;
-  }
-}`,
-
-      python: `def assign(g,s):
-    g.sort(); s.sort()
-    i=j=0; count=0
-
-    while i<len(g) and j<len(s):
-        if s[j]>=g[i]:
-            count+=1
-            i+=1; j+=1
-        else:
-            j+=1
-    return count`,
-
-      c: `// sort + greedy`,
-      cpp: `int assign(vector<int>& g,vector<int>& s){
-    sort(g.begin(),g.end());
-    sort(s.begin(),s.end());
-
-    int i=0,j=0,count=0;
-
-    while(i<g.size() && j<s.size()){
-        if(s[j]>=g[i]){
-            count++; i++; j++;
-        } else j++;
-    }
-    return count;
-}`
-    }
-  },
 
   {
     subject: 'Code',
@@ -1759,63 +1703,6 @@ class Main{
         }
     }
     return dp[n];
-}`
-    }
-  },
-   {
-    subject: 'Code',
-    category: 'Dynamic Programming',
-    title: 'Longest Common Subsequence',
-    difficulty: 'Medium',
-    description: `Find length of LCS of two strings.`,
-    inputExample: 's1="abcde", s2="ace"',
-    outputExample: '3',
-    explanation: `dp[i][j] = match +1 else max(left, up)`,
-    code: {
-      java: `class Main{
-  static int lcs(String a,String b){
-    int n=a.length(),m=b.length();
-    int[][] dp=new int[n+1][m+1];
-
-    for(int i=1;i<=n;i++){
-      for(int j=1;j<=m;j++){
-        if(a.charAt(i-1)==b.charAt(j-1))
-          dp[i][j]=1+dp[i-1][j-1];
-        else
-          dp[i][j]=Math.max(dp[i-1][j],dp[i][j-1]);
-      }
-    }
-    return dp[n][m];
-  }
-}`,
-
-      python: `def lcs(a,b):
-    n,m=len(a),len(b)
-    dp=[[0]*(m+1) for _ in range(n+1)]
-
-    for i in range(1,n+1):
-        for j in range(1,m+1):
-            if a[i-1]==b[j-1]:
-                dp[i][j]=1+dp[i-1][j-1]
-            else:
-                dp[i][j]=max(dp[i-1][j],dp[i][j-1])
-
-    return dp[n][m]`,
-
-      c: `// LCS DP`,
-      cpp: `int lcs(string a,string b){
-    int n=a.size(),m=b.size();
-    vector<vector<int>> dp(n+1,vector<int>(m+1,0));
-
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
-            if(a[i-1]==b[j-1])
-                dp[i][j]=1+dp[i-1][j-1];
-            else
-                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
-        }
-    }
-    return dp[n][m];
 }`
     }
   },
@@ -2346,79 +2233,6 @@ class Main{
     }
   },
 
-  {
-    subject: 'Code',
-    category: 'Dynamic Programming',
-    title: 'Edit Distance',
-    difficulty: 'Hard',
-    description: `Min operations to convert string a to b.`,
-    inputExample: 'a="horse", b="ros"',
-    outputExample: '3',
-    explanation: `Insert, delete, replace`,
-    code: {
-      java: `class Main{
-  static int edit(String a,String b){
-    int n=a.length(),m=b.length();
-    int[][] dp=new int[n+1][m+1];
-
-    for(int i=0;i<=n;i++) dp[i][0]=i;
-    for(int j=0;j<=m;j++) dp[0][j]=j;
-
-    for(int i=1;i<=n;i++){
-      for(int j=1;j<=m;j++){
-        if(a.charAt(i-1)==b.charAt(j-1))
-          dp[i][j]=dp[i-1][j-1];
-        else
-          dp[i][j]=1+Math.min(dp[i-1][j],
-                      Math.min(dp[i][j-1],dp[i-1][j-1]));
-      }
-    }
-    return dp[n][m];
-  }
-}`,
-
-      python: `def edit(a,b):
-    n,m=len(a),len(b)
-    dp=[[0]*(m+1) for _ in range(n+1)]
-
-    for i in range(n+1):
-        dp[i][0]=i
-    for j in range(m+1):
-        dp[0][j]=j
-
-    for i in range(1,n+1):
-        for j in range(1,m+1):
-            if a[i-1]==b[j-1]:
-                dp[i][j]=dp[i-1][j-1]
-            else:
-                dp[i][j]=1+min(dp[i-1][j],
-                               dp[i][j-1],
-                               dp[i-1][j-1])
-
-    return dp[n][m]`,
-
-      c: `// edit distance`,
-      cpp: `int edit(string a,string b){
-    int n=a.size(),m=b.size();
-    vector<vector<int>> dp(n+1,vector<int>(m+1,0));
-
-    for(int i=0;i<=n;i++) dp[i][0]=i;
-    for(int j=0;j<=m;j++) dp[0][j]=j;
-
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
-            if(a[i-1]==b[j-1])
-                dp[i][j]=dp[i-1][j-1];
-            else
-                dp[i][j]=1+min({dp[i-1][j],
-                                dp[i][j-1],
-                                dp[i-1][j-1]});
-        }
-    }
-    return dp[n][m];
-}`
-    }
-  },
 
   {
     subject: 'Code',

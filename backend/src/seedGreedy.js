@@ -1373,23 +1373,6 @@ class Main{
   {
     subject: 'Code',
     category: 'Greedy',
-    title: 'Minimize Cash Flow',
-    difficulty: 'Hard',
-    description: `Minimize transactions between people.`,
-    inputExample: 'graph matrix',
-    outputExample: 'min transactions',
-    explanation: `Use net balance + greedy settlement.`,
-    code: {
-      java: `// compute net amount and settle recursively`,
-      python: `# net balance + recursion`,
-      c: `// complex`,
-      cpp: `// standard greedy`
-    }
-  },
-
-  {
-    subject: 'Code',
-    category: 'Greedy',
     title: 'Minimum Cost to Cut Board into Squares',
     difficulty: 'Hard',
     description: `Minimize cost of cutting board.`,
