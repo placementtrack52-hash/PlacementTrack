@@ -440,7 +440,7 @@ const DashboardPage = () => {
             </span>
           </div>
           
-          <div className="space-y-3 mb-6">
+          <div className="space-y-3 flex flex-col h-full">
             {subjects
               .filter((subject) => subject.id !== 'interview-question')
               .map((subject) => {
@@ -521,97 +521,6 @@ const DashboardPage = () => {
               </div>
             </Link>
           </div>
-
-          {/* Smart Feature Cards */}
-          <div className="grid grid-cols-2 gap-3">
-            {/* AI Interview Coach */}
-            <button
-              onClick={() => navigate('/ai-interview')}
-              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-purple-200/40 bg-gradient-to-br from-purple-50/80 to-purple-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-purple-900/30 dark:bg-gradient-to-br dark:from-purple-950/30 dark:to-purple-900/20 dark:hover:from-purple-950/40 dark:hover:to-purple-900/30 text-left"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/0 via-transparent to-purple-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <div className="relative">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-purple-200/60 dark:bg-purple-800/40 text-base">
-                  🤖
-                </span>
-                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
-                  AI Interview
-                </h3>
-                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
-                  Mock interviews with AI
-                </p>
-                <span className="mt-2.5 inline-flex rounded-full bg-purple-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-purple-700">
-                  Start
-                </span>
-              </div>
-            </button>
-
-            {/* ATS Resume Analyzer */}
-            <button
-              onClick={() => navigate('/ats-resume')}
-              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-green-200/40 bg-gradient-to-br from-green-50/80 to-green-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-green-900/30 dark:bg-gradient-to-br dark:from-green-950/30 dark:to-green-900/20 dark:hover:from-green-950/40 dark:hover:to-green-900/30 text-left"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-green-300/0 via-transparent to-green-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <div className="relative">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-green-200/60 dark:bg-green-800/40 text-base">
-                  ✓
-                </span>
-                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
-                  ATS Analyzer
-                </h3>
-                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
-                  Boost your resume score
-                </p>
-                <span className="mt-2.5 inline-flex rounded-full bg-green-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-green-700">
-                  Analyze
-                </span>
-              </div>
-            </button>
-
-            {/* Projects */}
-            <button
-              onClick={() => navigate('/projects')}
-              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-orange-200/40 bg-gradient-to-br from-orange-50/80 to-orange-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-orange-900/30 dark:bg-gradient-to-br dark:from-orange-950/30 dark:to-orange-900/20 dark:hover:from-orange-950/40 dark:hover:to-orange-900/30 text-left"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-300/0 via-transparent to-orange-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <div className="relative">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-orange-200/60 dark:bg-orange-800/40 text-base">
-                  📦
-                </span>
-                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
-                  Projects
-                </h3>
-                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
-                  Build your portfolio
-                </p>
-                <span className="mt-2.5 inline-flex rounded-full bg-orange-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-orange-700">
-                  Explore
-                </span>
-              </div>
-            </button>
-
-            {/* Placement Notes */}
-            <button
-              onClick={() => navigate('/placement-notes')}
-              className="group relative flex flex-col overflow-hidden rounded-[1.25rem] border border-amber-200/40 bg-gradient-to-br from-amber-50/80 to-amber-100/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-amber-900/30 dark:bg-gradient-to-br dark:from-amber-950/30 dark:to-amber-900/20 dark:hover:from-amber-950/40 dark:hover:to-amber-900/30 text-left"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-300/0 via-transparent to-amber-400/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
-              <div className="relative">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-amber-200/60 dark:bg-amber-800/40 text-base">
-                  📋
-                </span>
-                <h3 className="mt-2.5 text-sm font-semibold text-ink dark:text-white leading-tight">
-                  Placement Notes
-                </h3>
-                <p className="mt-1 text-xs text-slate dark:text-slate-400 leading-4">
-                  Company-wise resources
-                </p>
-                <span className="mt-2.5 inline-flex rounded-full bg-amber-600/90 px-3 py-1.5 text-xs font-semibold text-white transition-all duration-200 group-hover:bg-amber-700">
-                  Open
-                </span>
-              </div>
-            </button>
-          </div>
         </section>
 
         {/* RIGHT: Learning Modules */}
@@ -682,6 +591,107 @@ const DashboardPage = () => {
             </Link>
           </div>
         </section>
+      </div>
+
+      {/* Smart Features Section */}
+      <div className="mt-6">
+        <div className="mb-4">
+          <h2 className="font-display text-lg font-semibold text-ink dark:text-white">
+            Boost your placement
+          </h2>
+          <p className="mt-1 text-sm text-slate dark:text-slate-300">
+            AI tools and resources to ace your interview and land your dream job.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {/* AI Interview Coach */}
+          <button
+            onClick={() => navigate('/ai-interview')}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-purple-200/50 bg-gradient-to-br from-purple-50 via-purple-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-purple-300 dark:border-purple-900/40 dark:bg-gradient-to-br dark:from-purple-950/40 dark:via-purple-950/30 dark:to-[#0f1b2d] dark:hover:border-purple-800/60 text-left"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-300/0 via-transparent to-purple-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            <div className="relative flex flex-col h-full">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-200/70 dark:bg-purple-800/50 text-xl">
+                🤖
+              </span>
+              <h3 className="mt-3 text-base font-bold text-ink dark:text-white">
+                AI Interview
+              </h3>
+              <p className="mt-1.5 text-xs text-slate dark:text-slate-400 leading-relaxed flex-1">
+                Practice mock interviews with real-time feedback from AI
+              </p>
+              <span className="mt-4 inline-flex rounded-lg bg-purple-600 px-4 py-2 text-xs font-bold text-white transition-all duration-200 group-hover:bg-purple-700 w-full justify-center">
+                Start Practice
+              </span>
+            </div>
+          </button>
+
+          {/* ATS Resume Analyzer */}
+          <button
+            onClick={() => navigate('/ats-resume')}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-green-200/50 bg-gradient-to-br from-green-50 via-green-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-green-300 dark:border-green-900/40 dark:bg-gradient-to-br dark:from-green-950/40 dark:via-green-950/30 dark:to-[#0f1b2d] dark:hover:border-green-800/60 text-left"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-green-300/0 via-transparent to-green-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            <div className="relative flex flex-col h-full">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-green-200/70 dark:bg-green-800/50 text-xl">
+                📄
+              </span>
+              <h3 className="mt-3 text-base font-bold text-ink dark:text-white">
+                ATS Analyzer
+              </h3>
+              <p className="mt-1.5 text-xs text-slate dark:text-slate-400 leading-relaxed flex-1">
+                Optimize your resume and boost your ATS score instantly
+              </p>
+              <span className="mt-4 inline-flex rounded-lg bg-green-600 px-4 py-2 text-xs font-bold text-white transition-all duration-200 group-hover:bg-green-700 w-full justify-center">
+                Analyze Now
+              </span>
+            </div>
+          </button>
+
+          {/* Projects */}
+          <button
+            onClick={() => navigate('/projects')}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-orange-200/50 bg-gradient-to-br from-orange-50 via-orange-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-orange-300 dark:border-orange-900/40 dark:bg-gradient-to-br dark:from-orange-950/40 dark:via-orange-950/30 dark:to-[#0f1b2d] dark:hover:border-orange-800/60 text-left"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-300/0 via-transparent to-orange-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            <div className="relative flex flex-col h-full">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-orange-200/70 dark:bg-orange-800/50 text-xl">
+                🛠️
+              </span>
+              <h3 className="mt-3 text-base font-bold text-ink dark:text-white">
+                Projects
+              </h3>
+              <p className="mt-1.5 text-xs text-slate dark:text-slate-400 leading-relaxed flex-1">
+                Build portfolio projects that impress recruiters
+              </p>
+              <span className="mt-4 inline-flex rounded-lg bg-orange-600 px-4 py-2 text-xs font-bold text-white transition-all duration-200 group-hover:bg-orange-700 w-full justify-center">
+                View Projects
+              </span>
+            </div>
+          </button>
+
+          {/* Placement Notes */}
+          <button
+            onClick={() => navigate('/placement-notes')}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-amber-200/50 bg-gradient-to-br from-amber-50 via-amber-50 to-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 dark:border-amber-900/40 dark:bg-gradient-to-br dark:from-amber-950/40 dark:via-amber-950/30 dark:to-[#0f1b2d] dark:hover:border-amber-800/60 text-left"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-300/0 via-transparent to-amber-400/0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            <div className="relative flex flex-col h-full">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-200/70 dark:bg-amber-800/50 text-xl">
+                📚
+              </span>
+              <h3 className="mt-3 text-base font-bold text-ink dark:text-white">
+                Placement Notes
+              </h3>
+              <p className="mt-1.5 text-xs text-slate dark:text-slate-400 leading-relaxed flex-1">
+                Company-wise prep guides and interview resources
+              </p>
+              <span className="mt-4 inline-flex rounded-lg bg-amber-600 px-4 py-2 text-xs font-bold text-white transition-all duration-200 group-hover:bg-amber-700 w-full justify-center">
+                Open Notes
+              </span>
+            </div>
+          </button>
+        </div>
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
