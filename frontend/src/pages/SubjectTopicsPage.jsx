@@ -8,6 +8,8 @@ import { useStudyPlanner } from '../features/studyPlanner/hooks/useStudyPlanner'
 import PlannerPanel from '../features/studyPlanner/components/PlannerPanel'
 import { useToast, ToastContainer } from '../features/studyPlanner/utils/toast'
 import { BookOpen, X } from 'lucide-react'
+import InterviewCoach from '../features/interviewCoach'
+import { getAccentColor } from '../features/interviewCoach/utils/subjectKeys'
 
 const SubjectTopicsPage = () => {
   const { subjectId } = useParams()
@@ -73,6 +75,11 @@ const SubjectTopicsPage = () => {
               />
             )
           })}
+
+          <InterviewCoach
+            subjectId={subject.id}
+            accentColor={getAccentColor(subject.id)}
+          />
         </div>
 
         {!isPlannerLoading && (

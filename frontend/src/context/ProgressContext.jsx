@@ -404,6 +404,28 @@ export const ProgressProvider = ({ children }) => {
     }))
   }
 
+  const addXP = useCallback(
+    (amount, _source) => {
+      if (!amount || amount <= 0) return
+      persistProgress((current) => ({
+        ...current,
+        points: current.points + amount,
+        streak: updateStreak(current.streak),
+      }))
+    },
+    [persistProgress],
+  )
+
+  const markActivity = useCallback(
+    (_subjectId, _activityType) => {
+      persistProgress((current) => ({
+        ...current,
+        streak: updateStreak(current.streak),
+      }))
+    },
+    [persistProgress],
+  )
+
   const submitFeedback = async ({ rating, message }) => {
     if (!user) return { success: false, message: 'You must be logged in to submit feedback.' }
     try {
@@ -506,6 +528,8 @@ export const ProgressProvider = ({ children }) => {
       saveDailyChallengeResult,
       dismissMistake,
       submitFeedback,
+      addXP,
+      markActivity,
     }),
     [
       progress,
@@ -525,6 +549,8 @@ export const ProgressProvider = ({ children }) => {
       learnerLevel,
       fakeRanking,
       dailyChallenge,
+      addXP,
+      markActivity,
     ],
   )
 
