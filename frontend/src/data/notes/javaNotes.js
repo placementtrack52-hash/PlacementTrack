@@ -1118,225 +1118,221 @@ System.out.println(++x);`,
 
     nextTopic: 'java-datatypes',
   },
-
+ 
   {
-  id: 'java-datatypes',
+    id: 'java-datatypes',
 
-  title: 'Java Data Types',
+    title: 'Java Data Types',
 
-  slug: 'java-datatypes',
+    slug: 'java-datatypes',
 
-  image:
-    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop',
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop',
 
-  readTime: '28 min',
+    readTime: '28 min',
 
-  difficulty: 'Beginner',
+    difficulty: 'Beginner',
 
-  description:
-    'Learn Java data types deeply including primitive types, non-primitive types, memory usage, default values, ranges, and interview-focused concepts asked in coding rounds and technical interviews.',
+    description:
+      'Understand primitive and non-primitive data types in Java, memory usage, ranges, default values, and interview-focused concepts frequently asked in coding rounds.',
 
-  companyTags: [
-    'TCS Digital',
-    'Infosys',
-    'Amazon',
-    'Capgemini',
-    'Wipro',
-  ],
+    companyTags: [
+      'TCS Digital',
+      'Infosys',
+      'Capgemini',
+      'Amazon',
+      'Wipro',
+    ],
 
-  realWorldUse: [
-    'Storing application data',
-    'Handling user input',
-    'Database value management',
-    'Performing calculations',
-    'Managing memory efficiently',
-  ],
+    realWorldUse: [
+      'Storing application data',
+      'Handling user input',
+      'Performing calculations',
+      'Managing memory efficiently',
+    ],
 
-  revisionNotes: [
-    'Java has 8 primitive data types',
-    'Primitive types store actual values',
-    'Non-primitive types store references',
-    'double is default decimal type',
-    'int is default integer type',
-  ],
+    revisionNotes: [
+      'Java has 8 primitive data types',
+      'Primitive types store actual values',
+      'Non-primitive types store references',
+      'double is default decimal type',
+      'int is default integer type',
+    ],
 
-  commonMistakes: [
-    'Using int for very large values',
-    'Confusing char with String',
-    'Using float without f suffix',
-    'Using wrong data type causing memory waste',
-  ],
+    commonMistakes: [
+      'Using int for very large values',
+      'Confusing char with String',
+      'Using float without f suffix',
+    ],
 
-  memoryTricks: [
-    'byte → very small integer',
-    'int → normal integer',
-    'long → large integer',
-    'double → decimal precision',
-    'char → single character',
-    'boolean → true/false',
-  ],
+    memoryTricks: [
+      'byte → small integer',
+      'int → normal integer',
+      'long → large integer',
+      'double → decimal precision',
+      'char → single character',
+    ],
 
-  interviewTrap: [
-    'Many students think String is primitive, but it is non-primitive.',
-    'float requires f suffix while double does not.',
-  ],
+    sections: [
+      {
+        heading: 'What are Data Types?',
 
-  sections: [
-    {
-      heading: 'What are Data Types?',
+        content: `
+Data types define what kind of value a variable can store.
 
-      paragraphs: [
-        'Data types define what kind of values a variable can store inside memory.',
+Java is a strongly typed language.
 
-        'Java is a strongly typed programming language. Every variable must have a specific data type before storing values.',
+This means every variable must have a specific data type before storing data.
 
-        'Data types help Java manage memory efficiently and prevent invalid operations during program execution.',
+Example:
 
-        'Without data types, Java would not know how much memory to allocate for variables.',
-      ],
+int age = 20;
 
-      codeExample: {
+Here:
+• int → data type
+• age → variable
+• 20 → value
+
+Data types improve:
+• Memory management
+• Program safety
+• Error detection
+• Performance
+`,
+      },
+
+      {
+        heading: 'Types of Data Types in Java',
+
+        content: `
+Java data types are divided into two categories:
+
+1. Primitive Data Types
+
+These store actual values directly.
+
+Examples:
+• int
+• double
+• char
+• boolean
+
+2. Non-Primitive Data Types
+
+These store references to objects.
+
+Examples:
+• String
+• Arrays
+• Classes
+• Interfaces
+`,
+      },
+
+      {
+        heading: 'Primitive Data Types',
+
+        content: `
+Java provides 8 primitive data types.
+
+1. byte
+
+• Size: 1 byte
+• Range: -128 to 127
+
+2. short
+
+• Size: 2 bytes
+
+3. int
+
+• Size: 4 bytes
+• Most commonly used integer type
+
+4. long
+
+• Size: 8 bytes
+• Used for large numbers
+
+5. float
+
+• Stores decimal values
+• Requires f suffix
+
+6. double
+
+• Better decimal precision
+• Default decimal type
+
+7. char
+
+• Stores single character
+
+8. boolean
+
+• Stores true or false values
+`,
+      },
+
+      {
+        heading: 'Non-Primitive Data Types',
+
+        content: `
+Non-primitive data types are created by programmers or provided by Java libraries.
+
+These types store memory addresses instead of direct values.
+
+Examples:
+
+• String
+• Arrays
+• Classes
+• Objects
+
+Important:
+
+Non-primitive types can call methods while primitive types cannot.
+`,
+      },
+
+      {
+        heading: 'Default Values of Primitive Types',
+
+        content: `
+byte → 0
+short → 0
+int → 0
+long → 0L
+float → 0.0f
+double → 0.0
+char → '\\u0000'
+boolean → false
+
+These default values mainly apply to instance variables.
+`,
+      },
+    ],
+
+    tips: [
+      'Use int for normal integer operations.',
+      'Use double for decimal precision.',
+      'Remember float requires f suffix.',
+      'Practice data-type output questions.',
+    ],
+
+    warnings: [
+      'char stores single character only.',
+      'float without f causes compilation issues.',
+      'Primitive types cannot store null.',
+    ],
+
+    codeExamples: [
+      {
+        title: 'Primitive Data Types Example',
+
         language: 'java',
 
-        code: `int age = 20;
-
-double percentage = 92.5;
-
-char grade = 'A';`,
-      },
-    },
-
-    {
-      heading: 'Types of Data Types in Java',
-
-      paragraphs: [
-        'Java data types are divided into two major categories.',
-      ],
-
-      subsections: [
-        {
-          title: 'Primitive Data Types',
-
-          description:
-            'Primitive data types store actual values directly inside memory. These are built-in data types provided by Java.',
-        },
-
-        {
-          title: 'Non-Primitive Data Types',
-
-          description:
-            'Non-primitive data types store references to memory locations instead of actual values.',
-        },
-      ],
-    },
-
-    {
-      heading: 'Primitive Data Types',
-
-      paragraphs: [
-        'Java provides 8 primitive data types. Each type has fixed size and specific purpose.',
-      ],
-
-      bullets: [
-        'byte → 1 byte → stores very small integers',
-        'short → 2 bytes → stores small integers',
-        'int → 4 bytes → most commonly used integer type',
-        'long → 8 bytes → stores very large values',
-        'float → stores decimal values with lower precision',
-        'double → stores decimal values with higher precision',
-        'char → stores single Unicode character',
-        'boolean → stores true or false',
-      ],
-
-      note:
-        'Among all integer types, int is most commonly used in interview coding questions.',
-    },
-
-    {
-      heading: 'Non-Primitive Data Types',
-
-      paragraphs: [
-        'Non-primitive data types are also called reference data types.',
-
-        'These types store memory addresses pointing toward objects instead of storing actual values directly.',
-
-        'Non-primitive types can call methods and contain additional functionalities.',
-      ],
-
-      bullets: [
-        'String',
-        'Arrays',
-        'Classes',
-        'Interfaces',
-        'Objects',
-      ],
-
-      warning:
-        'Primitive types cannot call methods, but non-primitive types can.',
-    },
-
-    {
-      heading: 'Default Values of Primitive Data Types',
-
-      paragraphs: [
-        'Java automatically assigns default values to instance variables if values are not provided.',
-      ],
-
-      bullets: [
-        'byte → 0',
-        'short → 0',
-        'int → 0',
-        'long → 0L',
-        'float → 0.0f',
-        'double → 0.0',
-        'char → \\u0000',
-        'boolean → false',
-      ],
-
-      interviewTrap:
-        'Local variables do not receive default values automatically.',
-    },
-
-    {
-      heading: 'Why Choosing Correct Data Type Matters',
-
-      paragraphs: [
-        'Using correct data types improves application performance and memory efficiency.',
-
-        'Wrong data type selection can cause memory waste or overflow problems.',
-
-        'For example, using int for huge banking values may cause overflow issues.',
-      ],
-
-      bullets: [
-        'Better memory optimization',
-        'Improved performance',
-        'Reduced runtime errors',
-        'Cleaner code readability',
-      ],
-    },
-  ],
-
-  tips: [
-    'Use int for normal integer operations.',
-    'Use long for very large values.',
-    'Use double for decimal precision.',
-    'Practice output questions based on char and ASCII.',
-  ],
-
-  warnings: [
-    'float requires f suffix.',
-    'char stores only one character.',
-    'Primitive types cannot store null values.',
-  ],
-
-  codeExamples: [
-    {
-      title: 'Primitive Data Types Example',
-
-      language: 'java',
-
-      code: `public class DataTypeDemo {
+        code: `public class DataTypeDemo {
 
     public static void main(String[] args) {
 
@@ -1360,87 +1356,53 @@ char grade = 'A';`,
 
 }`,
 
-      output: `21
+        output: `21
 92.5
 A
 true`,
-    },
-  ],
+      },
+    ],
 
-  outputQuestions: [
-    {
-      question: 'Predict the output',
+    outputQuestions: [
+      {
+        question: 'Predict the output',
 
-      code: `char ch = 65;
-
+        code: `char ch = 65;
 System.out.println(ch);`,
 
-      answer: 'A',
+        answer: 'A',
 
-      explanation:
-        'ASCII value 65 represents character A.',
-    },
+        explanation:
+          'ASCII value 65 represents character A.',
+      },
+    ],
 
-    {
-      question: 'Predict the output',
+    mcqs: [
+      {
+        question:
+          'Which data type is used for single character storage?',
 
-      code: `System.out.println(5 / 2);`,
+        options: ['String', 'char', 'text', 'character'],
 
-      answer: '2',
+        answer: 1,
 
-      explanation:
-        'Both operands are integers, so Java performs integer division.',
-    },
-  ],
+        explanation:
+          'char stores a single Unicode character.',
+      },
+    ],
 
-  mcqs: [
-    {
-      question:
-        'Which data type stores decimal values with higher precision?',
+    interviewQuestions: [
+      {
+        question:
+          'Difference between primitive and non-primitive data types?',
 
-      options: [
-        'float',
-        'double',
-        'int',
-        'char',
-      ],
+        answer:
+          'Primitive types store actual values while non-primitive types store references to memory locations.',
+      },
+    ],
 
-      answer: 1,
-
-      explanation:
-        'double provides better decimal precision compared to float.',
-    },
-  ],
-
-  interviewQuestions: [
-    {
-      question:
-        'Difference between primitive and non-primitive data types?',
-
-      answer:
-        'Primitive types store actual values directly while non-primitive types store references to memory locations.',
-    },
-
-    {
-      question:
-        'Why is int more commonly used than byte or short?',
-
-      answer:
-        'Modern processors are optimized for int operations, making them more efficient in most situations.',
-    },
-  ],
-
-  quickRevision: [
-    'Primitive types store actual values',
-    'Non-primitive types store references',
-    'int is default integer type',
-    'double is default decimal type',
-    'char stores single character',
-    'boolean stores true or false',
-  ],
-
-  nextTopic: 'java-type-casting',
-},
+    nextTopic: 'java-type-casting',
+  },
 
   {
     id: 'java-type-casting',
