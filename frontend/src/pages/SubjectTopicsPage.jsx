@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import subjects from '../data/subjects.json'
 import PageShell from '../components/PageShell'
@@ -8,8 +8,6 @@ import { useStudyPlanner } from '../features/studyPlanner/hooks/useStudyPlanner'
 import PlannerPanel from '../features/studyPlanner/components/PlannerPanel'
 import { useToast, ToastContainer } from '../features/studyPlanner/utils/toast'
 import { BookOpen, X } from 'lucide-react'
-import InterviewCoach from '../features/interviewCoach'
-import { getAccentColor } from '../features/interviewCoach/utils/subjectKeys'
 
 const SubjectTopicsPage = () => {
   const { subjectId } = useParams()
@@ -33,14 +31,6 @@ const SubjectTopicsPage = () => {
 
   const subject = useMemo(() => subjects.find((item) => item.id === subjectId), [subjectId])
 
-  useEffect(() => {
-    if (window.location.hash !== '#interview-coach') return
-    const timer = window.setTimeout(() => {
-      document.getElementById('interview-coach')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 300)
-    return () => window.clearTimeout(timer)
-  }, [subjectId])
-
   if (!subject) {
     return (
       <PageShell title="Subject not found" subtitle="We couldn't find that subject.">
@@ -63,16 +53,6 @@ const SubjectTopicsPage = () => {
     >
       <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
         <div className="space-y-5">
-          <div id="interview-coach">
-            <InterviewCoach
-              subjectId={subject.id}
-              accentColor={getAccentColor(subject.id)}
-            />
-          </div>
-
-          <div>
-            <h2 className="mb-4 font-display text-lg font-semibold text-ink dark:text-white">Topics</h2>
-            <div className="space-y-5">
           {subject.topics.map((topic) => {
             const topicKey = `${subject.id}:${topic.id}`
             const quizProgress = Object.keys(progress.quizResults[topicKey] ?? {}).length
@@ -93,8 +73,6 @@ const SubjectTopicsPage = () => {
               />
             )
           })}
-            </div>
-          </div>
         </div>
 
         {!isPlannerLoading && (

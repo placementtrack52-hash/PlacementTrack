@@ -134,7 +134,7 @@ async function getAIFeedback(question, answer, keywords) {
 }
 */
 
-const InterviewCoach = ({ subjectId, accentColor: accentColorProp }) => {
+const InterviewCoach = ({ subjectId, accentColor: accentColorProp, defaultExpanded = false }) => {
   const coachKey = resolveCoachSubjectId(subjectId)
   const accentColor = getAccentColor(subjectId, accentColorProp)
   const { addXP } = useXP()
@@ -143,7 +143,10 @@ const InterviewCoach = ({ subjectId, accentColor: accentColorProp }) => {
   const allQuestions = useMemo(() => getQuestionsForSubject(coachKey), [coachKey])
   const persistedRef = useRef(loadPersisted(coachKey))
 
-  const [state, dispatch] = useReducer(reducer, persistedRef.current, initialState)
+  const [state, dispatch] = useReducer(reducer, persistedRef.current, (persisted) => ({
+    ...initialState(persisted),
+    isCollapsed: !defaultExpanded,
+  }))
   const filterRef = useRef({ mode: 'All', difficulty: 'All' })
 
   const filteredPool = useMemo(
@@ -234,6 +237,7 @@ const InterviewCoach = ({ subjectId, accentColor: accentColorProp }) => {
       totalXP,
       toast: bonusApplied ? 'Quick thinker! +5 bonus' : null,
     })
+    window.dispatchEvent(new Event('interview-coach-update'))
   }
 
   const handleNext = () => {

@@ -55,6 +55,7 @@ import DreamRoadmapPage from './pages/DreamRoadmapPage'
 const DashboardPage = lazy(() => import('./pages/DashboardPage'))
 import PlacementNotesPage from './pages/PlacementNotesPage'
 import PlacementNotesLearnPage from './pages/PlacementNotesLearnPage'
+import InterviewCoachPage from './pages/InterviewCoachPage'
 
 const PublicOnlyRoute = ({ children }) => {
   const { isAuthenticated, isHydrating } = useAuth()
@@ -161,6 +162,7 @@ const AppContent = () => {
         path="/placement-notes/:language/:slug"
         element={<ProtectedRoute><PlacementNotesLearnPage /></ProtectedRoute>}
       />
+      <Route path="/interview-coach" element={<ProtectedRoute><InterviewCoachPage /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
     <FeedbackWidget />

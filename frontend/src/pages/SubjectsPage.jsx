@@ -10,12 +10,19 @@ import SubjectCard from '../components/SubjectCard'
 import { useProgress } from '../context/ProgressContext'
 import { codeApi } from '../services/api'
 import { usePlacementNotesProgress } from '../features/placementNotes/hooks/usePlacementNotesProgress'
+import { useInterviewCoachStats } from '../features/interviewCoach/hooks/useInterviewCoachStats'
 
 const SubjectsPage = () => {
   const { progress, subjectCompletion, subjectQuizProgress } = useProgress()
   const companyPrepProgress = useAppSelector(selectOverallCompanyPrepProgress)
   const { completedCount: notesCompleted, totalTopics: notesTotal, progressPercent: notesProgress } =
     usePlacementNotesProgress()
+  const {
+    totalQuestions: coachQuestions,
+    completedSessions: coachSessions,
+    progressPercent: coachProgress,
+    subjectCount: coachSubjectCount,
+  } = useInterviewCoachStats()
   const [codeStats, setCodeStats] = useState({ total: 0, loading: true })
 
   useEffect(() => {
@@ -55,38 +62,6 @@ const SubjectsPage = () => {
       title="Subjects"
       subtitle="Pick a lane for today. Each subject includes topics, notes, quizzes, and a final mixed test."
     >
-      <div className="mb-6 rounded-[1.75rem] border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-violet-50 to-white p-6 shadow-soft dark:border-indigo-500/30 dark:from-zinc-900 dark:via-indigo-950/40 dark:to-zinc-900">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-indigo-600 dark:text-indigo-300">Free · No API</p>
-            <h3 className="mt-2 font-display text-2xl font-bold text-ink dark:text-white">AI Interview Coach</h3>
-            <p className="mt-2 max-w-xl text-sm leading-6 text-slate dark:text-white/70">
-              Practice interview answers with instant keyword, clarity, and depth scoring. Open any subject below — the coach appears at the top of that subject&apos;s topic page.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {subjects
-              .filter((s) => s.id !== 'interview-question')
-              .slice(0, 4)
-              .map((s) => (
-                <Link
-                  key={s.id}
-                  to={`/subjects/${s.id}#interview-coach`}
-                  className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white dark:bg-white dark:text-black"
-                >
-                  {s.name}
-                </Link>
-              ))}
-            <Link
-              to="/subjects/aptitude#interview-coach"
-              className="rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-indigo-700 dark:border-indigo-500/40 dark:bg-zinc-800 dark:text-indigo-200"
-            >
-              Try now →
-            </Link>
-          </div>
-        </div>
-      </div>
-
       <div className="grid gap-6 lg:grid-cols-3">
         {subjects.map((subject) => {
           const summary = subjectQuizProgress[subject.id]
@@ -333,6 +308,42 @@ const SubjectsPage = () => {
           </div>
           <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
             Open Notes
+          </span>
+        </Link>
+
+        <Link
+          to="/interview-coach"
+          className="rounded-[1.75rem] bg-gradient-to-br from-indigo-200 via-blue-100 to-white p-6 shadow-soft dark:!bg-gradient-to-br dark:!from-zinc-800 dark:!via-zinc-900 dark:!to-zinc-800"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate dark:text-white/70">🎤</p>
+              <h3 className="mt-3 font-display text-2xl font-bold text-ink dark:text-white">AI Interview Coach</h3>
+              <p className="mt-2 text-sm leading-6 text-slate dark:text-white/70">
+                Practice interview answers with keyword, clarity, and depth scoring. Free in your browser — no API.
+              </p>
+            </div>
+            <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-moss dark:bg-zinc-700 dark:text-indigo-300">
+              {coachSubjectCount} subjects
+            </span>
+          </div>
+          <div className="mt-6">
+            <div className="mb-2 flex items-center justify-between text-sm text-slate dark:text-white/70">
+              <span>Progress</span>
+              <span>{coachSessions}/{coachQuestions} sessions</span>
+            </div>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-[#e7ddd2] dark:bg-zinc-700">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-blue-500 transition-all duration-500"
+                style={{ width: `${coachProgress}%` }}
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate dark:text-white/70">
+              Aptitude · Verbal · Reasoning · Technical · Interview Qs
+            </p>
+          </div>
+          <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
+            Open Coach
           </span>
         </Link>
       </div>
