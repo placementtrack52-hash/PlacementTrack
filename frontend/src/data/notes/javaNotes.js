@@ -1202,32 +1202,58 @@ Data types improve:
       },
 
       {
-        heading: 'Types of Data Types in Java',
+  heading: 'Types of Data Types in Java',
 
-        content: `
-Java data types are divided into two categories:
+  content: `
+  
+  <div class="space-y-6">
 
-1. Primitive Data Types
+    <p class="text-gray-700 leading-8 text-[17px]">
+      Java data types are divided into two categories:
+    </p>
 
-These store actual values directly.
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-xl">
+      
+      <h3 class="text-xl font-semibold text-blue-700 mb-3">
+        1. Primitive Data Types
+      </h3>
 
-Examples:
-• int
-• double
-• char
-• boolean
+      <p class="text-gray-700 leading-7 mb-3">
+        These store actual values directly.
+      </p>
 
-2. Non-Primitive Data Types
+      <ul class="list-disc pl-6 text-gray-800 space-y-1">
+        <li><b>int</b></li>
+        <li><b>double</b></li>
+        <li><b>char</b></li>
+        <li><b>boolean</b></li>
+      </ul>
 
-These store references to objects.
+    </div>
 
-Examples:
-• String
-• Arrays
-• Classes
-• Interfaces
-`,
-      },
+    <div class="bg-purple-50 border-l-4 border-purple-600 p-5 rounded-xl">
+
+      <h3 class="text-xl font-semibold text-purple-700 mb-3">
+        2. Non-Primitive Data Types
+      </h3>
+
+      <p class="text-gray-700 leading-7 mb-3">
+        These store references to objects.
+      </p>
+
+      <ul class="list-disc pl-6 text-gray-800 space-y-1">
+        <li><b>String</b></li>
+        <li><b>Arrays</b></li>
+        <li><b>Classes</b></li>
+        <li><b>Interfaces</b></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  `,
+},
 
       {
         heading: 'Primitive Data Types',
