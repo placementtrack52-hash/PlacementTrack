@@ -8,6 +8,7 @@ const COACH_ROUTE_SUBJECTS = [
   { id: 'reasoning', name: 'Reasoning' },
   { id: 'technical', name: 'Technical' },
   { id: 'interview-question', name: 'Interview Questions' },
+  { id: 'code', name: 'Code Learnings' },
 ]
 
 const loadCoachStorage = (coachKey) => {
