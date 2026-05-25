@@ -23,12 +23,20 @@ const SubjectCard = ({ subject, progressPercent, completedCount, totalCount, pro
         {completedCount}/{totalCount} {progressLabel} completed
       </p>
     </div>
-    <Link
-      to={`/subjects/${subject.id}`}
-      className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black"
-    >
-      Open subject
-    </Link>
+    <div className="mt-6 flex flex-wrap gap-2">
+      <Link
+        to={`/subjects/${subject.id}`}
+        className="inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black"
+      >
+        Open subject
+      </Link>
+      <Link
+        to={`/subjects/${subject.id}#interview-coach`}
+        className="inline-flex rounded-full border border-indigo-200 bg-white/90 px-4 py-3 text-sm font-semibold text-indigo-700 dark:border-indigo-500/40 dark:bg-zinc-800 dark:text-indigo-200"
+      >
+        Interview Coach
+      </Link>
+    </div>
   </div>
 )
 

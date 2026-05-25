@@ -256,7 +256,7 @@ const InterviewCoach = ({ subjectId, accentColor: accentColorProp }) => {
     }`
 
   return (
-    <section className="mt-8">
+    <section>
       <button
         type="button"
         onClick={() => dispatch({ type: 'TOGGLE_COLLAPSE' })}

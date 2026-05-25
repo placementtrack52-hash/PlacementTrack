@@ -55,6 +55,38 @@ const SubjectsPage = () => {
       title="Subjects"
       subtitle="Pick a lane for today. Each subject includes topics, notes, quizzes, and a final mixed test."
     >
+      <div className="mb-6 rounded-[1.75rem] border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-violet-50 to-white p-6 shadow-soft dark:border-indigo-500/30 dark:from-zinc-900 dark:via-indigo-950/40 dark:to-zinc-900">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-indigo-600 dark:text-indigo-300">Free · No API</p>
+            <h3 className="mt-2 font-display text-2xl font-bold text-ink dark:text-white">AI Interview Coach</h3>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-slate dark:text-white/70">
+              Practice interview answers with instant keyword, clarity, and depth scoring. Open any subject below — the coach appears at the top of that subject&apos;s topic page.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {subjects
+              .filter((s) => s.id !== 'interview-question')
+              .slice(0, 4)
+              .map((s) => (
+                <Link
+                  key={s.id}
+                  to={`/subjects/${s.id}#interview-coach`}
+                  className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white dark:bg-white dark:text-black"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            <Link
+              to="/subjects/aptitude#interview-coach"
+              className="rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-indigo-700 dark:border-indigo-500/40 dark:bg-zinc-800 dark:text-indigo-200"
+            >
+              Try now →
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <div className="grid gap-6 lg:grid-cols-3">
         {subjects.map((subject) => {
           const summary = subjectQuizProgress[subject.id]
