@@ -27585,7 +27585,988 @@ public class Main {
     },
   ],
 
-  nextTopic: 'java-thread-priority',
+  nextTopic: 'java-input-output',
+},
+{
+  id: 'java-input-output',
+
+  title: 'Java Input/Output (I/O) Streams',
+
+  slug: 'java-input-output',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '40 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Input/Output deeply including streams, file handling, byte streams, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Input/Output (I/O)',
+
+      content: `
+• Introduction to I/O
+
+• Streams in Java
+
+• Byte Streams
+
+• File Handling
+
+• InputStream and OutputStream
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Java I/O',
+
+      content: `
+Java I/O is used to perform input and output operations.
+
+Examples:
+
+• Reading data from keyboard
+• Writing data to file
+• File processing
+`.trim(),
+    },
+
+    {
+      heading: 'Streams in Java',
+
+      content: `
+Stream is a sequence of data flow.
+
+Types:
+
+• Byte Stream (binary data)
+• Character Stream (text data)
+`.trim(),
+    },
+
+    {
+      heading: 'Byte Streams',
+
+      content: `
+Byte streams handle binary data like images, videos, files.
+
+Main classes:
+
+• InputStream
+• OutputStream
+`.trim(),
+    },
+
+    {
+      heading: 'Why Java I/O is Important',
+
+      content: `
+• File handling
+• Data storage
+• Network communication
+• System integration
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points',
+
+      content: `
+• Java uses streams for I/O
+• Data flows in sequence
+• Streams can be input or output
+• Always close streams after use
+
+Common Mistakes:
+
+• Not closing streams
+• Using wrong stream type
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Simple File Write Example',
+
+      language: 'java',
+
+      code: `import java.io.FileOutputStream;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        FileOutputStream fos =
+            new FileOutputStream("file.txt");
+
+        fos.write("Hello Java".getBytes());
+
+        fos.close();
+
+    }
+
+}`,
+
+      output: 'File created with content',
+    },
+  ],
+
+  mcqs: [
+    {
+      question: 'Java I/O is used for?',
+
+      options: [
+        'Compilation',
+        'Input and Output operations',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation: 'Java I/O handles input and output operations.',
+    },
+
+    {
+      question: 'Stream in Java is?',
+
+      options: [
+        'Data sequence',
+        'Class loader',
+        'Loop structure',
+        'Package'
+      ],
+
+      answer: 0,
+
+      explanation: 'Stream is a sequence of data flow.',
+    },
+
+    {
+      question: 'Byte streams handle?',
+
+      options: [
+        'Only text',
+        'Binary data',
+        'Only numbers',
+        'Only files'
+      ],
+
+      answer: 1,
+
+      explanation: 'Byte streams handle binary data like images and files.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question: 'What is Java I/O?',
+
+      answer:
+        'Java I/O is used to perform input and output operations like reading and writing data using streams.',
+    },
+
+    {
+      question: 'What is a stream in Java?',
+
+      answer:
+        'A stream is a sequence of data used for input and output operations.',
+    },
+  ],
+
+  nextTopic: 'java-fileoutputstream',
 },
 
+{
+  id: 'java-fileoutputstream',
+
+  title: 'Java FileOutputStream',
+
+  slug: 'java-fileoutputstream',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn FileOutputStream in Java deeply including writing data to files, byte streams, and file handling concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java FileOutputStream',
+
+      content: `
+• Introduction to FileOutputStream
+
+• Writing Data to File
+
+• Byte Stream Concept
+
+• File Handling
+
+• append mode
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is FileOutputStream?',
+
+      content: `
+FileOutputStream is used to write raw bytes to a file.
+
+Used for:
+
+• Writing text
+• Writing binary data
+`.trim(),
+    },
+
+    {
+      heading: 'How FileOutputStream Works',
+
+      content: `
+Data is converted into bytes and written to file.
+
+Flow:
+
+Program → bytes → file
+`.trim(),
+    },
+
+    {
+      heading: 'Why FileOutputStream is Used',
+
+      content: `
+• File writing
+• Data storage
+• Image/audio writing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points',
+
+      content: `
+• Writes byte by byte
+• Overwrites file by default
+• Must close stream after use
+
+Common Mistakes:
+
+• Forgetting close()
+• Writing without conversion
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'FileOutputStream Example',
+
+      language: 'java',
+
+      code: `import java.io.FileOutputStream;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        FileOutputStream fos =
+            new FileOutputStream("test.txt");
+
+        String data = "Hello FileOutputStream";
+
+        fos.write(data.getBytes());
+
+        fos.close();
+
+    }
+
+}`,
+
+      output: 'Data written to file',
+    },
+  ],
+
+  mcqs: [
+    {
+      question: 'FileOutputStream is used for?',
+
+      options: [
+        'Reading file',
+        'Writing file',
+        'Deleting file',
+        'Compiling code'
+      ],
+
+      answer: 1,
+
+      explanation: 'FileOutputStream is used to write data to file.',
+    },
+
+    {
+      question: 'FileOutputStream writes data in?',
+
+      options: [
+        'Characters',
+        'Bytes',
+        'Objects',
+        'Methods'
+      ],
+
+      answer: 1,
+
+      explanation: 'It writes data in byte format.',
+    },
+
+    {
+      question: 'Default behavior of FileOutputStream is?',
+
+      options: [
+        'Append data',
+        'Overwrite file',
+        'Delete file',
+        'Compile file'
+      ],
+
+      answer: 1,
+
+      explanation: 'It overwrites file by default.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question: 'What is FileOutputStream?',
+
+      answer:
+        'FileOutputStream is used to write byte data into a file in Java.',
+    },
+
+    {
+      question: 'Why do we use getBytes() method?',
+
+      answer:
+        'Because FileOutputStream writes data in byte format.',
+    },
+  ],
+
+  nextTopic: 'java-fileinputstream',
+},
+
+{
+  id: 'java-fileinputstream',
+
+  title: 'Java FileInputStream',
+
+  slug: 'java-fileinputstream',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn FileInputStream in Java deeply including reading files, byte streams, and file processing.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java FileInputStream',
+
+      content: `
+• Introduction to FileInputStream
+
+• Reading File Data
+
+• Byte Stream Processing
+
+• File Handling
+
+• read() Method
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is FileInputStream?',
+
+      content: `
+FileInputStream is used to read data from a file in byte form.
+
+Used for:
+
+• Reading files
+• Processing binary data
+`.trim(),
+    },
+
+    {
+      heading: 'How FileInputStream Works',
+
+      content: `
+File data is read byte by byte.
+
+Flow:
+
+File → bytes → program
+`.trim(),
+    },
+
+    {
+      heading: 'read() Method',
+
+      content: `
+read() reads one byte at a time.
+
+Returns:
+
+• ASCII value
+• -1 when end of file
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points',
+
+      content: `
+• Reads byte by byte
+• Used for binary files
+• Must close stream
+
+Common Mistakes:
+
+• Not checking -1 condition
+• Not closing stream
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'FileInputStream Example',
+
+      language: 'java',
+
+      code: `import java.io.FileInputStream;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        FileInputStream fis =
+            new FileInputStream("test.txt");
+
+        int i;
+
+        while((i = fis.read()) != -1) {
+
+            System.out.print((char)i);
+
+        }
+
+        fis.close();
+
+    }
+
+}`,
+
+      output: 'File content displayed',
+    },
+  ],
+
+  mcqs: [
+    {
+      question: 'FileInputStream is used for?',
+
+      options: [
+        'Writing file',
+        'Reading file',
+        'Deleting file',
+        'Compiling code'
+      ],
+
+      answer: 1,
+
+      explanation: 'FileInputStream reads data from file.',
+    },
+
+    {
+      question: 'read() method returns?',
+
+      options: [
+        'String',
+        'Object',
+        'Byte value',
+        'Boolean'
+      ],
+
+      answer: 2,
+
+      explanation: 'read() returns byte/ASCII value.',
+    },
+
+    {
+      question: 'End of file is represented by?',
+
+      options: [
+        '0',
+        '1',
+        '-1',
+        'null'
+      ],
+
+      answer: 2,
+
+      explanation: '-1 indicates end of file.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question: 'What is FileInputStream?',
+
+      answer:
+        'FileInputStream is used to read byte data from a file in Java.',
+    },
+
+    {
+      question: 'Why is -1 important in FileInputStream?',
+
+      answer:
+        'It indicates end of file while reading data.',
+    },
+  ],
+
+  nextTopic: 'java-bufferedoutputstream',
+},
+
+{
+  id: 'java-bufferedoutputstream',
+
+  title: 'Java BufferedOutputStream',
+
+  slug: 'java-bufferedoutputstream',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn BufferedOutputStream in Java deeply including buffering, performance improvement, and file writing optimization.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java BufferedOutputStream',
+
+      content: `
+• Introduction to BufferedOutputStream
+
+• Buffer Concept
+
+• Performance Improvement
+
+• File Writing Optimization
+
+• flush() Method
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is BufferedOutputStream?',
+
+      content: `
+BufferedOutputStream is used to improve performance of file writing.
+
+It stores data in buffer before writing to file.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Buffering is Important',
+
+      content: `
+Without buffering:
+
+• Each byte is written individually (slow)
+
+With buffering:
+
+• Data is written in chunks (fast)
+`.trim(),
+    },
+
+    {
+      heading: 'flush() Method',
+
+      content: `
+flush() forces buffered data to be written to file immediately.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages',
+
+      content: `
+• Faster file writing
+• Reduces I/O operations
+• Improves performance
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points',
+
+      content: `
+• Works with FileOutputStream
+• Uses internal buffer
+• Must call flush/close
+
+Common Mistakes:
+
+• Not flushing data
+• Forgetting to close stream
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'BufferedOutputStream Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        FileOutputStream fos =
+            new FileOutputStream("file.txt");
+
+        BufferedOutputStream bos =
+            new BufferedOutputStream(fos);
+
+        String data = "Buffered Output Stream Example";
+
+        bos.write(data.getBytes());
+
+        bos.flush();
+
+        bos.close();
+
+    }
+
+}`,
+
+      output: 'Data written using buffer',
+    },
+  ],
+
+  mcqs: [
+    {
+      question: 'BufferedOutputStream improves?',
+
+      options: [
+        'Compilation',
+        'Performance',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation: 'It improves file writing performance.',
+    },
+
+    {
+      question: 'flush() is used to?',
+
+      options: [
+        'Delete data',
+        'Clear buffer',
+        'Write buffered data',
+        'Compile code'
+      ],
+
+      answer: 2,
+
+      explanation: 'flush() writes buffered data to file.',
+    },
+
+    {
+      question: 'BufferedOutputStream reduces?',
+
+      options: [
+        'Memory',
+        'CPU',
+        'I/O operations',
+        'Classes'
+      ],
+
+      answer: 2,
+
+      explanation: 'It reduces number of I/O operations.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question: 'What is BufferedOutputStream?',
+
+      answer:
+        'BufferedOutputStream is used to improve efficiency of writing data to files by using buffer memory.',
+    },
+
+    {
+      question: 'Why is buffering used in Java I/O?',
+
+      answer:
+        'It reduces number of I/O operations and improves performance.',
+    },
+  ],
+
+  nextTopic: 'java-bufferedinputstream',
+},
+
+{
+  id: 'java-bufferedinputstream',
+
+  title: 'Java BufferedInputStream',
+
+  slug: 'java-bufferedinputstream',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn BufferedInputStream in Java deeply including buffered reading, performance improvement, and file reading optimization.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java BufferedInputStream',
+
+      content: `
+• Introduction to BufferedInputStream
+
+• Buffer Concept
+
+• Performance Improvement
+
+• File Reading Optimization
+
+• read() Method
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is BufferedInputStream?',
+
+      content: `
+BufferedInputStream is used to improve performance of file reading.
+
+It reads data in chunks instead of byte-by-byte.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Buffering is Important',
+
+      content: `
+Without buffering:
+
+• Slow reading (byte by byte)
+
+With buffering:
+
+• Faster reading using memory buffer
+`.trim(),
+    },
+
+    {
+      heading: 'read() Method',
+
+      content: `
+Reads data from buffer first, then file.
+
+Returns:
+
+• byte value
+• -1 at end of file
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages',
+
+      content: `
+• Faster file reading
+• Reduced I/O operations
+• Better performance
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points',
+
+      content: `
+• Works with FileInputStream
+• Uses internal buffer
+• Must close stream
+
+Common Mistakes:
+
+• Not closing stream
+• Ignoring buffer usage
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'BufferedInputStream Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        FileInputStream fis =
+            new FileInputStream("file.txt");
+
+        BufferedInputStream bis =
+            new BufferedInputStream(fis);
+
+        int i;
+
+        while((i = bis.read()) != -1) {
+
+            System.out.print((char)i);
+
+        }
+
+        bis.close();
+
+    }
+
+}`,
+
+      output: 'File content displayed faster',
+    },
+  ],
+
+  mcqs: [
+    {
+      question: 'BufferedInputStream improves?',
+
+      options: [
+        'Compilation',
+        'Reading performance',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation: 'It improves file reading performance.',
+    },
+
+    {
+      question: 'BufferedInputStream reads data in?',
+
+      options: [
+        'Characters only',
+        'Chunks',
+        'Methods',
+        'Objects'
+      ],
+
+      answer: 1,
+
+      explanation: 'It reads data in chunks using buffer.',
+    },
+
+    {
+      question: 'BufferedInputStream is used with?',
+
+      options: [
+        'Scanner',
+        'FileInputStream',
+        'PrintStream',
+        'ObjectInputStream'
+      ],
+
+      answer: 1,
+
+      explanation: 'It is used with FileInputStream.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question: 'What is BufferedInputStream?',
+
+      answer:
+        'BufferedInputStream is used to improve efficiency of reading data from files using buffering.',
+    },
+
+    {
+      question: 'Why is buffering important in Java I/O?',
+
+      answer:
+        'It reduces I/O operations and improves performance.',
+    },
+  ],
+
+  nextTopic: 'java-filewriter',
+},
 ];
