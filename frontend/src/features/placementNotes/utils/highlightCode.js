@@ -31,35 +31,74 @@ export const formatDocText = (text) => {
   )
 
   const lines = escaped.split(/\r?\n/)
-  let html = ''
-  let openList = null
+  const htmlParts = []
   let paragraphLines = []
+  let currentList = null
 
   const flushParagraph = () => {
     if (paragraphLines.length === 0) return
-    html += `<p class="mt-4 leading-7">${paragraphLines.join(' ')}</p>`
+    htmlParts.push(`<p class="mt-4 leading-7">${paragraphLines.join(' ')}</p>`)
     paragraphLines = []
   }
 
-  const closeList = () => {
-    if (openList) {
-      html += `</${openList}>`
-      openList = null
-    }
+  const flushList = () => {
+    if (!currentList) return
+
+    const listClass = `mt-4 list-inside ${currentList.type === 'ul' ? 'list-disc' : 'list-decimal'} space-y-3 text-slate-700 dark:text-slate-300`
+    const listItems = currentList.items
+      .map((item) => {
+        if (item.content.length === 0) return '<li />'
+        const [firstLine, ...restLines] = item.content
+        let itemHtml = `<span>${firstLine}</span>`
+        let paragraphOpen = false
+
+        for (const line of restLines) {
+          if (line === '') {
+            if (paragraphOpen) {
+              itemHtml += '</p>'
+            }
+            itemHtml += '<p class="mt-2">'
+            paragraphOpen = true
+            continue
+          }
+
+          if (!paragraphOpen) {
+            itemHtml += `<p class="mt-2">${line}`
+            paragraphOpen = true
+          } else {
+            itemHtml += ` ${line}`
+          }
+        }
+
+        if (paragraphOpen) {
+          itemHtml += '</p>'
+        }
+
+        return `<li class="leading-7">${itemHtml}</li>`
+      })
+      .join('')
+
+    htmlParts.push(`<${currentList.type} class="${listClass}">${listItems}</${currentList.type}>`)
+    currentList = null
   }
 
   const startList = (type) => {
-    closeList()
-    openList = type
-    html += `<${type} class="mt-4 list-inside ${type === 'ul' ? 'list-disc' : 'list-decimal'} space-y-1 text-slate-700 dark:text-slate-300">`
+    if (!currentList || currentList.type !== type) {
+      flushList()
+      currentList = { type, items: [] }
+    }
   }
 
   for (const rawLine of lines) {
     const line = rawLine.trim()
 
     if (line === '') {
-      flushParagraph()
-      closeList()
+      if (currentList && currentList.items.length > 0) {
+        currentList.items[currentList.items.length - 1].content.push('')
+      } else {
+        flushParagraph()
+        flushList()
+      }
       continue
     }
 
@@ -68,15 +107,20 @@ export const formatDocText = (text) => {
 
     if (unorderedMatch) {
       flushParagraph()
-      if (openList !== 'ul') startList('ul')
-      html += `<li>${unorderedMatch[1]}</li>`
+      startList('ul')
+      currentList.items.push({ content: [unorderedMatch[1]] })
       continue
     }
 
     if (orderedMatch) {
       flushParagraph()
-      if (openList !== 'ol') startList('ol')
-      html += `<li>${orderedMatch[2]}</li>`
+      startList('ol')
+      currentList.items.push({ content: [orderedMatch[2]] })
+      continue
+    }
+
+    if (currentList && currentList.items.length > 0) {
+      currentList.items[currentList.items.length - 1].content.push(line)
       continue
     }
 
@@ -84,6 +128,6 @@ export const formatDocText = (text) => {
   }
 
   flushParagraph()
-  closeList()
-  return html
+  flushList()
+  return htmlParts.join('')
 }
