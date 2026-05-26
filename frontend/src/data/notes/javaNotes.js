@@ -2311,5 +2311,981 @@ Flow Control Keywords:
 
     nextTopic: 'java-if-else',
   },
+{
+  id: 'java-if-else',
 
+  title: 'Java If Else Statement',
+
+  slug: 'java-if-else',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '18 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java if, else, else-if ladder, nested if statements, conditions, comparison operators, and decision-making logic in a simple placement-oriented way.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Introduction to Java If Else',
+
+      content: `
+The if-else statement in Java is used to make decisions in a program.
+
+Sometimes we want different outputs based on different conditions.
+
+For example:
+
+• Show "Pass" if marks are greater than 40
+• Show "Adult" if age is 18 or more
+• Show "Even Number" if a number is divisible by 2
+
+In Java, decision-making statements help programs become intelligent.
+
+Without conditions, every line would execute in the same order.
+
+The if statement checks whether a condition is true or false.
+
+If the condition becomes true, the block inside if executes.
+
+If the condition becomes false, Java skips that block.
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of If Statement',
+
+      content: `
+The basic syntax of if statement is:
+
+1. Write if keyword
+2. Add condition inside ()
+3. Write code block inside {}
+
+General Syntax:
+
+if(condition) {
+
+    // code
+
+}
+
+Important Rules:
+
+• Condition must return true or false
+• Curly braces improve readability
+• Indentation should be proper
+• Boolean expressions are mostly used inside conditions
+`.trim(),
+    },
+
+    {
+      heading: 'Working of If Else Statement',
+
+      content: `
+Java checks the condition written inside the brackets.
+
+If the condition is true:
+
+• Code inside if block executes
+
+If the condition is false:
+
+• else block executes
+
+Flow of execution:
+
+1. Condition checked
+2. True → if block runs
+3. False → else block runs
+
+Only one block executes at a time.
+`.trim(),
+    },
+
+    {
+      heading: 'Else If Ladder in Java',
+
+      content: `
+Sometimes multiple conditions are required.
+
+In such cases, else-if ladder is used.
+
+Example situations:
+
+• Grade systems
+• Menu systems
+• Salary ranges
+• Ranking logic
+
+Structure:
+
+if(condition1) {
+
+}
+
+else if(condition2) {
+
+}
+
+else {
+
+}
+
+Java checks conditions from top to bottom.
+
+The first true condition executes.
+
+Remaining conditions are skipped.
+`.trim(),
+    },
+
+    {
+      heading: 'Nested If Statement',
+
+      content: `
+A nested if means writing one if statement inside another if statement.
+
+Used when a second condition depends on the first condition.
+
+Example:
+
+• First check if user is logged in
+• Then check if user is admin
+
+Important:
+
+• Too much nesting reduces readability
+• Use meaningful conditions
+• Keep nesting limited when possible
+`.trim(),
+    },
+
+    {
+      heading: 'Comparison Operators Used in Conditions',
+
+      content: `
+Common operators used with if-else:
+
+• ==  → equal to
+• !=  → not equal to
+• >   → greater than
+• <   → smaller than
+• >=  → greater than or equal to
+• <=  → smaller than or equal to
+
+Logical Operators:
+
+• && → AND
+• || → OR
+• !  → NOT
+
+These operators help create complex conditions.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About If Else',
+
+      content: `
+• else block is optional
+• Multiple else-if blocks are allowed
+• Conditions always return boolean values
+• Curly braces should always be used for better readability
+• Avoid deeply nested conditions
+• Write simple and readable conditions
+
+Common Beginner Mistakes:
+
+• Using = instead of ==
+• Forgetting curly braces
+• Writing invalid conditions
+• Confusing AND and OR operators
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Simple If Statement',
+
+      language: 'java',
+
+      code: `public class IfExample {
+
+    public static void main(String[] args) {
+
+        int age = 20;
+
+        if(age >= 18) {
+
+            System.out.println("Eligible to vote");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Eligible to vote',
+    },
+
+    {
+      title: 'If Else Example',
+
+      language: 'java',
+
+      code: `public class IfElseExample {
+
+    public static void main(String[] args) {
+
+        int number = 7;
+
+        if(number % 2 == 0) {
+
+            System.out.println("Even Number");
+
+        }
+
+        else {
+
+            System.out.println("Odd Number");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Odd Number',
+    },
+
+    {
+      title: 'Else If Ladder Example',
+
+      language: 'java',
+
+      code: `public class GradeExample {
+
+    public static void main(String[] args) {
+
+        int marks = 82;
+
+        if(marks >= 90) {
+
+            System.out.println("Grade A");
+
+        }
+
+        else if(marks >= 75) {
+
+            System.out.println("Grade B");
+
+        }
+
+        else if(marks >= 50) {
+
+            System.out.println("Grade C");
+
+        }
+
+        else {
+
+            System.out.println("Fail");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Grade B',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which statement is used for decision making in Java?',
+
+      options: ['loop', 'if-else', 'array', 'class'],
+
+      answer: 1,
+
+      explanation:
+        'if-else statements are used to make decisions based on conditions.',
+    },
+
+    {
+      question:
+        'Which operator checks equality in Java?',
+
+      options: ['=', '==', '!=', '&&'],
+
+      answer: 1,
+
+      explanation:
+        '== is used to compare two values.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the difference between if and if-else statement?',
+
+      answer:
+        'if statement executes code only when condition is true, while if-else executes one block for true and another block for false condition.',
+    },
+
+    {
+      question:
+        'What is an else-if ladder in Java?',
+
+      answer:
+        'Else-if ladder is used to check multiple conditions one after another.',
+    },
+  ],
+
+  nextTopic: 'java-switch-statement',
+},
+
+{
+  id: 'java-switch-statement',
+
+  title: 'Java Switch Statement',
+
+  slug: 'java-switch-statement',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '16 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java switch statement, case labels, break keyword, default case, and menu-driven programming in simple language.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Cognizant', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Introduction to Switch Statement',
+
+      content: `
+The switch statement is used when multiple conditions depend on a single value.
+
+Instead of writing many else-if statements, switch makes code cleaner and easier to read.
+
+Common Use Cases:
+
+• Calculator programs
+• Menu systems
+• Day and month programs
+• Option selection systems
+
+Switch improves readability when many fixed choices exist.
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of Switch Statement',
+
+      content: `
+General Syntax:
+
+switch(variable) {
+
+    case value1:
+        // code
+        break;
+
+    case value2:
+        // code
+        break;
+
+    default:
+        // code
+
+}
+
+Important Components:
+
+• switch → checks variable
+• case → possible values
+• break → stops execution
+• default → executes when no case matches
+`.trim(),
+    },
+
+    {
+      heading: 'How Switch Works',
+
+      content: `
+Java compares switch variable with each case.
+
+If a match is found:
+
+• That case executes
+• break stops further execution
+
+If break is missing:
+
+• Execution continues to next cases
+• This is called fall-through
+
+If no case matches:
+
+• default block executes
+`.trim(),
+    },
+
+    {
+      heading: 'Break Statement Importance',
+
+      content: `
+break is very important inside switch.
+
+Without break:
+
+• Multiple cases may execute unintentionally
+
+Always use break unless fall-through behavior is intentionally needed.
+`.trim(),
+    },
+
+    {
+      heading: 'Default Case in Java',
+
+      content: `
+The default block works like else block.
+
+It executes when no case matches.
+
+default is optional but recommended for safer programs.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Rules of Switch',
+
+      content: `
+• Case values must be unique
+• Duplicate cases are not allowed
+• break prevents unnecessary execution
+• default can appear anywhere
+• switch supports int, char, String, enum
+
+Common Mistakes:
+
+• Forgetting break
+• Duplicate case values
+• Invalid data types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Simple Switch Example',
+
+      language: 'java',
+
+      code: `public class SwitchExample {
+
+    public static void main(String[] args) {
+
+        int day = 3;
+
+        switch(day) {
+
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            case 3:
+                System.out.println("Wednesday");
+                break;
+
+            default:
+                System.out.println("Invalid Day");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Wednesday',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which keyword stops execution inside switch?',
+
+      options: ['stop', 'continue', 'break', 'exit'],
+
+      answer: 2,
+
+      explanation:
+        'break stops execution after a matching case.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is break used in switch statement?',
+
+      answer:
+        'break stops further case execution after a matching case is found.',
+    },
+  ],
+
+  nextTopic: 'java-for-loop',
+},
+
+{
+  id: 'java-for-loop',
+
+  title: 'Java For Loop',
+
+  slug: 'java-for-loop',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '20 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java for loop, loop execution flow, nested loops, infinite loops, and iteration concepts deeply with beginner-friendly examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Introduction to For Loop',
+
+      content: `
+Loops are used when we want to repeat code multiple times.
+
+Instead of writing the same statement again and again, loops automate repetition.
+
+The for loop is one of the most commonly used loops in Java.
+
+Used In:
+
+• Printing patterns
+• Array traversal
+• Number calculations
+• Iterative tasks
+• Competitive programming
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of For Loop',
+
+      content: `
+General Syntax:
+
+for(initialization; condition; update) {
+
+    // code
+
+}
+
+Three Parts:
+
+1. Initialization
+   → starting value
+
+2. Condition
+   → loop runs while condition is true
+
+3. Update
+   → increases or decreases value
+`.trim(),
+    },
+
+    {
+      heading: 'Execution Flow of For Loop',
+
+      content: `
+Step-by-step working:
+
+1. Initialization executes once
+2. Condition is checked
+3. Loop body executes
+4. Update executes
+5. Condition checked again
+
+This process repeats until condition becomes false.
+`.trim(),
+    },
+
+    {
+      heading: 'Nested For Loop',
+
+      content: `
+A loop inside another loop is called nested loop.
+
+Mostly used in:
+
+• Pattern printing
+• Matrix operations
+• Tables
+
+Outer loop controls rows.
+
+Inner loop controls columns.
+`.trim(),
+    },
+
+    {
+      heading: 'Infinite Loop',
+
+      content: `
+If condition never becomes false, loop runs forever.
+
+Example:
+
+for(;;) {
+
+}
+
+This is called infinite loop.
+
+Use carefully because it may hang the program.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About For Loop',
+
+      content: `
+• Initialization runs only once
+• Condition controls execution
+• Update changes loop variable
+• Avoid infinite loops accidentally
+• Keep loop conditions simple
+
+Common Mistakes:
+
+• Wrong condition
+• Missing update
+• Using semicolon after loop
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic For Loop',
+
+      language: 'java',
+
+      code: `public class ForLoopExample {
+
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 5; i++) {
+
+            System.out.println(i);
+
+        }
+
+    }
+
+}`,
+
+      output: `1
+2
+3
+4
+5`,
+    },
+
+    {
+      title: 'Nested For Loop Example',
+
+      language: 'java',
+
+      code: `public class NestedLoop {
+
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 3; i++) {
+
+            for(int j = 1; j <= 2; j++) {
+
+                System.out.println("Row: " + i + " Column: " + j);
+
+            }
+
+        }
+
+    }
+
+}`,
+
+      output: `Row: 1 Column: 1
+Row: 1 Column: 2
+Row: 2 Column: 1
+Row: 2 Column: 2
+Row: 3 Column: 1
+Row: 3 Column: 2`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which loop is best when number of iterations is known?',
+
+      options: ['while', 'for', 'do-while', 'switch'],
+
+      answer: 1,
+
+      explanation:
+        'for loop is preferred when iterations are known.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are the three parts of for loop?',
+
+      answer:
+        'Initialization, condition, and update are the three parts of a for loop.',
+    },
+  ],
+
+  nextTopic: 'java-for-each-loop',
+},
+
+{
+  id: 'java-for-each-loop',
+
+  title: 'Java For Each Loop',
+
+  slug: 'java-for-each-loop',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '17 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java for-each loop deeply with arrays, collections, iteration, syntax, advantages, limitations, and real-world examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Tech Mahindra'],
+
+  sections: [
+    {
+      heading: 'Introduction to For Each Loop',
+
+      content: `
+The for-each loop is a simplified version of loop used for traversing arrays and collections.
+
+It automatically accesses elements one by one.
+
+The programmer does not need to manage index values manually.
+
+Main Purpose:
+
+• Cleaner code
+• Easy array traversal
+• Better readability
+• Fewer mistakes
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of For Each Loop',
+
+      content: `
+General Syntax:
+
+for(dataType variable : array) {
+
+    // code
+
+}
+
+Important Parts:
+
+1. dataType
+   → type of array elements
+
+2. variable
+   → stores current element
+
+3. array
+   → collection being traversed
+`.trim(),
+    },
+
+    {
+      heading: 'How For Each Loop Works',
+
+      content: `
+Java automatically picks elements one by one from array or collection.
+
+The loop continues until all elements are processed.
+
+No need for:
+
+• Index variable
+• Condition checking
+• Manual increment
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of For Each Loop',
+
+      content: `
+• Cleaner syntax
+• Easy to read
+• Less error-prone
+• Better for traversing arrays
+
+Best suited for read-only traversal.
+`.trim(),
+    },
+
+    {
+      heading: 'Limitations of For Each Loop',
+
+      content: `
+• Cannot access index directly
+• Cannot traverse backward easily
+• Not suitable when modifying array positions
+
+Use normal for loop when index handling is required.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Interview Points',
+
+      content: `
+• for-each loop internally uses iteration
+• Mostly used with arrays and collections
+• Improves readability
+• Preferred in modern Java code
+
+Common Beginner Mistakes:
+
+• Using wrong datatype
+• Trying to access index directly
+• Modifying collection incorrectly
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'For Each Loop Example',
+
+      language: 'java',
+
+      code: `public class ForEachExample {
+
+    public static void main(String[] args) {
+
+        int numbers[] = {10, 20, 30, 40};
+
+        for(int value : numbers) {
+
+            System.out.println(value);
+
+        }
+
+    }
+
+}`,
+
+      output: `10
+20
+30
+40`,
+    },
+
+    {
+      title: 'String Array Traversal',
+
+      language: 'java',
+
+      code: `public class StringLoop {
+
+    public static void main(String[] args) {
+
+        String names[] = {"Rahul", "Aman", "Priya"};
+
+        for(String data : names) {
+
+            System.out.println(data);
+
+        }
+
+    }
+
+}`,
+
+      output: `Rahul
+Aman
+Priya`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'For-each loop is mainly used for?', 
+
+      options: [
+        'Decision making',
+        'Array traversal',
+        'Class creation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'For-each loop is mainly used to traverse arrays and collections.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the advantage of for-each loop?',
+
+      answer:
+        'For-each loop improves readability and reduces manual index handling.',
+    },
+  ],
+
+  nextTopic: 'java-while-loop',
+},
 ];
