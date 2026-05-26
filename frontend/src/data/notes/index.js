@@ -1,6 +1,5 @@
 import { javaNotes } from './javaNotes'
 import { pythonNotes } from './pythonNotes'
-import { htmlNotes} from './htmlNotes'
 
 export const NOTES_LANGUAGES = [
   {
@@ -20,15 +19,6 @@ export const NOTES_LANGUAGES = [
     color: 'from-sky-200 via-cyan-100 to-white',
     progressBar: 'from-sky-400 to-blue-500',
     notes: pythonNotes,
-  },
-   {
-    id: 'html',
-    name: 'HTML',
-    emoji: '🐍',
-    description: 'Python fundamentals — syntax, data structures, and coding round patterns.',
-    color: 'from-sky-200 via-cyan-100 to-white',
-    progressBar: 'from-sky-400 to-blue-500',
-    notes: htmlNotes,
   },
 ]
 
