@@ -16764,6 +16764,10828 @@ Common Beginner Mistakes:
     },
   ],
 
-  nextTopic: 'java-collections-framework',
+  nextTopic: 'java-exceptions',
 },
+{
+  id: 'java-exceptions',
+
+  title: 'Java Exceptions',
+
+  slug: 'java-exceptions',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Exceptions deeply including exception handling, types of exceptions, runtime errors, checked exceptions, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Exceptions',
+
+      content: `
+• Introduction to Exceptions
+
+• Exception Handling
+
+• Types of Exceptions
+
+• Checked Exceptions
+
+• Unchecked Exceptions
+
+• Runtime Errors
+
+• Exception Hierarchy
+
+• Advantages of Exception Handling
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to Exceptions',
+
+      content: `
+An exception is an unwanted event that interrupts normal program execution.
+
+Exceptions usually occur because of:
+
+• Invalid input
+• Wrong logic
+• File issues
+• Arithmetic problems
+`.trim(),
+    },
+
+    {
+      heading: 'Why Exception Handling is Important',
+
+      content: `
+Without exception handling:
+
+• Program may terminate suddenly
+
+With exception handling:
+
+• Program becomes stable
+• Errors can be controlled
+• Better user experience
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Exceptions',
+
+      content: `
+Main types of exceptions:
+
+1. Checked Exceptions
+
+2. Unchecked Exceptions
+
+Checked exceptions are checked during compile time.
+
+Unchecked exceptions occur during runtime.
+`.trim(),
+    },
+
+    {
+      heading: 'Checked Exceptions',
+
+      content: `
+Checked exceptions are verified by compiler.
+
+Examples:
+
+• IOException
+• SQLException
+• FileNotFoundException
+
+Programmer must handle them.
+`.trim(),
+    },
+
+    {
+      heading: 'Unchecked Exceptions',
+
+      content: `
+Unchecked exceptions occur during runtime.
+
+Examples:
+
+• ArithmeticException
+• NullPointerException
+• ArrayIndexOutOfBoundsException
+
+Mostly caused by programming mistakes.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Exception Handling',
+
+      content: `
+• Prevents sudden termination
+• Improves reliability
+• Makes debugging easier
+• Separates error handling code
+• Improves maintainability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Exceptions',
+
+      content: `
+• Exceptions interrupt program flow
+• Checked exceptions are compile-time checked
+• Unchecked exceptions occur at runtime
+• Exception handling improves program stability
+
+Common Beginner Mistakes:
+
+• Ignoring exceptions
+• Using generic catch blocks everywhere
+• Not understanding exception hierarchy
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Exception Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+
+        int b = 0;
+
+        System.out.println(a / b);
+
+    }
+
+}`,
+
+      output: 'ArithmeticException occurs',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is an exception in Java?',
+
+      options: [
+        'Loop',
+        'Class',
+        'Unwanted event',
+        'Variable'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Exception is an unwanted event interrupting program execution.',
+    },
+
+    {
+      question:
+        'Which exception occurs when dividing by zero?',
+
+      options: [
+        'IOException',
+        'ArithmeticException',
+        'NullPointerException',
+        'SQLException'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Division by zero causes ArithmeticException.',
+    },
+
+    {
+      question:
+        'Checked exceptions are checked during?', 
+
+      options: [
+        'Runtime',
+        'Compile time',
+        'Execution only',
+        'Object creation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Checked exceptions are checked during compilation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is exception handling in Java?',
+
+      answer:
+        'Exception handling is mechanism used to handle runtime errors and maintain normal program flow.',
+    },
+
+    {
+      question:
+        'What is difference between checked and unchecked exceptions?',
+
+      answer:
+        'Checked exceptions are checked during compile time while unchecked exceptions occur during runtime.',
+    },
+  ],
+
+  nextTopic: 'java-try-catch',
+},
+
+{
+  id: 'java-try-catch',
+
+  title: 'Java Try-catch Block',
+
+  slug: 'java-try-catch',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java try-catch block deeply including syntax, error handling, flow control, runtime exception handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Try-catch Block',
+
+      content: `
+• Introduction to try-catch
+
+• try Block
+
+• catch Block
+
+• Exception Handling Flow
+
+• Runtime Error Handling
+
+• Multiple Statements
+
+• Advantages of try-catch
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to try-catch',
+
+      content: `
+try-catch block handles exceptions safely.
+
+Purpose:
+
+• Prevent program crash
+• Handle runtime errors gracefully
+`.trim(),
+    },
+
+    {
+      heading: 'try Block',
+
+      content: `
+Code that may generate exception is written inside try block.
+
+Example:
+
+try {
+
+    risky code
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'catch Block',
+
+      content: `
+catch block handles exception generated inside try block.
+
+Example:
+
+catch(Exception e) {
+
+    handling code
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Program Flow in try-catch',
+
+      content: `
+If exception occurs:
+
+• Remaining try block stops
+• Control moves to catch block
+
+If no exception occurs:
+
+• catch block is skipped
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of try-catch',
+
+      content: `
+• Prevents abnormal termination
+• Improves reliability
+• Better debugging
+• Cleaner error handling
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About try-catch',
+
+      content: `
+• try block contains risky code
+• catch block handles exception
+• Exception object provides details
+• Program continues safely
+
+Common Beginner Mistakes:
+
+• Writing risky code outside try block
+• Using empty catch blocks
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'try-catch Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            int result = 10 / 0;
+
+            System.out.println(result);
+
+        }
+
+        catch(ArithmeticException e) {
+
+            System.out.println("Cannot divide by zero");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Cannot divide by zero',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which block contains risky code?',
+
+      options: [
+        'catch',
+        'finally',
+        'try',
+        'throw'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'try block contains risky code.',
+    },
+
+    {
+      question:
+        'Which block handles exception?',
+
+      options: [
+        'try',
+        'main',
+        'class',
+        'catch'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'catch block handles exception.',
+    },
+
+    {
+      question:
+        'What happens after exception occurs inside try block?',
+
+      options: [
+        'Program stops immediately',
+        'Control moves to catch block',
+        'Loop starts',
+        'Class reloads'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Control transfers to catch block.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is try-catch important in Java?',
+
+      answer:
+        'try-catch prevents abnormal termination and handles runtime errors safely.',
+    },
+
+    {
+      question:
+        'What happens if exception is not handled?',
+
+      answer:
+        'Program may terminate abnormally and remaining code may not execute.',
+    },
+  ],
+
+  nextTopic: 'java-multiple-catch',
+},
+
+{
+  id: 'java-multiple-catch',
+
+  title: 'Java Multiple Catch Block',
+
+  slug: 'java-multiple-catch',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Multiple Catch Block deeply including handling different exceptions, execution flow, exception hierarchy, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Multiple Catch Block',
+
+      content: `
+• Introduction to Multiple Catch
+
+• Handling Different Exceptions
+
+• Execution Flow
+
+• Exception Hierarchy
+
+• Catch Block Ordering
+
+• Runtime Handling
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Multiple Catch',
+
+      content: `
+Java allows multiple catch blocks after single try block.
+
+Purpose:
+
+• Handle different exceptions separately
+• Provide specific error messages
+`.trim(),
+    },
+
+    {
+      heading: 'Handling Different Exceptions',
+
+      content: `
+Different exceptions can occur in same program.
+
+Examples:
+
+• ArithmeticException
+• ArrayIndexOutOfBoundsException
+• NullPointerException
+
+Multiple catch blocks handle them individually.
+`.trim(),
+    },
+
+    {
+      heading: 'Execution Flow',
+
+      content: `
+Only one matching catch block executes.
+
+After matching catch block:
+
+• Remaining catch blocks are skipped
+`.trim(),
+    },
+
+    {
+      heading: 'Catch Block Ordering',
+
+      content: `
+Specific exceptions should come before generic exceptions.
+
+Correct Order:
+
+1. Child exception
+2. Parent exception
+
+Wrong ordering causes compile-time error.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Multiple Catch',
+
+      content: `
+• Better debugging
+• Specific handling
+• Cleaner code
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Multiple Catch',
+
+      content: `
+• One try block can have many catch blocks
+• Only one catch executes
+• Ordering is important
+• Specific exceptions should come first
+
+Common Beginner Mistakes:
+
+• Wrong catch ordering
+• Using generic Exception everywhere
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Multiple Catch Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            int arr[] = {1, 2, 3};
+
+            System.out.println(arr[5]);
+
+        }
+
+        catch(ArrayIndexOutOfBoundsException e) {
+
+            System.out.println("Invalid array index");
+
+        }
+
+        catch(Exception e) {
+
+            System.out.println("General exception");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Invalid array index',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Can one try block have multiple catch blocks?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only in loops',
+        'Only in arrays'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Java supports multiple catch blocks.',
+    },
+
+    {
+      question:
+        'How many catch blocks execute at a time?',
+
+      options: [
+        'All',
+        'Two',
+        'One',
+        'None'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Only one matching catch block executes.',
+    },
+
+    {
+      question:
+        'Which catch block should come first?',
+
+      options: [
+        'Generic exception',
+        'Specific exception',
+        'finally',
+        'main'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Specific exceptions should come first.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are multiple catch blocks useful?',
+
+      answer:
+        'They handle different exceptions separately and improve debugging.',
+    },
+
+    {
+      question:
+        'Why should specific exceptions come before generic exceptions?',
+
+      answer:
+        'Because parent exception would otherwise handle child exceptions first and cause compile-time errors.',
+    },
+  ],
+
+  nextTopic: 'java-nested-try',
+},
+
+{
+  id: 'java-nested-try',
+
+  title: 'Java Nested try',
+
+  slug: 'java-nested-try',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Nested try deeply including nested exception handling, execution flow, inner try blocks, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Nested try',
+
+      content: `
+• Introduction to Nested try
+
+• Inner try Block
+
+• Outer try Block
+
+• Exception Flow
+
+• Multiple Levels
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Nested try',
+
+      content: `
+Nested try means:
+
+• A try block inside another try block
+
+Used for handling exceptions separately at different levels.
+`.trim(),
+    },
+
+    {
+      heading: 'Inner try Block',
+
+      content: `
+Inner try handles specific risky operations.
+
+If inner catch handles exception:
+
+• Outer try continues execution
+`.trim(),
+    },
+
+    {
+      heading: 'Outer try Block',
+
+      content: `
+Outer try block handles exceptions not managed by inner try block.
+
+Provides additional safety layer.
+`.trim(),
+    },
+
+    {
+      heading: 'Exception Flow in Nested try',
+
+      content: `
+Flow:
+
+1. Inner try executes
+2. Matching inner catch executes
+3. If not handled, outer catch executes
+
+Exception propagates outward.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Nested try',
+
+      content: `
+• Better control
+• Separate handling
+• Improved readability
+• Layered protection
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Nested try',
+
+      content: `
+• try block can exist inside another try block
+• Exceptions move outward if not handled
+• Inner try handles local exceptions
+• Outer try provides backup handling
+
+Common Beginner Mistakes:
+
+• Confusing control flow
+• Overusing nested try blocks
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Nested try Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            try {
+
+                int result = 10 / 0;
+
+            }
+
+            catch(ArithmeticException e) {
+
+                System.out.println("Inner catch block");
+
+            }
+
+        }
+
+        catch(Exception e) {
+
+            System.out.println("Outer catch block");
+
+        }
+
+    }
+
+}`,
+
+      output: 'Inner catch block',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is nested try?',
+
+      options: [
+        'Loop inside loop',
+        'try inside another try',
+        'Class inside class',
+        'Method inside method'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Nested try means try block inside another try block.',
+    },
+
+    {
+      question:
+        'If inner catch handles exception then?', 
+
+      options: [
+        'Program crashes',
+        'Outer catch always runs',
+        'Execution continues normally',
+        'Compiler stops'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Handled exceptions allow normal execution.',
+    },
+
+    {
+      question:
+        'Unhandled exceptions move to?', 
+
+      options: [
+        'Loop',
+        'Array',
+        'Outer catch block',
+        'Package'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Unhandled exceptions propagate outward.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is nested try used in Java?',
+
+      answer:
+        'Nested try provides separate exception handling at multiple levels.',
+    },
+
+    {
+      question:
+        'What happens if inner try does not handle exception?',
+
+      answer:
+        'Exception propagates to outer catch block.',
+    },
+  ],
+
+  nextTopic: 'java-finally-block',
+},
+
+{
+  id: 'java-finally-block',
+
+  title: 'Java Finally Block',
+
+  slug: 'java-finally-block',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Finally Block deeply including cleanup code, execution flow, resource management, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Finally Block',
+
+      content: `
+• Introduction to finally Block
+
+• Cleanup Code
+
+• Execution Flow
+
+• Resource Management
+
+• File Closing
+
+• Database Connection Closing
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to finally Block',
+
+      content: `
+finally block always executes whether exception occurs or not.
+
+Used for:
+
+• Cleanup tasks
+• Resource release
+• Closing connections
+`.trim(),
+    },
+
+    {
+      heading: 'Purpose of finally Block',
+
+      content: `
+finally ensures important code executes in all situations.
+
+Examples:
+
+• Closing files
+• Closing database connections
+• Releasing memory
+`.trim(),
+    },
+
+    {
+      heading: 'Execution Flow',
+
+      content: `
+Flow:
+
+1. try block executes
+2. catch block executes if exception occurs
+3. finally block always executes
+`.trim(),
+    },
+
+    {
+      heading: 'Resource Management',
+
+      content: `
+finally block helps prevent resource leaks.
+
+Very important for:
+
+• File handling
+• Networking
+• Database operations
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of finally Block',
+
+      content: `
+• Ensures cleanup
+• Improves reliability
+• Prevents resource leaks
+• Maintains program stability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About finally Block',
+
+      content: `
+• finally executes almost always
+• Used for cleanup operations
+• Works with try-catch
+• Improves resource management
+
+Common Beginner Mistakes:
+
+• Writing important cleanup outside finally
+• Confusing finally with final keyword
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'finally Block Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            int result = 10 / 0;
+
+        }
+
+        catch(ArithmeticException e) {
+
+            System.out.println("Exception handled");
+
+        }
+
+        finally {
+
+            System.out.println("Finally block executed");
+
+        }
+
+    }
+
+}`,
+
+      output: `Exception handled
+Finally block executed`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'finally block mainly used for?', 
+
+      options: [
+        'Loops',
+        'Cleanup tasks',
+        'Inheritance',
+        'Arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'finally block performs cleanup tasks.',
+    },
+
+    {
+      question:
+        'Does finally block always execute?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only without exception',
+        'Only inside loops'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'finally block executes in almost all cases.',
+    },
+
+    {
+      question:
+        'Which task is commonly performed in finally block?',
+
+      options: [
+        'Array sorting',
+        'Object creation',
+        'Closing resources',
+        'Loop execution'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'finally block commonly closes resources.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is finally block important in Java?',
+
+      answer:
+        'finally ensures cleanup code executes and prevents resource leaks.',
+    },
+
+    {
+      question:
+        'Can finally block execute without catch block?',
+
+      answer:
+        'Yes, finally can work directly with try block without catch.',
+    },
+  ],
+
+  nextTopic: 'java-throw-keyword',
+},
+{
+  id: 'java-throw-keyword',
+
+  title: 'Java Throw Keyword',
+
+  slug: 'java-throw-keyword',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java throw keyword deeply including manual exception creation, custom error handling, exception objects, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Throw Keyword',
+
+      content: `
+• Introduction to throw
+
+• Manual Exception Creation
+
+• Exception Objects
+
+• Runtime Exception Throwing
+
+• Validation Handling
+
+• Custom Error Messages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to throw Keyword',
+
+      content: `
+throw keyword is used to manually generate an exception.
+
+Purpose:
+
+• Create exceptions intentionally
+• Handle invalid conditions
+• Improve validation
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of throw',
+
+      content: `
+Syntax:
+
+throw new ExceptionType("Message");
+
+Example:
+
+throw new ArithmeticException("Invalid division");
+`.trim(),
+    },
+
+    {
+      heading: 'How throw Works',
+
+      content: `
+When throw executes:
+
+• Exception object is created
+• Normal flow stops
+• Control moves to matching catch block
+`.trim(),
+    },
+
+    {
+      heading: 'Using throw for Validation',
+
+      content: `
+throw is commonly used for validation.
+
+Examples:
+
+• Age validation
+• Password validation
+• Input checking
+• Business rules
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of throw',
+
+      content: `
+• Better control over errors
+• Custom error handling
+• Improved validation
+• Cleaner business logic
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About throw',
+
+      content: `
+• throw manually generates exception
+• Only one exception object is thrown at a time
+• Control moves to catch block
+• Useful for validations
+
+Common Beginner Mistakes:
+
+• Forgetting exception object
+• Using throw without handling exception
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'throw Keyword Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void validateAge(int age) {
+
+        if(age < 18) {
+
+            throw new ArithmeticException(
+                "Not eligible to vote"
+            );
+
+        }
+
+        else {
+
+            System.out.println("Eligible to vote");
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        validateAge(15);
+
+    }
+
+}`,
+
+      output: 'ArithmeticException: Not eligible to vote',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which keyword manually generates exception?',
+
+      options: [
+        'throws',
+        'catch',
+        'throw',
+        'final'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'throw keyword manually creates exceptions.',
+    },
+
+    {
+      question:
+        'throw keyword requires?', 
+
+      options: [
+        'Loop',
+        'Exception object',
+        'Array',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throw requires exception object.',
+    },
+
+    {
+      question:
+        'What happens after throw executes?',
+
+      options: [
+        'Loop starts',
+        'Program ignores exception',
+        'Control moves to catch block',
+        'Compiler stops'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Execution transfers to matching catch block.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is throw keyword used in Java?',
+
+      answer:
+        'throw keyword is used to manually generate exceptions for validation and custom error handling.',
+    },
+
+    {
+      question:
+        'Can throw create custom exceptions?',
+
+      answer:
+        'Yes, throw can generate both predefined and custom exceptions.',
+    },
+  ],
+
+  nextTopic: 'java-exception-propagation',
+},
+
+{
+  id: 'java-exception-propagation',
+
+  title: 'Java Exception Propagation',
+
+  slug: 'java-exception-propagation',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Exception Propagation deeply including method call stack, runtime propagation, handling flow, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Exception Propagation',
+
+      content: `
+• Introduction to Exception Propagation
+
+• Method Call Stack
+
+• Propagation Flow
+
+• Runtime Exceptions
+
+• Handling Mechanism
+
+• Propagation Rules
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Exception Propagation',
+
+      content: `
+Exception propagation means:
+
+• Exception moves from one method to another
+
+If method cannot handle exception:
+
+• It passes exception upward
+`.trim(),
+    },
+
+    {
+      heading: 'Method Call Stack',
+
+      content: `
+Java follows method call stack during propagation.
+
+Example:
+
+method1() → method2() → method3()
+
+If method3 generates exception:
+
+• Exception moves upward step-by-step
+`.trim(),
+    },
+
+    {
+      heading: 'Propagation Flow',
+
+      content: `
+Flow:
+
+1. Exception occurs
+2. Current method checks handling
+3. If not handled, propagates upward
+4. Matching catch block handles exception
+`.trim(),
+    },
+
+    {
+      heading: 'Runtime Exception Propagation',
+
+      content: `
+Unchecked exceptions propagate automatically.
+
+Examples:
+
+• ArithmeticException
+• NullPointerException
+• ArrayIndexOutOfBoundsException
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Exception Propagation',
+
+      content: `
+• Centralized exception handling
+• Cleaner code
+• Better maintainability
+• Flexible error management
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Exception Propagation',
+
+      content: `
+• Exceptions move upward in call stack
+• Runtime exceptions propagate automatically
+• Matching catch block handles exception
+• Unhandled exceptions terminate program
+
+Common Beginner Mistakes:
+
+• Ignoring propagation flow
+• Confusing propagation with inheritance
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Exception Propagation Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    static void method3() {
+
+        int result = 10 / 0;
+
+    }
+
+    static void method2() {
+
+        method3();
+
+    }
+
+    static void method1() {
+
+        try {
+
+            method2();
+
+        }
+
+        catch(ArithmeticException e) {
+
+            System.out.println("Exception handled");
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        method1();
+
+    }
+
+}`,
+
+      output: 'Exception handled',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is exception propagation?',
+
+      options: [
+        'Loop execution',
+        'Exception moving between methods',
+        'Class creation',
+        'Array sorting'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Exception propagation means exception moving upward through methods.',
+    },
+
+    {
+      question:
+        'Exceptions propagate through?', 
+
+      options: [
+        'Package hierarchy',
+        'Loop structure',
+        'Method call stack',
+        'Arrays'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Exceptions propagate through method call stack.',
+    },
+
+    {
+      question:
+        'Which exceptions propagate automatically?',
+
+      options: [
+        'Checked exceptions',
+        'Unchecked exceptions',
+        'Compiler errors',
+        'Syntax errors'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Unchecked exceptions propagate automatically.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is exception propagation in Java?',
+
+      answer:
+        'Exception propagation is process where exception moves from one method to another until handled.',
+    },
+
+    {
+      question:
+        'Why is exception propagation useful?',
+
+      answer:
+        'It supports centralized exception handling and cleaner program structure.',
+    },
+  ],
+
+  nextTopic: 'java-throws-keyword',
+},
+
+{
+  id: 'java-throws-keyword',
+
+  title: 'Java Throws Keyword',
+
+  slug: 'java-throws-keyword',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java throws keyword deeply including checked exceptions, declaration handling, propagation support, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Throws Keyword',
+
+      content: `
+• Introduction to throws
+
+• Exception Declaration
+
+• Checked Exceptions
+
+• Propagation Support
+
+• Method Signatures
+
+• Multiple Exceptions
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to throws Keyword',
+
+      content: `
+throws keyword declares exceptions in method signature.
+
+Purpose:
+
+• Inform caller about possible exceptions
+• Allow propagation
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of throws',
+
+      content: `
+Syntax:
+
+returnType methodName() throws ExceptionType
+
+Example:
+
+void readFile() throws IOException
+`.trim(),
+    },
+
+    {
+      heading: 'Using throws with Checked Exceptions',
+
+      content: `
+throws is mainly used with checked exceptions.
+
+Examples:
+
+• IOException
+• SQLException
+• ClassNotFoundException
+`.trim(),
+    },
+
+    {
+      heading: 'Multiple Exceptions with throws',
+
+      content: `
+Java allows multiple exceptions.
+
+Example:
+
+throws IOException, SQLException
+
+Useful for complex methods.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of throws',
+
+      content: `
+• Cleaner method handling
+• Supports propagation
+• Better exception awareness
+• Improves maintainability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About throws',
+
+      content: `
+• throws declares exceptions
+• Used in method signature
+• Mainly used with checked exceptions
+• Supports propagation
+
+Common Beginner Mistakes:
+
+• Confusing throw and throws
+• Using throws without understanding propagation
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'throws Keyword Example',
+
+      language: 'java',
+
+      code: `import java.io.IOException;
+
+public class Main {
+
+    static void checkFile()
+        throws IOException {
+
+        throw new IOException(
+            "File not found"
+        );
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            checkFile();
+
+        }
+
+        catch(IOException e) {
+
+            System.out.println(e);
+
+        }
+
+    }
+
+}`,
+
+      output: 'java.io.IOException: File not found',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which keyword declares exceptions in method signature?',
+
+      options: [
+        'throw',
+        'throws',
+        'catch',
+        'final'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throws keyword declares exceptions.',
+    },
+
+    {
+      question:
+        'throws keyword is mainly used with?', 
+
+      options: [
+        'Loops',
+        'Checked exceptions',
+        'Arrays',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throws mainly works with checked exceptions.',
+    },
+
+    {
+      question:
+        'Where is throws keyword written?',
+
+      options: [
+        'Inside loop',
+        'Inside class',
+        'Method signature',
+        'Array block'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'throws is written in method declaration.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is throws keyword used in Java?',
+
+      answer:
+        'throws keyword declares exceptions and allows exception propagation.',
+    },
+
+    {
+      question:
+        'Can multiple exceptions be declared using throws?',
+
+      answer:
+        'Yes, Java allows multiple exceptions in throws declaration.',
+    },
+  ],
+
+  nextTopic: 'java-throw-vs-throws',
+},
+
+{
+  id: 'java-throw-vs-throws',
+
+  title: 'Java Throw vs Throws',
+
+  slug: 'java-throw-vs-throws',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between throw and throws in Java deeply including syntax, usage, propagation, exception handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Throw vs Throws',
+
+      content: `
+• Introduction to throw
+
+• Introduction to throws
+
+• Syntax Difference
+
+• Usage Difference
+
+• Exception Handling Flow
+
+• Propagation Support
+
+• Real-World Comparison
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'throw Keyword',
+
+      content: `
+throw keyword manually creates exception.
+
+Purpose:
+
+• Generate exception object
+• Trigger custom errors
+
+Example:
+
+throw new ArithmeticException();
+`.trim(),
+    },
+
+    {
+      heading: 'throws Keyword',
+
+      content: `
+throws keyword declares exception in method signature.
+
+Purpose:
+
+• Inform caller about exceptions
+• Allow propagation
+
+Example:
+
+void test() throws IOException
+`.trim(),
+    },
+
+    {
+      heading: 'Main Difference Between throw and throws',
+
+      content: `
+throw:
+
+• Used inside method
+• Creates exception object
+• Throws single exception
+
+throws:
+
+• Used in method signature
+• Declares exceptions
+• Can declare multiple exceptions
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+throw is used for:
+
+• Validation
+• Business rules
+• Manual error generation
+
+throws is used for:
+
+• Propagation
+• Checked exception declaration
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Understanding throw vs throws',
+
+      content: `
+• Better exception handling
+• Cleaner code
+• Easier debugging
+• Improved program reliability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About throw vs throws',
+
+      content: `
+• throw creates exception
+• throws declares exception
+• throw uses exception object
+• throws supports propagation
+
+Common Beginner Mistakes:
+
+• Confusing spellings
+• Using throw in method declaration
+• Using throws inside method body
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'throw vs throws Example',
+
+      language: 'java',
+
+      code: `import java.io.IOException;
+
+public class Main {
+
+    static void check()
+        throws IOException {
+
+        throw new IOException(
+            "Custom Exception"
+        );
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            check();
+
+        }
+
+        catch(IOException e) {
+
+            System.out.println(e);
+
+        }
+
+    }
+
+}`,
+
+      output: 'java.io.IOException: Custom Exception',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which keyword manually creates exception?',
+
+      options: [
+        'throws',
+        'throw',
+        'catch',
+        'final'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throw manually generates exception.',
+    },
+
+    {
+      question:
+        'Which keyword declares exceptions in method signature?',
+
+      options: [
+        'throw',
+        'throws',
+        'try',
+        'switch'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throws declares exceptions.',
+    },
+
+    {
+      question:
+        'Which keyword can declare multiple exceptions?',
+
+      options: [
+        'throw',
+        'throws',
+        'catch',
+        'break'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'throws can declare multiple exceptions.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between throw and throws in Java?',
+
+      answer:
+        'throw manually creates exception while throws declares exceptions in method signature.',
+    },
+
+    {
+      question:
+        'Why are both throw and throws important?',
+
+      answer:
+        'throw helps create exceptions while throws supports propagation and checked exception handling.',
+    },
+  ],
+
+  nextTopic: 'java-final-vs-finally-vs-finalize',
+},
+{
+  id: 'java-final-vs-finally-vs-finalize',
+
+  title: 'Final vs Finally vs Finalize in Java',
+
+  slug: 'java-final-vs-finally-vs-finalize',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between final, finally, and finalize in Java deeply including memory management, exception handling, inheritance control, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Final vs Finally vs Finalize in Java',
+
+      content: `
+• Introduction to final
+
+• Introduction to finally
+
+• Introduction to finalize()
+
+• Main Differences
+
+• Memory Management
+
+• Exception Handling Usage
+
+• Garbage Collection
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'final Keyword',
+
+      content: `
+final keyword is used to restrict modification.
+
+Uses of final:
+
+• Final variable
+• Final method
+• Final class
+
+Examples:
+
+• Constant values
+• Prevent method overriding
+• Prevent inheritance
+`.trim(),
+    },
+
+    {
+      heading: 'finally Block',
+
+      content: `
+finally block is used in exception handling.
+
+Purpose:
+
+• Cleanup operations
+• Closing resources
+• Database cleanup
+
+finally executes almost always.
+`.trim(),
+    },
+
+    {
+      heading: 'finalize() Method',
+
+      content: `
+finalize() method is called before garbage collection destroys object.
+
+Purpose:
+
+• Cleanup tasks before object removal
+
+Belongs to Object class.
+`.trim(),
+    },
+
+    {
+      heading: 'Main Difference Between final, finally, and finalize',
+
+      content: `
+final:
+
+• Keyword
+• Restricts modification
+
+finally:
+
+• Block
+• Used in exception handling
+
+finalize():
+
+• Method
+• Used before garbage collection
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+final is used for:
+
+• Constants
+• Security
+• Immutable behavior
+
+finally is used for:
+
+• File closing
+• Database cleanup
+
+finalize() was used for:
+
+• Memory cleanup
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About final, finally, and finalize',
+
+      content: `
+• final is keyword
+• finally is exception block
+• finalize() is method
+• All three are completely different concepts
+
+Common Beginner Mistakes:
+
+• Confusing final with finally
+• Thinking finalize() handles exceptions
+• Misunderstanding garbage collection
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'final vs finally Example',
+
+      language: 'java',
+
+      code: `final class Demo {
+
+    final int value = 100;
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            System.out.println("Try block");
+
+        }
+
+        finally {
+
+            System.out.println("Finally block");
+
+        }
+
+    }
+
+}`,
+
+      output: `Try block
+Finally block`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which is used for cleanup operations in exception handling?',
+
+      options: [
+        'final',
+        'finally',
+        'finalize()',
+        'throw'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'finally block handles cleanup operations.',
+    },
+
+    {
+      question:
+        'Which belongs to Object class?',
+
+      options: [
+        'final',
+        'finally',
+        'finalize()',
+        'catch'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'finalize() method belongs to Object class.',
+    },
+
+    {
+      question:
+        'Which keyword prevents inheritance?',
+
+      options: [
+        'final',
+        'finally',
+        'finalize()',
+        'throws'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'final keyword prevents inheritance.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between final, finally, and finalize?',
+
+      answer:
+        'final restricts modification, finally handles cleanup in exception handling, and finalize() executes before garbage collection.',
+    },
+
+    {
+      question:
+        'Why is finally block important?',
+
+      answer:
+        'finally ensures cleanup code executes even when exception occurs.',
+    },
+  ],
+
+  nextTopic: 'java-method-overriding-exception-handling',
+},
+
+{
+  id: 'java-method-overriding-exception-handling',
+
+  title: 'Exception Handling with Method Overriding',
+
+  slug: 'java-method-overriding-exception-handling',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Exception Handling with Method Overriding deeply including checked exceptions, overriding rules, runtime exceptions, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Exception Handling with Method Overriding',
+
+      content: `
+• Introduction to Overriding Rules
+
+• Checked Exception Rules
+
+• Unchecked Exception Rules
+
+• Parent and Child Methods
+
+• Compile-Time Restrictions
+
+• Runtime Exceptions
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Exception Rules in Overriding',
+
+      content: `
+Java applies special rules when exceptions are used in method overriding.
+
+Goal:
+
+• Maintain polymorphism safely
+• Avoid unexpected exceptions
+`.trim(),
+    },
+
+    {
+      heading: 'Checked Exception Rules',
+
+      content: `
+Child overriding method:
+
+• Cannot throw broader checked exception
+• Can throw same exception
+• Can throw child exception
+
+Important rule in interviews.
+`.trim(),
+    },
+
+    {
+      heading: 'Unchecked Exception Rules',
+
+      content: `
+Unchecked exceptions have fewer restrictions.
+
+Child method can:
+
+• Throw runtime exceptions freely
+`.trim(),
+    },
+
+    {
+      heading: 'Why Restrictions Exist',
+
+      content: `
+Restrictions improve reliability.
+
+Benefits:
+
+• Safer polymorphism
+• Predictable behavior
+• Better exception handling
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Understanding Overriding Rules',
+
+      content: `
+• Prevents compile-time errors
+• Improves code safety
+• Better inheritance design
+• Important for interviews
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Exception Handling with Overriding',
+
+      content: `
+• Checked exceptions follow strict rules
+• Runtime exceptions are flexible
+• Child method cannot broaden checked exception
+• Polymorphism safety is maintained
+
+Common Beginner Mistakes:
+
+• Throwing broader checked exceptions
+• Confusing checked and unchecked exceptions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Method Overriding Exception Example',
+
+      language: 'java',
+
+      code: `import java.io.IOException;
+
+class Parent {
+
+    void display() throws IOException {
+
+        System.out.println("Parent method");
+
+    }
+
+}
+
+class Child extends Parent {
+
+    @Override
+    void display() throws IOException {
+
+        System.out.println("Child method");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws IOException {
+
+        Child c = new Child();
+
+        c.display();
+
+    }
+
+}`,
+
+      output: 'Child method',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Can child method throw broader checked exception?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only in loops',
+        'Only in arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Child method cannot throw broader checked exception.',
+    },
+
+    {
+      question:
+        'Which exceptions have fewer restrictions in overriding?',
+
+      options: [
+        'Checked exceptions',
+        'Unchecked exceptions',
+        'Compile-time errors',
+        'Syntax errors'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Unchecked exceptions are more flexible.',
+    },
+
+    {
+      question:
+        'Why are exception rules important in overriding?',
+
+      options: [
+        'For loops',
+        'For polymorphism safety',
+        'For arrays',
+        'For packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Rules maintain safe polymorphism.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are exception handling rules in method overriding?',
+
+      answer:
+        'Child method cannot throw broader checked exception but can throw same or child exception.',
+    },
+
+    {
+      question:
+        'Why are checked exceptions restricted in overriding?',
+
+      answer:
+        'Restrictions ensure safe polymorphism and predictable exception handling.',
+    },
+  ],
+
+  nextTopic: 'java-custom-exception',
+},
+
+{
+  id: 'java-custom-exception',
+
+  title: 'Custom Exception in Java',
+
+  slug: 'java-custom-exception',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '26 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Custom Exception in Java deeply including user-defined exceptions, validation logic, constructors, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Custom Exception in Java',
+
+      content: `
+• Introduction to Custom Exceptions
+
+• User-Defined Exceptions
+
+• Extending Exception Class
+
+• Validation Logic
+
+• Constructor Usage
+
+• Business Rule Handling
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Custom Exceptions',
+
+      content: `
+Custom exceptions are user-defined exceptions.
+
+Purpose:
+
+• Handle application-specific problems
+• Create meaningful error messages
+`.trim(),
+    },
+
+    {
+      heading: 'Creating Custom Exception',
+
+      content: `
+Custom exception class usually extends:
+
+• Exception
+or
+• RuntimeException
+
+Example:
+
+class InvalidAgeException extends Exception
+`.trim(),
+    },
+
+    {
+      heading: 'Why Custom Exceptions are Important',
+
+      content: `
+Benefits:
+
+• Better readability
+• Better debugging
+• Domain-specific handling
+• Cleaner business logic
+`.trim(),
+    },
+
+    {
+      heading: 'Using Constructors in Custom Exceptions',
+
+      content: `
+Constructors pass custom messages.
+
+Example:
+
+super("Invalid age");
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Custom exceptions are used in:
+
+• Banking systems
+• Authentication systems
+• Payment systems
+• Validation systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Custom Exceptions',
+
+      content: `
+• User creates custom exception classes
+• Extends Exception or RuntimeException
+• Improves readability
+• Helpful in business applications
+
+Common Beginner Mistakes:
+
+• Not extending Exception class
+• Using generic exception instead of custom exception
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Custom Exception Example',
+
+      language: 'java',
+
+      code: `class InvalidAgeException
+    extends Exception {
+
+    InvalidAgeException(String message) {
+
+        super(message);
+
+    }
+
+}
+
+public class Main {
+
+    static void checkAge(int age)
+        throws InvalidAgeException {
+
+        if(age < 18) {
+
+            throw new InvalidAgeException(
+                "Age is too small"
+            );
+
+        }
+
+        else {
+
+            System.out.println("Valid age");
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            checkAge(15);
+
+        }
+
+        catch(InvalidAgeException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+}`,
+
+      output: 'Age is too small',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Custom exceptions are also called?', 
+
+      options: [
+        'Compiler exceptions',
+        'User-defined exceptions',
+        'Package exceptions',
+        'Loop exceptions'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Custom exceptions are user-defined exceptions.',
+    },
+
+    {
+      question:
+        'Which class is commonly extended for checked custom exceptions?',
+
+      options: [
+        'Object',
+        'Scanner',
+        'Exception',
+        'Math'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Checked custom exceptions extend Exception class.',
+    },
+
+    {
+      question:
+        'Why are custom exceptions useful?',
+
+      options: [
+        'For loops',
+        'For business-specific handling',
+        'For arrays',
+        'For inheritance only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Custom exceptions improve business logic handling.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is custom exception in Java?',
+
+      answer:
+        'Custom exception is user-defined exception created for application-specific error handling.',
+    },
+
+    {
+      question:
+        'Why should developers use custom exceptions?',
+
+      answer:
+        'Custom exceptions improve readability, debugging, and domain-specific error handling.',
+    },
+  ],
+
+  nextTopic: 'java-try-with-resources',
+},
+
+{
+  id: 'java-try-with-resources',
+
+  title: 'Try-with-Resources in Java',
+
+  slug: 'java-try-with-resources',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '24 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Try-with-Resources in Java deeply including automatic resource management, AutoCloseable, file handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Try-with-Resources in Java',
+
+      content: `
+• Introduction to Try-with-Resources
+
+• Automatic Resource Management
+
+• AutoCloseable Interface
+
+• File Handling
+
+• Database Connections
+
+• Resource Cleanup
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Try-with-Resources',
+
+      content: `
+Try-with-resources automatically closes resources.
+
+Introduced in:
+
+• Java 7
+
+Reduces manual cleanup code.
+`.trim(),
+    },
+
+    {
+      heading: 'Automatic Resource Management',
+
+      content: `
+Resources declared inside try block are automatically closed.
+
+Examples:
+
+• Files
+• Streams
+• Database connections
+`.trim(),
+    },
+
+    {
+      heading: 'AutoCloseable Interface',
+
+      content: `
+Resources must implement:
+
+• AutoCloseable interface
+
+Java automatically calls close() method.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Try-with-Resources',
+
+      content: `
+• Cleaner code
+• Automatic cleanup
+• Prevents resource leaks
+• Better reliability
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used heavily in:
+
+• File handling
+• JDBC
+• Networking
+• Stream processing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Try-with-Resources',
+
+      content: `
+• Introduced in Java 7
+• Automatically closes resources
+• Works with AutoCloseable
+• Reduces finally block usage
+
+Common Beginner Mistakes:
+
+• Forgetting AutoCloseable requirement
+• Using resources outside try block
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Try-with-Resources Example',
+
+      language: 'java',
+
+      code: `import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try(
+            BufferedReader br =
+                new BufferedReader(
+                    new FileReader("test.txt")
+                )
+        ) {
+
+            System.out.println(
+                br.readLine()
+            );
+
+        }
+
+        catch(Exception e) {
+
+            System.out.println(e);
+
+        }
+
+    }
+
+}`,
+
+      output: 'First line from file',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Try-with-resources was introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 7',
+        'Java 8'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Try-with-resources was introduced in Java 7.',
+    },
+
+    {
+      question:
+        'Which interface enables automatic resource closing?',
+
+      options: [
+        'Runnable',
+        'Serializable',
+        'AutoCloseable',
+        'Cloneable'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'AutoCloseable supports automatic resource cleanup.',
+    },
+
+    {
+      question:
+        'Main advantage of try-with-resources?', 
+
+      options: [
+        'Loop execution',
+        'Automatic resource cleanup',
+        'Array sorting',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'It automatically closes resources.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is try-with-resources in Java?',
+
+      answer:
+        'Try-with-resources automatically closes resources and prevents resource leaks.',
+    },
+
+    {
+      question:
+        'Why is try-with-resources preferred over finally block?',
+
+      answer:
+        'It reduces boilerplate code and ensures automatic resource cleanup.',
+    },
+  ],
+
+  nextTopic: 'java-inner-class',
+},
+{
+  id: 'java-inner-class',
+
+  title: 'Java Inner Class',
+
+  slug: 'java-inner-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Inner Class deeply including nested classes, object creation, access to outer members, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Inner Class',
+
+      content: `
+• Introduction to Inner Class
+
+• Types of Inner Classes
+
+• Accessing Outer Class Members
+
+• Object Creation
+
+• Nested Class Concept
+
+• Advantages of Inner Classes
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Inner Class',
+
+      content: `
+A class declared inside another class is called inner class.
+
+Also known as:
+
+• Nested class
+
+Inner classes help organize related code together.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Inner Classes',
+
+      content: `
+Main types of inner classes:
+
+• Member Inner class
+• Anonymous Inner class
+• Local Inner class
+• Static Nested class
+`.trim(),
+    },
+
+    {
+      heading: 'Accessing Outer Class Members',
+
+      content: `
+Inner class can directly access outer class members.
+
+Including:
+
+• Private variables
+• Methods
+• Constructors
+`.trim(),
+    },
+
+    {
+      heading: 'Why Inner Classes are Useful',
+
+      content: `
+Benefits:
+
+• Better encapsulation
+• Cleaner code organization
+• Logical grouping
+• Improved readability
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage of Inner Classes',
+
+      content: `
+Inner classes are heavily used in:
+
+• GUI programming
+• Event handling
+• Callbacks
+• Framework development
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Inner Classes',
+
+      content: `
+• Inner class exists inside outer class
+• Inner class can access private members
+• Helps logical grouping
+• Improves maintainability
+
+Common Beginner Mistakes:
+
+• Incorrect object creation syntax
+• Confusing inner and nested classes
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Inner Class Example',
+
+      language: 'java',
+
+      code: `class Outer {
+
+    int number = 100;
+
+    class Inner {
+
+        void display() {
+
+            System.out.println(
+                "Number: " + number
+            );
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+
+        Outer.Inner in = obj.new Inner();
+
+        in.display();
+
+    }
+
+}`,
+
+      output: 'Number: 100',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is inner class in Java?',
+
+      options: [
+        'Class inside method',
+        'Class inside another class',
+        'Method inside class',
+        'Loop inside class'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Inner class is class declared inside another class.',
+    },
+
+    {
+      question:
+        'Inner class can access outer class private members?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only static members',
+        'Only constructors'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Inner class can access private members of outer class.',
+    },
+
+    {
+      question:
+        'Inner classes improve?', 
+
+      options: [
+        'Loop execution',
+        'Code organization',
+        'Array sorting',
+        'Compilation speed'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Inner classes improve logical code organization.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is inner class in Java?',
+
+      answer:
+        'Inner class is class declared inside another class used for better encapsulation and logical grouping.',
+    },
+
+    {
+      question:
+        'Why are inner classes useful?',
+
+      answer:
+        'Inner classes improve readability, encapsulation, and organization of related code.',
+    },
+  ],
+
+  nextTopic: 'java-member-inner-class',
+},
+
+{
+  id: 'java-member-inner-class',
+
+  title: 'Member Inner class in Java',
+
+  slug: 'java-member-inner-class',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Member Inner class in Java deeply including syntax, object creation, outer class access, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Member Inner class in Java',
+
+      content: `
+• Introduction to Member Inner class
+
+• Syntax
+
+• Accessing Outer Members
+
+• Object Creation
+
+• Benefits
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Member Inner class',
+
+      content: `
+Member Inner class is non-static class declared directly inside outer class.
+
+It behaves like:
+
+• Member of outer class
+`.trim(),
+    },
+
+    {
+      heading: 'Accessing Outer Class Members',
+
+      content: `
+Member inner class can directly access:
+
+• Private variables
+• Methods
+• Constructors
+
+Without object reference.
+`.trim(),
+    },
+
+    {
+      heading: 'Object Creation',
+
+      content: `
+To create member inner class object:
+
+1. Create outer class object
+2. Create inner class object
+
+Syntax:
+
+Outer.Inner obj = outer.new Inner();
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Member Inner class',
+
+      content: `
+• Better encapsulation
+• Cleaner code structure
+• Logical grouping
+• Improved readability
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• GUI applications
+• Event handling
+• Frameworks
+• Helper classes
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Member Inner class',
+
+      content: `
+• Member inner class is non-static
+• Requires outer object
+• Can access private members
+• Acts like regular member
+
+Common Beginner Mistakes:
+
+• Forgetting outer object creation
+• Wrong syntax for inner object
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Member Inner class Example',
+
+      language: 'java',
+
+      code: `class College {
+
+    private String name = "ABC College";
+
+    class Student {
+
+        void show() {
+
+            System.out.println(name);
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        College c = new College();
+
+        College.Student s =
+            c.new Student();
+
+        s.show();
+
+    }
+
+}`,
+
+      output: 'ABC College',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Member inner class is?', 
+
+      options: [
+        'Static class',
+        'Non-static class',
+        'Abstract class',
+        'Final class'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Member inner class is non-static.',
+    },
+
+    {
+      question:
+        'What is required to create member inner class object?',
+
+      options: [
+        'Loop',
+        'Array',
+        'Outer class object',
+        'Package'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Outer class object is required.',
+    },
+
+    {
+      question:
+        'Member inner class can access private members?',
+
+      options: [
+        'No',
+        'Only methods',
+        'Yes',
+        'Only variables'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Member inner class can access private members.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is member inner class in Java?',
+
+      answer:
+        'Member inner class is non-static class declared inside outer class.',
+    },
+
+    {
+      question:
+        'Why does member inner class require outer object?',
+
+      answer:
+        'Because it is non-static and linked with outer class instance.',
+    },
+  ],
+
+  nextTopic: 'java-anonymous-inner-class',
+},
+
+{
+  id: 'java-anonymous-inner-class',
+
+  title: 'Anonymous Inner class in Java',
+
+  slug: 'java-anonymous-inner-class',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Anonymous Inner class in Java deeply including syntax, object creation, event handling, interfaces, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Anonymous Inner class in Java',
+
+      content: `
+• Introduction to Anonymous Inner class
+
+• Syntax
+
+• One-Time Object Usage
+
+• Interface Implementation
+
+• Event Handling
+
+• Advantages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Anonymous Inner class',
+
+      content: `
+Anonymous inner class is inner class without name.
+
+Used when:
+
+• Class is required only once
+• Temporary implementation is needed
+`.trim(),
+    },
+
+    {
+      heading: 'Features of Anonymous Inner class',
+
+      content: `
+Features:
+
+• No class name
+• One-time use
+• Shorter syntax
+• Quick implementation
+`.trim(),
+    },
+
+    {
+      heading: 'Anonymous Class with Interface',
+
+      content: `
+Anonymous inner class commonly implements interfaces.
+
+Useful for:
+
+• Event handling
+• Callback methods
+• GUI programming
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Anonymous Inner class',
+
+      content: `
+• Reduces extra class creation
+• Cleaner code
+• Faster implementation
+• Useful for small tasks
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used heavily in:
+
+• Swing event handling
+• Android listeners
+• Thread creation
+• Framework callbacks
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Anonymous Inner class',
+
+      content: `
+• Anonymous class has no name
+• Used for one-time implementation
+• Frequently used with interfaces
+• Improves compactness
+
+Common Beginner Mistakes:
+
+• Overusing anonymous classes
+• Writing large logic inside anonymous class
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Anonymous Inner class Example',
+
+      language: 'java',
+
+      code: `abstract class Animal {
+
+    abstract void sound();
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Animal() {
+
+            void sound() {
+
+                System.out.println("Dog barks");
+
+            }
+
+        };
+
+        a.sound();
+
+    }
+
+}`,
+
+      output: 'Dog barks',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Anonymous inner class has?', 
+
+      options: [
+        'Package',
+        'No name',
+        'Multiple names',
+        'No methods'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Anonymous inner class has no name.',
+    },
+
+    {
+      question:
+        'Anonymous inner class is mostly used for?', 
+
+      options: [
+        'One-time implementation',
+        'Database storage',
+        'Array sorting',
+        'Package creation'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Anonymous classes are used for one-time implementation.',
+    },
+
+    {
+      question:
+        'Anonymous inner class commonly works with?', 
+
+      options: [
+        'Interfaces',
+        'Arrays',
+        'Loops',
+        'Packages'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Anonymous inner classes are commonly used with interfaces.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is anonymous inner class in Java?',
+
+      answer:
+        'Anonymous inner class is unnamed inner class used for one-time implementation.',
+    },
+
+    {
+      question:
+        'Why are anonymous inner classes useful?',
+
+      answer:
+        'They reduce extra class creation and simplify temporary implementations.',
+    },
+  ],
+
+  nextTopic: 'java-local-inner-class',
+},
+{
+  id: 'java-local-inner-class',
+
+  title: 'Local Inner class in Java',
+
+  slug: 'java-local-inner-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Local Inner class in Java deeply including local scope, method access, variable rules, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Local Inner class in Java',
+
+      content: `
+• Introduction to Local Inner class
+
+• Method Scope
+
+• Accessing Local Variables
+
+• Rules of Local Inner class
+
+• Advantages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Local Inner class',
+
+      content: `
+A class declared inside a method is called local inner class.
+
+It exists only inside that method.
+`.trim(),
+    },
+
+    {
+      heading: 'Scope of Local Inner class',
+
+      content: `
+Local inner class can be accessed only:
+
+• Inside the method where it is declared
+
+Outside access is not allowed.
+`.trim(),
+    },
+
+    {
+      heading: 'Accessing Local Variables',
+
+      content: `
+Local inner class can access:
+
+• Final local variables
+• Effectively final variables
+
+Very important interview concept.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Local Inner class',
+
+      content: `
+• Better encapsulation
+• Restricts unnecessary access
+• Cleaner method-specific logic
+• Improves readability
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Temporary helper logic
+• Event handling
+• Callback implementations
+• Internal processing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Local Inner class',
+
+      content: `
+• Declared inside method
+• Accessible only within method
+• Can access effectively final variables
+• Useful for method-specific operations
+
+Common Beginner Mistakes:
+
+• Trying to access local inner class outside method
+• Modifying captured local variables
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Local Inner class Example',
+
+      language: 'java',
+
+      code: `class Outer {
+
+    void display() {
+
+        int number = 50;
+
+        class Inner {
+
+            void show() {
+
+                System.out.println(number);
+
+            }
+
+        }
+
+        Inner i = new Inner();
+
+        i.show();
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Outer o = new Outer();
+
+        o.display();
+
+    }
+
+}`,
+
+      output: '50',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Where is local inner class declared?',
+
+      options: [
+        'Inside package',
+        'Inside method',
+        'Inside interface',
+        'Inside loop only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Local inner class is declared inside method.',
+    },
+
+    {
+      question:
+        'Can local inner class access local variables?',
+
+      options: [
+        'No',
+        'Only static variables',
+        'Yes, effectively final variables',
+        'Only arrays'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'It can access effectively final variables.',
+    },
+
+    {
+      question:
+        'Scope of local inner class is?', 
+
+      options: [
+        'Entire package',
+        'Entire project',
+        'Specific method',
+        'Entire JVM'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Local inner class exists only inside specific method.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is local inner class in Java?',
+
+      answer:
+        'Local inner class is class declared inside a method and accessible only within that method.',
+    },
+
+    {
+      question:
+        'Why are effectively final variables important in local inner classes?',
+
+      answer:
+        'Because local inner classes can only access local variables that are final or effectively final.',
+    },
+  ],
+
+  nextTopic: 'java-static-nested-class',
+},
+
+{
+  id: 'java-static-nested-class',
+
+  title: 'Static Nested class in Java',
+
+  slug: 'java-static-nested-class',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Static Nested class in Java deeply including static behavior, object creation, memory usage, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Static Nested class in Java',
+
+      content: `
+• Introduction to Static Nested class
+
+• Static Behavior
+
+• Object Creation
+
+• Access Rules
+
+• Memory Benefits
+
+• Advantages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Static Nested class',
+
+      content: `
+A static class declared inside another class is called static nested class.
+
+Unlike member inner class:
+
+• It does not depend on outer object
+`.trim(),
+    },
+
+    {
+      heading: 'Object Creation',
+
+      content: `
+Static nested class object can be created directly.
+
+Syntax:
+
+Outer.Inner obj = new Outer.Inner();
+
+No outer object required.
+`.trim(),
+    },
+
+    {
+      heading: 'Access Rules',
+
+      content: `
+Static nested class can access:
+
+• Static members of outer class directly
+
+For non-static members:
+
+• Outer object is required
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Static Nested class',
+
+      content: `
+• Better memory efficiency
+• Cleaner grouping
+• No dependency on outer object
+• Improved performance
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Builder pattern
+• Helper classes
+• Utility classes
+• Collections framework
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Static Nested class',
+
+      content: `
+• Static nested class behaves like static member
+• Does not require outer object
+• Can directly access static members
+• More memory efficient
+
+Common Beginner Mistakes:
+
+• Confusing with member inner class
+• Trying to access non-static members directly
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Static Nested class Example',
+
+      language: 'java',
+
+      code: `class Outer {
+
+    static int number = 100;
+
+    static class Inner {
+
+        void display() {
+
+            System.out.println(number);
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Outer.Inner obj =
+            new Outer.Inner();
+
+        obj.display();
+
+    }
+
+}`,
+
+      output: '100',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Static nested class requires outer object?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only in arrays',
+        'Only in loops'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Static nested class does not require outer object.',
+    },
+
+    {
+      question:
+        'Static nested class can directly access?', 
+
+      options: [
+        'Non-static members only',
+        'Static members',
+        'Constructors only',
+        'Arrays only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'It can directly access static members.',
+    },
+
+    {
+      question:
+        'Static nested class behaves like?', 
+
+      options: [
+        'Loop',
+        'Method',
+        'Static member',
+        'Array'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Static nested class behaves like static member.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is static nested class in Java?',
+
+      answer:
+        'Static nested class is static class declared inside another class.',
+    },
+
+    {
+      question:
+        'Why is static nested class memory efficient?',
+
+      answer:
+        'Because it does not depend on outer class object creation.',
+    },
+  ],
+
+  nextTopic: 'java-nested-interface',
+},
+
+{
+  id: 'java-nested-interface',
+
+  title: 'Nested Interface in Java',
+
+  slug: 'java-nested-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Nested Interface in Java deeply including interface grouping, implementation, access rules, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Nested Interface in Java',
+
+      content: `
+• Introduction to Nested Interface
+
+• Interface Inside Class
+
+• Interface Inside Interface
+
+• Access Rules
+
+• Implementation
+
+• Advantages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Nested Interface',
+
+      content: `
+An interface declared inside another interface or class is called nested interface.
+
+Used for:
+
+• Better grouping
+• Logical organization
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Nested Interfaces',
+
+      content: `
+Nested interfaces can exist:
+
+• Inside class
+• Inside another interface
+`.trim(),
+    },
+
+    {
+      heading: 'Access Rules',
+
+      content: `
+Nested interfaces are:
+
+• Public
+• Static by default inside interfaces
+
+Implementation depends on access modifiers.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Nested Interface',
+
+      content: `
+• Better code organization
+• Logical grouping
+• Improved readability
+• Cleaner architecture
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Framework APIs
+• Event handling systems
+• Callback systems
+• Library design
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Nested Interface',
+
+      content: `
+• Interface can exist inside class or interface
+• Helps logical grouping
+• Nested interfaces improve structure
+• Common in framework development
+
+Common Beginner Mistakes:
+
+• Confusing nested interface with inner class
+• Ignoring access modifiers
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Nested Interface Example',
+
+      language: 'java',
+
+      code: `interface Outer {
+
+    interface Inner {
+
+        void show();
+
+    }
+
+}
+
+class Demo implements Outer.Inner {
+
+    public void show() {
+
+        System.out.println(
+            "Nested Interface"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Demo d = new Demo();
+
+        d.show();
+
+    }
+
+}`,
+
+      output: 'Nested Interface',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Nested interface is interface declared?', 
+
+      options: [
+        'Outside package',
+        'Inside another class or interface',
+        'Inside loop',
+        'Inside array'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Nested interface exists inside another class or interface.',
+    },
+
+    {
+      question:
+        'Nested interfaces improve?', 
+
+      options: [
+        'Compilation speed',
+        'Code organization',
+        'Loop execution',
+        'Garbage collection'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Nested interfaces improve organization.',
+    },
+
+    {
+      question:
+        'Nested interfaces are commonly used in?', 
+
+      options: [
+        'Games only',
+        'Framework APIs',
+        'Arrays only',
+        'Loops only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Nested interfaces are common in frameworks.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is nested interface in Java?',
+
+      answer:
+        'Nested interface is interface declared inside another class or interface.',
+    },
+
+    {
+      question:
+        'Why are nested interfaces useful?',
+
+      answer:
+        'Nested interfaces improve logical grouping and cleaner architecture.',
+    },
+  ],
+
+  nextTopic: 'java-lambda-expression',
+},
+
+{
+  id: 'java-inner-class-vs-static-nested-class',
+
+  title: 'Inner Class vs Static Nested class in Java',
+
+  slug: 'java-inner-class-vs-static-nested-class',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '25 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn difference between Inner Class and Static Nested class in Java deeply including memory usage, object dependency, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Inner Class vs Static Nested class in Java',
+
+      content: `
+• Introduction
+
+• Dependency on Outer Object
+
+• Memory Usage
+
+• Access Rules
+
+• Object Creation
+
+• Real-World Comparison
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Inner Class',
+
+      content: `
+Inner class is non-static.
+
+Features:
+
+• Requires outer object
+• Can access all members directly
+• Linked with outer instance
+`.trim(),
+    },
+
+    {
+      heading: 'Static Nested class',
+
+      content: `
+Static nested class behaves like static member.
+
+Features:
+
+• No outer object required
+• Directly accesses static members
+• More memory efficient
+`.trim(),
+    },
+
+    {
+      heading: 'Main Differences',
+
+      content: `
+Inner class:
+
+• Non-static
+• Requires outer object
+
+Static nested class:
+
+• Static
+• Independent from outer object
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Understanding the Difference',
+
+      content: `
+• Better design decisions
+• Improved performance
+• Cleaner architecture
+• Important for interviews
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Inner class used for:
+
+• Tight coupling
+
+Static nested class used for:
+
+• Utility/helper classes
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Inner vs Static Nested class',
+
+      content: `
+• Inner class depends on outer object
+• Static nested class is independent
+• Static nested class is memory efficient
+• Both improve organization
+
+Common Beginner Mistakes:
+
+• Confusing creation syntax
+• Incorrect member access
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Inner vs Static Nested class Example',
+
+      language: 'java',
+
+      code: `class Outer {
+
+    class Inner {
+
+        void show() {
+
+            System.out.println(
+                "Inner Class"
+            );
+
+        }
+
+    }
+
+    static class Nested {
+
+        void display() {
+
+            System.out.println(
+                "Static Nested Class"
+            );
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+
+        Outer.Inner i =
+            obj.new Inner();
+
+        i.show();
+
+        Outer.Nested n =
+            new Outer.Nested();
+
+        n.display();
+
+    }
+
+}`,
+
+      output: `Inner Class
+Static Nested Class`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class requires outer object?',
+
+      options: [
+        'Static nested class',
+        'Inner class',
+        'Interface',
+        'Abstract class'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Inner class requires outer object.',
+    },
+
+    {
+      question:
+        'Which is more memory efficient?',
+
+      options: [
+        'Inner class',
+        'Static nested class',
+        'Anonymous class',
+        'Interface'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Static nested class is more memory efficient.',
+    },
+
+    {
+      question:
+        'Static nested class directly accesses?', 
+
+      options: [
+        'Non-static members',
+        'Static members',
+        'Constructors only',
+        'Arrays only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'It directly accesses static members.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between inner class and static nested class?',
+
+      answer:
+        'Inner class depends on outer object while static nested class works independently.',
+    },
+
+    {
+      question:
+        'Why is static nested class preferred in some cases?',
+
+      answer:
+        'Because it is more memory efficient and independent from outer object.',
+    },
+  ],
+
+  nextTopic: 'java-multithreading',
+},
+{
+  id: 'java-multithreading',
+
+  title: 'Multithreading in Java',
+
+  slug: 'java-multithreading',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Multithreading in Java deeply including concurrent execution, threads, multitasking, performance improvement, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Multithreading in Java',
+
+      content: `
+• Introduction to Multithreading
+
+• What is Thread
+
+• Process vs Thread
+
+• Advantages of Multithreading
+
+• Concurrent Execution
+
+• Real-World Usage
+
+• Performance Improvement
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Multithreading',
+
+      content: `
+Multithreading allows Java to execute multiple tasks simultaneously.
+
+Each task runs inside separate thread.
+
+It improves:
+
+• Performance
+• CPU utilization
+• Responsiveness
+`.trim(),
+    },
+
+    {
+      heading: 'What is Thread',
+
+      content: `
+A thread is lightweight sub-process.
+
+Thread represents:
+
+• Independent execution path
+
+Multiple threads can run inside single program.
+`.trim(),
+    },
+
+    {
+      heading: 'Process vs Thread',
+
+      content: `
+Process:
+
+• Independent program
+• Heavyweight
+
+Thread:
+
+• Part of process
+• Lightweight
+• Shares memory with other threads
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Multithreading',
+
+      content: `
+• Faster execution
+• Better responsiveness
+• Better CPU usage
+• Parallel task execution
+• Improved user experience
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Multithreading is used in:
+
+• Games
+• Web servers
+• Banking systems
+• Video streaming
+• Chat applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Multithreading',
+
+      content: `
+• Multiple threads run simultaneously
+• Threads share process memory
+• Improves performance
+• Java provides built-in thread support
+
+Common Beginner Mistakes:
+
+• Confusing process and thread
+• Ignoring thread synchronization
+• Creating unnecessary threads
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Multithreading Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            "Thread is running"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread();
+
+        t1.start();
+
+    }
+
+}`,
+
+      output: 'Thread is running',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is thread in Java?',
+
+      options: [
+        'Database',
+        'Lightweight subprocess',
+        'Compiler',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Thread is lightweight subprocess.',
+    },
+
+    {
+      question:
+        'Multithreading improves?', 
+
+      options: [
+        'Performance',
+        'Syntax errors',
+        'Compilation time only',
+        'Variable names'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Multithreading improves performance.',
+    },
+
+    {
+      question:
+        'Threads inside same process share?', 
+
+      options: [
+        'Separate JVM',
+        'Separate CPU',
+        'Memory',
+        'Different compiler'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Threads share process memory.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is multithreading in Java?',
+
+      answer:
+        'Multithreading is process of executing multiple threads simultaneously within a program.',
+    },
+
+    {
+      question:
+        'Why is multithreading important?',
+
+      answer:
+        'Multithreading improves performance, responsiveness, and efficient CPU utilization.',
+    },
+  ],
+
+  nextTopic: 'java-thread-life-cycle',
+},
+
+{
+  id: 'java-thread-life-cycle',
+
+  title: 'Life Cycle of a Thread in Java',
+
+  slug: 'java-thread-life-cycle',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Life Cycle of a Thread in Java deeply including thread states, transitions, execution flow, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Life Cycle of a Thread in Java',
+
+      content: `
+• Introduction to Thread Life Cycle
+
+• New State
+
+• Runnable State
+
+• Running State
+
+• Blocked State
+
+• Waiting State
+
+• Terminated State
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Life Cycle',
+
+      content: `
+A thread passes through multiple states during execution.
+
+Java thread lifecycle defines:
+
+• How thread behaves
+• State transitions
+• Execution flow
+`.trim(),
+    },
+
+    {
+      heading: 'New State',
+
+      content: `
+Thread object is created but thread is not started yet.
+
+Example:
+
+Thread t = new Thread();
+
+Thread exists in memory only.
+`.trim(),
+    },
+
+    {
+      heading: 'Runnable State',
+
+      content: `
+After start() method call:
+
+• Thread enters runnable state
+
+Thread waits for CPU scheduling.
+`.trim(),
+    },
+
+    {
+      heading: 'Running State',
+
+      content: `
+Scheduler selects thread for execution.
+
+Now thread:
+
+• Executes run() method
+`.trim(),
+    },
+
+    {
+      heading: 'Blocked and Waiting State',
+
+      content: `
+Thread enters blocked/waiting state because of:
+
+• sleep()
+• wait()
+• I/O operations
+• Synchronization locks
+`.trim(),
+    },
+
+    {
+      heading: 'Terminated State',
+
+      content: `
+Thread enters terminated state after:
+
+• run() method completes
+
+Thread cannot restart again.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Life Cycle',
+
+      content: `
+• Thread moves through multiple states
+• start() moves thread to runnable state
+• Scheduler controls execution
+• Terminated thread cannot restart
+
+Common Beginner Mistakes:
+
+• Calling start() twice
+• Confusing runnable and running state
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Life Cycle Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            "Running State"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t = new MyThread();
+
+        System.out.println(t.getState());
+
+        t.start();
+
+    }
+
+}`,
+
+      output: `NEW
+Running State`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which state occurs after thread object creation?',
+
+      options: [
+        'Running',
+        'Blocked',
+        'New',
+        'Dead'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'New state occurs after object creation.',
+    },
+
+    {
+      question:
+        'Which method moves thread to runnable state?',
+
+      options: [
+        'run()',
+        'sleep()',
+        'start()',
+        'wait()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'start() moves thread to runnable state.',
+    },
+
+    {
+      question:
+        'Can terminated thread restart?',
+
+      options: [
+        'Yes',
+        'No',
+        'Only once',
+        'Only using run()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Terminated thread cannot restart.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are main states in Java thread lifecycle?',
+
+      answer:
+        'Main states are New, Runnable, Running, Waiting/Blocked, and Terminated.',
+    },
+
+    {
+      question:
+        'Why is thread lifecycle important?',
+
+      answer:
+        'It helps developers understand thread execution and synchronization behavior.',
+    },
+  ],
+
+  nextTopic: 'java-create-thread',
+},
+
+{
+  id: 'java-create-thread',
+
+  title: 'How to Create Thread in Java',
+
+  slug: 'java-create-thread',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn how to create Thread in Java deeply including Thread class, Runnable interface, start method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'How to Create Thread in Java',
+
+      content: `
+• Introduction to Thread Creation
+
+• Using Thread Class
+
+• Using Runnable Interface
+
+• start() Method
+
+• run() Method
+
+• Advantages
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Creation',
+
+      content: `
+Java provides multiple ways to create threads.
+
+Most common approaches:
+
+• Extending Thread class
+• Implementing Runnable interface
+`.trim(),
+    },
+
+    {
+      heading: 'Creating Thread Using Thread Class',
+
+      content: `
+Steps:
+
+1. Extend Thread class
+2. Override run() method
+3. Call start()
+
+Simple but supports only single inheritance.
+`.trim(),
+    },
+
+    {
+      heading: 'Creating Thread Using Runnable Interface',
+
+      content: `
+Steps:
+
+1. Implement Runnable interface
+2. Override run()
+3. Pass object to Thread class
+4. Call start()
+
+Preferred approach in real projects.
+`.trim(),
+    },
+
+    {
+      heading: 'Difference Between start() and run()',
+
+      content: `
+start():
+
+• Creates new thread
+
+run():
+
+• Executes like normal method if called directly
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Runnable Interface',
+
+      content: `
+• Better flexibility
+• Supports multiple inheritance
+• Cleaner architecture
+• Preferred in enterprise applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Creation',
+
+      content: `
+• Thread class and Runnable are common approaches
+• start() creates separate thread
+• run() contains execution logic
+• Runnable is preferred approach
+
+Common Beginner Mistakes:
+
+• Calling run() directly
+• Forgetting start()
+• Confusing Runnable and Thread class
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Creation Using Runnable',
+
+      language: 'java',
+
+      code: `class MyThread implements Runnable {
+
+    public void run() {
+
+        System.out.println(
+            "Thread using Runnable"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread obj = new MyThread();
+
+        Thread t = new Thread(obj);
+
+        t.start();
+
+    }
+
+}`,
+
+      output: 'Thread using Runnable',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which interface is commonly used for thread creation?',
+
+      options: [
+        'Serializable',
+        'Runnable',
+        'Cloneable',
+        'Comparable'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Runnable interface is commonly used.',
+    },
+
+    {
+      question:
+        'Which method starts new thread?',
+
+      options: [
+        'run()',
+        'main()',
+        'start()',
+        'sleep()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'start() creates new thread.',
+    },
+
+    {
+      question:
+        'Which approach is preferred in real projects?',
+
+      options: [
+        'Runnable interface',
+        'Thread class only',
+        'Arrays',
+        'Packages'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Runnable interface is preferred.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are different ways to create thread in Java?',
+
+      answer:
+        'Threads can be created by extending Thread class or implementing Runnable interface.',
+    },
+
+    {
+      question:
+        'Why is Runnable preferred over Thread class?',
+
+      answer:
+        'Runnable supports better flexibility and multiple inheritance.',
+    },
+  ],
+
+  nextTopic: 'java-thread-scheduler',
+},
+
+{
+  id: 'java-thread-scheduler',
+
+  title: 'Thread Scheduler in Java',
+
+  slug: 'java-thread-scheduler',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '24 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Thread Scheduler in Java deeply including CPU scheduling, priorities, execution control, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Thread Scheduler in Java',
+
+      content: `
+• Introduction to Thread Scheduler
+
+• CPU Scheduling
+
+• Thread Priorities
+
+• Scheduling Algorithms
+
+• Time Slicing
+
+• Context Switching
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Scheduler',
+
+      content: `
+Thread scheduler decides:
+
+• Which thread executes
+• When thread executes
+• How long thread executes
+`.trim(),
+    },
+
+    {
+      heading: 'CPU Scheduling',
+
+      content: `
+Multiple threads compete for CPU time.
+
+Scheduler manages:
+
+• Fair execution
+• Performance
+• Resource sharing
+`.trim(),
+    },
+
+    {
+      heading: 'Thread Priorities',
+
+      content: `
+Java provides thread priorities from:
+
+1 to 10
+
+Higher priority thread gets better scheduling chance.
+`.trim(),
+    },
+
+    {
+      heading: 'Time Slicing',
+
+      content: `
+Scheduler provides small CPU time slices to threads.
+
+Benefits:
+
+• Better responsiveness
+• Parallel execution feeling
+`.trim(),
+    },
+
+    {
+      heading: 'Context Switching',
+
+      content: `
+CPU switches between threads rapidly.
+
+This process is called:
+
+• Context switching
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Scheduler',
+
+      content: `
+• Scheduler controls thread execution
+• Thread priorities influence scheduling
+• Scheduling behavior depends on JVM and OS
+• Exact execution order is unpredictable
+
+Common Beginner Mistakes:
+
+• Assuming thread execution order
+• Overusing priorities
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Priority Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            Thread.currentThread().getName()
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread();
+
+        MyThread t2 = new MyThread();
+
+        t1.setPriority(8);
+
+        t2.setPriority(3);
+
+        t1.start();
+
+        t2.start();
+
+    }
+
+}`,
+
+      output: `Thread-0
+Thread-1`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Who controls thread execution in Java?',
+
+      options: [
+        'Compiler',
+        'Thread Scheduler',
+        'Array',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Thread scheduler controls execution.',
+    },
+
+    {
+      question:
+        'Thread priorities range from?', 
+
+      options: [
+        '1 to 5',
+        '1 to 10',
+        '0 to 100',
+        '5 to 15'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Java thread priorities range from 1 to 10.',
+    },
+
+    {
+      question:
+        'Fast switching between threads is called?', 
+
+      options: [
+        'Compilation',
+        'Context switching',
+        'Garbage collection',
+        'Synchronization'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Fast thread switching is context switching.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is thread scheduler in Java?',
+
+      answer:
+        'Thread scheduler controls CPU allocation and thread execution order.',
+    },
+
+    {
+      question:
+        'Why is thread execution order unpredictable?',
+
+      answer:
+        'Because scheduling depends on JVM implementation and operating system behavior.',
+    },
+  ],
+
+  nextTopic: 'java-thread-sleep',
+},
+
+{
+  id: 'java-thread-sleep',
+
+  title: 'Sleeping a Thread in Java',
+
+  slug: 'java-thread-sleep',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Sleeping a Thread in Java deeply including sleep() method, delays, InterruptedException, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Sleeping a Thread in Java',
+
+      content: `
+• Introduction to sleep()
+
+• Thread Delay
+
+• InterruptedException
+
+• Thread Pausing
+
+• Timing Control
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to sleep() Method',
+
+      content: `
+sleep() method pauses thread execution temporarily.
+
+Thread remains inactive for specific time.
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of sleep()',
+
+      content: `
+Syntax:
+
+Thread.sleep(milliseconds);
+
+Example:
+
+Thread.sleep(2000);
+
+Pauses thread for 2 seconds.
+`.trim(),
+    },
+
+    {
+      heading: 'InterruptedException',
+
+      content: `
+sleep() may throw:
+
+• InterruptedException
+
+Therefore:
+
+• Exception handling is required
+`.trim(),
+    },
+
+    {
+      heading: 'Why sleep() is Useful',
+
+      content: `
+Uses of sleep():
+
+• Delays
+• Animation timing
+• Retry mechanisms
+• Thread coordination
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of sleep()',
+
+      content: `
+• Controls execution timing
+• Reduces CPU usage
+• Helps synchronization
+• Improves scheduling
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About sleep()',
+
+      content: `
+• sleep() pauses current thread
+• Time is measured in milliseconds
+• InterruptedException must be handled
+• Thread does not lose locks automatically
+
+Common Beginner Mistakes:
+
+• Forgetting exception handling
+• Assuming sleep() stops all threads
+• Confusing sleep() with wait()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'sleep() Method Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args)
+        throws InterruptedException {
+
+        for(int i = 1; i <= 3; i++) {
+
+            System.out.println(i);
+
+            Thread.sleep(1000);
+
+        }
+
+    }
+
+}`,
+
+      output: `1
+2
+3`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method pauses thread temporarily?',
+
+      options: [
+        'wait()',
+        'sleep()',
+        'run()',
+        'start()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'sleep() pauses thread execution.',
+    },
+
+    {
+      question:
+        'sleep() time is measured in?', 
+
+      options: [
+        'Minutes',
+        'Hours',
+        'Milliseconds',
+        'Nanoseconds only'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'sleep() uses milliseconds.',
+    },
+
+    {
+      question:
+        'sleep() may throw?', 
+
+      options: [
+        'ArithmeticException',
+        'InterruptedException',
+        'NullPointerException',
+        'SQLException'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'sleep() may throw InterruptedException.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is sleep() method in Java?',
+
+      answer:
+        'sleep() temporarily pauses current thread execution for specific time.',
+    },
+
+    {
+      question:
+        'Why is InterruptedException required with sleep()?',
+
+      answer:
+        'Because sleeping thread can be interrupted during paused state.',
+    },
+  ],
+
+  nextTopic: 'java-thread-naming',
+},
+{
+  id: 'java-thread-naming',
+
+  title: 'Naming a Thread in Java',
+
+  slug: 'java-thread-naming',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Naming a Thread in Java deeply including setName(), getName(), debugging benefits, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Naming a Thread in Java',
+
+      content: `
+• Introduction to Thread Naming
+
+• Default Thread Names
+
+• setName() Method
+
+• getName() Method
+
+• Debugging Benefits
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Naming',
+
+      content: `
+Every thread in Java has a name.
+
+Thread names help:
+
+• Identify threads
+• Debug multithreaded programs
+• Track execution
+`.trim(),
+    },
+
+    {
+      heading: 'Default Thread Names',
+
+      content: `
+Java automatically provides default names.
+
+Examples:
+
+• Thread-0
+• Thread-1
+• Thread-2
+`.trim(),
+    },
+
+    {
+      heading: 'setName() Method',
+
+      content: `
+setName() changes thread name.
+
+Syntax:
+
+thread.setName("WorkerThread");
+`.trim(),
+    },
+
+    {
+      heading: 'getName() Method',
+
+      content: `
+getName() returns thread name.
+
+Useful for:
+
+• Logging
+• Debugging
+• Monitoring
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Naming Threads',
+
+      content: `
+• Better debugging
+• Easy monitoring
+• Improved readability
+• Easier maintenance
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Naming',
+
+      content: `
+• Every thread has unique name
+• Names help debugging
+• setName() changes thread name
+• getName() retrieves thread name
+
+Common Beginner Mistakes:
+
+• Ignoring meaningful thread names
+• Confusing thread names with priorities
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Naming Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            Thread.currentThread().getName()
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread();
+
+        t1.setName("DownloadThread");
+
+        t1.start();
+
+    }
+
+}`,
+
+      output: 'DownloadThread',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method changes thread name?',
+
+      options: [
+        'getName()',
+        'sleep()',
+        'setName()',
+        'run()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'setName() changes thread name.',
+    },
+
+    {
+      question:
+        'Default thread names are like?', 
+
+      options: [
+        'Worker',
+        'Thread-0',
+        'JavaThread',
+        'MainLoop'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Java default names are Thread-0, Thread-1 etc.',
+    },
+
+    {
+      question:
+        'Thread names are mainly useful for?', 
+
+      options: [
+        'Compilation',
+        'Debugging',
+        'Garbage collection',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Thread names help debugging.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are thread names important in Java?',
+
+      answer:
+        'Thread names help debugging, monitoring, and tracking multithreaded execution.',
+    },
+
+    {
+      question:
+        'What is difference between setName() and getName()?',
+
+      answer:
+        'setName() changes thread name while getName() returns current thread name.',
+    },
+  ],
+
+  nextTopic: 'java-thread-priority',
+},
+
+{
+  id: 'java-thread-priority',
+
+  title: 'Thread Priority in Java',
+
+  slug: 'java-thread-priority',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Thread Priority in Java deeply including setPriority(), scheduler behavior, priority constants, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Thread Priority in Java',
+
+      content: `
+• Introduction to Thread Priority
+
+• Priority Range
+
+• setPriority() Method
+
+• getPriority() Method
+
+• Scheduler Behavior
+
+• Priority Constants
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Priority',
+
+      content: `
+Thread priority tells scheduler:
+
+• Which thread should get better CPU preference
+
+Higher priority increases execution chance.
+`.trim(),
+    },
+
+    {
+      heading: 'Priority Range',
+
+      content: `
+Java thread priority range:
+
+1 to 10
+
+Important constants:
+
+• MIN_PRIORITY = 1
+• NORM_PRIORITY = 5
+• MAX_PRIORITY = 10
+`.trim(),
+    },
+
+    {
+      heading: 'setPriority() Method',
+
+      content: `
+Used to assign thread priority.
+
+Syntax:
+
+thread.setPriority(8);
+`.trim(),
+    },
+
+    {
+      heading: 'getPriority() Method',
+
+      content: `
+Returns current thread priority.
+
+Useful for:
+
+• Monitoring
+• Debugging
+• Scheduling analysis
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Thread Priority',
+
+      content: `
+• Better task management
+• CPU optimization
+• Important task preference
+• Improved responsiveness
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Priority',
+
+      content: `
+• Priority range is 1 to 10
+• Higher priority gets better scheduling chance
+• Exact execution still depends on JVM and OS
+• Priority does not guarantee execution order
+
+Common Beginner Mistakes:
+
+• Assuming high priority always runs first
+• Using extreme priorities everywhere
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Priority Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            getName() + " : " +
+            getPriority()
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread();
+
+        MyThread t2 = new MyThread();
+
+        t1.setName("High");
+
+        t2.setName("Low");
+
+        t1.setPriority(8);
+
+        t2.setPriority(3);
+
+        t1.start();
+
+        t2.start();
+
+    }
+
+}`,
+
+      output: `High : 8
+Low : 3`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Maximum thread priority in Java is?', 
+
+      options: [
+        '5',
+        '8',
+        '10',
+        '100'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Maximum priority is 10.',
+    },
+
+    {
+      question:
+        'Default normal priority value is?', 
+
+      options: [
+        '1',
+        '3',
+        '5',
+        '10'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'NORM_PRIORITY is 5.',
+    },
+
+    {
+      question:
+        'Which method sets thread priority?',
+
+      options: [
+        'getPriority()',
+        'setPriority()',
+        'setName()',
+        'run()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'setPriority() assigns priority.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is thread priority in Java?',
+
+      answer:
+        'Thread priority indicates importance of thread for CPU scheduling.',
+    },
+
+    {
+      question:
+        'Does high priority guarantee execution first?',
+
+      answer:
+        'No, execution order depends on JVM and operating system scheduler.',
+    },
+  ],
+
+  nextTopic: 'java-daemon-thread',
+},
+
+{
+  id: 'java-daemon-thread',
+
+  title: 'Daemon Thread in Java',
+
+  slug: 'java-daemon-thread',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '26 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Daemon Thread in Java deeply including background threads, JVM behavior, garbage collection support, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Daemon Thread in Java',
+
+      content: `
+• Introduction to Daemon Thread
+
+• Background Processing
+
+• JVM Behavior
+
+• User Thread vs Daemon Thread
+
+• setDaemon() Method
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Daemon Thread',
+
+      content: `
+Daemon thread runs in background.
+
+Purpose:
+
+• Support user threads
+• Perform background tasks
+`.trim(),
+    },
+
+    {
+      heading: 'Examples of Daemon Threads',
+
+      content: `
+Examples:
+
+• Garbage collector
+• Auto-save services
+• Monitoring systems
+• Background cleanup
+`.trim(),
+    },
+
+    {
+      heading: 'User Thread vs Daemon Thread',
+
+      content: `
+User Thread:
+
+• Important application work
+
+Daemon Thread:
+
+• Background support work
+
+JVM exits when all user threads finish.
+`.trim(),
+    },
+
+    {
+      heading: 'setDaemon() Method',
+
+      content: `
+Used to mark thread as daemon.
+
+Syntax:
+
+thread.setDaemon(true);
+
+Must be called before start().
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Daemon Threads',
+
+      content: `
+• Automatic background processing
+• Better resource management
+• Improves automation
+• Supports system services
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Daemon Threads',
+
+      content: `
+• Daemon threads run in background
+• JVM stops daemon threads automatically
+• Used for supporting tasks
+• Must call setDaemon() before start()
+
+Common Beginner Mistakes:
+
+• Calling setDaemon() after start()
+• Using daemon threads for critical tasks
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Daemon Thread Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        if(Thread.currentThread().isDaemon()) {
+
+            System.out.println(
+                "Daemon Thread"
+            );
+
+        }
+
+        else {
+
+            System.out.println(
+                "User Thread"
+            );
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread();
+
+        t1.setDaemon(true);
+
+        t1.start();
+
+    }
+
+}`,
+
+      output: 'Daemon Thread',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Daemon thread mainly performs?', 
+
+      options: [
+        'Database storage',
+        'Background tasks',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Daemon threads perform background tasks.',
+    },
+
+    {
+      question:
+        'Which method marks thread as daemon?',
+
+      options: [
+        'setDaemon()',
+        'sleep()',
+        'join()',
+        'wait()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'setDaemon() creates daemon thread.',
+    },
+
+    {
+      question:
+        'When does JVM stop daemon threads?',
+
+      options: [
+        'After compilation',
+        'When all user threads finish',
+        'After array creation',
+        'Never'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'JVM stops daemon threads when user threads end.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is daemon thread in Java?',
+
+      answer:
+        'Daemon thread is background thread that supports user threads and system services.',
+    },
+
+    {
+      question:
+        'Why are daemon threads useful?',
+
+      answer:
+        'Daemon threads automate background processing like garbage collection and monitoring.',
+    },
+  ],
+
+  nextTopic: 'java-thread-pool',
+},
+
+{
+  id: 'java-thread-pool',
+
+  title: 'Thread Pool in Java',
+
+  slug: 'java-thread-pool',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '32 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Thread Pool in Java deeply including Executor framework, reusable threads, performance optimization, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Thread Pool in Java',
+
+      content: `
+• Introduction to Thread Pool
+
+• Executor Framework
+
+• Reusable Threads
+
+• Performance Optimization
+
+• Fixed Thread Pool
+
+• Cached Thread Pool
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Pool',
+
+      content: `
+Thread pool is collection of reusable threads.
+
+Instead of creating new thread every time:
+
+• Existing threads are reused
+`.trim(),
+    },
+
+    {
+      heading: 'Why Thread Pool is Important',
+
+      content: `
+Benefits:
+
+• Faster execution
+• Better performance
+• Reduced memory overhead
+• Better resource management
+`.trim(),
+    },
+
+    {
+      heading: 'Executor Framework',
+
+      content: `
+Java provides Executor framework for managing thread pools.
+
+Common methods:
+
+• newFixedThreadPool()
+• newCachedThreadPool()
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Thread Pools',
+
+      content: `
+Important thread pools:
+
+• Fixed Thread Pool
+• Cached Thread Pool
+• Scheduled Thread Pool
+• Single Thread Executor
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Thread pools are used in:
+
+• Web servers
+• Banking systems
+• APIs
+• Enterprise applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Pool',
+
+      content: `
+• Thread pools reuse threads
+• Improves performance
+• Managed using Executor framework
+• Reduces thread creation overhead
+
+Common Beginner Mistakes:
+
+• Creating too many threads
+• Forgetting shutdown()
+• Wrong pool size selection
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Pool Example',
+
+      language: 'java',
+
+      code: `import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+class Task implements Runnable {
+
+    public void run() {
+
+        System.out.println(
+            Thread.currentThread().getName()
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ExecutorService service =
+            Executors.newFixedThreadPool(2);
+
+        service.execute(new Task());
+
+        service.execute(new Task());
+
+        service.shutdown();
+
+    }
+
+}`,
+
+      output: `pool-1-thread-1
+pool-1-thread-2`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Thread pool mainly improves?', 
+
+      options: [
+        'Syntax',
+        'Performance',
+        'Variable names',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Thread pool improves performance.',
+    },
+
+    {
+      question:
+        'Which framework manages thread pools?',
+
+      options: [
+        'Collection Framework',
+        'Executor Framework',
+        'Servlet API',
+        'JDBC'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Executor framework manages thread pools.',
+    },
+
+    {
+      question:
+        'Thread pools reduce?', 
+
+      options: [
+        'Array size',
+        'Thread creation overhead',
+        'Compiler errors',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Thread pools reduce thread creation overhead.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is thread pool in Java?',
+
+      answer:
+        'Thread pool is collection of reusable threads managed for efficient task execution.',
+    },
+
+    {
+      question:
+        'Why are thread pools preferred in enterprise applications?',
+
+      answer:
+        'Because they improve performance and reduce thread creation overhead.',
+    },
+  ],
+
+  nextTopic: 'java-thread-group',
+},
+
+{
+  id: 'java-thread-group',
+
+  title: 'ThreadGroup in Java',
+
+  slug: 'java-thread-group',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '24 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn ThreadGroup in Java deeply including grouping threads, management operations, hierarchy, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'ThreadGroup in Java',
+
+      content: `
+• Introduction to ThreadGroup
+
+• Grouping Threads
+
+• Thread Management
+
+• ThreadGroup Hierarchy
+
+• Useful Methods
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to ThreadGroup',
+
+      content: `
+ThreadGroup is used to manage multiple threads together.
+
+Purpose:
+
+• Organize threads
+• Perform group operations
+`.trim(),
+    },
+
+    {
+      heading: 'Why ThreadGroup is Useful',
+
+      content: `
+Benefits:
+
+• Easier thread management
+• Group monitoring
+• Better organization
+• Common operations on threads
+`.trim(),
+    },
+
+    {
+      heading: 'ThreadGroup Hierarchy',
+
+      content: `
+Thread groups can contain:
+
+• Threads
+• Other thread groups
+
+Creates hierarchical structure.
+`.trim(),
+    },
+
+    {
+      heading: 'Useful Methods of ThreadGroup',
+
+      content: `
+Important methods:
+
+• activeCount()
+• list()
+• stop()
+• interrupt()
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Large multithreaded applications
+• Server management
+• Monitoring systems
+• Task organization
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ThreadGroup',
+
+      content: `
+• ThreadGroup manages multiple threads
+• Supports hierarchy
+• Simplifies thread operations
+• Modern applications often prefer Executor framework
+
+Common Beginner Mistakes:
+
+• Overusing deprecated methods
+• Confusing ThreadGroup with thread pool
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ThreadGroup Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    MyThread(ThreadGroup tg, String name) {
+
+        super(tg, name);
+
+    }
+
+    public void run() {
+
+        System.out.println(
+            getName()
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ThreadGroup tg =
+            new ThreadGroup("Workers");
+
+        MyThread t1 =
+            new MyThread(tg, "Thread-1");
+
+        MyThread t2 =
+            new MyThread(tg, "Thread-2");
+
+        t1.start();
+
+        t2.start();
+
+    }
+
+}`,
+
+      output: `Thread-1
+Thread-2`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'ThreadGroup is used for?', 
+
+      options: [
+        'Database storage',
+        'Managing multiple threads',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ThreadGroup manages multiple threads together.',
+    },
+
+    {
+      question:
+        'ThreadGroup can contain?', 
+
+      options: [
+        'Only arrays',
+        'Only methods',
+        'Threads and thread groups',
+        'Only packages'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ThreadGroup can contain threads and subgroups.',
+    },
+
+    {
+      question:
+        'Modern applications commonly prefer?', 
+
+      options: [
+        'ThreadGroup only',
+        'Executor framework',
+        'Applet',
+        'AWT only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Executor framework is preferred today.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is ThreadGroup in Java?',
+
+      answer:
+        'ThreadGroup is class used to manage and organize multiple threads together.',
+    },
+
+    {
+      question:
+        'Why is Executor framework preferred over ThreadGroup?',
+
+      answer:
+        'Executor framework provides better thread management and scalability.',
+    },
+  ],
+
+  nextTopic: 'java-shutdown-hook-thread',
+},
+{
+  id: 'java-shutdown-hook-thread',
+
+  title: 'ShutdownHook Thread in Java',
+
+  slug: 'java-shutdown-hook-thread',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '24 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn ShutdownHook Thread in Java deeply including JVM shutdown process, cleanup operations, resource management, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'ShutdownHook Thread in Java',
+
+      content: `
+• Introduction to ShutdownHook
+
+• JVM Shutdown Process
+
+• Cleanup Operations
+
+• Runtime Class
+
+• addShutdownHook() Method
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to ShutdownHook',
+
+      content: `
+ShutdownHook is special thread executed before JVM shutdown.
+
+Used for:
+
+• Cleanup tasks
+• Saving data
+• Closing resources
+`.trim(),
+    },
+
+    {
+      heading: 'Why ShutdownHook is Important',
+
+      content: `
+Applications may need:
+
+• File closing
+• Database disconnection
+• Cache saving
+• Log storage
+
+ShutdownHook handles these tasks safely.
+`.trim(),
+    },
+
+    {
+      heading: 'addShutdownHook() Method',
+
+      content: `
+Java Runtime class provides:
+
+addShutdownHook()
+
+Used to register shutdown thread.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of ShutdownHook',
+
+      content: `
+• Safe application termination
+• Proper resource cleanup
+• Prevents data loss
+• Better system stability
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Banking systems
+• Web servers
+• Logging systems
+• Database applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ShutdownHook',
+
+      content: `
+• Runs before JVM shutdown
+• Used for cleanup operations
+• Managed using Runtime class
+• Useful for resource handling
+
+Common Beginner Mistakes:
+
+• Performing heavy operations inside hook
+• Assuming hook always executes during force shutdown
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ShutdownHook Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        Runtime.getRuntime().addShutdownHook(
+
+            new Thread() {
+
+                public void run() {
+
+                    System.out.println(
+                        "Shutdown Hook Executed"
+                    );
+
+                }
+
+            }
+
+        );
+
+        System.out.println(
+            "Application Running"
+        );
+
+    }
+
+}`,
+
+      output: `Application Running
+Shutdown Hook Executed`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'ShutdownHook executes before?', 
+
+      options: [
+        'Compilation',
+        'JVM shutdown',
+        'Loop execution',
+        'Garbage collection'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ShutdownHook runs before JVM shutdown.',
+    },
+
+    {
+      question:
+        'Which class manages ShutdownHook?',
+
+      options: [
+        'String',
+        'Runtime',
+        'Scanner',
+        'Object'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Runtime class manages ShutdownHook.',
+    },
+
+    {
+      question:
+        'ShutdownHook is mainly used for?', 
+
+      options: [
+        'Arrays',
+        'Cleanup tasks',
+        'Inheritance',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ShutdownHook performs cleanup operations.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is ShutdownHook thread in Java?',
+
+      answer:
+        'ShutdownHook is special thread executed before JVM shutdown for cleanup tasks.',
+    },
+
+    {
+      question:
+        'Why are ShutdownHooks important?',
+
+      answer:
+        'They help safely close resources and prevent data loss during application termination.',
+    },
+  ],
+
+  nextTopic: 'java-multitasking-in-multithreading',
+},
+
+{
+  id: 'java-multitasking-in-multithreading',
+
+  title: 'Multitasking in Multithreading',
+
+  slug: 'java-multitasking-in-multithreading',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Multitasking in Multithreading deeply including concurrent execution, process multitasking, thread multitasking, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Multitasking in Multithreading',
+
+      content: `
+• Introduction to Multitasking
+
+• Process-Based Multitasking
+
+• Thread-Based Multitasking
+
+• Concurrent Execution
+
+• Performance Benefits
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Multitasking',
+
+      content: `
+Multitasking means performing multiple tasks simultaneously.
+
+Java supports multitasking using:
+
+• Processes
+• Threads
+`.trim(),
+    },
+
+    {
+      heading: 'Process-Based Multitasking',
+
+      content: `
+Different processes run independently.
+
+Examples:
+
+• Browser
+• Music player
+• IDE
+
+Each process has separate memory.
+`.trim(),
+    },
+
+    {
+      heading: 'Thread-Based Multitasking',
+
+      content: `
+Multiple threads run inside same process.
+
+Advantages:
+
+• Faster communication
+• Better performance
+• Shared memory
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Multitasking',
+
+      content: `
+• Better CPU usage
+• Faster execution
+• Improved responsiveness
+• Parallel operations
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Gaming
+• Web applications
+• Streaming apps
+• Banking systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Multitasking',
+
+      content: `
+• Multitasking improves efficiency
+• Threads are lightweight
+• Processes are heavyweight
+• Java strongly supports thread multitasking
+
+Common Beginner Mistakes:
+
+• Confusing process and thread
+• Creating too many threads
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Multitasking Example',
+
+      language: 'java',
+
+      code: `class Task1 extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            "Task 1 Running"
+        );
+
+    }
+
+}
+
+class Task2 extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            "Task 2 Running"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Task1 t1 = new Task1();
+
+        Task2 t2 = new Task2();
+
+        t1.start();
+
+        t2.start();
+
+    }
+
+}`,
+
+      output: `Task 1 Running
+Task 2 Running`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Multitasking means?', 
+
+      options: [
+        'Single task execution',
+        'Multiple tasks simultaneously',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Multitasking performs multiple tasks simultaneously.',
+    },
+
+    {
+      question:
+        'Threads are?', 
+
+      options: [
+        'Heavyweight',
+        'Lightweight',
+        'Database objects',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Threads are lightweight subprocesses.',
+    },
+
+    {
+      question:
+        'Thread-based multitasking shares?', 
+
+      options: [
+        'Separate JVM',
+        'Separate memory',
+        'Shared memory',
+        'Separate CPU'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Threads share memory inside process.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is multitasking in Java?',
+
+      answer:
+        'Multitasking is ability to perform multiple tasks simultaneously using processes or threads.',
+    },
+
+    {
+      question:
+        'Why is thread-based multitasking faster?',
+
+      answer:
+        'Because threads share memory and communication becomes faster.',
+    },
+  ],
+
+  nextTopic: 'java-garbage-collection',
+},
+
+{
+  id: 'java-garbage-collection',
+
+  title: 'Garbage Collection in Java',
+
+  slug: 'java-garbage-collection',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '34 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Garbage Collection in Java deeply including memory cleanup, JVM memory management, gc(), and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Garbage Collection in Java',
+
+      content: `
+• Introduction to Garbage Collection
+
+• Memory Management
+
+• Unused Objects
+
+• gc() Method
+
+• finalize() Method
+
+• JVM Behavior
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Garbage Collection',
+
+      content: `
+Garbage Collection automatically removes unused objects from memory.
+
+Purpose:
+
+• Free memory
+• Prevent memory leaks
+`.trim(),
+    },
+
+    {
+      heading: 'How Garbage Collector Works',
+
+      content: `
+Garbage collector identifies:
+
+• Unreferenced objects
+
+These objects are removed automatically.
+`.trim(),
+    },
+
+    {
+      heading: 'gc() Method',
+
+      content: `
+System.gc() requests JVM to perform garbage collection.
+
+Important:
+
+• JVM may ignore request
+`.trim(),
+    },
+
+    {
+      heading: 'finalize() Method',
+
+      content: `
+finalize() executes before object destruction.
+
+Used for:
+
+• Cleanup operations
+
+Modern Java discourages finalize() usage.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Garbage Collection',
+
+      content: `
+• Automatic memory management
+• Reduces memory leaks
+• Simplifies programming
+• Improves application stability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Garbage Collection',
+
+      content: `
+• JVM manages memory automatically
+• Unused objects are removed
+• System.gc() is only request
+• finalize() is deprecated in modern Java
+
+Common Beginner Mistakes:
+
+• Assuming gc() always runs immediately
+• Relying heavily on finalize()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Garbage Collection Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public void finalize() {
+
+        System.out.println(
+            "Object destroyed"
+        );
+
+    }
+
+    public static void main(String[] args) {
+
+        Main obj = new Main();
+
+        obj = null;
+
+        System.gc();
+
+    }
+
+}`,
+
+      output: 'Object destroyed',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Garbage Collection removes?', 
+
+      options: [
+        'Methods',
+        'Unused objects',
+        'Packages',
+        'Arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Garbage collector removes unused objects.',
+    },
+
+    {
+      question:
+        'Which method requests garbage collection?',
+
+      options: [
+        'sleep()',
+        'gc()',
+        'join()',
+        'wait()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'gc() requests garbage collection.',
+    },
+
+    {
+      question:
+        'Who manages memory in Java?',
+
+      options: [
+        'Programmer',
+        'JVM',
+        'Compiler',
+        'Package manager'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'JVM manages memory automatically.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Garbage Collection in Java?',
+
+      answer:
+        'Garbage Collection automatically removes unused objects from memory.',
+    },
+
+    {
+      question:
+        'Why is Garbage Collection useful?',
+
+      answer:
+        'It automates memory management and reduces memory leaks.',
+    },
+  ],
+
+  nextTopic: 'java-runtime-class',
+},
+
+{
+  id: 'java-runtime-class',
+
+  title: 'Java Runtime class',
+
+  slug: 'java-runtime-class',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Runtime class deeply including JVM interaction, memory information, process execution, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Runtime class',
+
+      content: `
+• Introduction to Runtime class
+
+• Singleton Nature
+
+• Memory Management
+
+• Executing Processes
+
+• Shutdown Hooks
+
+• Useful Methods
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Runtime class',
+
+      content: `
+Runtime class provides interaction with JVM runtime environment.
+
+Used for:
+
+• Memory information
+• Process execution
+• Shutdown management
+`.trim(),
+    },
+
+    {
+      heading: 'Singleton Nature',
+
+      content: `
+Runtime class cannot create direct object.
+
+Access using:
+
+Runtime.getRuntime();
+`.trim(),
+    },
+
+    {
+      heading: 'Useful Methods of Runtime class',
+
+      content: `
+Important methods:
+
+• freeMemory()
+• totalMemory()
+• gc()
+• exec()
+• addShutdownHook()
+`.trim(),
+    },
+
+    {
+      heading: 'Process Execution',
+
+      content: `
+Runtime class can execute external programs using:
+
+exec()
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Runtime class',
+
+      content: `
+• JVM interaction
+• Memory monitoring
+• Process management
+• System-level operations
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Runtime class',
+
+      content: `
+• Runtime class interacts with JVM
+• Uses singleton design
+• Provides memory information
+• Supports external process execution
+
+Common Beginner Mistakes:
+
+• Trying to instantiate Runtime directly
+• Misusing exec() method
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Runtime class Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        Runtime r = Runtime.getRuntime();
+
+        System.out.println(
+            "Available Memory: " +
+            r.freeMemory()
+        );
+
+    }
+
+}`,
+
+      output: 'Available Memory: 12345678',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Runtime class interacts with?', 
+
+      options: [
+        'Database',
+        'JVM',
+        'Compiler',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Runtime class interacts with JVM.',
+    },
+
+    {
+      question:
+        'Which method returns Runtime object?',
+
+      options: [
+        'new Runtime()',
+        'getRuntime()',
+        'createRuntime()',
+        'startRuntime()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'getRuntime() returns Runtime object.',
+    },
+
+    {
+      question:
+        'Which method executes external process?',
+
+      options: [
+        'gc()',
+        'exec()',
+        'wait()',
+        'join()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'exec() executes external programs.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Runtime class in Java?',
+
+      answer:
+        'Runtime class provides interaction with JVM runtime environment.',
+    },
+
+    {
+      question:
+        'Why is Runtime class important?',
+
+      answer:
+        'It helps manage memory, execute processes, and interact with JVM.',
+    },
+  ],
+
+  nextTopic: 'java-thread-synchronization',
+},
+
+{
+  id: 'java-thread-synchronization',
+
+  title: 'Thread Synchronization in Java',
+
+  slug: 'java-thread-synchronization',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '38 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Thread Synchronization in Java deeply including synchronized methods, race conditions, thread safety, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Thread Synchronization in Java',
+
+      content: `
+• Introduction to Synchronization
+
+• Race Condition
+
+• Thread Safety
+
+• synchronized Keyword
+
+• Synchronized Methods
+
+• Synchronized Blocks
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Synchronization',
+
+      content: `
+Synchronization controls access of multiple threads to shared resources.
+
+Purpose:
+
+• Prevent data inconsistency
+• Ensure thread safety
+`.trim(),
+    },
+
+    {
+      heading: 'Race Condition',
+
+      content: `
+Race condition occurs when:
+
+• Multiple threads modify shared data simultaneously
+
+Results become unpredictable.
+`.trim(),
+    },
+
+    {
+      heading: 'synchronized Keyword',
+
+      content: `
+synchronized keyword allows only one thread at a time.
+
+Used with:
+
+• Methods
+• Blocks
+`.trim(),
+    },
+
+    {
+      heading: 'Synchronized Method',
+
+      content: `
+Entire method becomes synchronized.
+
+Only one thread executes method at a time.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Synchronization',
+
+      content: `
+• Thread safety
+• Prevents race condition
+• Data consistency
+• Better reliability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Synchronization',
+
+      content: `
+• Synchronization prevents simultaneous access
+• synchronized keyword provides locking
+• Improves thread safety
+• Excess synchronization may reduce performance
+
+Common Beginner Mistakes:
+
+• Synchronizing unnecessary code
+• Ignoring race conditions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Synchronization Example',
+
+      language: 'java',
+
+      code: `class Table {
+
+    synchronized void printTable(int n) {
+
+        for(int i = 1; i <= 5; i++) {
+
+            System.out.println(n * i);
+
+        }
+
+    }
+
+}
+
+class MyThread1 extends Thread {
+
+    Table t;
+
+    MyThread1(Table t) {
+
+        this.t = t;
+
+    }
+
+    public void run() {
+
+        t.printTable(5);
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Table obj = new Table();
+
+        MyThread1 t1 = new MyThread1(obj);
+
+        t1.start();
+
+    }
+
+}`,
+
+      output: `5
+10
+15
+20
+25`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Synchronization mainly provides?', 
+
+      options: [
+        'Compilation',
+        'Thread safety',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Synchronization ensures thread safety.',
+    },
+
+    {
+      question:
+        'Race condition occurs when?', 
+
+      options: [
+        'Single thread executes',
+        'Multiple threads access shared data simultaneously',
+        'Compiler runs',
+        'Arrays are created'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Race condition occurs during simultaneous shared access.',
+    },
+
+    {
+      question:
+        'Which keyword is used for synchronization?',
+
+      options: [
+        'final',
+        'static',
+        'synchronized',
+        'volatile'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'synchronized keyword provides locking.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is synchronization in Java?',
+
+      answer:
+        'Synchronization controls thread access to shared resources for thread safety.',
+    },
+
+    {
+      question:
+        'Why is synchronization important in multithreading?',
+
+      answer:
+        'It prevents race conditions and maintains data consistency.',
+    },
+  ],
+
+  nextTopic: 'java-interthread-communication',
+},
+
+{
+  id: 'java-interthread-communication',
+
+  title: 'Inter Thread Communication in Java',
+
+  slug: 'java-interthread-communication',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Inter Thread Communication in Java deeply including wait(), notify(), notifyAll(), coordination between threads, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Inter Thread Communication in Java',
+
+      content: `
+• Introduction to Inter Thread Communication
+
+• wait() Method
+
+• notify() Method
+
+• notifyAll() Method
+
+• Thread Coordination
+
+• Producer Consumer Problem
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Inter Thread Communication',
+
+      content: `
+Inter thread communication allows threads to coordinate with each other.
+
+Used for:
+
+• Efficient resource sharing
+• Proper execution order
+`.trim(),
+    },
+
+    {
+      heading: 'wait() Method',
+
+      content: `
+wait() pauses current thread until another thread notifies it.
+`.trim(),
+    },
+
+    {
+      heading: 'notify() Method',
+
+      content: `
+notify() wakes one waiting thread.
+`.trim(),
+    },
+
+    {
+      heading: 'notifyAll() Method',
+
+      content: `
+notifyAll() wakes all waiting threads.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Inter Thread Communication',
+
+      content: `
+• Better coordination
+• Efficient execution
+• Reduces busy waiting
+• Improves synchronization
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Inter Thread Communication',
+
+      content: `
+• wait(), notify(), notifyAll() belong to Object class
+• Used inside synchronized blocks
+• Helps thread coordination
+• Common in producer-consumer problems
+
+Common Beginner Mistakes:
+
+• Calling wait() outside synchronized block
+• Forgetting notify()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'wait() and notify() Example',
+
+      language: 'java',
+
+      code: `class Test {
+
+    synchronized void display() {
+
+        try {
+
+            wait();
+
+        }
+
+        catch(Exception e) {
+
+        }
+
+        System.out.println(
+            "Thread Resumed"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Test obj = new Test();
+
+        new Thread() {
+
+            public void run() {
+
+                obj.display();
+
+            }
+
+        }.start();
+
+    }
+
+}`,
+
+      output: 'Thread Resumed',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method pauses current thread?', 
+
+      options: [
+        'notify()',
+        'wait()',
+        'join()',
+        'run()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'wait() pauses current thread.',
+    },
+
+    {
+      question:
+        'notifyAll() wakes?', 
+
+      options: [
+        'One thread',
+        'All waiting threads',
+        'Main thread only',
+        'Scheduler'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'notifyAll() wakes all waiting threads.',
+    },
+
+    {
+      question:
+        'wait() method belongs to?', 
+
+      options: [
+        'Thread class',
+        'Runtime class',
+        'Object class',
+        'String class'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'wait() belongs to Object class.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is inter thread communication in Java?',
+
+      answer:
+        'It is mechanism that allows threads to coordinate execution using wait(), notify(), and notifyAll().',
+    },
+
+    {
+      question:
+        'Why is wait() used with synchronization?',
+
+      answer:
+        'Because thread communication requires monitor locking for safe coordination.',
+    },
+  ],
+
+  nextTopic: 'java-synchronization',
+},
+{
+  id: 'java-synchronization',
+
+  title: 'Synchronization in Java',
+
+  slug: 'java-synchronization',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '34 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Synchronization in Java deeply including thread safety, race condition, synchronized methods, locking, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Synchronization in Java',
+
+      content: `
+• Introduction to Synchronization
+
+• Race Condition
+
+• Thread Safety
+
+• synchronized Keyword
+
+• Object Locking
+
+• Shared Resources
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Synchronization',
+
+      content: `
+Synchronization is process of controlling access of multiple threads to shared resources.
+
+Purpose:
+
+• Prevent data inconsistency
+• Maintain thread safety
+`.trim(),
+    },
+
+    {
+      heading: 'Why Synchronization is Needed',
+
+      content: `
+When multiple threads access same data simultaneously:
+
+• Incorrect results may occur
+• Data inconsistency may happen
+
+Synchronization prevents these problems.
+`.trim(),
+    },
+
+    {
+      heading: 'Race Condition',
+
+      content: `
+Race condition happens when:
+
+• Multiple threads modify shared data at same time
+
+Output becomes unpredictable.
+`.trim(),
+    },
+
+    {
+      heading: 'synchronized Keyword',
+
+      content: `
+Java provides synchronized keyword for synchronization.
+
+Only one thread can execute synchronized code at a time.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Synchronization',
+
+      content: `
+• Thread safety
+• Data consistency
+• Prevents race condition
+• Reliable multithreading
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Synchronization',
+
+      content: `
+• Synchronization controls shared resources
+• synchronized keyword provides locking
+• Only one thread executes synchronized code
+• Excess synchronization can reduce performance
+
+Common Beginner Mistakes:
+
+• Synchronizing unnecessary code
+• Ignoring race conditions
+• Forgetting shared resource protection
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Synchronization Example',
+
+      language: 'java',
+
+      code: `class Counter {
+
+    int count = 0;
+
+    synchronized void increment() {
+
+        count++;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Counter c = new Counter();
+
+        c.increment();
+
+        System.out.println(c.count);
+
+    }
+
+}`,
+
+      output: '1',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Synchronization mainly provides?', 
+
+      options: [
+        'Compilation',
+        'Thread safety',
+        'Inheritance',
+        'Garbage collection'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Synchronization provides thread safety.',
+    },
+
+    {
+      question:
+        'Which keyword is used for synchronization?',
+
+      options: [
+        'final',
+        'static',
+        'synchronized',
+        'volatile'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'synchronized keyword is used for synchronization.',
+    },
+
+    {
+      question:
+        'Race condition occurs due to?', 
+
+      options: [
+        'Single thread',
+        'Multiple threads accessing shared data',
+        'Compilation',
+        'Arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Race condition occurs because of multiple threads accessing shared resources.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is synchronization in Java?',
+
+      answer:
+        'Synchronization is process of controlling thread access to shared resources for maintaining data consistency.',
+    },
+
+    {
+      question:
+        'Why is synchronization important in multithreading?',
+
+      answer:
+        'Synchronization prevents race conditions and ensures thread safety.',
+    },
+  ],
+
+  nextTopic: 'java-synchronized-block',
+},
+
+{
+  id: 'java-synchronized-block',
+
+  title: 'Java Synchronized Block',
+
+  slug: 'java-synchronized-block',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Synchronized Block deeply including block-level locking, performance optimization, object locking, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Synchronized Block',
+
+      content: `
+• Introduction to Synchronized Block
+
+• Block-Level Synchronization
+
+• Object Locking
+
+• Performance Benefits
+
+• Critical Section
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Synchronized Block',
+
+      content: `
+Synchronized block synchronizes only specific portion of code.
+
+Benefits:
+
+• Better performance
+• Smaller locking area
+`.trim(),
+    },
+
+    {
+      heading: 'Syntax of Synchronized Block',
+
+      content: `
+Syntax:
+
+synchronized(object) {
+
+    // critical section
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Critical Section',
+
+      content: `
+Critical section is code accessing shared resources.
+
+Only one thread executes critical section at a time.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Synchronized Block is Better',
+
+      content: `
+Compared to synchronized method:
+
+• Smaller locked area
+• Better efficiency
+• Improved performance
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Synchronized Block',
+
+      content: `
+• Better control
+• Improved performance
+• Thread safety
+• Reduced waiting time
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Synchronized Block',
+
+      content: `
+• Synchronizes specific code section
+• Uses object lock
+• Improves efficiency compared to full method synchronization
+• Useful for large methods
+
+Common Beginner Mistakes:
+
+• Synchronizing wrong object
+• Locking unnecessary code
+• Forgetting shared resource access
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Synchronized Block Example',
+
+      language: 'java',
+
+      code: `class Table {
+
+    void printTable(int n) {
+
+        synchronized(this) {
+
+            for(int i = 1; i <= 5; i++) {
+
+                System.out.println(n * i);
+
+            }
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Table t = new Table();
+
+        t.printTable(5);
+
+    }
+
+}`,
+
+      output: `5
+10
+15
+20
+25`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Synchronized block locks?', 
+
+      options: [
+        'Entire JVM',
+        'Specific code section',
+        'Compiler',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Synchronized block locks specific code section.',
+    },
+
+    {
+      question:
+        'Which keyword is used in synchronized block?',
+
+      options: [
+        'volatile',
+        'final',
+        'synchronized',
+        'native'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'synchronized keyword is used.',
+    },
+
+    {
+      question:
+        'Synchronized block improves?', 
+
+      options: [
+        'Syntax',
+        'Performance',
+        'Inheritance',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Synchronized block improves performance.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is synchronized block in Java?',
+
+      answer:
+        'Synchronized block synchronizes only specific section of code for thread safety.',
+    },
+
+    {
+      question:
+        'Why is synchronized block preferred over synchronized method sometimes?',
+
+      answer:
+        'Because it locks smaller code section and improves performance.',
+    },
+  ],
+
+  nextTopic: 'java-static-synchronization',
+},
+
+{
+  id: 'java-static-synchronization',
+
+  title: 'Java Static Synchronization',
+
+  slug: 'java-static-synchronization',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Static Synchronization deeply including class-level locking, static synchronized methods, shared class resources, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Static Synchronization',
+
+      content: `
+• Introduction to Static Synchronization
+
+• Class-Level Locking
+
+• static synchronized Method
+
+• Shared Class Resources
+
+• Thread Safety
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Static Synchronization',
+
+      content: `
+Static synchronization locks class instead of object.
+
+Used for:
+
+• Static data protection
+• Shared class resources
+`.trim(),
+    },
+
+    {
+      heading: 'static synchronized Method',
+
+      content: `
+Syntax:
+
+static synchronized void methodName() {
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Class-Level Locking',
+
+      content: `
+Normal synchronization:
+
+• Locks object
+
+Static synchronization:
+
+• Locks class object
+`.trim(),
+    },
+
+    {
+      heading: 'Why Static Synchronization is Important',
+
+      content: `
+Useful when:
+
+• Static variables are shared
+• Multiple objects access same class data
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Static Synchronization',
+
+      content: `
+• Protects static resources
+• Provides class-level thread safety
+• Prevents concurrent modification
+• Better data consistency
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Static Synchronization',
+
+      content: `
+• Locks class object
+• Used with static methods
+• Protects shared static data
+• Works across all objects
+
+Common Beginner Mistakes:
+
+• Confusing object lock and class lock
+• Using normal synchronization for static resources
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Static Synchronization Example',
+
+      language: 'java',
+
+      code: `class Table {
+
+    static synchronized void printTable(int n) {
+
+        for(int i = 1; i <= 5; i++) {
+
+            System.out.println(n * i);
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Table.printTable(5);
+
+    }
+
+}`,
+
+      output: `5
+10
+15
+20
+25`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Static synchronization locks?', 
+
+      options: [
+        'Object',
+        'Method only',
+        'Class object',
+        'Array'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Static synchronization locks class object.',
+    },
+
+    {
+      question:
+        'Static synchronization is used for?', 
+
+      options: [
+        'Local variables',
+        'Static resources',
+        'Arrays only',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Static synchronization protects static resources.',
+    },
+
+    {
+      question:
+        'Which keyword combination is used?',
+
+      options: [
+        'static volatile',
+        'static synchronized',
+        'final static',
+        'native static'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'static synchronized is used.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is static synchronization in Java?',
+
+      answer:
+        'Static synchronization locks class object for protecting shared static resources.',
+    },
+
+    {
+      question:
+        'What is difference between normal and static synchronization?',
+
+      answer:
+        'Normal synchronization locks object while static synchronization locks class.',
+    },
+  ],
+
+  nextTopic: 'java-deadlock',
+},
+
+{
+  id: 'java-deadlock',
+
+  title: 'Deadlock in Java',
+
+  slug: 'java-deadlock',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Deadlock in Java deeply including resource locking, circular dependency, prevention techniques, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Deadlock in Java',
+
+      content: `
+• Introduction to Deadlock
+
+• Resource Locking
+
+• Circular Dependency
+
+• Deadlock Situation
+
+• Causes of Deadlock
+
+• Prevention Techniques
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Deadlock',
+
+      content: `
+Deadlock occurs when:
+
+• Two or more threads wait forever for each other’s resources
+
+Program execution stops permanently.
+`.trim(),
+    },
+
+    {
+      heading: 'How Deadlock Happens',
+
+      content: `
+Example:
+
+• Thread 1 holds Lock A and waits for Lock B
+• Thread 2 holds Lock B and waits for Lock A
+
+Both threads become blocked forever.
+`.trim(),
+    },
+
+    {
+      heading: 'Causes of Deadlock',
+
+      content: `
+Common causes:
+
+• Nested locks
+• Circular waiting
+• Improper synchronization
+• Resource dependency
+`.trim(),
+    },
+
+    {
+      heading: 'Deadlock Prevention Techniques',
+
+      content: `
+Ways to prevent deadlock:
+
+• Avoid nested locking
+• Maintain lock order
+• Use timeout mechanisms
+• Minimize shared resources
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Impact of Deadlock',
+
+      content: `
+Deadlocks can cause:
+
+• Application freeze
+• Performance issues
+• System crash
+• Resource wastage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Deadlock',
+
+      content: `
+• Deadlock blocks threads permanently
+• Happens because of circular resource waiting
+• Proper lock management prevents deadlocks
+• Common in multithreaded systems
+
+Common Beginner Mistakes:
+
+• Acquiring locks in random order
+• Excessive nested synchronization
+• Ignoring resource dependency
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Deadlock Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        final String resource1 = "Java";
+
+        final String resource2 = "Thread";
+
+        Thread t1 = new Thread() {
+
+            public void run() {
+
+                synchronized(resource1) {
+
+                    synchronized(resource2) {
+
+                        System.out.println(
+                            "Thread 1"
+                        );
+
+                    }
+
+                }
+
+            }
+
+        };
+
+        Thread t2 = new Thread() {
+
+            public void run() {
+
+                synchronized(resource2) {
+
+                    synchronized(resource1) {
+
+                        System.out.println(
+                            "Thread 2"
+                        );
+
+                    }
+
+                }
+
+            }
+
+        };
+
+        t1.start();
+
+        t2.start();
+
+    }
+
+}`,
+
+      output: `Program may enter deadlock state`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Deadlock occurs because of?', 
+
+      options: [
+        'Single thread',
+        'Circular waiting',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Deadlock mainly occurs because of circular waiting.',
+    },
+
+    {
+      question:
+        'Deadlock mainly affects?', 
+
+      options: [
+        'Thread execution',
+        'Variable names',
+        'Arrays',
+        'Compiler'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Deadlock blocks thread execution.',
+    },
+
+    {
+      question:
+        'Which is prevention technique for deadlock?',
+
+      options: [
+        'Random locking',
+        'Avoid nested locks',
+        'Using arrays',
+        'Using packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Avoiding nested locks helps prevent deadlock.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is deadlock in Java?',
+
+      answer:
+        'Deadlock is situation where threads wait indefinitely for each other’s locked resources.',
+    },
+
+    {
+      question:
+        'How can deadlock be prevented?',
+
+      answer:
+        'Deadlock can be prevented using proper lock ordering and minimizing nested synchronization.',
+    },
+  ],
+
+  nextTopic: 'java-interthread-communication',
+},
+{
+  id: 'java-interthread-communication',
+
+  title: 'Inter-thread Communication in Java',
+
+  slug: 'java-interthread-communication',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Inter-thread Communication in Java deeply including wait(), notify(), notifyAll(), thread coordination, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Inter-thread Communication in Java',
+
+      content: `
+• Introduction to Inter-thread Communication
+
+• wait() Method
+
+• notify() Method
+
+• notifyAll() Method
+
+• Thread Coordination
+
+• Producer Consumer Problem
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Inter-thread Communication',
+
+      content: `
+Inter-thread communication allows threads to communicate with each other.
+
+Purpose:
+
+• Efficient coordination
+• Controlled execution
+• Shared resource management
+`.trim(),
+    },
+
+    {
+      heading: 'wait() Method',
+
+      content: `
+wait() pauses current thread until another thread notifies it.
+
+Thread releases monitor lock while waiting.
+`.trim(),
+    },
+
+    {
+      heading: 'notify() Method',
+
+      content: `
+notify() wakes one waiting thread.
+
+Used for controlled thread execution.
+`.trim(),
+    },
+
+    {
+      heading: 'notifyAll() Method',
+
+      content: `
+notifyAll() wakes all waiting threads.
+
+Useful when multiple threads are waiting.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Inter-thread Communication',
+
+      content: `
+• Better synchronization
+• Efficient resource usage
+• Reduces CPU wastage
+• Improves thread coordination
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Inter-thread Communication',
+
+      content: `
+• wait(), notify(), notifyAll() belong to Object class
+• Must be used inside synchronized block
+• Helps coordination between threads
+• Commonly used in producer-consumer problems
+
+Common Beginner Mistakes:
+
+• Calling wait() outside synchronized block
+• Forgetting notify()
+• Using busy waiting instead of communication
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'wait() and notify() Example',
+
+      language: 'java',
+
+      code: `class Test {
+
+    synchronized void display() {
+
+        try {
+
+            wait();
+
+        }
+
+        catch(Exception e) {
+
+        }
+
+        System.out.println(
+            "Thread Resumed"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Test obj = new Test();
+
+        new Thread() {
+
+            public void run() {
+
+                obj.display();
+
+            }
+
+        }.start();
+
+    }
+
+}`,
+
+      output: 'Thread Resumed',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method pauses current thread?',
+
+      options: [
+        'notify()',
+        'wait()',
+        'join()',
+        'sleep()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'wait() pauses current thread.',
+    },
+
+    {
+      question:
+        'notifyAll() wakes?', 
+
+      options: [
+        'One thread',
+        'All waiting threads',
+        'Main thread',
+        'Daemon thread'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'notifyAll() wakes all waiting threads.',
+    },
+
+    {
+      question:
+        'wait() belongs to?', 
+
+      options: [
+        'Thread class',
+        'Object class',
+        'Runtime class',
+        'String class'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'wait() belongs to Object class.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is inter-thread communication in Java?',
+
+      answer:
+        'Inter-thread communication allows threads to coordinate execution using wait(), notify(), and notifyAll() methods.',
+    },
+
+    {
+      question:
+        'Why is wait() used inside synchronized block?',
+
+      answer:
+        'Because thread communication requires monitor locking for safe execution.',
+    },
+  ],
+
+  nextTopic: 'java-interrupting-thread',
+},
+
+{
+  id: 'java-interrupting-thread',
+
+  title: 'Interrupting a Thread in Java',
+
+  slug: 'java-interrupting-thread',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Interrupting a Thread in Java deeply including interrupt(), interruption handling, interrupted status, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Interrupting a Thread in Java',
+
+      content: `
+• Introduction to Thread Interruption
+
+• interrupt() Method
+
+• InterruptedException
+
+• interrupted() Method
+
+• isInterrupted() Method
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Thread Interruption',
+
+      content: `
+Thread interruption is mechanism used to stop or signal thread.
+
+Used for:
+
+• Graceful stopping
+• Task cancellation
+• Controlled execution
+`.trim(),
+    },
+
+    {
+      heading: 'interrupt() Method',
+
+      content: `
+interrupt() sends interruption signal to thread.
+
+Syntax:
+
+thread.interrupt();
+`.trim(),
+    },
+
+    {
+      heading: 'InterruptedException',
+
+      content: `
+Sleeping or waiting thread may throw:
+
+• InterruptedException
+
+Exception handling becomes necessary.
+`.trim(),
+    },
+
+    {
+      heading: 'interrupted() and isInterrupted()',
+
+      content: `
+interrupted():
+
+• Static method
+• Clears interrupted status
+
+isInterrupted():
+
+• Checks interruption status
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Thread Interruption',
+
+      content: `
+• Controlled thread stopping
+• Better task management
+• Prevents force termination
+• Improves application stability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Thread Interruption',
+
+      content: `
+• interrupt() sends interruption request
+• InterruptedException occurs during waiting/sleeping
+• isInterrupted() checks status
+• Helps graceful thread termination
+
+Common Beginner Mistakes:
+
+• Ignoring InterruptedException
+• Assuming interrupt() kills thread immediately
+• Misunderstanding interruption status
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Thread Interruption Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        try {
+
+            Thread.sleep(2000);
+
+            System.out.println(
+                "Thread Running"
+            );
+
+        }
+
+        catch(InterruptedException e) {
+
+            System.out.println(
+                "Thread Interrupted"
+            );
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t = new MyThread();
+
+        t.start();
+
+        t.interrupt();
+
+    }
+
+}`,
+
+      output: 'Thread Interrupted',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method interrupts thread?',
+
+      options: [
+        'wait()',
+        'interrupt()',
+        'notify()',
+        'join()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'interrupt() sends interruption signal.',
+    },
+
+    {
+      question:
+        'InterruptedException occurs during?', 
+
+      options: [
+        'Compilation',
+        'sleep() or wait()',
+        'Inheritance',
+        'Array creation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'InterruptedException occurs during sleep() or wait().',
+    },
+
+    {
+      question:
+        'Which method checks interrupted status?',
+
+      options: [
+        'isInterrupted()',
+        'run()',
+        'yield()',
+        'start()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'isInterrupted() checks interruption status.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is thread interruption in Java?',
+
+      answer:
+        'Thread interruption is mechanism used to signal thread for stopping or controlled execution.',
+    },
+
+    {
+      question:
+        'Does interrupt() immediately stop thread?',
+
+      answer:
+        'No, interrupt() only sends interruption request to thread.',
+    },
+  ],
+
+  nextTopic: 'java-reentrant-monitor',
+},
+
+{
+  id: 'java-reentrant-monitor',
+
+  title: 'Reentrant Monitor in Java',
+
+  slug: 'java-reentrant-monitor',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Reentrant Monitor in Java deeply including reentrant locking, synchronized behavior, monitor ownership, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Reentrant Monitor in Java',
+
+      content: `
+• Introduction to Reentrant Monitor
+
+• Reentrant Locking
+
+• Monitor Ownership
+
+• synchronized Behavior
+
+• Nested Synchronization
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Reentrant Monitor',
+
+      content: `
+Java synchronization uses reentrant monitors.
+
+Meaning:
+
+• Same thread can acquire same lock multiple times safely.
+`.trim(),
+    },
+
+    {
+      heading: 'How Reentrant Monitor Works',
+
+      content: `
+If thread already owns lock:
+
+• It can enter synchronized method/block again
+
+No deadlock occurs for same thread.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Reentrant Monitor is Important',
+
+      content: `
+Without reentrant behavior:
+
+• Nested synchronized calls may fail
+• Thread execution becomes difficult
+`.trim(),
+    },
+
+    {
+      heading: 'Nested Synchronization',
+
+      content: `
+A synchronized method can call another synchronized method of same object safely.
+
+Because:
+
+• Same thread already owns monitor lock
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Reentrant Monitor',
+
+      content: `
+• Prevents self-deadlock
+• Supports nested synchronization
+• Simplifies thread-safe design
+• Improves code reliability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Reentrant Monitor',
+
+      content: `
+• Java monitors are reentrant by default
+• Same thread can acquire same lock repeatedly
+• Used internally by synchronized keyword
+• Supports nested synchronized execution
+
+Common Beginner Mistakes:
+
+• Confusing reentrant monitor with recursive methods
+• Assuming multiple threads can enter same synchronized block
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Reentrant Monitor Example',
+
+      language: 'java',
+
+      code: `class Test {
+
+    synchronized void display() {
+
+        System.out.println(
+            "Display Method"
+        );
+
+        show();
+
+    }
+
+    synchronized void show() {
+
+        System.out.println(
+            "Show Method"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Test obj = new Test();
+
+        obj.display();
+
+    }
+
+}`,
+
+      output: `Display Method
+Show Method`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Reentrant monitor allows?', 
+
+      options: [
+        'Multiple JVMs',
+        'Same thread acquiring same lock multiple times',
+        'Compilation',
+        'Array creation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Reentrant monitor allows same thread to acquire same lock repeatedly.',
+    },
+
+    {
+      question:
+        'Java synchronization is?', 
+
+      options: [
+        'Non-reentrant',
+        'Reentrant',
+        'Static only',
+        'Abstract'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Java synchronization is reentrant.',
+    },
+
+    {
+      question:
+        'Reentrant monitor helps prevent?', 
+
+      options: [
+        'Inheritance',
+        'Self-deadlock',
+        'Compilation',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Reentrant monitor prevents self-deadlock.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is reentrant monitor in Java?',
+
+      answer:
+        'Reentrant monitor allows same thread to acquire same monitor lock multiple times safely.',
+    },
+
+    {
+      question:
+        'Why is reentrant synchronization useful?',
+
+      answer:
+        'It supports nested synchronized calls and prevents self-deadlock.',
+    },
+  ],
+
+  nextTopic: 'java-thread-join',
+},
+
+{
+  id: 'java-thread-join',
+
+  title: 'join() Method in Java',
+
+  slug: 'java-thread-join',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn join() Method in Java deeply including thread waiting, execution order, synchronization between threads, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'join() Method in Java',
+
+      content: `
+• Introduction to join()
+
+• Thread Waiting
+
+• Execution Order
+
+• Synchronization Between Threads
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to join() Method',
+
+      content: `
+join() method allows one thread to wait for another thread to complete.
+
+Useful for:
+
+• Sequential execution
+• Task dependency
+`.trim(),
+    },
+
+    {
+      heading: 'How join() Works',
+
+      content: `
+When join() is called:
+
+• Current thread pauses
+• Waits until target thread finishes
+`.trim(),
+    },
+
+    {
+      heading: 'Why join() is Important',
+
+      content: `
+join() helps:
+
+• Control execution order
+• Avoid incomplete execution
+• Synchronize dependent tasks
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of join()',
+
+      content: `
+• Better execution control
+• Thread coordination
+• Improved synchronization
+• Predictable output
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage',
+
+      content: `
+Used in:
+
+• Parallel task execution
+• Data processing
+• Report generation
+• Server applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About join()',
+
+      content: `
+• join() waits for thread completion
+• Helps sequential execution
+• Improves coordination
+• Common in dependent tasks
+
+Common Beginner Mistakes:
+
+• Forgetting InterruptedException handling
+• Assuming join() stops thread
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'join() Method Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println(
+            "Thread Finished"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        MyThread t1 = new MyThread();
+
+        t1.start();
+
+        t1.join();
+
+        System.out.println(
+            "Main Thread"
+        );
+
+    }
+
+}`,
+
+      output: `Thread Finished
+Main Thread`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'join() method is used for?', 
+
+      options: [
+        'Compilation',
+        'Waiting for thread completion',
+        'Inheritance',
+        'Garbage collection'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'join() waits for thread completion.',
+    },
+
+    {
+      question:
+        'join() helps control?', 
+
+      options: [
+        'Variable names',
+        'Execution order',
+        'Packages',
+        'Arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'join() controls execution order.',
+    },
+
+    {
+      question:
+        'join() may throw?', 
+
+      options: [
+        'ArithmeticException',
+        'InterruptedException',
+        'NullPointerException',
+        'IOException'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'join() may throw InterruptedException.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is join() method in Java?',
+
+      answer:
+        'join() allows one thread to wait until another thread finishes execution.',
+    },
+
+    {
+      question:
+        'Why is join() important in multithreading?',
+
+      answer:
+        'It helps synchronize dependent tasks and maintain execution order.',
+    },
+  ],
+
+  nextTopic: 'java-thread-yield',
+},
+
+{
+  id: 'java-thread-yield',
+
+  title: 'yield() Method in Java',
+
+  slug: 'java-thread-yield',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn yield() Method in Java deeply including CPU scheduling, thread pausing, scheduler behavior, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'yield() Method in Java',
+
+      content: `
+• Introduction to yield()
+
+• CPU Scheduling
+
+• Thread Pausing
+
+• Scheduler Behavior
+
+• Thread Cooperation
+
+• Real-World Usage
+
+• Advantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to yield() Method',
+
+      content: `
+yield() temporarily pauses current thread.
+
+Purpose:
+
+• Give chance to other threads
+`.trim(),
+    },
+
+    {
+      heading: 'How yield() Works',
+
+      content: `
+Current thread moves from:
+
+• Running state
+to
+• Runnable state
+
+Scheduler may choose another thread.
+`.trim(),
+    },
+
+    {
+      heading: 'Why yield() is Useful',
+
+      content: `
+yield() helps:
+
+• Cooperative multitasking
+• Better CPU sharing
+• Improved responsiveness
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of yield()',
+
+      content: `
+• Better thread cooperation
+• Fair CPU usage
+• Improved responsiveness
+• Helps scheduler optimization
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About yield()',
+
+      content: `
+• yield() is static method
+• Scheduler may ignore yield()
+• Does not guarantee pause
+• Improves cooperative execution
+
+Common Beginner Mistakes:
+
+• Assuming yield() always pauses thread
+• Confusing yield() with sleep()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'yield() Method Example',
+
+      language: 'java',
+
+      code: `class MyThread extends Thread {
+
+    public void run() {
+
+        for(int i = 1; i <= 3; i++) {
+
+            System.out.println(i);
+
+            Thread.yield();
+
+        }
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        MyThread t = new MyThread();
+
+        t.start();
+
+    }
+
+}`,
+
+      output: `1
+2
+3`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'yield() method mainly gives chance to?', 
+
+      options: [
+        'Compiler',
+        'Other threads',
+        'Arrays',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'yield() gives chance to other threads.',
+    },
+
+    {
+      question:
+        'yield() moves thread to?', 
+
+      options: [
+        'Dead state',
+        'Runnable state',
+        'Blocked state',
+        'New state'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'yield() moves thread to runnable state.',
+    },
+
+    {
+      question:
+        'yield() belongs to?', 
+
+      options: [
+        'Object class',
+        'Runtime class',
+        'Thread class',
+        'Scanner class'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'yield() belongs to Thread class.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is yield() method in Java?',
+
+      answer:
+        'yield() temporarily pauses current thread and gives CPU chance to other threads.',
+    },
+
+    {
+      question:
+        'Does yield() guarantee thread pause?',
+
+      answer:
+        'No, scheduler may ignore yield() request.',
+    },
+  ],
+
+  nextTopic: 'java-thread-priority',
+},
+
 ];
