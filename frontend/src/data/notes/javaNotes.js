@@ -4,7 +4,7 @@ export const javaNotes = [
 
     title: 'Introduction to Java',
 
-    slug: 'introduction',
+    slug: 'java-intro',
 
     image:
       'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&h=400&fit=crop',
@@ -304,7 +304,7 @@ export const javaNotes = [
 
     title: 'Getting Started with Java',
 
-    slug: 'getting-started',
+    slug: 'java-getting-started',
 
     image:
       'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&h=400&fit=crop',
