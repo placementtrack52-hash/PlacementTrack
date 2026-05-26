@@ -7897,4 +7897,8873 @@ public class Main {
 
   nextTopic: 'java-method-overriding',
 },
+{
+  id: 'java-method-overriding',
+
+  title: 'Method Overriding in Java',
+
+  slug: 'java-method-overriding',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn method overriding in Java deeply with runtime polymorphism, inheritance, overriding rules, dynamic binding, and real-world examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Method Overriding in Java',
+
+      content: `
+• Introduction to Method Overriding
+
+• Rules of Method Overriding
+
+• Runtime Polymorphism
+
+• Dynamic Method Dispatch
+
+• Advantages of Overriding
+`,
+    },
+
+    {
+      heading: 'Introduction to Method Overriding',
+
+      content: `
+Method overriding happens when child class provides its own implementation of parent class method.
+
+Method overriding requires inheritance.
+
+It is one of the most important concepts of runtime polymorphism.
+
+Main Purpose:
+
+• Change parent behavior
+• Achieve runtime polymorphism
+• Provide specific implementation
+`.trim(),
+    },
+
+    {
+      heading: 'Rules of Method Overriding',
+
+      content: `
+Important Rules:
+
+• Method name must be same
+• Parameters must be same
+• Inheritance is required
+• Return type should be same or covariant
+
+Method overriding mainly works with parent-child relationships.
+`.trim(),
+    },
+
+    {
+      heading: 'Runtime Polymorphism',
+
+      content: `
+Method overriding supports runtime polymorphism.
+
+During runtime:
+
+• JVM decides which method to call
+• Decision depends on object type
+
+This process is called dynamic method dispatch.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Method Overriding',
+
+      content: `
+• Runtime flexibility
+• Better extensibility
+• Supports dynamic behavior
+• Cleaner object-oriented design
+
+Method overriding is heavily used in frameworks and real-world applications.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Method Overriding',
+
+      content: `
+• Overriding requires inheritance
+• @Override annotation improves readability
+• Static methods cannot be overridden normally
+• Private methods cannot be overridden
+
+Common Beginner Mistakes:
+
+• Different parameters
+• Missing inheritance
+• Confusing overriding with overloading
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Method Overriding Example',
+
+      language: 'java',
+
+      code: `class Animal {
+
+    void sound() {
+
+        System.out.println("Animal makes sound");
+
+    }
+
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+
+        System.out.println("Dog barks");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+
+        a.sound();
+
+    }
+
+}`,
+
+      output: 'Dog barks',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Method overriding requires?', 
+
+      options: [
+        'Loop',
+        'Inheritance',
+        'Package',
+        'Constructor'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Method overriding requires inheritance.',
+    },
+
+    {
+      question:
+        'Method overriding is example of?', 
+
+      options: [
+        'Compile-time polymorphism',
+        'Runtime polymorphism',
+        'Abstraction',
+        'Encapsulation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Method overriding supports runtime polymorphism.',
+    },
+
+    {
+      question:
+        'Which annotation is commonly used in overriding?',
+
+      options: [
+        '@Test',
+        '@Static',
+        '@Override',
+        '@Main'
+      ],
+
+      answer: 2,
+
+      explanation:
+        '@Override annotation is commonly used in overriding.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is method overriding in Java?',
+
+      answer:
+        'Method overriding means redefining parent class method inside child class using same method signature.',
+    },
+
+    {
+      question:
+        'Why is method overriding important?',
+
+      answer:
+        'Method overriding enables runtime polymorphism and dynamic method behavior.',
+    },
+  ],
+
+  nextTopic: 'java-method-overloading',
+},
+
+{
+  id: 'java-method-overloading',
+
+  title: 'Method Overloading in Java',
+
+  slug: 'java-method-overloading',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn method overloading in Java deeply with compile-time polymorphism, parameter differences, rules, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Method Overloading in Java',
+
+      content: `
+• Introduction to Method Overloading
+
+• Rules of Method Overloading
+
+• Compile-Time Polymorphism
+
+• Parameter Variations
+
+• Advantages of Overloading
+`,
+    },
+
+    {
+      heading: 'Introduction to Method Overloading',
+
+      content: `
+Method overloading means creating multiple methods with same name but different parameters.
+
+It improves code readability and flexibility.
+
+Method overloading is example of compile-time polymorphism.
+`.trim(),
+    },
+
+    {
+      heading: 'Rules of Method Overloading',
+
+      content: `
+Methods can be overloaded by changing:
+
+1. Number of parameters
+2. Data type of parameters
+3. Order of parameters
+
+Changing only return type is not enough.
+`.trim(),
+    },
+
+    {
+      heading: 'Compile-Time Polymorphism',
+
+      content: `
+Java decides overloaded methods during compilation.
+
+Therefore:
+
+• Faster execution
+• Better readability
+• Cleaner method naming
+
+This is called compile-time polymorphism.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Method Overloading',
+
+      content: `
+• Improved readability
+• Reusable method names
+• Flexible input handling
+• Cleaner code structure
+
+Method overloading is widely used in Java libraries.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Method Overloading',
+
+      content: `
+• Same method name allowed
+• Parameters must differ
+• Return type alone cannot overload methods
+• Overloading does not require inheritance
+
+Common Beginner Mistakes:
+
+• Same parameter list
+• Changing only return type
+• Wrong argument types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Method Overloading Example',
+
+      language: 'java',
+
+      code: `class Calculator {
+
+    void add(int a, int b) {
+
+        System.out.println(a + b);
+
+    }
+
+    void add(int a, int b, int c) {
+
+        System.out.println(a + b + c);
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Calculator c = new Calculator();
+
+        c.add(10, 20);
+
+        c.add(10, 20, 30);
+
+    }
+
+}`,
+
+      output: `30
+60`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Method overloading is example of?', 
+
+      options: [
+        'Runtime polymorphism',
+        'Compile-time polymorphism',
+        'Inheritance',
+        'Abstraction'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Method overloading is compile-time polymorphism.',
+    },
+
+    {
+      question:
+        'Can methods overload using only return type?',
+
+      options: ['Yes', 'No', 'Sometimes', 'Only static methods'],
+
+      answer: 1,
+
+      explanation:
+        'Changing only return type cannot overload methods.',
+    },
+
+    {
+      question:
+        'Which thing must change for overloading?',
+
+      options: [
+        'Class name',
+        'Method body only',
+        'Parameters',
+        'Package'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Parameters must differ for overloading.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is method overloading?',
+
+      answer:
+        'Method overloading means multiple methods having same name with different parameters.',
+    },
+
+    {
+      question:
+        'Why is method overloading useful?',
+
+      answer:
+        'Method overloading improves readability and flexible method usage.',
+    },
+  ],
+
+  nextTopic: 'java-super-keyword',
+},
+
+{
+  id: 'java-super-keyword',
+
+  title: 'Java super Keyword',
+
+  slug: 'java-super-keyword',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '18 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java super keyword deeply with parent class access, constructor calling, methods, variables, and inheritance concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java super Keyword',
+
+      content: `
+• Access Parent Variables
+
+• Access Parent Methods
+
+• Call Parent Constructor
+
+• Inheritance Usage
+
+• Runtime Behavior
+`,
+    },
+
+    {
+      heading: 'Introduction to super Keyword',
+
+      content: `
+The super keyword refers to immediate parent class object.
+
+It is mainly used in inheritance.
+
+super helps child class access parent class members easily.
+`.trim(),
+    },
+
+    {
+      heading: 'Using super for Variables',
+
+      content: `
+super can access parent class variables.
+
+Useful when parent and child variables have same name.
+
+Example:
+
+super.name;
+`.trim(),
+    },
+
+    {
+      heading: 'Using super for Methods',
+
+      content: `
+super can call parent class methods.
+
+Example:
+
+super.display();
+
+This helps child class reuse parent behavior.
+`.trim(),
+    },
+
+    {
+      heading: 'Using super for Constructors',
+
+      content: `
+super() calls parent class constructor.
+
+Important Rules:
+
+• Must be first statement in constructor
+• Executes parent constructor first
+
+Constructor chaining improves initialization flow.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About super Keyword',
+
+      content: `
+• Used only with inheritance
+• Refers to immediate parent class
+• Helps access hidden parent members
+• Constructor calls use super()
+
+Common Beginner Mistakes:
+
+• Using super without inheritance
+• Calling super() incorrectly
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'super Keyword Example',
+
+      language: 'java',
+
+      code: `class Parent {
+
+    Parent() {
+
+        System.out.println("Parent Constructor");
+
+    }
+
+}
+
+class Child extends Parent {
+
+    Child() {
+
+        super();
+
+        System.out.println("Child Constructor");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Child c = new Child();
+
+    }
+
+}`,
+
+      output: `Parent Constructor
+Child Constructor`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'super keyword refers to?', 
+
+      options: [
+        'Current object',
+        'Parent class object',
+        'Package',
+        'Constructor'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'super keyword refers to immediate parent class object.',
+    },
+
+    {
+      question:
+        'Which statement calls parent constructor?',
+
+      options: ['this()', 'main()', 'super()', 'new()'],
+
+      answer: 2,
+
+      explanation:
+        'super() calls parent constructor.',
+    },
+
+    {
+      question:
+        'super keyword mainly works with?', 
+
+      options: [
+        'Loops',
+        'Inheritance',
+        'Packages',
+        'Comments'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'super keyword mainly works with inheritance.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is super keyword used in Java?',
+
+      answer:
+        'super keyword is used to access parent class variables, methods, and constructors.',
+    },
+
+    {
+      question:
+        'Why should super() be first statement in constructor?',
+
+      answer:
+        'Because parent constructor must execute before child constructor initialization.',
+    },
+  ],
+
+  nextTopic: 'java-instance-initializer-block',
+},
+
+{
+  id: 'java-instance-initializer-block',
+
+  title: 'Java Instance Initializer Block',
+
+  slug: 'java-instance-initializer-block',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '16 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java instance initializer block deeply with execution flow, constructors, initialization order, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Instance Initializer Block',
+
+      content: `
+• Introduction to Initializer Block
+
+• Execution Flow
+
+• Constructor Relationship
+
+• Object Initialization
+
+• Advantages of Initializer Blocks
+`,
+    },
+
+    {
+      heading: 'Introduction to Instance Initializer Block',
+
+      content: `
+Instance initializer block is a block of code that executes whenever object is created.
+
+It executes before constructor.
+
+Syntax:
+
+{
+
+    // initializer block
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Execution Flow of Initializer Block',
+
+      content: `
+Execution Order:
+
+1. Object creation
+2. Initializer block execution
+3. Constructor execution
+
+Initializer blocks run every time object gets created.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Initializer Block',
+
+      content: `
+• Common initialization logic
+• Reduced duplicate constructor code
+• Cleaner constructors
+• Better organization
+
+Useful when multiple constructors share common code.
+`.trim(),
+    },
+
+    {
+      heading: 'Initializer Block vs Constructor',
+
+      content: `
+Initializer Block:
+
+• Executes before constructor
+• Common for all constructors
+
+Constructor:
+
+• Initializes object specifically
+• Can accept parameters
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Initializer Block',
+
+      content: `
+• Executes before constructor
+• Runs on every object creation
+• Multiple initializer blocks allowed
+• Useful for shared initialization
+
+Common Beginner Mistakes:
+
+• Confusing static block and initializer block
+• Expecting initializer block to execute once
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Instance Initializer Block Example',
+
+      language: 'java',
+
+      code: `class Demo {
+
+    {
+
+        System.out.println("Initializer Block Executed");
+
+    }
+
+    Demo() {
+
+        System.out.println("Constructor Executed");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Demo d = new Demo();
+
+    }
+
+}`,
+
+      output: `Initializer Block Executed
+Constructor Executed`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'When does initializer block execute?',
+
+      options: [
+        'Before object creation',
+        'After constructor',
+        'Before constructor',
+        'Only once'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Initializer block executes before constructor.',
+    },
+
+    {
+      question:
+        'Initializer block runs?', 
+
+      options: [
+        'Only once',
+        'Every object creation',
+        'Only static objects',
+        'Only arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Initializer block runs during every object creation.',
+    },
+
+    {
+      question:
+        'Which executes first?',
+
+      options: [
+        'Constructor',
+        'Initializer block',
+        'main method',
+        'Loop'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Initializer block executes before constructor.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is instance initializer block in Java?',
+
+      answer:
+        'It is a block of code that executes before constructor during object creation.',
+    },
+
+    {
+      question:
+        'Why are initializer blocks useful?',
+
+      answer:
+        'Initializer blocks help reduce duplicate initialization code across constructors.',
+    },
+  ],
+
+  nextTopic: 'java-final-keyword',
+},
+{
+  id: 'java-final-keyword',
+
+  title: 'Java final Keyword',
+
+  slug: 'java-final-keyword',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '20 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java final keyword deeply with final variables, final methods, final classes, restrictions, and real-world examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java final Keyword',
+
+      content: `
+• final Variable
+
+• final Method
+
+• final Class
+
+• Restrictions in Java
+
+• Real-World Usage
+
+• Important Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to final Keyword',
+
+      content: `
+The final keyword is used to restrict modifications in Java.
+
+final can be applied on:
+
+1. Variables
+2. Methods
+3. Classes
+
+The main purpose of final keyword is security and fixed behavior.
+`.trim(),
+    },
+
+    {
+      heading: 'final Variable',
+
+      content: `
+A final variable value cannot be changed once initialized.
+
+Example:
+
+final int MAX = 100;
+
+Benefits:
+
+• Constant values
+• Safer code
+• Prevent accidental modification
+`.trim(),
+    },
+
+    {
+      heading: 'final Method',
+
+      content: `
+A final method cannot be overridden by child classes.
+
+Used when parent behavior should remain fixed.
+
+Benefits:
+
+• Better security
+• Prevents unwanted overriding
+`.trim(),
+    },
+
+    {
+      heading: 'final Class',
+
+      content: `
+A final class cannot be inherited.
+
+Example:
+
+final class Demo {
+
+}
+
+Popular Example:
+
+String class is final in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About final Keyword',
+
+      content: `
+• final variable becomes constant
+• final method prevents overriding
+• final class prevents inheritance
+• Constructors cannot be final
+
+Common Beginner Mistakes:
+
+• Trying to modify final variables
+• Trying to inherit final class
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'final Variable Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        final int NUMBER = 100;
+
+        System.out.println(NUMBER);
+
+    }
+
+}`,
+
+      output: '100',
+    },
+
+    {
+      title: 'final Class Example',
+
+      language: 'java',
+
+      code: `final class Demo {
+
+    void display() {
+
+        System.out.println("Final Class");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Demo d = new Demo();
+
+        d.display();
+
+    }
+
+}`,
+
+      output: 'Final Class',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does final keyword mainly do?',
+
+      options: [
+        'Creates loops',
+        'Restricts modification',
+        'Imports packages',
+        'Creates objects'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'final keyword restricts modification and inheritance.',
+    },
+
+    {
+      question:
+        'Can final methods be overridden?',
+
+      options: ['Yes', 'No', 'Sometimes', 'Only static methods'],
+
+      answer: 1,
+
+      explanation:
+        'final methods cannot be overridden.',
+    },
+
+    {
+      question:
+        'Which class in Java is final?',
+
+      options: ['Math', 'Scanner', 'String', 'System'],
+
+      answer: 2,
+
+      explanation:
+        'String class is final in Java.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is final keyword important in Java?',
+
+      answer:
+        'final keyword provides security, fixed behavior, and prevents modification or inheritance.',
+    },
+
+    {
+      question:
+        'Can constructors be final?',
+
+      answer:
+        'No, constructors cannot be final because constructors are not inherited.',
+    },
+  ],
+
+  nextTopic: 'java-polymorphism-concepts',
+},
+
+{
+  id: 'java-polymorphism-concepts',
+
+  title: 'Polymorphism in Java',
+
+  slug: 'java-polymorphism-concepts',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn polymorphism in Java deeply including compile-time polymorphism, runtime polymorphism, dynamic behavior, and real-world examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Polymorphism in Java',
+
+      content: `
+• Introduction to Polymorphism
+
+• Compile-Time Polymorphism
+
+• Runtime Polymorphism
+
+• Dynamic Method Dispatch
+
+• Real-Life Examples
+
+• Advantages of Polymorphism
+
+• Covariant Return Type
+
+• Upcasting in Java
+`,
+    },
+
+    {
+      heading: 'Introduction to Polymorphism',
+
+      content: `
+Polymorphism means one thing having many forms.
+
+In Java, the same method may behave differently in different situations.
+
+Polymorphism improves:
+
+• Flexibility
+• Reusability
+• Dynamic programming
+`.trim(),
+    },
+
+    {
+      heading: 'Compile-Time Polymorphism',
+
+      content: `
+Compile-time polymorphism is achieved using method overloading.
+
+Method calls are resolved during compilation.
+
+Benefits:
+
+• Faster execution
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Runtime Polymorphism',
+
+      content: `
+Runtime polymorphism is achieved using method overriding.
+
+JVM decides method execution during runtime.
+
+This creates dynamic behavior in applications.
+`.trim(),
+    },
+
+    {
+      heading: 'Dynamic Method Dispatch',
+
+      content: `
+Dynamic method dispatch means method call decision happens during runtime.
+
+Parent reference can hold child object.
+
+Example:
+
+Animal a = new Dog();
+
+a.sound();
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Polymorphism',
+
+      content: `
+• Flexible programming
+• Dynamic behavior
+• Better extensibility
+• Improved maintainability
+• Cleaner object-oriented design
+`.trim(),
+    },
+
+    {
+      heading: 'Covariant Return Type',
+
+      content: `
+Java allows child class return type while overriding methods.
+
+This feature is called covariant return type.
+
+It improves flexibility in inheritance.
+`.trim(),
+    },
+
+    {
+      heading: 'Upcasting in Java',
+
+      content: `
+Upcasting means storing child object inside parent reference.
+
+Example:
+
+Parent p = new Child();
+
+Upcasting is heavily used in runtime polymorphism.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Polymorphism',
+
+      content: `
+• Overloading → compile-time polymorphism
+• Overriding → runtime polymorphism
+• Upcasting supports runtime behavior
+• JVM decides overridden methods during execution
+
+Common Beginner Mistakes:
+
+• Confusing overloading and overriding
+• Forgetting inheritance in runtime polymorphism
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Runtime Polymorphism Example',
+
+      language: 'java',
+
+      code: `class Animal {
+
+    void sound() {
+
+        System.out.println("Animal Sound");
+
+    }
+
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+
+        System.out.println("Dog Barking");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+
+        a.sound();
+
+    }
+
+}`,
+
+      output: 'Dog Barking',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Polymorphism means?', 
+
+      options: [
+        'One form only',
+        'One thing having many forms',
+        'Only inheritance',
+        'Only loops'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Polymorphism means one thing having many forms.',
+    },
+
+    {
+      question:
+        'Which polymorphism uses method overriding?',
+
+      options: [
+        'Compile-time',
+        'Runtime',
+        'Static',
+        'Constructor'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Runtime polymorphism uses method overriding.',
+    },
+
+    {
+      question:
+        'What is upcasting?',
+
+      options: [
+        'Parent stored in child',
+        'Child stored in parent reference',
+        'Loop conversion',
+        'Static loading'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Upcasting means child object stored in parent reference.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are the types of polymorphism in Java?',
+
+      answer:
+        'Java mainly supports compile-time polymorphism and runtime polymorphism.',
+    },
+
+    {
+      question:
+        'Why is polymorphism important?',
+
+      answer:
+        'Polymorphism improves flexibility, maintainability, and dynamic behavior in Java applications.',
+    },
+  ],
+
+  nextTopic: 'java-static-dynamic-binding',
+},
+
+{
+  id: 'java-static-dynamic-binding',
+
+  title: 'Static and Dynamic Binding in Java',
+
+  slug: 'java-static-dynamic-binding',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn static and dynamic binding in Java deeply with method resolution, runtime behavior, compile-time execution, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Static and Dynamic Binding in Java',
+
+      content: `
+• Introduction to Binding
+
+• Static Binding
+
+• Dynamic Binding
+
+• Compile-Time Resolution
+
+• Runtime Resolution
+
+• Real-World Examples
+
+• Method Dispatch
+
+• JVM Method Decision
+`,
+    },
+
+    {
+      heading: 'Introduction to Binding',
+
+      content: `
+Binding means connecting method calls with method definitions.
+
+Java mainly supports:
+
+1. Static Binding
+2. Dynamic Binding
+
+Binding helps JVM decide which method should execute.
+`.trim(),
+    },
+
+    {
+      heading: 'Static Binding',
+
+      content: `
+Static binding happens during compilation.
+
+Methods resolved using static binding:
+
+• final methods
+• private methods
+• static methods
+
+Benefits:
+
+• Faster execution
+• Better performance
+`.trim(),
+    },
+
+    {
+      heading: 'Dynamic Binding',
+
+      content: `
+Dynamic binding happens during runtime.
+
+Mainly used in:
+
+• Method overriding
+• Runtime polymorphism
+
+JVM decides method execution dynamically.
+`.trim(),
+    },
+
+    {
+      heading: 'Difference Between Static and Dynamic Binding',
+
+      content: `
+Static Binding:
+
+• Happens during compilation
+• Faster
+• Fixed method calls
+
+Dynamic Binding:
+
+• Happens during runtime
+• Flexible behavior
+• Dynamic method calls
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Binding',
+
+      content: `
+• Overloading mainly uses static binding
+• Overriding mainly uses dynamic binding
+• JVM resolves overridden methods during runtime
+• Dynamic binding supports flexibility
+
+Common Beginner Mistakes:
+
+• Confusing static and dynamic resolution
+• Mixing overloading with overriding
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Dynamic Binding Example',
+
+      language: 'java',
+
+      code: `class Parent {
+
+    void show() {
+
+        System.out.println("Parent Method");
+
+    }
+
+}
+
+class Child extends Parent {
+
+    @Override
+    void show() {
+
+        System.out.println("Child Method");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Parent p = new Child();
+
+        p.show();
+
+    }
+
+}`,
+
+      output: 'Child Method',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Dynamic binding happens during?', 
+
+      options: [
+        'Compilation',
+        'Runtime',
+        'Loop execution',
+        'Importing'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Dynamic binding happens during runtime.',
+    },
+
+    {
+      question:
+        'Which methods mainly use static binding?',
+
+      options: [
+        'Overridden methods',
+        'Static methods',
+        'Abstract methods',
+        'Child methods'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Static methods mainly use static binding.',
+    },
+
+    {
+      question:
+        'Method overriding mainly uses?', 
+
+      options: [
+        'Static binding',
+        'Dynamic binding',
+        'Constructor binding',
+        'Package binding'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Method overriding mainly uses dynamic binding.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is binding in Java?',
+
+      answer:
+        'Binding means connecting method calls with actual method definitions.',
+    },
+
+    {
+      question:
+        'Why is dynamic binding important?',
+
+      answer:
+        'Dynamic binding enables runtime polymorphism and flexible method behavior.',
+    },
+  ],
+
+  nextTopic: 'java-instanceof-operator',
+},
+
+{
+  id: 'java-instanceof-operator',
+
+  title: 'Java instanceof Operator',
+
+  slug: 'java-instanceof-operator',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '18 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java instanceof operator deeply with object checking, inheritance verification, runtime type checking, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java instanceof Operator',
+
+      content: `
+• Introduction to instanceof
+
+• Runtime Type Checking
+
+• Inheritance Verification
+
+• Object Validation
+
+• Boolean Result
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to instanceof Operator',
+
+      content: `
+The instanceof operator checks whether an object belongs to a specific class or not.
+
+It returns:
+
+• true
+• false
+
+instanceof is heavily used in inheritance and polymorphism.
+`.trim(),
+    },
+
+    {
+      heading: 'Runtime Type Checking',
+
+      content: `
+instanceof performs runtime checking.
+
+Example:
+
+obj instanceof ClassName
+
+If object belongs to class:
+
+• true returned
+
+Otherwise:
+
+• false returned
+`.trim(),
+    },
+
+    {
+      heading: 'Using instanceof with Inheritance',
+
+      content: `
+instanceof works with parent-child relationships.
+
+Example:
+
+Animal a = new Dog();
+
+a instanceof Dog
+
+Result:
+
+true
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of instanceof Operator',
+
+      content: `
+• Safe type checking
+• Prevents invalid casting
+• Helps runtime verification
+• Useful in polymorphism
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About instanceof',
+
+      content: `
+• Returns boolean value
+• Works during runtime
+• Useful with inheritance
+• Helps avoid ClassCastException
+
+Common Beginner Mistakes:
+
+• Using instanceof with unrelated classes
+• Confusing object type and reference type
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'instanceof Operator Example',
+
+      language: 'java',
+
+      code: `class Animal {
+
+}
+
+class Dog extends Animal {
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+
+        System.out.println(a instanceof Dog);
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does instanceof operator return?',
+
+      options: [
+        'String',
+        'Integer',
+        'Boolean',
+        'Object'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'instanceof operator returns boolean value.',
+    },
+
+    {
+      question:
+        'instanceof mainly works during?', 
+
+      options: [
+        'Compilation',
+        'Runtime',
+        'Import',
+        'Loop execution'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'instanceof performs runtime checking.',
+    },
+
+    {
+      question:
+        'Why is instanceof useful?',
+
+      options: [
+        'For looping',
+        'Safe type checking',
+        'For imports',
+        'For comments'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'instanceof helps safe runtime type checking.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is instanceof operator in Java?',
+
+      answer:
+        'instanceof operator checks whether an object belongs to a specific class or interface.',
+    },
+
+    {
+      question:
+        'Why is instanceof important?',
+
+      answer:
+        'instanceof helps safe runtime checking and prevents invalid type casting.',
+    },
+  ],
+
+  nextTopic: 'java-abstract-class',
+},
+{
+  id: 'java-abstract-class',
+
+  title: 'Abstract Class in Java',
+
+  slug: 'java-abstract-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn abstract class in Java deeply with abstraction concepts, abstract methods, inheritance, real-world usage, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Abstract Class in Java',
+
+      content: `
+• Introduction to Abstract Class
+
+• Abstract Methods
+
+• Concrete Methods
+
+• Achieving Abstraction
+
+• Real-World Examples
+
+• Constructor in Abstract Class
+
+• Rules of Abstract Class
+
+• Advantages of Abstract Classes
+`,
+    },
+
+    {
+      heading: 'Introduction to Abstract Class',
+
+      content: `
+An abstract class is a class that cannot be instantiated directly.
+
+It is declared using abstract keyword.
+
+Abstract classes are mainly used to achieve abstraction in Java.
+
+Syntax:
+
+abstract class ClassName {
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Abstract Methods',
+
+      content: `
+An abstract method does not contain method body.
+
+Child classes must provide implementation.
+
+Syntax:
+
+abstract void display();
+
+Important:
+
+• Abstract methods must be inside abstract class.
+`.trim(),
+    },
+
+    {
+      heading: 'Concrete Methods in Abstract Class',
+
+      content: `
+Abstract classes can also contain normal methods.
+
+These methods already have implementation.
+
+This helps:
+
+• Code reuse
+• Common functionality
+• Better design
+`.trim(),
+    },
+
+    {
+      heading: 'Constructor in Abstract Class',
+
+      content: `
+Abstract classes can have constructors.
+
+Constructors execute during child object creation.
+
+Purpose:
+
+• Initialize common data
+• Shared setup logic
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Abstract Class',
+
+      content: `
+• Partial abstraction
+• Better code reuse
+• Common parent structure
+• Improved maintainability
+• Cleaner object-oriented design
+`.trim(),
+    },
+
+    {
+      heading: 'Rules of Abstract Class',
+
+      content: `
+• Abstract class cannot create objects
+• Abstract methods must be overridden
+• Abstract class may contain constructors
+• Abstract class may contain static methods
+
+Common Beginner Mistakes:
+
+• Trying to create object of abstract class
+• Forgetting method overriding
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Abstract Class Example',
+
+      language: 'java',
+
+      code: `abstract class Animal {
+
+    abstract void sound();
+
+    void sleep() {
+
+        System.out.println("Animal Sleeping");
+
+    }
+
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+
+        System.out.println("Dog Barking");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.sound();
+
+        d.sleep();
+
+    }
+
+}`,
+
+      output: `Dog Barking
+Animal Sleeping`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Can abstract class create objects?',
+
+      options: ['Yes', 'No', 'Sometimes', 'Only static objects'],
+
+      answer: 1,
+
+      explanation:
+        'Abstract classes cannot create objects directly.',
+    },
+
+    {
+      question:
+        'Which keyword is used for abstract class?',
+
+      options: ['class', 'static', 'abstract', 'extends'],
+
+      answer: 2,
+
+      explanation:
+        'abstract keyword creates abstract class.',
+    },
+
+    {
+      question:
+        'Can abstract class contain normal methods?',
+
+      options: ['Yes', 'No', 'Only private methods', 'Only static methods'],
+
+      answer: 0,
+
+      explanation:
+        'Abstract classes can contain normal methods.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is abstract class in Java?',
+
+      answer:
+        'Abstract class is a special class that cannot be instantiated and is mainly used for abstraction.',
+    },
+
+    {
+      question:
+        'Why are abstract classes useful?',
+
+      answer:
+        'Abstract classes provide common structure, partial abstraction, and reusable functionality.',
+    },
+  ],
+
+  nextTopic: 'java-interface',
+},
+
+{
+  id: 'java-interface',
+
+  title: 'Interface in Java',
+
+  slug: 'java-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn interface in Java deeply with abstraction, multiple inheritance, implementation rules, default methods, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Interface in Java',
+
+      content: `
+• Introduction to Interface
+
+• Achieving Full Abstraction
+
+• Multiple Inheritance
+
+• Interface Methods
+
+• Default Methods
+
+• Static Methods in Interface
+
+• Marker Interfaces
+
+• Functional Interfaces
+`,
+    },
+
+    {
+      heading: 'Introduction to Interface',
+
+      content: `
+An interface is a blueprint of a class.
+
+It is used to achieve full abstraction in Java.
+
+Interfaces contain abstract methods by default.
+
+Keyword Used:
+
+interface
+`.trim(),
+    },
+
+    {
+      heading: 'Implementing Interface',
+
+      content: `
+Classes use implements keyword to inherit interface methods.
+
+Example:
+
+class Demo implements Test {
+
+}
+
+Child class must provide implementation of interface methods.
+`.trim(),
+    },
+
+    {
+      heading: 'Multiple Inheritance Using Interface',
+
+      content: `
+Java does not support multiple inheritance using classes.
+
+But Java supports multiple inheritance using interfaces.
+
+One class can implement multiple interfaces.
+`.trim(),
+    },
+
+    {
+      heading: 'Default Methods in Interface',
+
+      content: `
+Java allows default methods inside interfaces.
+
+Purpose:
+
+• Backward compatibility
+• Method implementation inside interface
+
+Syntax:
+
+default void show() {
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Functional Interface',
+
+      content: `
+Functional interface contains only one abstract method.
+
+Used heavily in:
+
+• Lambda expressions
+• Stream API
+
+Example:
+
+Runnable interface
+`.trim(),
+    },
+
+    {
+      heading: 'Marker Interface',
+
+      content: `
+Marker interface contains no methods.
+
+Purpose:
+
+• Provide special information to JVM
+
+Examples:
+
+• Serializable
+• Cloneable
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Interface',
+
+      content: `
+• Interfaces support abstraction
+• Multiple inheritance possible
+• Variables are public static final by default
+• Methods are public abstract by default
+
+Common Beginner Mistakes:
+
+• Forgetting method implementation
+• Confusing extends and implements
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Interface Example',
+
+      language: 'java',
+
+      code: `interface Animal {
+
+    void sound();
+
+}
+
+class Dog implements Animal {
+
+    @Override
+    public void sound() {
+
+        System.out.println("Dog Barking");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.sound();
+
+    }
+
+}`,
+
+      output: 'Dog Barking',
+    },
+
+    {
+      title: 'Multiple Interface Example',
+
+      language: 'java',
+
+      code: `interface A {
+
+    void show();
+
+}
+
+interface B {
+
+    void display();
+
+}
+
+class Demo implements A, B {
+
+    public void show() {
+
+        System.out.println("Show Method");
+
+    }
+
+    public void display() {
+
+        System.out.println("Display Method");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Demo d = new Demo();
+
+        d.show();
+
+        d.display();
+
+    }
+
+}`,
+
+      output: `Show Method
+Display Method`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which keyword is used for interface?',
+
+      options: ['class', 'abstract', 'interface', 'extends'],
+
+      answer: 2,
+
+      explanation:
+        'interface keyword creates interface.',
+    },
+
+    {
+      question:
+        'Which keyword is used to inherit interface?',
+
+      options: ['extends', 'implements', 'super', 'this'],
+
+      answer: 1,
+
+      explanation:
+        'implements keyword is used for interfaces.',
+    },
+
+    {
+      question:
+        'Can Java support multiple inheritance using interfaces?',
+
+      options: ['Yes', 'No', 'Only abstract classes', 'Only constructors'],
+
+      answer: 0,
+
+      explanation:
+        'Java supports multiple inheritance using interfaces.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is interface in Java?',
+
+      answer:
+        'Interface is a blueprint of class used for abstraction and multiple inheritance.',
+    },
+
+    {
+      question:
+        'Why are interfaces important in Java?',
+
+      answer:
+        'Interfaces improve abstraction, flexibility, loose coupling, and support multiple inheritance.',
+    },
+  ],
+
+  nextTopic: 'java-abstraction-topics',
+},
+
+{
+  id: 'java-abstraction-topics',
+
+  title: 'Important Topics of Java Abstraction',
+
+  slug: 'java-abstraction-topics',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn important Java abstraction topics deeply including abstraction concepts, loose coupling, data hiding, and abstraction best practices.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Important Topics of Java Abstraction',
+
+      content: `
+• What is Abstraction
+
+• Data Hiding
+
+• Partial Abstraction
+
+• Full Abstraction
+
+• Loose Coupling
+
+• Abstraction vs Encapsulation
+
+• Real-Life Examples
+
+• Advantages of Abstraction
+`,
+    },
+
+    {
+      heading: 'What is Abstraction',
+
+      content: `
+Abstraction means hiding implementation details and showing only essential features.
+
+Main Goal:
+
+• Reduce complexity
+• Improve security
+• Focus on important behavior
+
+Example:
+
+Driving a car without knowing engine internals.
+`.trim(),
+    },
+
+    {
+      heading: 'Partial and Full Abstraction',
+
+      content: `
+Partial Abstraction:
+
+• Achieved using abstract class
+
+Full Abstraction:
+
+• Achieved using interface
+
+This improves flexibility and modularity.
+`.trim(),
+    },
+
+    {
+      heading: 'Loose Coupling',
+
+      content: `
+Loose coupling means reducing dependency between classes.
+
+Benefits:
+
+• Easier maintenance
+• Better scalability
+• Flexible applications
+
+Interfaces heavily support loose coupling.
+`.trim(),
+    },
+
+    {
+      heading: 'Abstraction vs Encapsulation',
+
+      content: `
+Abstraction:
+
+• Hides implementation details
+
+Encapsulation:
+
+• Hides data using access modifiers
+
+Both improve security and maintainability.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Abstraction',
+
+      content: `
+• Better security
+• Reduced complexity
+• Cleaner code
+• Easier maintenance
+• Improved flexibility
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Abstraction',
+
+      content: `
+• Abstract classes provide partial abstraction
+• Interfaces provide full abstraction
+• Abstraction improves modular design
+• Real-world systems heavily use abstraction
+
+Common Beginner Mistakes:
+
+• Confusing abstraction and encapsulation
+• Using abstraction unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Abstraction Example',
+
+      language: 'java',
+
+      code: `abstract class Shape {
+
+    abstract void draw();
+
+}
+
+class Circle extends Shape {
+
+    @Override
+    void draw() {
+
+        System.out.println("Drawing Circle");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Shape s = new Circle();
+
+        s.draw();
+
+    }
+
+}`,
+
+      output: 'Drawing Circle',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is abstraction mainly used for?',
+
+      options: [
+        'Looping',
+        'Hiding implementation details',
+        'Creating arrays',
+        'Importing packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Abstraction hides implementation details.',
+    },
+
+    {
+      question:
+        'Which provides full abstraction?',
+
+      options: [
+        'Constructor',
+        'Interface',
+        'Loop',
+        'Array'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Interfaces provide full abstraction.',
+    },
+
+    {
+      question:
+        'Loose coupling improves?', 
+
+      options: [
+        'Complexity',
+        'Maintainability',
+        'Compilation errors',
+        'Memory usage'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Loose coupling improves maintainability and flexibility.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is abstraction in Java?',
+
+      answer:
+        'Abstraction hides implementation details and exposes only essential features.',
+    },
+
+    {
+      question:
+        'What is difference between abstraction and encapsulation?',
+
+      answer:
+        'Abstraction hides implementation details while encapsulation hides data using access modifiers.',
+    },
+  ],
+
+  nextTopic: 'java-package',
+},
+{
+  id: 'java-package',
+
+  title: 'Package in Java',
+
+  slug: 'java-package',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '22 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java packages deeply with package creation, importing, built-in packages, user-defined packages, and package advantages.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Package in Java',
+
+      content: `
+• Introduction to Package
+
+• Built-in Packages
+
+• User-Defined Packages
+
+• Import Keyword
+
+• Package Naming Rules
+
+• Advantages of Packages
+
+• Static Import
+
+• Package Compilation
+`,
+    },
+
+    {
+      heading: 'Introduction to Package',
+
+      content: `
+A package in Java is used to group related classes, interfaces, and sub-packages together.
+
+Packages help organize Java programs properly.
+
+Main Purposes:
+
+• Avoid naming conflicts
+• Better code management
+• Improved security
+`.trim(),
+    },
+
+    {
+      heading: 'Built-in Packages',
+
+      content: `
+Java provides many predefined packages.
+
+Examples:
+
+• java.lang
+• java.util
+• java.io
+• java.sql
+
+These packages contain useful predefined classes.
+`.trim(),
+    },
+
+    {
+      heading: 'User-Defined Packages',
+
+      content: `
+Programmers can also create custom packages.
+
+Syntax:
+
+package mypackage;
+
+Package statement should be first line of Java file.
+`.trim(),
+    },
+
+    {
+      heading: 'Import Keyword',
+
+      content: `
+import keyword allows access to package classes.
+
+Example:
+
+import java.util.Scanner;
+
+Benefits:
+
+• Easy class usage
+• Cleaner code
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Static Import',
+
+      content: `
+Static import allows direct access to static members.
+
+Example:
+
+import static java.lang.Math.*;
+
+This avoids writing class name repeatedly.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Packages',
+
+      content: `
+• Better organization
+• Naming conflict prevention
+• Improved maintainability
+• Better security
+• Easier project management
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Packages',
+
+      content: `
+• Package statement comes first
+• import keyword accesses package classes
+• Java uses folder structure for packages
+• Packages improve modularity
+
+Common Beginner Mistakes:
+
+• Wrong package declaration
+• Incorrect folder structure
+• Forgetting import statements
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Package Example',
+
+      language: 'java',
+
+      code: `package mypackage;
+
+public class Demo {
+
+    public void show() {
+
+        System.out.println("Custom Package");
+
+    }
+
+}`,
+
+      output: 'Custom Package',
+    },
+
+    {
+      title: 'Import Package Example',
+
+      language: 'java',
+
+      code: `import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Scanner Imported");
+
+    }
+
+}`,
+
+      output: 'Scanner Imported',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Why are packages used in Java?',
+
+      options: [
+        'For loops',
+        'To organize classes',
+        'To create arrays',
+        'To stop compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Packages help organize related classes and interfaces.',
+    },
+
+    {
+      question:
+        'Which keyword imports package classes?',
+
+      options: ['package', 'class', 'import', 'extends'],
+
+      answer: 2,
+
+      explanation:
+        'import keyword accesses package classes.',
+    },
+
+    {
+      question:
+        'Which package is automatically imported in Java?',
+
+      options: [
+        'java.util',
+        'java.sql',
+        'java.lang',
+        'java.io'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'java.lang package is automatically imported.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is package in Java?',
+
+      answer:
+        'A package is a collection of related classes and interfaces used for better organization.',
+    },
+
+    {
+      question:
+        'Why are packages important in Java?',
+
+      answer:
+        'Packages improve organization, security, modularity, and prevent naming conflicts.',
+    },
+  ],
+
+  nextTopic: 'java-access-modifiers',
+},
+
+{
+  id: 'java-access-modifiers',
+
+  title: 'Access Modifiers in Java',
+
+  slug: 'java-access-modifiers',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn access modifiers in Java deeply with public, private, protected, default access, visibility control, and security concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Access Modifiers in Java',
+
+      content: `
+• Introduction to Access Modifiers
+
+• public Modifier
+
+• private Modifier
+
+• protected Modifier
+
+• Default Access Modifier
+
+• Visibility Rules
+
+• Access Control
+
+• Security Benefits
+`,
+    },
+
+    {
+      heading: 'Introduction to Access Modifiers',
+
+      content: `
+Access modifiers control visibility and accessibility of classes, variables, methods, and constructors.
+
+Java provides four access modifiers:
+
+1. public
+2. private
+3. protected
+4. default
+`.trim(),
+    },
+
+    {
+      heading: 'public Access Modifier',
+
+      content: `
+public members are accessible from anywhere.
+
+Features:
+
+• Accessible inside class
+• Accessible outside package
+• No restriction
+
+Mostly used for public APIs.
+`.trim(),
+    },
+
+    {
+      heading: 'private Access Modifier',
+
+      content: `
+private members are accessible only inside same class.
+
+Benefits:
+
+• Better security
+• Data hiding
+• Encapsulation support
+
+Most secure access modifier.
+`.trim(),
+    },
+
+    {
+      heading: 'protected Access Modifier',
+
+      content: `
+protected members are accessible:
+
+• Inside package
+• Outside package through inheritance
+
+Used heavily in inheritance.
+`.trim(),
+    },
+
+    {
+      heading: 'Default Access Modifier',
+
+      content: `
+If no modifier is specified, default access is used.
+
+Default members are accessible only inside same package.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Access Modifiers',
+
+      content: `
+• Better security
+• Controlled access
+• Improved encapsulation
+• Safer object-oriented design
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Access Modifiers',
+
+      content: `
+• private is most restrictive
+• public is least restrictive
+• protected supports inheritance
+• default works inside same package
+
+Common Beginner Mistakes:
+
+• Using private incorrectly
+• Confusing protected and default
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'private Access Modifier Example',
+
+      language: 'java',
+
+      code: `class Student {
+
+    private int marks = 90;
+
+    void display() {
+
+        System.out.println(marks);
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.display();
+
+    }
+
+}`,
+
+      output: '90',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which access modifier is most secure?',
+
+      options: ['public', 'protected', 'default', 'private'],
+
+      answer: 3,
+
+      explanation:
+        'private is the most restrictive access modifier.',
+    },
+
+    {
+      question:
+        'Which modifier allows access everywhere?',
+
+      options: ['private', 'public', 'default', 'protected'],
+
+      answer: 1,
+
+      explanation:
+        'public members are accessible everywhere.',
+    },
+
+    {
+      question:
+        'protected modifier mainly supports?', 
+
+      options: [
+        'Loops',
+        'Inheritance',
+        'Arrays',
+        'Packages only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'protected is heavily used in inheritance.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are access modifiers in Java?',
+
+      answer:
+        'Access modifiers control accessibility and visibility of class members.',
+    },
+
+    {
+      question:
+        'Why are access modifiers important?',
+
+      answer:
+        'Access modifiers improve security, encapsulation, and controlled access.',
+    },
+  ],
+
+  nextTopic: 'java-encapsulation',
+},
+
+{
+  id: 'java-encapsulation',
+
+  title: 'Encapsulation in Java',
+
+  slug: 'java-encapsulation',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn encapsulation in Java deeply with data hiding, getters and setters, security, and object-oriented programming concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Encapsulation in Java',
+
+      content: `
+• Introduction to Encapsulation
+
+• Data Hiding
+
+• Getter and Setter Methods
+
+• Security Benefits
+
+• Real-World Examples
+
+• Immutable Classes
+
+• Bean Class in Java
+
+• Advantages of Encapsulation
+`,
+    },
+
+    {
+      heading: 'Introduction to Encapsulation',
+
+      content: `
+Encapsulation means binding data and methods together into a single unit.
+
+It is one of the core OOPs concepts.
+
+Encapsulation mainly focuses on:
+
+• Data protection
+• Controlled access
+• Better security
+`.trim(),
+    },
+
+    {
+      heading: 'Data Hiding in Java',
+
+      content: `
+Encapsulation hides sensitive data using private variables.
+
+Direct access to variables is restricted.
+
+This improves:
+
+• Security
+• Data integrity
+• Controlled modifications
+`.trim(),
+    },
+
+    {
+      heading: 'Getter and Setter Methods',
+
+      content: `
+Getter methods read data.
+
+Setter methods modify data.
+
+Example:
+
+getName()
+
+setName()
+
+These methods provide controlled access to private variables.
+`.trim(),
+    },
+
+    {
+      heading: 'Immutable Classes',
+
+      content: `
+Immutable objects cannot change after creation.
+
+Benefits:
+
+• Better security
+• Thread safety
+• Safer programming
+
+String class is immutable in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Bean Class in Java',
+
+      content: `
+Java Bean class follows encapsulation principles.
+
+Rules:
+
+• Private variables
+• Public getter/setter methods
+• Public default constructor
+
+Beans are widely used in frameworks.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Encapsulation',
+
+      content: `
+• Better security
+• Controlled access
+• Improved maintainability
+• Flexible code modification
+• Cleaner object-oriented design
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Encapsulation',
+
+      content: `
+• Uses private variables
+• Access provided through methods
+• Supports data hiding
+• Improves modularity
+
+Common Beginner Mistakes:
+
+• Public variables everywhere
+• Missing getter/setter methods
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Encapsulation Example',
+
+      language: 'java',
+
+      code: `class Student {
+
+    private int marks;
+
+    public void setMarks(int marks) {
+
+        this.marks = marks;
+
+    }
+
+    public int getMarks() {
+
+        return marks;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.setMarks(95);
+
+        System.out.println(s.getMarks());
+
+    }
+
+}`,
+
+      output: '95',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does encapsulation mainly provide?',
+
+      options: [
+        'Loop execution',
+        'Data hiding',
+        'Array sorting',
+        'Package importing'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Encapsulation mainly provides data hiding.',
+    },
+
+    {
+      question:
+        'Which methods are used in encapsulation?',
+
+      options: [
+        'main methods',
+        'Loop methods',
+        'Getter and Setter methods',
+        'Static blocks'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Getter and setter methods provide controlled access.',
+    },
+
+    {
+      question:
+        'Which keyword is mostly used in encapsulation?',
+
+      options: ['public', 'private', 'extends', 'super'],
+
+      answer: 1,
+
+      explanation:
+        'private keyword helps data hiding in encapsulation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is encapsulation in Java?',
+
+      answer:
+        'Encapsulation is the process of binding data and methods together while hiding internal data.',
+    },
+
+    {
+      question:
+        'Why is encapsulation important?',
+
+      answer:
+        'Encapsulation improves security, controlled access, and maintainability.',
+    },
+  ],
+
+  nextTopic: 'java-wrapper-class',
+},
+
+{
+  id: 'java-wrapper-class',
+
+  title: 'Wrapper Class in Java',
+
+  slug: 'java-wrapper-class',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn wrapper classes in Java deeply with autoboxing, unboxing, primitive conversion, utility methods, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Wrapper Class in Java',
+
+      content: `
+• Introduction to Wrapper Classes
+
+• Primitive to Object Conversion
+
+• Autoboxing
+
+• Unboxing
+
+• Utility Methods
+
+• Immutable Nature
+
+• Primitive Parsing
+
+• Collection Framework Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to Wrapper Classes',
+
+      content: `
+Wrapper classes convert primitive data types into objects.
+
+Every primitive type has corresponding wrapper class.
+
+Examples:
+
+• int → Integer
+• char → Character
+• double → Double
+`.trim(),
+    },
+
+    {
+      heading: 'Autoboxing in Java',
+
+      content: `
+Autoboxing automatically converts primitive values into objects.
+
+Example:
+
+Integer num = 10;
+
+Java automatically performs conversion.
+`.trim(),
+    },
+
+    {
+      heading: 'Unboxing in Java',
+
+      content: `
+Unboxing converts wrapper objects back into primitive values.
+
+Example:
+
+Integer num = 50;
+
+int value = num;
+`.trim(),
+    },
+
+    {
+      heading: 'Why Wrapper Classes are Important',
+
+      content: `
+Wrapper classes are required because:
+
+• Collections store objects only
+• Utility methods become available
+• Easier data conversion
+
+Heavily used in modern Java development.
+`.trim(),
+    },
+
+    {
+      heading: 'Immutable Nature of Wrapper Classes',
+
+      content: `
+Wrapper objects are immutable.
+
+Once created:
+
+• Values cannot change
+
+This improves safety and consistency.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Wrapper Classes',
+
+      content: `
+• Wrapper classes convert primitives into objects
+• Autoboxing is automatic conversion
+• Unboxing converts objects into primitives
+• Collections heavily use wrapper classes
+
+Common Beginner Mistakes:
+
+• Confusing primitive and wrapper types
+• Forgetting null handling in wrappers
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Autoboxing and Unboxing Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        Integer number = 100;
+
+        int value = number;
+
+        System.out.println(value);
+
+    }
+
+}`,
+
+      output: '100',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which wrapper class belongs to int?',
+
+      options: ['Double', 'Character', 'Integer', 'Float'],
+
+      answer: 2,
+
+      explanation:
+        'Integer is wrapper class of int.',
+    },
+
+    {
+      question:
+        'What is autoboxing?',
+
+      options: [
+        'Object to primitive conversion',
+        'Automatic primitive to object conversion',
+        'Loop conversion',
+        'Package loading'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Autoboxing converts primitives into objects automatically.',
+    },
+
+    {
+      question:
+        'Wrapper classes are?', 
+
+      options: [
+        'Mutable',
+        'Immutable',
+        'Abstract',
+        'Static'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Wrapper classes are immutable.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are wrapper classes important in Java?',
+
+      answer:
+        'Wrapper classes allow primitives to work as objects and support collections and utility methods.',
+    },
+
+    {
+      question:
+        'What is difference between autoboxing and unboxing?',
+
+      answer:
+        'Autoboxing converts primitive to object while unboxing converts object to primitive.',
+    },
+  ],
+
+  nextTopic: 'java-array',
+},
+{
+  id: 'java-array',
+
+  title: 'Java Array',
+
+  slug: 'java-array',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '30 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java arrays deeply including array declaration, initialization, traversal, memory representation, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Array',
+
+      content: `
+• Introduction to Arrays
+
+• Array Declaration
+
+• Array Initialization
+
+• Traversing Arrays
+
+• Array Memory Representation
+
+• Advantages of Arrays
+
+• Limitations of Arrays
+
+• Anonymous Arrays
+
+• Command Line Arguments
+
+• Copying Arrays
+`,
+    },
+
+    {
+      heading: 'Introduction to Arrays',
+
+      content: `
+An array is a collection of similar data types stored in contiguous memory locations.
+
+Arrays help store multiple values using single variable name.
+
+Example:
+
+• Multiple student marks
+• Product prices
+• Employee salaries
+`.trim(),
+    },
+
+    {
+      heading: 'Array Declaration',
+
+      content: `
+Syntax:
+
+datatype[] arrayName;
+
+Example:
+
+int[] numbers;
+
+Arrays must specify data type.
+`.trim(),
+    },
+
+    {
+      heading: 'Array Initialization',
+
+      content: `
+Arrays can be initialized during declaration.
+
+Example:
+
+int[] numbers = {10, 20, 30};
+
+Java automatically assigns indexes starting from 0.
+`.trim(),
+    },
+
+    {
+      heading: 'Traversing Arrays',
+
+      content: `
+Array traversal means accessing elements one by one.
+
+Commonly used loops:
+
+• for loop
+• for-each loop
+• while loop
+
+Traversal helps process all array elements.
+`.trim(),
+    },
+
+    {
+      heading: 'Anonymous Arrays',
+
+      content: `
+Anonymous arrays are arrays without reference variables.
+
+Example:
+
+new int[]{1, 2, 3};
+
+Mostly used during method calls.
+`.trim(),
+    },
+
+    {
+      heading: 'Command Line Arguments',
+
+      content: `
+Java command line arguments internally work as String arrays.
+
+Syntax:
+
+String[] args
+
+Arguments are passed during program execution.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages and Limitations of Arrays',
+
+      content: `
+Advantages:
+
+• Fast access
+• Easy traversal
+• Organized storage
+
+Limitations:
+
+• Fixed size
+• Same data type only
+• Memory wastage possible
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Arrays',
+
+      content: `
+• Array index starts from 0
+• Arrays store same data type
+• Arrays have fixed size
+• length property gives array size
+
+Common Beginner Mistakes:
+
+• Accessing invalid index
+• Forgetting array initialization
+• Confusing length and length()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Java Array Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {10, 20, 30, 40};
+
+        for(int i = 0; i < numbers.length; i++) {
+
+            System.out.println(numbers[i]);
+
+        }
+
+    }
+
+}`,
+
+      output: `10
+20
+30
+40`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does an array store?',
+
+      options: [
+        'Different data types only',
+        'Similar data types',
+        'Methods only',
+        'Packages only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Arrays store similar data types together.',
+    },
+
+    {
+      question:
+        'Array index starts from?', 
+
+      options: ['0', '1', '-1', '10'],
+
+      answer: 0,
+
+      explanation:
+        'Java array indexing starts from 0.',
+    },
+
+    {
+      question:
+        'Which property gives array size?',
+
+      options: ['size()', 'length()', 'length', 'count'],
+
+      answer: 2,
+
+      explanation:
+        'length property gives array size.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is array in Java?',
+
+      answer:
+        'Array is a collection of similar data types stored using single variable name.',
+    },
+
+    {
+      question:
+        'What are advantages of arrays?',
+
+      answer:
+        'Arrays provide fast access, easy traversal, and organized storage.',
+    },
+  ],
+
+  nextTopic: 'java-jagged-array',
+},
+
+{
+  id: 'java-jagged-array',
+
+  title: 'Java Jagged Array',
+
+  slug: 'java-jagged-array',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java jagged arrays deeply with irregular rows, dynamic row sizes, memory behavior, and practical examples.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Jagged Array',
+
+      content: `
+• Introduction to Jagged Arrays
+
+• Irregular Row Sizes
+
+• Dynamic Row Allocation
+
+• Memory Representation
+
+• Advantages of Jagged Arrays
+
+• Real-World Examples
+
+• Traversing Jagged Arrays
+
+• Important Rules
+`,
+    },
+
+    {
+      heading: 'Introduction to Jagged Arrays',
+
+      content: `
+A jagged array is an array of arrays where each row may contain different number of columns.
+
+Unlike normal 2D arrays:
+
+• Rows can have different sizes
+
+Jagged arrays improve memory flexibility.
+`.trim(),
+    },
+
+    {
+      heading: 'Dynamic Row Allocation',
+
+      content: `
+Each row in jagged array is created separately.
+
+Example:
+
+arr[0] = new int[2];
+
+arr[1] = new int[5];
+
+This allows variable row sizes.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Jagged Arrays',
+
+      content: `
+• Better memory optimization
+• Flexible row sizes
+• Useful for irregular data
+
+Common Uses:
+
+• Matrix-like structures
+• Student subject data
+• Game boards
+`.trim(),
+    },
+
+    {
+      heading: 'Traversing Jagged Arrays',
+
+      content: `
+Nested loops are commonly used.
+
+Each row length may differ.
+
+Therefore:
+
+• Row-wise traversal required
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Jagged Arrays',
+
+      content: `
+• Jagged arrays are arrays of arrays
+• Each row may contain different size
+• Rows are created separately
+• Improves flexibility
+
+Common Beginner Mistakes:
+
+• Assuming equal row sizes
+• Invalid index access
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Jagged Array Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] arr = new int[3][];
+
+        arr[0] = new int[]{1, 2};
+
+        arr[1] = new int[]{3, 4, 5};
+
+        arr[2] = new int[]{6};
+
+        for(int i = 0; i < arr.length; i++) {
+
+            for(int j = 0; j < arr[i].length; j++) {
+
+                System.out.print(arr[i][j] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+}`,
+
+      output: `1 2
+3 4 5
+6`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is jagged array?',
+
+      options: [
+        'Fixed row array',
+        'Array with same columns',
+        'Array with different row sizes',
+        'Single dimensional array'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Jagged arrays contain rows with different sizes.',
+    },
+
+    {
+      question:
+        'Jagged array is also called?', 
+
+      options: [
+        'Uniform array',
+        'Array of arrays',
+        'Static array',
+        'Loop array'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Jagged array is also called array of arrays.',
+    },
+
+    {
+      question:
+        'Jagged arrays mainly improve?', 
+
+      options: [
+        'Compilation',
+        'Memory flexibility',
+        'Loop execution',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Jagged arrays improve memory flexibility.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is jagged array in Java?',
+
+      answer:
+        'Jagged array is an array of arrays where each row can have different size.',
+    },
+
+    {
+      question:
+        'Why are jagged arrays useful?',
+
+      answer:
+        'Jagged arrays provide flexible memory allocation and support irregular data storage.',
+    },
+  ],
+
+  nextTopic: 'java-array-programs',
+},
+
+{
+  id: 'java-array-programs',
+
+  title: 'Java Array Programs',
+
+  slug: 'java-array-programs',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn important Java array programs deeply including searching, sorting, reversing, maximum element, and interview-based array logic.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Array Programs',
+
+      content: `
+• Find Maximum Element
+
+• Find Minimum Element
+
+• Reverse Array
+
+• Array Sum Program
+
+• Average Calculation
+
+• Linear Search
+
+• Binary Search
+
+• Sorting Arrays
+
+• Duplicate Elements
+
+• Frequency Counting
+`,
+    },
+
+    {
+      heading: 'Maximum and Minimum Element Programs',
+
+      content: `
+These programs find largest and smallest values inside arrays.
+
+Main Logic:
+
+• Compare elements one by one
+• Update max/min values
+
+Frequently asked in interviews.
+`.trim(),
+    },
+
+    {
+      heading: 'Reverse Array Program',
+
+      content: `
+Reverse array means printing elements in opposite order.
+
+Approaches:
+
+• Using loops
+• Using swapping
+• Using extra array
+`.trim(),
+    },
+
+    {
+      heading: 'Searching in Arrays',
+
+      content: `
+Searching means finding required element.
+
+Types:
+
+1. Linear Search
+2. Binary Search
+
+Binary search requires sorted array.
+`.trim(),
+    },
+
+    {
+      heading: 'Sorting Arrays',
+
+      content: `
+Sorting arranges elements in order.
+
+Types:
+
+• Ascending order
+• Descending order
+
+Popular sorting techniques:
+
+• Bubble sort
+• Selection sort
+• Insertion sort
+`.trim(),
+    },
+
+    {
+      heading: 'Duplicate and Frequency Programs',
+
+      content: `
+These programs help:
+
+• Detect duplicate elements
+• Count frequency of values
+
+Very common in coding rounds.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Array Programs',
+
+      content: `
+• Loop logic is very important
+• Sorting improves searching performance
+• Binary search requires sorted arrays
+• Arrays are heavily asked in interviews
+
+Common Beginner Mistakes:
+
+• Wrong loop boundaries
+• Invalid swapping logic
+• Forgetting sorted condition
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Maximum Element Program',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int[] arr = {10, 50, 20, 90, 30};
+
+        int max = arr[0];
+
+        for(int i = 1; i < arr.length; i++) {
+
+            if(arr[i] > max) {
+
+                max = arr[i];
+
+            }
+
+        }
+
+        System.out.println(max);
+
+    }
+
+}`,
+
+      output: '90',
+    },
+
+    {
+      title: 'Reverse Array Program',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int[] arr = {1, 2, 3, 4, 5};
+
+        for(int i = arr.length - 1; i >= 0; i--) {
+
+            System.out.print(arr[i] + " ");
+
+        }
+
+    }
+
+}`,
+
+      output: '5 4 3 2 1',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which search requires sorted array?',
+
+      options: [
+        'Linear search',
+        'Binary search',
+        'Frequency search',
+        'Duplicate search'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Binary search requires sorted arrays.',
+    },
+
+    {
+      question:
+        'Which loop is heavily used in arrays?',
+
+      options: ['if', 'switch', 'for loop', 'break'],
+
+      answer: 2,
+
+      explanation:
+        'for loop is commonly used for array traversal.',
+    },
+
+    {
+      question:
+        'Sorting mainly arranges elements in?', 
+
+      options: [
+        'Random order',
+        'Specific order',
+        'Memory order',
+        'Package order'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Sorting arranges elements in specific order.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are array programs important in interviews?',
+
+      answer:
+        'Array programs test logical thinking, looping concepts, searching, and sorting skills.',
+    },
+
+    {
+      question:
+        'What is difference between linear and binary search?',
+
+      answer:
+        'Linear search checks elements one by one while binary search works faster on sorted arrays.',
+    },
+  ],
+
+  nextTopic: 'java-array-methods',
+},
+
+{
+  id: 'java-array-methods',
+
+  title: 'Java Array Methods',
+
+  slug: 'java-array-methods',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java array methods deeply including Arrays class methods, sorting, searching, copying, filling, and utility operations.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java Array Methods',
+
+      content: `
+• Arrays.sort()
+
+• Arrays.binarySearch()
+
+• Arrays.copyOf()
+
+• Arrays.equals()
+
+• Arrays.fill()
+
+• Arrays.toString()
+
+• Arrays.deepToString()
+
+• Utility Operations
+`,
+    },
+
+    {
+      heading: 'Arrays.sort() Method',
+
+      content: `
+Arrays.sort() arranges array elements in ascending order.
+
+Example:
+
+Arrays.sort(arr);
+
+Benefits:
+
+• Faster sorting
+• Built-in optimization
+• Cleaner code
+`.trim(),
+    },
+
+    {
+      heading: 'Arrays.binarySearch() Method',
+
+      content: `
+binarySearch() searches element inside sorted array.
+
+Example:
+
+Arrays.binarySearch(arr, 20);
+
+Returns:
+
+• Index if found
+• Negative value if not found
+`.trim(),
+    },
+
+    {
+      heading: 'Arrays.copyOf() Method',
+
+      content: `
+copyOf() creates copy of array.
+
+Example:
+
+Arrays.copyOf(arr, arr.length);
+
+Useful for cloning arrays safely.
+`.trim(),
+    },
+
+    {
+      heading: 'Arrays.equals() Method',
+
+      content: `
+equals() compares arrays.
+
+Returns:
+
+• true
+• false
+
+Checks array contents properly.
+`.trim(),
+    },
+
+    {
+      heading: 'Arrays.fill() Method',
+
+      content: `
+fill() inserts same value into all positions.
+
+Example:
+
+Arrays.fill(arr, 5);
+
+Useful for initialization.
+`.trim(),
+    },
+
+    {
+      heading: 'Arrays.toString() Method',
+
+      content: `
+toString() converts array into readable string format.
+
+Example:
+
+Arrays.toString(arr);
+
+Useful for printing arrays quickly.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Array Methods',
+
+      content: `
+• Arrays class belongs to java.util package
+• Utility methods reduce coding effort
+• binarySearch requires sorted array
+• Arrays methods improve readability
+
+Common Beginner Mistakes:
+
+• Forgetting import java.util.Arrays
+• Using binarySearch on unsorted arrays
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Arrays.sort() Example',
+
+      language: 'java',
+
+      code: `import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] arr = {40, 10, 30, 20};
+
+        Arrays.sort(arr);
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+}`,
+
+      output: '[10, 20, 30, 40]',
+    },
+
+    {
+      title: 'Arrays.fill() Example',
+
+      language: 'java',
+
+      code: `import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] arr = new int[5];
+
+        Arrays.fill(arr, 7);
+
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+}`,
+
+      output: '[7, 7, 7, 7, 7]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class contains utility array methods?',
+
+      options: ['Math', 'Scanner', 'Arrays', 'String'],
+
+      answer: 2,
+
+      explanation:
+        'Arrays class contains utility array methods.',
+    },
+
+    {
+      question:
+        'Which method sorts arrays?',
+
+      options: [
+        'Arrays.fill()',
+        'Arrays.sort()',
+        'Arrays.copyOf()',
+        'Arrays.equals()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Arrays.sort() sorts arrays.',
+    },
+
+    {
+      question:
+        'binarySearch() requires?', 
+
+      options: [
+        'Random array',
+        'Sorted array',
+        'Jagged array',
+        'Null array'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'binarySearch() requires sorted arrays.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are Arrays utility methods useful?',
+
+      answer:
+        'Arrays methods reduce coding effort and provide optimized array operations.',
+    },
+
+    {
+      question:
+        'Why should binarySearch use sorted arrays?',
+
+      answer:
+        'Binary search works by dividing sorted data repeatedly for faster searching.',
+    },
+  ],
+
+  nextTopic: 'java-multidimensional-array',
+},
+
+{
+  id: 'java-multidimensional-array',
+
+  title: 'Multidimensional Array in Java',
+
+  slug: 'java-multidimensional-array',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn multidimensional arrays in Java deeply including 2D arrays, matrix operations, memory structure, and nested traversal.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Multidimensional Array in Java',
+
+      content: `
+• Introduction to 2D Arrays
+
+• Matrix Representation
+
+• Nested Loops
+
+• Memory Structure
+
+• Matrix Addition
+
+• Matrix Multiplication
+
+• Transpose Matrix
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to Multidimensional Arrays',
+
+      content: `
+Multidimensional arrays store data in rows and columns.
+
+Most common type:
+
+• 2D array
+
+Example:
+
+int[][] matrix;
+`.trim(),
+    },
+
+    {
+      heading: 'Matrix Representation',
+
+      content: `
+2D arrays are commonly used for matrices.
+
+Examples:
+
+• Marks table
+• Chess board
+• Game grids
+• Image processing
+`.trim(),
+    },
+
+    {
+      heading: 'Nested Loops in 2D Arrays',
+
+      content: `
+Nested loops are used to traverse multidimensional arrays.
+
+Outer loop:
+
+• Controls rows
+
+Inner loop:
+
+• Controls columns
+`.trim(),
+    },
+
+    {
+      heading: 'Matrix Operations',
+
+      content: `
+Common matrix operations:
+
+• Addition
+• Multiplication
+• Transpose
+• Diagonal sum
+
+Frequently asked in interviews.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Multidimensional Arrays',
+
+      content: `
+• 2D arrays use rows and columns
+• Nested loops are important
+• Matrix problems improve logic building
+• Widely used in DSA problems
+
+Common Beginner Mistakes:
+
+• Wrong nested loop boundaries
+• Row-column confusion
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: '2D Array Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] arr = {
+
+            {1, 2},
+
+            {3, 4}
+
+        };
+
+        for(int i = 0; i < arr.length; i++) {
+
+            for(int j = 0; j < arr[i].length; j++) {
+
+                System.out.print(arr[i][j] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+}`,
+
+      output: `1 2
+3 4`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which loops are commonly used in 2D arrays?',
+
+      options: [
+        'Single loops',
+        'Nested loops',
+        'Switch loops',
+        'Infinite loops'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Nested loops are used for multidimensional arrays.',
+    },
+
+    {
+      question:
+        '2D arrays mainly store?', 
+
+      options: [
+        'Rows and columns',
+        'Single values',
+        'Packages',
+        'Comments'
+      ],
+
+      answer: 0,
+
+      explanation:
+        '2D arrays store data in rows and columns.',
+    },
+
+    {
+      question:
+        'Which operation is common in matrices?',
+
+      options: [
+        'Package import',
+        'Matrix multiplication',
+        'Class extension',
+        'Constructor chaining'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Matrix multiplication is common in multidimensional arrays.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is multidimensional array in Java?',
+
+      answer:
+        'Multidimensional array stores data in multiple dimensions like rows and columns.',
+    },
+
+    {
+      question:
+        'Why are nested loops important in 2D arrays?',
+
+      answer:
+        'Nested loops help traverse rows and columns properly in multidimensional arrays.',
+    },
+  ],
+
+  nextTopic: 'java-string',
+},
+{
+  id: 'java-string',
+
+  title: 'Java String',
+
+  slug: 'java-string',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '32 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java String deeply including string creation, memory concepts, string pool, methods, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java String',
+
+      content: `
+• Introduction to String
+
+• Creating Strings
+
+• String Pool
+
+• Heap Memory
+
+• String Methods
+
+• Mutable vs Immutable
+
+• Memory Optimization
+
+• Real-World Usage
+
+• Important Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to String',
+
+      content: `
+String in Java is a sequence of characters.
+
+Strings are widely used for:
+
+• Names
+• Messages
+• User input
+• Data processing
+
+String is a predefined class in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Creating Strings',
+
+      content: `
+Strings can be created in two ways.
+
+1. Using String Literal
+
+String name = "Java";
+
+2. Using new Keyword
+
+String name = new String("Java");
+`.trim(),
+    },
+
+    {
+      heading: 'String Pool in Java',
+
+      content: `
+Java stores string literals inside String Constant Pool.
+
+Purpose:
+
+• Memory optimization
+• Reusability
+• Better performance
+
+Same string values share same memory location.
+`.trim(),
+    },
+
+    {
+      heading: 'Heap Memory and Strings',
+
+      content: `
+Strings created using new keyword are stored inside heap memory.
+
+Example:
+
+new String("Hello");
+
+Every object gets separate memory allocation.
+`.trim(),
+    },
+
+    {
+      heading: 'Important String Methods',
+
+      content: `
+Popular String methods:
+
+• length()
+• charAt()
+• toUpperCase()
+• toLowerCase()
+• trim()
+• equals()
+
+These methods simplify string handling.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Strings',
+
+      content: `
+• Easy text handling
+• Secure storage
+• Immutable behavior
+• Rich built-in methods
+• Widely used in applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Strings',
+
+      content: `
+• String is a class in Java
+• Strings are immutable
+• String literals use String Pool
+• String methods improve productivity
+
+Common Beginner Mistakes:
+
+• Using == instead of equals()
+• Confusing heap and pool memory
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Java String Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String name = "Java";
+
+        System.out.println(name);
+
+        System.out.println(name.length());
+
+    }
+
+}`,
+
+      output: `Java
+4`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'String in Java is?', 
+
+      options: [
+        'Primitive type',
+        'Class',
+        'Loop',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'String is a predefined class in Java.',
+    },
+
+    {
+      question:
+        'Where are string literals stored?',
+
+      options: [
+        'Stack',
+        'Heap only',
+        'String Pool',
+        'CPU'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'String literals are stored in String Pool.',
+    },
+
+    {
+      question:
+        'Which method gives string length?',
+
+      options: [
+        'size()',
+        'count()',
+        'length()',
+        'charAt()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'length() returns string length.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is String in Java?',
+
+      answer:
+        'String is a predefined class used to store sequence of characters.',
+    },
+
+    {
+      question:
+        'Why is String heavily used in Java?',
+
+      answer:
+        'Strings are heavily used for text processing, user input, security, and data handling.',
+    },
+  ],
+
+  nextTopic: 'java-string-immutable',
+},
+
+{
+  id: 'java-string-immutable',
+
+  title: 'Why String is Immutable in Java?',
+
+  slug: 'java-string-immutable',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn why String is immutable in Java deeply with security benefits, memory optimization, thread safety, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Why String is Immutable in Java?',
+
+      content: `
+• Introduction to Immutability
+
+• Security Benefits
+
+• String Pool Optimization
+
+• Thread Safety
+
+• HashCode Caching
+
+• Performance Benefits
+
+• Real-World Importance
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to String Immutability',
+
+      content: `
+Immutable means object value cannot change after creation.
+
+In Java:
+
+• String objects are immutable
+
+Example:
+
+String name = "Java";
+
+After creation, value cannot be modified.
+`.trim(),
+    },
+
+    {
+      heading: 'Security Benefits',
+
+      content: `
+Strings are heavily used in:
+
+• Database URLs
+• Network connections
+• File paths
+• Usernames and passwords
+
+Immutability prevents accidental modification.
+`.trim(),
+    },
+
+    {
+      heading: 'String Pool Optimization',
+
+      content: `
+Immutability allows safe sharing inside String Pool.
+
+Example:
+
+String a = "Java";
+
+String b = "Java";
+
+Both references point to same object.
+`.trim(),
+    },
+
+    {
+      heading: 'Thread Safety',
+
+      content: `
+Immutable objects are naturally thread-safe.
+
+Multiple threads can access same string without synchronization.
+
+Benefits:
+
+• Safer multithreading
+• Better performance
+`.trim(),
+    },
+
+    {
+      heading: 'HashCode Caching',
+
+      content: `
+String hashCode is cached because string values never change.
+
+This improves performance in:
+
+• HashMap
+• HashSet
+• Collections
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Immutable Strings',
+
+      content: `
+• Better security
+• Memory optimization
+• Thread safety
+• Improved performance
+• Reliable behavior
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About String Immutability',
+
+      content: `
+• String values cannot change
+• Modification creates new object
+• String Pool depends on immutability
+• Immutable objects improve safety
+
+Common Beginner Mistakes:
+
+• Assuming string value changes directly
+• Confusing mutable and immutable objects
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Immutable String Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String str = "Java";
+
+        str.concat(" Programming");
+
+        System.out.println(str);
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does immutable mean?',
+
+      options: [
+        'Value can change',
+        'Value cannot change',
+        'Loop execution',
+        'Memory deletion'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Immutable objects cannot change after creation.',
+    },
+
+    {
+      question:
+        'Why does String Pool work efficiently?',
+
+      options: [
+        'Because strings are mutable',
+        'Because strings are immutable',
+        'Because of loops',
+        'Because of arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Immutability allows safe memory sharing.',
+    },
+
+    {
+      question:
+        'Immutable objects are naturally?', 
+
+      options: [
+        'Unsafe',
+        'Thread-safe',
+        'Static only',
+        'Private only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Immutable objects are naturally thread-safe.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is String immutable in Java?',
+
+      answer:
+        'String is immutable for security, thread safety, memory optimization, and performance benefits.',
+    },
+
+    {
+      question:
+        'How does immutability improve String Pool performance?',
+
+      answer:
+        'Immutability allows multiple references to safely share same string object.',
+    },
+  ],
+
+  nextTopic: 'java-string-comparison',
+},
+
+{
+  id: 'java-string-comparison',
+
+  title: 'String Comparison in Java',
+
+  slug: 'java-string-comparison',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn string comparison in Java deeply using equals(), == operator, compareTo(), equalsIgnoreCase(), and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'String Comparison in Java',
+
+      content: `
+• == Operator
+
+• equals() Method
+
+• equalsIgnoreCase()
+
+• compareTo() Method
+
+• Lexicographical Comparison
+
+• Case Sensitivity
+
+• Memory Comparison
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Using == Operator',
+
+      content: `
+== compares memory references.
+
+It checks whether both references point to same object.
+
+Example:
+
+str1 == str2
+
+Not recommended for content comparison.
+`.trim(),
+    },
+
+    {
+      heading: 'Using equals() Method',
+
+      content: `
+equals() compares actual string contents.
+
+Example:
+
+str1.equals(str2)
+
+Most commonly used string comparison method.
+`.trim(),
+    },
+
+    {
+      heading: 'Using equalsIgnoreCase()',
+
+      content: `
+equalsIgnoreCase() ignores uppercase and lowercase differences.
+
+Example:
+
+"JAVA".equalsIgnoreCase("java")
+
+Returns:
+
+true
+`.trim(),
+    },
+
+    {
+      heading: 'Using compareTo() Method',
+
+      content: `
+compareTo() performs lexicographical comparison.
+
+Returns:
+
+• 0 → equal
+• Positive → greater
+• Negative → smaller
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About String Comparison',
+
+      content: `
+• == compares references
+• equals() compares values
+• compareTo() compares lexicographically
+• equalsIgnoreCase() ignores case
+
+Common Beginner Mistakes:
+
+• Using == for content comparison
+• Ignoring case sensitivity
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'equals() vs == Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String a = "Java";
+
+        String b = new String("Java");
+
+        System.out.println(a == b);
+
+        System.out.println(a.equals(b));
+
+    }
+
+}`,
+
+      output: `false
+true`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method compares string contents?',
+
+      options: [
+        '==',
+        'equals()',
+        'compare',
+        'charAt()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'equals() compares actual string contents.',
+    },
+
+    {
+      question:
+        '== operator compares?', 
+
+      options: [
+        'Values',
+        'Memory references',
+        'Characters',
+        'Indexes'
+      ],
+
+      answer: 1,
+
+      explanation:
+        '== checks object references.',
+    },
+
+    {
+      question:
+        'Which method ignores uppercase/lowercase differences?',
+
+      options: [
+        'equals()',
+        'compareTo()',
+        'equalsIgnoreCase()',
+        'trim()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'equalsIgnoreCase() ignores case differences.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between == and equals() in Java?',
+
+      answer:
+        '== compares references while equals() compares actual string values.',
+    },
+
+    {
+      question:
+        'Why is equals() preferred for string comparison?',
+
+      answer:
+        'equals() compares actual string content instead of memory addresses.',
+    },
+  ],
+
+  nextTopic: 'java-string-concatenation',
+},
+
+{
+  id: 'java-string-concatenation',
+
+  title: 'String Concatenation in Java',
+
+  slug: 'java-string-concatenation',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn string concatenation in Java deeply using + operator, concat() method, StringBuilder, and performance concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'String Concatenation in Java',
+
+      content: `
+• + Operator
+
+• concat() Method
+
+• StringBuilder
+
+• StringBuffer
+
+• Performance Concepts
+
+• Automatic Type Conversion
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Using + Operator',
+
+      content: `
++ operator joins multiple strings together.
+
+Example:
+
+"Java" + " Programming"
+
+Output:
+
+Java Programming
+`.trim(),
+    },
+
+    {
+      heading: 'Using concat() Method',
+
+      content: `
+concat() method joins strings.
+
+Example:
+
+str1.concat(str2)
+
+Returns new string object.
+`.trim(),
+    },
+
+    {
+      heading: 'Using StringBuilder',
+
+      content: `
+StringBuilder provides faster string modification.
+
+Benefits:
+
+• Better performance
+• Mutable behavior
+• Faster concatenation
+
+Mostly used in loops.
+`.trim(),
+    },
+
+    {
+      heading: 'Using StringBuffer',
+
+      content: `
+StringBuffer is similar to StringBuilder.
+
+Difference:
+
+• StringBuffer is thread-safe
+• Slightly slower
+
+Useful in multithreading.
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Concepts',
+
+      content: `
+Repeated string concatenation creates multiple objects.
+
+This increases memory usage.
+
+StringBuilder improves performance significantly.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About String Concatenation',
+
+      content: `
+• + operator is simplest method
+• concat() returns new object
+• StringBuilder is faster
+• StringBuffer is thread-safe
+
+Common Beginner Mistakes:
+
+• Heavy use of + inside loops
+• Forgetting immutability
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'String Concatenation Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String first = "Java";
+
+        String second = " Programming";
+
+        System.out.println(first + second);
+
+    }
+
+}`,
+
+      output: 'Java Programming',
+    },
+
+    {
+      title: 'StringBuilder Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Java");
+
+        sb.append(" Programming");
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: 'Java Programming',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which operator joins strings?',
+
+      options: ['-', '*', '+', '/'],
+
+      answer: 2,
+
+      explanation:
+        '+ operator concatenates strings.',
+    },
+
+    {
+      question:
+        'Which class provides faster string modification?',
+
+      options: [
+        'Scanner',
+        'StringBuilder',
+        'Math',
+        'Character'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuilder provides faster string modification.',
+    },
+
+    {
+      question:
+        'Which class is thread-safe?',
+
+      options: [
+        'StringBuilder',
+        'StringBuffer',
+        'StringPool',
+        'Scanner'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuffer is thread-safe.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is StringBuilder faster than String?',
+
+      answer:
+        'StringBuilder is mutable and avoids creating multiple new objects.',
+    },
+
+    {
+      question:
+        'What is difference between StringBuilder and StringBuffer?',
+
+      answer:
+        'StringBuilder is faster while StringBuffer is thread-safe.',
+    },
+  ],
+
+  nextTopic: 'java-substring',
+},
+
+{
+  id: 'java-substring',
+
+  title: 'Substring in Java',
+
+  slug: 'java-substring',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '20 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn substring in Java deeply including substring methods, indexing, extraction logic, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Substring in Java',
+
+      content: `
+• Introduction to substring()
+
+• substring(beginIndex)
+
+• substring(beginIndex, endIndex)
+
+• Indexing Concepts
+
+• String Extraction
+
+• Common Errors
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to substring() Method',
+
+      content: `
+substring() extracts part of string.
+
+Java provides two versions:
+
+1. substring(beginIndex)
+
+2. substring(beginIndex, endIndex)
+`.trim(),
+    },
+
+    {
+      heading: 'substring(beginIndex)',
+
+      content: `
+Starts extraction from specified index till end.
+
+Example:
+
+String str = "Programming";
+
+str.substring(3)
+
+Output:
+
+gramming
+`.trim(),
+    },
+
+    {
+      heading: 'substring(beginIndex, endIndex)',
+
+      content: `
+Starts from beginIndex and stops before endIndex.
+
+Example:
+
+str.substring(0, 4)
+
+Output:
+
+Prog
+`.trim(),
+    },
+
+    {
+      heading: 'Important Indexing Concepts',
+
+      content: `
+• Index starts from 0
+• End index is excluded
+• Invalid indexes cause exceptions
+
+Careful indexing is very important.
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage of substring()',
+
+      content: `
+substring() is heavily used in:
+
+• Data extraction
+• Validation
+• Parsing
+• Pattern matching
+
+Very common in real applications.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About substring()',
+
+      content: `
+• substring extracts partial string
+• Index starts from 0
+• End index excluded
+• Invalid index causes exception
+
+Common Beginner Mistakes:
+
+• Wrong indexing
+• Confusing inclusive and exclusive indexes
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'substring() Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String text = "Programming";
+
+        System.out.println(text.substring(3));
+
+        System.out.println(text.substring(0, 4));
+
+    }
+
+}`,
+
+      output: `gramming
+Prog`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method extracts part of string?',
+
+      options: [
+        'charAt()',
+        'substring()',
+        'trim()',
+        'length()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'substring() extracts part of string.',
+    },
+
+    {
+      question:
+        'String indexing starts from?', 
+
+      options: ['0', '1', '-1', '10'],
+
+      answer: 0,
+
+      explanation:
+        'String indexing starts from 0.',
+    },
+
+    {
+      question:
+        'In substring(begin, end), end index is?', 
+
+      options: [
+        'Included',
+        'Excluded',
+        'Random',
+        'Negative'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'End index is excluded in substring().',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is substring() method in Java?',
+
+      answer:
+        'substring() extracts a portion of string using indexes.',
+    },
+
+    {
+      question:
+        'Why is careful indexing important in substring()?',
+
+      answer:
+        'Wrong indexes can produce incorrect output or exceptions.',
+    },
+  ],
+
+  nextTopic: 'java-string-methods',
+},
+{
+  id: 'java-string-methods',
+
+  title: 'Methods of String Class',
+
+  slug: 'java-string-methods',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn important methods of String class in Java deeply including searching, comparison, trimming, replacing, splitting, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Methods of String Class',
+
+      content: `
+• length()
+
+• charAt()
+
+• equals()
+
+• equalsIgnoreCase()
+
+• compareTo()
+
+• substring()
+
+• trim()
+
+• replace()
+
+• split()
+
+• contains()
+
+• startsWith()
+
+• endsWith()
+
+• toUpperCase()
+
+• toLowerCase()
+`,
+    },
+
+    {
+      heading: 'length() Method',
+
+      content: `
+length() returns total number of characters in string.
+
+Example:
+
+String name = "Java";
+
+name.length()
+
+Output:
+
+4
+`.trim(),
+    },
+
+    {
+      heading: 'charAt() Method',
+
+      content: `
+charAt() returns character at specific index.
+
+Example:
+
+name.charAt(1)
+
+Output:
+
+a
+
+Index starts from 0.
+`.trim(),
+    },
+
+    {
+      heading: 'equals() and equalsIgnoreCase()',
+
+      content: `
+equals() compares exact string values.
+
+equalsIgnoreCase() ignores uppercase and lowercase differences.
+
+Very important for validations.
+`.trim(),
+    },
+
+    {
+      heading: 'substring() Method',
+
+      content: `
+substring() extracts part of string.
+
+Example:
+
+text.substring(0, 4)
+
+Output:
+
+Java
+`.trim(),
+    },
+
+    {
+      heading: 'trim() Method',
+
+      content: `
+trim() removes extra spaces from beginning and ending.
+
+Useful for:
+
+• User input validation
+• Data cleaning
+`.trim(),
+    },
+
+    {
+      heading: 'replace() and split() Methods',
+
+      content: `
+replace() changes characters or words.
+
+split() divides string into parts.
+
+Commonly used in:
+
+• Data processing
+• Parsing
+• Validation
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About String Methods',
+
+      content: `
+• String methods return new objects
+• Strings are immutable
+• Indexing starts from 0
+• String methods simplify text handling
+
+Common Beginner Mistakes:
+
+• Invalid indexes
+• Using == instead of equals()
+• Forgetting immutability
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'String Methods Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String text = " Java Programming ";
+
+        System.out.println(text.length());
+
+        System.out.println(text.trim());
+
+        System.out.println(text.toUpperCase());
+
+    }
+
+}`,
+
+      output: `18
+Java Programming
+ JAVA PROGRAMMING `,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method gives total characters in string?',
+
+      options: [
+        'size()',
+        'length()',
+        'count()',
+        'charAt()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'length() returns total number of characters.',
+    },
+
+    {
+      question:
+        'Which method removes extra spaces?',
+
+      options: [
+        'split()',
+        'replace()',
+        'trim()',
+        'substring()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'trim() removes leading and trailing spaces.',
+    },
+
+    {
+      question:
+        'Which method converts string into uppercase?',
+
+      options: [
+        'toUpperCase()',
+        'toLowerCase()',
+        'compareTo()',
+        'replace()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'toUpperCase() converts string into uppercase.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are String methods important in Java?',
+
+      answer:
+        'String methods simplify text processing, validation, searching, and formatting.',
+    },
+
+    {
+      question:
+        'Why do String methods return new objects?',
+
+      answer:
+        'Strings are immutable, so modifications create new objects instead of changing existing ones.',
+    },
+  ],
+
+  nextTopic: 'java-stringbuffer',
+},
+
+{
+  id: 'java-stringbuffer',
+
+  title: 'StringBuffer in Java',
+
+  slug: 'java-stringbuffer',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn StringBuffer in Java deeply including mutable strings, append, insert, reverse, capacity handling, and thread safety.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'StringBuffer in Java',
+
+      content: `
+• Introduction to StringBuffer
+
+• Mutable Strings
+
+• append() Method
+
+• insert() Method
+
+• delete() Method
+
+• reverse() Method
+
+• Capacity Concept
+
+• Thread Safety
+
+• Performance Benefits
+`,
+    },
+
+    {
+      heading: 'Introduction to StringBuffer',
+
+      content: `
+StringBuffer is a mutable class used to modify strings efficiently.
+
+Unlike String:
+
+• Objects can be changed directly
+
+Useful for repeated modifications.
+`.trim(),
+    },
+
+    {
+      heading: 'Mutable Nature of StringBuffer',
+
+      content: `
+Mutable means values can change without creating new object.
+
+Benefits:
+
+• Faster modifications
+• Better memory usage
+• Improved performance
+`.trim(),
+    },
+
+    {
+      heading: 'append() Method',
+
+      content: `
+append() adds new text at end.
+
+Example:
+
+sb.append("Java");
+
+Very common in loops and dynamic text creation.
+`.trim(),
+    },
+
+    {
+      heading: 'insert() and delete() Methods',
+
+      content: `
+insert() adds text at specific position.
+
+delete() removes characters.
+
+Useful for dynamic string editing.
+`.trim(),
+    },
+
+    {
+      heading: 'reverse() Method',
+
+      content: `
+reverse() reverses characters inside StringBuffer.
+
+Example:
+
+"Java"
+
+becomes:
+
+"avaJ"
+`.trim(),
+    },
+
+    {
+      heading: 'Thread Safety in StringBuffer',
+
+      content: `
+StringBuffer methods are synchronized.
+
+Benefits:
+
+• Thread-safe
+• Safe in multithreading
+
+Disadvantage:
+
+• Slightly slower than StringBuilder
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About StringBuffer',
+
+      content: `
+• StringBuffer is mutable
+• Supports direct modification
+• Thread-safe class
+• Faster than String for modifications
+
+Common Beginner Mistakes:
+
+• Confusing StringBuffer with String
+• Using String for heavy modifications
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'StringBuffer Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuffer sb = new StringBuffer("Java");
+
+        sb.append(" Programming");
+
+        sb.reverse();
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: 'gnimmargorP avaJ',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'StringBuffer is?', 
+
+      options: [
+        'Immutable',
+        'Mutable',
+        'Abstract',
+        'Static'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuffer is mutable.',
+    },
+
+    {
+      question:
+        'Which method adds text at end?',
+
+      options: [
+        'delete()',
+        'append()',
+        'reverse()',
+        'trim()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'append() adds text at end.',
+    },
+
+    {
+      question:
+        'StringBuffer is thread-safe because methods are?', 
+
+      options: [
+        'Private',
+        'Final',
+        'Synchronized',
+        'Abstract'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'StringBuffer methods are synchronized.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is StringBuffer faster than String?',
+
+      answer:
+        'StringBuffer is mutable and avoids creating multiple new objects.',
+    },
+
+    {
+      question:
+        'Why is StringBuffer thread-safe?',
+
+      answer:
+        'Its methods are synchronized, making it safe for multithreading.',
+    },
+  ],
+
+  nextTopic: 'java-stringbuilder',
+},
+
+{
+  id: 'java-stringbuilder',
+
+  title: 'StringBuilder in Java',
+
+  slug: 'java-stringbuilder',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn StringBuilder in Java deeply including mutable strings, performance optimization, append operations, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'StringBuilder in Java',
+
+      content: `
+• Introduction to StringBuilder
+
+• Mutable Strings
+
+• append() Method
+
+• insert() Method
+
+• delete() Method
+
+• reverse() Method
+
+• Capacity Handling
+
+• Performance Benefits
+
+• Difference from StringBuffer
+`,
+    },
+
+    {
+      heading: 'Introduction to StringBuilder',
+
+      content: `
+StringBuilder is mutable class used for efficient string modifications.
+
+It is similar to StringBuffer but faster.
+
+Main Difference:
+
+• Not thread-safe
+`.trim(),
+    },
+
+    {
+      heading: 'Mutable Behavior',
+
+      content: `
+StringBuilder modifies same object directly.
+
+Benefits:
+
+• Faster execution
+• Better memory efficiency
+• Suitable for loops
+`.trim(),
+    },
+
+    {
+      heading: 'append() and insert() Methods',
+
+      content: `
+append() adds text at end.
+
+insert() adds text at specified index.
+
+Useful for dynamic text generation.
+`.trim(),
+    },
+
+    {
+      heading: 'delete() and reverse() Methods',
+
+      content: `
+delete() removes characters.
+
+reverse() reverses string contents.
+
+Commonly used in interview problems.
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Benefits',
+
+      content: `
+StringBuilder performs faster than String and StringBuffer in single-threaded programs.
+
+Best for:
+
+• Large text creation
+• Loops
+• Frequent modifications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About StringBuilder',
+
+      content: `
+• StringBuilder is mutable
+• Faster than StringBuffer
+• Not thread-safe
+• Suitable for single-threaded applications
+
+Common Beginner Mistakes:
+
+• Using String repeatedly inside loops
+• Confusing StringBuilder with StringBuffer
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'StringBuilder Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Java");
+
+        sb.append(" Developer");
+
+        sb.insert(5, "Full Stack ");
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: 'Java Full Stack Developer',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'StringBuilder is?', 
+
+      options: [
+        'Immutable',
+        'Mutable',
+        'Interface',
+        'Package'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuilder is mutable.',
+    },
+
+    {
+      question:
+        'Which class is faster in single-threaded programs?',
+
+      options: [
+        'String',
+        'StringBuffer',
+        'StringBuilder',
+        'Scanner'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'StringBuilder is faster because it is not synchronized.',
+    },
+
+    {
+      question:
+        'StringBuilder is not?', 
+
+      options: [
+        'Mutable',
+        'Fast',
+        'Thread-safe',
+        'Efficient'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'StringBuilder is not thread-safe.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is StringBuilder faster than StringBuffer?',
+
+      answer:
+        'StringBuilder is not synchronized, so it performs faster.',
+    },
+
+    {
+      question:
+        'When should StringBuilder be preferred?',
+
+      answer:
+        'StringBuilder should be preferred for heavy string modifications in single-threaded applications.',
+    },
+  ],
+
+  nextTopic: 'java-string-vs-stringbuffer',
+},
+
+{
+  id: 'java-string-vs-stringbuffer',
+
+  title: 'String vs StringBuffer in Java',
+
+  slug: 'java-string-vs-stringbuffer',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between String and StringBuffer in Java deeply including mutability, performance, memory usage, and thread safety.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'String vs StringBuffer in Java',
+
+      content: `
+• Immutable vs Mutable
+
+• Memory Usage
+
+• Performance Difference
+
+• Thread Safety
+
+• Modification Handling
+
+• Real-World Usage
+
+• Interview Comparisons
+
+• Best Use Cases
+`,
+    },
+
+    {
+      heading: 'Mutability Difference',
+
+      content: `
+String is immutable.
+
+StringBuffer is mutable.
+
+Meaning:
+
+• String cannot change after creation
+• StringBuffer can change directly
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Difference',
+
+      content: `
+String creates new object after every modification.
+
+StringBuffer modifies same object.
+
+Result:
+
+• StringBuffer performs faster during repeated modifications
+`.trim(),
+    },
+
+    {
+      heading: 'Memory Usage',
+
+      content: `
+String may create multiple unnecessary objects.
+
+StringBuffer reduces object creation.
+
+Benefits:
+
+• Better memory efficiency
+• Improved performance
+`.trim(),
+    },
+
+    {
+      heading: 'Thread Safety',
+
+      content: `
+StringBuffer is thread-safe because methods are synchronized.
+
+String is naturally safe because it is immutable.
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use String',
+
+      content: `
+Use String when:
+
+• Data rarely changes
+• Simple text storage needed
+• Security important
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use StringBuffer',
+
+      content: `
+Use StringBuffer when:
+
+• Frequent modifications occur
+• Multithreading involved
+• Dynamic text generation needed
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About String vs StringBuffer',
+
+      content: `
+• String is immutable
+• StringBuffer is mutable
+• StringBuffer is faster for modifications
+• StringBuffer supports synchronization
+
+Common Beginner Mistakes:
+
+• Using String in heavy modification loops
+• Ignoring performance differences
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'String vs StringBuffer Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String str = "Java";
+
+        str.concat(" Programming");
+
+        System.out.println(str);
+
+        StringBuffer sb = new StringBuffer("Java");
+
+        sb.append(" Programming");
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: `Java
+Java Programming`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class is immutable?',
+
+      options: [
+        'StringBuffer',
+        'StringBuilder',
+        'String',
+        'Scanner'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'String is immutable.',
+    },
+
+    {
+      question:
+        'Which class is mutable?',
+
+      options: [
+        'String',
+        'StringBuffer',
+        'Character',
+        'Math'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuffer is mutable.',
+    },
+
+    {
+      question:
+        'Which class is better for repeated modifications?',
+
+      options: [
+        'String',
+        'StringBuffer',
+        'char',
+        'float'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuffer performs better for repeated modifications.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is main difference between String and StringBuffer?',
+
+      answer:
+        'String is immutable while StringBuffer is mutable.',
+    },
+
+    {
+      question:
+        'Why is StringBuffer preferred for repeated modifications?',
+
+      answer:
+        'StringBuffer modifies same object directly, improving performance and memory usage.',
+    },
+  ],
+
+  nextTopic: 'java-stringbuffer-vs-stringbuilder',
+},
+{
+  id: 'java-stringbuffer-vs-stringbuilder',
+
+  title: 'StringBuffer vs StringBuilder in Java',
+
+  slug: 'java-stringbuffer-vs-stringbuilder',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between StringBuffer and StringBuilder in Java deeply including performance, thread safety, synchronization, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'StringBuffer vs StringBuilder in Java',
+
+      content: `
+• Introduction to StringBuffer
+
+• Introduction to StringBuilder
+
+• Thread Safety
+
+• Synchronization
+
+• Performance Difference
+
+• Mutable Nature
+
+• Memory Efficiency
+
+• Best Use Cases
+
+• Interview Comparison
+`,
+    },
+
+    {
+      heading: 'Introduction to StringBuffer',
+
+      content: `
+StringBuffer is mutable class used for modifying strings efficiently.
+
+Features:
+
+• Mutable
+• Thread-safe
+• Synchronized methods
+
+Mostly used in multithreaded environments.
+`.trim(),
+    },
+
+    {
+      heading: 'Introduction to StringBuilder',
+
+      content: `
+StringBuilder is also mutable class for string modification.
+
+Features:
+
+• Mutable
+• Faster execution
+• Non-synchronized methods
+
+Mostly used in single-threaded applications.
+`.trim(),
+    },
+
+    {
+      heading: 'Thread Safety Difference',
+
+      content: `
+StringBuffer is thread-safe.
+
+Reason:
+
+• Methods are synchronized
+
+StringBuilder is not thread-safe because methods are not synchronized.
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Difference',
+
+      content: `
+StringBuilder performs faster than StringBuffer.
+
+Reason:
+
+• No synchronization overhead
+
+Best for:
+
+• Loops
+• Heavy string modifications
+• Large text generation
+`.trim(),
+    },
+
+    {
+      heading: 'Mutable Nature',
+
+      content: `
+Both StringBuffer and StringBuilder are mutable.
+
+Benefits:
+
+• Same object gets modified
+• Less memory wastage
+• Better performance
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use StringBuffer',
+
+      content: `
+Use StringBuffer when:
+
+• Multithreading exists
+• Thread safety required
+• Shared resources involved
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use StringBuilder',
+
+      content: `
+Use StringBuilder when:
+
+• Single-threaded application
+• Maximum performance required
+• Frequent modifications happen
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About StringBuffer vs StringBuilder',
+
+      content: `
+• Both are mutable classes
+• StringBuffer is synchronized
+• StringBuilder is faster
+• StringBuilder is not thread-safe
+
+Common Beginner Mistakes:
+
+• Using String for heavy modifications
+• Ignoring thread safety requirements
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'StringBuffer Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuffer sb = new StringBuffer("Java");
+
+        sb.append(" Programming");
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: 'Java Programming',
+    },
+
+    {
+      title: 'StringBuilder Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Java");
+
+        sb.append(" Developer");
+
+        System.out.println(sb);
+
+    }
+
+}`,
+
+      output: 'Java Developer',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class is thread-safe?',
+
+      options: [
+        'StringBuilder',
+        'StringBuffer',
+        'String',
+        'Scanner'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuffer is thread-safe because methods are synchronized.',
+    },
+
+    {
+      question:
+        'Which class performs faster?',
+
+      options: [
+        'StringBuffer',
+        'StringBuilder',
+        'String',
+        'Character'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringBuilder performs faster because it is not synchronized.',
+    },
+
+    {
+      question:
+        'Both StringBuffer and StringBuilder are?', 
+
+      options: [
+        'Immutable',
+        'Mutable',
+        'Abstract',
+        'Static'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Both classes are mutable.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between StringBuffer and StringBuilder?',
+
+      answer:
+        'StringBuffer is thread-safe and synchronized while StringBuilder is faster and non-synchronized.',
+    },
+
+    {
+      question:
+        'When should StringBuilder be preferred over StringBuffer?',
+
+      answer:
+        'StringBuilder should be preferred in single-threaded applications for better performance.',
+    },
+  ],
+
+  nextTopic: 'java-immutable-class',
+},
+
+{
+  id: 'java-immutable-class',
+
+  title: 'How to Create Immutable Class in Java?',
+
+  slug: 'java-immutable-class',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn how to create immutable class in Java deeply including final class, private variables, constructors, defensive copying, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'How to Create Immutable Class in Java?',
+
+      content: `
+• Introduction to Immutable Class
+
+• Making Class final
+
+• Private Data Members
+
+• No Setter Methods
+
+• Constructor Initialization
+
+• Returning Copies
+
+• Defensive Copying
+
+• Advantages of Immutable Classes
+
+• Real-World Examples
+`,
+    },
+
+    {
+      heading: 'Introduction to Immutable Class',
+
+      content: `
+Immutable class means object state cannot change after object creation.
+
+Once created:
+
+• Data remains fixed
+
+Example:
+
+• String class
+• Wrapper classes
+`.trim(),
+    },
+
+    {
+      heading: 'Making Class final',
+
+      content: `
+Class should be declared final.
+
+Reason:
+
+• Prevents inheritance
+• Stops method overriding
+• Protects object behavior
+
+Syntax:
+
+final class Student
+`.trim(),
+    },
+
+    {
+      heading: 'Private Data Members',
+
+      content: `
+All variables should be private.
+
+Benefits:
+
+• Direct access blocked
+• Better encapsulation
+• Improved security
+`.trim(),
+    },
+
+    {
+      heading: 'No Setter Methods',
+
+      content: `
+Immutable classes should not provide setter methods.
+
+Reason:
+
+• Prevents value modification
+• Keeps object constant
+`.trim(),
+    },
+
+    {
+      heading: 'Constructor Initialization',
+
+      content: `
+Values are initialized using constructor only.
+
+After object creation:
+
+• Data cannot change
+`.trim(),
+    },
+
+    {
+      heading: 'Defensive Copying',
+
+      content: `
+For mutable objects:
+
+• Return copies instead of original references
+
+Benefits:
+
+• Prevents external modification
+• Improves safety
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Immutable Classes',
+
+      content: `
+• Thread-safe
+• Better security
+• Easy caching
+• Reliable behavior
+• Safe object sharing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Immutable Classes',
+
+      content: `
+• Class should be final
+• Variables should be private
+• No setter methods allowed
+• Constructor initializes data
+
+Common Beginner Mistakes:
+
+• Providing setter methods
+• Returning original mutable references
+• Forgetting final keyword
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Immutable Class Example',
+
+      language: 'java',
+
+      code: `final class Student {
+
+    private final int id;
+
+    private final String name;
+
+    public Student(int id, String name) {
+
+        this.id = id;
+
+        this.name = name;
+
+    }
+
+    public int getId() {
+
+        return id;
+
+    }
+
+    public String getName() {
+
+        return name;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s = new Student(101, "Rahul");
+
+        System.out.println(s.getId());
+
+        System.out.println(s.getName());
+
+    }
+
+}`,
+
+      output: `101
+Rahul`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Why should immutable class be final?',
+
+      options: [
+        'For loops',
+        'To prevent inheritance',
+        'To create arrays',
+        'To stop constructors'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'final prevents inheritance and protects immutability.',
+    },
+
+    {
+      question:
+        'Immutable classes should provide?', 
+
+      options: [
+        'Setter methods',
+        'Public variables',
+        'No setter methods',
+        'Static loops'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Setter methods would allow modification.',
+    },
+
+    {
+      question:
+        'Which class is common immutable class in Java?',
+
+      options: [
+        'Scanner',
+        'String',
+        'Math',
+        'Thread'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'String is immutable class in Java.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How can we create immutable class in Java?',
+
+      answer:
+        'Make class final, variables private and final, initialize using constructor, and avoid setter methods.',
+    },
+
+    {
+      question:
+        'Why are immutable classes important?',
+
+      answer:
+        'Immutable classes improve thread safety, security, reliability, and safe object sharing.',
+    },
+  ],
+
+  nextTopic: 'java-tostring-method',
+},
+{
+  id: 'java-tostring-method',
+
+  title: 'Java toString Method',
+
+  slug: 'java-tostring-method',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java toString() method deeply including object representation, overriding, default implementation, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java toString Method',
+
+      content: `
+• Introduction to toString()
+
+• Default toString() Method
+
+• Overriding toString()
+
+• Object Representation
+
+• Readable Output
+
+• Real-World Usage
+
+• Interview Concepts
+
+• Best Practices
+`,
+    },
+
+    {
+      heading: 'Introduction to toString() Method',
+
+      content: `
+toString() method converts object into readable string representation.
+
+It belongs to Object class.
+
+Used for:
+
+• Printing objects
+• Debugging
+• Logging
+`.trim(),
+    },
+
+    {
+      heading: 'Default toString() Method',
+
+      content: `
+By default:
+
+toString() returns:
+
+ClassName@HashCode
+
+Example:
+
+Student@15db9742
+
+This output is not user-friendly.
+`.trim(),
+    },
+
+    {
+      heading: 'Overriding toString() Method',
+
+      content: `
+Programmers override toString() for meaningful output.
+
+Benefits:
+
+• Better readability
+• Easy debugging
+• Professional output
+`.trim(),
+    },
+
+    {
+      heading: 'Real-World Usage of toString()',
+
+      content: `
+toString() is heavily used in:
+
+• Logging systems
+• Debugging tools
+• Object printing
+• Frameworks
+
+Frequently asked in interviews.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Overriding toString()',
+
+      content: `
+• Cleaner object output
+• Easier debugging
+• Better maintainability
+• Improved readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About toString()',
+
+      content: `
+• toString() belongs to Object class
+• Default output is unreadable
+• Overriding improves readability
+• Automatically called during printing
+
+Common Beginner Mistakes:
+
+• Forgetting @Override annotation
+• Printing objects without overriding toString()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'toString() Method Example',
+
+      language: 'java',
+
+      code: `class Student {
+
+    int id;
+
+    String name;
+
+    Student(int id, String name) {
+
+        this.id = id;
+
+        this.name = name;
+
+    }
+
+    @Override
+    public String toString() {
+
+        return id + " " + name;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s = new Student(101, "Rahul");
+
+        System.out.println(s);
+
+    }
+
+}`,
+
+      output: '101 Rahul',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'toString() method belongs to which class?',
+
+      options: [
+        'String',
+        'Scanner',
+        'Object',
+        'Math'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'toString() method belongs to Object class.',
+    },
+
+    {
+      question:
+        'Default toString() output contains?', 
+
+      options: [
+        'Only object data',
+        'Class name and hashcode',
+        'Loop values',
+        'Package name only'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Default output contains class name and hashcode.',
+    },
+
+    {
+      question:
+        'Why do programmers override toString()?',
+
+      options: [
+        'For loops',
+        'For readable output',
+        'For arrays',
+        'For packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Overriding provides meaningful readable output.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is toString() method important in Java?',
+
+      answer:
+        'toString() provides readable object representation useful for debugging and logging.',
+    },
+
+    {
+      question:
+        'What happens if toString() is not overridden?',
+
+      answer:
+        'Java prints default output containing class name and hashcode.',
+    },
+  ],
+
+  nextTopic: 'java-stringtokenizer',
+},
+
+{
+  id: 'java-stringtokenizer',
+
+  title: 'StringTokenizer Class in Java',
+
+  slug: 'java-stringtokenizer',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '24 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn StringTokenizer class in Java deeply including token generation, delimiters, parsing logic, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'StringTokenizer Class in Java',
+
+      content: `
+• Introduction to StringTokenizer
+
+• Token Concept
+
+• Delimiters
+
+• hasMoreTokens()
+
+• nextToken()
+
+• Counting Tokens
+
+• Parsing Strings
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to StringTokenizer',
+
+      content: `
+StringTokenizer breaks string into smaller parts called tokens.
+
+Mostly used for:
+
+• Parsing text
+• Reading words
+• Data extraction
+`.trim(),
+    },
+
+    {
+      heading: 'Token Concept',
+
+      content: `
+A token is a separated part of string.
+
+Example:
+
+"Java Python C++"
+
+Tokens:
+
+• Java
+• Python
+• C++
+`.trim(),
+    },
+
+    {
+      heading: 'Delimiters in StringTokenizer',
+
+      content: `
+Delimiter separates tokens.
+
+Default delimiter:
+
+• Space
+
+Custom delimiters can also be used.
+
+Example:
+
+"," or "-"
+`.trim(),
+    },
+
+    {
+      heading: 'hasMoreTokens() Method',
+
+      content: `
+hasMoreTokens() checks whether more tokens exist.
+
+Returns:
+
+• true
+• false
+
+Useful inside loops.
+`.trim(),
+    },
+
+    {
+      heading: 'nextToken() Method',
+
+      content: `
+nextToken() returns next available token.
+
+Very important method in StringTokenizer.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of StringTokenizer',
+
+      content: `
+• Easy parsing
+• Faster token extraction
+• Simple syntax
+• Useful for input processing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About StringTokenizer',
+
+      content: `
+• StringTokenizer belongs to java.util package
+• Tokens are separated using delimiters
+• hasMoreTokens() checks remaining tokens
+• nextToken() fetches next token
+
+Common Beginner Mistakes:
+
+• Forgetting delimiter behavior
+• Calling nextToken() without checking availability
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'StringTokenizer Example',
+
+      language: 'java',
+
+      code: `import java.util.StringTokenizer;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        StringTokenizer st =
+            new StringTokenizer("Java Python C++");
+
+        while(st.hasMoreTokens()) {
+
+            System.out.println(st.nextToken());
+
+        }
+
+    }
+
+}`,
+
+      output: `Java
+Python
+C++`,
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'StringTokenizer is used for?', 
+
+      options: [
+        'Array sorting',
+        'Breaking strings into tokens',
+        'Package importing',
+        'Loop execution'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringTokenizer splits strings into tokens.',
+    },
+
+    {
+      question:
+        'Which method checks remaining tokens?',
+
+      options: [
+        'nextToken()',
+        'hasMoreTokens()',
+        'trim()',
+        'split()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'hasMoreTokens() checks token availability.',
+    },
+
+    {
+      question:
+        'Default delimiter in StringTokenizer is?', 
+
+      options: [
+        'Comma',
+        'Space',
+        'Colon',
+        'Semicolon'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Default delimiter is space.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is StringTokenizer in Java?',
+
+      answer:
+        'StringTokenizer breaks strings into smaller tokens using delimiters.',
+    },
+
+    {
+      question:
+        'Why is hasMoreTokens() important?',
+
+      answer:
+        'It prevents errors by checking token availability before fetching next token.',
+    },
+  ],
+
+  nextTopic: 'java-stringjoiner',
+},
+
+{
+  id: 'java-stringjoiner',
+
+  title: 'StringJoiner in Java',
+
+  slug: 'java-stringjoiner',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '20 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn StringJoiner in Java deeply including delimiters, prefix, suffix, joining strings, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'StringJoiner in Java',
+
+      content: `
+• Introduction to StringJoiner
+
+• Delimiter Usage
+
+• Prefix and Suffix
+
+• add() Method
+
+• merge() Method
+
+• String Joining
+
+• Performance Benefits
+
+• Real-World Usage
+`,
+    },
+
+    {
+      heading: 'Introduction to StringJoiner',
+
+      content: `
+StringJoiner joins multiple strings together using delimiters.
+
+Introduced in:
+
+• Java 8
+
+Useful for formatted output generation.
+`.trim(),
+    },
+
+    {
+      heading: 'Delimiter Usage',
+
+      content: `
+Delimiter separates joined strings.
+
+Examples:
+
+• Comma
+• Hyphen
+• Space
+
+Output becomes more readable.
+`.trim(),
+    },
+
+    {
+      heading: 'Prefix and Suffix',
+
+      content: `
+StringJoiner supports custom prefix and suffix.
+
+Example:
+
+[Java, Python, C++]
+
+Here:
+
+• [ is prefix
+• ] is suffix
+`.trim(),
+    },
+
+    {
+      heading: 'add() Method',
+
+      content: `
+add() inserts new element into StringJoiner.
+
+Example:
+
+sj.add("Java");
+`.trim(),
+    },
+
+    {
+      heading: 'merge() Method',
+
+      content: `
+merge() combines two StringJoiner objects together.
+
+Useful for dynamic string creation.
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of StringJoiner',
+
+      content: `
+• Cleaner string joining
+• Better formatting
+• Less manual concatenation
+• Improved readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About StringJoiner',
+
+      content: `
+• Introduced in Java 8
+• Supports delimiters
+• Supports prefix and suffix
+• Useful for formatted output
+
+Common Beginner Mistakes:
+
+• Forgetting delimiters
+• Confusing StringJoiner with StringBuilder
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'StringJoiner Example',
+
+      language: 'java',
+
+      code: `import java.util.StringJoiner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        StringJoiner sj =
+            new StringJoiner(", ", "[", "]");
+
+        sj.add("Java");
+
+        sj.add("Python");
+
+        sj.add("C++");
+
+        System.out.println(sj);
+
+    }
+
+}`,
+
+      output: '[Java, Python, C++]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'StringJoiner was introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'StringJoiner was introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Which method adds elements in StringJoiner?',
+
+      options: [
+        'append()',
+        'insert()',
+        'add()',
+        'merge()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'add() inserts new elements.',
+    },
+
+    {
+      question:
+        'StringJoiner mainly helps in?', 
+
+      options: [
+        'Array sorting',
+        'Formatted string joining',
+        'Inheritance',
+        'Package creation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'StringJoiner helps in formatted string joining.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is StringJoiner in Java?',
+
+      answer:
+        'StringJoiner joins multiple strings using delimiters, prefixes, and suffixes.',
+    },
+
+    {
+      question:
+        'Why is StringJoiner useful?',
+
+      answer:
+        'It simplifies formatted string joining and improves readability.',
+    },
+  ],
+
+  nextTopic: 'java-string-format',
+},
+
+{
+  id: 'java-string-format',
+
+  title: 'String format() Method in Java',
+
+  slug: 'java-string-format',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '22 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn String format() method in Java deeply including placeholders, formatted output, formatting specifiers, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'String format() Method in Java',
+
+      content: `
+• Introduction to format()
+
+• Placeholders
+
+• Formatting Specifiers
+
+• Number Formatting
+
+• String Formatting
+
+• Floating Point Formatting
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to format() Method',
+
+      content: `
+format() creates formatted strings using placeholders.
+
+Useful for:
+
+• Reports
+• Tables
+• Professional output
+• Dynamic messages
+`.trim(),
+    },
+
+    {
+      heading: 'Placeholders in format()',
+
+      content: `
+Common placeholders:
+
+• %s → String
+• %d → Integer
+• %f → Floating point
+
+These placeholders are replaced by actual values.
+`.trim(),
+    },
+
+    {
+      heading: 'Number Formatting',
+
+      content: `
+format() supports number formatting.
+
+Example:
+
+%.2f
+
+Limits decimal places to 2 digits.
+`.trim(),
+    },
+
+    {
+      heading: 'String Formatting',
+
+      content: `
+Strings can be aligned and formatted properly.
+
+Useful for:
+
+• Reports
+• Console output
+• Structured data
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of format()',
+
+      content: `
+• Cleaner output
+• Professional formatting
+• Easy dynamic messages
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About format()',
+
+      content: `
+• format() uses placeholders
+• %s represents strings
+• %d represents integers
+• %f represents floating numbers
+
+Common Beginner Mistakes:
+
+• Wrong placeholders
+• Mismatched data types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'format() Method Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String name = "Rahul";
+
+        int marks = 95;
+
+        String result =
+            String.format(
+                "Student: %s Marks: %d",
+                name,
+                marks
+            );
+
+        System.out.println(result);
+
+    }
+
+}`,
+
+      output: 'Student: Rahul Marks: 95',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which placeholder represents String?',
+
+      options: ['%d', '%f', '%s', '%c'],
+
+      answer: 2,
+
+      explanation:
+        '%s represents String values.',
+    },
+
+    {
+      question:
+        'Which placeholder represents integer?',
+
+      options: ['%d', '%s', '%f', '%n'],
+
+      answer: 0,
+
+      explanation:
+        '%d represents integer values.',
+    },
+
+    {
+      question:
+        'format() method mainly helps in?', 
+
+      options: [
+        'Loop creation',
+        'Formatted output',
+        'Inheritance',
+        'Array sorting'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'format() creates professional formatted output.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is String format() method in Java?',
+
+      answer:
+        'format() creates formatted strings using placeholders and values.',
+    },
+
+    {
+      question:
+        'Why is format() useful in Java?',
+
+      answer:
+        'It improves readability and generates professional structured output.',
+    },
+  ],
+
+  nextTopic: 'java-regex',
+},
+
+{
+  id: 'java-regex',
+
+  title: 'Regular Expressions in Java',
+
+  slug: 'java-regex',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Regular Expressions in Java deeply including pattern matching, validation, regex symbols, matcher class, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Regular Expressions in Java',
+
+      content: `
+• Introduction to Regex
+
+• Pattern Class
+
+• Matcher Class
+
+• Regex Symbols
+
+• Validation Patterns
+
+• Email Validation
+
+• Mobile Number Validation
+
+• Real-World Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Regex',
+
+      content: `
+Regular Expressions are patterns used for matching text.
+
+Regex helps in:
+
+• Validation
+• Searching
+• Parsing
+• Data filtering
+`.trim(),
+    },
+
+    {
+      heading: 'Pattern and Matcher Classes',
+
+      content: `
+Java regex mainly uses:
+
+• Pattern class
+• Matcher class
+
+Pattern defines regex rules.
+
+Matcher checks matches.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Regex Symbols',
+
+      content: `
+Common symbols:
+
+• . → Any character
+• * → Multiple occurrences
+• + → One or more occurrences
+• \\d → Digit
+• \\s → Space
+`.trim(),
+    },
+
+    {
+      heading: 'Validation Using Regex',
+
+      content: `
+Regex is heavily used for validation.
+
+Examples:
+
+• Email validation
+• Password validation
+• Mobile number validation
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Regex',
+
+      content: `
+• Powerful text matching
+• Faster validation
+• Flexible searching
+• Cleaner code
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Regex',
+
+      content: `
+• Regex uses special symbols
+• Pattern class stores regex
+• Matcher checks matching
+• Regex simplifies validation
+
+Common Beginner Mistakes:
+
+• Wrong escape characters
+• Invalid regex patterns
+• Confusing regex symbols
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Regex Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String email = "test@gmail.com";
+
+        boolean result =
+            email.matches(
+                "[a-zA-Z0-9._]+@[a-z]+\\\\.[a-z]+"
+            );
+
+        System.out.println(result);
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Regex is mainly used for?', 
+
+      options: [
+        'Loop execution',
+        'Text pattern matching',
+        'Array sorting',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Regex is used for pattern matching.',
+    },
+
+    {
+      question:
+        'Which class stores regex pattern?',
+
+      options: [
+        'Scanner',
+        'Pattern',
+        'String',
+        'Math'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Pattern class stores regex patterns.',
+    },
+
+    {
+      question:
+        'Which symbol represents digit in regex?',
+
+      options: ['\\d', '\\s', '+', '*'],
+
+      answer: 0,
+
+      explanation:
+        '\\d represents digit.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are Regular Expressions in Java?',
+
+      answer:
+        'Regular Expressions are patterns used for searching, matching, and validating text.',
+    },
+
+    {
+      question:
+        'Why is regex important in Java?',
+
+      answer:
+        'Regex simplifies validation, searching, filtering, and text processing.',
+    },
+  ],
+
+  nextTopic: 'java-collections-framework',
+},
 ];
