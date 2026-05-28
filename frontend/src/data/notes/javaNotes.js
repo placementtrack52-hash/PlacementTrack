@@ -28567,6 +28567,16650 @@ public class Main {
     },
   ],
 
-  nextTopic: 'java-filewriter',
+  nextTopic: 'java-file-handling',
+},
+{
+  id: 'java-file-handling',
+
+  title: 'File Handling in Java',
+
+  slug: 'java-file-handling',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '42 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn File Handling in Java deeply including file creation, reading, writing, deletion, and important interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'File Handling in Java',
+
+      content: `
+• Introduction to File Handling
+
+• File Operations
+
+• File Creation
+
+• File Reading
+
+• File Writing
+
+• File Deletion
+
+• File Class
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to File Handling',
+
+      content: `
+File handling allows Java programs to:
+
+• Store data permanently
+• Read saved data
+• Modify files
+• Delete files
+
+Java provides powerful file handling classes in java.io package.
+`.trim(),
+    },
+
+    {
+      heading: 'Common File Operations',
+
+      content: `
+Important file operations:
+
+1. Create file
+2. Read file
+3. Write file
+4. Delete file
+5. Rename file
+`.trim(),
+    },
+
+    {
+      heading: 'Why File Handling is Important',
+
+      content: `
+File handling is used in:
+
+• Banking systems
+• Student management systems
+• Data storage
+• Logging systems
+• Configuration files
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of File Handling',
+
+      content: `
+• Permanent data storage
+• Easy data management
+• Fast data retrieval
+• Better application control
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About File Handling',
+
+      content: `
+• Java uses java.io package
+• Files can store large data
+• Always close file resources
+• Handle exceptions properly
+
+Common Beginner Mistakes:
+
+• Forgetting close()
+• Using wrong file path
+• Ignoring exceptions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Simple File Handling Example',
+
+      language: 'java',
+
+      code: `import java.io.File;
+import java.io.FileWriter;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        File file = new File("data.txt");
+
+        file.createNewFile();
+
+        FileWriter writer =
+            new FileWriter(file);
+
+        writer.write("Java File Handling");
+
+        writer.close();
+
+        System.out.println(
+            "File Created Successfully"
+        );
+
+    }
+
+}`,
+
+      output: 'File Created Successfully',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which package is mainly used for file handling?',
+
+      options: [
+        'java.util',
+        'java.io',
+        'java.lang',
+        'java.sql'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'java.io package is mainly used for file handling.',
+    },
+
+    {
+      question:
+        'File handling is used for?', 
+
+      options: [
+        'Temporary storage',
+        'Permanent data storage',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'File handling stores data permanently.',
+    },
+
+    {
+      question:
+        'Which operation is part of file handling?',
+
+      options: [
+        'Reading file',
+        'Inheritance',
+        'Polymorphism',
+        'Compilation'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Reading files is important file handling operation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is file handling in Java?',
+
+      answer:
+        'File handling is process of creating, reading, writing, and deleting files using Java programs.',
+    },
+
+    {
+      question:
+        'Why is file handling important?',
+
+      answer:
+        'It allows permanent data storage and efficient data management.',
+    },
+  ],
+
+  nextTopic: 'java-file-class',
+},
+
+{
+  id: 'java-file-class',
+
+  title: 'Java File class',
+
+  slug: 'java-file-class',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java File class deeply including file creation, path handling, directory management, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java File class',
+
+      content: `
+• Introduction to File class
+
+• Creating File Objects
+
+• File Path Handling
+
+• File Information Methods
+
+• Directory Handling
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is File class?',
+
+      content: `
+File class represents file and directory pathnames.
+
+Used for:
+
+• File creation
+• File information
+• Directory operations
+`.trim(),
+    },
+
+    {
+      heading: 'Creating File Object',
+
+      content: `
+Syntax:
+
+File file = new File("data.txt");
+
+File object represents file path.
+`.trim(),
+    },
+
+    {
+      heading: 'Useful Methods of File class',
+
+      content: `
+Important methods:
+
+• createNewFile()
+• exists()
+• delete()
+• getName()
+• length()
+• mkdir()
+`.trim(),
+    },
+
+    {
+      heading: 'Why File class is Important',
+
+      content: `
+File class helps:
+
+• Manage files
+• Access file details
+• Work with directories
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About File class',
+
+      content: `
+• File class belongs to java.io package
+• Represents files and directories
+• Does not read/write data directly
+• Used with streams for data operations
+
+Common Beginner Mistakes:
+
+• Confusing file object with actual file content
+• Forgetting exception handling
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'File class Example',
+
+      language: 'java',
+
+      code: `import java.io.File;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        File file = new File("sample.txt");
+
+        if(file.createNewFile()) {
+
+            System.out.println(
+                "File Created"
+            );
+
+        }
+
+        else {
+
+            System.out.println(
+                "File Already Exists"
+            );
+
+        }
+
+    }
+
+}`,
+
+      output: 'File Created',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'File class belongs to which package?',
+
+      options: [
+        'java.lang',
+        'java.io',
+        'java.util',
+        'java.sql'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'File class belongs to java.io package.',
+    },
+
+    {
+      question:
+        'File class represents?', 
+
+      options: [
+        'Only data',
+        'File and directory pathnames',
+        'Compiler',
+        'Thread'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'File class represents files and directories.',
+    },
+
+    {
+      question:
+        'Which method creates new file?',
+
+      options: [
+        'newFile()',
+        'createNewFile()',
+        'makeFile()',
+        'buildFile()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'createNewFile() creates file.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is File class in Java?',
+
+      answer:
+        'File class represents file and directory pathnames and provides methods for file operations.',
+    },
+
+    {
+      question:
+        'Does File class read/write file data directly?',
+
+      answer:
+        'No, File class only manages file information and paths.',
+    },
+  ],
+
+  nextTopic: 'java-create-file',
+},
+
+{
+  id: 'java-create-file',
+
+  title: 'How to Create a File in Java',
+
+  slug: 'java-create-file',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '26 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn how to create files in Java deeply including createNewFile(), file paths, exception handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'How to Create a File in Java',
+
+      content: `
+• Introduction to File Creation
+
+• createNewFile() Method
+
+• File Paths
+
+• Exception Handling
+
+• File Existence Checking
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to File Creation',
+
+      content: `
+Java provides File class for creating files.
+
+Main method used:
+
+• createNewFile()
+`.trim(),
+    },
+
+    {
+      heading: 'createNewFile() Method',
+
+      content: `
+createNewFile():
+
+• Creates new empty file
+• Returns true if file created
+• Returns false if file already exists
+`.trim(),
+    },
+
+    {
+      heading: 'Why File Creation is Important',
+
+      content: `
+Used in:
+
+• Report generation
+• Data storage
+• Log files
+• Configuration systems
+`.trim(),
+    },
+
+    {
+      heading: 'Exception Handling',
+
+      content: `
+File creation may throw exceptions.
+
+Common exception:
+
+• IOException
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About File Creation',
+
+      content: `
+• File class is required
+• File path must be valid
+• IOException should be handled
+• File may already exist
+
+Common Beginner Mistakes:
+
+• Wrong file path
+• Ignoring exceptions
+• Forgetting import statement
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Create File Example',
+
+      language: 'java',
+
+      code: `import java.io.File;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        File file = new File("newfile.txt");
+
+        if(file.createNewFile()) {
+
+            System.out.println(
+                "File Created Successfully"
+            );
+
+        }
+
+        else {
+
+            System.out.println(
+                "File Already Exists"
+            );
+
+        }
+
+    }
+
+}`,
+
+      output: 'File Created Successfully',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method creates new file?',
+
+      options: [
+        'makeFile()',
+        'buildFile()',
+        'createNewFile()',
+        'generateFile()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'createNewFile() creates new file.',
+    },
+
+    {
+      question:
+        'createNewFile() returns false when?', 
+
+      options: [
+        'Compilation fails',
+        'File already exists',
+        'Thread stops',
+        'Array created'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'It returns false if file already exists.',
+    },
+
+    {
+      question:
+        'Which exception may occur during file creation?',
+
+      options: [
+        'ArithmeticException',
+        'IOException',
+        'NullPointerException',
+        'ClassCastException'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'IOException may occur during file operations.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How do you create a file in Java?',
+
+      answer:
+        'File can be created using File class and createNewFile() method.',
+    },
+
+    {
+      question:
+        'What does createNewFile() return?',
+
+      answer:
+        'It returns true if file is newly created and false if file already exists.',
+    },
+  ],
+
+  nextTopic: 'java-read-file',
+},
+
+{
+  id: 'java-read-file',
+
+  title: 'How to Read File in Java',
+
+  slug: 'java-read-file',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn how to read files in Java deeply including Scanner class, FileReader, buffering, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'How to Read File in Java',
+
+      content: `
+• Introduction to File Reading
+
+• Scanner Class
+
+• FileReader
+
+• Buffered Reading
+
+• Reading Line by Line
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to File Reading',
+
+      content: `
+Java provides multiple ways to read files.
+
+Common classes:
+
+• Scanner
+• FileReader
+• BufferedReader
+`.trim(),
+    },
+
+    {
+      heading: 'Using Scanner Class',
+
+      content: `
+Scanner reads file data easily.
+
+Useful for:
+
+• Reading text
+• Reading line by line
+`.trim(),
+    },
+
+    {
+      heading: 'Why Buffered Reading is Important',
+
+      content: `
+Buffered reading improves:
+
+• Reading speed
+• Performance
+• Efficiency
+`.trim(),
+    },
+
+    {
+      heading: 'Real-world Usage',
+
+      content: `
+Used in:
+
+• Log processing
+• Data analysis
+• Student records
+• Configuration reading
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About File Reading',
+
+      content: `
+• File path must exist
+• Close readers after use
+• Handle exceptions properly
+• Buffered reading is faster
+
+Common Beginner Mistakes:
+
+• Forgetting close()
+• Wrong file path
+• Ignoring exceptions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Read File Example',
+
+      language: 'java',
+
+      code: `import java.io.File;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        File file = new File("data.txt");
+
+        Scanner sc = new Scanner(file);
+
+        while(sc.hasNextLine()) {
+
+            System.out.println(
+                sc.nextLine()
+            );
+
+        }
+
+        sc.close();
+
+    }
+
+}`,
+
+      output: 'File content displayed',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class is commonly used to read files?',
+
+      options: [
+        'Thread',
+        'Scanner',
+        'Runtime',
+        'Object'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Scanner is commonly used for file reading.',
+    },
+
+    {
+      question:
+        'Buffered reading improves?', 
+
+      options: [
+        'Compilation',
+        'Performance',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Buffered reading improves performance.',
+    },
+
+    {
+      question:
+        'Which method checks next line availability?',
+
+      options: [
+        'next()',
+        'hasNextLine()',
+        'lineAvailable()',
+        'checkLine()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'hasNextLine() checks line availability.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How can files be read in Java?',
+
+      answer:
+        'Files can be read using Scanner, FileReader, or BufferedReader classes.',
+    },
+
+    {
+      question:
+        'Why is BufferedReader faster?',
+
+      answer:
+        'Because it reads data using buffer memory instead of character-by-character reading.',
+    },
+  ],
+
+  nextTopic: 'java-delete-file',
+},
+
+{
+  id: 'java-delete-file',
+
+  title: 'How to Delete a File in Java',
+
+  slug: 'java-delete-file',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '24 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn how to delete files in Java deeply including delete() method, file checking, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'How to Delete a File in Java',
+
+      content: `
+• Introduction to File Deletion
+
+• delete() Method
+
+• File Existence Checking
+
+• Safe File Removal
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to File Deletion',
+
+      content: `
+Java File class provides delete() method to remove files.
+`.trim(),
+    },
+
+    {
+      heading: 'delete() Method',
+
+      content: `
+delete():
+
+• Deletes file permanently
+• Returns true if deletion successful
+• Returns false if deletion fails
+`.trim(),
+    },
+
+    {
+      heading: 'Why File Deletion is Important',
+
+      content: `
+Used for:
+
+• Removing temporary files
+• Cleaning logs
+• Storage management
+`.trim(),
+    },
+
+    {
+      heading: 'Safe File Deletion',
+
+      content: `
+Always check:
+
+• File existence
+• File permissions
+• Important data backup
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About File Deletion',
+
+      content: `
+• delete() removes file permanently
+• Deleted file cannot be recovered easily
+• Always check existence before deletion
+
+Common Beginner Mistakes:
+
+• Deleting wrong file
+• Not checking delete() result
+• Ignoring permissions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Delete File Example',
+
+      language: 'java',
+
+      code: `import java.io.File;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        File file = new File("data.txt");
+
+        if(file.delete()) {
+
+            System.out.println(
+                "File Deleted Successfully"
+            );
+
+        }
+
+        else {
+
+            System.out.println(
+                "Unable to Delete File"
+            );
+
+        }
+
+    }
+
+}`,
+
+      output: 'File Deleted Successfully',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method deletes file?',
+
+      options: [
+        'remove()',
+        'erase()',
+        'delete()',
+        'clear()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'delete() method removes file.',
+    },
+
+    {
+      question:
+        'delete() returns true when?', 
+
+      options: [
+        'Compilation succeeds',
+        'File deleted successfully',
+        'Array created',
+        'File opened'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'delete() returns true if deletion successful.',
+    },
+
+    {
+      question:
+        'File deletion is?', 
+
+      options: [
+        'Temporary',
+        'Permanent',
+        'Virtual',
+        'Automatic'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'File deletion is permanent.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How can file be deleted in Java?',
+
+      answer:
+        'File can be deleted using delete() method of File class.',
+    },
+
+    {
+      question:
+        'Why should delete() return value be checked?',
+
+      answer:
+        'Because deletion may fail due to permissions or missing file.',
+    },
+  ],
+
+  nextTopic: 'java-filepermission-class',
+},
+{
+  id: 'java-filepermission-class',
+
+  title: 'Java FilePermission class',
+
+  slug: 'java-filepermission-class',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '28 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java FilePermission class deeply including file access permissions, security management, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java FilePermission class',
+
+      content: `
+• Introduction to FilePermission
+
+• File Access Security
+
+• Read Permission
+
+• Write Permission
+
+• Execute Permission
+
+• Security Management
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is FilePermission class?',
+
+      content: `
+FilePermission class is used to control access permissions for files and directories.
+
+It belongs to:
+
+• java.io package
+`.trim(),
+    },
+
+    {
+      heading: 'Why FilePermission is Important',
+
+      content: `
+FilePermission helps:
+
+• Secure file access
+• Restrict unauthorized operations
+• Protect sensitive files
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Permissions',
+
+      content: `
+Common permissions:
+
+• read
+• write
+• execute
+• delete
+`.trim(),
+    },
+
+    {
+      heading: 'Real-world Usage',
+
+      content: `
+Used in:
+
+• Enterprise applications
+• Secure systems
+• Banking software
+• File protection systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About FilePermission',
+
+      content: `
+• Used for security management
+• Controls file operations
+• Supports multiple permissions
+• Improves application security
+
+Common Beginner Mistakes:
+
+• Using invalid permission names
+• Forgetting security concepts
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'FilePermission Example',
+
+      language: 'java',
+
+      code: `import java.io.FilePermission;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        FilePermission fp =
+            new FilePermission(
+                "data.txt",
+                "read"
+            );
+
+        System.out.println(
+            fp.getActions()
+        );
+
+    }
+
+}`,
+
+      output: 'read',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'FilePermission class is used for?',
+
+      options: [
+        'Thread creation',
+        'File security',
+        'Compilation',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'FilePermission controls file security permissions.',
+    },
+
+    {
+      question:
+        'Which permission allows file reading?',
+
+      options: [
+        'execute',
+        'write',
+        'read',
+        'delete'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'read permission allows file reading.',
+    },
+
+    {
+      question:
+        'FilePermission belongs to?', 
+
+      options: [
+        'java.util',
+        'java.lang',
+        'java.io',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'FilePermission belongs to java.io package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is FilePermission class in Java?',
+
+      answer:
+        'FilePermission class is used to control access permissions for files and directories.',
+    },
+
+    {
+      question:
+        'Why is FilePermission important?',
+
+      answer:
+        'It improves application security by controlling file access operations.',
+    },
+  ],
+
+  nextTopic: 'java-filedescriptor-class',
+},
+
+{
+  id: 'java-filedescriptor-class',
+
+  title: 'Java FileDescriptor class',
+
+  slug: 'java-filedescriptor-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java FileDescriptor class deeply including low-level file handling, stream management, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java FileDescriptor class',
+
+      content: `
+• Introduction to FileDescriptor
+
+• Low-level File Access
+
+• Stream Connection
+
+• Standard Input and Output
+
+• File Descriptor Management
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is FileDescriptor class?',
+
+      content: `
+FileDescriptor class represents connection to file, socket, or input/output resource.
+
+It is low-level system object.
+`.trim(),
+    },
+
+    {
+      heading: 'Why FileDescriptor is Important',
+
+      content: `
+FileDescriptor helps:
+
+• Access underlying file resource
+• Manage stream connections
+• Handle low-level I/O
+`.trim(),
+    },
+
+    {
+      heading: 'Standard Descriptors',
+
+      content: `
+Java provides standard descriptors:
+
+• FileDescriptor.in
+• FileDescriptor.out
+• FileDescriptor.err
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of FileDescriptor',
+
+      content: `
+• Low-level control
+• Better resource management
+• Stream connectivity
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About FileDescriptor',
+
+      content: `
+• Represents system-level resource
+• Used with streams
+• Supports low-level operations
+• Part of java.io package
+
+Common Beginner Mistakes:
+
+• Confusing descriptor with file object
+• Ignoring resource handling
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'FileDescriptor Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        FileOutputStream fos =
+            new FileOutputStream("data.txt");
+
+        FileDescriptor fd =
+            fos.getFD();
+
+        System.out.println(
+            fd.valid()
+        );
+
+        fos.close();
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'FileDescriptor represents?', 
+
+      options: [
+        'Loop',
+        'Low-level file resource',
+        'Package',
+        'Array'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'FileDescriptor represents low-level resource.',
+    },
+
+    {
+      question:
+        'Which method checks descriptor validity?',
+
+      options: [
+        'exists()',
+        'valid()',
+        'check()',
+        'verify()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'valid() checks descriptor validity.',
+    },
+
+    {
+      question:
+        'FileDescriptor belongs to?', 
+
+      options: [
+        'java.io',
+        'java.sql',
+        'java.util',
+        'java.lang'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'FileDescriptor belongs to java.io package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is FileDescriptor class in Java?',
+
+      answer:
+        'FileDescriptor represents low-level connection to file or I/O resource.',
+    },
+
+    {
+      question:
+        'Why is FileDescriptor useful?',
+
+      answer:
+        'It provides low-level access and management of file resources.',
+    },
+  ],
+
+  nextTopic: 'java-randomaccessfile',
+},
+
+{
+  id: 'java-randomaccessfile',
+
+  title: 'Java RandomAccessFile',
+
+  slug: 'java-randomaccessfile',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java RandomAccessFile deeply including random file access, seek() method, file pointer handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java RandomAccessFile',
+
+      content: `
+• Introduction to RandomAccessFile
+
+• Random File Access
+
+• seek() Method
+
+• File Pointer
+
+• Reading and Writing
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is RandomAccessFile?',
+
+      content: `
+RandomAccessFile allows reading and writing at any position in file.
+
+Unlike streams:
+
+• Data can be accessed randomly
+`.trim(),
+    },
+
+    {
+      heading: 'Why RandomAccessFile is Important',
+
+      content: `
+Used for:
+
+• Database systems
+• File editing
+• Large file processing
+• Record management
+`.trim(),
+    },
+
+    {
+      heading: 'seek() Method',
+
+      content: `
+seek() moves file pointer to specific position.
+
+Syntax:
+
+raf.seek(position);
+`.trim(),
+    },
+
+    {
+      heading: 'File Pointer Concept',
+
+      content: `
+File pointer indicates current file position.
+
+Operations happen from pointer location.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About RandomAccessFile',
+
+      content: `
+• Supports read and write
+• Allows direct file access
+• Uses file pointer
+• Faster for large files
+
+Common Beginner Mistakes:
+
+• Wrong seek positions
+• Forgetting close()
+• Confusing with sequential streams
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'RandomAccessFile Example',
+
+      language: 'java',
+
+      code: `import java.io.RandomAccessFile;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        RandomAccessFile raf =
+            new RandomAccessFile(
+                "data.txt",
+                "rw"
+            );
+
+        raf.writeUTF("Java");
+
+        raf.seek(0);
+
+        System.out.println(
+            raf.readUTF()
+        );
+
+        raf.close();
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'RandomAccessFile allows?', 
+
+      options: [
+        'Only sequential access',
+        'Random file access',
+        'Only compilation',
+        'Only inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'RandomAccessFile supports random file access.',
+    },
+
+    {
+      question:
+        'Which method changes file pointer position?',
+
+      options: [
+        'move()',
+        'seek()',
+        'shift()',
+        'locate()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'seek() changes file pointer position.',
+    },
+
+    {
+      question:
+        'RandomAccessFile supports?', 
+
+      options: [
+        'Only reading',
+        'Only writing',
+        'Both reading and writing',
+        'Only deletion'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'RandomAccessFile supports both reading and writing.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is RandomAccessFile in Java?',
+
+      answer:
+        'RandomAccessFile allows reading and writing data at any position inside file.',
+    },
+
+    {
+      question:
+        'What is purpose of seek() method?',
+
+      answer:
+        'seek() moves file pointer to specific location inside file.',
+    },
+  ],
+
+  nextTopic: 'java-create-zip-file',
+},
+
+{
+  id: 'java-create-zip-file',
+
+  title: 'How to Create a Zip File in Java',
+
+  slug: 'java-create-zip-file',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '34 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn how to create ZIP files in Java deeply including ZipOutputStream, compression concepts, and interview questions.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'IBM'],
+
+  sections: [
+    {
+      heading: 'How to Create a Zip File in Java',
+
+      content: `
+• Introduction to ZIP Files
+
+• ZipOutputStream
+
+• Compression Concept
+
+• Adding Files to ZIP
+
+• File Archiving
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to ZIP Files',
+
+      content: `
+ZIP file compresses one or more files into single archive.
+
+Benefits:
+
+• Reduced file size
+• Easy file sharing
+`.trim(),
+    },
+
+    {
+      heading: 'ZipOutputStream',
+
+      content: `
+ZipOutputStream is used to create ZIP files in Java.
+
+It belongs to:
+
+• java.util.zip package
+`.trim(),
+    },
+
+    {
+      heading: 'Why ZIP Files are Important',
+
+      content: `
+Used for:
+
+• File backup
+• Data transfer
+• Software distribution
+• Storage optimization
+`.trim(),
+    },
+
+    {
+      heading: 'Compression Concept',
+
+      content: `
+Compression reduces storage size by encoding data efficiently.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ZIP Files',
+
+      content: `
+• ZIP combines multiple files
+• Compression saves storage
+• ZipOutputStream creates ZIP archives
+• Useful for file transfer
+
+Common Beginner Mistakes:
+
+• Forgetting closeEntry()
+• Ignoring stream closing
+• Wrong file paths
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Create ZIP File Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+import java.util.zip.*;
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        FileOutputStream fos =
+            new FileOutputStream("data.zip");
+
+        ZipOutputStream zos =
+            new ZipOutputStream(fos);
+
+        ZipEntry entry =
+            new ZipEntry("text.txt");
+
+        zos.putNextEntry(entry);
+
+        byte[] data =
+            "Hello Java ZIP".getBytes();
+
+        zos.write(data, 0, data.length);
+
+        zos.closeEntry();
+
+        zos.close();
+
+        System.out.println(
+            "ZIP File Created"
+        );
+
+    }
+
+}`,
+
+      output: 'ZIP File Created',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which class creates ZIP files?',
+
+      options: [
+        'FileWriter',
+        'ZipOutputStream',
+        'Scanner',
+        'BufferedReader'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ZipOutputStream creates ZIP files.',
+    },
+
+    {
+      question:
+        'ZIP files are used for?', 
+
+      options: [
+        'Compilation',
+        'Compression',
+        'Inheritance',
+        'Threading'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ZIP files are mainly used for compression.',
+    },
+
+    {
+      question:
+        'ZipOutputStream belongs to?', 
+
+      options: [
+        'java.io',
+        'java.sql',
+        'java.util.zip',
+        'java.net'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ZipOutputStream belongs to java.util.zip package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How do you create ZIP file in Java?',
+
+      answer:
+        'ZIP files can be created using ZipOutputStream class from java.util.zip package.',
+    },
+
+    {
+      question:
+        'Why are ZIP files useful?',
+
+      answer:
+        'ZIP files reduce storage size and simplify file sharing.',
+    },
+  ],
+
+  nextTopic: 'java-serialization',
+},
+
+{
+  id: 'java-serialization',
+
+  title: 'Serialization in Java',
+
+  slug: 'java-serialization',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '38 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Serialization in Java deeply including object conversion, Serializable interface, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Serialization in Java',
+
+      content: `
+• Introduction to Serialization
+
+• Serializable Interface
+
+• Object Streams
+
+• Object Persistence
+
+• Deserialization
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Serialization?',
+
+      content: `
+Serialization converts object into byte stream.
+
+Purpose:
+
+• Save object state
+• Transfer objects over network
+`.trim(),
+    },
+
+    {
+      heading: 'Serializable Interface',
+
+      content: `
+Serializable is marker interface.
+
+Used to allow object serialization.
+`.trim(),
+    },
+
+    {
+      heading: 'Deserialization',
+
+      content: `
+Deserialization converts byte stream back into object.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Serialization is Important',
+
+      content: `
+Used in:
+
+• Networking
+• File storage
+• Distributed systems
+• Session management
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Serialization',
+
+      content: `
+• ObjectOutputStream used for serialization
+• ObjectInputStream used for deserialization
+• Serializable interface required
+• Improves object persistence
+
+Common Beginner Mistakes:
+
+• Forgetting Serializable interface
+• Serializing non-serializable objects
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Serialization Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+class Student implements Serializable {
+
+    int id = 101;
+
+    String name = "Rahul";
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        Student s = new Student();
+
+        FileOutputStream fos =
+            new FileOutputStream("student.txt");
+
+        ObjectOutputStream out =
+            new ObjectOutputStream(fos);
+
+        out.writeObject(s);
+
+        out.close();
+
+        System.out.println(
+            "Object Serialized"
+        );
+
+    }
+
+}`,
+
+      output: 'Object Serialized',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Serialization converts object into?', 
+
+      options: [
+        'Loop',
+        'Byte stream',
+        'Array',
+        'Method'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Serialization converts object into byte stream.',
+    },
+
+    {
+      question:
+        'Which interface is required for serialization?',
+
+      options: [
+        'Runnable',
+        'Cloneable',
+        'Serializable',
+        'Readable'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Serializable interface is required.',
+    },
+
+    {
+      question:
+        'Which stream writes objects?',
+
+      options: [
+        'FileInputStream',
+        'ObjectOutputStream',
+        'Scanner',
+        'BufferedReader'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ObjectOutputStream writes objects.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is serialization in Java?',
+
+      answer:
+        'Serialization converts object into byte stream for storage or transmission.',
+    },
+
+    {
+      question:
+        'Why is Serializable interface important?',
+
+      answer:
+        'It allows Java objects to participate in serialization process.',
+    },
+  ],
+
+  nextTopic: 'java-serialization',
+},
+{
+  id: 'java-serialization',
+
+  title: 'Java Serialization',
+
+  slug: 'java-serialization',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '40 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Serialization deeply including object conversion, Serializable interface, object streams, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Serialization',
+
+      content: `
+• Introduction to Serialization
+
+• Serializable Interface
+
+• ObjectOutputStream
+
+• Object Persistence
+
+• Saving Object State
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Serialization?',
+
+      content: `
+Serialization is process of converting object into byte stream.
+
+Purpose:
+
+• Store object permanently
+• Send object over network
+`.trim(),
+    },
+
+    {
+      heading: 'Serializable Interface',
+
+      content: `
+Serializable is marker interface.
+
+It informs JVM that object can be serialized.
+`.trim(),
+    },
+
+    {
+      heading: 'ObjectOutputStream',
+
+      content: `
+ObjectOutputStream is used to write objects into stream.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Serialization is Important',
+
+      content: `
+Used in:
+
+• Networking
+• Distributed systems
+• Session management
+• File storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Serialization',
+
+      content: `
+• Serializable interface is required
+• ObjectOutputStream writes objects
+• Converts object into byte stream
+• Helps object persistence
+
+Common Beginner Mistakes:
+
+• Forgetting Serializable interface
+• Serializing unsupported objects
+• Ignoring serialVersionUID
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Serialization Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+class Student implements Serializable {
+
+    int id = 101;
+
+    String name = "Rahul";
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        Student s = new Student();
+
+        FileOutputStream fos =
+            new FileOutputStream("student.txt");
+
+        ObjectOutputStream out =
+            new ObjectOutputStream(fos);
+
+        out.writeObject(s);
+
+        out.close();
+
+        System.out.println(
+            "Object Serialized"
+        );
+
+    }
+
+}`,
+
+      output: 'Object Serialized',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Serialization converts object into?', 
+
+      options: [
+        'Loop',
+        'Byte stream',
+        'Array',
+        'Method'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Serialization converts object into byte stream.',
+    },
+
+    {
+      question:
+        'Which interface is required for serialization?',
+
+      options: [
+        'Runnable',
+        'Serializable',
+        'Cloneable',
+        'Readable'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Serializable interface is required.',
+    },
+
+    {
+      question:
+        'Which stream writes objects?',
+
+      options: [
+        'Scanner',
+        'ObjectOutputStream',
+        'BufferedReader',
+        'FileReader'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ObjectOutputStream writes objects.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is serialization in Java?',
+
+      answer:
+        'Serialization is process of converting object into byte stream for storage or transmission.',
+    },
+
+    {
+      question:
+        'Why is Serializable interface important?',
+
+      answer:
+        'It allows object to participate in serialization process.',
+    },
+  ],
+
+  nextTopic: 'java-deserialization',
+},
+
+{
+  id: 'java-deserialization',
+
+  title: 'Java Deserialization',
+
+  slug: 'java-deserialization',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '34 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Deserialization deeply including object reconstruction, ObjectInputStream, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java Deserialization',
+
+      content: `
+• Introduction to Deserialization
+
+• ObjectInputStream
+
+• Rebuilding Objects
+
+• Reading Serialized Data
+
+• Object Restoration
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Deserialization?',
+
+      content: `
+Deserialization converts byte stream back into object.
+
+Purpose:
+
+• Restore saved object
+• Read transmitted objects
+`.trim(),
+    },
+
+    {
+      heading: 'ObjectInputStream',
+
+      content: `
+ObjectInputStream is used to read serialized objects.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Deserialization is Important',
+
+      content: `
+Used in:
+
+• Session recovery
+• Network communication
+• File-based object storage
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Deserialization',
+
+      content: `
+• Restores object state
+• Saves development time
+• Supports distributed systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Deserialization',
+
+      content: `
+• ObjectInputStream reads objects
+• Serialized class must exist
+• Class structure should match
+• Supports object recovery
+
+Common Beginner Mistakes:
+
+• Modifying serialized class structure
+• Missing Serializable interface
+• Wrong type casting
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Deserialization Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+class Student implements Serializable {
+
+    int id;
+
+    String name;
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        FileInputStream fis =
+            new FileInputStream("student.txt");
+
+        ObjectInputStream in =
+            new ObjectInputStream(fis);
+
+        Student s =
+            (Student)in.readObject();
+
+        System.out.println(
+            s.id + " " + s.name
+        );
+
+        in.close();
+
+    }
+
+}`,
+
+      output: '101 Rahul',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Deserialization converts?', 
+
+      options: [
+        'Object to byte stream',
+        'Byte stream to object',
+        'Array to method',
+        'Loop to object'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Deserialization converts byte stream back into object.',
+    },
+
+    {
+      question:
+        'Which stream reads serialized object?',
+
+      options: [
+        'Scanner',
+        'ObjectInputStream',
+        'BufferedWriter',
+        'PrintWriter'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ObjectInputStream reads serialized object.',
+    },
+
+    {
+      question:
+        'Deserialization is mainly used for?', 
+
+      options: [
+        'Object recovery',
+        'Compilation',
+        'Inheritance',
+        'Method overloading'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Deserialization restores saved objects.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is deserialization in Java?',
+
+      answer:
+        'Deserialization converts byte stream back into original object.',
+    },
+
+    {
+      question:
+        'Why is ObjectInputStream used?',
+
+      answer:
+        'It reads serialized objects from stream.',
+    },
+  ],
+
+  nextTopic: 'java-transient-keyword',
+},
+
+{
+  id: 'java-transient-keyword',
+
+  title: 'Java transient keyword',
+
+  slug: 'java-transient-keyword',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '26 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java transient keyword deeply including serialization control, security concepts, and interview questions.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java transient keyword',
+
+      content: `
+• Introduction to transient keyword
+
+• Serialization Control
+
+• Ignoring Variables
+
+• Security Usage
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is transient keyword?',
+
+      content: `
+transient keyword prevents variable from being serialized.
+
+Transient variables are skipped during serialization.
+`.trim(),
+    },
+
+    {
+      heading: 'Why transient is Important',
+
+      content: `
+Used for:
+
+• Security
+• Avoid unnecessary storage
+• Protect sensitive data
+`.trim(),
+    },
+
+    {
+      heading: 'Common Usage',
+
+      content: `
+Used for variables like:
+
+• Passwords
+• OTP values
+• Temporary data
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of transient keyword',
+
+      content: `
+• Improves security
+• Reduces serialization size
+• Prevents sensitive data storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About transient keyword',
+
+      content: `
+• transient variables are not serialized
+• Works only with serialization
+• Helps secure sensitive data
+• Default values appear after deserialization
+
+Common Beginner Mistakes:
+
+• Expecting transient value after deserialization
+• Using transient unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'transient Keyword Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+class Student implements Serializable {
+
+    int id = 101;
+
+    transient String password = "admin";
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(
+            s.password
+        );
+
+    }
+
+}`,
+
+      output: 'admin',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'transient keyword is used for?', 
+
+      options: [
+        'Looping',
+        'Preventing serialization',
+        'Inheritance',
+        'Threading'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'transient prevents variable serialization.',
+    },
+
+    {
+      question:
+        'Transient variables are?', 
+
+      options: [
+        'Serialized',
+        'Skipped during serialization',
+        'Compiled separately',
+        'Immutable'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Transient variables are skipped during serialization.',
+    },
+
+    {
+      question:
+        'transient keyword improves?', 
+
+      options: [
+        'Security',
+        'Compilation speed',
+        'Inheritance',
+        'Polymorphism'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'transient keyword helps secure sensitive data.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is transient keyword in Java?',
+
+      answer:
+        'transient keyword prevents variable from being serialized.',
+    },
+
+    {
+      question:
+        'Why is transient keyword useful?',
+
+      answer:
+        'It protects sensitive or temporary data during serialization.',
+    },
+  ],
+
+  nextTopic: 'java-serialversionuid',
+},
+
+{
+  id: 'java-serialversionuid',
+
+  title: 'serialVersionUID in Java',
+
+  slug: 'java-serialversionuid',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '30 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn serialVersionUID in Java deeply including serialization compatibility, version control, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'serialVersionUID in Java',
+
+      content: `
+• Introduction to serialVersionUID
+
+• Serialization Compatibility
+
+• Version Control
+
+• JVM Validation
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is serialVersionUID?',
+
+      content: `
+serialVersionUID is unique identifier for serialized class.
+
+Used during:
+
+• Serialization
+• Deserialization
+`.trim(),
+    },
+
+    {
+      heading: 'Why serialVersionUID is Important',
+
+      content: `
+It helps JVM verify:
+
+• Class compatibility
+• Version consistency
+`.trim(),
+    },
+
+    {
+      heading: 'How JVM Uses serialVersionUID',
+
+      content: `
+During deserialization:
+
+• JVM compares serialVersionUID values
+• Mismatch causes InvalidClassException
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of serialVersionUID',
+
+      content: `
+• Prevents compatibility issues
+• Controls class versions
+• Improves serialization reliability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About serialVersionUID',
+
+      content: `
+• Must be static final long
+• Used with Serializable classes
+• Helps version management
+• Prevents InvalidClassException
+
+Common Beginner Mistakes:
+
+• Ignoring serialVersionUID
+• Changing class structure frequently
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'serialVersionUID Example',
+
+      language: 'java',
+
+      code: `import java.io.Serializable;
+
+class Student implements Serializable {
+
+    private static final long
+        serialVersionUID = 1L;
+
+    int id = 101;
+
+}`,
+
+      output: 'Class created successfully',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'serialVersionUID is used for?', 
+
+      options: [
+        'Compilation',
+        'Serialization compatibility',
+        'Threading',
+        'Inheritance'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'serialVersionUID controls serialization compatibility.',
+    },
+
+    {
+      question:
+        'serialVersionUID type is?', 
+
+      options: [
+        'int',
+        'double',
+        'long',
+        'String'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'serialVersionUID is long type.',
+    },
+
+    {
+      question:
+        'Mismatch of serialVersionUID causes?', 
+
+      options: [
+        'IOException',
+        'InvalidClassException',
+        'ArithmeticException',
+        'NullPointerException'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Mismatch causes InvalidClassException.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is serialVersionUID in Java?',
+
+      answer:
+        'serialVersionUID is unique version identifier used during serialization and deserialization.',
+    },
+
+    {
+      question:
+        'Why is serialVersionUID important?',
+
+      answer:
+        'It ensures compatibility between serialized object and class definition.',
+    },
+  ],
+
+  nextTopic: 'java-externalization',
+},
+
+{
+  id: 'java-externalization',
+
+  title: 'Externalization in Java',
+
+  slug: 'java-externalization',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '34 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Externalization in Java deeply including Externalizable interface, custom serialization, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Externalization in Java',
+
+      content: `
+• Introduction to Externalization
+
+• Externalizable Interface
+
+• Custom Serialization
+
+• writeExternal()
+
+• readExternal()
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Externalization?',
+
+      content: `
+Externalization allows developer to control serialization process manually.
+`.trim(),
+    },
+
+    {
+      heading: 'Externalizable Interface',
+
+      content: `
+Externalizable interface provides:
+
+• writeExternal()
+• readExternal()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Externalization is Important',
+
+      content: `
+Used for:
+
+• Better performance
+• Custom object storage
+• Selective serialization
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Externalization',
+
+      content: `
+• Full serialization control
+• Better optimization
+• Reduced storage size
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Externalization',
+
+      content: `
+• Developer controls serialization manually
+• Uses Externalizable interface
+• Faster than default serialization
+• Improves customization
+
+Common Beginner Mistakes:
+
+• Forgetting no-arg constructor
+• Improper read/write order
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Externalization Example',
+
+      language: 'java',
+
+      code: `import java.io.*;
+
+class Student implements Externalizable {
+
+    int id;
+
+    String name;
+
+    public Student() {
+
+    }
+
+    public void writeExternal(
+        ObjectOutput out)
+        throws IOException {
+
+        out.writeInt(id);
+
+        out.writeObject(name);
+
+    }
+
+    public void readExternal(
+        ObjectInput in)
+        throws IOException,
+        ClassNotFoundException {
+
+        id = in.readInt();
+
+        name = (String)in.readObject();
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(
+            "Externalization Example"
+        );
+
+    }
+
+}`,
+
+      output: 'Externalization Example',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Externalization uses which interface?',
+
+      options: [
+        'Serializable',
+        'Runnable',
+        'Externalizable',
+        'Readable'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Externalization uses Externalizable interface.',
+    },
+
+    {
+      question:
+        'Which method writes custom data?',
+
+      options: [
+        'writeExternal()',
+        'saveObject()',
+        'serialize()',
+        'store()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'writeExternal() writes custom serialized data.',
+    },
+
+    {
+      question:
+        'Externalization provides?', 
+
+      options: [
+        'Compilation',
+        'Custom serialization control',
+        'Inheritance',
+        'Garbage collection'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Externalization provides manual serialization control.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is externalization in Java?',
+
+      answer:
+        'Externalization allows developer to control serialization manually using Externalizable interface.',
+    },
+
+    {
+      question:
+        'Why is externalization faster?',
+
+      answer:
+        'Because developer serializes only required data manually.',
+    },
+  ],
+
+  nextTopic: 'java-collections',
+},
+{
+  id: 'java-collections',
+
+  title: 'Collections in Java',
+
+  slug: 'java-collections',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '46 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Collections in Java deeply including framework architecture, interfaces, classes, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Collections in Java',
+
+      content: `
+• Introduction to Collections
+
+• Collection Framework
+
+• List Interface
+
+• Set Interface
+
+• Queue Interface
+
+• Advantages of Collections
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Collections in Java?',
+
+      content: `
+Collections framework provides ready-made classes and interfaces for storing and managing data.
+
+Collections help developers:
+
+• Store dynamic data
+• Perform fast operations
+• Manage large data easily
+`.trim(),
+    },
+
+    {
+      heading: 'Why Collections are Important',
+
+      content: `
+Collections are used in:
+
+• Banking systems
+• E-commerce applications
+• Social media platforms
+• Student management systems
+`.trim(),
+    },
+
+    {
+      heading: 'Main Interfaces of Collection Framework',
+
+      content: `
+Important interfaces:
+
+• List
+• Set
+• Queue
+• Map
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Collections',
+
+      content: `
+• Dynamic size
+• Reusable classes
+• Faster searching and sorting
+• Better memory management
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Collections',
+
+      content: `
+• Collection framework belongs to java.util package
+• Supports dynamic data storage
+• Provides multiple data structures
+• Improves code reusability
+
+Common Beginner Mistakes:
+
+• Confusing Collection and Collections
+• Using wrong collection type
+• Ignoring generics
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Collections Example',
+
+      language: 'java',
+
+      code: `import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list =
+            new ArrayList<>();
+
+        list.add("Java");
+
+        list.add("Python");
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Collections framework belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.lang',
+        'java.util',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Collections framework belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Which interface stores duplicate elements?',
+
+      options: [
+        'Set',
+        'List',
+        'Map',
+        'Queue'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'List allows duplicate elements.',
+    },
+
+    {
+      question:
+        'Collections are mainly used for?', 
+
+      options: [
+        'Compilation',
+        'Dynamic data storage',
+        'Inheritance',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Collections are used for dynamic data storage.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Collection Framework in Java?',
+
+      answer:
+        'Collection Framework is set of classes and interfaces used to store and manage dynamic data.',
+    },
+
+    {
+      question:
+        'Why are collections important in Java?',
+
+      answer:
+        'Collections provide efficient data storage, searching, sorting, and dynamic memory handling.',
+    },
+  ],
+
+  nextTopic: 'java-arraylist',
+},
+
+{
+  id: 'java-arraylist',
+
+  title: 'Java ArrayList',
+
+  slug: 'java-arraylist',
+
+  image:
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+
+  readTime: '42 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java ArrayList deeply including dynamic arrays, methods, resizing, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Cognizant'],
+
+  sections: [
+    {
+      heading: 'Java ArrayList',
+
+      content: `
+• Introduction to ArrayList
+
+• Dynamic Array Concept
+
+• Adding Elements
+
+• Removing Elements
+
+• ArrayList Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is ArrayList?',
+
+      content: `
+ArrayList is resizable array implementation of List interface.
+
+Features:
+
+• Dynamic size
+• Ordered collection
+• Allows duplicates
+`.trim(),
+    },
+
+    {
+      heading: 'Why ArrayList is Important',
+
+      content: `
+Used for:
+
+• Dynamic data storage
+• Fast searching
+• Easy data management
+`.trim(),
+    },
+
+    {
+      heading: 'Common Methods of ArrayList',
+
+      content: `
+Important methods:
+
+• add()
+• remove()
+• get()
+• set()
+• size()
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of ArrayList',
+
+      content: `
+• Dynamic resizing
+• Fast random access
+• Easy to use
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ArrayList',
+
+      content: `
+• Implements List interface
+• Maintains insertion order
+• Allows duplicate elements
+• Slower insertion in middle
+
+Common Beginner Mistakes:
+
+• Using primitive data types directly
+• Forgetting generics
+• Confusing size() with length
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ArrayList Example',
+
+      language: 'java',
+
+      code: `import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list =
+            new ArrayList<>();
+
+        list.add("Apple");
+
+        list.add("Banana");
+
+        list.add("Apple");
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[Apple, Banana, Apple]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'ArrayList implements which interface?',
+
+      options: [
+        'Set',
+        'Map',
+        'List',
+        'Queue'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ArrayList implements List interface.',
+    },
+
+    {
+      question:
+        'ArrayList allows?', 
+
+      options: [
+        'Only unique values',
+        'Duplicate elements',
+        'Only integers',
+        'No ordering'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ArrayList allows duplicate elements.',
+    },
+
+    {
+      question:
+        'Which method adds element in ArrayList?',
+
+      options: [
+        'insert()',
+        'put()',
+        'add()',
+        'push()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'add() method inserts element.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is ArrayList in Java?',
+
+      answer:
+        'ArrayList is dynamic array implementation of List interface.',
+    },
+
+    {
+      question:
+        'Why is ArrayList popular?',
+
+      answer:
+        'Because it provides dynamic resizing and fast random access.',
+    },
+  ],
+
+  nextTopic: 'java-linkedlist',
+},
+
+{
+  id: 'java-linkedlist',
+
+  title: 'Java LinkedList',
+
+  slug: 'java-linkedlist',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '40 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java LinkedList deeply including node structure, insertion, deletion, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java LinkedList',
+
+      content: `
+• Introduction to LinkedList
+
+• Node Structure
+
+• Dynamic Memory Allocation
+
+• Insertion and Deletion
+
+• LinkedList Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is LinkedList?',
+
+      content: `
+LinkedList is doubly linked list implementation of List interface.
+
+Features:
+
+• Dynamic memory allocation
+• Fast insertion and deletion
+• Ordered collection
+`.trim(),
+    },
+
+    {
+      heading: 'Why LinkedList is Important',
+
+      content: `
+Used for:
+
+• Frequent insertions
+• Frequent deletions
+• Queue implementation
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of LinkedList',
+
+      content: `
+• Fast insertion
+• Fast deletion
+• Dynamic memory usage
+`.trim(),
+    },
+
+    {
+      heading: 'Common Methods of LinkedList',
+
+      content: `
+Important methods:
+
+• add()
+• remove()
+• addFirst()
+• addLast()
+• get()
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About LinkedList',
+
+      content: `
+• Implements List interface
+• Maintains insertion order
+• Allows duplicates
+• Slower random access than ArrayList
+
+Common Beginner Mistakes:
+
+• Using LinkedList for frequent searching
+• Confusing nodes with arrays
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'LinkedList Example',
+
+      language: 'java',
+
+      code: `import java.util.LinkedList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        LinkedList<String> list =
+            new LinkedList<>();
+
+        list.add("Java");
+
+        list.add("Python");
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'LinkedList implements which interface?',
+
+      options: [
+        'List',
+        'Map',
+        'Set',
+        'Thread'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'LinkedList implements List interface.',
+    },
+
+    {
+      question:
+        'LinkedList is based on?', 
+
+      options: [
+        'Array',
+        'Tree',
+        'Node structure',
+        'Compiler'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedList uses node structure.',
+    },
+
+    {
+      question:
+        'LinkedList is better for?', 
+
+      options: [
+        'Fast random access',
+        'Frequent insertion and deletion',
+        'Compilation',
+        'Static storage'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'LinkedList is better for insertion and deletion.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is LinkedList in Java?',
+
+      answer:
+        'LinkedList is doubly linked list implementation of List interface.',
+    },
+
+    {
+      question:
+        'Why is LinkedList useful?',
+
+      answer:
+        'It provides faster insertion and deletion compared to arrays.',
+    },
+  ],
+
+  nextTopic: 'arraylist-vs-linkedlist',
+},
+
+{
+  id: 'arraylist-vs-linkedlist',
+
+  title: 'ArrayList vs LinkedList',
+
+  slug: 'arraylist-vs-linkedlist',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between ArrayList and LinkedList deeply including performance, memory, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'ArrayList vs LinkedList',
+
+      content: `
+• Internal Structure
+
+• Memory Usage
+
+• Performance
+
+• Insertion Speed
+
+• Deletion Speed
+
+• Random Access
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Main Difference',
+
+      content: `
+ArrayList uses dynamic array.
+
+LinkedList uses node-based linked structure.
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Comparison',
+
+      content: `
+ArrayList:
+
+• Faster random access
+• Slower insertion in middle
+
+LinkedList:
+
+• Faster insertion and deletion
+• Slower searching
+`.trim(),
+    },
+
+    {
+      heading: 'Memory Comparison',
+
+      content: `
+LinkedList uses more memory because nodes store references.
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use Which?',
+
+      content: `
+Use ArrayList when:
+
+• Searching is frequent
+
+Use LinkedList when:
+
+• Insertions/deletions are frequent
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ArrayList vs LinkedList',
+
+      content: `
+• ArrayList is array-based
+• LinkedList is node-based
+• ArrayList is memory efficient
+• LinkedList supports fast insertion
+
+Common Beginner Mistakes:
+
+• Using LinkedList for random access
+• Ignoring performance requirements
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ArrayList vs LinkedList Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> arr =
+            new ArrayList<>();
+
+        LinkedList<Integer> list =
+            new LinkedList<>();
+
+        arr.add(10);
+
+        list.add(20);
+
+        System.out.println(arr);
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[10]\n[20]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which collection provides faster random access?',
+
+      options: [
+        'LinkedList',
+        'ArrayList',
+        'TreeSet',
+        'HashSet'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ArrayList provides faster random access.',
+    },
+
+    {
+      question:
+        'LinkedList is better for?', 
+
+      options: [
+        'Random access',
+        'Frequent insertion',
+        'Compilation',
+        'Static arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'LinkedList is better for insertion/deletion.',
+    },
+
+    {
+      question:
+        'Which uses more memory?',
+
+      options: [
+        'ArrayList',
+        'LinkedList',
+        'Both equal',
+        'None'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'LinkedList uses more memory because of node references.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between ArrayList and LinkedList?',
+
+      answer:
+        'ArrayList uses dynamic array while LinkedList uses node-based linked structure.',
+    },
+
+    {
+      question:
+        'When should LinkedList be preferred?',
+
+      answer:
+        'LinkedList should be preferred when insertion and deletion operations are frequent.',
+    },
+  ],
+
+  nextTopic: 'java-list-interface',
+},
+
+{
+  id: 'java-list-interface',
+
+  title: 'Java List Interface',
+
+  slug: 'java-list-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java List Interface deeply including ordered collections, duplicates, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java List Interface',
+
+      content: `
+• Introduction to List Interface
+
+• Ordered Collection
+
+• Duplicate Elements
+
+• List Methods
+
+• Implementing Classes
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is List Interface?',
+
+      content: `
+List interface stores ordered collection of elements.
+
+Features:
+
+• Maintains insertion order
+• Allows duplicates
+`.trim(),
+    },
+
+    {
+      heading: 'Implementing Classes',
+
+      content: `
+Popular classes:
+
+• ArrayList
+• LinkedList
+• Vector
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of List',
+
+      content: `
+Common methods:
+
+• add()
+• remove()
+• get()
+• set()
+`.trim(),
+    },
+
+    {
+      heading: 'Why List Interface is Important',
+
+      content: `
+Used for:
+
+• Ordered data storage
+• Dynamic collections
+• Duplicate element storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About List Interface',
+
+      content: `
+• List is interface
+• Supports indexing
+• Allows duplicate values
+• Maintains order
+
+Common Beginner Mistakes:
+
+• Confusing List with Set
+• Forgetting generic types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'List Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<String> list =
+            new ArrayList<>();
+
+        list.add("Java");
+
+        list.add("Java");
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[Java, Java]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'List interface allows?', 
+
+      options: [
+        'Only unique values',
+        'Duplicate elements',
+        'No order',
+        'Static data'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'List allows duplicate elements.',
+    },
+
+    {
+      question:
+        'Which is implementing class of List?',
+
+      options: [
+        'HashSet',
+        'TreeSet',
+        'ArrayList',
+        'HashMap'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ArrayList implements List interface.',
+    },
+
+    {
+      question:
+        'List maintains?', 
+
+      options: [
+        'Random order',
+        'Insertion order',
+        'Sorted order only',
+        'No order'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'List maintains insertion order.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is List interface in Java?',
+
+      answer:
+        'List interface stores ordered collection and allows duplicate elements.',
+    },
+
+    {
+      question:
+        'Why is List interface useful?',
+
+      answer:
+        'It provides flexible ordered data storage with indexing support.',
+    },
+  ],
+
+  nextTopic: 'java-linkedhashset',
+},
+
+{
+  id: 'java-linkedhashset',
+
+  title: 'Java LinkedHashSet',
+
+  slug: 'java-linkedhashset',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java LinkedHashSet deeply including insertion order, uniqueness, hashing, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java LinkedHashSet',
+
+      content: `
+• Introduction to LinkedHashSet
+
+• Unique Elements
+
+• Insertion Order
+
+• Hash Table Concept
+
+• Linked Structure
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is LinkedHashSet?',
+
+      content: `
+LinkedHashSet stores unique elements while maintaining insertion order.
+`.trim(),
+    },
+
+    {
+      heading: 'Why LinkedHashSet is Important',
+
+      content: `
+Used for:
+
+• Duplicate removal
+• Ordered unique storage
+• Fast searching
+`.trim(),
+    },
+
+    {
+      heading: 'Features of LinkedHashSet',
+
+      content: `
+• No duplicate values
+• Maintains insertion order
+• Faster operations
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of LinkedHashSet',
+
+      content: `
+• Predictable iteration order
+• Fast performance
+• Unique element storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About LinkedHashSet',
+
+      content: `
+• Implements Set interface
+• Does not allow duplicates
+• Maintains insertion order
+• Uses hashing internally
+
+Common Beginner Mistakes:
+
+• Expecting duplicate storage
+• Confusing with HashSet
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'LinkedHashSet Example',
+
+      language: 'java',
+
+      code: `import java.util.LinkedHashSet;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> set =
+            new LinkedHashSet<>();
+
+        set.add("Java");
+
+        set.add("Python");
+
+        set.add("Java");
+
+        System.out.println(set);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'LinkedHashSet allows?', 
+
+      options: [
+        'Duplicate values',
+        'Only integers',
+        'Unique values only',
+        'No insertion order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedHashSet stores unique elements only.',
+    },
+
+    {
+      question:
+        'LinkedHashSet maintains?', 
+
+      options: [
+        'Random order',
+        'Sorted order',
+        'Insertion order',
+        'Descending order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedHashSet maintains insertion order.',
+    },
+
+    {
+      question:
+        'LinkedHashSet implements?', 
+
+      options: [
+        'Map',
+        'Queue',
+        'Set',
+        'Thread'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedHashSet implements Set interface.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is LinkedHashSet in Java?',
+
+      answer:
+        'LinkedHashSet stores unique elements while maintaining insertion order.',
+    },
+
+    {
+      question:
+        'Why is LinkedHashSet useful?',
+
+      answer:
+        'It combines hashing performance with predictable iteration order.',
+    },
+  ],
+
+  nextTopic: 'java-treeset',
+},
+
+{
+  id: 'java-treeset',
+
+  title: 'Java TreeSet',
+
+  slug: 'java-treeset',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java TreeSet deeply including sorting, red-black tree, uniqueness, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java TreeSet',
+
+      content: `
+• Introduction to TreeSet
+
+• Sorted Data Storage
+
+• Red-Black Tree
+
+• Unique Elements
+
+• Natural Ordering
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is TreeSet?',
+
+      content: `
+TreeSet stores unique elements in sorted order.
+
+It uses:
+
+• Red-Black Tree internally
+`.trim(),
+    },
+
+    {
+      heading: 'Why TreeSet is Important',
+
+      content: `
+Used for:
+
+• Sorted data storage
+• Fast searching
+• Unique sorted collections
+`.trim(),
+    },
+
+    {
+      heading: 'Features of TreeSet',
+
+      content: `
+• Sorted elements
+• No duplicates
+• Ascending order by default
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of TreeSet',
+
+      content: `
+• Automatic sorting
+• Fast searching
+• Unique element storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About TreeSet',
+
+      content: `
+• Implements Set interface
+• Stores sorted unique elements
+• Does not allow duplicates
+• Uses Red-Black Tree internally
+
+Common Beginner Mistakes:
+
+• Expecting insertion order
+• Adding incompatible data types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'TreeSet Example',
+
+      language: 'java',
+
+      code: `import java.util.TreeSet;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        TreeSet<Integer> set =
+            new TreeSet<>();
+
+        set.add(50);
+
+        set.add(10);
+
+        set.add(30);
+
+        System.out.println(set);
+
+    }
+
+}`,
+
+      output: '[10, 30, 50]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'TreeSet stores elements in?', 
+
+      options: [
+        'Random order',
+        'Sorted order',
+        'Insertion order',
+        'Reverse insertion order'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'TreeSet stores elements in sorted order.',
+    },
+
+    {
+      question:
+        'TreeSet allows?', 
+
+      options: [
+        'Duplicate elements',
+        'Only strings',
+        'Unique elements only',
+        'No sorting'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'TreeSet stores unique elements only.',
+    },
+
+    {
+      question:
+        'TreeSet internally uses?', 
+
+      options: [
+        'Array',
+        'Hash Table',
+        'Red-Black Tree',
+        'Linked List'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'TreeSet internally uses Red-Black Tree.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is TreeSet in Java?',
+
+      answer:
+        'TreeSet stores unique elements in sorted order using Red-Black Tree.',
+    },
+
+    {
+      question:
+        'Why is TreeSet useful?',
+
+      answer:
+        'It automatically sorts elements while maintaining uniqueness.',
+    },
+  ],
+
+  nextTopic: 'java-queue-priorityqueue',
+},
+{
+  id: 'java-queue-priorityqueue',
+
+  title: 'Queue & PriorityQueue in Java',
+
+  slug: 'java-queue-priorityqueue',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '42 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Queue and PriorityQueue in Java deeply including FIFO concept, priority-based ordering, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Queue & PriorityQueue in Java',
+
+      content: `
+• Introduction to Queue
+
+• FIFO Principle
+
+• Queue Methods
+
+• PriorityQueue
+
+• Priority-based Ordering
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Queue in Java?',
+
+      content: `
+Queue is data structure that follows FIFO rule.
+
+FIFO means:
+
+• First In First Out
+
+Element inserted first is removed first.
+`.trim(),
+    },
+
+    {
+      heading: 'What is PriorityQueue?',
+
+      content: `
+PriorityQueue stores elements according to priority.
+
+Smallest element gets highest priority by default.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Queue Methods',
+
+      content: `
+Common methods:
+
+• add()
+• offer()
+• remove()
+• poll()
+• peek()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Queue is Important',
+
+      content: `
+Used in:
+
+• Task scheduling
+• Printer queue
+• CPU scheduling
+• Messaging systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Queue & PriorityQueue',
+
+      content: `
+• Queue follows FIFO order
+• PriorityQueue sorts by priority
+• Null values are not allowed in PriorityQueue
+• PriorityQueue uses heap internally
+
+Common Beginner Mistakes:
+
+• Confusing Queue with Stack
+• Expecting insertion order in PriorityQueue
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'PriorityQueue Example',
+
+      language: 'java',
+
+      code: `import java.util.PriorityQueue;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        PriorityQueue<Integer> pq =
+            new PriorityQueue<>();
+
+        pq.add(50);
+
+        pq.add(10);
+
+        pq.add(30);
+
+        System.out.println(
+            pq.poll()
+        );
+
+    }
+
+}`,
+
+      output: '10',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Queue follows which principle?',
+
+      options: [
+        'LIFO',
+        'FIFO',
+        'Random',
+        'Binary'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Queue follows FIFO principle.',
+    },
+
+    {
+      question:
+        'PriorityQueue removes?', 
+
+      options: [
+        'Last inserted element',
+        'Random element',
+        'Highest priority element',
+        'Middle element'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'PriorityQueue removes highest priority element first.',
+    },
+
+    {
+      question:
+        'PriorityQueue internally uses?', 
+
+      options: [
+        'Array',
+        'Heap',
+        'Stack',
+        'Tree'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'PriorityQueue uses heap internally.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Queue in Java?',
+
+      answer:
+        'Queue is data structure that follows FIFO order for storing and removing elements.',
+    },
+
+    {
+      question:
+        'What is PriorityQueue in Java?',
+
+      answer:
+        'PriorityQueue stores elements according to priority instead of insertion order.',
+    },
+  ],
+
+  nextTopic: 'java-deque-arraydeque',
+},
+
+{
+  id: 'java-deque-arraydeque',
+
+  title: 'Deque & ArrayDeque in Java',
+
+  slug: 'java-deque-arraydeque',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '38 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Deque and ArrayDeque in Java deeply including double-ended operations, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Accenture', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Deque & ArrayDeque in Java',
+
+      content: `
+• Introduction to Deque
+
+• Double-ended Queue
+
+• ArrayDeque
+
+• Insertion Operations
+
+• Deletion Operations
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Deque?',
+
+      content: `
+Deque means Double Ended Queue.
+
+Elements can be inserted and removed from both ends.
+`.trim(),
+    },
+
+    {
+      heading: 'What is ArrayDeque?',
+
+      content: `
+ArrayDeque is resizable array implementation of Deque interface.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of Deque',
+
+      content: `
+Common methods:
+
+• addFirst()
+• addLast()
+• removeFirst()
+• removeLast()
+• peekFirst()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Deque is Important',
+
+      content: `
+Used in:
+
+• Browser history
+• Undo operations
+• Sliding window algorithms
+• Scheduling systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Deque & ArrayDeque',
+
+      content: `
+• Deque supports operations at both ends
+• ArrayDeque is faster than Stack
+• Null elements are not allowed
+• ArrayDeque uses dynamic array
+
+Common Beginner Mistakes:
+
+• Confusing Queue and Deque
+• Adding null elements
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ArrayDeque Example',
+
+      language: 'java',
+
+      code: `import java.util.ArrayDeque;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayDeque<String> deque =
+            new ArrayDeque<>();
+
+        deque.addFirst("Java");
+
+        deque.addLast("Python");
+
+        System.out.println(deque);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Deque stands for?', 
+
+      options: [
+        'Double Ended Queue',
+        'Dynamic Queue',
+        'Direct Queue',
+        'Dual Query'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Deque means Double Ended Queue.',
+    },
+
+    {
+      question:
+        'ArrayDeque allows insertion from?', 
+
+      options: [
+        'Front only',
+        'Rear only',
+        'Both ends',
+        'Middle only'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Deque supports operations from both ends.',
+    },
+
+    {
+      question:
+        'Which method inserts element at front?',
+
+      options: [
+        'addMiddle()',
+        'addFront()',
+        'addFirst()',
+        'insert()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'addFirst() inserts element at front.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Deque in Java?',
+
+      answer:
+        'Deque is double ended queue where insertion and deletion happen at both ends.',
+    },
+
+    {
+      question:
+        'Why is ArrayDeque preferred over Stack?',
+
+      answer:
+        'ArrayDeque provides better performance and modern implementation.',
+    },
+  ],
+
+  nextTopic: 'java-map-interface',
+},
+
+{
+  id: 'java-map-interface',
+
+  title: 'Java Map Interface',
+
+  slug: 'java-map-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Map Interface deeply including key-value pairs, methods, implementations, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Map Interface',
+
+      content: `
+• Introduction to Map
+
+• Key-Value Pairs
+
+• Map Methods
+
+• HashMap
+
+• LinkedHashMap
+
+• TreeMap
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Map Interface?',
+
+      content: `
+Map stores data in key-value pair format.
+
+Each key maps to one value.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Features of Map',
+
+      content: `
+• Unique keys
+• Duplicate values allowed
+• Fast searching using keys
+`.trim(),
+    },
+
+    {
+      heading: 'Common Methods of Map',
+
+      content: `
+Important methods:
+
+• put()
+• get()
+• remove()
+• containsKey()
+• keySet()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Map is Important',
+
+      content: `
+Used in:
+
+• Database caching
+• Student records
+• Login systems
+• Configuration storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Map Interface',
+
+      content: `
+• Map is not part of Collection interface
+• Stores key-value pairs
+• Keys must be unique
+• Multiple implementations available
+
+Common Beginner Mistakes:
+
+• Confusing keys and values
+• Expecting duplicate keys
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Map Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Map<Integer, String> map =
+            new HashMap<>();
+
+        map.put(1, "Java");
+
+        map.put(2, "Python");
+
+        System.out.println(map);
+
+    }
+
+}`,
+
+      output: '{1=Java, 2=Python}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Map stores data in?', 
+
+      options: [
+        'Array format',
+        'Key-value pair',
+        'Node format',
+        'Binary format'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Map stores data as key-value pairs.',
+    },
+
+    {
+      question:
+        'Map allows duplicate?', 
+
+      options: [
+        'Keys',
+        'Values only',
+        'Neither',
+        'Both'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Map allows duplicate values but not duplicate keys.',
+    },
+
+    {
+      question:
+        'Which method inserts data in Map?',
+
+      options: [
+        'add()',
+        'insert()',
+        'put()',
+        'push()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'put() inserts key-value pair in Map.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Map interface in Java?',
+
+      answer:
+        'Map interface stores data in key-value pair format with unique keys.',
+    },
+
+    {
+      question:
+        'Why are Maps important in Java?',
+
+      answer:
+        'Maps provide fast searching and efficient data mapping using keys.',
+    },
+  ],
+
+  nextTopic: 'java-hashmap',
+},
+
+{
+  id: 'java-hashmap',
+
+  title: 'Java HashMap',
+
+  slug: 'java-hashmap',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '44 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java HashMap deeply including hashing, buckets, methods, performance, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java HashMap',
+
+      content: `
+• Introduction to HashMap
+
+• Hashing Concept
+
+• Buckets
+
+• Key-Value Storage
+
+• HashMap Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HashMap?',
+
+      content: `
+HashMap stores key-value pairs using hashing technique.
+
+Features:
+
+• Fast searching
+• Unique keys
+• Null key allowed
+`.trim(),
+    },
+
+    {
+      heading: 'Why HashMap is Important',
+
+      content: `
+Used in:
+
+• Caching systems
+• Database indexing
+• User management
+• Fast data retrieval
+`.trim(),
+    },
+
+    {
+      heading: 'Common Methods of HashMap',
+
+      content: `
+Important methods:
+
+• put()
+• get()
+• remove()
+• containsKey()
+• replace()
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of HashMap',
+
+      content: `
+• Fast operations
+• Efficient searching
+• Flexible storage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About HashMap',
+
+      content: `
+• HashMap uses hashing internally
+• Allows one null key
+• Does not maintain insertion order
+• Keys must be unique
+
+Common Beginner Mistakes:
+
+• Expecting sorted order
+• Using mutable keys
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'HashMap Example',
+
+      language: 'java',
+
+      code: `import java.util.HashMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        HashMap<Integer, String> map =
+            new HashMap<>();
+
+        map.put(101, "Rahul");
+
+        map.put(102, "Amit");
+
+        System.out.println(
+            map.get(101)
+        );
+
+    }
+
+}`,
+
+      output: 'Rahul',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'HashMap stores?', 
+
+      options: [
+        'Only values',
+        'Key-value pairs',
+        'Only keys',
+        'Arrays'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'HashMap stores key-value pairs.',
+    },
+
+    {
+      question:
+        'HashMap maintains?', 
+
+      options: [
+        'Insertion order',
+        'Sorted order',
+        'No guaranteed order',
+        'Reverse order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'HashMap does not maintain order.',
+    },
+
+    {
+      question:
+        'HashMap internally uses?', 
+
+      options: [
+        'Heap',
+        'Hashing',
+        'Queue',
+        'Compiler'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'HashMap uses hashing internally.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is HashMap in Java?',
+
+      answer:
+        'HashMap stores key-value pairs using hashing technique for fast retrieval.',
+    },
+
+    {
+      question:
+        'Why is HashMap fast?',
+
+      answer:
+        'Because it uses hashing mechanism for efficient searching and insertion.',
+    },
+  ],
+
+  nextTopic: 'working-of-hashmap',
+},
+
+{
+  id: 'working-of-hashmap',
+
+  title: 'Working of HashMap',
+
+  slug: 'working-of-hashmap',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '40 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Working of HashMap deeply including hashing process, buckets, collisions, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Working of HashMap',
+
+      content: `
+• Hashing Mechanism
+
+• Buckets
+
+• HashCode
+
+• Collision Handling
+
+• Internal Structure
+
+• Rehashing
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'How HashMap Works?',
+
+      content: `
+HashMap works using hashing.
+
+Process:
+
+1. Key generates hashCode()
+2. Hash determines bucket index
+3. Value stored in bucket
+`.trim(),
+    },
+
+    {
+      heading: 'What are Buckets?',
+
+      content: `
+Buckets are internal storage locations inside HashMap.
+`.trim(),
+    },
+
+    {
+      heading: 'Collision in HashMap',
+
+      content: `
+Collision happens when multiple keys map to same bucket.
+`.trim(),
+    },
+
+    {
+      heading: 'How Collision is Handled',
+
+      content: `
+Java handles collisions using:
+
+• Linked List
+• Balanced Tree (Java 8+)
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Working of HashMap',
+
+      content: `
+• hashCode() decides bucket
+• equals() checks key equality
+• Collisions reduce performance
+• Rehashing improves efficiency
+
+Common Beginner Mistakes:
+
+• Ignoring equals() and hashCode()
+• Using mutable keys
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'HashMap Working Example',
+
+      language: 'java',
+
+      code: `import java.util.HashMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        HashMap<Integer, String> map =
+            new HashMap<>();
+
+        map.put(1, "Java");
+
+        map.put(2, "Python");
+
+        System.out.println(
+            map.containsKey(1)
+        );
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'HashMap uses which method for bucket calculation?',
+
+      options: [
+        'compareTo()',
+        'hashCode()',
+        'clone()',
+        'wait()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'hashCode() is used for bucket calculation.',
+    },
+
+    {
+      question:
+        'Collision occurs when?', 
+
+      options: [
+        'Key deleted',
+        'Two keys map to same bucket',
+        'Map is empty',
+        'Value is null'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Collision happens when keys map to same bucket.',
+    },
+
+    {
+      question:
+        'Java 8 handles collisions using?', 
+
+      options: [
+        'Only arrays',
+        'Only stack',
+        'Linked list and balanced tree',
+        'Compiler'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Java 8 uses linked list and balanced tree.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How does HashMap work internally?',
+
+      answer:
+        'HashMap uses hashCode() to calculate bucket location and stores data using hashing.',
+    },
+
+    {
+      question:
+        'What is collision in HashMap?',
+
+      answer:
+        'Collision occurs when multiple keys map to same bucket location.',
+    },
+  ],
+
+  nextTopic: 'java-linkedhashmap',
+},
+
+{
+  id: 'java-linkedhashmap',
+
+  title: 'Java LinkedHashMap',
+
+  slug: 'java-linkedhashmap',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java LinkedHashMap deeply including insertion order, hashing, linked structure, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java LinkedHashMap',
+
+      content: `
+• Introduction to LinkedHashMap
+
+• Insertion Order
+
+• Hashing Mechanism
+
+• Doubly Linked List
+
+• Key-Value Storage
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is LinkedHashMap?',
+
+      content: `
+LinkedHashMap stores key-value pairs while maintaining insertion order.
+`.trim(),
+    },
+
+    {
+      heading: 'Why LinkedHashMap is Important',
+
+      content: `
+Used for:
+
+• Ordered map storage
+• Cache implementation
+• Predictable iteration
+`.trim(),
+    },
+
+    {
+      heading: 'Features of LinkedHashMap',
+
+      content: `
+• Maintains insertion order
+• Uses hashing internally
+• Allows one null key
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of LinkedHashMap',
+
+      content: `
+• Predictable iteration order
+• Fast searching
+• Better than HashMap for ordered data
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About LinkedHashMap',
+
+      content: `
+• Extends HashMap
+• Maintains insertion order
+• Uses doubly linked list internally
+• Allows null key and values
+
+Common Beginner Mistakes:
+
+• Confusing LinkedHashMap with TreeMap
+• Expecting sorted order
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'LinkedHashMap Example',
+
+      language: 'java',
+
+      code: `import java.util.LinkedHashMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        LinkedHashMap<Integer, String> map =
+            new LinkedHashMap<>();
+
+        map.put(1, "Java");
+
+        map.put(2, "Python");
+
+        System.out.println(map);
+
+    }
+
+}`,
+
+      output: '{1=Java, 2=Python}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'LinkedHashMap maintains?', 
+
+      options: [
+        'Sorted order',
+        'Random order',
+        'Insertion order',
+        'Reverse order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedHashMap maintains insertion order.',
+    },
+
+    {
+      question:
+        'LinkedHashMap internally uses?', 
+
+      options: [
+        'Heap',
+        'Doubly linked list',
+        'Compiler',
+        'Stack'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'LinkedHashMap uses doubly linked list internally.',
+    },
+
+    {
+      question:
+        'LinkedHashMap extends?', 
+
+      options: [
+        'TreeMap',
+        'HashSet',
+        'HashMap',
+        'Queue'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'LinkedHashMap extends HashMap.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is LinkedHashMap in Java?',
+
+      answer:
+        'LinkedHashMap stores key-value pairs while maintaining insertion order.',
+    },
+
+    {
+      question:
+        'Why use LinkedHashMap instead of HashMap?',
+
+      answer:
+        'LinkedHashMap maintains predictable insertion order while HashMap does not.',
+    },
+  ],
+
+  nextTopic: 'java-treemap',
+},
+{
+  id: 'java-treemap',
+
+  title: 'Java TreeMap',
+
+  slug: 'java-treemap',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '38 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java TreeMap deeply including sorted key-value storage, red-black tree, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java TreeMap',
+
+      content: `
+• Introduction to TreeMap
+
+• Sorted Key-Value Storage
+
+• Red-Black Tree
+
+• Natural Ordering
+
+• TreeMap Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is TreeMap?',
+
+      content: `
+TreeMap stores key-value pairs in sorted order.
+
+It sorts keys automatically using natural ordering.
+`.trim(),
+    },
+
+    {
+      heading: 'Why TreeMap is Important',
+
+      content: `
+Used for:
+
+• Sorted data storage
+• Ranking systems
+• Leaderboards
+• Fast searching
+`.trim(),
+    },
+
+    {
+      heading: 'Features of TreeMap',
+
+      content: `
+• Sorted keys
+• No duplicate keys
+• Uses Red-Black Tree
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of TreeMap',
+
+      content: `
+• Automatic sorting
+• Efficient searching
+• Predictable ordering
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About TreeMap',
+
+      content: `
+• TreeMap implements NavigableMap
+• Keys remain sorted
+• Null keys are not allowed
+• Uses Red-Black Tree internally
+
+Common Beginner Mistakes:
+
+• Expecting insertion order
+• Using incompatible key types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'TreeMap Example',
+
+      language: 'java',
+
+      code: `import java.util.TreeMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        TreeMap<Integer, String> map =
+            new TreeMap<>();
+
+        map.put(3, "Java");
+
+        map.put(1, "Python");
+
+        map.put(2, "C++");
+
+        System.out.println(map);
+
+    }
+
+}`,
+
+      output: '{1=Python, 2=C++, 3=Java}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'TreeMap stores keys in?', 
+
+      options: [
+        'Random order',
+        'Insertion order',
+        'Sorted order',
+        'Reverse insertion order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'TreeMap stores keys in sorted order.',
+    },
+
+    {
+      question:
+        'TreeMap internally uses?', 
+
+      options: [
+        'Heap',
+        'Hashing',
+        'Red-Black Tree',
+        'Stack'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'TreeMap uses Red-Black Tree internally.',
+    },
+
+    {
+      question:
+        'TreeMap allows?', 
+
+      options: [
+        'Duplicate keys',
+        'Null keys',
+        'Sorted keys',
+        'No values'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'TreeMap maintains sorted keys.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is TreeMap in Java?',
+
+      answer:
+        'TreeMap stores key-value pairs in sorted order using Red-Black Tree.',
+    },
+
+    {
+      question:
+        'Why is TreeMap useful?',
+
+      answer:
+        'TreeMap automatically sorts keys and provides efficient searching.',
+    },
+  ],
+
+  nextTopic: 'java-hashtable',
+},
+
+{
+  id: 'java-hashtable',
+
+  title: 'Java Hashtable',
+
+  slug: 'java-hashtable',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Hashtable deeply including synchronization, key-value storage, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Hashtable',
+
+      content: `
+• Introduction to Hashtable
+
+• Key-Value Storage
+
+• Synchronization
+
+• Hashtable Methods
+
+• Thread Safety
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Hashtable?',
+
+      content: `
+Hashtable stores key-value pairs using hashing technique.
+
+It is synchronized and thread-safe.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Hashtable is Important',
+
+      content: `
+Used for:
+
+• Thread-safe storage
+• Multi-threaded applications
+• Shared resources
+`.trim(),
+    },
+
+    {
+      heading: 'Features of Hashtable',
+
+      content: `
+• Synchronized
+• No null keys
+• No null values
+• Uses hashing
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Hashtable',
+
+      content: `
+• Thread safety
+• Fast searching
+• Reliable data access
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Hashtable',
+
+      content: `
+• Hashtable is synchronized
+• Null keys are not allowed
+• Null values are not allowed
+• Slower than HashMap
+
+Common Beginner Mistakes:
+
+• Confusing Hashtable with HashMap
+• Adding null keys
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Hashtable Example',
+
+      language: 'java',
+
+      code: `import java.util.Hashtable;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Hashtable<Integer, String> table =
+            new Hashtable<>();
+
+        table.put(1, "Java");
+
+        table.put(2, "Python");
+
+        System.out.println(table);
+
+    }
+
+}`,
+
+      output: '{2=Python, 1=Java}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Hashtable is?', 
+
+      options: [
+        'Unsynchronized',
+        'Synchronized',
+        'Static',
+        'Immutable'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Hashtable is synchronized.',
+    },
+
+    {
+      question:
+        'Hashtable allows?', 
+
+      options: [
+        'Null keys',
+        'Null values',
+        'Neither null keys nor null values',
+        'Duplicate keys'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Hashtable does not allow null keys and values.',
+    },
+
+    {
+      question:
+        'Hashtable uses?', 
+
+      options: [
+        'Linked list',
+        'Tree',
+        'Hashing',
+        'Compiler'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Hashtable uses hashing internally.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Hashtable in Java?',
+
+      answer:
+        'Hashtable is synchronized key-value collection using hashing technique.',
+    },
+
+    {
+      question:
+        'Why is Hashtable thread-safe?',
+
+      answer:
+        'Because its methods are synchronized internally.',
+    },
+  ],
+
+  nextTopic: 'hashmap-vs-hashtable',
+},
+
+{
+  id: 'hashmap-vs-hashtable',
+
+  title: 'HashMap vs Hashtable',
+
+  slug: 'hashmap-vs-hashtable',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between HashMap and Hashtable deeply including synchronization, performance, null handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'HashMap vs Hashtable',
+
+      content: `
+• Synchronization
+
+• Thread Safety
+
+• Null Handling
+
+• Performance
+
+• Internal Working
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Main Difference',
+
+      content: `
+HashMap is non-synchronized.
+
+Hashtable is synchronized and thread-safe.
+`.trim(),
+    },
+
+    {
+      heading: 'Null Handling Difference',
+
+      content: `
+HashMap:
+
+• Allows one null key
+• Allows multiple null values
+
+Hashtable:
+
+• Does not allow null keys
+• Does not allow null values
+`.trim(),
+    },
+
+    {
+      heading: 'Performance Difference',
+
+      content: `
+HashMap is faster because it is non-synchronized.
+
+Hashtable is slower because of synchronization.
+`.trim(),
+    },
+
+    {
+      heading: 'When to Use Which?',
+
+      content: `
+Use HashMap:
+
+• Single-threaded applications
+
+Use Hashtable:
+
+• Multi-threaded environments
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About HashMap vs Hashtable',
+
+      content: `
+• HashMap is modern collection class
+• Hashtable is legacy class
+• Hashtable provides thread safety
+• HashMap gives better performance
+
+Common Beginner Mistakes:
+
+• Using Hashtable unnecessarily
+• Forgetting null restrictions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'HashMap vs Hashtable Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        HashMap<Integer, String> map =
+            new HashMap<>();
+
+        Hashtable<Integer, String> table =
+            new Hashtable<>();
+
+        map.put(1, "Java");
+
+        table.put(2, "Python");
+
+        System.out.println(map);
+
+        System.out.println(table);
+
+    }
+
+}`,
+
+      output: '{1=Java}\n{2=Python}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which collection is synchronized?',
+
+      options: [
+        'HashMap',
+        'Hashtable',
+        'TreeMap',
+        'LinkedHashMap'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Hashtable is synchronized.',
+    },
+
+    {
+      question:
+        'Which allows null key?',
+
+      options: [
+        'Hashtable',
+        'TreeMap',
+        'HashMap',
+        'EnumMap'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'HashMap allows one null key.',
+    },
+
+    {
+      question:
+        'Which is faster?', 
+
+      options: [
+        'Hashtable',
+        'HashMap',
+        'Both same',
+        'TreeMap'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'HashMap is faster because it is non-synchronized.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between HashMap and Hashtable?',
+
+      answer:
+        'HashMap is non-synchronized while Hashtable is synchronized and thread-safe.',
+    },
+
+    {
+      question:
+        'Why is HashMap faster than Hashtable?',
+
+      answer:
+        'Because HashMap does not use synchronization overhead.',
+    },
+  ],
+
+  nextTopic: 'java-enumset',
+},
+
+{
+  id: 'java-enumset',
+
+  title: 'Java EnumSet',
+
+  slug: 'java-enumset',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '28 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java EnumSet deeply including enum collections, performance, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java EnumSet',
+
+      content: `
+• Introduction to EnumSet
+
+• Enum Collections
+
+• High Performance
+
+• EnumSet Methods
+
+• Internal Working
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is EnumSet?',
+
+      content: `
+EnumSet is specialized Set implementation for enum values only.
+`.trim(),
+    },
+
+    {
+      heading: 'Why EnumSet is Important',
+
+      content: `
+Used for:
+
+• Storing enum constants
+• Fast enum operations
+• Memory-efficient collections
+`.trim(),
+    },
+
+    {
+      heading: 'Features of EnumSet',
+
+      content: `
+• High performance
+• Type safety
+• Stores only enum values
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of EnumSet',
+
+      content: `
+• Faster than HashSet
+• Compact memory usage
+• Easy enum handling
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About EnumSet',
+
+      content: `
+• Works only with enums
+• Does not allow null values
+• Internally uses bit vector
+• Extremely fast collection
+
+Common Beginner Mistakes:
+
+• Using non-enum values
+• Confusing EnumSet with HashSet
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'EnumSet Example',
+
+      language: 'java',
+
+      code: `import java.util.EnumSet;
+
+enum Day {
+
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        EnumSet<Day> set =
+            EnumSet.of(
+                Day.MONDAY,
+                Day.WEDNESDAY
+            );
+
+        System.out.println(set);
+
+    }
+
+}`,
+
+      output: '[MONDAY, WEDNESDAY]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'EnumSet stores?', 
+
+      options: [
+        'Strings',
+        'Objects',
+        'Enum values only',
+        'Numbers only'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'EnumSet stores enum values only.',
+    },
+
+    {
+      question:
+        'EnumSet is faster than?', 
+
+      options: [
+        'HashSet',
+        'TreeMap',
+        'Queue',
+        'Stack'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'EnumSet is faster than HashSet for enum values.',
+    },
+
+    {
+      question:
+        'EnumSet internally uses?', 
+
+      options: [
+        'Tree',
+        'Bit vector',
+        'Stack',
+        'Queue'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'EnumSet internally uses bit vector.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is EnumSet in Java?',
+
+      answer:
+        'EnumSet is specialized Set implementation designed for enum values.',
+    },
+
+    {
+      question:
+        'Why is EnumSet very fast?',
+
+      answer:
+        'Because it internally uses compact bit vector representation.',
+    },
+  ],
+
+  nextTopic: 'java-enummap',
+},
+
+{
+  id: 'java-enummap',
+
+  title: 'Java EnumMap',
+
+  slug: 'java-enummap',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java EnumMap deeply including enum-based key storage, performance, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java EnumMap',
+
+      content: `
+• Introduction to EnumMap
+
+• Enum-based Keys
+
+• High Performance
+
+• Key-Value Storage
+
+• EnumMap Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is EnumMap?',
+
+      content: `
+EnumMap is specialized Map implementation where keys are enum constants.
+`.trim(),
+    },
+
+    {
+      heading: 'Why EnumMap is Important',
+
+      content: `
+Used for:
+
+• Enum-based mappings
+• Fast key lookup
+• Memory-efficient storage
+`.trim(),
+    },
+
+    {
+      heading: 'Features of EnumMap',
+
+      content: `
+• Stores enum keys
+• Faster than HashMap
+• Maintains enum order
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of EnumMap',
+
+      content: `
+• High performance
+• Compact memory usage
+• Type-safe keys
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About EnumMap',
+
+      content: `
+• Keys must be enum constants
+• Faster than HashMap
+• Maintains natural enum order
+• Null keys are not allowed
+
+Common Beginner Mistakes:
+
+• Using non-enum keys
+• Expecting random ordering
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'EnumMap Example',
+
+      language: 'java',
+
+      code: `import java.util.EnumMap;
+
+enum Day {
+
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        EnumMap<Day, String> map =
+            new EnumMap<>(Day.class);
+
+        map.put(Day.MONDAY, "Java");
+
+        map.put(Day.TUESDAY, "Python");
+
+        System.out.println(map);
+
+    }
+
+}`,
+
+      output: '{MONDAY=Java, TUESDAY=Python}',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'EnumMap uses which type of keys?',
+
+      options: [
+        'String',
+        'Integer',
+        'Enum constants',
+        'Objects'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'EnumMap uses enum constants as keys.',
+    },
+
+    {
+      question:
+        'EnumMap is faster than?', 
+
+      options: [
+        'HashMap',
+        'ArrayList',
+        'Queue',
+        'Stack'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'EnumMap is faster than HashMap for enum keys.',
+    },
+
+    {
+      question:
+        'EnumMap maintains?', 
+
+      options: [
+        'Random order',
+        'Insertion order',
+        'Natural enum order',
+        'Reverse order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'EnumMap maintains natural enum order.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is EnumMap in Java?',
+
+      answer:
+        'EnumMap is specialized Map implementation using enum constants as keys.',
+    },
+
+    {
+      question:
+        'Why is EnumMap preferred for enum keys?',
+
+      answer:
+        'EnumMap provides better performance and memory efficiency for enum-based mappings.',
+    },
+  ],
+
+  nextTopic: 'java-collections-class',
+},
+{
+  id: 'java-collections-class',
+
+  title: 'Java Collections class',
+
+  slug: 'java-collections-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Collections class deeply including utility methods, sorting, searching, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Collections class',
+
+      content: `
+• Introduction to Collections class
+
+• Utility Methods
+
+• Sorting Collections
+
+• Searching Elements
+
+• Reversing Data
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Collections class?',
+
+      content: `
+Collections class is utility class available in java.util package.
+
+It provides static methods for collection operations.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of Collections class',
+
+      content: `
+Common methods:
+
+• sort()
+• reverse()
+• shuffle()
+• max()
+• min()
+• binarySearch()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Collections class is Important',
+
+      content: `
+Used for:
+
+• Sorting data
+• Searching elements
+• Reversing collections
+• Data manipulation
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Collections class',
+
+      content: `
+• Ready-made utility methods
+• Reduces coding effort
+• Faster collection operations
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Collections class',
+
+      content: `
+• Collections class contains static methods
+• Belongs to java.util package
+• Works with List and other collections
+• Simplifies collection handling
+
+Common Beginner Mistakes:
+
+• Confusing Collection and Collections
+• Forgetting import statement
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Collections class Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list =
+            new ArrayList<>();
+
+        list.add(30);
+
+        list.add(10);
+
+        list.add(20);
+
+        Collections.sort(list);
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[10, 20, 30]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Collections class belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.sql',
+        'java.util',
+        'java.net'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Collections class belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Which method is used for sorting?',
+
+      options: [
+        'arrange()',
+        'sort()',
+        'order()',
+        'set()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'sort() method sorts collection elements.',
+    },
+
+    {
+      question:
+        'Collections class contains?', 
+
+      options: [
+        'Constructors only',
+        'Static utility methods',
+        'Threads',
+        'Interfaces'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Collections class provides static utility methods.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Collections class in Java?',
+
+      answer:
+        'Collections class is utility class that provides static methods for collection operations.',
+    },
+
+    {
+      question:
+        'Why is Collections class useful?',
+
+      answer:
+        'It simplifies sorting, searching, and manipulation of collection data.',
+    },
+  ],
+
+  nextTopic: 'sorting-collections-java',
+},
+
+{
+  id: 'sorting-collections-java',
+
+  title: 'Sorting Collections in Java',
+
+  slug: 'sorting-collections-java',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Sorting Collections in Java deeply including ascending order, descending order, custom sorting, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Sorting Collections in Java',
+
+      content: `
+• Introduction to Sorting
+
+• Ascending Order
+
+• Descending Order
+
+• Collections.sort()
+
+• Custom Sorting
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Sorting in Java?',
+
+      content: `
+Sorting means arranging data in particular order.
+
+Types:
+
+• Ascending order
+• Descending order
+`.trim(),
+    },
+
+    {
+      heading: 'How Collections.sort() Works',
+
+      content: `
+Collections.sort() sorts List elements in ascending order by default.
+`.trim(),
+    },
+
+    {
+      heading: 'Descending Order Sorting',
+
+      content: `
+Collections.reverseOrder() is used for descending sorting.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Sorting is Important',
+
+      content: `
+Used in:
+
+• Student ranking
+• Product listing
+• Search optimization
+• Report generation
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Sorting Collections',
+
+      content: `
+• Collections.sort() sorts ascending by default
+• reverseOrder() sorts descending
+• Comparable or Comparator can customize sorting
+• Sorting improves searching efficiency
+
+Common Beginner Mistakes:
+
+• Forgetting Comparable implementation
+• Mixing incompatible data types
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Sorting Collections Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list =
+            new ArrayList<>();
+
+        list.add(40);
+
+        list.add(10);
+
+        list.add(30);
+
+        Collections.sort(list);
+
+        System.out.println(list);
+
+    }
+
+}`,
+
+      output: '[10, 30, 40]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method sorts collections?',
+
+      options: [
+        'arrange()',
+        'order()',
+        'sort()',
+        'shuffle()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'sort() method is used for sorting.',
+    },
+
+    {
+      question:
+        'Default sorting order is?', 
+
+      options: [
+        'Descending',
+        'Random',
+        'Ascending',
+        'Reverse'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Collections.sort() sorts in ascending order by default.',
+    },
+
+    {
+      question:
+        'Which method helps descending sorting?',
+
+      options: [
+        'reverseOrder()',
+        'descending()',
+        'backward()',
+        'rotate()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'reverseOrder() provides descending sorting.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'How do you sort collections in Java?',
+
+      answer:
+        'Collections.sort() method is used to sort collections in ascending order.',
+    },
+
+    {
+      question:
+        'How do you perform descending sorting?',
+
+      answer:
+        'Collections.reverseOrder() is used for descending sorting.',
+    },
+  ],
+
+  nextTopic: 'comparable-interface-java',
+},
+
+{
+  id: 'comparable-interface-java',
+
+  title: 'Comparable interface in Java',
+
+  slug: 'comparable-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '38 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Comparable interface in Java deeply including natural sorting, compareTo method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Comparable interface in Java',
+
+      content: `
+• Introduction to Comparable
+
+• Natural Ordering
+
+• compareTo() Method
+
+• Object Sorting
+
+• Sorting Rules
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Comparable Interface?',
+
+      content: `
+Comparable interface is used for natural sorting of objects.
+`.trim(),
+    },
+
+    {
+      heading: 'compareTo() Method',
+
+      content: `
+compareTo() compares current object with another object.
+`.trim(),
+    },
+
+    {
+      heading: 'Return Values of compareTo()',
+
+      content: `
+• Negative value → smaller
+• Zero → equal
+• Positive value → greater
+`.trim(),
+    },
+
+    {
+      heading: 'Why Comparable is Important',
+
+      content: `
+Used for:
+
+• Student sorting
+• Employee ranking
+• Product ordering
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Comparable',
+
+      content: `
+• Comparable belongs to java.lang package
+• compareTo() method is mandatory
+• Supports natural sorting
+• Only one sorting logic possible
+
+Common Beginner Mistakes:
+
+• Incorrect compareTo() logic
+• Returning random values
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Comparable Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+class Student
+    implements Comparable<Student> {
+
+    int id;
+
+    Student(int id) {
+
+        this.id = id;
+
+    }
+
+    public int compareTo(Student s) {
+
+        return this.id - s.id;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> list =
+            new ArrayList<>();
+
+        list.add(new Student(3));
+
+        list.add(new Student(1));
+
+        Collections.sort(list);
+
+        for(Student s : list) {
+
+            System.out.println(s.id);
+
+        }
+
+    }
+
+}`,
+
+      output: '1\n3',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Comparable interface provides?', 
+
+      options: [
+        'Threading',
+        'Natural sorting',
+        'Networking',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Comparable provides natural sorting.',
+    },
+
+    {
+      question:
+        'Which method is required in Comparable?',
+
+      options: [
+        'compare()',
+        'compareTo()',
+        'sort()',
+        'equals()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'compareTo() method is mandatory.',
+    },
+
+    {
+      question:
+        'Comparable supports how many sorting logics?',
+
+      options: [
+        'One',
+        'Two',
+        'Unlimited',
+        'None'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Comparable supports one sorting logic.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Comparable interface in Java?',
+
+      answer:
+        'Comparable interface is used for natural sorting using compareTo() method.',
+    },
+
+    {
+      question:
+        'Why is compareTo() important?',
+
+      answer:
+        'compareTo() defines object comparison logic for sorting.',
+    },
+  ],
+
+  nextTopic: 'comparator-interface-java',
+},
+
+{
+  id: 'comparator-interface-java',
+
+  title: 'Comparator interface in Java',
+
+  slug: 'comparator-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '40 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Comparator interface in Java deeply including custom sorting, compare method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Comparator interface in Java',
+
+      content: `
+• Introduction to Comparator
+
+• Custom Sorting
+
+• compare() Method
+
+• Multiple Sorting Logic
+
+• Object Comparison
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Comparator Interface?',
+
+      content: `
+Comparator interface is used for custom sorting of objects.
+`.trim(),
+    },
+
+    {
+      heading: 'compare() Method',
+
+      content: `
+compare() method compares two objects.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Comparator is Important',
+
+      content: `
+Used for:
+
+• Multiple sorting logics
+• Custom ordering
+• Advanced sorting
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Comparator',
+
+      content: `
+• Multiple sorting possible
+• External sorting logic
+• Flexible comparison
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Comparator',
+
+      content: `
+• Comparator belongs to java.util package
+• compare() method is required
+• Supports multiple sorting logic
+• Sorting logic remains separate from class
+
+Common Beginner Mistakes:
+
+• Returning incorrect compare values
+• Confusing compare() with compareTo()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Comparator Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+class Student {
+
+    int id;
+
+    Student(int id) {
+
+        this.id = id;
+
+    }
+
+}
+
+class SortById
+    implements Comparator<Student> {
+
+    public int compare(
+        Student a,
+        Student b) {
+
+        return a.id - b.id;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> list =
+            new ArrayList<>();
+
+        list.add(new Student(5));
+
+        list.add(new Student(1));
+
+        Collections.sort(
+            list,
+            new SortById()
+        );
+
+        for(Student s : list) {
+
+            System.out.println(s.id);
+
+        }
+
+    }
+
+}`,
+
+      output: '1\n5',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Comparator interface belongs to?', 
+
+      options: [
+        'java.lang',
+        'java.io',
+        'java.util',
+        'java.net'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Comparator belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Comparator uses which method?',
+
+      options: [
+        'compareTo()',
+        'compare()',
+        'sort()',
+        'equals()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Comparator uses compare() method.',
+    },
+
+    {
+      question:
+        'Comparator supports?', 
+
+      options: [
+        'Only one sorting',
+        'Multiple sorting logic',
+        'No sorting',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Comparator supports multiple sorting logic.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Comparator interface in Java?',
+
+      answer:
+        'Comparator interface provides custom sorting logic using compare() method.',
+    },
+
+    {
+      question:
+        'Why is Comparator preferred sometimes?',
+
+      answer:
+        'Comparator supports multiple custom sorting logics externally.',
+    },
+  ],
+
+  nextTopic: 'comparable-vs-comparator',
+},
+
+{
+  id: 'comparable-vs-comparator',
+
+  title: 'Comparable vs Comparator',
+
+  slug: 'comparable-vs-comparator',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn difference between Comparable and Comparator deeply including sorting logic, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Comparable vs Comparator',
+
+      content: `
+• Natural Sorting
+
+• Custom Sorting
+
+• compareTo() vs compare()
+
+• Package Difference
+
+• Multiple Sorting Logic
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Main Difference',
+
+      content: `
+Comparable provides natural sorting.
+
+Comparator provides custom sorting.
+`.trim(),
+    },
+
+    {
+      heading: 'Method Difference',
+
+      content: `
+Comparable:
+
+• compareTo()
+
+Comparator:
+
+• compare()
+`.trim(),
+    },
+
+    {
+      heading: 'Package Difference',
+
+      content: `
+Comparable:
+
+• java.lang package
+
+Comparator:
+
+• java.util package
+`.trim(),
+    },
+
+    {
+      heading: 'Sorting Logic Difference',
+
+      content: `
+Comparable:
+
+• One sorting logic
+
+Comparator:
+
+• Multiple sorting logics
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Comparable vs Comparator',
+
+      content: `
+• Comparable modifies original class
+• Comparator keeps sorting logic separate
+• Comparator is more flexible
+• Comparable supports default sorting
+
+Common Beginner Mistakes:
+
+• Confusing compare() and compareTo()
+• Using wrong interface for multiple sorting
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Comparable vs Comparator Example',
+
+      language: 'java',
+
+      code: `System.out.println(
+    "Comparable uses compareTo()"
+);
+
+System.out.println(
+    "Comparator uses compare()"
+);`,
+
+      output:
+        'Comparable uses compareTo()\nComparator uses compare()',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Comparable uses which method?',
+
+      options: [
+        'compare()',
+        'compareTo()',
+        'sort()',
+        'equals()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Comparable uses compareTo() method.',
+    },
+
+    {
+      question:
+        'Comparator belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.lang',
+        'java.net',
+        'java.util'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'Comparator belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Which supports multiple sorting logic?',
+
+      options: [
+        'Comparable',
+        'Comparator',
+        'Both same',
+        'Neither'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Comparator supports multiple sorting logic.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between Comparable and Comparator?',
+
+      answer:
+        'Comparable provides natural sorting while Comparator provides custom sorting.',
+    },
+
+    {
+      question:
+        'When should Comparator be preferred?',
+
+      answer:
+        'Comparator should be preferred when multiple sorting logics are required.',
+    },
+  ],
+
+  nextTopic: 'properties-class-java',
+},
+
+{
+  id: 'properties-class-java',
+
+  title: 'Properties class in Java',
+
+  slug: 'properties-class-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Properties class in Java deeply including configuration handling, key-value storage, file loading, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Properties class in Java',
+
+      content: `
+• Introduction to Properties class
+
+• Key-Value Storage
+
+• Configuration Files
+
+• Reading Properties
+
+• Writing Properties
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Properties class?',
+
+      content: `
+Properties class stores data in key-value pair format.
+
+Mostly used for configuration settings.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Properties class is Important',
+
+      content: `
+Used for:
+
+• Database configuration
+• Application settings
+• Environment variables
+• Server configuration
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of Properties class',
+
+      content: `
+Common methods:
+
+• setProperty()
+• getProperty()
+• load()
+• store()
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Properties class',
+
+      content: `
+• Easy configuration handling
+• Simple key-value storage
+• External configuration support
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Properties class',
+
+      content: `
+• Properties class extends Hashtable
+• Stores String key-value pairs
+• Mostly used with .properties files
+• Useful for configuration management
+
+Common Beginner Mistakes:
+
+• Forgetting file loading
+• Using non-string keys
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Properties class Example',
+
+      language: 'java',
+
+      code: `import java.util.Properties;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Properties p =
+            new Properties();
+
+        p.setProperty(
+            "username",
+            "admin"
+        );
+
+        System.out.println(
+            p.getProperty("username")
+        );
+
+    }
+
+}`,
+
+      output: 'admin',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Properties class stores?', 
+
+      options: [
+        'Arrays',
+        'Objects',
+        'Key-value pairs',
+        'Threads'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Properties class stores key-value pairs.',
+    },
+
+    {
+      question:
+        'Properties class mainly used for?', 
+
+      options: [
+        'Gaming',
+        'Configuration settings',
+        'Graphics',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Properties class is mainly used for configuration settings.',
+    },
+
+    {
+      question:
+        'Which method reads property value?',
+
+      options: [
+        'setProperty()',
+        'load()',
+        'store()',
+        'getProperty()'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'getProperty() reads property value.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Properties class in Java?',
+
+      answer:
+        'Properties class stores configuration data in key-value pair format.',
+    },
+
+    {
+      question:
+        'Why are .properties files important?',
+
+      answer:
+        'They help store external application configurations separately from code.',
+    },
+  ],
+
+  nextTopic: 'java-vector',
+},
+{
+  id: 'java-vector',
+
+  title: 'Java Vector',
+
+  slug: 'java-vector',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Vector deeply including dynamic arrays, synchronization, methods, capacity handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Vector',
+
+      content: `
+• Introduction to Vector
+
+• Dynamic Array
+
+• Synchronization
+
+• Capacity Handling
+
+• Vector Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Vector in Java?',
+
+      content: `
+Vector is dynamic array class in Java.
+
+It automatically increases its size when elements are added.
+`.trim(),
+    },
+
+    {
+      heading: 'Features of Vector',
+
+      content: `
+• Dynamic resizing
+• Synchronized
+• Thread-safe
+• Maintains insertion order
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of Vector',
+
+      content: `
+Common methods:
+
+• add()
+• remove()
+• get()
+• size()
+• capacity()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Vector is Important',
+
+      content: `
+Used for:
+
+• Dynamic storage
+• Thread-safe collections
+• Legacy applications
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Vector',
+
+      content: `
+• Vector is synchronized
+• Slower than ArrayList
+• Maintains insertion order
+• Capacity increases automatically
+
+Common Beginner Mistakes:
+
+• Confusing Vector with ArrayList
+• Ignoring synchronization overhead
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Vector Example',
+
+      language: 'java',
+
+      code: `import java.util.Vector;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Vector<String> vector =
+            new Vector<>();
+
+        vector.add("Java");
+
+        vector.add("Python");
+
+        System.out.println(vector);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Vector is?', 
+
+      options: [
+        'Static array',
+        'Dynamic array',
+        'Tree',
+        'Queue'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Vector is dynamic array implementation.',
+    },
+
+    {
+      question:
+        'Vector is?', 
+
+      options: [
+        'Non-synchronized',
+        'Synchronized',
+        'Immutable',
+        'Final'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Vector is synchronized and thread-safe.',
+    },
+
+    {
+      question:
+        'Vector maintains?', 
+
+      options: [
+        'Sorted order',
+        'Random order',
+        'Insertion order',
+        'Reverse order'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Vector maintains insertion order.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Vector in Java?',
+
+      answer:
+        'Vector is synchronized dynamic array implementation in Java.',
+    },
+
+    {
+      question:
+        'Why is Vector slower than ArrayList?',
+
+      answer:
+        'Because Vector uses synchronization which adds extra overhead.',
+    },
+  ],
+
+  nextTopic: 'java-stack',
+},
+
+{
+  id: 'java-stack',
+
+  title: 'Java Stack',
+
+  slug: 'java-stack',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '32 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java Stack deeply including LIFO principle, stack methods, applications, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Stack',
+
+      content: `
+• Introduction to Stack
+
+• LIFO Principle
+
+• Stack Methods
+
+• Push & Pop Operations
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Stack in Java?',
+
+      content: `
+Stack is linear data structure that follows LIFO principle.
+
+LIFO means:
+
+• Last In First Out
+`.trim(),
+    },
+
+    {
+      heading: 'Important Stack Methods',
+
+      content: `
+Common methods:
+
+• push()
+• pop()
+• peek()
+• empty()
+• search()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Stack is Important',
+
+      content: `
+Used in:
+
+• Undo operations
+• Browser history
+• Expression evaluation
+• Function calls
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Stack',
+
+      content: `
+• Simple data handling
+• Fast insertion and deletion
+• Useful for recursion
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Stack',
+
+      content: `
+• Stack follows LIFO principle
+• push() adds element
+• pop() removes top element
+• peek() reads top element
+
+Common Beginner Mistakes:
+
+• Confusing FIFO and LIFO
+• Popping empty stack
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Stack Example',
+
+      language: 'java',
+
+      code: `import java.util.Stack;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Stack<Integer> stack =
+            new Stack<>();
+
+        stack.push(10);
+
+        stack.push(20);
+
+        System.out.println(
+            stack.pop()
+        );
+
+    }
+
+}`,
+
+      output: '20',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Stack follows which principle?',
+
+      options: [
+        'FIFO',
+        'LIFO',
+        'Random',
+        'Binary'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Stack follows LIFO principle.',
+    },
+
+    {
+      question:
+        'Which method removes top element?',
+
+      options: [
+        'peek()',
+        'push()',
+        'pop()',
+        'insert()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'pop() removes top element.',
+    },
+
+    {
+      question:
+        'Which method reads top element?',
+
+      options: [
+        'peek()',
+        'remove()',
+        'search()',
+        'clear()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'peek() returns top element.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Stack in Java?',
+
+      answer:
+        'Stack is linear data structure following LIFO principle.',
+    },
+
+    {
+      question:
+        'Where is Stack used in real world?',
+
+      answer:
+        'Stack is used in undo operations, recursion, and browser history.',
+    },
+  ],
+
+  nextTopic: 'java-collection-interface',
+},
+
+{
+  id: 'java-collection-interface',
+
+  title: 'Java Collection Interface',
+
+  slug: 'java-collection-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Collection Interface deeply including hierarchy, methods, implementations, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Collection Interface',
+
+      content: `
+• Introduction to Collection Interface
+
+• Collection Hierarchy
+
+• Common Methods
+
+• List, Set, Queue
+
+• Framework Structure
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Collection Interface?',
+
+      content: `
+Collection interface is root interface of Java Collection Framework.
+`.trim(),
+    },
+
+    {
+      heading: 'Main Child Interfaces',
+
+      content: `
+Important child interfaces:
+
+• List
+• Set
+• Queue
+`.trim(),
+    },
+
+    {
+      heading: 'Common Methods of Collection Interface',
+
+      content: `
+Important methods:
+
+• add()
+• remove()
+• size()
+• clear()
+• contains()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Collection Interface is Important',
+
+      content: `
+Used for:
+
+• Dynamic data storage
+• Data management
+• Framework standardization
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Collection Interface',
+
+      content: `
+• Collection is root interface
+• Provides common collection methods
+• Part of java.util package
+• Implemented by many classes
+
+Common Beginner Mistakes:
+
+• Confusing Collection and Collections
+• Forgetting hierarchy structure
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Collection Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Collection<String> data =
+            new ArrayList<>();
+
+        data.add("Java");
+
+        data.add("Python");
+
+        System.out.println(data);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Collection interface belongs to?', 
+
+      options: [
+        'java.io',
+        'java.net',
+        'java.util',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Collection interface belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Which is child interface of Collection?',
+
+      options: [
+        'Thread',
+        'List',
+        'File',
+        'Math'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'List is child interface of Collection.',
+    },
+
+    {
+      question:
+        'Collection interface provides?', 
+
+      options: [
+        'Database methods',
+        'Graphics methods',
+        'Common collection operations',
+        'Networking operations'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Collection interface provides common collection operations.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Collection interface in Java?',
+
+      answer:
+        'Collection interface is root interface of Java Collection Framework.',
+    },
+
+    {
+      question:
+        'Why is Collection interface important?',
+
+      answer:
+        'It provides standard methods for handling collections.',
+    },
+  ],
+
+  nextTopic: 'java-iterator-interface',
+},
+
+{
+  id: 'java-iterator-interface',
+
+  title: 'Java Iterator Interface',
+
+  slug: 'java-iterator-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Iterator Interface deeply including traversal, methods, iteration process, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Iterator Interface',
+
+      content: `
+• Introduction to Iterator
+
+• Collection Traversal
+
+• Iterator Methods
+
+• Sequential Access
+
+• Element Removal
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Iterator Interface?',
+
+      content: `
+Iterator interface is used to traverse collection elements one by one.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Iterator Methods',
+
+      content: `
+Common methods:
+
+• hasNext()
+• next()
+• remove()
+`.trim(),
+    },
+
+    {
+      heading: 'How Iterator Works',
+
+      content: `
+1. Check using hasNext()
+2. Access using next()
+3. Repeat until collection ends
+`.trim(),
+    },
+
+    {
+      heading: 'Why Iterator is Important',
+
+      content: `
+Used for:
+
+• Collection traversal
+• Safe element removal
+• Dynamic iteration
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Iterator',
+
+      content: `
+• Iterator works forward only
+• Supports safe removal
+• Used with collections
+• Part of java.util package
+
+Common Beginner Mistakes:
+
+• Calling next() without hasNext()
+• Modifying collection directly during iteration
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Iterator Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list =
+            new ArrayList<>();
+
+        list.add("Java");
+
+        list.add("Python");
+
+        Iterator<String> itr =
+            list.iterator();
+
+        while(itr.hasNext()) {
+
+            System.out.println(
+                itr.next()
+            );
+
+        }
+
+    }
+
+}`,
+
+      output: 'Java\nPython',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Iterator is used for?', 
+
+      options: [
+        'Compilation',
+        'Networking',
+        'Collection traversal',
+        'Database connection'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Iterator is used for collection traversal.',
+    },
+
+    {
+      question:
+        'Which method checks next element?',
+
+      options: [
+        'next()',
+        'remove()',
+        'hasNext()',
+        'peek()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'hasNext() checks next element availability.',
+    },
+
+    {
+      question:
+        'Iterator moves in?', 
+
+      options: [
+        'Backward only',
+        'Both directions',
+        'Forward direction',
+        'Random direction'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Iterator moves only in forward direction.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Iterator interface in Java?',
+
+      answer:
+        'Iterator interface is used to traverse collection elements sequentially.',
+    },
+
+    {
+      question:
+        'Why is Iterator preferred over loops sometimes?',
+
+      answer:
+        'Iterator provides safe traversal and removal during iteration.',
+    },
+  ],
+
+  nextTopic: 'java-deque-interface',
+},
+
+{
+  id: 'java-deque-interface',
+
+  title: 'Java Deque Interface',
+
+  slug: 'java-deque-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '35 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Deque Interface deeply including double-ended operations, methods, implementations, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java Deque Interface',
+
+      content: `
+• Introduction to Deque Interface
+
+• Double-ended Queue
+
+• Insertion Operations
+
+• Removal Operations
+
+• Deque Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Deque Interface?',
+
+      content: `
+Deque stands for Double Ended Queue.
+
+It allows insertion and deletion from both ends.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of Deque',
+
+      content: `
+Common methods:
+
+• addFirst()
+• addLast()
+• removeFirst()
+• removeLast()
+• peekFirst()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Deque Interface is Important',
+
+      content: `
+Used for:
+
+• Browser history
+• Undo operations
+• Scheduling systems
+• Sliding window algorithms
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Deque',
+
+      content: `
+• Faster insertion
+• Flexible operations
+• Works as queue and stack
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Deque Interface',
+
+      content: `
+• Supports operations at both ends
+• Can work as Stack and Queue
+• Implemented by ArrayDeque
+• Null elements usually not allowed
+
+Common Beginner Mistakes:
+
+• Confusing Queue and Deque
+• Using wrong insertion methods
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Deque Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Deque<String> deque =
+            new ArrayDeque<>();
+
+        deque.addFirst("Java");
+
+        deque.addLast("Python");
+
+        System.out.println(deque);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Deque stands for?', 
+
+      options: [
+        'Double Ended Queue',
+        'Dynamic Queue',
+        'Direct Queue',
+        'Dual Entry Queue'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Deque means Double Ended Queue.',
+    },
+
+    {
+      question:
+        'Deque allows insertion from?', 
+
+      options: [
+        'Front only',
+        'Rear only',
+        'Both ends',
+        'Middle only'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Deque supports insertion from both ends.',
+    },
+
+    {
+      question:
+        'Which class commonly implements Deque?',
+
+      options: [
+        'HashMap',
+        'ArrayDeque',
+        'TreeMap',
+        'Vector'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'ArrayDeque commonly implements Deque.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Deque interface in Java?',
+
+      answer:
+        'Deque interface supports insertion and deletion from both ends.',
+    },
+
+    {
+      question:
+        'Why is Deque flexible?',
+
+      answer:
+        'Because it can work as both Queue and Stack.',
+    },
+  ],
+
+  nextTopic: 'java-listiterator-interface',
+},
+
+{
+  id: 'java-listiterator-interface',
+
+  title: 'Java ListIterator Interface',
+
+  slug: 'java-listiterator-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '33 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java ListIterator Interface deeply including bidirectional traversal, methods, modifications, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java ListIterator Interface',
+
+      content: `
+• Introduction to ListIterator
+
+• Bidirectional Traversal
+
+• Forward Iteration
+
+• Backward Iteration
+
+• Modification Operations
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is ListIterator?',
+
+      content: `
+ListIterator is advanced iterator that supports forward and backward traversal.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Methods of ListIterator',
+
+      content: `
+Common methods:
+
+• hasNext()
+• next()
+• hasPrevious()
+• previous()
+• add()
+• set()
+`.trim(),
+    },
+
+    {
+      heading: 'Why ListIterator is Important',
+
+      content: `
+Used for:
+
+• Bidirectional traversal
+• Dynamic modifications
+• Advanced collection handling
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of ListIterator',
+
+      content: `
+• Forward and backward traversal
+• Supports updates
+• More powerful than Iterator
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About ListIterator',
+
+      content: `
+• Works mainly with List collections
+• Supports bidirectional movement
+• Can modify elements during traversal
+• More flexible than Iterator
+
+Common Beginner Mistakes:
+
+• Confusing Iterator and ListIterator
+• Using previous() without checking
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'ListIterator Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list =
+            new ArrayList<>();
+
+        list.add("Java");
+
+        list.add("Python");
+
+        ListIterator<String> itr =
+            list.listIterator();
+
+        while(itr.hasNext()) {
+
+            System.out.println(
+                itr.next()
+            );
+
+        }
+
+    }
+
+}`,
+
+      output: 'Java\nPython',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'ListIterator supports?', 
+
+      options: [
+        'Forward only',
+        'Backward only',
+        'Both forward and backward traversal',
+        'Random traversal'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ListIterator supports both directions.',
+    },
+
+    {
+      question:
+        'Which method moves backward?',
+
+      options: [
+        'next()',
+        'previous()',
+        'peek()',
+        'back()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'previous() moves backward.',
+    },
+
+    {
+      question:
+        'ListIterator is more powerful than?', 
+
+      options: [
+        'Thread',
+        'Queue',
+        'Iterator',
+        'Map'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'ListIterator is more powerful than Iterator.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is ListIterator in Java?',
+
+      answer:
+        'ListIterator is advanced iterator supporting bidirectional traversal.',
+    },
+
+    {
+      question:
+        'How is ListIterator different from Iterator?',
+
+      answer:
+        'ListIterator supports backward traversal and modifications while Iterator does not.',
+    },
+  ],
+
+  nextTopic: 'java-wrapper-class',
+},
+{
+  id: 'java-wrapper-class',
+
+  title: 'Java Wrapper Classes',
+
+  slug: 'java-wrapper-class',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '35 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java Wrapper Classes deeply including primitive conversion, object handling, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Wrapper Classes',
+
+      content: `
+• Introduction to Wrapper Classes
+
+• Primitive to Object Conversion
+
+• Wrapper Class Types
+
+• Boxing and Unboxing
+
+• Wrapper Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Wrapper Classes?',
+
+      content: `
+Wrapper classes convert primitive data types into objects.
+
+Example:
+
+• int → Integer
+• char → Character
+• double → Double
+`.trim(),
+    },
+
+    {
+      heading: 'Why Wrapper Classes are Important',
+
+      content: `
+Used for:
+
+• Collection Framework
+• Object conversion
+• Utility methods
+• Data manipulation
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Wrapper Classes',
+
+      content: `
+Important wrapper classes:
+
+• Integer
+• Double
+• Float
+• Character
+• Boolean
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Wrapper Classes',
+
+      content: `
+• Converts primitive into object
+• Supports utility methods
+• Needed in collections
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Wrapper Classes',
+
+      content: `
+• Wrapper classes belong to java.lang package
+• Immutable in nature
+• Used heavily in Collection Framework
+• Supports parsing methods
+
+Common Beginner Mistakes:
+
+• Confusing primitive and object types
+• Forgetting wrapper method usage
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Wrapper Class Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int number = 10;
+
+        Integer obj = Integer.valueOf(number);
+
+        System.out.println(obj);
+
+    }
+
+}`,
+
+      output: '10',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which wrapper class is used for int?',
+
+      options: [
+        'Float',
+        'Integer',
+        'Character',
+        'Boolean'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Integer is wrapper class for int.',
+    },
+
+    {
+      question:
+        'Wrapper classes belong to which package?',
+
+      options: [
+        'java.io',
+        'java.lang',
+        'java.net',
+        'java.sql'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Wrapper classes belong to java.lang package.',
+    },
+
+    {
+      question:
+        'Wrapper classes convert primitive into?', 
+
+      options: [
+        'Method',
+        'Package',
+        'Object',
+        'Thread'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Wrapper classes convert primitive data into objects.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are wrapper classes in Java?',
+
+      answer:
+        'Wrapper classes convert primitive data types into objects.',
+    },
+
+    {
+      question:
+        'Why are wrapper classes important?',
+
+      answer:
+        'Wrapper classes are required in collections and provide utility methods.',
+    },
+  ],
+
+  nextTopic: 'autoboxing-unboxing-java',
+},
+
+{
+  id: 'autoboxing-unboxing-java',
+
+  title: 'Autoboxing and Unboxing in Java',
+
+  slug: 'autoboxing-unboxing-java',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '32 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Autoboxing and Unboxing in Java deeply including automatic conversion, wrapper objects, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Autoboxing and Unboxing in Java',
+
+      content: `
+• Introduction to Autoboxing
+
+• Introduction to Unboxing
+
+• Automatic Conversion
+
+• Wrapper Object Conversion
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Autoboxing?',
+
+      content: `
+Autoboxing means automatic conversion of primitive data type into wrapper object.
+`.trim(),
+    },
+
+    {
+      heading: 'What is Unboxing?',
+
+      content: `
+Unboxing means automatic conversion of wrapper object into primitive data type.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Autoboxing is Important',
+
+      content: `
+Used for:
+
+• Collection Framework
+• Automatic conversion
+• Cleaner code
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Autoboxing and Unboxing',
+
+      content: `
+• Reduces manual conversion
+• Cleaner syntax
+• Improves readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Autoboxing and Unboxing',
+
+      content: `
+• Introduced in Java 5
+• Automatic conversion process
+• Works with wrapper classes
+• Commonly used in collections
+
+Common Beginner Mistakes:
+
+• Confusing autoboxing with type casting
+• Ignoring null values during unboxing
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Autoboxing Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        int number = 100;
+
+        Integer obj = number;
+
+        int value = obj;
+
+        System.out.println(value);
+
+    }
+
+}`,
+
+      output: '100',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Autoboxing converts?', 
+
+      options: [
+        'Object to primitive',
+        'Primitive to object',
+        'Class to method',
+        'Method to object'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Autoboxing converts primitive into object.',
+    },
+
+    {
+      question:
+        'Unboxing converts?', 
+
+      options: [
+        'Primitive to object',
+        'Method to package',
+        'Object to primitive',
+        'Thread to class'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Unboxing converts object into primitive.',
+    },
+
+    {
+      question:
+        'Autoboxing introduced in?', 
+
+      options: [
+        'Java 1',
+        'Java 3',
+        'Java 5',
+        'Java 8'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Autoboxing was introduced in Java 5.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is autoboxing in Java?',
+
+      answer:
+        'Autoboxing is automatic conversion of primitive data into wrapper object.',
+    },
+
+    {
+      question:
+        'What is unboxing in Java?',
+
+      answer:
+        'Unboxing is automatic conversion of wrapper object into primitive type.',
+    },
+  ],
+
+  nextTopic: 'java-generics',
+},
+
+{
+  id: 'java-generics',
+
+  title: 'Java Generics',
+
+  slug: 'java-generics',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '42 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Generics deeply including type safety, generic classes, methods, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java Generics',
+
+      content: `
+• Introduction to Generics
+
+• Type Safety
+
+• Generic Classes
+
+• Generic Methods
+
+• Reusable Code
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Generics?',
+
+      content: `
+Generics allow classes and methods to work with different data types safely.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Generics are Important',
+
+      content: `
+Used for:
+
+• Type safety
+• Reusable code
+• Reducing type casting
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Generics',
+
+      content: `
+• Compile-time checking
+• Cleaner code
+• Better reusability
+`.trim(),
+    },
+
+    {
+      heading: 'Generic Syntax',
+
+      content: `
+Generic types are written using angle brackets.
+
+Example:
+
+• <T>
+• <Integer>
+• <String>
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Generics',
+
+      content: `
+• Improves type safety
+• Reduces runtime errors
+• Used heavily in collections
+• Supports reusable programming
+
+Common Beginner Mistakes:
+
+• Using raw types
+• Confusing generics with inheritance
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Generics Example',
+
+      language: 'java',
+
+      code: `class Box<T> {
+
+    T value;
+
+    void set(T value) {
+
+        this.value = value;
+
+    }
+
+    T get() {
+
+        return value;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Box<String> box =
+            new Box<>();
+
+        box.set("Java");
+
+        System.out.println(box.get());
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Generics improve?', 
+
+      options: [
+        'Gaming',
+        'Type safety',
+        'Graphics',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Generics improve type safety.',
+    },
+
+    {
+      question:
+        'Generics reduce?', 
+
+      options: [
+        'Compilation',
+        'Type casting',
+        'Methods',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Generics reduce explicit type casting.',
+    },
+
+    {
+      question:
+        'Generic symbols are written inside?', 
+
+      options: [
+        'Curly braces',
+        'Round brackets',
+        'Angle brackets',
+        'Square brackets'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Generics use angle brackets.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are Generics in Java?',
+
+      answer:
+        'Generics provide type-safe and reusable programming support.',
+    },
+
+    {
+      question:
+        'Why are Generics useful?',
+
+      answer:
+        'Generics reduce runtime errors and improve code safety.',
+    },
+  ],
+
+  nextTopic: 'wildcard-generics-java',
+},
+
+{
+  id: 'wildcard-generics-java',
+
+  title: 'Wildcard in Generics',
+
+  slug: 'wildcard-generics-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '36 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Wildcard in Generics deeply including ?, upper bound, lower bound, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Wildcard in Generics',
+
+      content: `
+• Introduction to Wildcards
+
+• ? Symbol
+
+• Upper Bounded Wildcard
+
+• Lower Bounded Wildcard
+
+• Flexible Generic Programming
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Wildcard in Generics?',
+
+      content: `
+Wildcard represents unknown type in generics.
+
+It is represented using ? symbol.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Wildcards',
+
+      content: `
+Important wildcard types:
+
+• <?>
+• <? extends ClassName>
+• <? super ClassName>
+`.trim(),
+    },
+
+    {
+      heading: 'Why Wildcards are Important',
+
+      content: `
+Used for:
+
+• Flexible programming
+• Generic compatibility
+• Reusable methods
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Wildcards',
+
+      content: `
+• Better flexibility
+• Generic compatibility
+• Cleaner generic methods
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Wildcards',
+
+      content: `
+• ? means unknown type
+• extends provides upper bound
+• super provides lower bound
+• Used heavily in collections
+
+Common Beginner Mistakes:
+
+• Confusing extends and super
+• Using wildcards unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Wildcard Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    static void print(
+        List<?> list
+    ) {
+
+        System.out.println(list);
+
+    }
+
+    public static void main(String[] args) {
+
+        List<String> names =
+            Arrays.asList(
+                "Java",
+                "Python"
+            );
+
+        print(names);
+
+    }
+
+}`,
+
+      output: '[Java, Python]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Wildcard symbol is?', 
+
+      options: [
+        '#',
+        '*',
+        '?',
+        '&'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Wildcard is represented using ? symbol.',
+    },
+
+    {
+      question:
+        'Which keyword provides upper bound?',
+
+      options: [
+        'super',
+        'extends',
+        'implements',
+        'final'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'extends provides upper bounded wildcard.',
+    },
+
+    {
+      question:
+        'Wildcards improve?', 
+
+      options: [
+        'Graphics',
+        'Networking',
+        'Generic flexibility',
+        'Compilation'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Wildcards improve generic flexibility.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is wildcard in Java Generics?',
+
+      answer:
+        'Wildcard represents unknown type using ? symbol.',
+    },
+
+    {
+      question:
+        'What is difference between extends and super wildcard?',
+
+      answer:
+        'extends provides upper bound while super provides lower bound.',
+    },
+  ],
+
+  nextTopic: 'java-annotations',
+},
+
+{
+  id: 'java-annotations',
+
+  title: 'Java Annotations',
+
+  slug: 'java-annotations',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '38 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Annotations deeply including metadata, built-in annotations, custom annotations, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Annotations',
+
+      content: `
+• Introduction to Annotations
+
+• Metadata in Java
+
+• Built-in Annotations
+
+• Custom Annotations
+
+• Annotation Usage
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Annotations?',
+
+      content: `
+Annotations provide metadata information to compiler and JVM.
+`.trim(),
+    },
+
+    {
+      heading: 'Common Built-in Annotations',
+
+      content: `
+Important annotations:
+
+• @Override
+• @Deprecated
+• @SuppressWarnings
+`.trim(),
+    },
+
+    {
+      heading: 'Why Annotations are Important',
+
+      content: `
+Used for:
+
+• Compiler instructions
+• Framework development
+• Metadata handling
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Annotations',
+
+      content: `
+• Cleaner configuration
+• Better readability
+• Compiler checking
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Annotations',
+
+      content: `
+• Annotations start with @ symbol
+• Provide metadata information
+• Widely used in frameworks
+• Improve code readability
+
+Common Beginner Mistakes:
+
+• Confusing annotations with comments
+• Incorrect annotation placement
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Annotation Example',
+
+      language: 'java',
+
+      code: `class Parent {
+
+    void show() {
+
+        System.out.println("Parent");
+
+    }
+
+}
+
+class Child extends Parent {
+
+    @Override
+    void show() {
+
+        System.out.println("Child");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Child c = new Child();
+
+        c.show();
+
+    }
+
+}`,
+
+      output: 'Child',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Annotations start with?', 
+
+      options: [
+        '#',
+        '@',
+        '&',
+        '*'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Annotations start with @ symbol.',
+    },
+
+    {
+      question:
+        'Which annotation checks overriding?',
+
+      options: [
+        '@Override',
+        '@Final',
+        '@Test',
+        '@Class'
+      ],
+
+      answer: 0,
+
+      explanation:
+        '@Override checks method overriding.',
+    },
+
+    {
+      question:
+        'Annotations provide?', 
+
+      options: [
+        'Graphics',
+        'Metadata',
+        'Networking',
+        'Threading'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Annotations provide metadata information.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are annotations in Java?',
+
+      answer:
+        'Annotations provide metadata information to compiler and JVM.',
+    },
+
+    {
+      question:
+        'Why are annotations important?',
+
+      answer:
+        'Annotations improve readability and provide compiler instructions.',
+    },
+  ],
+
+  nextTopic: 'java-reflection-api',
+},
+{
+  id: 'java-reflection-api',
+
+  title: 'Java Reflection API',
+
+  slug: 'java-reflection-api',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '42 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Reflection API deeply including runtime class inspection, methods, fields, constructors, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Reflection API',
+
+      content: `
+• Introduction to Reflection API
+
+• Runtime Class Information
+
+• Accessing Methods
+
+• Accessing Fields
+
+• Constructor Handling
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Reflection API?',
+
+      content: `
+Reflection API allows Java programs to inspect and manipulate classes at runtime.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Reflection API is Important',
+
+      content: `
+Used for:
+
+• Framework development
+• Dynamic object creation
+• Runtime inspection
+• Testing tools
+`.trim(),
+    },
+
+    {
+      heading: 'Important Reflection Classes',
+
+      content: `
+Common classes:
+
+• Class
+• Method
+• Field
+• Constructor
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Reflection API',
+
+      content: `
+• Runtime flexibility
+• Dynamic programming
+• Framework support
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Reflection API',
+
+      content: `
+• Reflection works at runtime
+• Can access private members
+• Used heavily in frameworks
+• Slower than normal method calls
+
+Common Beginner Mistakes:
+
+• Overusing reflection unnecessarily
+• Ignoring performance impact
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Reflection API Example',
+
+      language: 'java',
+
+      code: `class Student {
+
+    int id;
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        Class c = Student.class;
+
+        System.out.println(
+            c.getName()
+        );
+
+    }
+
+}`,
+
+      output: 'Student',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Reflection API works at?', 
+
+      options: [
+        'Compile time',
+        'Runtime',
+        'Installation time',
+        'Server time'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Reflection API works at runtime.',
+    },
+
+    {
+      question:
+        'Which class provides runtime information?',
+
+      options: [
+        'Math',
+        'Class',
+        'Thread',
+        'System'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Class class provides runtime information.',
+    },
+
+    {
+      question:
+        'Reflection is mostly used in?', 
+
+      options: [
+        'Games',
+        'Frameworks',
+        'Graphics',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Reflection is widely used in frameworks.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Reflection API in Java?',
+
+      answer:
+        'Reflection API allows runtime inspection and manipulation of classes.',
+    },
+
+    {
+      question:
+        'Why is Reflection API important?',
+
+      answer:
+        'It provides runtime flexibility and is heavily used in frameworks.',
+    },
+  ],
+
+  nextTopic: 'java-date-time-api',
+},
+
+{
+  id: 'java-date-time-api',
+
+  title: 'Java Date and Time API',
+
+  slug: 'java-date-time-api',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '38 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Date and Time API deeply including LocalDate, LocalTime, formatting, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Date and Time API',
+
+      content: `
+• Introduction to Date and Time API
+
+• LocalDate
+
+• LocalTime
+
+• LocalDateTime
+
+• Date Formatting
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Date and Time API?',
+
+      content: `
+Java Date and Time API provides modern classes for handling dates and time.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Classes',
+
+      content: `
+Common classes:
+
+• LocalDate
+• LocalTime
+• LocalDateTime
+• DateTimeFormatter
+`.trim(),
+    },
+
+    {
+      heading: 'Why Date and Time API is Important',
+
+      content: `
+Used for:
+
+• Time management
+• Scheduling systems
+• Logging systems
+• Banking applications
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Date and Time API',
+
+      content: `
+• Modern API design
+• Immutable classes
+• Better formatting support
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Date and Time API',
+
+      content: `
+• Introduced in Java 8
+• Immutable classes
+• Thread-safe design
+• Replaces old Date class limitations
+
+Common Beginner Mistakes:
+
+• Mixing old and new date APIs
+• Using wrong formatting patterns
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Date and Time API Example',
+
+      language: 'java',
+
+      code: `import java.time.LocalDate;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        LocalDate date =
+            LocalDate.now();
+
+        System.out.println(date);
+
+    }
+
+}`,
+
+      output: 'Current system date',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Date and Time API introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Date and Time API was introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Which class stores only date?',
+
+      options: [
+        'LocalDate',
+        'LocalTime',
+        'Thread',
+        'Math'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'LocalDate stores only date.',
+    },
+
+    {
+      question:
+        'DateTimeFormatter is used for?', 
+
+      options: [
+        'Networking',
+        'Formatting',
+        'Compilation',
+        'Sorting'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'DateTimeFormatter formats date and time.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Java Date and Time API?',
+
+      answer:
+        'It is modern API for handling date and time operations.',
+    },
+
+    {
+      question:
+        'Why is LocalDate important?',
+
+      answer:
+        'LocalDate handles date without time and improves clarity.',
+    },
+  ],
+
+  nextTopic: 'java-regex',
+},
+
+{
+  id: 'java-regex',
+
+  title: 'Java Regex',
+
+  slug: 'java-regex',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '40 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Regex deeply including pattern matching, validation, special symbols, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Java Regex',
+
+      content: `
+• Introduction to Regex
+
+• Pattern Matching
+
+• Special Symbols
+
+• Validation
+
+• Regex Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Regex?',
+
+      content: `
+Regex stands for Regular Expression.
+
+It is used for pattern matching and validation.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Regex is Important',
+
+      content: `
+Used for:
+
+• Email validation
+• Password validation
+• Search operations
+• Text processing
+`.trim(),
+    },
+
+    {
+      heading: 'Important Regex Symbols',
+
+      content: `
+Common symbols:
+
+• . → any character
+• * → zero or more
+• + → one or more
+• \\d → digit
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Regex',
+
+      content: `
+• Powerful validation
+• Fast text matching
+• Flexible searching
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Regex',
+
+      content: `
+• Regex works with patterns
+• Java provides Pattern and Matcher classes
+• Useful for validations
+• Widely used in forms
+
+Common Beginner Mistakes:
+
+• Incorrect escaping
+• Writing complex patterns unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Regex Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        String text = "Java123";
+
+        boolean result =
+            text.matches("[A-Za-z0-9]+");
+
+        System.out.println(result);
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Regex stands for?', 
+
+      options: [
+        'Regular Expression',
+        'Random Expression',
+        'Range Expression',
+        'Runtime Expression'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Regex means Regular Expression.',
+    },
+
+    {
+      question:
+        'Regex is mainly used for?', 
+
+      options: [
+        'Networking',
+        'Validation',
+        'Threading',
+        'Graphics'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Regex is commonly used for validation.',
+    },
+
+    {
+      question:
+        'Which symbol represents digit?',
+
+      options: [
+        '\\d',
+        '*',
+        '+',
+        '?'
+      ],
+
+      answer: 0,
+
+      explanation:
+        '\\d represents digit.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Regex in Java?',
+
+      answer:
+        'Regex is pattern matching technique using regular expressions.',
+    },
+
+    {
+      question:
+        'Why is Regex important?',
+
+      answer:
+        'Regex helps validate and process text efficiently.',
+    },
+  ],
+
+  nextTopic: 'java-scanner-class',
+},
+
+{
+  id: 'java-scanner-class',
+
+  title: 'Java Scanner class',
+
+  slug: 'java-scanner-class',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '34 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java Scanner class deeply including user input, methods, input handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'HCL'],
+
+  sections: [
+    {
+      heading: 'Java Scanner class',
+
+      content: `
+• Introduction to Scanner class
+
+• User Input Handling
+
+• Scanner Methods
+
+• Numeric Input
+
+• String Input
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Scanner class?',
+
+      content: `
+Scanner class is used to take input from user in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Scanner Methods',
+
+      content: `
+Common methods:
+
+• nextInt()
+• nextDouble()
+• next()
+• nextLine()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Scanner class is Important',
+
+      content: `
+Used for:
+
+• User interaction
+• Input handling
+• Console applications
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Scanner class',
+
+      content: `
+• Easy input handling
+• Supports multiple data types
+• Beginner friendly
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Scanner class',
+
+      content: `
+• Scanner belongs to java.util package
+• Reads user input
+• Supports multiple methods
+• Widely used in beginner programs
+
+Common Beginner Mistakes:
+
+• Forgetting import statement
+• Mixing nextLine() and nextInt()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Scanner class Example',
+
+      language: 'java',
+
+      code: `import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc =
+            new Scanner(System.in);
+
+        int number = sc.nextInt();
+
+        System.out.println(number);
+
+    }
+
+}`,
+
+      output: 'Input: 10\nOutput: 10',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Scanner class belongs to?', 
+
+      options: [
+        'java.lang',
+        'java.util',
+        'java.io',
+        'java.net'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Scanner class belongs to java.util package.',
+    },
+
+    {
+      question:
+        'Which method reads integer input?',
+
+      options: [
+        'next()',
+        'nextLine()',
+        'nextInt()',
+        'nextChar()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'nextInt() reads integer input.',
+    },
+
+    {
+      question:
+        'Scanner class is mainly used for?', 
+
+      options: [
+        'Graphics',
+        'Networking',
+        'User input',
+        'Threading'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Scanner class is used for user input.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Scanner class in Java?',
+
+      answer:
+        'Scanner class is used to read user input from console.',
+    },
+
+    {
+      question:
+        'Why is Scanner class beginner friendly?',
+
+      answer:
+        'Scanner provides simple methods for taking different types of input.',
+    },
+  ],
+
+  nextTopic: 'java-console-class',
+},
+
+{
+  id: 'java-console-class',
+
+  title: 'Java Console class',
+
+  slug: 'java-console-class',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '30 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Console class deeply including secure input handling, password reading, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Console class',
+
+      content: `
+• Introduction to Console class
+
+• Console Input
+
+• Password Handling
+
+• Secure Input
+
+• Console Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Console class?',
+
+      content: `
+Console class provides methods to read input securely from console.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Console Methods',
+
+      content: `
+Common methods:
+
+• readLine()
+• readPassword()
+• flush()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Console class is Important',
+
+      content: `
+Used for:
+
+• Secure password input
+• Console applications
+• Authentication systems
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Console class',
+
+      content: `
+• Secure password handling
+• Cleaner console interaction
+• Easy input reading
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Console class',
+
+      content: `
+• Console belongs to java.io package
+• readPassword() hides password input
+• Mainly used in terminal applications
+• Returns null in some IDEs
+
+Common Beginner Mistakes:
+
+• Running Console programs inside unsupported IDE
+• Forgetting null checks
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Console class Example',
+
+      language: 'java',
+
+      code: `import java.io.Console;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Console c = System.console();
+
+        if(c != null) {
+
+            String name =
+                c.readLine("Enter name: ");
+
+            System.out.println(name);
+
+        }
+
+    }
+
+}`,
+
+      output: 'Enter name: Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Console class belongs to?', 
+
+      options: [
+        'java.util',
+        'java.net',
+        'java.io',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Console class belongs to java.io package.',
+    },
+
+    {
+      question:
+        'Which method hides password input?',
+
+      options: [
+        'readLine()',
+        'readPassword()',
+        'nextInt()',
+        'flush()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'readPassword() hides password characters.',
+    },
+
+    {
+      question:
+        'Console class is useful for?', 
+
+      options: [
+        'Graphics',
+        'Networking',
+        'Secure input',
+        'Sorting'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Console class is useful for secure input.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Console class in Java?',
+
+      answer:
+        'Console class provides secure console input methods.',
+    },
+
+    {
+      question:
+        'Why is readPassword() important?',
+
+      answer:
+        'It hides password characters for security.',
+    },
+  ],
+
+  nextTopic: 'java-command-line-arguments',
+},
+{
+  id: 'java-command-line-arguments',
+
+  title: 'Java Command Line Arguments',
+
+  slug: 'java-command-line-arguments',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '33 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn Java Command Line Arguments deeply including argument passing, runtime input, array handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Command Line Arguments',
+
+      content: `
+• Introduction to Command Line Arguments
+
+• Runtime Input
+
+• String Array Arguments
+
+• Accessing Arguments
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Command Line Arguments?',
+
+      content: `
+Command line arguments are values passed to program during execution.
+`.trim(),
+    },
+
+    {
+      heading: 'How Command Line Arguments Work',
+
+      content: `
+Arguments are stored inside String[] args parameter.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Command Line Arguments are Important',
+
+      content: `
+Used for:
+
+• Runtime configuration
+• User input
+• Automation scripts
+• Server applications
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Command Line Arguments',
+
+      content: `
+• Dynamic input
+• Flexible execution
+• Useful in automation
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Command Line Arguments',
+
+      content: `
+• Arguments are stored as String values
+• Accessed using array indexing
+• Passed during execution
+• Main method receives arguments
+
+Common Beginner Mistakes:
+
+• Forgetting array indexing
+• Assuming arguments are integers automatically
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Command Line Argument Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(args[0]);
+
+    }
+
+}`,
+
+      output: 'Input: Java\nOutput: Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Command line arguments are passed during?', 
+
+      options: [
+        'Compilation',
+        'Execution',
+        'Installation',
+        'Editing'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Arguments are passed during execution.',
+    },
+
+    {
+      question:
+        'Arguments are stored in?', 
+
+      options: [
+        'int[]',
+        'char[]',
+        'String[]',
+        'double[]'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Arguments are stored inside String array.',
+    },
+
+    {
+      question:
+        'Which parameter stores command line arguments?',
+
+      options: [
+        'args',
+        'number',
+        'data',
+        'value'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'args parameter stores command line arguments.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are command line arguments in Java?',
+
+      answer:
+        'Command line arguments are values passed during program execution.',
+    },
+
+    {
+      question:
+        'Why are command line arguments useful?',
+
+      answer:
+        'They provide dynamic runtime input without modifying code.',
+    },
+  ],
+
+  nextTopic: 'java-varargs',
+},
+
+{
+  id: 'java-varargs',
+
+  title: 'Java Varargs',
+
+  slug: 'java-varargs',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '31 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Varargs deeply including variable arguments, syntax, flexibility, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Java Varargs',
+
+      content: `
+• Introduction to Varargs
+
+• Variable Arguments
+
+• Varargs Syntax
+
+• Flexible Methods
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Varargs?',
+
+      content: `
+Varargs allows method to accept variable number of arguments.
+`.trim(),
+    },
+
+    {
+      heading: 'Varargs Syntax',
+
+      content: `
+Varargs uses three dots (...).
+
+Example:
+
+• int... numbers
+`.trim(),
+    },
+
+    {
+      heading: 'Why Varargs are Important',
+
+      content: `
+Used for:
+
+• Flexible method calls
+• Cleaner code
+• Utility methods
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Varargs',
+
+      content: `
+• Accepts multiple values
+• Reduces method overloading
+• Improves readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Varargs',
+
+      content: `
+• Varargs introduced in Java 5
+• Internally treated as array
+• Only one varargs parameter allowed
+• Varargs parameter must be last
+
+Common Beginner Mistakes:
+
+• Placing varargs before normal parameters
+• Using multiple varargs in one method
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Varargs Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    static void display(
+        int... numbers
+    ) {
+
+        for(int n : numbers) {
+
+            System.out.println(n);
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        display(10, 20, 30);
+
+    }
+
+}`,
+
+      output: '10\n20\n30',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Varargs uses which symbol?',
+
+      options: [
+        '***',
+        '...',
+        '///',
+        '###'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Varargs uses three dots (...).',
+    },
+
+    {
+      question:
+        'Varargs introduced in?', 
+
+      options: [
+        'Java 1',
+        'Java 3',
+        'Java 5',
+        'Java 8'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Varargs introduced in Java 5.',
+    },
+
+    {
+      question:
+        'Varargs are internally treated as?', 
+
+      options: [
+        'Thread',
+        'Class',
+        'Array',
+        'Method'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Varargs are internally treated as arrays.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Varargs in Java?',
+
+      answer:
+        'Varargs allows methods to accept variable number of arguments.',
+    },
+
+    {
+      question:
+        'Why are Varargs useful?',
+
+      answer:
+        'Varargs reduce unnecessary method overloading.',
+    },
+  ],
+
+  nextTopic: 'java-memory-management',
+},
+
+{
+  id: 'java-memory-management',
+
+  title: 'Java Memory Management',
+
+  slug: 'java-memory-management',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '45 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Memory Management deeply including heap memory, stack memory, garbage collection, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Memory Management',
+
+      content: `
+• Introduction to Memory Management
+
+• Heap Memory
+
+• Stack Memory
+
+• Method Area
+
+• Garbage Collection
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Memory Management?',
+
+      content: `
+Memory management controls allocation and release of memory in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Memory Areas',
+
+      content: `
+Important memory areas:
+
+• Heap Memory
+• Stack Memory
+• Method Area
+`.trim(),
+    },
+
+    {
+      heading: 'Why Memory Management is Important',
+
+      content: `
+Used for:
+
+• Efficient memory usage
+• Better performance
+• Avoiding memory leaks
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Java Memory Management',
+
+      content: `
+• Automatic memory handling
+• Garbage collection support
+• Reduced manual errors
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Memory Management',
+
+      content: `
+• Objects are stored in heap memory
+• Local variables are stored in stack memory
+• JVM manages memory automatically
+• Garbage Collector removes unused objects
+
+Common Beginner Mistakes:
+
+• Confusing heap and stack memory
+• Assuming Java has no memory issues
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Memory Management Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    int value = 10;
+
+    public static void main(String[] args) {
+
+        Main obj =
+            new Main();
+
+        System.out.println(
+            obj.value
+        );
+
+    }
+
+}`,
+
+      output: '10',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Objects are stored in?', 
+
+      options: [
+        'Stack',
+        'Heap',
+        'CPU',
+        'Register'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Objects are stored in heap memory.',
+    },
+
+    {
+      question:
+        'Local variables are stored in?', 
+
+      options: [
+        'Heap',
+        'Stack',
+        'Cache',
+        'Method area'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Local variables are stored in stack memory.',
+    },
+
+    {
+      question:
+        'Which component removes unused objects?',
+
+      options: [
+        'Compiler',
+        'Thread',
+        'Garbage Collector',
+        'Scanner'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Garbage Collector removes unused objects.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Java Memory Management?',
+
+      answer:
+        'Java Memory Management handles memory allocation and deallocation automatically.',
+    },
+
+    {
+      question:
+        'What is difference between heap and stack memory?',
+
+      answer:
+        'Heap stores objects while stack stores local variables and method calls.',
+    },
+  ],
+
+  nextTopic: 'jvm-architecture-java',
+},
+
+{
+  id: 'jvm-architecture-java',
+
+  title: 'JVM Architecture',
+
+  slug: 'jvm-architecture-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '48 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn JVM Architecture deeply including class loader, memory areas, execution engine, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'JVM Architecture',
+
+      content: `
+• Introduction to JVM
+
+• Class Loader
+
+• JVM Memory Areas
+
+• Execution Engine
+
+• Garbage Collector
+
+• Runtime Environment
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is JVM?',
+
+      content: `
+JVM stands for Java Virtual Machine.
+
+It executes Java bytecode.
+`.trim(),
+    },
+
+    {
+      heading: 'Main Components of JVM',
+
+      content: `
+Important JVM components:
+
+• Class Loader
+• Method Area
+• Heap Area
+• Stack Area
+• Execution Engine
+`.trim(),
+    },
+
+    {
+      heading: 'Why JVM is Important',
+
+      content: `
+Used for:
+
+• Platform independence
+• Bytecode execution
+• Memory management
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of JVM',
+
+      content: `
+• Platform independent execution
+• Automatic memory management
+• Security features
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About JVM Architecture',
+
+      content: `
+• JVM executes bytecode
+• Class Loader loads class files
+• Execution Engine executes instructions
+• Garbage Collector handles unused memory
+
+Common Beginner Mistakes:
+
+• Confusing JVM and JDK
+• Assuming JVM compiles Java code
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'JVM Architecture Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(
+            "JVM executes bytecode"
+        );
+
+    }
+
+}`,
+
+      output: 'JVM executes bytecode',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'JVM stands for?', 
+
+      options: [
+        'Java Variable Machine',
+        'Java Virtual Machine',
+        'Java Visual Machine',
+        'Java Verified Machine'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'JVM means Java Virtual Machine.',
+    },
+
+    {
+      question:
+        'JVM executes?', 
+
+      options: [
+        'Source code',
+        'HTML',
+        'Bytecode',
+        'CSS'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'JVM executes bytecode.',
+    },
+
+    {
+      question:
+        'Which component loads class files?',
+
+      options: [
+        'Scanner',
+        'Compiler',
+        'Class Loader',
+        'Thread'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Class Loader loads class files.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is JVM in Java?',
+
+      answer:
+        'JVM is virtual machine that executes Java bytecode.',
+    },
+
+    {
+      question:
+        'Why is JVM important?',
+
+      answer:
+        'JVM provides platform independence and automatic memory management.',
+    },
+  ],
+
+  nextTopic: 'jdk-vs-jre-vs-jvm',
+},
+
+{
+  id: 'jdk-vs-jre-vs-jvm',
+
+  title: 'JDK vs JRE vs JVM',
+
+  slug: 'jdk-vs-jre-vs-jvm',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '36 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn difference between JDK, JRE, and JVM deeply including architecture, usage, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'JDK vs JRE vs JVM',
+
+      content: `
+• Introduction to JDK
+
+• Introduction to JRE
+
+• Introduction to JVM
+
+• Architecture Difference
+
+• Usage Difference
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is JDK?',
+
+      content: `
+JDK stands for Java Development Kit.
+
+It provides tools required for Java development.
+`.trim(),
+    },
+
+    {
+      heading: 'What is JRE?',
+
+      content: `
+JRE stands for Java Runtime Environment.
+
+It provides environment to run Java programs.
+`.trim(),
+    },
+
+    {
+      heading: 'What is JVM?',
+
+      content: `
+JVM stands for Java Virtual Machine.
+
+It executes Java bytecode.
+`.trim(),
+    },
+
+    {
+      heading: 'Difference Between JDK, JRE, and JVM',
+
+      content: `
+JDK:
+
+• Development tools
+• Compiler included
+
+JRE:
+
+• Runtime environment
+• JVM included
+
+JVM:
+
+• Executes bytecode
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About JDK vs JRE vs JVM',
+
+      content: `
+• JDK contains JRE
+• JRE contains JVM
+• JVM provides platform independence
+• JDK used for development
+
+Common Beginner Mistakes:
+
+• Confusing JRE with JVM
+• Thinking JDK is only compiler
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'JDK JRE JVM Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(
+            "Java runs using JVM"
+        );
+
+    }
+
+}`,
+
+      output: 'Java runs using JVM',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which component executes bytecode?',
+
+      options: [
+        'JDK',
+        'JRE',
+        'JVM',
+        'Compiler'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'JVM executes bytecode.',
+    },
+
+    {
+      question:
+        'Which component contains development tools?',
+
+      options: [
+        'JDK',
+        'JVM',
+        'JRE',
+        'Thread'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'JDK contains development tools.',
+    },
+
+    {
+      question:
+        'JRE mainly provides?', 
+
+      options: [
+        'Compiler',
+        'Database',
+        'Runtime environment',
+        'Networking'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'JRE provides runtime environment.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between JDK, JRE, and JVM?',
+
+      answer:
+        'JDK is development kit, JRE is runtime environment, and JVM executes bytecode.',
+    },
+
+    {
+      question:
+        'Why is JVM platform independent?',
+
+      answer:
+        'Because JVM allows bytecode execution on different operating systems.',
+    },
+  ],
+
+  nextTopic: 'java-garbage-collector-types',
+},
+{
+  id: 'java-garbage-collector-types',
+
+  title: 'Java Garbage Collector Types',
+
+  slug: 'java-garbage-collector-types',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '40 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Garbage Collector Types deeply including Serial GC, Parallel GC, G1 GC, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Garbage Collector Types',
+
+      content: `
+• Introduction to Garbage Collection
+
+• Serial Garbage Collector
+
+• Parallel Garbage Collector
+
+• G1 Garbage Collector
+
+• Memory Cleanup
+
+• Performance Optimization
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Garbage Collector?',
+
+      content: `
+Garbage Collector automatically removes unused objects from memory.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Garbage Collectors',
+
+      content: `
+Important garbage collectors:
+
+• Serial GC
+• Parallel GC
+• G1 GC
+• ZGC
+`.trim(),
+    },
+
+    {
+      heading: 'Why Garbage Collection is Important',
+
+      content: `
+Used for:
+
+• Automatic memory cleanup
+• Better memory management
+• Reducing memory leaks
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Garbage Collection',
+
+      content: `
+• Automatic memory management
+• Reduces manual errors
+• Improves application stability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Garbage Collectors',
+
+      content: `
+• JVM manages garbage collection
+• Unused objects are removed automatically
+• Different collectors optimize performance
+• System.gc() requests garbage collection
+
+Common Beginner Mistakes:
+
+• Assuming garbage collection happens instantly
+• Calling System.gc() unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Garbage Collection Example',
+
+      language: 'java',
+
+      code: `public class Main {
+
+    public static void main(String[] args) {
+
+        Main obj =
+            new Main();
+
+        obj = null;
+
+        System.gc();
+
+        System.out.println(
+            "Garbage Collection Requested"
+        );
+
+    }
+
+}`,
+
+      output: 'Garbage Collection Requested',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Garbage Collector removes?', 
+
+      options: [
+        'Methods',
+        'Unused objects',
+        'Threads',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Garbage Collector removes unused objects.',
+    },
+
+    {
+      question:
+        'Which method requests garbage collection?',
+
+      options: [
+        'Math.gc()',
+        'Thread.gc()',
+        'System.gc()',
+        'Scanner.gc()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'System.gc() requests garbage collection.',
+    },
+
+    {
+      question:
+        'Garbage Collection improves?', 
+
+      options: [
+        'Graphics',
+        'Memory management',
+        'Networking',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Garbage Collection improves memory management.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Garbage Collection in Java?',
+
+      answer:
+        'Garbage Collection automatically removes unused objects from memory.',
+    },
+
+    {
+      question:
+        'Why are different GC types important?',
+
+      answer:
+        'Different GC types optimize performance for different applications.',
+    },
+  ],
+
+  nextTopic: 'java-immutable-objects',
+},
+
+{
+  id: 'java-immutable-objects',
+
+  title: 'Java Immutable Objects',
+
+  slug: 'java-immutable-objects',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Immutable Objects deeply including immutability rules, benefits, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Immutable Objects',
+
+      content: `
+• Introduction to Immutable Objects
+
+• Rules of Immutability
+
+• Immutable Class Design
+
+• Real-world Usage
+
+• Security Benefits
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Immutable Objects?',
+
+      content: `
+Immutable objects cannot be modified after creation.
+`.trim(),
+    },
+
+    {
+      heading: 'Rules to Make Immutable Class',
+
+      content: `
+Important rules:
+
+• Declare class final
+• Make fields private
+• Do not provide setter methods
+`.trim(),
+    },
+
+    {
+      heading: 'Why Immutable Objects are Important',
+
+      content: `
+Used for:
+
+• Security
+• Thread safety
+• Stable object design
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Immutable Objects',
+
+      content: `
+• Thread-safe
+• Secure design
+• Easy to maintain
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Immutable Objects',
+
+      content: `
+• String class is immutable
+• Immutable objects cannot change state
+• Common in multithreading
+• Improves reliability
+
+Common Beginner Mistakes:
+
+• Providing setter methods accidentally
+• Forgetting deep copy for mutable fields
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Immutable Object Example',
+
+      language: 'java',
+
+      code: `final class Student {
+
+    private final int id;
+
+    Student(int id) {
+
+        this.id = id;
+
+    }
+
+    public int getId() {
+
+        return id;
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s =
+            new Student(101);
+
+        System.out.println(
+            s.getId()
+        );
+
+    }
+
+}`,
+
+      output: '101',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Immutable object can be?', 
+
+      options: [
+        'Modified',
+        'Deleted',
+        'Changed',
+        'Not modified'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'Immutable objects cannot be modified.',
+    },
+
+    {
+      question:
+        'Which class is immutable in Java?',
+
+      options: [
+        'Scanner',
+        'Thread',
+        'String',
+        'Math'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'String is immutable in Java.',
+    },
+
+    {
+      question:
+        'Immutable objects improve?', 
+
+      options: [
+        'Networking',
+        'Security',
+        'Graphics',
+        'Compilation'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Immutable objects improve security and thread safety.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are immutable objects in Java?',
+
+      answer:
+        'Immutable objects cannot be modified after creation.',
+    },
+
+    {
+      question:
+        'Why are immutable objects important?',
+
+      answer:
+        'They improve thread safety, security, and reliability.',
+    },
+  ],
+
+  nextTopic: 'java-cloneable-interface',
+},
+
+{
+  id: 'java-cloneable-interface',
+
+  title: 'Java Cloneable Interface',
+
+  slug: 'java-cloneable-interface',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '37 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Cloneable Interface deeply including object cloning, clone() method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Cloneable Interface',
+
+      content: `
+• Introduction to Cloneable Interface
+
+• Object Cloning
+
+• clone() Method
+
+• Shallow Copy
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Cloneable Interface?',
+
+      content: `
+Cloneable interface allows object cloning in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Cloneable Interface is Important',
+
+      content: `
+Used for:
+
+• Object duplication
+• Performance optimization
+• Backup objects
+`.trim(),
+    },
+
+    {
+      heading: 'How Cloning Works',
+
+      content: `
+Important steps:
+
+1. Implement Cloneable interface
+2. Override clone() method
+3. Use object cloning
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Cloning',
+
+      content: `
+• Faster object copying
+• Useful in large applications
+• Reduces manual copying
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Cloneable Interface',
+
+      content: `
+• Cloneable is marker interface
+• clone() method belongs to Object class
+• Supports shallow copying by default
+• Deep copy requires custom logic
+
+Common Beginner Mistakes:
+
+• Forgetting Cloneable implementation
+• Confusing shallow and deep copy
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Cloneable Interface Example',
+
+      language: 'java',
+
+      code: `class Student
+    implements Cloneable {
+
+    int id = 101;
+
+    public Object clone()
+        throws CloneNotSupportedException {
+
+        return super.clone();
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        Student s1 =
+            new Student();
+
+        Student s2 =
+            (Student)s1.clone();
+
+        System.out.println(s2.id);
+
+    }
+
+}`,
+
+      output: '101',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Cloneable is which type of interface?',
+
+      options: [
+        'Functional',
+        'Marker',
+        'Nested',
+        'Abstract'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Cloneable is marker interface.',
+    },
+
+    {
+      question:
+        'Which method performs cloning?',
+
+      options: [
+        'copy()',
+        'duplicate()',
+        'clone()',
+        'create()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'clone() method performs cloning.',
+    },
+
+    {
+      question:
+        'clone() method belongs to?', 
+
+      options: [
+        'Math class',
+        'Thread class',
+        'Object class',
+        'Scanner class'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'clone() belongs to Object class.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Cloneable interface in Java?',
+
+      answer:
+        'Cloneable interface allows object cloning in Java.',
+    },
+
+    {
+      question:
+        'What is difference between shallow copy and deep copy?',
+
+      answer:
+        'Shallow copy copies references while deep copy creates independent copies.',
+    },
+  ],
+
+  nextTopic: 'object-cloning-java',
+},
+
+{
+  id: 'object-cloning-java',
+
+  title: 'Object Cloning in Java',
+
+  slug: 'object-cloning-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '39 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Object Cloning in Java deeply including shallow copy, deep copy, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Object Cloning in Java',
+
+      content: `
+• Introduction to Object Cloning
+
+• clone() Method
+
+• Shallow Copy
+
+• Deep Copy
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Object Cloning?',
+
+      content: `
+Object cloning creates duplicate copy of existing object.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Cloning',
+
+      content: `
+Important cloning types:
+
+• Shallow Copy
+• Deep Copy
+`.trim(),
+    },
+
+    {
+      heading: 'Why Object Cloning is Important',
+
+      content: `
+Used for:
+
+• Object duplication
+• Backup creation
+• Faster copying
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Object Cloning',
+
+      content: `
+• Improves performance
+• Reduces manual copying
+• Useful in complex systems
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Object Cloning',
+
+      content: `
+• clone() creates object copy
+• Shallow copy shares references
+• Deep copy creates independent objects
+• Cloneable interface required
+
+Common Beginner Mistakes:
+
+• Forgetting Cloneable interface
+• Confusing shallow and deep copy
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Object Cloning Example',
+
+      language: 'java',
+
+      code: `class Employee
+    implements Cloneable {
+
+    int id = 500;
+
+    public Object clone()
+        throws CloneNotSupportedException {
+
+        return super.clone();
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args)
+        throws Exception {
+
+        Employee e1 =
+            new Employee();
+
+        Employee e2 =
+            (Employee)e1.clone();
+
+        System.out.println(e2.id);
+
+    }
+
+}`,
+
+      output: '500',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Object cloning creates?', 
+
+      options: [
+        'Method',
+        'Duplicate object',
+        'Package',
+        'Thread'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Object cloning creates duplicate object.',
+    },
+
+    {
+      question:
+        'Deep copy creates?', 
+
+      options: [
+        'Shared references',
+        'Independent objects',
+        'Methods',
+        'Threads'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Deep copy creates independent objects.',
+    },
+
+    {
+      question:
+        'Shallow copy shares?', 
+
+      options: [
+        'Methods',
+        'Variables',
+        'References',
+        'Packages'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Shallow copy shares references.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is object cloning in Java?',
+
+      answer:
+        'Object cloning creates duplicate copy of existing object.',
+    },
+
+    {
+      question:
+        'Why is deep copy safer than shallow copy?',
+
+      answer:
+        'Deep copy creates fully independent objects.',
+    },
+  ],
+
+  nextTopic: 'shallow-copy-vs-deep-copy',
+},
+
+{
+  id: 'shallow-copy-vs-deep-copy',
+
+  title: 'Shallow Copy vs Deep Copy',
+
+  slug: 'shallow-copy-vs-deep-copy',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '35 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn difference between Shallow Copy and Deep Copy deeply including references, cloning behavior, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Shallow Copy vs Deep Copy',
+
+      content: `
+• Introduction to Shallow Copy
+
+• Introduction to Deep Copy
+
+• Reference Sharing
+
+• Independent Objects
+
+• Cloning Behavior
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Shallow Copy?',
+
+      content: `
+Shallow copy copies object references instead of creating new referenced objects.
+`.trim(),
+    },
+
+    {
+      heading: 'What is Deep Copy?',
+
+      content: `
+Deep copy creates completely independent copy including referenced objects.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Deep Copy is Important',
+
+      content: `
+Used for:
+
+• Independent object modification
+• Better safety
+• Avoiding shared data problems
+`.trim(),
+    },
+
+    {
+      heading: 'Difference Between Shallow and Deep Copy',
+
+      content: `
+Shallow Copy:
+
+• Shares references
+• Faster
+• Less memory usage
+
+Deep Copy:
+
+• Independent objects
+• Safer
+• More memory usage
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Shallow and Deep Copy',
+
+      content: `
+• Shallow copy shares internal references
+• Deep copy creates independent data
+• Deep copy is safer in multithreading
+• Cloneable supports shallow copy by default
+
+Common Beginner Mistakes:
+
+• Assuming clone() creates deep copy
+• Ignoring reference sharing issues
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Shallow Copy Example',
+
+      language: 'java',
+
+      code: `class Address {
+
+    String city = "Delhi";
+
+}
+
+class Student {
+
+    Address address =
+        new Address();
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student s1 =
+            new Student();
+
+        Student s2 = s1;
+
+        System.out.println(
+            s2.address.city
+        );
+
+    }
+
+}`,
+
+      output: 'Delhi',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Shallow copy shares?', 
+
+      options: [
+        'Methods',
+        'References',
+        'Threads',
+        'Packages'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Shallow copy shares references.',
+    },
+
+    {
+      question:
+        'Deep copy creates?', 
+
+      options: [
+        'Shared objects',
+        'Independent objects',
+        'Packages',
+        'Methods'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Deep copy creates independent objects.',
+    },
+
+    {
+      question:
+        'Which copy is safer?',
+
+      options: [
+        'Shallow copy',
+        'Deep copy',
+        'Both same',
+        'None'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Deep copy is safer because objects are independent.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is difference between shallow copy and deep copy?',
+
+      answer:
+        'Shallow copy shares references while deep copy creates independent copies.',
+    },
+
+    {
+      question:
+        'Why is deep copy important?',
+
+      answer:
+        'Deep copy prevents shared reference issues and improves safety.',
+    },
+  ],
+
+  nextTopic: 'java-lambda-expressions',
+},
+{
+  id: 'java-lambda-expressions',
+
+  title: 'Java Lambda Expressions',
+
+  slug: 'java-lambda-expressions',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '44 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Lambda Expressions deeply including functional programming, syntax, advantages, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Java Lambda Expressions',
+
+      content: `
+• Introduction to Lambda Expressions
+
+• Functional Programming
+
+• Lambda Syntax
+
+• Simplified Code
+
+• Functional Interfaces
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Lambda Expressions?',
+
+      content: `
+Lambda Expressions provide shorter way to write anonymous functions in Java.
+`.trim(),
+    },
+
+    {
+      heading: 'Lambda Expression Syntax',
+
+      content: `
+Basic syntax:
+
+(parameters) -> expression
+`.trim(),
+    },
+
+    {
+      heading: 'Why Lambda Expressions are Important',
+
+      content: `
+Used for:
+
+• Cleaner code
+• Functional programming
+• Collection operations
+• Stream API
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Lambda Expressions',
+
+      content: `
+• Reduces boilerplate code
+• Improves readability
+• Supports functional programming
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Lambda Expressions',
+
+      content: `
+• Introduced in Java 8
+• Works with functional interfaces
+• Removes unnecessary anonymous classes
+• Widely used with Stream API
+
+Common Beginner Mistakes:
+
+• Using lambda without functional interface
+• Confusing lambda with normal methods
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Lambda Expression Example',
+
+      language: 'java',
+
+      code: `interface Message {
+
+    void show();
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Message msg =
+            () -> System.out.println(
+                "Lambda Expression"
+            );
+
+        msg.show();
+
+    }
+
+}`,
+
+      output: 'Lambda Expression',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Lambda Expressions introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Lambda Expressions were introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Lambda Expressions mainly support?', 
+
+      options: [
+        'Graphics',
+        'Networking',
+        'Functional programming',
+        'Database'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Lambda Expressions support functional programming.',
+    },
+
+    {
+      question:
+        'Which symbol is used in lambda expressions?',
+
+      options: [
+        '=>',
+        '->',
+        '==',
+        '&&'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Lambda expressions use -> symbol.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are Lambda Expressions in Java?',
+
+      answer:
+        'Lambda Expressions provide shorter syntax for anonymous functions.',
+    },
+
+    {
+      question:
+        'Why are Lambda Expressions important?',
+
+      answer:
+        'They reduce boilerplate code and support functional programming.',
+    },
+  ],
+
+  nextTopic: 'functional-interface-java',
+},
+
+{
+  id: 'functional-interface-java',
+
+  title: 'Functional Interface in Java',
+
+  slug: 'functional-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Functional Interface in Java deeply including single abstract method, lambda support, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Functional Interface in Java',
+
+      content: `
+• Introduction to Functional Interface
+
+• Single Abstract Method
+
+• Lambda Support
+
+• @FunctionalInterface Annotation
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Functional Interface?',
+
+      content: `
+Functional Interface contains only one abstract method.
+`.trim(),
+    },
+
+    {
+      heading: 'Examples of Functional Interfaces',
+
+      content: `
+Important examples:
+
+• Runnable
+• Callable
+• Comparator
+`.trim(),
+    },
+
+    {
+      heading: 'Why Functional Interfaces are Important',
+
+      content: `
+Used for:
+
+• Lambda expressions
+• Functional programming
+• Cleaner code
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Functional Interfaces',
+
+      content: `
+• Supports lambda expressions
+• Reduces code complexity
+• Improves readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Functional Interfaces',
+
+      content: `
+• Contains one abstract method
+• Can have multiple default methods
+• Supports lambda expressions
+• @FunctionalInterface is optional
+
+Common Beginner Mistakes:
+
+• Adding multiple abstract methods
+• Confusing normal interface with functional interface
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Functional Interface Example',
+
+      language: 'java',
+
+      code: `@FunctionalInterface
+
+interface Square {
+
+    int calculate(int x);
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Square s =
+            (x) -> x * x;
+
+        System.out.println(
+            s.calculate(5)
+        );
+
+    }
+
+}`,
+
+      output: '25',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Functional Interface contains how many abstract methods?',
+
+      options: [
+        'Zero',
+        'One',
+        'Two',
+        'Unlimited'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Functional Interface contains one abstract method.',
+    },
+
+    {
+      question:
+        'Which annotation is used for functional interface?',
+
+      options: [
+        '@Override',
+        '@FunctionalInterface',
+        '@Deprecated',
+        '@Inherited'
+      ],
+
+      answer: 1,
+
+      explanation:
+        '@FunctionalInterface annotation is used.',
+    },
+
+    {
+      question:
+        'Functional Interfaces are mainly used with?', 
+
+      options: [
+        'Threads',
+        'Packages',
+        'Lambda Expressions',
+        'Applets'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Functional Interfaces are used with Lambda Expressions.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Functional Interface in Java?',
+
+      answer:
+        'Functional Interface contains exactly one abstract method.',
+    },
+
+    {
+      question:
+        'Why are Functional Interfaces important?',
+
+      answer:
+        'They support lambda expressions and functional programming.',
+    },
+  ],
+
+  nextTopic: 'predicate-interface-java',
+},
+
+{
+  id: 'predicate-interface-java',
+
+  title: 'Predicate Interface in Java',
+
+  slug: 'predicate-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '35 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Predicate Interface in Java deeply including boolean testing, lambda usage, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Predicate Interface in Java',
+
+      content: `
+• Introduction to Predicate Interface
+
+• Boolean Testing
+
+• Lambda Expressions
+
+• test() Method
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Predicate Interface?',
+
+      content: `
+Predicate Interface performs boolean condition testing.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Predicate Method',
+
+      content: `
+Main method:
+
+• test()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Predicate Interface is Important',
+
+      content: `
+Used for:
+
+• Filtering data
+• Conditional checks
+• Stream API operations
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Predicate Interface',
+
+      content: `
+• Cleaner condition handling
+• Reusable logic
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Predicate Interface',
+
+      content: `
+• Belongs to java.util.function package
+• Returns boolean value
+• Commonly used in Stream API
+• Supports lambda expressions
+
+Common Beginner Mistakes:
+
+• Forgetting boolean return
+• Confusing Predicate with Function interface
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Predicate Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.function.Predicate;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Predicate<Integer> p =
+            n -> n > 10;
+
+        System.out.println(
+            p.test(15)
+        );
+
+    }
+
+}`,
+
+      output: 'true',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Predicate Interface returns?', 
+
+      options: [
+        'String',
+        'Integer',
+        'Boolean',
+        'Double'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Predicate returns boolean value.',
+    },
+
+    {
+      question:
+        'Which method is used in Predicate?',
+
+      options: [
+        'run()',
+        'test()',
+        'show()',
+        'execute()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Predicate uses test() method.',
+    },
+
+    {
+      question:
+        'Predicate belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.lang',
+        'java.util.function',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Predicate belongs to java.util.function package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Predicate Interface in Java?',
+
+      answer:
+        'Predicate Interface performs boolean condition testing.',
+    },
+
+    {
+      question:
+        'Why is Predicate useful in Stream API?',
+
+      answer:
+        'Predicate helps filter data using conditions.',
+    },
+  ],
+
+  nextTopic: 'consumer-interface-java',
+},
+
+{
+  id: 'consumer-interface-java',
+
+  title: 'Consumer Interface in Java',
+
+  slug: 'consumer-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Consumer Interface in Java deeply including data consumption, accept() method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Consumer Interface in Java',
+
+      content: `
+• Introduction to Consumer Interface
+
+• Data Consumption
+
+• accept() Method
+
+• Lambda Expressions
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Consumer Interface?',
+
+      content: `
+Consumer Interface accepts input and performs operation without returning value.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Consumer Method',
+
+      content: `
+Main method:
+
+• accept()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Consumer Interface is Important',
+
+      content: `
+Used for:
+
+• Data processing
+• Printing operations
+• Stream API actions
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Consumer Interface',
+
+      content: `
+• Cleaner processing logic
+• Supports lambda expressions
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Consumer Interface',
+
+      content: `
+• Belongs to java.util.function package
+• Does not return value
+• Commonly used with forEach()
+• Supports lambda expressions
+
+Common Beginner Mistakes:
+
+• Expecting return value
+• Confusing Consumer with Predicate
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Consumer Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.function.Consumer;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Consumer<String> c =
+            name -> System.out.println(name);
+
+        c.accept("Java");
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Consumer Interface returns?', 
+
+      options: [
+        'Boolean',
+        'Integer',
+        'Value',
+        'Nothing'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'Consumer does not return any value.',
+    },
+
+    {
+      question:
+        'Which method is used in Consumer?',
+
+      options: [
+        'accept()',
+        'test()',
+        'show()',
+        'run()'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Consumer uses accept() method.',
+    },
+
+    {
+      question:
+        'Consumer belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.net',
+        'java.util.function',
+        'java.sql'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Consumer belongs to java.util.function package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Consumer Interface in Java?',
+
+      answer:
+        'Consumer Interface accepts input and performs operation without returning value.',
+    },
+
+    {
+      question:
+        'Why is Consumer Interface useful?',
+
+      answer:
+        'It simplifies processing operations using lambda expressions.',
+    },
+  ],
+
+  nextTopic: 'supplier-interface-java',
+},
+
+{
+  id: 'supplier-interface-java',
+
+  title: 'Supplier Interface in Java',
+
+  slug: 'supplier-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '33 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Supplier Interface in Java deeply including value generation, get() method, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Supplier Interface in Java',
+
+      content: `
+• Introduction to Supplier Interface
+
+• Value Generation
+
+• get() Method
+
+• Lambda Expressions
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Supplier Interface?',
+
+      content: `
+Supplier Interface supplies data without taking input.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Supplier Method',
+
+      content: `
+Main method:
+
+• get()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Supplier Interface is Important',
+
+      content: `
+Used for:
+
+• Object creation
+• Lazy loading
+• Data generation
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Supplier Interface',
+
+      content: `
+• Cleaner object generation
+• Supports lazy evaluation
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Supplier Interface',
+
+      content: `
+• Belongs to java.util.function package
+• Takes no input
+• Returns generated value
+• Common in Stream API
+
+Common Beginner Mistakes:
+
+• Passing unnecessary parameters
+• Confusing Supplier with Consumer
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Supplier Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.function.Supplier;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Supplier<String> s =
+            () -> "Java";
+
+        System.out.println(
+            s.get()
+        );
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Supplier Interface takes?', 
+
+      options: [
+        'One input',
+        'Two inputs',
+        'No input',
+        'Array input'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Supplier does not take input.',
+    },
+
+    {
+      question:
+        'Which method is used in Supplier?',
+
+      options: [
+        'test()',
+        'accept()',
+        'get()',
+        'run()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Supplier uses get() method.',
+    },
+
+    {
+      question:
+        'Supplier Interface belongs to?', 
+
+      options: [
+        'java.io',
+        'java.util.function',
+        'java.sql',
+        'java.net'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Supplier belongs to java.util.function package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Supplier Interface in Java?',
+
+      answer:
+        'Supplier Interface generates and returns data without taking input.',
+    },
+
+    {
+      question:
+        'Why is Supplier Interface useful?',
+
+      answer:
+        'It simplifies object creation and lazy data generation.',
+    },
+  ],
+
+  nextTopic: 'function-interface-java',
+},
+{
+  id: 'function-interface-java',
+
+  title: 'Function Interface in Java',
+
+  slug: 'function-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1518770660439-4636190af475',
+
+  readTime: '37 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Function Interface in Java deeply including apply() method, data transformation, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Function Interface in Java',
+
+      content: `
+• Introduction to Function Interface
+
+• Data Transformation
+
+• apply() Method
+
+• Lambda Expressions
+
+• Functional Programming
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Function Interface?',
+
+      content: `
+Function Interface accepts input and returns processed output.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Function Method',
+
+      content: `
+Main method:
+
+• apply()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Function Interface is Important',
+
+      content: `
+Used for:
+
+• Data transformation
+• Stream API operations
+• Functional programming
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Function Interface',
+
+      content: `
+• Cleaner logic
+• Reusable transformations
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Function Interface',
+
+      content: `
+• Belongs to java.util.function package
+• Takes input and returns output
+• Commonly used with Stream API
+• Supports lambda expressions
+
+Common Beginner Mistakes:
+
+• Forgetting return value
+• Confusing Function with Predicate
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Function Interface Example',
+
+      language: 'java',
+
+      code: `import java.util.function.Function;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Function<Integer, Integer> f =
+            n -> n * n;
+
+        System.out.println(
+            f.apply(5)
+        );
+
+    }
+
+}`,
+
+      output: '25',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Function Interface returns?', 
+
+      options: [
+        'Nothing',
+        'Processed output',
+        'Boolean only',
+        'Thread'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Function Interface returns processed output.',
+    },
+
+    {
+      question:
+        'Which method is used in Function Interface?',
+
+      options: [
+        'accept()',
+        'test()',
+        'apply()',
+        'run()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Function Interface uses apply() method.',
+    },
+
+    {
+      question:
+        'Function Interface belongs to which package?',
+
+      options: [
+        'java.io',
+        'java.net',
+        'java.sql',
+        'java.util.function'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'Function Interface belongs to java.util.function package.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Function Interface in Java?',
+
+      answer:
+        'Function Interface accepts input and returns processed output.',
+    },
+
+    {
+      question:
+        'Why is Function Interface important?',
+
+      answer:
+        'It simplifies data transformation and functional programming.',
+    },
+  ],
+
+  nextTopic: 'java-stream-api',
+},
+
+{
+  id: 'java-stream-api',
+
+  title: 'Java Stream API',
+
+  slug: 'java-stream-api',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '52 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Java Stream API deeply including filtering, mapping, reduction, pipelines, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Stream API',
+
+      content: `
+• Introduction to Stream API
+
+• Stream Pipeline
+
+• filter() Method
+
+• map() Method
+
+• reduce() Method
+
+• collect() Method
+
+• Functional Programming
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Stream API?',
+
+      content: `
+Stream API processes collections using functional programming style.
+`.trim(),
+    },
+
+    {
+      heading: 'Common Stream Operations',
+
+      content: `
+Important operations:
+
+• filter()
+• map()
+• sorted()
+• reduce()
+• collect()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Stream API is Important',
+
+      content: `
+Used for:
+
+• Cleaner collection processing
+• Faster development
+• Functional programming
+• Parallel processing
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Stream API',
+
+      content: `
+• Reduces boilerplate code
+• Improves readability
+• Supports parallel execution
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Stream API',
+
+      content: `
+• Introduced in Java 8
+• Does not modify original collection
+• Supports lazy processing
+• Uses functional interfaces
+
+Common Beginner Mistakes:
+
+• Reusing consumed streams
+• Confusing map() and filter()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Stream API Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers =
+            Arrays.asList(
+                10, 15, 20, 25
+            );
+
+        numbers.stream()
+            .filter(n -> n > 15)
+            .forEach(System.out::println);
+
+    }
+
+}`,
+
+      output: '20\n25',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Stream API introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Stream API introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Which method filters data?',
+
+      options: [
+        'map()',
+        'reduce()',
+        'filter()',
+        'sort()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'filter() method filters data.',
+    },
+
+    {
+      question:
+        'Stream API mainly supports?', 
+
+      options: [
+        'Networking',
+        'Graphics',
+        'Functional programming',
+        'Applets'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Stream API supports functional programming.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Stream API in Java?',
+
+      answer:
+        'Stream API processes collections using functional programming style.',
+    },
+
+    {
+      question:
+        'Why is Stream API important?',
+
+      answer:
+        'It simplifies collection processing and improves readability.',
+    },
+  ],
+
+  nextTopic: 'stream-filter-method-java',
+},
+
+{
+  id: 'stream-filter-method-java',
+
+  title: 'Stream filter() Method in Java',
+
+  slug: 'stream-filter-method-java',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Stream filter() Method in Java deeply including conditional filtering, lambda usage, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Stream filter() Method in Java',
+
+      content: `
+• Introduction to filter() Method
+
+• Conditional Filtering
+
+• Predicate Usage
+
+• Lambda Expressions
+
+• Stream Processing
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is filter() Method?',
+
+      content: `
+filter() method selects elements based on condition.
+`.trim(),
+    },
+
+    {
+      heading: 'Why filter() Method is Important',
+
+      content: `
+Used for:
+
+• Data filtering
+• Conditional processing
+• Stream pipelines
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of filter() Method',
+
+      content: `
+• Cleaner filtering logic
+• Improves readability
+• Reduces loops
+`.trim(),
+    },
+
+    {
+      heading: 'How filter() Works',
+
+      content: `
+1. Stream receives collection
+2. Predicate condition applied
+3. Matching elements returned
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About filter() Method',
+
+      content: `
+• Uses Predicate interface
+• Returns filtered stream
+• Original collection unchanged
+• Commonly used with forEach()
+
+Common Beginner Mistakes:
+
+• Forgetting terminal operation
+• Using invalid predicate conditions
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'filter() Method Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<Integer> list =
+            Arrays.asList(
+                5, 10, 15, 20
+            );
+
+        list.stream()
+            .filter(n -> n >= 10)
+            .forEach(System.out::println);
+
+    }
+
+}`,
+
+      output: '10\n15\n20',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'filter() method uses which interface?',
+
+      options: [
+        'Consumer',
+        'Supplier',
+        'Predicate',
+        'Runnable'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'filter() uses Predicate interface.',
+    },
+
+    {
+      question:
+        'filter() method returns?', 
+
+      options: [
+        'Filtered stream',
+        'Integer',
+        'Boolean',
+        'Thread'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'filter() returns filtered stream.',
+    },
+
+    {
+      question:
+        'filter() mainly performs?', 
+
+      options: [
+        'Sorting',
+        'Filtering',
+        'Compilation',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'filter() performs filtering.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is filter() method in Stream API?',
+
+      answer:
+        'filter() selects elements based on condition.',
+    },
+
+    {
+      question:
+        'Why is filter() method useful?',
+
+      answer:
+        'It simplifies conditional filtering in collections.',
+    },
+  ],
+
+  nextTopic: 'stream-map-method-java',
+},
+
+{
+  id: 'stream-map-method-java',
+
+  title: 'Stream map() Method in Java',
+
+  slug: 'stream-map-method-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Stream map() Method in Java deeply including transformation logic, lambda usage, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Stream map() Method in Java',
+
+      content: `
+• Introduction to map() Method
+
+• Data Transformation
+
+• Lambda Expressions
+
+• Functional Programming
+
+• Stream Processing
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is map() Method?',
+
+      content: `
+map() method transforms stream elements into new form.
+`.trim(),
+    },
+
+    {
+      heading: 'Why map() Method is Important',
+
+      content: `
+Used for:
+
+• Data transformation
+• Collection processing
+• Functional programming
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of map() Method',
+
+      content: `
+• Cleaner transformation logic
+• Improves readability
+• Reduces loops
+`.trim(),
+    },
+
+    {
+      heading: 'How map() Works',
+
+      content: `
+1. Stream receives collection
+2. Transformation applied
+3. New stream returned
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About map() Method',
+
+      content: `
+• Uses Function interface
+• Returns transformed stream
+• Original collection unchanged
+• Commonly used with collect()
+
+Common Beginner Mistakes:
+
+• Confusing map() with filter()
+• Forgetting terminal operations
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'map() Method Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<Integer> list =
+            Arrays.asList(
+                1, 2, 3, 4
+            );
+
+        list.stream()
+            .map(n -> n * n)
+            .forEach(System.out::println);
+
+    }
+
+}`,
+
+      output: '1\n4\n9\n16',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'map() method uses which interface?',
+
+      options: [
+        'Predicate',
+        'Function',
+        'Runnable',
+        'Callable'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'map() uses Function interface.',
+    },
+
+    {
+      question:
+        'map() method mainly performs?', 
+
+      options: [
+        'Filtering',
+        'Sorting',
+        'Transformation',
+        'Compilation'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'map() performs transformation.',
+    },
+
+    {
+      question:
+        'map() method returns?', 
+
+      options: [
+        'Boolean',
+        'Thread',
+        'Transformed stream',
+        'Package'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'map() returns transformed stream.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is map() method in Stream API?',
+
+      answer:
+        'map() transforms stream elements into new form.',
+    },
+
+    {
+      question:
+        'Why is map() method important?',
+
+      answer:
+        'It simplifies data transformation in collections.',
+    },
+  ],
+
+  nextTopic: 'stream-reduce-method-java',
+},
+
+{
+  id: 'stream-reduce-method-java',
+
+  title: 'Stream reduce() Method in Java',
+
+  slug: 'stream-reduce-method-java',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '38 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn Stream reduce() Method in Java deeply including reduction operations, aggregation logic, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Stream reduce() Method in Java',
+
+      content: `
+• Introduction to reduce() Method
+
+• Aggregation Operations
+
+• Reduction Logic
+
+• Functional Programming
+
+• Stream Processing
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is reduce() Method?',
+
+      content: `
+reduce() method combines stream elements into single result.
+`.trim(),
+    },
+
+    {
+      heading: 'Why reduce() Method is Important',
+
+      content: `
+Used for:
+
+• Sum calculation
+• Product calculation
+• Aggregation operations
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of reduce() Method',
+
+      content: `
+• Cleaner aggregation logic
+• Improves readability
+• Reduces manual loops
+`.trim(),
+    },
+
+    {
+      heading: 'How reduce() Works',
+
+      content: `
+1. Stream elements processed
+2. Reduction logic applied
+3. Single result returned
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About reduce() Method',
+
+      content: `
+• Commonly used for aggregation
+• Uses BinaryOperator logic
+• Returns single result
+• Useful in Stream API pipelines
+
+Common Beginner Mistakes:
+
+• Using incorrect reduction logic
+• Forgetting identity value
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'reduce() Method Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<Integer> list =
+            Arrays.asList(
+                10, 20, 30
+            );
+
+        int result =
+            list.stream()
+                .reduce(
+                    0,
+                    (a, b) -> a + b
+                );
+
+        System.out.println(result);
+
+    }
+
+}`,
+
+      output: '60',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'reduce() method mainly performs?', 
+
+      options: [
+        'Filtering',
+        'Aggregation',
+        'Sorting',
+        'Networking'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'reduce() performs aggregation operations.',
+    },
+
+    {
+      question:
+        'reduce() method returns?', 
+
+      options: [
+        'Single result',
+        'Array',
+        'Thread',
+        'Package'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'reduce() returns single result.',
+    },
+
+    {
+      question:
+        'reduce() is commonly used for?', 
+
+      options: [
+        'Graphics',
+        'Compilation',
+        'Sum calculation',
+        'Applets'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'reduce() commonly calculates sums and aggregations.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is reduce() method in Stream API?',
+
+      answer:
+        'reduce() combines stream elements into single result.',
+    },
+
+    {
+      question:
+        'Why is reduce() method useful?',
+
+      answer:
+        'It simplifies aggregation operations like sum and product calculation.',
+    },
+  ],
+
+  nextTopic: 'stream-collect-method-java',
+},
+{
+  id: 'stream-collect-method-java',
+
+  title: 'Stream collect() Method in Java',
+
+  slug: 'stream-collect-method-java',
+
+  image:
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
+
+  readTime: '39 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Stream collect() Method in Java deeply including collectors, list conversion, grouping, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'IBM'],
+
+  sections: [
+    {
+      heading: 'Stream collect() Method in Java',
+
+      content: `
+• Introduction to collect() Method
+
+• Collectors Utility
+
+• List Conversion
+
+• Set Conversion
+
+• Grouping Data
+
+• Stream Processing
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is collect() Method?',
+
+      content: `
+collect() method converts stream data into collection or final result.
+`.trim(),
+    },
+
+    {
+      heading: 'Why collect() Method is Important',
+
+      content: `
+Used for:
+
+• Converting streams to List
+• Converting streams to Set
+• Grouping data
+• Final stream processing
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of collect() Method',
+
+      content: `
+• Simplifies collection creation
+• Cleaner stream handling
+• Supports grouping operations
+`.trim(),
+    },
+
+    {
+      heading: 'Common Collectors',
+
+      content: `
+Important collectors:
+
+• Collectors.toList()
+• Collectors.toSet()
+• Collectors.groupingBy()
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About collect() Method',
+
+      content: `
+• Terminal operation in Stream API
+• Uses Collectors utility class
+• Commonly used after map() and filter()
+• Converts streams into collections
+
+Common Beginner Mistakes:
+
+• Forgetting import for Collectors
+• Confusing reduce() with collect()
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'collect() Method Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<Integer> list =
+            Arrays.asList(
+                1, 2, 3, 4
+            );
+
+        List<Integer> result =
+            list.stream()
+                .map(n -> n * 2)
+                .collect(Collectors.toList());
+
+        System.out.println(result);
+
+    }
+
+}`,
+
+      output: '[2, 4, 6, 8]',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'collect() method mainly converts stream into?', 
+
+      options: [
+        'Thread',
+        'Collection',
+        'Package',
+        'Compiler'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'collect() converts stream into collection.',
+    },
+
+    {
+      question:
+        'Which utility class is used with collect()?',
+
+      options: [
+        'Math',
+        'Thread',
+        'Collectors',
+        'Scanner'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'collect() uses Collectors utility class.',
+    },
+
+    {
+      question:
+        'collect() is which type of operation?',
+
+      options: [
+        'Intermediate',
+        'Terminal',
+        'Constructor',
+        'Static'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'collect() is terminal operation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is collect() method in Stream API?',
+
+      answer:
+        'collect() converts stream data into collection or final result.',
+    },
+
+    {
+      question:
+        'Why is collect() method important?',
+
+      answer:
+        'It helps store processed stream data into collections.',
+    },
+  ],
+
+  nextTopic: 'java-optional-class',
+},
+
+{
+  id: 'java-optional-class',
+
+  title: 'Java Optional Class',
+
+  slug: 'java-optional-class',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '41 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Optional Class deeply including null safety, optional handling, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Capgemini', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Optional Class',
+
+      content: `
+• Introduction to Optional Class
+
+• Null Safety
+
+• Optional Methods
+
+• Avoiding NullPointerException
+
+• Functional Programming
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Optional Class?',
+
+      content: `
+Optional class is container object used to avoid null values.
+`.trim(),
+    },
+
+    {
+      heading: 'Important Optional Methods',
+
+      content: `
+Important methods:
+
+• of()
+• ofNullable()
+• isPresent()
+• get()
+• orElse()
+`.trim(),
+    },
+
+    {
+      heading: 'Why Optional Class is Important',
+
+      content: `
+Used for:
+
+• Null safety
+• Cleaner code
+• Preventing NullPointerException
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Optional Class',
+
+      content: `
+• Safer null handling
+• Better readability
+• Reduces runtime errors
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Optional Class',
+
+      content: `
+• Introduced in Java 8
+• Helps avoid null checks
+• Commonly used with Stream API
+• Improves code safety
+
+Common Beginner Mistakes:
+
+• Calling get() without checking value
+• Using Optional everywhere unnecessarily
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Optional Class Example',
+
+      language: 'java',
+
+      code: `import java.util.Optional;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Optional<String> name =
+            Optional.of("Java");
+
+        System.out.println(
+            name.get()
+        );
+
+    }
+
+}`,
+
+      output: 'Java',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Optional class introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Optional class introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Optional class mainly prevents?', 
+
+      options: [
+        'Compile Error',
+        'Network Error',
+        'NullPointerException',
+        'Syntax Error'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Optional class helps avoid NullPointerException.',
+    },
+
+    {
+      question:
+        'Which method checks value presence?',
+
+      options: [
+        'run()',
+        'accept()',
+        'isPresent()',
+        'show()'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'isPresent() checks value presence.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Optional class in Java?',
+
+      answer:
+        'Optional class is container object used to safely handle null values.',
+    },
+
+    {
+      question:
+        'Why is Optional class important?',
+
+      answer:
+        'It reduces NullPointerException and improves code readability.',
+    },
+  ],
+
+  nextTopic: 'java-method-reference',
+},
+
+{
+  id: 'java-method-reference',
+
+  title: 'Java Method Reference',
+
+  slug: 'java-method-reference',
+
+  image:
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
+
+  readTime: '36 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Java Method Reference deeply including syntax, constructor references, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Oracle'],
+
+  sections: [
+    {
+      heading: 'Java Method Reference',
+
+      content: `
+• Introduction to Method Reference
+
+• Simplified Lambda Expressions
+
+• Static Method Reference
+
+• Instance Method Reference
+
+• Constructor Reference
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Method Reference?',
+
+      content: `
+Method Reference provides shorthand syntax for calling methods using :: operator.
+`.trim(),
+    },
+
+    {
+      heading: 'Types of Method References',
+
+      content: `
+Important types:
+
+• Static Method Reference
+• Instance Method Reference
+• Constructor Reference
+`.trim(),
+    },
+
+    {
+      heading: 'Why Method Reference is Important',
+
+      content: `
+Used for:
+
+• Cleaner code
+• Shorter lambda expressions
+• Better readability
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Method Reference',
+
+      content: `
+• Reduces code length
+• Improves readability
+• Simplifies lambda expressions
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Method Reference',
+
+      content: `
+• Uses :: operator
+• Introduced in Java 8
+• Works with functional interfaces
+• Alternative to lambda expressions
+
+Common Beginner Mistakes:
+
+• Using invalid method signatures
+• Confusing lambda with method reference
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Method Reference Example',
+
+      language: 'java',
+
+      code: `import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        List<String> names =
+            Arrays.asList(
+                "Java",
+                "Python"
+            );
+
+        names.forEach(
+            System.out::println
+        );
+
+    }
+
+}`,
+
+      output: 'Java\nPython',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Method Reference uses which operator?',
+
+      options: [
+        '->',
+        '::',
+        '==',
+        '&&'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Method Reference uses :: operator.',
+    },
+
+    {
+      question:
+        'Method Reference introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Method Reference introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Method Reference mainly simplifies?', 
+
+      options: [
+        'Database',
+        'Threads',
+        'Lambda Expressions',
+        'Packages'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Method Reference simplifies lambda expressions.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is Method Reference in Java?',
+
+      answer:
+        'Method Reference provides shorthand syntax for method calls using :: operator.',
+    },
+
+    {
+      question:
+        'Why is Method Reference useful?',
+
+      answer:
+        'It simplifies lambda expressions and improves readability.',
+    },
+  ],
+
+  nextTopic: 'default-methods-interface-java',
+},
+
+{
+  id: 'default-methods-interface-java',
+
+  title: 'Default Methods in Interface',
+
+  slug: 'default-methods-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '35 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Default Methods in Interface deeply including implementation, backward compatibility, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'Oracle', 'Accenture'],
+
+  sections: [
+    {
+      heading: 'Default Methods in Interface',
+
+      content: `
+• Introduction to Default Methods
+
+• Interface Implementation
+
+• Backward Compatibility
+
+• Java 8 Features
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Default Methods?',
+
+      content: `
+Default methods allow interfaces to contain method implementation.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Default Methods are Important',
+
+      content: `
+Used for:
+
+• Backward compatibility
+• Adding new features
+• Interface enhancement
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Default Methods',
+
+      content: `
+• Supports method implementation in interface
+• Improves backward compatibility
+• Reduces breaking changes
+`.trim(),
+    },
+
+    {
+      heading: 'Default Method Syntax',
+
+      content: `
+default void show() {
+
+}
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Default Methods',
+
+      content: `
+• Introduced in Java 8
+• Uses default keyword
+• Can contain implementation
+• Helps extend interfaces safely
+
+Common Beginner Mistakes:
+
+• Forgetting default keyword
+• Confusing default methods with abstract methods
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Default Method Example',
+
+      language: 'java',
+
+      code: `interface Demo {
+
+    default void show() {
+
+        System.out.println(
+            "Default Method"
+        );
+
+    }
+
+}
+
+public class Main
+    implements Demo {
+
+    public static void main(String[] args) {
+
+        Main obj =
+            new Main();
+
+        obj.show();
+
+    }
+
+}`,
+
+      output: 'Default Method',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Default methods introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Default methods introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Which keyword is used for default methods?',
+
+      options: [
+        'final',
+        'default',
+        'static',
+        'private'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'default keyword is used.',
+    },
+
+    {
+      question:
+        'Default methods mainly improve?', 
+
+      options: [
+        'Networking',
+        'Backward compatibility',
+        'Graphics',
+        'Database'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Default methods improve backward compatibility.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are default methods in Java?',
+
+      answer:
+        'Default methods allow interfaces to contain method implementation.',
+    },
+
+    {
+      question:
+        'Why are default methods important?',
+
+      answer:
+        'They help maintain backward compatibility while extending interfaces.',
+    },
+  ],
+
+  nextTopic: 'static-methods-interface-java',
+},
+
+{
+  id: 'static-methods-interface-java',
+
+  title: 'Static Methods in Interface',
+
+  slug: 'static-methods-interface-java',
+
+  image:
+    'https://images.unsplash.com/photo-1504639725590-34d0984388bd',
+
+  readTime: '34 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn Static Methods in Interface deeply including syntax, interface utilities, and interview concepts.',
+
+  companyTags: ['TCS', 'Infosys', 'Wipro', 'IBM', 'Capgemini'],
+
+  sections: [
+    {
+      heading: 'Static Methods in Interface',
+
+      content: `
+• Introduction to Static Methods
+
+• Interface Utility Methods
+
+• Java 8 Features
+
+• Method Access
+
+• Real-world Usage
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Static Methods in Interface?',
+
+      content: `
+Interfaces can contain static methods with implementation.
+`.trim(),
+    },
+
+    {
+      heading: 'Why Static Methods are Important',
+
+      content: `
+Used for:
+
+• Utility methods
+• Shared interface logic
+• Cleaner code organization
+`.trim(),
+    },
+
+    {
+      heading: 'Advantages of Static Methods in Interface',
+
+      content: `
+• Utility logic inside interface
+• Better organization
+• Easy method access
+`.trim(),
+    },
+
+    {
+      heading: 'How Static Methods Work',
+
+      content: `
+• Accessed using interface name
+• Not inherited by implementing class
+• Contains implementation
+`.trim(),
+    },
+
+    {
+      heading: 'Important Points About Static Methods in Interface',
+
+      content: `
+• Introduced in Java 8
+• Uses static keyword
+• Accessed using interface name
+• Cannot be overridden
+
+Common Beginner Mistakes:
+
+• Calling static methods using object
+• Confusing default and static methods
+`.trim(),
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Static Method Interface Example',
+
+      language: 'java',
+
+      code: `interface Demo {
+
+    static void show() {
+
+        System.out.println(
+            "Static Method"
+        );
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Demo.show();
+
+    }
+
+}`,
+
+      output: 'Static Method',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Static methods in interface introduced in?', 
+
+      options: [
+        'Java 5',
+        'Java 6',
+        'Java 8',
+        'Java 11'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Static methods in interface introduced in Java 8.',
+    },
+
+    {
+      question:
+        'Static methods are accessed using?', 
+
+      options: [
+        'Object',
+        'Class variable',
+        'Interface name',
+        'Constructor'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Static methods are accessed using interface name.',
+    },
+
+    {
+      question:
+        'Can static interface methods be overridden?',
+
+      options: [
+        'Yes',
+        'No',
+        'Sometimes',
+        'Only in abstract class'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Static interface methods cannot be overridden.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are static methods in interface?',
+
+      answer:
+        'Interfaces can contain static methods with implementation.',
+    },
+
+    {
+      question:
+        'Why are static methods useful in interfaces?',
+
+      answer:
+        'They help create utility methods inside interfaces.',
+    },
+  ],
+
+  nextTopic: 'java-foreach-method',
 },
 ];
