@@ -1,5 +1,6 @@
 import { javaNotes } from './javaNotes'
 import { pythonNotes } from './pythonNotes'
+import { cNotes } from './cNotes'
 
 export const NOTES_LANGUAGES = [
   {
@@ -19,6 +20,15 @@ export const NOTES_LANGUAGES = [
     color: 'from-sky-200 via-cyan-100 to-white',
     progressBar: 'from-sky-400 to-blue-500',
     notes: pythonNotes,
+  },
+  {
+    id: 'c',
+    name: 'C Programming',
+    emoji: '🔵',
+    description: 'C programming fundamentals — memory management, pointers, structures, and coding questions.',
+    color: 'from-indigo-200 via-blue-100 to-white',
+    progressBar: 'from-indigo-400 to-blue-500',
+    notes: cNotes,
   },
 ]
 
