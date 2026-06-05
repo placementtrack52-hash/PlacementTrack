@@ -1,6 +1,10 @@
 import { javaNotes } from './javaNotes'
 import { pythonNotes } from './pythonNotes'
 import { cNotes } from './cNotes'
+import { htmlNotes } from './htmlNotes'
+import { cssNotes } from './cssNotes'
+import { javascriptNotes } from './javascriptNotes'
+import { reactNotes } from './reactNotes'
 
 export const NOTES_LANGUAGES = [
   {
@@ -29,6 +33,42 @@ export const NOTES_LANGUAGES = [
     color: 'from-indigo-200 via-blue-100 to-white',
     progressBar: 'from-indigo-400 to-blue-500',
     notes: cNotes,
+  },
+  {
+    id: 'html',
+    name: 'HTML',
+    emoji: '🌐',
+    description: 'HTML5 basics — page structure, elements, attributes, semantic tags, and forms.',
+    color: 'from-orange-200 via-red-100 to-white',
+    progressBar: 'from-orange-400 to-red-500',
+    notes: htmlNotes,
+  },
+  {
+    id: 'css',
+    name: 'CSS',
+    emoji: '🎨',
+    description: 'CSS styling — selectors, box model, layouts (Flexbox, Grid), and responsive design.',
+    color: 'from-blue-200 via-sky-100 to-white',
+    progressBar: 'from-blue-400 to-sky-500',
+    notes: cssNotes,
+  },
+  {
+    id: 'javascript',
+    name: 'JavaScript',
+    emoji: '💛',
+    description: 'Modern JavaScript (ES6+) — core execution, scope, DOM manipulation, asynchronous patterns, and interview MCQs.',
+    color: 'from-yellow-200 via-amber-100 to-white',
+    progressBar: 'from-yellow-500 to-amber-500',
+    notes: javascriptNotes,
+  },
+  {
+    id: 'react',
+    name: 'React JS',
+    emoji: '⚛️',
+    description: 'React JS library — components, JSX, props, state, hooks, lifecycle, and modern hooks.',
+    color: 'from-cyan-200 via-sky-100 to-white',
+    progressBar: 'from-cyan-400 to-sky-500',
+    notes: reactNotes,
   },
 ]
 
