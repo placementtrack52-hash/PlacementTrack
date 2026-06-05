@@ -5,6 +5,13 @@ import { htmlNotes } from './htmlNotes'
 import { cssNotes } from './cssNotes'
 import { javascriptNotes } from './javascriptNotes'
 import { reactNotes } from './reactNotes'
+import { nodeNotes } from './nodeNotes'
+import { sqlNotes } from './sqlNotes'
+import { cppNotes } from './cppNotes'
+import { mysqlNotes } from './mysqlNotes'
+import { mongodbNotes } from './mongodbNotes'
+import { phpNotes } from './phpNotes'
+import { csharpNotes } from './csharpNotes'
 
 export const NOTES_LANGUAGES = [
   {
@@ -69,6 +76,69 @@ export const NOTES_LANGUAGES = [
     color: 'from-cyan-200 via-sky-100 to-white',
     progressBar: 'from-cyan-400 to-sky-500',
     notes: reactNotes,
+  },
+  {
+    id: 'node',
+    name: 'Node.js',
+    emoji: '🟢',
+    description: 'Node.js backend environment — event loop, modular structure, NPM, express servers, and middlewares.',
+    color: 'from-green-200 via-emerald-100 to-white',
+    progressBar: 'from-green-400 to-emerald-500',
+    notes: nodeNotes,
+  },
+  {
+    id: 'sql',
+    name: 'SQL',
+    emoji: '💾',
+    description: 'Structured Query Language — relational database, primary/foreign keys, joins, index, and subqueries.',
+    color: 'from-slate-200 via-zinc-100 to-white',
+    progressBar: 'from-slate-400 to-zinc-500',
+    notes: sqlNotes,
+  },
+  {
+    id: 'cpp',
+    name: 'C++',
+    emoji: '🚀',
+    description: 'C++ programming language — Standard Template Library (STL), memory allocation, OOPs concepts, pointers, and code snippets.',
+    color: 'from-blue-200 via-indigo-100 to-white',
+    progressBar: 'from-blue-500 to-indigo-600',
+    notes: cppNotes,
+  },
+  {
+    id: 'mysql',
+    name: 'MySQL',
+    emoji: '🐬',
+    description: 'MySQL Relational Database System — transactions, ACID properties, normalization, indexing, and syntax queries.',
+    color: 'from-sky-200 via-blue-100 to-white',
+    progressBar: 'from-sky-500 to-blue-600',
+    notes: mysqlNotes,
+  },
+  {
+    id: 'mongodb',
+    name: 'MongoDB',
+    emoji: '🍃',
+    description: 'MongoDB NoSQL Database — document model, collections, indexing, aggregation pipeline, and CRUD methods.',
+    color: 'from-emerald-200 via-teal-100 to-white',
+    progressBar: 'from-emerald-500 to-teal-600',
+    notes: mongodbNotes,
+  },
+  {
+    id: 'php',
+    name: 'PHP',
+    emoji: '🐘',
+    description: 'PHP Hypertext Preprocessor — web server structure, dynamic page delivery, sessions/cookies, and forms processing.',
+    color: 'from-purple-200 via-violet-100 to-white',
+    progressBar: 'from-purple-400 to-violet-500',
+    notes: phpNotes,
+  },
+  {
+    id: 'csharp',
+    name: 'C#',
+    emoji: '🔮',
+    description: 'C# programming language — .NET compilation stack, CLR lifecycle, LINQ, collections, and generic syntax.',
+    color: 'from-violet-200 via-fuchsia-100 to-white',
+    progressBar: 'from-violet-500 to-fuchsia-600',
+    notes: csharpNotes,
   },
 ]
 

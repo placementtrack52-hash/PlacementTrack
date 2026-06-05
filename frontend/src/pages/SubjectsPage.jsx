@@ -303,7 +303,7 @@ const SubjectsPage = () => {
               />
             </div>
             <p className="mt-3 text-sm text-slate dark:text-white/70">
-              Java, Python, C, HTML, CSS, JS & React · MCQs
+              Java, Python, C, C++, Web, SQL, NoSQL & C# · MCQs
             </p>
           </div>
           <span className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] dark:bg-white dark:text-black">
