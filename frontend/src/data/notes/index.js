@@ -12,6 +12,13 @@ import { mysqlNotes } from './mysqlNotes'
 import { mongodbNotes } from './mongodbNotes'
 import { phpNotes } from './phpNotes'
 import { csharpNotes } from './csharpNotes'
+import { typescriptNotes } from './typescriptNotes'
+import { springbootNotes } from './springbootNotes'
+import { aiNotes } from './aiNotes'
+import { dbmsNotes } from './dbmsNotes'
+import { osNotes } from './osNotes'
+import { dsaNotes } from './dsaNotes'
+import { gitNotes } from './gitNotes'
 
 export const NOTES_LANGUAGES = [
   {
@@ -139,6 +146,69 @@ export const NOTES_LANGUAGES = [
     color: 'from-violet-200 via-fuchsia-100 to-white',
     progressBar: 'from-violet-500 to-fuchsia-600',
     notes: csharpNotes,
+  },
+  {
+    id: 'typescript',
+    name: 'TypeScript',
+    emoji: '🟦',
+    description: 'TypeScript superset — interface contracts, strict typing constraints, generics, module imports, and configuration setup.',
+    color: 'from-blue-200 via-sky-100 to-white',
+    progressBar: 'from-blue-600 to-sky-600',
+    notes: typescriptNotes,
+  },
+  {
+    id: 'springboot',
+    name: 'Spring Boot',
+    emoji: '🍃',
+    description: 'Spring Boot Framework — auto-configuration, dependency injections, starter packs, REST endpoints, and JPA connections.',
+    color: 'from-green-200 via-emerald-100 to-white',
+    progressBar: 'from-green-500 to-emerald-600',
+    notes: springbootNotes,
+  },
+  {
+    id: 'ai',
+    name: 'Artificial Intelligence',
+    emoji: '🧠',
+    description: 'AI fundamentals — intelligence agents, machine learning algorithms, deep learning neural networks, and NLP basics.',
+    color: 'from-rose-200 via-pink-100 to-white',
+    progressBar: 'from-rose-500 to-pink-600',
+    notes: aiNotes,
+  },
+  {
+    id: 'dbms',
+    name: 'DBMS',
+    emoji: '🗄️',
+    description: 'Database Management — entity relationships, database models, Normalization (1NF/2NF/3NF), indexing, and transaction protocols.',
+    color: 'from-slate-200 via-zinc-100 to-white',
+    progressBar: 'from-slate-500 to-zinc-600',
+    notes: dbmsNotes,
+  },
+  {
+    id: 'os',
+    name: 'Operating Systems',
+    emoji: '💻',
+    description: 'OS internals — kernel processes, threading, CPU schedulers, virtual paging/memory, and deadlock conditions.',
+    color: 'from-stone-200 via-neutral-100 to-white',
+    progressBar: 'from-stone-500 to-neutral-600',
+    notes: osNotes,
+  },
+  {
+    id: 'dsa',
+    name: 'DSA',
+    emoji: '📊',
+    description: 'Data Structures & Algorithms — asymptotic complexities, sorting algorithms, trees, graphs, and dynamic programming.',
+    color: 'from-orange-200 via-amber-100 to-white',
+    progressBar: 'from-orange-500 to-amber-600',
+    notes: dsaNotes,
+  },
+  {
+    id: 'git',
+    name: 'Git & GitHub',
+    emoji: '🐙',
+    description: 'Version Control — staging area, commit graphs, local/remote branch management, merges, and conflicts resolution.',
+    color: 'from-red-200 via-orange-100 to-white',
+    progressBar: 'from-red-500 to-orange-600',
+    notes: gitNotes,
   },
 ]
 
