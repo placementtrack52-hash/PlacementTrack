@@ -10860,46 +10860,52 @@ Welcome
   nextTopic: 'html-iframes',
 },
 {
-  id: 'html-id-attribute',
+  id: 'html-iframes',
 
-  title: 'HTML ID Attribute',
+  title: 'HTML Iframes',
 
-  slug: 'html-id-attribute',
+  slug: 'html-iframes',
 
   image:
-    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
 
-  readTime: '70 min read',
+  readTime: '75 min read',
 
-  difficulty: 'Beginner',
+  difficulty: 'Intermediate',
 
   description:
-    'Learn HTML ID Attribute deeply including unique identification, CSS styling, JavaScript access, bookmarks, fragment links, Class vs ID, and interview concepts.',
+    'Learn HTML Iframes deeply including webpage embedding, YouTube videos, Google Maps integration, iframe attributes, security, performance optimization, and interview concepts.',
 
   companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
 
   sections: [
     {
-      heading: 'HTML ID Attribute',
+      heading: 'HTML Iframes',
 
       content: `
-• What is ID Attribute?
+• What is an Iframe?
 
-• Why ID is Important
+• Why Iframes are Used
 
-• Syntax of ID
+• Syntax of iframe
 
-• Unique Identification
+• Embedding Web Pages
 
-• Using ID with CSS
+• iframe Attributes
 
-• Using ID with JavaScript
+• Width and Height
 
-• Fragment Links
+• Frame Border
 
-• Bookmarks
+• Loading Attribute
 
-• Class vs ID
+• Embedding YouTube Videos
+
+• Embedding Google Maps
+
+• Security Considerations
+
+• Performance Optimization
 
 • Best Practices
 
@@ -10908,404 +10914,1195 @@ Welcome
     },
 
     {
-      heading: 'What is the ID Attribute?',
+      heading: 'What is an Iframe?',
 
       content: `
-The id attribute is used to uniquely identify an HTML element.
+An iframe (Inline Frame) is an HTML element used to display another webpage inside the current webpage.
 
-Unlike class names, an id should be assigned to only one element on a webpage.
+Think of an iframe as a window within a webpage.
+
+It allows one HTML document to be embedded inside another HTML document.
 
 Syntax:
 
-id="identifier"
+<iframe>
 
-Example:
+</iframe>
 
-<h1 id="mainHeading">
-
-Learn HTML
-
-</h1>
-
-The id value acts as a unique identifier for the element.
+Iframes are commonly used to display external content without redirecting users away from the current page.
 `,
     },
 
     {
-      heading: 'Why is the ID Attribute Important?',
+      heading: 'Why are Iframes Important?',
 
       content: `
-The id attribute helps developers target a specific element.
+Iframes allow websites to integrate content from other sources.
 
 Benefits:
 
-• Unique identification
+• Reuse external content
 
-• CSS styling
+• Embed videos
 
-• JavaScript access
+• Display maps
 
-• Fragment navigation
+• Show documents
 
-• Better page interaction
+• Integrate third-party tools
 
-IDs are commonly used in professional web applications.
+• Improve user experience
+
+Modern websites frequently use iframes for external services.
 `,
     },
 
     {
-      heading: 'Basic Syntax of ID',
+      heading: 'Basic iframe Syntax',
 
       content: `
 Example:
 
-<p id="welcome">
+<iframe
+src="page.html">
+</iframe>
 
-Welcome to HTML.
+The src attribute specifies the webpage that should be displayed inside the iframe.
 
-</p>
-
-Here:
-
-• id = Attribute
-
-• welcome = Unique Identifier
-
-The browser uses this identifier to locate the element.
+Without the src attribute, the iframe remains empty.
 `,
     },
 
     {
-      heading: 'Understanding Uniqueness',
+      heading: 'Understanding the src Attribute',
 
       content: `
-An id should be unique within a webpage.
-
-Correct:
-
-<h1 id="header">
-
-Website Header
-
-</h1>
-
-Incorrect:
-
-<h1 id="header"></h1>
-
-<h2 id="header"></h2>
-
-Duplicate IDs can create unexpected behavior in CSS and JavaScript.
-`,
-    },
-
-    {
-      heading: 'Using ID with CSS',
-
-      content: `
-IDs can be styled using CSS.
+The src attribute defines the URL of the page to display.
 
 Example:
 
-#header {
+<iframe
+src="https://example.com">
+</iframe>
 
-font-size: 40px;
+The browser loads the specified webpage inside the iframe window.
 
-}
-
-The # symbol is used before an ID selector.
-
-Only the element with that ID receives the styling.
+This is the most important iframe attribute.
 `,
     },
 
     {
-      heading: 'Why Use IDs in CSS?',
+      heading: 'Embedding a Web Page',
 
       content: `
+An iframe can display another webpage directly.
+
+Example Uses:
+
+• Documentation
+
+• Dashboards
+
+• Reports
+
+• External Applications
+
+• Learning Resources
+
+The embedded page behaves independently from the parent page.
+`,
+    },
+
+    {
+      heading: 'Width and Height Attributes',
+
+      content: `
+The width and height attributes control iframe size.
+
+Example:
+
+<iframe
+src="page.html"
+width="600"
+height="400">
+</iframe>
+
 Benefits:
 
-• Precise targeting
+• Better layout control
 
-• Unique styling
+• Improved responsiveness
 
-• Easy identification
-
-• Faster maintenance
-
-IDs are useful when a specific element requires special styling.
+• Enhanced user experience
 `,
     },
 
     {
-      heading: 'Using ID with JavaScript',
+      heading: 'Frame Border',
 
       content: `
-JavaScript often accesses elements using IDs.
-
-Common Uses:
-
-• Change text
-
-• Update content
-
-• Show messages
-
-• Hide elements
-
-• Create interactions
-
-IDs provide a fast and reliable way to access specific elements.
-`,
-    },
-
-    {
-      heading: 'Fragment Links in HTML',
-
-      content: `
-IDs are commonly used with fragment links.
-
-Fragment links navigate to a specific section of the same page.
+Older websites often used frameborder.
 
 Example:
 
-<a href="#contact">
+<iframe
+src="page.html"
+frameborder="0">
+</iframe>
 
-Go to Contact Section
+Purpose:
 
-</a>
+• Remove borders
 
-The browser automatically scrolls to the element having that ID.
+• Create cleaner designs
+
+Modern websites usually control borders using CSS.
 `,
     },
 
     {
-      heading: 'Creating Bookmarks Using IDs',
+      heading: 'The Title Attribute',
 
       content: `
-Step 1:
+The title attribute improves accessibility.
 
-Create an element with an ID.
+Example:
 
-<h2 id="about">
+<iframe
+title="Course Video"
+src="video.html">
+</iframe>
 
-About Us
+Benefits:
 
-</h2>
+• Better accessibility
 
-Step 2:
+• Screen reader support
 
-Create a link.
+• Improved usability
 
-<a href="#about">
-
-Go to About Section
-
-</a>
-
-This technique is called bookmarking.
+Always provide meaningful titles whenever possible.
 `,
     },
 
     {
-      heading: 'Real-world Use of Fragment Links',
+      heading: 'Loading Attribute',
 
       content: `
-Fragment links are useful in:
+Modern browsers support lazy loading.
 
-• Documentation Websites
+Example:
 
-• Course Notes
+<iframe
+src="page.html"
+loading="lazy">
+</iframe>
 
-• FAQ Pages
+Benefits:
 
-• Long Articles
+• Faster page loading
 
-• Landing Pages
+• Reduced bandwidth
 
-Users can quickly jump to important sections.
+• Better performance
+
+Lazy loading delays iframe loading until it becomes visible.
 `,
     },
 
     {
-      heading: 'ID Naming Rules',
+      heading: 'Embedding YouTube Videos',
 
       content: `
-Good IDs should be:
+One of the most common uses of iframes is embedding YouTube videos.
 
-• Meaningful
+Benefits:
 
-• Descriptive
+• Video tutorials
 
-• Easy to understand
+• Product demonstrations
+
+• Online courses
+
+• Entertainment content
+
+Most educational websites use YouTube iframe embeds.
+`,
+    },
+
+    {
+      heading: 'YouTube Embed Process',
+
+      content: `
+Steps:
+
+1. Open YouTube
+
+2. Click Share
+
+3. Click Embed
+
+4. Copy iframe code
+
+5. Paste into HTML
+
+The video becomes playable directly on the webpage.
+`,
+    },
+
+    {
+      heading: 'Embedding Google Maps',
+
+      content: `
+Google Maps can also be embedded using iframes.
+
+Uses:
+
+• Business Locations
+
+• Contact Pages
+
+• Event Venues
+
+• Delivery Areas
+
+• Tourist Locations
+
+Maps improve navigation and user convenience.
+`,
+    },
+
+    {
+      heading: 'Google Maps Embed Process',
+
+      content: `
+Steps:
+
+1. Open Google Maps
+
+2. Search Location
+
+3. Click Share
+
+4. Select Embed Map
+
+5. Copy iframe code
+
+6. Paste into HTML
+
+Visitors can interact with the map directly.
+`,
+    },
+
+    {
+      heading: 'Displaying PDF Files',
+
+      content: `
+Iframes can display PDF documents.
 
 Examples:
 
-header
+• Resume
 
-footer
+• Reports
 
-mainContent
+• E-books
 
-contactSection
+• Documentation
 
-Avoid unclear names like:
+• User Manuals
 
-abc
-
-test
-
-x123
-
-Meaningful names improve readability.
+This allows users to read files without downloading them immediately.
 `,
     },
 
     {
-      heading: 'ID Naming Best Practices',
+      heading: 'Displaying Third-Party Content',
 
       content: `
-Recommended naming style:
+Many external services provide iframe integrations.
 
-• main-header
+Examples:
 
-• contact-section
+• Calendars
 
-• product-card
+• Payment Widgets
 
-• login-form
+• Chat Systems
 
-• footer-links
+• Analytics Dashboards
 
-Consistent naming improves maintainability.
+• Learning Platforms
+
+Iframes simplify third-party integrations.
 `,
     },
 
     {
-      heading: 'Class vs ID',
+      heading: 'How Iframes Work?',
 
       content: `
-Class:
+The browser creates a separate browsing context for the iframe.
 
-• Can be reused
+This means:
 
-• Multiple elements allowed
+• Independent document
 
-• Uses . selector in CSS
+• Independent styling
+
+• Independent scripts
+
+• Separate loading process
+
+The embedded page operates separately from the parent page.
+`,
+    },
+
+    {
+      heading: 'Security Considerations',
+
+      content: `
+Iframes can introduce security concerns.
+
+Potential Risks:
+
+• Clickjacking
+
+• Malicious Content
+
+• Untrusted Sources
+
+• Privacy Issues
+
+Only embed content from trusted websites.
+`,
+    },
+
+    {
+      heading: 'Sandbox Attribute',
+
+      content: `
+The sandbox attribute adds security restrictions.
 
 Example:
 
-class="card"
+<iframe
+sandbox
+src="page.html">
+</iframe>
 
-ID:
+Benefits:
 
-• Must be unique
+• Restricts scripts
 
-• One element only
+• Prevents harmful actions
 
-• Uses # selector in CSS
+• Improves security
 
-Example:
-
-id="header"
-
-This is one of the most frequently asked interview questions.
+Sandboxing is recommended when embedding external content.
 `,
     },
 
     {
-      heading: 'When to Use Class?',
+      heading: 'Performance Optimization',
 
       content: `
-Use class when:
+Best performance practices:
 
-• Styling multiple elements
+• Use lazy loading
 
-• Creating reusable components
+• Avoid excessive iframes
 
-• Applying common styles
+• Load trusted resources
 
-• Building large designs
+• Optimize dimensions
 
-Classes are intended for reuse.
+• Remove unnecessary embeds
+
+Too many iframes can slow down webpage performance.
 `,
     },
 
     {
-      heading: 'When to Use ID?',
+      heading: 'Real-world Uses of Iframes',
 
       content: `
-Use ID when:
+Iframes are used in:
 
-• Targeting a single element
+• Online Courses
 
-• Creating bookmarks
+• YouTube Embeds
 
-• Accessing elements with JavaScript
+• Google Maps
 
-• Applying unique styling
+• Documentation Portals
 
-IDs are intended for uniqueness.
+• Payment Gateways
+
+• Customer Support Widgets
+
+• Dashboards
+
+• Analytics Systems
+
+They are widely used in modern web development.
 `,
     },
 
     {
-      heading: 'Real-world Examples of IDs',
+      heading: 'Advantages of Iframes',
 
       content: `
-Common IDs:
+• Easy content embedding
 
-• header
+• Third-party integration
 
-• footer
+• Video support
 
-• sidebar
+• Map integration
 
-• navbar
+• Independent content loading
 
-• loginForm
-
-• contactSection
-
-These IDs often represent important page sections.
+• Better user experience
 `,
     },
 
     {
-      heading: 'Advantages of ID Attribute',
+      heading: 'Limitations of Iframes',
 
       content: `
-• Unique identification
+• Performance overhead
 
-• Easy navigation
+• Security concerns
 
-• Better JavaScript interaction
+• SEO limitations
 
-• Special styling support
+• Responsive challenges
 
-• Bookmark creation
+• Cross-origin restrictions
 
-• Improved page structure
+Developers should use iframes carefully.
 `,
     },
 
     {
-      heading: 'Best Practices for Using IDs',
+      heading: 'Best Practices',
 
       content: `
 Recommended practices:
 
-• Keep IDs unique
+• Use trusted sources
 
-• Use meaningful names
+• Add title attribute
 
-• Avoid duplicate IDs
+• Use lazy loading
 
-• Use IDs only when needed
+• Set appropriate dimensions
 
-• Prefer classes for reusable styling
+• Apply sandbox when needed
 
-Following these practices improves code quality.
+• Avoid excessive iframes
+
+These practices improve security and performance.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Iframes',
+
+      content: `
+• iframe means Inline Frame
+
+• Used to embed external content
+
+• src defines content source
+
+• width and height control size
+
+• loading="lazy" improves performance
+
+• title improves accessibility
+
+• sandbox improves security
+
+• Commonly used for videos and maps
+
+Iframes are one of the most useful embedding technologies in HTML.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic iframe Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+src="https://example.com"
+width="600"
+height="300">
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays the specified webpage inside the iframe.',
+    },
+
+    {
+      title: 'YouTube Video Embed',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube Video">
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'Embeds a YouTube video directly inside the webpage.',
+    },
+
+    {
+      title: 'Google Maps Embed',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+src="GOOGLE_MAP_EMBED_URL"
+width="600"
+height="450">
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays an interactive Google Map on the webpage.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does iframe stand for?',
+
+      options: [
+        'Internal Frame',
+        'Inline Frame',
+        'Internet Frame',
+        'Interactive Frame'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'iframe stands for Inline Frame.',
+    },
+
+    {
+      question:
+        'Which attribute specifies the webpage to display inside an iframe?',
+
+      options: [
+        'href',
+        'src',
+        'link',
+        'target'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The src attribute specifies the page to load.',
+    },
+
+    {
+      question:
+        'Which attribute improves iframe loading performance?',
+
+      options: [
+        'sandbox',
+        'title',
+        'loading',
+        'frameborder'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'loading="lazy" improves performance by delaying iframe loading.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is an iframe in HTML?',
+
+      answer:
+        'An iframe is an HTML element that allows one webpage or external resource to be embedded inside another webpage.',
+    },
+
+    {
+      question:
+        'What are the security risks associated with iframes?',
+
+      answer:
+        'Iframes can expose websites to clickjacking attacks, untrusted external content, privacy risks, and malicious scripts if proper security measures such as sandboxing are not used.',
+    },
+  ],
+
+  nextTopic: 'html-forms',
+},
+{
+  id: 'html-forms',
+
+  title: 'HTML Forms Introduction',
+
+  slug: 'html-forms',
+
+  image:
+    'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
+
+  readTime: '85 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Forms deeply including form creation, user input collection, form controls, attributes, form submission process, real-world applications, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Forms',
+
+      content: `
+• What are HTML Forms?
+
+• Why Forms are Important
+
+• Form Structure
+
+• Form Elements
+
+• Form Submission
+
+• Form Attributes
+
+• User Input Collection
+
+• Real-world Applications
+
+• Advantages of Forms
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are HTML Forms?',
+
+      content: `
+HTML forms are used to collect information from users.
+
+Forms act as a bridge between users and websites.
+
+Whenever a website asks users to enter information, a form is usually involved.
+
+Examples:
+
+• Login Forms
+
+• Registration Forms
+
+• Contact Forms
+
+• Feedback Forms
+
+• Payment Forms
+
+Forms are one of the most important features of modern websites.
+`,
+    },
+
+    {
+      heading: 'Why are Forms Important?',
+
+      content: `
+Without forms, websites would only display information.
+
+Forms make websites interactive.
+
+Benefits:
+
+• Collect user information
+
+• Receive feedback
+
+• Process registrations
+
+• Handle logins
+
+• Accept orders
+
+• Perform searches
+
+Forms allow communication between users and web applications.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples of Forms',
+
+      content: `
+You use forms almost every day.
+
+Examples:
+
+• Creating a Gmail account
+
+• Logging into Instagram
+
+• Ordering food online
+
+• Booking movie tickets
+
+• Filling job applications
+
+• Searching on Google
+
+All these actions involve HTML forms.
+`,
+    },
+
+    {
+      heading: 'The Form Element',
+
+      content: `
+The <form> element is the container that holds all form controls.
+
+Syntax:
+
+<form>
+
+Form Elements
+
+</form>
+
+Every input field, button, dropdown, and checkbox is usually placed inside a form element.
+
+The form element manages data collection and submission.
+`,
+    },
+
+    {
+      heading: 'Basic Form Structure',
+
+      content: `
+A simple form generally contains:
+
+• Form Container
+
+• Labels
+
+• Input Fields
+
+• Buttons
+
+• Validation Rules
+
+Structure:
+
+Form
+
+├── Label
+
+├── Input
+
+├── Label
+
+├── Input
+
+└── Submit Button
+
+This structure is used by most websites.
+`,
+    },
+
+    {
+      heading: 'What is User Input?',
+
+      content: `
+User input refers to information entered by users.
+
+Examples:
+
+• Name
+
+• Email
+
+• Password
+
+• Phone Number
+
+• Address
+
+• Feedback
+
+Forms collect this information for processing.
+`,
+    },
+
+    {
+      heading: 'Common Form Controls',
+
+      content: `
+HTML provides many form controls.
+
+Examples:
+
+• Text Fields
+
+• Password Fields
+
+• Radio Buttons
+
+• Checkboxes
+
+• Dropdown Lists
+
+• Text Areas
+
+• File Uploads
+
+• Submit Buttons
+
+Each control serves a different purpose.
+`,
+    },
+
+    {
+      heading: 'How Forms Work?',
+
+      content: `
+The form submission process follows these steps:
+
+Step 1:
+
+User enters information.
+
+Step 2:
+
+User clicks Submit.
+
+Step 3:
+
+Browser collects form data.
+
+Step 4:
+
+Data is sent to a server.
+
+Step 5:
+
+Server processes the information.
+
+Step 6:
+
+Response is returned to the user.
+
+This process powers almost every dynamic website.
+`,
+    },
+
+    {
+      heading: 'Understanding Form Submission',
+
+      content: `
+Form submission means sending collected information to a server.
+
+Examples:
+
+• Login Credentials
+
+• Registration Details
+
+• Search Queries
+
+• Payment Information
+
+• Feedback Data
+
+The server receives and processes the submitted data.
+`,
+    },
+
+    {
+      heading: 'Form Attributes Overview',
+
+      content: `
+The form element supports several important attributes.
+
+Common attributes:
+
+• action
+
+• method
+
+• autocomplete
+
+• target
+
+• novalidate
+
+These attributes control form behavior.
+`,
+    },
+
+    {
+      heading: 'The Action Attribute',
+
+      content: `
+The action attribute specifies where form data should be sent.
+
+Example:
+
+<form action="submit.php">
+
+</form>
+
+When the user submits the form, the browser sends data to the specified destination.
+`,
+    },
+
+    {
+      heading: 'The Method Attribute',
+
+      content: `
+The method attribute defines how data is sent.
+
+Common values:
+
+• GET
+
+• POST
+
+Example:
+
+<form method="post">
+
+</form>
+
+GET and POST are extremely important and will be covered in detail later.
+`,
+    },
+
+    {
+      heading: 'Form Without Server Processing',
+
+      content: `
+During learning, forms may not send data anywhere.
+
+Example:
+
+<form>
+
+</form>
+
+The purpose is to understand structure before learning backend development.
+`,
+    },
+
+    {
+      heading: 'Types of Forms Used on Websites',
+
+      content: `
+Popular forms include:
+
+• Login Form
+
+• Registration Form
+
+• Contact Form
+
+• Search Form
+
+• Payment Form
+
+• Survey Form
+
+• Feedback Form
+
+• Newsletter Subscription Form
+
+Almost every website contains at least one form.
+`,
+    },
+
+    {
+      heading: 'Login Form Example',
+
+      content: `
+A login form typically collects:
+
+• Username
+
+• Email
+
+• Password
+
+After submission, credentials are verified by the server.
+`,
+    },
+
+    {
+      heading: 'Registration Form Example',
+
+      content: `
+A registration form may collect:
+
+• Full Name
+
+• Email Address
+
+• Phone Number
+
+• Password
+
+• Confirm Password
+
+This information creates a new user account.
+`,
+    },
+
+    {
+      heading: 'Contact Form Example',
+
+      content: `
+A contact form usually includes:
+
+• Name
+
+• Email
+
+• Subject
+
+• Message
+
+Businesses use contact forms to communicate with customers.
+`,
+    },
+
+    {
+      heading: 'Search Form Example',
+
+      content: `
+Search forms allow users to find information.
+
+Examples:
+
+• Google Search
+
+• Product Search
+
+• Blog Search
+
+• Course Search
+
+The entered keyword is processed by the website.
+`,
+    },
+
+    {
+      heading: 'Advantages of HTML Forms',
+
+      content: `
+Benefits:
+
+• User interaction
+
+• Data collection
+
+• Communication
+
+• Business operations
+
+• Online registrations
+
+• Improved user experience
+
+Forms are essential for modern web applications.
+`,
+    },
+
+    {
+      heading: 'Best Practices for Forms',
+
+      content: `
+Recommended practices:
+
+• Use clear labels
+
+• Keep forms simple
+
+• Validate user input
+
+• Provide helpful instructions
+
+• Use meaningful field names
+
+• Avoid unnecessary fields
+
+Well-designed forms improve usability.
+`,
+    },
+
+    {
+      heading: 'Accessibility in Forms',
+
+      content: `
+Accessible forms help all users.
+
+Recommendations:
+
+• Use labels properly
+
+• Provide instructions
+
+• Use meaningful placeholders
+
+• Show validation messages
+
+Accessibility improves usability for everyone.
 `,
     },
 
@@ -11315,44 +12112,46 @@ Following these practices improves code quality.
       content: `
 Many beginners:
 
-• Use duplicate IDs
+• Forget form tags
 
-• Confuse class and ID
+• Ignore labels
 
-• Use random names
+• Create confusing layouts
 
-• Overuse IDs for styling
+• Use unnecessary fields
 
-• Ignore naming conventions
+• Forget validation
 
-These mistakes can make projects difficult to maintain.
+These mistakes reduce usability.
 `,
     },
 
     {
-      heading: 'Important Points About HTML ID Attribute',
+      heading: 'Important Points About HTML Forms',
 
       content: `
-• ID uniquely identifies an element
+• Forms collect user data
 
-• IDs should not be duplicated
+• The form tag creates forms
 
-• CSS uses # for ID selectors
+• Forms contain various controls
 
-• IDs work with JavaScript
+• Submitted data is processed by servers
 
-• IDs create bookmarks and fragment links
+• action specifies destination
 
-• IDs improve navigation
+• method specifies transfer type
 
-Understanding IDs is essential for CSS, JavaScript, and webpage navigation.
+• Forms are used on almost every website
+
+Understanding forms is essential for web development.
 `,
     },
   ],
 
   codeExamples: [
     {
-      title: 'Basic ID Example',
+      title: 'Basic Form Example',
 
       language: 'html',
 
@@ -11361,22 +12160,32 @@ Understanding IDs is essential for CSS, JavaScript, and webpage navigation.
 
 <body>
 
-<h1 id="mainHeading">
+<form>
 
-Learn HTML
+Name:
 
-</h1>
+<input type="text">
+
+<br><br>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
 
 </body>
 
 </html>`,
 
       output:
-        'The heading is assigned a unique identifier called mainHeading.',
+        'Displays a simple form with a text field and submit button.',
     },
 
     {
-      title: 'Fragment Link Example',
+      title: 'Login Form Structure',
 
       language: 'html',
 
@@ -11385,30 +12194,38 @@ Learn HTML
 
 <body>
 
-<a href="#contact">
+<form>
 
-Go to Contact Section
+Email:
 
-</a>
+<input type="email">
 
-<br><br><br><br><br><br>
+<br><br>
 
-<h2 id="contact">
+Password:
 
-Contact Information
+<input type="password">
 
-</h2>
+<br><br>
+
+<button>
+
+Login
+
+</button>
+
+</form>
 
 </body>
 
 </html>`,
 
       output:
-        'Clicking the link scrolls directly to the Contact Information section.',
+        'Displays a simple login form.',
     },
 
     {
-      title: 'Class vs ID Example',
+      title: 'Registration Form Structure',
 
       language: 'html',
 
@@ -11417,65 +12234,3465 @@ Contact Information
 
 <body>
 
-<div class="card">
+<form>
 
-Product Card
+<input type="text" placeholder="Full Name">
 
-</div>
+<br><br>
 
-<h1 id="mainTitle">
+<input type="email" placeholder="Email">
 
-Welcome
+<br><br>
 
-</h1>
+<input type="password" placeholder="Password">
+
+<br><br>
+
+<button>
+
+Register
+
+</button>
+
+</form>
 
 </body>
 
 </html>`,
 
       output:
-        'The class can be reused, while the ID uniquely identifies the heading.',
+        'Displays a basic registration form.',
     },
   ],
 
   mcqs: [
     {
       question:
-        'Which attribute uniquely identifies an HTML element?',
+        'Which HTML tag is used to create a form?',
 
       options: [
-        'class',
-        'style',
-        'id',
-        'name'
-      ],
-
-      answer: 2,
-
-      explanation:
-        'The id attribute uniquely identifies an HTML element.',
-    },
-
-    {
-      question:
-        'Which symbol is used before an ID selector in CSS?',
-
-      options: [
-        '.',
-        '#',
-        '@',
-        '*'
+        '<input>',
+        '<form>',
+        '<field>',
+        '<data>'
       ],
 
       answer: 1,
 
       explanation:
-        'The # symbol is used for ID selectors in CSS.',
+        'The form tag is used to create HTML forms.',
     },
 
     {
       question:
-        'Can multiple elements share the same ID?',
+        'What is the primary purpose of forms?',
+
+      options: [
+        'Display Images',
+        'Play Videos',
+        'Collect User Input',
+        'Create Tables'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Forms are primarily used to collect user input.',
+    },
+
+    {
+      question:
+        'Which attribute specifies where form data is sent?',
+
+      options: [
+        'action',
+        'class',
+        'name',
+        'style'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'The action attribute specifies the destination for submitted data.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is an HTML form?',
+
+      answer:
+        'An HTML form is a container used to collect user input and send that data to a server for processing.',
+    },
+
+    {
+      question:
+        'What are the action and method attributes in a form?',
+
+      answer:
+        'The action attribute specifies where form data is sent, while the method attribute specifies how the data is transmitted, typically using GET or POST.',
+    },
+  ],
+
+  nextTopic: 'html-input-types',
+},
+{
+  id: 'html-input-types',
+
+  title: 'HTML Input Types',
+
+  slug: 'html-input-types',
+
+  image:
+    'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
+
+  readTime: '110 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Input Types deeply including text, password, email, number, file upload, radio buttons, checkboxes, date inputs, validation, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Input Types',
+
+      content: `
+• Introduction to Input Types
+
+• Input Element
+
+• Text Input
+
+• Password Input
+
+• Email Input
+
+• Number Input
+
+• Telephone Input
+
+• URL Input
+
+• Search Input
+
+• Date Input
+
+• Time Input
+
+• DateTime Local Input
+
+• File Input
+
+• Radio Input
+
+• Checkbox Input
+
+• Submit Input
+
+• Reset Input
+
+• Hidden Input
+
+• Range Input
+
+• Color Input
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'Introduction to Input Types',
+
+      content: `
+HTML provides different input types to collect different kinds of user information.
+
+Each input type is designed for a specific purpose.
+
+Examples:
+
+• Name
+
+• Email
+
+• Password
+
+• Date
+
+• Phone Number
+
+• Files
+
+• Colors
+
+• Ratings
+
+Using the correct input type improves user experience and validation.
+`,
+    },
+
+    {
+      heading: 'The Input Element',
+
+      content: `
+The input element is one of the most important form elements.
+
+Syntax:
+
+<input type="value">
+
+The type attribute determines what kind of input field will be displayed.
+
+Different values of the type attribute create different controls.
+`,
+    },
+
+    {
+      heading: 'Text Input',
+
+      content: `
+The text input is the most commonly used input type.
+
+Syntax:
+
+<input type="text">
+
+Purpose:
+
+• Names
+
+• Cities
+
+• Usernames
+
+• Titles
+
+• General Text
+
+It accepts single-line text input.
+`,
+    },
+
+    {
+      heading: 'Password Input',
+
+      content: `
+Password fields hide entered characters.
+
+Syntax:
+
+<input type="password">
+
+Uses:
+
+• Login Forms
+
+• Registration Forms
+
+• Account Security
+
+Browsers usually display dots or asterisks instead of actual characters.
+`,
+    },
+
+    {
+      heading: 'Email Input',
+
+      content: `
+The email input is designed for email addresses.
+
+Syntax:
+
+<input type="email">
+
+Benefits:
+
+• Email validation
+
+• Better mobile keyboard support
+
+• Improved user experience
+
+The browser checks for basic email formatting.
+`,
+    },
+
+    {
+      heading: 'Number Input',
+
+      content: `
+Number inputs accept numeric values.
+
+Syntax:
+
+<input type="number">
+
+Uses:
+
+• Age
+
+• Quantity
+
+• Marks
+
+• Prices
+
+• Ratings
+
+Browsers often display increment and decrement controls.
+`,
+    },
+
+    {
+      heading: 'Telephone Input',
+
+      content: `
+Telephone inputs collect phone numbers.
+
+Syntax:
+
+<input type="tel">
+
+Uses:
+
+• Mobile Numbers
+
+• Contact Information
+
+• Business Forms
+
+It improves mobile keyboard optimization.
+`,
+    },
+
+    {
+      heading: 'URL Input',
+
+      content: `
+URL inputs collect website addresses.
+
+Syntax:
+
+<input type="url">
+
+Examples:
+
+• Portfolio Websites
+
+• Social Media Links
+
+• Company Websites
+
+Browsers perform basic URL validation.
+`,
+    },
+
+    {
+      heading: 'Search Input',
+
+      content: `
+Search inputs are designed for search functionality.
+
+Syntax:
+
+<input type="search">
+
+Uses:
+
+• Product Search
+
+• Website Search
+
+• Documentation Search
+
+• Course Search
+
+Many search engines use this input type.
+`,
+    },
+
+    {
+      heading: 'Date Input',
+
+      content: `
+Date inputs allow users to select dates.
+
+Syntax:
+
+<input type="date">
+
+Uses:
+
+• Birth Date
+
+• Event Date
+
+• Booking Systems
+
+• Registration Forms
+
+Most browsers provide a calendar picker.
+`,
+    },
+
+    {
+      heading: 'Time Input',
+
+      content: `
+Time inputs allow users to choose a specific time.
+
+Syntax:
+
+<input type="time">
+
+Uses:
+
+• Meeting Scheduling
+
+• Appointment Booking
+
+• Event Planning
+
+The browser typically provides a time selector.
+`,
+    },
+
+    {
+      heading: 'DateTime Local Input',
+
+      content: `
+This input combines both date and time.
+
+Syntax:
+
+<input type="datetime-local">
+
+Uses:
+
+• Event Scheduling
+
+• Meeting Management
+
+• Reservations
+
+It collects date and time together.
+`,
+    },
+
+    {
+      heading: 'File Input',
+
+      content: `
+File inputs allow users to upload files.
+
+Syntax:
+
+<input type="file">
+
+Uses:
+
+• Profile Pictures
+
+• Resumes
+
+• Documents
+
+• Assignments
+
+• Images
+
+This is one of the most important form controls.
+`,
+    },
+
+    {
+      heading: 'Radio Button Input',
+
+      content: `
+Radio buttons allow users to select only one option.
+
+Syntax:
+
+<input type="radio">
+
+Examples:
+
+• Gender Selection
+
+• Payment Method
+
+• Delivery Options
+
+Only one option can be selected within the same group.
+`,
+    },
+
+    {
+      heading: 'Checkbox Input',
+
+      content: `
+Checkboxes allow multiple selections.
+
+Syntax:
+
+<input type="checkbox">
+
+Examples:
+
+• Skills
+
+• Hobbies
+
+• Interests
+
+• Preferences
+
+Multiple checkboxes can be selected simultaneously.
+`,
+    },
+
+    {
+      heading: 'Submit Input',
+
+      content: `
+Submit buttons send form data to the server.
+
+Syntax:
+
+<input type="submit">
+
+When clicked, the browser processes and submits form data.
+`,
+    },
+
+    {
+      heading: 'Reset Input',
+
+      content: `
+Reset buttons restore default form values.
+
+Syntax:
+
+<input type="reset">
+
+Uses:
+
+• Clear Forms
+
+• Start Over
+
+• Remove Entered Data
+
+Users should use reset carefully.
+`,
+    },
+
+    {
+      heading: 'Hidden Input',
+
+      content: `
+Hidden inputs store information that users cannot see.
+
+Syntax:
+
+<input type="hidden">
+
+Uses:
+
+• User IDs
+
+• Tokens
+
+• Tracking Information
+
+• Internal Data
+
+Hidden fields are commonly used by web applications.
+`,
+    },
+
+    {
+      heading: 'Range Input',
+
+      content: `
+Range inputs create sliders.
+
+Syntax:
+
+<input type="range">
+
+Uses:
+
+• Volume Control
+
+• Brightness
+
+• Ratings
+
+• Price Filters
+
+Users drag the slider to select values.
+`,
+    },
+
+    {
+      heading: 'Color Input',
+
+      content: `
+Color inputs allow color selection.
+
+Syntax:
+
+<input type="color">
+
+Uses:
+
+• Theme Selection
+
+• Design Tools
+
+• Graphic Applications
+
+Most browsers provide a color picker.
+`,
+    },
+
+    {
+      heading: 'Choosing the Correct Input Type',
+
+      content: `
+Always choose the most suitable input type.
+
+Benefits:
+
+• Better validation
+
+• Improved accessibility
+
+• Better mobile support
+
+• Enhanced user experience
+
+Using correct input types reduces user errors.
+`,
+    },
+
+    {
+      heading: 'Advantages of Input Types',
+
+      content: `
+• Better user experience
+
+• Built-in validation
+
+• Faster data entry
+
+• Mobile optimization
+
+• Improved accessibility
+
+• Professional forms
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use correct input types
+
+• Validate user input
+
+• Add labels
+
+• Use placeholders carefully
+
+• Keep forms user-friendly
+
+• Provide helpful feedback
+
+These practices improve form quality.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Use text for everything
+
+• Ignore validation
+
+• Forget labels
+
+• Choose incorrect input types
+
+• Build confusing forms
+
+Selecting proper input types is essential.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Input Types',
+
+      content: `
+• Input fields collect user data
+
+• Different types serve different purposes
+
+• Browsers provide built-in validation
+
+• Mobile devices benefit from proper input types
+
+• Forms become easier to use
+
+• Professional websites rely heavily on specialized input types
+
+Input types are among the most important concepts in HTML Forms.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Text Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" placeholder="Enter Name">
+
+</body>
+</html>`,
+
+      output:
+        'Displays a text field for entering a name.',
+    },
+
+    {
+      title: 'Email and Password Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+<body>
+
+<input type="email" placeholder="Email">
+
+<br><br>
+
+<input type="password" placeholder="Password">
+
+</body>
+</html>`,
+
+      output:
+        'Displays email and password input fields.',
+    },
+
+    {
+      title: 'File Upload Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+<body>
+
+<input type="file">
+
+</body>
+</html>`,
+
+      output:
+        'Allows users to upload files from their device.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type is used for email addresses?',
+
+      options: [
+        'text',
+        'mail',
+        'email',
+        'address'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The email input type is designed for email addresses.',
+    },
+
+    {
+      question:
+        'Which input type creates a slider?',
+
+      options: [
+        'range',
+        'slider',
+        'scroll',
+        'move'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'The range input type creates a slider control.',
+    },
+
+    {
+      question:
+        'Which input type is used for file uploads?',
+
+      options: [
+        'document',
+        'upload',
+        'file',
+        'image'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The file input type allows users to upload files.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why should developers use different HTML input types instead of only text inputs?',
+
+      answer:
+        'Different input types provide better validation, improved accessibility, enhanced mobile support, and a better user experience.',
+    },
+
+    {
+      question:
+        'What is the difference between radio buttons and checkboxes?',
+
+      answer:
+        'Radio buttons allow only one selection from a group, while checkboxes allow multiple selections.',
+    },
+  ],
+
+  nextTopic: 'html-text-input',
+},
+{
+  id: 'html-text-input',
+
+  title: 'HTML Text Input',
+
+  slug: 'html-text-input',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '65 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Text Input deeply including text fields, attributes, placeholders, default values, form integration, validation basics, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Text Input',
+
+      content: `
+• What is Text Input?
+
+• Why Text Input is Important
+
+• Syntax
+
+• How Text Input Works
+
+• Common Uses
+
+• Input Attributes
+
+• Placeholder
+
+• Default Values
+
+• Disabled Fields
+
+• Readonly Fields
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML Text Input?',
+
+      content: `
+HTML Text Input is the most commonly used form control.
+
+It allows users to enter a single line of text.
+
+Syntax:
+
+<input type="text">
+
+Text inputs are used whenever websites need textual information from users.
+
+Examples:
+
+• Name
+
+• Username
+
+• City
+
+• Country
+
+• Occupation
+
+• Search Keywords
+
+Almost every form contains at least one text input field.
+`,
+    },
+
+    {
+      heading: 'Why is Text Input Important?',
+
+      content: `
+Text inputs help websites collect user information.
+
+Benefits:
+
+• Simple user interaction
+
+• Fast data entry
+
+• Easy form creation
+
+• Flexible usage
+
+• Supports validation
+
+Without text inputs, most online forms would not function properly.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input type="text">
+
+Explanation:
+
+• input = Form Element
+
+• type = Attribute
+
+• text = Input Type
+
+This creates a simple text field where users can type information.
+`,
+    },
+
+    {
+      heading: 'How Text Input Works?',
+
+      content: `
+Step 1:
+
+The browser displays a text field.
+
+Step 2:
+
+The user clicks inside the field.
+
+Step 3:
+
+The user enters text.
+
+Step 4:
+
+The entered value becomes part of the form data.
+
+Step 5:
+
+The data can be submitted to a server.
+
+This process is used by almost every website.
+`,
+    },
+
+    {
+      heading: 'Common Uses of Text Input',
+
+      content: `
+Text inputs are used for:
+
+• Full Name
+
+• Username
+
+• City
+
+• State
+
+• Country
+
+• Designation
+
+• Company Name
+
+• Search Fields
+
+These fields typically require short text values.
+`,
+    },
+
+    {
+      heading: 'Using Placeholder Text',
+
+      content: `
+A placeholder provides a hint to the user.
+
+Example:
+
+<input
+type="text"
+placeholder="Enter Your Name">
+
+Benefits:
+
+• Better guidance
+
+• Improved usability
+
+• Cleaner forms
+
+Placeholders disappear when users start typing.
+`,
+    },
+
+    {
+      heading: 'Why Placeholder is Useful?',
+
+      content: `
+Placeholder text helps users understand what information is expected.
+
+Examples:
+
+• Enter Name
+
+• Search Products
+
+• Enter City
+
+• Username
+
+This reduces confusion and improves user experience.
+`,
+    },
+
+    {
+      heading: 'Default Value Attribute',
+
+      content: `
+The value attribute provides default content.
+
+Example:
+
+<input
+type="text"
+value="India">
+
+The field automatically displays the provided value when the page loads.
+
+Users can modify the value unless restrictions are applied.
+`,
+    },
+
+    {
+      heading: 'Size Attribute',
+
+      content: `
+The size attribute controls the visible width of the input field.
+
+Example:
+
+<input
+type="text"
+size="40">
+
+Benefits:
+
+• Better appearance
+
+• Improved layout control
+
+• Enhanced readability
+
+The size value does not limit character count.
+`,
+    },
+
+    {
+      heading: 'Maximum Length Attribute',
+
+      content: `
+The maxlength attribute limits character count.
+
+Example:
+
+<input
+type="text"
+maxlength="20">
+
+Benefits:
+
+• Data control
+
+• Input restrictions
+
+• Better validation
+
+Users cannot exceed the specified limit.
+`,
+    },
+
+    {
+      heading: 'Minimum Length Attribute',
+
+      content: `
+The minlength attribute defines the minimum number of characters required.
+
+Example:
+
+<input
+type="text"
+minlength="3">
+
+Uses:
+
+• Usernames
+
+• Names
+
+• Search Inputs
+
+This helps prevent very short or invalid entries.
+`,
+    },
+
+    {
+      heading: 'Disabled Text Input',
+
+      content: `
+Disabled fields cannot be edited.
+
+Example:
+
+<input
+type="text"
+value="Admin"
+disabled>
+
+Characteristics:
+
+• Not editable
+
+• Not selectable
+
+• Not submitted with form data
+
+Used when users should not modify a value.
+`,
+    },
+
+    {
+      heading: 'Readonly Text Input',
+
+      content: `
+Readonly fields cannot be modified but can be selected.
+
+Example:
+
+<input
+type="text"
+value="India"
+readonly>
+
+Characteristics:
+
+• Visible
+
+• Selectable
+
+• Included in form submission
+
+• Not editable
+
+Readonly differs from disabled.
+`,
+    },
+
+    {
+      heading: 'Required Text Input',
+
+      content: `
+The required attribute makes a field mandatory.
+
+Example:
+
+<input
+type="text"
+required>
+
+Users must enter a value before form submission.
+
+This is one of the most commonly used validation features.
+`,
+    },
+
+    {
+      heading: 'Autocomplete Attribute',
+
+      content: `
+Autocomplete helps browsers suggest previously entered values.
+
+Example:
+
+<input
+type="text"
+autocomplete="on">
+
+Benefits:
+
+• Faster form completion
+
+• Better user experience
+
+• Reduced typing effort
+`,
+    },
+
+    {
+      heading: 'Text Input with Labels',
+
+      content: `
+Labels improve accessibility and usability.
+
+Example:
+
+<label>
+
+Full Name
+
+</label>
+
+<input type="text">
+
+Benefits:
+
+• Better accessibility
+
+• Improved user guidance
+
+• Cleaner forms
+
+Professional forms should always include labels.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Common text fields include:
+
+Registration Form:
+
+• Full Name
+
+• Username
+
+Contact Form:
+
+• Subject
+
+• City
+
+Job Application:
+
+• Skills
+
+• Designation
+
+Text inputs are used everywhere.
+`,
+    },
+
+    {
+      heading: 'Advantages of Text Input',
+
+      content: `
+• Easy to use
+
+• Flexible
+
+• Lightweight
+
+• User friendly
+
+• Supports validation
+
+• Works on all devices
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use labels
+
+• Use placeholders carefully
+
+• Apply validation
+
+• Limit input when necessary
+
+• Use meaningful names
+
+• Keep forms simple
+
+Good form design improves user satisfaction.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget labels
+
+• Ignore maxlength
+
+• Use vague placeholders
+
+• Skip validation
+
+• Create oversized fields
+
+Avoiding these mistakes improves form quality.
+`,
+    },
+
+    {
+      heading: 'Important Points About Text Input',
+
+      content: `
+• Text input collects single-line text
+
+• type="text" creates a text field
+
+• Placeholder provides hints
+
+• Value sets default content
+
+• Disabled fields cannot be edited
+
+• Readonly fields cannot be modified
+
+• Required fields must be filled
+
+Text inputs are the foundation of HTML forms.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Text Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="text">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a simple text input field.',
+    },
+
+    {
+      title: 'Text Input with Placeholder',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="text"
+placeholder="Enter Your Name">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a text field with a placeholder hint.',
+    },
+
+    {
+      title: 'Required Text Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="text"
+required>
+
+<button>
+Submit
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'The form cannot be submitted until the user enters text.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type creates a standard text field?',
+
+      options: [
+        'textarea',
+        'string',
+        'text',
+        'content'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'type="text" creates a standard text input field.',
+    },
+
+    {
+      question:
+        'Which attribute displays a hint inside the input field?',
+
+      options: [
+        'value',
+        'placeholder',
+        'label',
+        'title'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The placeholder attribute displays hint text.',
+    },
+
+    {
+      question:
+        'Which attribute makes a field mandatory?',
+
+      options: [
+        'mandatory',
+        'validate',
+        'required',
+        'must'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The required attribute forces users to fill the field before submission.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of type="text" in HTML?',
+
+      answer:
+        'The type="text" input creates a single-line text field that allows users to enter textual information such as names, usernames, cities, and search terms.',
+    },
+
+    {
+      question:
+        'What is the difference between disabled and readonly text inputs?',
+
+      answer:
+        'A disabled input cannot be edited, selected, or submitted with form data, while a readonly input cannot be edited but can be selected and submitted with the form.',
+    },
+  ],
+
+  nextTopic: 'html-password-input',
+},
+{
+  id: 'html-password-input',
+
+  title: 'HTML Password Input',
+
+  slug: 'html-password-input',
+
+  image:
+    'https://images.unsplash.com/photo-1563986768609-322da13575f3',
+
+  readTime: '70 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Password Input deeply including password fields, hidden characters, security basics, login forms, registration forms, validation, show/hide password functionality, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Password Input',
+
+      content: `
+• What is Password Input?
+
+• Why Password Fields are Important
+
+• Syntax
+
+• Hidden Characters
+
+• Password Input Attributes
+
+• Login Forms
+
+• Registration Forms
+
+• Password Validation
+
+• Strong Password Rules
+
+• Show/Hide Password
+
+• Security Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML Password Input?',
+
+      content: `
+Password input is a special form field used to securely collect passwords from users.
+
+Unlike normal text fields, password inputs hide entered characters.
+
+Syntax:
+
+<input type="password">
+
+This prevents nearby people from easily viewing sensitive information.
+
+Password fields are widely used in authentication systems.
+`,
+    },
+
+    {
+      heading: 'Why Password Input is Important?',
+
+      content: `
+Passwords protect user accounts and sensitive information.
+
+Examples:
+
+• Email Accounts
+
+• Banking Applications
+
+• Social Media Accounts
+
+• Shopping Websites
+
+• Educational Platforms
+
+Password fields help improve privacy and security.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input type="password">
+
+When users type a password, the browser hides the actual characters.
+
+Most browsers display dots or bullets instead of the entered text.
+`,
+    },
+
+    {
+      heading: 'How Password Fields Work?',
+
+      content: `
+Step 1:
+
+User clicks the password field.
+
+Step 2:
+
+User enters a password.
+
+Step 3:
+
+Characters are hidden visually.
+
+Step 4:
+
+The actual value remains available for form submission.
+
+Step 5:
+
+The server receives and processes the password.
+
+Only the display is hidden, not the actual value.
+`,
+    },
+
+    {
+      heading: 'Hidden Characters',
+
+      content: `
+Password fields mask entered characters.
+
+Example:
+
+Actual Password:
+
+myPassword123
+
+Displayed:
+
+•••••••••••••
+
+Benefits:
+
+• Better privacy
+
+• Protection from shoulder surfing
+
+• Improved user confidence
+
+This is the primary purpose of password fields.
+`,
+    },
+
+    {
+      heading: 'Password Field with Placeholder',
+
+      content: `
+Example:
+
+<input
+type="password"
+placeholder="Enter Password">
+
+The placeholder provides guidance about what information should be entered.
+
+It disappears when typing begins.
+`,
+    },
+
+    {
+      heading: 'Using Default Values',
+
+      content: `
+Example:
+
+<input
+type="password"
+value="123456">
+
+Although possible, prefilled passwords are generally discouraged.
+
+Reasons:
+
+• Security concerns
+
+• Privacy risks
+
+• Poor user experience
+`,
+    },
+
+    {
+      heading: 'Required Password Field',
+
+      content: `
+Example:
+
+<input
+type="password"
+required>
+
+Users must enter a password before submitting the form.
+
+This provides basic validation.
+`,
+    },
+
+    {
+      heading: 'Minimum Length Validation',
+
+      content: `
+Example:
+
+<input
+type="password"
+minlength="8">
+
+Benefits:
+
+• Stronger passwords
+
+• Better account security
+
+• Reduced weak password usage
+
+Many websites require a minimum password length.
+`,
+    },
+
+    {
+      heading: 'Maximum Length Validation',
+
+      content: `
+Example:
+
+<input
+type="password"
+maxlength="20">
+
+Purpose:
+
+• Control data size
+
+• Improve validation
+
+• Prevent excessive input
+
+Length restrictions should be reasonable.
+`,
+    },
+
+    {
+      heading: 'Login Form Example',
+
+      content: `
+A login form typically contains:
+
+• Email Field
+
+• Username Field
+
+• Password Field
+
+• Login Button
+
+The password field verifies user identity during authentication.
+`,
+    },
+
+    {
+      heading: 'Registration Form Example',
+
+      content: `
+Registration forms often include:
+
+• Password
+
+• Confirm Password
+
+• Validation Rules
+
+• Security Checks
+
+This helps users create secure accounts.
+`,
+    },
+
+    {
+      heading: 'Password Confirmation Fields',
+
+      content: `
+Many websites request password confirmation.
+
+Example:
+
+• Password
+
+• Confirm Password
+
+Purpose:
+
+• Reduce typing mistakes
+
+• Improve account setup accuracy
+
+This is common in signup forms.
+`,
+    },
+
+    {
+      heading: 'Strong Password Characteristics',
+
+      content: `
+A strong password generally contains:
+
+• Uppercase Letters
+
+• Lowercase Letters
+
+• Numbers
+
+• Special Characters
+
+• Adequate Length
+
+Example:
+
+MySecure@123
+
+Strong passwords are harder to guess.
+`,
+    },
+
+    {
+      heading: 'Weak Password Examples',
+
+      content: `
+Examples:
+
+• 123456
+
+• password
+
+• qwerty
+
+• admin
+
+• abc123
+
+Weak passwords can be easily guessed or cracked.
+`,
+    },
+
+    {
+      heading: 'Password Security Best Practices',
+
+      content: `
+Recommendations:
+
+• Use long passwords
+
+• Avoid personal information
+
+• Use special characters
+
+• Use unique passwords
+
+• Change passwords when necessary
+
+Security should always be a priority.
+`,
+    },
+
+    {
+      heading: 'Show/Hide Password Concept',
+
+      content: `
+Many modern websites provide a show/hide password feature.
+
+Benefits:
+
+• Reduce typing mistakes
+
+• Improve usability
+
+• Better user experience
+
+The feature usually toggles between:
+
+type="password"
+
+and
+
+type="text"
+`,
+    },
+
+    {
+      heading: 'Autocomplete for Passwords',
+
+      content: `
+Browsers may save passwords and suggest them automatically.
+
+Benefits:
+
+• Faster login
+
+• Better convenience
+
+• Reduced typing
+
+Modern browsers often include built-in password managers.
+`,
+    },
+
+    {
+      heading: 'Advantages of Password Inputs',
+
+      content: `
+• Improved privacy
+
+• Better security
+
+• Authentication support
+
+• Easy integration
+
+• User-friendly
+
+• Browser compatibility
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Use text instead of password fields
+
+• Ignore validation
+
+• Allow weak passwords
+
+• Forget required attributes
+
+• Store passwords insecurely
+
+These mistakes can weaken security.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Require strong passwords
+
+• Use minlength
+
+• Provide clear instructions
+
+• Enable secure transmission
+
+• Add password confirmation
+
+• Support password managers
+
+These practices improve user security.
+`,
+    },
+
+    {
+      heading: 'Important Points About Password Input',
+
+      content: `
+• type="password" creates a password field
+
+• Entered characters are visually hidden
+
+• Passwords can use validation rules
+
+• Strong passwords improve security
+
+• Password confirmation reduces mistakes
+
+• Show/Hide password improves usability
+
+Password fields are essential for secure authentication systems.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Password Input',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="password">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a password field with hidden characters.',
+    },
+
+    {
+      title: 'Password Field with Placeholder',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="password"
+placeholder="Enter Password">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a password field with placeholder text.',
+    },
+
+    {
+      title: 'Password Validation Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="password"
+required
+minlength="8">
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Users must enter a password containing at least 8 characters.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type is used for passwords?',
+
+      options: [
+        'secure',
+        'text',
+        'password',
+        'private'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'type="password" creates a password input field.',
+    },
+
+    {
+      question:
+        'Why are password characters hidden?',
+
+      options: [
+        'For decoration',
+        'For faster typing',
+        'For privacy and security',
+        'To reduce memory usage'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Password characters are hidden to improve privacy and security.',
+    },
+
+    {
+      question:
+        'Which attribute can require a minimum password length?',
+
+      options: [
+        'required',
+        'maxlength',
+        'minlength',
+        'minimum'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The minlength attribute defines the minimum number of characters required.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the difference between type="text" and type="password"?',
+
+      answer:
+        'Both collect textual data, but type="password" hides entered characters on the screen, while type="text" displays them normally.',
+    },
+
+    {
+      question:
+        'Why should websites enforce strong password requirements?',
+
+      answer:
+        'Strong password requirements help protect user accounts from brute-force attacks, guessing attempts, and unauthorized access.',
+    },
+  ],
+
+  nextTopic: 'html-label-element',
+},
+{
+  id: 'html-label-element',
+
+  title: 'HTML Label Element',
+
+  slug: 'html-label-element',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '70 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Label Element deeply including form labels, accessibility, for attribute, id connection, clickable labels, radio buttons, checkboxes, usability improvements, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Label Element',
+
+      content: `
+• What is Label?
+
+• Why Labels are Important
+
+• Syntax
+
+• Label with Input
+
+• for Attribute
+
+• id Attribute Connection
+
+• Clicking Labels
+
+• Labels for Radio Buttons
+
+• Labels for Checkboxes
+
+• Accessibility Benefits
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is the HTML Label Element?',
+
+      content: `
+The label element is used to provide a descriptive text for form controls.
+
+It helps users understand what information should be entered into a field.
+
+Syntax:
+
+<label>
+
+Text
+
+</label>
+
+Labels are one of the most important parts of user-friendly forms.
+`,
+    },
+
+    {
+      heading: 'Why are Labels Important?',
+
+      content: `
+Labels improve form usability and accessibility.
+
+Benefits:
+
+• Better user experience
+
+• Improved accessibility
+
+• Easier form understanding
+
+• Larger clickable area
+
+• Better mobile usability
+
+Professional forms always use labels.
+`,
+    },
+
+    {
+      heading: 'Basic Label Example',
+
+      content: `
+Example:
+
+<label>
+
+Full Name
+
+</label>
+
+<input type="text">
+
+The label tells users what information should be entered.
+
+Without labels, forms can become confusing.
+`,
+    },
+
+    {
+      heading: 'How Labels Work?',
+
+      content: `
+Step 1:
+
+The browser displays the label.
+
+Step 2:
+
+The user reads the instruction.
+
+Step 3:
+
+The user enters information into the related field.
+
+Labels guide users throughout the form-filling process.
+`,
+    },
+
+    {
+      heading: 'The for Attribute',
+
+      content: `
+The for attribute connects a label to a specific form control.
+
+Syntax:
+
+<label for="username">
+
+Username
+
+</label>
+
+The value of for must match the input id.
+
+This creates a relationship between the label and the input field.
+`,
+    },
+
+    {
+      heading: 'The id Attribute Connection',
+
+      content: `
+Example:
+
+<label for="email">
+
+Email Address
+
+</label>
+
+<input
+type="email"
+id="email">
+
+The label and input become connected through the matching value.
+
+This is the recommended approach.
+`,
+    },
+
+    {
+      heading: 'Why Use for and id Together?',
+
+      content: `
+Benefits:
+
+• Better accessibility
+
+• Screen reader support
+
+• Easier navigation
+
+• Larger clickable area
+
+• Improved usability
+
+This technique is considered a best practice.
+`,
+    },
+
+    {
+      heading: 'Clickable Labels',
+
+      content: `
+When a label is properly connected to an input field, clicking the label automatically focuses the input.
+
+Example:
+
+Clicking:
+
+Email Address
+
+Automatically places the cursor inside the email field.
+
+This improves user experience.
+`,
+    },
+
+    {
+      heading: 'Labels and Accessibility',
+
+      content: `
+Accessibility refers to making websites usable for everyone.
+
+Labels help:
+
+• Screen Reader Users
+
+• Keyboard Users
+
+• Mobile Users
+
+• Elderly Users
+
+• Users with Disabilities
+
+Labels are essential for accessible forms.
+`,
+    },
+
+    {
+      heading: 'Screen Reader Support',
+
+      content: `
+Screen readers announce labels when users navigate form controls.
+
+Example:
+
+Label:
+
+Email Address
+
+Input:
+
+Email Field
+
+The screen reader combines both pieces of information.
+
+This helps visually impaired users understand forms.
+`,
+    },
+
+    {
+      heading: 'Labels for Text Inputs',
+
+      content: `
+Example:
+
+<label for="name">
+
+Full Name
+
+</label>
+
+<input
+type="text"
+id="name">
+
+This is the most common label usage pattern.
+`,
+    },
+
+    {
+      heading: 'Labels for Password Fields',
+
+      content: `
+Example:
+
+<label for="password">
+
+Password
+
+</label>
+
+<input
+type="password"
+id="password">
+
+Users immediately understand the purpose of the field.
+`,
+    },
+
+    {
+      heading: 'Labels for Radio Buttons',
+
+      content: `
+Example Options:
+
+• Male
+
+• Female
+
+• Other
+
+Each radio button should have its own label.
+
+This improves selection accuracy.
+`,
+    },
+
+    {
+      heading: 'Benefits of Radio Button Labels',
+
+      content: `
+Benefits:
+
+• Easier clicking
+
+• Better accessibility
+
+• Improved readability
+
+• Better mobile experience
+
+Labels make radio buttons easier to use.
+`,
+    },
+
+    {
+      heading: 'Labels for Checkboxes',
+
+      content: `
+Checkboxes should always include descriptive labels.
+
+Examples:
+
+☐ I agree to the Terms
+
+☐ Subscribe to Newsletter
+
+☐ Receive Updates
+
+Users clearly understand the meaning of each option.
+`,
+    },
+
+    {
+      heading: 'Benefits of Checkbox Labels',
+
+      content: `
+Labels help users:
+
+• Understand options
+
+• Avoid mistakes
+
+• Select quickly
+
+• Improve form completion rates
+
+Checkboxes become more user friendly.
+`,
+    },
+
+    {
+      heading: 'Nested Label Approach',
+
+      content: `
+Labels can directly wrap form controls.
+
+Example:
+
+<label>
+
+Username
+
+<input type="text">
+
+</label>
+
+This automatically associates the input with the label.
+
+No for attribute is required in this approach.
+`,
+    },
+
+    {
+      heading: 'Explicit vs Implicit Association',
+
+      content: `
+Explicit Association:
+
+Uses for and id attributes.
+
+Implicit Association:
+
+Places the input inside the label.
+
+Explicit association is generally preferred for larger projects.
+`,
+    },
+
+    {
+      heading: 'Advantages of Labels',
+
+      content: `
+• Better usability
+
+• Improved accessibility
+
+• Easier navigation
+
+• Better mobile support
+
+• Professional forms
+
+• Reduced user confusion
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Always use labels
+
+• Connect labels correctly
+
+• Use meaningful text
+
+• Keep wording simple
+
+• Avoid ambiguous labels
+
+• Support accessibility
+
+Good labels improve form quality significantly.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Skip labels entirely
+
+• Use unclear text
+
+• Forget for attributes
+
+• Mismatch for and id values
+
+• Depend only on placeholders
+
+These mistakes reduce usability and accessibility.
+`,
+    },
+
+    {
+      heading: 'Label vs Placeholder',
+
+      content: `
+Label:
+
+• Permanent
+
+• Accessible
+
+• Visible at all times
+
+Placeholder:
+
+• Temporary
+
+• Disappears while typing
+
+• Not a replacement for labels
+
+Professional forms use both when necessary.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Labels',
+
+      content: `
+• Labels describe form controls
+
+• The for attribute links labels to inputs
+
+• The id value must match the for value
+
+• Labels improve accessibility
+
+• Clicking a label can focus an input
+
+• Labels should be used in all forms
+
+The label element is essential for creating professional and accessible forms.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Label Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<label>
+
+Full Name
+
+</label>
+
+<input type="text">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a label and text input field.',
+    },
+
+    {
+      title: 'Label with for Attribute',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<label for="email">
+
+Email Address
+
+</label>
+
+<input
+type="email"
+id="email">
+
+</body>
+
+</html>`,
+
+      output:
+        'Clicking the label focuses the email input field.',
+    },
+
+    {
+      title: 'Nested Label Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<label>
+
+Username
+
+<input type="text">
+
+</label>
+
+</body>
+
+</html>`,
+
+      output:
+        'The input field is automatically associated with the label.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML tag is used to create a label?',
+
+      options: [
+        '<caption>',
+        '<label>',
+        '<title>',
+        '<text>'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The label element is used to describe form controls.',
+    },
+
+    {
+      question:
+        'Which attribute connects a label to an input field?',
+
+      options: [
+        'connect',
+        'target',
+        'for',
+        'link'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The for attribute connects a label to an input element.',
+    },
+
+    {
+      question:
+        'What should the value of the for attribute match?',
+
+      options: [
+        'name',
+        'class',
+        'value',
+        'id'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'The for value must match the id of the associated input.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why are labels important in HTML forms?',
+
+      answer:
+        'Labels improve usability, accessibility, readability, and make forms easier to understand and interact with.',
+    },
+
+    {
+      question:
+        'What is the difference between a label and a placeholder?',
+
+      answer:
+        'A label permanently describes a form field and improves accessibility, whereas a placeholder is temporary hint text that disappears when the user starts typing.',
+    },
+  ],
+
+  nextTopic: 'html-placeholder-attribute',
+},
+{
+  id: 'html-placeholder-attribute',
+
+  title: 'HTML Placeholder Attribute',
+
+  slug: 'html-placeholder-attribute',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '60 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Placeholder Attribute deeply including syntax, text hints, user guidance, accessibility considerations, placeholder vs label, best practices, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Placeholder Attribute',
+
+      content: `
+• What is Placeholder?
+
+• Why Placeholder is Important
+
+• Syntax
+
+• How Placeholder Works
+
+• Placeholder Examples
+
+• Placeholder in Different Inputs
+
+• Placeholder vs Label
+
+• Accessibility Considerations
+
+• Best Practices
+
+• Common Mistakes
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is the Placeholder Attribute?',
+
+      content: `
+The placeholder attribute provides a short hint inside an input field.
+
+It helps users understand what type of information should be entered.
+
+Syntax:
+
+placeholder="Hint Text"
+
+The hint disappears automatically when the user starts typing.
+
+Placeholders improve form usability and user experience.
+`,
+    },
+
+    {
+      heading: 'Why is Placeholder Important?',
+
+      content: `
+Placeholders guide users before they enter data.
+
+Benefits:
+
+• Better instructions
+
+• Reduced confusion
+
+• Faster form completion
+
+• Improved user experience
+
+• Cleaner interface
+
+Modern websites frequently use placeholders in forms.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input
+type="text"
+placeholder="Enter Your Name">
+
+The text appears inside the input field until the user begins typing.
+
+This is the most common placeholder implementation.
+`,
+    },
+
+    {
+      heading: 'How Placeholder Works?',
+
+      content: `
+Step 1:
+
+The input field appears.
+
+Step 2:
+
+The placeholder text is displayed.
+
+Step 3:
+
+The user clicks inside the field.
+
+Step 4:
+
+The user starts typing.
+
+Step 5:
+
+The placeholder disappears.
+
+This behavior is automatic in modern browsers.
+`,
+    },
+
+    {
+      heading: 'Text Input Placeholder',
+
+      content: `
+Example:
+
+<input
+type="text"
+placeholder="Full Name">
+
+Purpose:
+
+• User guidance
+
+• Input clarity
+
+• Better usability
+
+This is one of the most common placeholder uses.
+`,
+    },
+
+    {
+      heading: 'Password Placeholder',
+
+      content: `
+Example:
+
+<input
+type="password"
+placeholder="Enter Password">
+
+Benefits:
+
+• User guidance
+
+• Better form clarity
+
+• Reduced confusion
+
+Commonly used in login and registration forms.
+`,
+    },
+
+    {
+      heading: 'Email Placeholder',
+
+      content: `
+Example:
+
+<input
+type="email"
+placeholder="example@gmail.com">
+
+Users immediately understand the expected format.
+
+This improves data accuracy.
+`,
+    },
+
+    {
+      heading: 'Search Placeholder',
+
+      content: `
+Example:
+
+<input
+type="search"
+placeholder="Search Products">
+
+Benefits:
+
+• Clear instructions
+
+• Better search experience
+
+• Improved usability
+
+Search bars often use placeholders.
+`,
+    },
+
+    {
+      heading: 'Phone Number Placeholder',
+
+      content: `
+Example:
+
+<input
+type="tel"
+placeholder="+91 9876543210">
+
+Users understand the expected format immediately.
+
+This reduces input errors.
+`,
+    },
+
+    {
+      heading: 'Date Input Placeholder',
+
+      content: `
+Some browsers display placeholders for date inputs.
+
+Example:
+
+<input
+type="date">
+
+Behavior may vary across browsers.
+
+Date pickers are usually preferred over placeholder hints.
+`,
+    },
+
+    {
+      heading: 'Real-world Placeholder Examples',
+
+      content: `
+Registration Form:
+
+• Enter Full Name
+
+• Enter Email Address
+
+• Create Password
+
+Contact Form:
+
+• Subject
+
+• Message
+
+Search Form:
+
+• Search Courses
+
+• Search Products
+
+These placeholders improve usability.
+`,
+    },
+
+    {
+      heading: 'Good Placeholder Examples',
+
+      content: `
+Examples:
+
+• Enter Full Name
+
+• Enter Email Address
+
+• Search Products
+
+• Enter City
+
+• Enter Mobile Number
+
+Good placeholders clearly explain expected input.
+`,
+    },
+
+    {
+      heading: 'Poor Placeholder Examples',
+
+      content: `
+Examples:
+
+• Text
+
+• Data
+
+• Input
+
+• Type Here
+
+• Fill This
+
+These placeholders provide little useful information.
+`,
+    },
+
+    {
+      heading: 'Placeholder vs Label',
+
+      content: `
+Placeholder:
+
+• Temporary text
+
+• Disappears while typing
+
+• Provides hints
+
+Label:
+
+• Permanent text
+
+• Always visible
+
+• Describes the field
+
+Labels and placeholders serve different purposes.
+`,
+    },
+
+    {
+      heading: 'Why Placeholder Cannot Replace Labels?',
+
+      content: `
+Reasons:
+
+• Placeholders disappear
+
+• Accessibility issues
+
+• Reduced clarity
+
+• Difficult for screen readers
+
+Professional forms should include labels whenever possible.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility is important for all users.
+
+Problems with placeholder-only forms:
+
+• Poor screen reader support
+
+• Reduced readability
+
+• Temporary instructions
+
+Always use proper labels along with placeholders.
+`,
+    },
+
+    {
+      heading: 'Placeholder Text Length',
+
+      content: `
+Good placeholders should be:
+
+• Short
+
+• Clear
+
+• Specific
+
+Avoid:
+
+• Long paragraphs
+
+• Complex instructions
+
+• Unnecessary information
+
+Short hints improve readability.
+`,
+    },
+
+    {
+      heading: 'Benefits of Placeholder Attribute',
+
+      content: `
+• Better guidance
+
+• Improved usability
+
+• Cleaner interface
+
+• Reduced confusion
+
+• Faster form completion
+
+• Better user experience
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use meaningful hints
+
+• Keep text short
+
+• Use labels as well
+
+• Avoid placeholder-only forms
+
+• Provide format examples
+
+• Improve accessibility
+
+Following these practices creates better forms.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Replace labels with placeholders
+
+• Use vague hints
+
+• Write long instructions
+
+• Ignore accessibility
+
+• Depend entirely on placeholder text
+
+These mistakes reduce form quality.
+`,
+    },
+
+    {
+      heading: 'Important Points About Placeholder Attribute',
+
+      content: `
+• Placeholder provides temporary hints
+
+• It appears inside input fields
+
+• It disappears when typing starts
+
+• It improves user guidance
+
+• It should not replace labels
+
+• Good placeholders improve usability
+
+The placeholder attribute is a simple but powerful form enhancement feature.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Placeholder Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="text"
+placeholder="Enter Your Name">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a text field containing a placeholder hint.',
+    },
+
+    {
+      title: 'Email Placeholder Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="email"
+placeholder="example@gmail.com">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays an email field with a sample email format.',
+    },
+
+    {
+      title: 'Search Placeholder Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="search"
+placeholder="Search Courses">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a search field with helpful guidance text.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is the purpose of the placeholder attribute?',
+
+      options: [
+        'Submit Forms',
+        'Display Temporary Hints',
+        'Validate Input',
+        'Create Labels'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The placeholder attribute displays temporary guidance text inside form fields.',
+    },
+
+    {
+      question:
+        'What happens to placeholder text when the user starts typing?',
+
+      options: [
+        'It becomes bold',
+        'It stays visible',
+        'It disappears',
+        'It moves below the field'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Placeholder text automatically disappears when the user enters data.',
+    },
+
+    {
+      question:
+        'Can placeholders completely replace labels?',
 
       options: [
         'Yes',
@@ -11485,28 +15702,10650 @@ Welcome
       answer: 1,
 
       explanation:
-        'An ID should be unique and should not be shared by multiple elements.',
+        'Placeholders should not replace labels because labels improve accessibility and remain visible.',
     },
   ],
 
   interviewQuestions: [
     {
       question:
-        'What is the purpose of the ID attribute in HTML?',
+        'What is the placeholder attribute in HTML?',
 
       answer:
-        'The ID attribute uniquely identifies an HTML element so it can be targeted by CSS, JavaScript, or fragment links.',
+        'The placeholder attribute displays temporary hint text inside an input field to guide users about the expected input.',
     },
 
     {
       question:
-        'What is the difference between Class and ID in HTML?',
+        'What is the difference between a label and a placeholder?',
 
       answer:
-        'A class can be reused by multiple elements, whereas an ID should be unique and used for only one element on a webpage.',
+        'A label permanently describes a form field, while a placeholder provides temporary hint text that disappears when the user starts typing.',
     },
   ],
 
-  nextTopic: 'html-iframes',
+  nextTopic: 'html-required-attribute',
+},
+{
+  id: 'html-required-attribute',
+
+  title: 'HTML Required Attribute',
+
+  slug: 'html-required-attribute',
+
+  image:
+    'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
+
+  readTime: '65 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Required Attribute deeply including form validation, mandatory fields, browser validation, required text fields, email validation, password validation, best practices, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Required Attribute',
+
+      content: `
+• What is Required Attribute?
+
+• Why Required Validation is Important
+
+• Syntax
+
+• How Required Validation Works
+
+• Browser Validation
+
+• Required Text Fields
+
+• Required Email Fields
+
+• Required Password Fields
+
+• Required Form Controls
+
+• Required vs Optional Fields
+
+• Validation Messages
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is the Required Attribute?',
+
+      content: `
+The required attribute is used to make a form field mandatory.
+
+When applied to an input field, users must enter a value before submitting the form.
+
+Syntax:
+
+required
+
+Example:
+
+<input
+type="text"
+required>
+
+The browser prevents form submission if the field is empty.
+`,
+    },
+
+    {
+      heading: 'Why is Required Validation Important?',
+
+      content: `
+Required validation ensures important information is not left blank.
+
+Benefits:
+
+• Better data quality
+
+• Complete submissions
+
+• Reduced user mistakes
+
+• Improved form processing
+
+• Better user experience
+
+Most professional forms use required validation.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input
+type="text"
+required>
+
+The required attribute does not need a value.
+
+Its presence alone activates validation.
+`,
+    },
+
+    {
+      heading: 'How Required Validation Works?',
+
+      content: `
+Step 1:
+
+The browser displays the form.
+
+Step 2:
+
+The user leaves the required field empty.
+
+Step 3:
+
+The user clicks Submit.
+
+Step 4:
+
+The browser checks validation rules.
+
+Step 5:
+
+Submission is blocked.
+
+Step 6:
+
+A validation message appears.
+
+This process occurs automatically.
+`,
+    },
+
+    {
+      heading: 'Browser-Based Validation',
+
+      content: `
+Modern browsers provide built-in validation.
+
+Benefits:
+
+• No JavaScript required
+
+• Fast validation
+
+• Better user experience
+
+• Reduced development effort
+
+This feature is part of HTML5 form validation.
+`,
+    },
+
+    {
+      heading: 'Required Text Fields',
+
+      content: `
+Example:
+
+<input
+type="text"
+required>
+
+Common Uses:
+
+• Full Name
+
+• Username
+
+• City
+
+• Company Name
+
+Users must enter text before submitting the form.
+`,
+    },
+
+    {
+      heading: 'Required Email Fields',
+
+      content: `
+Example:
+
+<input
+type="email"
+required>
+
+Benefits:
+
+• Ensures data is entered
+
+• Validates email format
+
+• Improves data quality
+
+Both email validation and required validation work together.
+`,
+    },
+
+    {
+      heading: 'Required Password Fields',
+
+      content: `
+Example:
+
+<input
+type="password"
+required>
+
+Common Uses:
+
+• Login Forms
+
+• Registration Forms
+
+• Password Updates
+
+Passwords cannot be left blank.
+`,
+    },
+
+    {
+      heading: 'Required Number Fields',
+
+      content: `
+Example:
+
+<input
+type="number"
+required>
+
+Uses:
+
+• Age
+
+• Quantity
+
+• Marks
+
+• Ratings
+
+The browser ensures a value is entered.
+`,
+    },
+
+    {
+      heading: 'Required Date Fields',
+
+      content: `
+Example:
+
+<input
+type="date"
+required>
+
+Uses:
+
+• Birth Date
+
+• Appointment Date
+
+• Event Date
+
+Users must select a date before submission.
+`,
+    },
+
+    {
+      heading: 'Required Radio Buttons',
+
+      content: `
+Example:
+
+Gender Selection
+
+• Male
+
+• Female
+
+• Other
+
+One option must be selected before submission.
+
+This is commonly used in registration forms.
+`,
+    },
+
+    {
+      heading: 'Required Checkboxes',
+
+      content: `
+Example:
+
+☐ I Agree to Terms and Conditions
+
+Many websites require users to accept terms before proceeding.
+
+This is a common real-world implementation.
+`,
+    },
+
+    {
+      heading: 'Required Select Dropdowns',
+
+      content: `
+Dropdown menus can also be mandatory.
+
+Example:
+
+Country Selection
+
+Users must choose a country before submission.
+
+This improves form completeness.
+`,
+    },
+
+    {
+      heading: 'Validation Messages',
+
+      content: `
+When a required field is empty, browsers display validation messages.
+
+Examples:
+
+• Please fill out this field.
+
+• Please select an option.
+
+• Please enter a value.
+
+The exact wording depends on the browser.
+`,
+    },
+
+    {
+      heading: 'Required vs Optional Fields',
+
+      content: `
+Required Fields:
+
+• Must be completed
+
+• Form submission is blocked if empty
+
+Optional Fields:
+
+• Can be left blank
+
+• Form submission continues normally
+
+Understanding this difference is important when designing forms.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Required Fields:
+
+• Name
+
+• Email
+
+• Password
+
+• Phone Number
+
+Optional Fields:
+
+• Middle Name
+
+• Website
+
+• Bio
+
+• Additional Comments
+
+Not every field should be mandatory.
+`,
+    },
+
+    {
+      heading: 'Advantages of Required Validation',
+
+      content: `
+• Better accuracy
+
+• Improved data quality
+
+• Fewer incomplete forms
+
+• Better user guidance
+
+• Faster processing
+
+• Built-in browser support
+`,
+    },
+
+    {
+      heading: 'Limitations of Required Validation',
+
+      content: `
+Although useful, required validation has limitations.
+
+Examples:
+
+• Can be bypassed in some situations
+
+• Server-side validation is still necessary
+
+• Browser messages vary
+
+Never rely solely on client-side validation.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Mark required fields clearly
+
+• Keep mandatory fields minimal
+
+• Provide helpful labels
+
+• Use meaningful validation
+
+• Combine with server validation
+
+• Avoid unnecessary requirements
+
+These practices improve user experience.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Make every field required
+
+• Forget labels
+
+• Depend only on browser validation
+
+• Ignore server-side validation
+
+• Create confusing forms
+
+These mistakes reduce usability.
+`,
+    },
+
+    {
+      heading: 'Required Attribute and Accessibility',
+
+      content: `
+Accessibility recommendations:
+
+• Clearly indicate required fields
+
+• Use labels
+
+• Provide validation feedback
+
+• Use meaningful instructions
+
+Accessible forms help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About Required Attribute',
+
+      content: `
+• Required fields cannot be empty
+
+• Browsers perform automatic validation
+
+• Works with many input types
+
+• Improves data quality
+
+• Reduces incomplete submissions
+
+• Should be combined with server-side validation
+
+The required attribute is one of the most useful HTML5 validation features.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Required Field',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="text"
+required>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'The form cannot be submitted unless the text field is filled.',
+    },
+
+    {
+      title: 'Required Email Field',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="email"
+required>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Users must enter a valid email address before submitting.',
+    },
+
+    {
+      title: 'Required Password Field',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="password"
+required>
+
+<button>
+
+Login
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'The password field must be completed before login.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What is the purpose of the required attribute?',
+
+      options: [
+        'Hide Input',
+        'Make Field Mandatory',
+        'Change Color',
+        'Add Placeholder'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The required attribute forces users to fill a field before submitting the form.',
+    },
+
+    {
+      question:
+        'Does the required attribute need a value?',
+
+      options: [
+        'Yes',
+        'No'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The presence of the required attribute alone enables validation.',
+    },
+
+    {
+      question:
+        'Who performs required validation automatically?',
+
+      options: [
+        'Database',
+        'Server',
+        'Browser',
+        'CSS'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Modern browsers automatically perform required field validation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the required attribute in HTML?',
+
+      answer:
+        'The required attribute is an HTML validation feature that prevents form submission until the user enters a value into the specified field.',
+    },
+
+    {
+      question:
+        'Why should server-side validation still be used even when required validation exists?',
+
+      answer:
+        'Client-side validation can be bypassed, so server-side validation is necessary to ensure security, accuracy, and data integrity.',
+    },
+  ],
+
+  nextTopic: 'html-radio-buttons',
+},
+{
+  id: 'html-radio-buttons',
+
+  title: 'HTML Radio Buttons',
+
+  slug: 'html-radio-buttons',
+
+  image:
+    'https://images.unsplash.com/photo-1450101499163-c8848c66ca85',
+
+  readTime: '75 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Radio Buttons deeply including radio groups, single selection behavior, name attribute, checked attribute, labels, validation, real-world examples, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Radio Buttons',
+
+      content: `
+• What are Radio Buttons?
+
+• Why Radio Buttons are Important
+
+• Syntax
+
+• How Radio Buttons Work
+
+• Radio Groups
+
+• name Attribute
+
+• value Attribute
+
+• checked Attribute
+
+• Labels with Radio Buttons
+
+• Required Radio Buttons
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are HTML Radio Buttons?',
+
+      content: `
+Radio buttons are form controls that allow users to select only one option from a group of choices.
+
+Syntax:
+
+<input type="radio">
+
+Radio buttons are commonly used when multiple options exist but only one option should be selected.
+
+Examples:
+
+• Gender
+
+• Payment Method
+
+• Delivery Option
+
+• Subscription Plan
+
+Only one choice can be active at a time.
+`,
+    },
+
+    {
+      heading: 'Why are Radio Buttons Important?',
+
+      content: `
+Radio buttons simplify decision making.
+
+Benefits:
+
+• Easy selection
+
+• Prevent multiple answers
+
+• Better user experience
+
+• Cleaner forms
+
+• Faster data entry
+
+They are widely used in forms and surveys.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input type="radio">
+
+This creates a radio button control.
+
+However, radio buttons become useful when grouped together.
+`,
+    },
+
+    {
+      heading: 'How Radio Buttons Work?',
+
+      content: `
+Step 1:
+
+The browser displays multiple options.
+
+Step 2:
+
+The user selects one option.
+
+Step 3:
+
+The selected option becomes active.
+
+Step 4:
+
+Choosing another option automatically deselects the previous one.
+
+Only one radio button can remain selected within the same group.
+`,
+    },
+
+    {
+      heading: 'Radio Button Group Concept',
+
+      content: `
+Radio buttons work as a group.
+
+Example:
+
+Gender:
+
+• Male
+
+• Female
+
+• Other
+
+Users can select only one option.
+
+Grouping is controlled using the name attribute.
+`,
+    },
+
+    {
+      heading: 'The Name Attribute',
+
+      content: `
+The name attribute is the most important part of radio buttons.
+
+Example:
+
+name="gender"
+
+All radio buttons sharing the same name belong to the same group.
+
+This creates single-selection behavior.
+`,
+    },
+
+    {
+      heading: 'Why Name Attribute is Important?',
+
+      content: `
+Without the same name value:
+
+• Multiple radio buttons can be selected.
+
+With the same name value:
+
+• Only one option can be selected.
+
+This is how radio groups are created.
+`,
+    },
+
+    {
+      heading: 'The Value Attribute',
+
+      content: `
+The value attribute defines the data submitted to the server.
+
+Example:
+
+<input
+type="radio"
+name="gender"
+value="male">
+
+When selected, the value "male" is submitted.
+
+Each option should have a unique value.
+`,
+    },
+
+    {
+      heading: 'The Checked Attribute',
+
+      content: `
+The checked attribute selects a radio button by default.
+
+Example:
+
+<input
+type="radio"
+checked>
+
+Benefits:
+
+• Preselected choices
+
+• Better user experience
+
+• Faster form completion
+
+Only one radio button in a group should normally be checked.
+`,
+    },
+
+    {
+      heading: 'Default Selected Option',
+
+      content: `
+Many forms provide a default choice.
+
+Example:
+
+Gender:
+
+● Male
+
+○ Female
+
+○ Other
+
+The selected option appears automatically when the page loads.
+`,
+    },
+
+    {
+      heading: 'Labels with Radio Buttons',
+
+      content: `
+Radio buttons should always be paired with labels.
+
+Example:
+
+<label>
+
+Male
+
+</label>
+
+Benefits:
+
+• Better accessibility
+
+• Easier clicking
+
+• Improved usability
+
+Labels make forms more user friendly.
+`,
+    },
+
+    {
+      heading: 'Clickable Labels',
+
+      content: `
+When labels are connected properly:
+
+• Users can click the text
+
+• The radio button becomes selected
+
+• Mobile usability improves
+
+This creates a larger clickable area.
+`,
+    },
+
+    {
+      heading: 'Required Radio Buttons',
+
+      content: `
+Radio button groups can be mandatory.
+
+Example:
+
+required
+
+Users must select one option before submitting the form.
+
+This is commonly used in registration forms.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Gender Selection:
+
+• Male
+
+• Female
+
+• Other
+
+Payment Methods:
+
+• Credit Card
+
+• Debit Card
+
+• UPI
+
+• Net Banking
+
+Delivery Options:
+
+• Standard
+
+• Express
+
+Only one option is allowed.
+`,
+    },
+
+    {
+      heading: 'Radio Buttons vs Checkboxes',
+
+      content: `
+Radio Buttons:
+
+• Single selection
+
+• One option only
+
+Checkboxes:
+
+• Multiple selection
+
+• Multiple options allowed
+
+This is the biggest difference between them.
+`,
+    },
+
+    {
+      heading: 'Advantages of Radio Buttons',
+
+      content: `
+• Easy to use
+
+• Single selection control
+
+• Better form design
+
+• Reduced mistakes
+
+• User friendly
+
+• Supported by all browsers
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use meaningful labels
+
+• Group related options
+
+• Use proper values
+
+• Avoid too many choices
+
+• Provide default selection only when necessary
+
+• Support accessibility
+
+These practices improve form quality.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget the name attribute
+
+• Use different names for the same group
+
+• Skip labels
+
+• Forget values
+
+• Use radio buttons for multi-selection tasks
+
+These mistakes create usability issues.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Use labels
+
+• Group related options
+
+• Provide meaningful text
+
+• Ensure keyboard navigation works
+
+Accessible radio groups help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About Radio Buttons',
+
+      content: `
+• type="radio" creates radio buttons
+
+• Radio buttons allow only one selection
+
+• The name attribute creates groups
+
+• The value attribute stores submitted data
+
+• checked selects a default option
+
+• Labels improve usability
+
+Radio buttons are ideal when users must choose exactly one option.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Radio Buttons',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="radio" name="gender"> Male
+
+<br>
+
+<input type="radio" name="gender"> Female
+
+</body>
+
+</html>`,
+
+      output:
+        'Users can select only one gender option.',
+    },
+
+    {
+      title: 'Radio Buttons with Values',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="radio"
+name="gender"
+value="male">
+
+Male
+
+<br>
+
+<input
+type="radio"
+name="gender"
+value="female">
+
+Female
+
+</body>
+
+</html>`,
+
+      output:
+        'Selected values are submitted with the form.',
+    },
+
+    {
+      title: 'Default Selected Radio Button',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="radio"
+name="plan"
+checked>
+
+Basic
+
+<br>
+
+<input
+type="radio"
+name="plan">
+
+Premium
+
+</body>
+
+</html>`,
+
+      output:
+        'The Basic option is selected by default.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type creates a radio button?',
+
+      options: [
+        'option',
+        'radio',
+        'choice',
+        'select'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'type="radio" creates a radio button control.',
+    },
+
+    {
+      question:
+        'Which attribute groups radio buttons together?',
+
+      options: [
+        'group',
+        'id',
+        'name',
+        'class'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'Radio buttons with the same name belong to the same group.',
+    },
+
+    {
+      question:
+        'Which attribute selects a radio button by default?',
+
+      options: [
+        'selected',
+        'active',
+        'default',
+        'checked'
+      ],
+
+      answer: 3,
+
+      explanation:
+        'The checked attribute preselects a radio button.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'Why is the name attribute important for radio buttons?',
+
+      answer:
+        'The name attribute groups radio buttons together and ensures that only one option can be selected within that group.',
+    },
+
+    {
+      question:
+        'What is the difference between radio buttons and checkboxes?',
+
+      answer:
+        'Radio buttons allow only one selection from a group, while checkboxes allow multiple selections.',
+    },
+  ],
+
+  nextTopic: 'html-checkboxes',
+},
+{
+  id: 'html-checkboxes',
+
+  title: 'HTML Checkboxes',
+
+  slug: 'html-checkboxes',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '75 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Checkboxes deeply including multiple selections, checkbox groups, checked attribute, value attribute, labels, validation, real-world examples, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Checkboxes',
+
+      content: `
+• What are Checkboxes?
+
+• Why Checkboxes are Important
+
+• Syntax
+
+• How Checkboxes Work
+
+• Multiple Selections
+
+• Checkbox Groups
+
+• value Attribute
+
+• checked Attribute
+
+• Labels with Checkboxes
+
+• Required Checkboxes
+
+• Terms & Conditions Checkbox
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are HTML Checkboxes?',
+
+      content: `
+Checkboxes are form controls that allow users to select one or more options from a list.
+
+Syntax:
+
+<input type="checkbox">
+
+Unlike radio buttons, checkboxes support multiple selections.
+
+Examples:
+
+• Hobbies
+
+• Skills
+
+• Languages
+
+• Interests
+
+• Preferences
+
+Users can select as many options as needed.
+`,
+    },
+
+    {
+      heading: 'Why are Checkboxes Important?',
+
+      content: `
+Checkboxes are useful when users need to choose multiple options.
+
+Benefits:
+
+• Multiple selections
+
+• Easy interaction
+
+• Flexible data collection
+
+• Better user experience
+
+• Simple implementation
+
+Checkboxes are commonly used in forms and surveys.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input type="checkbox">
+
+This creates a checkbox control.
+
+The checkbox can be either checked or unchecked.
+`,
+    },
+
+    {
+      heading: 'How Checkboxes Work?',
+
+      content: `
+Step 1:
+
+The browser displays checkbox options.
+
+Step 2:
+
+The user clicks a checkbox.
+
+Step 3:
+
+The checkbox becomes selected.
+
+Step 4:
+
+The user may select additional checkboxes.
+
+Step 5:
+
+All selected values are submitted.
+
+Unlike radio buttons, multiple options can remain selected.
+`,
+    },
+
+    {
+      heading: 'Single Checkbox Example',
+
+      content: `
+Example:
+
+☐ Subscribe to Newsletter
+
+Users can either:
+
+• Check the box
+
+• Leave it unchecked
+
+This is commonly used for optional choices.
+`,
+    },
+
+    {
+      heading: 'Multiple Checkbox Example',
+
+      content: `
+Hobbies:
+
+☐ Reading
+
+☐ Gaming
+
+☐ Music
+
+☐ Sports
+
+Users may select any number of hobbies.
+
+This is the most common checkbox use case.
+`,
+    },
+
+    {
+      heading: 'Checkbox Groups',
+
+      content: `
+Related checkboxes are often grouped together.
+
+Example:
+
+Skills:
+
+☐ HTML
+
+☐ CSS
+
+☐ JavaScript
+
+☐ React
+
+This creates a structured form layout.
+`,
+    },
+
+    {
+      heading: 'The Value Attribute',
+
+      content: `
+The value attribute defines the submitted data.
+
+Example:
+
+<input
+type="checkbox"
+value="html">
+
+If selected, the value "html" is sent to the server.
+
+Each checkbox should have a meaningful value.
+`,
+    },
+
+    {
+      heading: 'Why Value Attribute is Important?',
+
+      content: `
+Without value attributes:
+
+• Submitted data becomes unclear
+
+• Processing becomes difficult
+
+With value attributes:
+
+• Server receives meaningful information
+
+• Form handling becomes easier
+
+Always provide useful values.
+`,
+    },
+
+    {
+      heading: 'The Checked Attribute',
+
+      content: `
+The checked attribute selects a checkbox by default.
+
+Example:
+
+<input
+type="checkbox"
+checked>
+
+The checkbox appears selected when the page loads.
+
+Users can still change the selection.
+`,
+    },
+
+    {
+      heading: 'Default Checked Checkboxes',
+
+      content: `
+Example:
+
+☑ Receive Updates
+
+☐ Receive Promotions
+
+The first option is automatically selected.
+
+This is useful when a common choice exists.
+`,
+    },
+
+    {
+      heading: 'Labels with Checkboxes',
+
+      content: `
+Checkboxes should always include labels.
+
+Example:
+
+☐ I Agree to Terms
+
+Benefits:
+
+• Better accessibility
+
+• Easier clicking
+
+• Improved readability
+
+Labels make checkboxes easier to understand.
+`,
+    },
+
+    {
+      heading: 'Clickable Labels',
+
+      content: `
+When labels are connected correctly:
+
+• Users can click the text
+
+• The checkbox toggles automatically
+
+• Mobile usability improves
+
+This creates a larger clickable area.
+`,
+    },
+
+    {
+      heading: 'Required Checkboxes',
+
+      content: `
+Checkboxes can be mandatory.
+
+Example:
+
+☐ I Accept Terms & Conditions
+
+Users must check the box before form submission.
+
+This is commonly used in registration forms.
+`,
+    },
+
+    {
+      heading: 'Terms and Conditions Checkbox',
+
+      content: `
+One of the most popular checkbox uses.
+
+Example:
+
+☐ I Agree to the Terms & Conditions
+
+Purpose:
+
+• User consent
+
+• Legal compliance
+
+• Policy acceptance
+
+Most websites include this checkbox.
+`,
+    },
+
+    {
+      heading: 'Newsletter Subscription Checkbox',
+
+      content: `
+Example:
+
+☐ Subscribe to Newsletter
+
+Users can decide whether they want updates.
+
+This checkbox is usually optional.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Job Application:
+
+Skills:
+
+☐ Java
+
+☐ Python
+
+☐ JavaScript
+
+Shopping Website:
+
+Preferences:
+
+☐ Home Delivery
+
+☐ Gift Wrapping
+
+☐ SMS Updates
+
+Multiple options may be selected.
+`,
+    },
+
+    {
+      heading: 'Checkboxes vs Radio Buttons',
+
+      content: `
+Checkboxes:
+
+• Multiple selections allowed
+
+• Independent options
+
+Radio Buttons:
+
+• Single selection only
+
+• Group-based options
+
+This is the most important difference.
+`,
+    },
+
+    {
+      heading: 'Advantages of Checkboxes',
+
+      content: `
+• Multiple selection support
+
+• Easy to use
+
+• Flexible
+
+• Better user control
+
+• Works on all devices
+
+• Simple implementation
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use clear labels
+
+• Group related options
+
+• Use meaningful values
+
+• Avoid too many choices
+
+• Support accessibility
+
+• Keep forms organized
+
+These practices improve usability.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget labels
+
+• Skip value attributes
+
+• Use checkboxes when only one choice is needed
+
+• Create confusing groups
+
+• Ignore accessibility
+
+These mistakes reduce form quality.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Use labels
+
+• Ensure keyboard navigation
+
+• Provide meaningful text
+
+• Group related checkboxes
+
+Accessible forms help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About Checkboxes',
+
+      content: `
+• type="checkbox" creates a checkbox
+
+• Multiple selections are allowed
+
+• checked selects a default option
+
+• value stores submitted data
+
+• Labels improve usability
+
+• Required checkboxes enforce agreement
+
+Checkboxes are ideal when users need to select multiple options.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Checkbox',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="checkbox">
+
+Subscribe
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a simple checkbox.',
+    },
+
+    {
+      title: 'Multiple Checkboxes',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="checkbox" value="html"> HTML
+
+<br>
+
+<input type="checkbox" value="css"> CSS
+
+<br>
+
+<input type="checkbox" value="javascript"> JavaScript
+
+</body>
+
+</html>`,
+
+      output:
+        'Users can select one, multiple, or all options.',
+    },
+
+    {
+      title: 'Required Terms Checkbox',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<input
+type="checkbox"
+required>
+
+I Agree to Terms & Conditions
+
+<br><br>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'The form cannot be submitted until the checkbox is selected.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type creates a checkbox?',
+
+      options: [
+        'check',
+        'tick',
+        'checkbox',
+        'option'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'type="checkbox" creates a checkbox control.',
+    },
+
+    {
+      question:
+        'Can multiple checkboxes be selected at the same time?',
+
+      options: [
+        'Yes',
+        'No'
+      ],
+
+      answer: 0,
+
+      explanation:
+        'Checkboxes support multiple selections.',
+    },
+
+    {
+      question:
+        'Which attribute selects a checkbox by default?',
+
+      options: [
+        'selected',
+        'active',
+        'checked',
+        'default'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The checked attribute preselects a checkbox.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the difference between checkboxes and radio buttons?',
+
+      answer:
+        'Checkboxes allow multiple selections, while radio buttons allow only one selection from a group.',
+    },
+
+    {
+      question:
+        'Why is the value attribute important for checkboxes?',
+
+      answer:
+        'The value attribute specifies the data sent to the server when a checkbox is selected, making form processing easier and more meaningful.',
+    },
+  ],
+
+  nextTopic: 'html-select-dropdown',
+},
+{
+  id: 'html-select-dropdown',
+
+  title: 'HTML Select Dropdown',
+
+  slug: 'html-select-dropdown',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '85 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Select Dropdown deeply including select elements, option elements, default selections, multiple selections, optgroup, size attribute, real-world examples, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Select Dropdown',
+
+      content: `
+• What is Select Dropdown?
+
+• Why Dropdowns are Important
+
+• Syntax
+
+• Select Element
+
+• Option Element
+
+• Default Selected Option
+
+• Multiple Selection Dropdown
+
+• Size Attribute
+
+• Option Groups
+
+• Real-world Examples
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is an HTML Select Dropdown?',
+
+      content: `
+A select dropdown is a form control that allows users to choose one or more options from a predefined list.
+
+HTML uses the select element to create dropdown menus.
+
+Syntax:
+
+<select>
+
+<option>
+
+Option
+
+</option>
+
+</select>
+
+Dropdowns help save space and organize multiple choices.
+`,
+    },
+
+    {
+      heading: 'Why are Dropdowns Important?',
+
+      content: `
+Dropdowns improve form usability when many options exist.
+
+Benefits:
+
+• Saves screen space
+
+• Organizes choices
+
+• Prevents invalid input
+
+• Improves user experience
+
+• Faster selection
+
+Dropdowns are commonly used in registration and survey forms.
+`,
+    },
+
+    {
+      heading: 'The Select Element',
+
+      content: `
+The select element creates the dropdown container.
+
+Syntax:
+
+<select>
+
+</select>
+
+The dropdown itself cannot display choices until option elements are added inside it.
+`,
+    },
+
+    {
+      heading: 'The Option Element',
+
+      content: `
+The option element defines individual choices.
+
+Example:
+
+<option>
+
+India
+
+</option>
+
+Each option appears as a selectable item in the dropdown list.
+`,
+    },
+
+    {
+      heading: 'How Dropdowns Work?',
+
+      content: `
+Step 1:
+
+The browser displays the dropdown.
+
+Step 2:
+
+The user clicks the dropdown.
+
+Step 3:
+
+Available options appear.
+
+Step 4:
+
+The user selects an option.
+
+Step 5:
+
+The selected value becomes part of the form data.
+
+This process is used on countless websites.
+`,
+    },
+
+    {
+      heading: 'Basic Dropdown Example',
+
+      content: `
+Country Selection:
+
+▼ Select Country
+
+• India
+
+• USA
+
+• Canada
+
+• Australia
+
+Users can choose one option from the list.
+`,
+    },
+
+    {
+      heading: 'The Value Attribute',
+
+      content: `
+Each option can have a value attribute.
+
+Example:
+
+<option value="india">
+
+India
+
+</option>
+
+The value is sent to the server when the option is selected.
+
+Values should be meaningful and unique.
+`,
+    },
+
+    {
+      heading: 'Why Value Attribute is Important?',
+
+      content: `
+Without values:
+
+• Data processing becomes harder
+
+• Submitted information may be unclear
+
+With values:
+
+• Servers receive structured data
+
+• Form processing becomes easier
+
+Most professional forms use value attributes.
+`,
+    },
+
+    {
+      heading: 'Default Selected Option',
+
+      content: `
+The selected attribute chooses an option automatically.
+
+Example:
+
+<option selected>
+
+India
+
+</option>
+
+The selected option appears when the page loads.
+`,
+    },
+
+    {
+      heading: 'Selected Attribute',
+
+      content: `
+Benefits:
+
+• Faster form completion
+
+• Better user experience
+
+• Common choices can be preselected
+
+Only one option should normally be selected in a standard dropdown.
+`,
+    },
+
+    {
+      heading: 'Dropdown with Placeholder Option',
+
+      content: `
+Many forms include a default prompt.
+
+Example:
+
+Select Country
+
+Users are encouraged to choose a valid option before submitting the form.
+
+This improves usability.
+`,
+    },
+
+    {
+      heading: 'Multiple Selection Dropdown',
+
+      content: `
+HTML supports selecting multiple options.
+
+Example:
+
+<select multiple>
+
+</select>
+
+Users can choose several options instead of only one.
+
+This is useful for skills, hobbies, and interests.
+`,
+    },
+
+    {
+      heading: 'How Multiple Selection Works?',
+
+      content: `
+Desktop Users:
+
+• Ctrl + Click (Windows)
+
+• Command + Click (Mac)
+
+Mobile behavior varies depending on the device and browser.
+
+Multiple selections are submitted together.
+`,
+    },
+
+    {
+      heading: 'The Size Attribute',
+
+      content: `
+The size attribute controls visible options.
+
+Example:
+
+<select size="4">
+
+</select>
+
+Benefits:
+
+• Displays multiple options
+
+• Reduces scrolling
+
+• Improves visibility
+
+The dropdown behaves more like a list box.
+`,
+    },
+
+    {
+      heading: 'Option Groups with Optgroup',
+
+      content: `
+Large dropdowns can be organized into groups.
+
+HTML provides:
+
+<optgroup>
+
+This improves readability and user experience.
+`,
+    },
+
+    {
+      heading: 'Why Use Optgroup?',
+
+      content: `
+Example:
+
+Asia
+
+• India
+
+• Japan
+
+• China
+
+Europe
+
+• Germany
+
+• France
+
+• Italy
+
+Grouping makes long dropdowns easier to navigate.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Country Selection:
+
+• India
+
+• USA
+
+• UK
+
+Education Level:
+
+• High School
+
+• Diploma
+
+• Graduate
+
+• Post Graduate
+
+Department Selection:
+
+• HR
+
+• Sales
+
+• Development
+
+Dropdowns are used extensively in forms.
+`,
+    },
+
+    {
+      heading: 'Dropdown vs Radio Buttons',
+
+      content: `
+Dropdown:
+
+• Saves space
+
+• Suitable for many options
+
+Radio Buttons:
+
+• Display all choices
+
+• Faster for small option sets
+
+Choose the appropriate control based on the number of options.
+`,
+    },
+
+    {
+      heading: 'Advantages of Select Dropdowns',
+
+      content: `
+• Compact design
+
+• Easy selection
+
+• Better organization
+
+• Prevents invalid entries
+
+• Supports multiple selection
+
+• Works on all browsers
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use meaningful option text
+
+• Include default prompts
+
+• Group large lists
+
+• Avoid extremely long dropdowns
+
+• Use labels
+
+• Support accessibility
+
+These practices improve usability.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget value attributes
+
+• Skip labels
+
+• Use dropdowns for very few options
+
+• Create huge unorganized lists
+
+• Ignore accessibility
+
+These mistakes reduce form quality.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Use labels
+
+• Provide meaningful options
+
+• Group related choices
+
+• Support keyboard navigation
+
+Accessible dropdowns help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About Select Dropdowns',
+
+      content: `
+• select creates dropdown menus
+
+• option defines choices
+
+• selected creates default selections
+
+• multiple allows multiple choices
+
+• size controls visible options
+
+• optgroup organizes options
+
+Dropdowns are one of the most widely used form controls in HTML.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Dropdown',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<select>
+
+<option>India</option>
+
+<option>USA</option>
+
+<option>Canada</option>
+
+</select>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a dropdown list with country options.',
+    },
+
+    {
+      title: 'Dropdown with Selected Option',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<select>
+
+<option selected>
+
+India
+
+</option>
+
+<option>
+
+USA
+
+</option>
+
+</select>
+
+</body>
+
+</html>`,
+
+      output:
+        'India appears as the default selected option.',
+    },
+
+    {
+      title: 'Multiple Selection Dropdown',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<select multiple>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>JavaScript</option>
+
+<option>React</option>
+
+</select>
+
+</body>
+
+</html>`,
+
+      output:
+        'Users can select multiple options from the list.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML element creates a dropdown list?',
+
+      options: [
+        '<option>',
+        '<list>',
+        '<select>',
+        '<dropdown>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The select element creates dropdown menus.',
+    },
+
+    {
+      question:
+        'Which element defines individual dropdown options?',
+
+      options: [
+        '<choice>',
+        '<option>',
+        '<item>',
+        '<select>'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The option element defines individual choices.',
+    },
+
+    {
+      question:
+        'Which attribute allows multiple selections?',
+
+      options: [
+        'many',
+        'group',
+        'multiple',
+        'multi'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The multiple attribute allows users to select multiple options.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of the select element in HTML?',
+
+      answer:
+        'The select element creates a dropdown list that allows users to choose one or more options from a predefined set of choices.',
+    },
+
+    {
+      question:
+        'What is the difference between a dropdown and radio buttons?',
+
+      answer:
+        'A dropdown saves space and is suitable for many options, while radio buttons display all options and are better when only a few choices are available.',
+    },
+  ],
+
+  nextTopic: 'html-textarea',
+},
+{
+  id: 'html-textarea',
+
+  title: 'HTML Textarea',
+
+  slug: 'html-textarea',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '80 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML Textarea deeply including multi-line text input, rows, cols, placeholders, default content, resize behavior, form integration, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Textarea',
+
+      content: `
+• What is Textarea?
+
+• Why Textarea is Important
+
+• Syntax
+
+• Multi-line Input
+
+• Rows Attribute
+
+• Cols Attribute
+
+• Placeholder Attribute
+
+• Default Text
+
+• Readonly Textarea
+
+• Disabled Textarea
+
+• Resize Behavior
+
+• Textarea vs Text Input
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML Textarea?',
+
+      content: `
+The textarea element is used to collect large amounts of text from users.
+
+Unlike a normal text input, a textarea supports multiple lines of content.
+
+Syntax:
+
+<textarea>
+
+</textarea>
+
+Textareas are commonly used for messages, feedback, descriptions, and comments.
+`,
+    },
+
+    {
+      heading: 'Why is Textarea Important?',
+
+      content: `
+Some user input cannot fit into a single line.
+
+Examples:
+
+• Feedback
+
+• Reviews
+
+• Comments
+
+• Descriptions
+
+• Support Requests
+
+• User Messages
+
+Textarea provides a larger area for entering detailed information.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<textarea>
+
+</textarea>
+
+This creates a multi-line text field.
+
+Users can press Enter to move to a new line.
+`,
+    },
+
+    {
+      heading: 'How Textarea Works?',
+
+      content: `
+Step 1:
+
+Browser displays the textarea.
+
+Step 2:
+
+User clicks inside the textarea.
+
+Step 3:
+
+User enters text.
+
+Step 4:
+
+User can create multiple lines.
+
+Step 5:
+
+The entered content becomes part of the form submission.
+
+This behavior makes textarea ideal for long text.
+`,
+    },
+
+    {
+      heading: 'Multi-line Input',
+
+      content: `
+The biggest advantage of textarea is support for multiple lines.
+
+Example:
+
+Hello
+
+How are you?
+
+I am learning HTML.
+
+This would be difficult to manage using a standard text input field.
+`,
+    },
+
+    {
+      heading: 'Rows Attribute',
+
+      content: `
+The rows attribute controls the visible height of a textarea.
+
+Example:
+
+<textarea rows="5">
+
+</textarea>
+
+Benefits:
+
+• More visible space
+
+• Better readability
+
+• Improved user experience
+
+Larger values create taller textareas.
+`,
+    },
+
+    {
+      heading: 'Cols Attribute',
+
+      content: `
+The cols attribute controls the visible width.
+
+Example:
+
+<textarea cols="40">
+
+</textarea>
+
+Benefits:
+
+• Better layout control
+
+• Improved readability
+
+• Consistent form design
+
+Larger values create wider textareas.
+`,
+    },
+
+    {
+      heading: 'Using Rows and Cols Together',
+
+      content: `
+Example:
+
+<textarea
+rows="6"
+cols="50">
+
+</textarea>
+
+This creates a larger writing area.
+
+Many contact forms use both attributes together.
+`,
+    },
+
+    {
+      heading: 'Placeholder in Textarea',
+
+      content: `
+Textarea supports placeholders.
+
+Example:
+
+<textarea
+placeholder="Enter your message">
+
+</textarea>
+
+Benefits:
+
+• User guidance
+
+• Better usability
+
+• Improved form clarity
+
+The placeholder disappears when typing starts.
+`,
+    },
+
+    {
+      heading: 'Default Text Content',
+
+      content: `
+Unlike input fields, default text is placed between opening and closing tags.
+
+Example:
+
+<textarea>
+
+Welcome User
+
+</textarea>
+
+The text appears automatically when the page loads.
+`,
+    },
+
+    {
+      heading: 'Readonly Textarea',
+
+      content: `
+Readonly textareas cannot be modified.
+
+Example:
+
+<textarea readonly>
+
+Read Only Content
+
+</textarea>
+
+Characteristics:
+
+• Viewable
+
+• Selectable
+
+• Not editable
+
+Useful for displaying protected information.
+`,
+    },
+
+    {
+      heading: 'Disabled Textarea',
+
+      content: `
+Disabled textareas cannot be edited or selected.
+
+Example:
+
+<textarea disabled>
+
+Disabled Content
+
+</textarea>
+
+Characteristics:
+
+• Not editable
+
+• Usually grayed out
+
+• Not submitted with form data
+`,
+    },
+
+    {
+      heading: 'Required Textarea',
+
+      content: `
+Textarea supports validation.
+
+Example:
+
+<textarea required>
+
+</textarea>
+
+Users must enter content before form submission.
+
+Commonly used in feedback forms.
+`,
+    },
+
+    {
+      heading: 'Resize Behavior',
+
+      content: `
+Most browsers allow users to resize textareas.
+
+Benefits:
+
+• Better flexibility
+
+• Improved readability
+
+• User control
+
+Users can make the writing area larger if needed.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Contact Form:
+
+• Message
+
+Feedback Form:
+
+• Suggestions
+
+Support Form:
+
+• Problem Description
+
+Job Application:
+
+• Cover Letter
+
+Textarea is used whenever detailed text is required.
+`,
+    },
+
+    {
+      heading: 'Textarea vs Text Input',
+
+      content: `
+Text Input:
+
+• Single-line content
+
+• Short values
+
+• Names and usernames
+
+Textarea:
+
+• Multi-line content
+
+• Long text
+
+• Comments and descriptions
+
+Choose the appropriate control based on data size.
+`,
+    },
+
+    {
+      heading: 'Advantages of Textarea',
+
+      content: `
+• Supports long text
+
+• Multi-line input
+
+• Easy to use
+
+• Flexible size
+
+• Supports validation
+
+• Works across all browsers
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use placeholders carefully
+
+• Add labels
+
+• Set appropriate size
+
+• Use validation
+
+• Keep forms user-friendly
+
+• Support accessibility
+
+These practices improve usability.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Use text inputs for long content
+
+• Forget labels
+
+• Skip validation
+
+• Make textarea too small
+
+• Ignore placeholders
+
+These mistakes reduce user experience.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Always use labels
+
+• Provide instructions
+
+• Support keyboard navigation
+
+• Ensure sufficient size
+
+Accessible textareas help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About Textarea',
+
+      content: `
+• textarea creates multi-line input fields
+
+• rows controls height
+
+• cols controls width
+
+• Supports placeholders
+
+• Supports validation
+
+• Ideal for comments and descriptions
+
+Textarea is one of the most important HTML form elements.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Textarea',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<textarea>
+
+</textarea>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a simple multi-line text area.',
+    },
+
+    {
+      title: 'Textarea with Rows and Cols',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<textarea
+rows="5"
+cols="40">
+
+</textarea>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a larger textarea with custom dimensions.',
+    },
+
+    {
+      title: 'Required Textarea',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form>
+
+<textarea
+required
+placeholder="Enter your feedback">
+
+</textarea>
+
+<br><br>
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Users must enter content before submitting the form.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML element creates a multi-line text field?',
+
+      options: [
+        '<input>',
+        '<textbox>',
+        '<textarea>',
+        '<text>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The textarea element is used for multi-line text input.',
+    },
+
+    {
+      question:
+        'Which attribute controls the height of a textarea?',
+
+      options: [
+        'height',
+        'rows',
+        'size',
+        'length'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The rows attribute controls the visible height of a textarea.',
+    },
+
+    {
+      question:
+        'Which attribute makes a textarea mandatory?',
+
+      options: [
+        'validate',
+        'required',
+        'must',
+        'needed'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The required attribute prevents form submission if the textarea is empty.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the difference between a text input and a textarea?',
+
+      answer:
+        'A text input is designed for single-line content, while a textarea supports multiple lines and is suitable for long text such as comments, descriptions, and messages.',
+    },
+
+    {
+      question:
+        'How do rows and cols affect a textarea?',
+
+      answer:
+        'The rows attribute controls the visible height, while the cols attribute controls the visible width of the textarea.',
+    },
+  ],
+
+  nextTopic: 'html-file-upload',
+},
+{
+  id: 'html-file-upload',
+
+  title: 'HTML File Upload',
+
+  slug: 'html-file-upload',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '85 min read',
+
+  difficulty: 'Beginner',
+
+  description:
+    'Learn HTML File Upload deeply including file selection, image uploads, document uploads, multiple file uploads, accept attribute, upload forms, best practices, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML File Upload',
+
+      content: `
+• What is File Upload?
+
+• Why File Upload is Important
+
+• Syntax
+
+• How File Upload Works
+
+• File Input Element
+
+• Uploading Images
+
+• Uploading Documents
+
+• Multiple File Upload
+
+• Accept Attribute
+
+• File Validation
+
+• Upload Forms
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML File Upload?',
+
+      content: `
+HTML File Upload allows users to select files from their device and submit them through a form.
+
+HTML uses:
+
+<input type="file">
+
+to create a file upload control.
+
+Users can upload:
+
+• Images
+
+• PDFs
+
+• Documents
+
+• Videos
+
+• Audio Files
+
+• Other Files
+
+File upload is one of the most important features in modern web applications.
+`,
+    },
+
+    {
+      heading: 'Why is File Upload Important?',
+
+      content: `
+Many websites require users to submit files.
+
+Examples:
+
+• Profile Pictures
+
+• Resume Uploads
+
+• Assignment Submissions
+
+• Product Images
+
+• Identity Verification Documents
+
+• Project Files
+
+Without file upload functionality, many online services would not be possible.
+`,
+    },
+
+    {
+      heading: 'Basic Syntax',
+
+      content: `
+Example:
+
+<input type="file">
+
+The browser automatically displays a file selection button.
+
+Users can browse and select files from their device.
+`,
+    },
+
+    {
+      heading: 'How File Upload Works?',
+
+      content: `
+Step 1:
+
+User clicks the file upload button.
+
+Step 2:
+
+The operating system file picker opens.
+
+Step 3:
+
+User selects a file.
+
+Step 4:
+
+The selected file name appears.
+
+Step 5:
+
+The form is submitted.
+
+Step 6:
+
+The server receives the uploaded file.
+
+This process is used by millions of websites every day.
+`,
+    },
+
+    {
+      heading: 'The File Input Element',
+
+      content: `
+The file input element creates a file selection control.
+
+Syntax:
+
+<input type="file">
+
+The appearance may vary slightly between browsers and operating systems.
+
+However, the functionality remains the same.
+`,
+    },
+
+    {
+      heading: 'Selecting Files',
+
+      content: `
+Users can select files from:
+
+• Computer
+
+• Laptop
+
+• Mobile Device
+
+• Tablet
+
+After selection, the file name becomes visible in the form.
+`,
+    },
+
+    {
+      heading: 'Uploading Images',
+
+      content: `
+Common image uploads:
+
+• Profile Pictures
+
+• Product Photos
+
+• Cover Images
+
+• Portfolio Images
+
+Supported formats often include:
+
+• JPG
+
+• JPEG
+
+• PNG
+
+• GIF
+
+• WEBP
+
+Image uploads are extremely common in modern websites.
+`,
+    },
+
+    {
+      heading: 'Uploading Documents',
+
+      content: `
+Document uploads include:
+
+• PDF Files
+
+• Word Documents
+
+• Excel Files
+
+• PowerPoint Files
+
+• Text Files
+
+Examples:
+
+• Job Applications
+
+• Assignments
+
+• Business Documents
+
+• Reports
+
+Document uploads are heavily used in professional systems.
+`,
+    },
+
+    {
+      heading: 'The Accept Attribute',
+
+      content: `
+The accept attribute restricts allowed file types.
+
+Example:
+
+<input
+type="file"
+accept="image/*">
+
+Only image files can be selected.
+
+This improves validation and user experience.
+`,
+    },
+
+    {
+      heading: 'Accepting Specific Image Formats',
+
+      content: `
+Example:
+
+accept=".jpg,.jpeg,.png"
+
+Allowed:
+
+• JPG
+
+• JPEG
+
+• PNG
+
+Other file types cannot be selected easily.
+
+This helps control uploaded content.
+`,
+    },
+
+    {
+      heading: 'Accepting PDF Files',
+
+      content: `
+Example:
+
+accept=".pdf"
+
+Common Uses:
+
+• Resume Upload
+
+• Reports
+
+• Assignments
+
+• Certificates
+
+Only PDF files can be chosen.
+`,
+    },
+
+    {
+      heading: 'Accepting Multiple File Types',
+
+      content: `
+Example:
+
+accept=".pdf,.doc,.docx"
+
+This allows:
+
+• PDF Files
+
+• DOC Files
+
+• DOCX Files
+
+Users can upload documents in different formats.
+`,
+    },
+
+    {
+      heading: 'Multiple File Upload',
+
+      content: `
+HTML supports uploading multiple files at once.
+
+Attribute:
+
+multiple
+
+Example:
+
+<input
+type="file"
+multiple>
+
+Users can choose several files simultaneously.
+`,
+    },
+
+    {
+      heading: 'Benefits of Multiple Uploads',
+
+      content: `
+Examples:
+
+• Uploading Gallery Images
+
+• Submitting Multiple Documents
+
+• Sharing Project Files
+
+• Sending Attachments
+
+This saves time and improves usability.
+`,
+    },
+
+    {
+      heading: 'File Upload Forms',
+
+      content: `
+File uploads are usually placed inside forms.
+
+Common Examples:
+
+• Resume Submission Form
+
+• Profile Update Form
+
+• Product Upload Form
+
+• Assignment Submission Form
+
+Forms manage the upload process.
+`,
+    },
+
+    {
+      heading: 'File Size Considerations',
+
+      content: `
+Large files can cause:
+
+• Slow uploads
+
+• Increased server load
+
+• Poor user experience
+
+Many websites limit upload size.
+
+Examples:
+
+• 2 MB
+
+• 5 MB
+
+• 10 MB
+
+• 50 MB
+
+The exact limit depends on system requirements.
+`,
+    },
+
+    {
+      heading: 'File Validation',
+
+      content: `
+Validation helps ensure uploaded files are acceptable.
+
+Checks may include:
+
+• File Type
+
+• File Size
+
+• File Extension
+
+• File Name
+
+Validation improves security and reliability.
+`,
+    },
+
+    {
+      heading: 'Security Considerations',
+
+      content: `
+File uploads can introduce security risks.
+
+Recommendations:
+
+• Validate file types
+
+• Limit file size
+
+• Scan uploaded files
+
+• Restrict dangerous file extensions
+
+Security should always be considered when handling uploads.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Social Media:
+
+• Profile Picture Upload
+
+Job Portal:
+
+• Resume Upload
+
+E-commerce Website:
+
+• Product Image Upload
+
+Educational Platform:
+
+• Assignment Submission
+
+File uploads are used across almost every industry.
+`,
+    },
+
+    {
+      heading: 'File Upload vs Text Input',
+
+      content: `
+Text Input:
+
+• Collects text
+
+• User types information
+
+File Upload:
+
+• Collects files
+
+• User selects files
+
+Both are important but serve different purposes.
+`,
+    },
+
+    {
+      heading: 'Advantages of File Upload',
+
+      content: `
+• Easy file sharing
+
+• Supports multiple formats
+
+• Improves user interaction
+
+• Enables document submission
+
+• Supports media uploads
+
+• Essential for modern applications
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Restrict file types
+
+• Validate uploads
+
+• Limit file sizes
+
+• Show upload instructions
+
+• Use meaningful labels
+
+• Provide upload feedback
+
+These practices improve user experience.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget validation
+
+• Allow all file types
+
+• Ignore security
+
+• Skip file size limits
+
+• Provide unclear instructions
+
+These mistakes can create usability and security problems.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Use labels
+
+• Provide clear instructions
+
+• Describe accepted formats
+
+• Support keyboard navigation
+
+Accessible upload forms help all users.
+`,
+    },
+
+    {
+      heading: 'Important Points About File Upload',
+
+      content: `
+• type="file" creates a file upload control
+
+• Users can upload files from their device
+
+• accept restricts file types
+
+• multiple allows selecting multiple files
+
+• Validation improves reliability
+
+• Security is extremely important
+
+File upload is one of the most widely used HTML form features.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic File Upload',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input type="file">
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a file selection control.',
+    },
+
+    {
+      title: 'Image Upload Only',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="file"
+accept="image/*">
+
+</body>
+
+</html>`,
+
+      output:
+        'Allows users to select image files only.',
+    },
+
+    {
+      title: 'Multiple File Upload',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<input
+type="file"
+multiple>
+
+</body>
+
+</html>`,
+
+      output:
+        'Users can upload multiple files simultaneously.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which input type is used for file uploads?',
+
+      options: [
+        'upload',
+        'document',
+        'file',
+        'attachment'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'type="file" creates a file upload control.',
+    },
+
+    {
+      question:
+        'Which attribute restricts allowed file types?',
+
+      options: [
+        'type',
+        'accept',
+        'filetype',
+        'format'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The accept attribute restricts selectable file formats.',
+    },
+
+    {
+      question:
+        'Which attribute allows selecting multiple files?',
+
+      options: [
+        'many',
+        'multiple',
+        'multi',
+        'group'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The multiple attribute enables selection of multiple files.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of type="file" in HTML?',
+
+      answer:
+        'The type="file" input allows users to select and upload files from their device through a web form.',
+    },
+
+    {
+      question:
+        'What is the role of the accept attribute in file uploads?',
+
+      answer:
+        'The accept attribute restricts the types of files users can select, improving validation and user experience.',
+    },
+  ],
+
+  nextTopic: 'html-get-vs-post',
+},
+{
+  id: 'html-get-vs-post',
+
+  title: 'HTML GET vs POST',
+
+  slug: 'html-get-vs-post',
+
+  image:
+    'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
+
+  readTime: '95 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn GET vs POST deeply including form submission, URL parameters, data transmission, security differences, advantages, disadvantages, real-world usage, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML GET vs POST',
+
+      content: `
+• What is Form Submission?
+
+• What is GET Method?
+
+• What is POST Method?
+
+• How Forms Send Data
+
+• URL Parameters
+
+• Data Transmission
+
+• Security Differences
+
+• GET Advantages
+
+• GET Disadvantages
+
+• POST Advantages
+
+• POST Disadvantages
+
+• GET vs POST Comparison
+
+• When to Use GET
+
+• When to Use POST
+
+• Real-world Examples
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Form Submission?',
+
+      content: `
+Forms collect information from users.
+
+After users fill the form, the browser sends that information to a server.
+
+This process is called form submission.
+
+HTML provides two primary methods:
+
+• GET
+
+• POST
+
+These methods determine how data travels from browser to server.
+`,
+    },
+
+    {
+      heading: 'What is the GET Method?',
+
+      content: `
+GET is an HTTP method used to request data from a server.
+
+When a form uses GET, all form data is attached to the URL.
+
+Example:
+
+https://example.com/search?keyword=html
+
+The submitted information becomes visible in the browser address bar.
+`,
+    },
+
+    {
+      heading: 'Basic GET Syntax',
+
+      content: `
+Example:
+
+<form method="get">
+
+</form>
+
+The browser appends form values to the URL during submission.
+`,
+    },
+
+    {
+      heading: 'How GET Works?',
+
+      content: `
+Step 1:
+
+User fills the form.
+
+Step 2:
+
+User clicks Submit.
+
+Step 3:
+
+Browser collects form values.
+
+Step 4:
+
+Values are attached to the URL.
+
+Step 5:
+
+Request is sent to the server.
+
+Step 6:
+
+Server processes the request.
+
+GET is commonly used for searching and filtering data.
+`,
+    },
+
+    {
+      heading: 'GET URL Example',
+
+      content: `
+Form Input:
+
+HTML Tutorial
+
+Generated URL:
+
+example.com/search?q=HTML+Tutorial
+
+Notice that the submitted value appears directly in the URL.
+`,
+    },
+
+    {
+      heading: 'What is the POST Method?',
+
+      content: `
+POST is an HTTP method used to send data to a server.
+
+Unlike GET, submitted information is not appended to the URL.
+
+The data is sent inside the request body.
+
+This makes POST more suitable for sensitive information.
+`,
+    },
+
+    {
+      heading: 'Basic POST Syntax',
+
+      content: `
+Example:
+
+<form method="post">
+
+</form>
+
+The browser sends form data inside the request body instead of the URL.
+`,
+    },
+
+    {
+      heading: 'How POST Works?',
+
+      content: `
+Step 1:
+
+User fills the form.
+
+Step 2:
+
+User clicks Submit.
+
+Step 3:
+
+Browser collects form values.
+
+Step 4:
+
+Data is placed inside the request body.
+
+Step 5:
+
+Request is sent to the server.
+
+Step 6:
+
+Server processes the submitted data.
+
+POST is widely used for registration and login forms.
+`,
+    },
+
+    {
+      heading: 'GET Data Transmission',
+
+      content: `
+GET sends data through the URL.
+
+Example:
+
+example.com/login?username=viral
+
+Characteristics:
+
+• Data visible in URL
+
+• Easy sharing
+
+• Limited length
+
+• Less secure for sensitive data
+`,
+    },
+
+    {
+      heading: 'POST Data Transmission',
+
+      content: `
+POST sends data through the request body.
+
+Characteristics:
+
+• Data not shown in URL
+
+• Larger data support
+
+• Better security
+
+• Suitable for sensitive information
+
+Most modern applications use POST for data submission.
+`,
+    },
+
+    {
+      heading: 'Security Differences',
+
+      content: `
+GET:
+
+• Data visible in URL
+
+• Stored in browser history
+
+• Can be bookmarked
+
+• Not suitable for passwords
+
+POST:
+
+• Data hidden from URL
+
+• Better privacy
+
+• Preferred for confidential information
+
+POST is generally safer than GET.
+`,
+    },
+
+    {
+      heading: 'GET Advantages',
+
+      content: `
+Benefits of GET:
+
+• Simple implementation
+
+• Fast requests
+
+• Easy bookmarking
+
+• Easy sharing
+
+• Good for search pages
+
+• Good for filtering results
+
+GET works best when retrieving information.
+`,
+    },
+
+    {
+      heading: 'GET Disadvantages',
+
+      content: `
+Limitations:
+
+• Data visible in URL
+
+• Limited data size
+
+• Poor for sensitive information
+
+• Stored in browser history
+
+These limitations make GET unsuitable for secure forms.
+`,
+    },
+
+    {
+      heading: 'POST Advantages',
+
+      content: `
+Benefits:
+
+• Better privacy
+
+• Supports large amounts of data
+
+• Suitable for file uploads
+
+• Suitable for passwords
+
+• More secure than GET
+
+POST is the preferred method for data submission.
+`,
+    },
+
+    {
+      heading: 'POST Disadvantages',
+
+      content: `
+Limitations:
+
+• Cannot be bookmarked easily
+
+• Cannot be shared through URL
+
+• Slightly more complex processing
+
+Despite these limitations, POST is heavily used.
+`,
+    },
+
+    {
+      heading: 'GET vs POST Comparison',
+
+      content: `
+GET:
+
+• Data in URL
+
+• Limited size
+
+• Less secure
+
+• Bookmarkable
+
+• Good for searches
+
+POST:
+
+• Data in request body
+
+• Large data support
+
+• Better security
+
+• Not bookmarkable
+
+• Good for form submissions
+`,
+    },
+
+    {
+      heading: 'When Should You Use GET?',
+
+      content: `
+Use GET for:
+
+• Search Forms
+
+• Filters
+
+• Sorting
+
+• Pagination
+
+• Public Data Retrieval
+
+Examples:
+
+• Google Search
+
+• Product Filters
+
+• Blog Search
+
+GET is ideal when retrieving information.
+`,
+    },
+
+    {
+      heading: 'When Should You Use POST?',
+
+      content: `
+Use POST for:
+
+• Login Forms
+
+• Registration Forms
+
+• Password Submission
+
+• Payment Forms
+
+• File Uploads
+
+• Contact Forms
+
+POST is ideal when sending data to the server.
+`,
+    },
+
+    {
+      heading: 'Real-world GET Examples',
+
+      content: `
+Google Search:
+
+?search=html
+
+E-commerce Filters:
+
+?category=mobile
+
+Blog Search:
+
+?keyword=javascript
+
+All these examples retrieve information using GET requests.
+`,
+    },
+
+    {
+      heading: 'Real-world POST Examples',
+
+      content: `
+User Registration
+
+User Login
+
+Online Payments
+
+Resume Upload
+
+Profile Updates
+
+Feedback Forms
+
+These operations typically use POST requests.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Use GET for passwords
+
+• Use GET for sensitive data
+
+• Ignore URL visibility
+
+• Use POST for search pages unnecessarily
+
+Understanding the purpose of each method prevents these mistakes.
+`,
+    },
+
+    {
+      heading: 'Interview Shortcut',
+
+      content: `
+Remember:
+
+GET = Retrieve Data
+
+POST = Send Data
+
+GET = URL
+
+POST = Request Body
+
+GET = Search
+
+POST = Login / Register
+
+This shortcut helps in interviews and exams.
+`,
+    },
+
+    {
+      heading: 'Important Points About GET vs POST',
+
+      content: `
+• GET appends data to the URL
+
+• POST sends data inside the request body
+
+• GET is suitable for retrieving data
+
+• POST is suitable for sending data
+
+• GET is bookmarkable
+
+• POST is more secure
+
+Understanding GET and POST is fundamental for web development.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'GET Form Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form method="get">
+
+<input
+type="text"
+name="search">
+
+<button>
+
+Search
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Submitted data appears in the URL.',
+    },
+
+    {
+      title: 'POST Form Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form method="post">
+
+<input
+type="text"
+name="username">
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Submitted data is sent inside the request body.',
+    },
+
+    {
+      title: 'Login Form Using POST',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form method="post">
+
+<input
+type="email"
+placeholder="Email">
+
+<br><br>
+
+<input
+type="password"
+placeholder="Password">
+
+<br><br>
+
+<button>
+
+Login
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Login forms typically use POST because credentials are sensitive.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which method sends data through the URL?',
+
+      options: [
+        'POST',
+        'GET',
+        'PUT',
+        'DELETE'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'GET appends submitted data to the URL.',
+    },
+
+    {
+      question:
+        'Which method is preferred for passwords?',
+
+      options: [
+        'GET',
+        'POST',
+        'URL',
+        'QUERY'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'POST is preferred because data is not displayed in the URL.',
+    },
+
+    {
+      question:
+        'Which method is commonly used for search forms?',
+
+      options: [
+        'POST',
+        'GET',
+        'PUT',
+        'PATCH'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'GET is ideal for search functionality because URLs can be shared and bookmarked.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the main difference between GET and POST?',
+
+      answer:
+        'GET sends form data through the URL, while POST sends form data inside the request body. GET is mainly used for retrieving data, whereas POST is used for sending data to the server.',
+    },
+
+    {
+      question:
+        'Why should passwords not be submitted using GET?',
+
+      answer:
+        'GET exposes submitted values in the URL, browser history, and logs. POST provides better privacy because data is sent inside the request body.',
+    },
+  ],
+
+  nextTopic: 'html-form-attributes',
+},
+{
+  id: 'html-form-attributes',
+
+  title: 'HTML Form Attributes',
+
+  slug: 'html-form-attributes',
+
+  image:
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+
+  readTime: '100 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML Form Attributes deeply including action, method, autocomplete, novalidate, target, name, id, enctype, accept-charset, form submission flow, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Form Attributes',
+
+      content: `
+• What are Form Attributes?
+
+• Why Form Attributes are Important
+
+• action Attribute
+
+• method Attribute
+
+• autocomplete Attribute
+
+• novalidate Attribute
+
+• target Attribute
+
+• name Attribute
+
+• id Attribute
+
+• enctype Attribute
+
+• accept-charset Attribute
+
+• Form Submission Flow
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Form Attributes?',
+
+      content: `
+Form attributes provide additional information about how a form behaves.
+
+They control:
+
+• Form submission
+
+• Validation
+
+• Data encoding
+
+• Browser behavior
+
+• User experience
+
+Without form attributes, forms would have very limited functionality.
+`,
+    },
+
+    {
+      heading: 'Why are Form Attributes Important?',
+
+      content: `
+Form attributes help developers control form processing.
+
+Benefits:
+
+• Better user experience
+
+• Secure submissions
+
+• Correct data handling
+
+• Improved accessibility
+
+• Better browser support
+
+Most professional forms use multiple form attributes.
+`,
+    },
+
+    {
+      heading: 'The Action Attribute',
+
+      content: `
+The action attribute specifies where form data should be sent.
+
+Example:
+
+<form action="/submit">
+
+When users submit the form, data is sent to the specified URL.
+
+Without action, the form usually submits to the current page.
+`,
+    },
+
+    {
+      heading: 'Why Action is Important?',
+
+      content: `
+The server needs a destination for processing data.
+
+Examples:
+
+• Login System
+
+• Registration System
+
+• Contact Form
+
+• Payment Gateway
+
+Action tells the browser where to send the information.
+`,
+    },
+
+    {
+      heading: 'The Method Attribute',
+
+      content: `
+The method attribute specifies how data is transmitted.
+
+Common values:
+
+• GET
+
+• POST
+
+Example:
+
+<form method="post">
+
+Method determines how information travels to the server.
+`,
+    },
+
+    {
+      heading: 'GET Method Review',
+
+      content: `
+Characteristics:
+
+• Data visible in URL
+
+• Bookmarkable
+
+• Suitable for searches
+
+Example:
+
+?search=html
+
+Used mainly for retrieving information.
+`,
+    },
+
+    {
+      heading: 'POST Method Review',
+
+      content: `
+Characteristics:
+
+• Data inside request body
+
+• Better privacy
+
+• Supports large data
+
+• Suitable for sensitive information
+
+Used mainly for submitting information.
+`,
+    },
+
+    {
+      heading: 'The Autocomplete Attribute',
+
+      content: `
+Autocomplete controls whether browsers remember and suggest values.
+
+Example:
+
+<form autocomplete="on">
+
+Values:
+
+• on
+
+• off
+
+This feature improves user convenience.
+`,
+    },
+
+    {
+      heading: 'Autocomplete On',
+
+      content: `
+Example:
+
+autocomplete="on"
+
+Browser may suggest:
+
+• Names
+
+• Emails
+
+• Addresses
+
+• Phone Numbers
+
+This speeds up form completion.
+`,
+    },
+
+    {
+      heading: 'Autocomplete Off',
+
+      content: `
+Example:
+
+autocomplete="off"
+
+The browser will not automatically suggest previous values.
+
+Common Uses:
+
+• Sensitive forms
+
+• Temporary forms
+
+• Security-related forms
+`,
+    },
+
+    {
+      heading: 'The Novalidate Attribute',
+
+      content: `
+Novalidate disables built-in browser validation.
+
+Example:
+
+<form novalidate>
+
+The form submits even if required fields are empty.
+
+Developers often use custom validation instead.
+`,
+    },
+
+    {
+      heading: 'Why Use Novalidate?',
+
+      content: `
+Reasons:
+
+• Custom JavaScript validation
+
+• Framework-based validation
+
+• Advanced validation logic
+
+It gives developers full control over form validation.
+`,
+    },
+
+    {
+      heading: 'The Target Attribute',
+
+      content: `
+Target determines where the response appears.
+
+Example:
+
+<form target="_blank">
+
+Common Values:
+
+• _self
+
+• _blank
+
+• _parent
+
+• _top
+`,
+    },
+
+    {
+      heading: 'Target _self',
+
+      content: `
+Default behavior.
+
+Example:
+
+target="_self"
+
+The response opens in the same tab.
+
+Most forms use this value.
+`,
+    },
+
+    {
+      heading: 'Target _blank',
+
+      content: `
+Example:
+
+target="_blank"
+
+The response opens in a new browser tab.
+
+Useful when users should remain on the original page.
+`,
+    },
+
+    {
+      heading: 'The Name Attribute',
+
+      content: `
+The name attribute identifies the form.
+
+Example:
+
+<form name="registrationForm">
+
+Benefits:
+
+• JavaScript access
+
+• Form identification
+
+• Easier form management
+
+Names should be meaningful.
+`,
+    },
+
+    {
+      heading: 'The ID Attribute',
+
+      content: `
+The id attribute uniquely identifies a form.
+
+Example:
+
+<form id="loginForm">
+
+Benefits:
+
+• CSS targeting
+
+• JavaScript selection
+
+• Unique identification
+
+Each id must be unique on the page.
+`,
+    },
+
+    {
+      heading: 'The Enctype Attribute',
+
+      content: `
+Enctype specifies how form data is encoded.
+
+Example:
+
+<form enctype="multipart/form-data">
+
+This attribute becomes important for file uploads.
+`,
+    },
+
+    {
+      heading: 'Common Enctype Values',
+
+      content: `
+application/x-www-form-urlencoded
+
+Default encoding.
+
+multipart/form-data
+
+Used for file uploads.
+
+text/plain
+
+Plain text format.
+
+Most forms use the default value unless files are involved.
+`,
+    },
+
+    {
+      heading: 'Multipart Form Data',
+
+      content: `
+Example:
+
+<form
+method="post"
+enctype="multipart/form-data">
+
+Required when uploading files.
+
+Without it, uploaded files may not be transmitted correctly.
+`,
+    },
+
+    {
+      heading: 'The Accept-Charset Attribute',
+
+      content: `
+Accept-charset specifies character encoding.
+
+Example:
+
+<form accept-charset="UTF-8">
+
+UTF-8 supports:
+
+• English
+
+• Hindi
+
+• Chinese
+
+• Japanese
+
+• Most world languages
+`,
+    },
+
+    {
+      heading: 'Why UTF-8 is Important?',
+
+      content: `
+Benefits:
+
+• Global language support
+
+• Better compatibility
+
+• Reduced encoding issues
+
+UTF-8 is the modern web standard.
+`,
+    },
+
+    {
+      heading: 'Form Submission Flow',
+
+      content: `
+Step 1:
+
+User fills form.
+
+Step 2:
+
+Validation occurs.
+
+Step 3:
+
+Browser collects values.
+
+Step 4:
+
+Action URL is identified.
+
+Step 5:
+
+Method determines transmission.
+
+Step 6:
+
+Data is sent.
+
+Step 7:
+
+Server processes request.
+
+Step 8:
+
+Response is returned.
+
+This is the complete form lifecycle.
+`,
+    },
+
+    {
+      heading: 'Real-world Example',
+
+      content: `
+Job Application Form:
+
+action="/apply"
+
+method="post"
+
+enctype="multipart/form-data"
+
+Used for:
+
+• Resume Upload
+
+• User Information
+
+• Application Submission
+
+Multiple attributes work together.
+`,
+    },
+
+    {
+      heading: 'Advantages of Form Attributes',
+
+      content: `
+• Better control
+
+• Flexible submissions
+
+• Improved validation
+
+• Better security
+
+• Better user experience
+
+• Support for advanced functionality
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use POST for sensitive data
+
+• Use meaningful IDs
+
+• Use UTF-8 encoding
+
+• Enable validation when possible
+
+• Use proper action URLs
+
+• Use multipart encoding for file uploads
+
+These practices improve reliability.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget action
+
+• Use GET for passwords
+
+• Ignore enctype during file uploads
+
+• Duplicate IDs
+
+• Disable validation unnecessarily
+
+These mistakes can cause form failures.
+`,
+    },
+
+    {
+      heading: 'Important Points About Form Attributes',
+
+      content: `
+• action defines the destination URL
+
+• method controls data transmission
+
+• autocomplete manages suggestions
+
+• novalidate disables browser validation
+
+• target controls response location
+
+• enctype controls data encoding
+
+• accept-charset specifies character encoding
+
+Form attributes are essential for building professional web forms.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Form Attributes',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form
+action="/submit"
+method="post">
+
+<input
+type="text"
+name="username">
+
+<button>
+
+Submit
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Form data is submitted to the specified URL using POST.',
+    },
+
+    {
+      title: 'Form with Autocomplete',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form autocomplete="on">
+
+<input
+type="email">
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Browser may suggest previously entered values.',
+    },
+
+    {
+      title: 'File Upload Form',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<form
+method="post"
+enctype="multipart/form-data">
+
+<input
+type="file">
+
+<button>
+
+Upload
+
+</button>
+
+</form>
+
+</body>
+
+</html>`,
+
+      output:
+        'Allows proper file uploads using multipart encoding.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which attribute specifies where form data is sent?',
+
+      options: [
+        'target',
+        'method',
+        'action',
+        'submit'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The action attribute defines the destination URL for submitted form data.',
+    },
+
+    {
+      question:
+        'Which enctype value is required for file uploads?',
+
+      options: [
+        'text/plain',
+        'application/json',
+        'multipart/form-data',
+        'urlencoded'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'multipart/form-data is required when uploading files.',
+    },
+
+    {
+      question:
+        'Which attribute disables browser validation?',
+
+      options: [
+        'disabled',
+        'novalidate',
+        'required',
+        'readonly'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The novalidate attribute disables built-in browser validation.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of the action attribute in HTML forms?',
+
+      answer:
+        'The action attribute specifies the URL where form data will be sent after submission.',
+    },
+
+    {
+      question:
+        'Why is enctype="multipart/form-data" required for file uploads?',
+
+      answer:
+        'It allows files and binary data to be transmitted correctly from the browser to the server during form submission.',
+    },
+  ],
+
+  nextTopic: 'html-semantic-elements',
+},
+{
+  id: 'html-semantic-elements',
+
+  title: 'HTML Semantic Elements',
+
+  slug: 'html-semantic-elements',
+
+  image:
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+
+  readTime: '110 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML Semantic Elements deeply including semantic structure, SEO benefits, accessibility improvements, modern HTML5 layout, semantic vs non-semantic tags, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Semantic Elements',
+
+      content: `
+• What are Semantic Elements?
+
+• Why Semantic HTML is Important
+
+• Semantic vs Non-Semantic Elements
+
+• HTML5 Semantic Structure
+
+• Header Element
+
+• Navigation Element
+
+• Main Element
+
+• Section Element
+
+• Article Element
+
+• Aside Element
+
+• Footer Element
+
+• Figure Element
+
+• Figcaption Element
+
+• SEO Benefits
+
+• Accessibility Benefits
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What are Semantic Elements?',
+
+      content: `
+Semantic elements are HTML tags that clearly describe their meaning and purpose.
+
+The word semantic means "meaningful".
+
+Examples:
+
+<header>
+
+<nav>
+
+<main>
+
+<section>
+
+<article>
+
+<footer>
+
+These tags tell browsers, developers, and search engines what each part of a webpage represents.
+`,
+    },
+
+    {
+      heading: 'Why Semantic HTML is Important?',
+
+      content: `
+Before HTML5, developers mainly used:
+
+<div>
+
+<span>
+
+for page layouts.
+
+These elements do not describe content meaning.
+
+Semantic elements solve this problem by providing meaningful structure.
+
+Benefits:
+
+• Better readability
+
+• Better SEO
+
+• Better accessibility
+
+• Easier maintenance
+
+• Professional code structure
+`,
+    },
+
+    {
+      heading: 'Semantic vs Non-Semantic Elements',
+
+      content: `
+Semantic Elements:
+
+• Describe content meaning
+
+Examples:
+
+<header>
+
+<footer>
+
+<article>
+
+<section>
+
+Non-Semantic Elements:
+
+• Do not describe content meaning
+
+Examples:
+
+<div>
+
+<span>
+
+A browser understands that a footer contains footer content, but a div provides no such information.
+`,
+    },
+
+    {
+      heading: 'Modern HTML5 Page Structure',
+
+      content: `
+Typical Layout:
+
+<header>
+
+<nav>
+
+<main>
+
+<section>
+
+<article>
+
+<aside>
+
+<footer>
+
+This structure is used on most modern websites.
+`,
+    },
+
+    {
+      heading: 'The Header Element',
+
+      content: `
+The header element represents introductory content.
+
+Syntax:
+
+<header>
+
+</header>
+
+Common Content:
+
+• Website Logo
+
+• Website Title
+
+• Navigation Menu
+
+• Search Bar
+
+Headers usually appear at the top of a page or section.
+`,
+    },
+
+    {
+      heading: 'Real-world Header Example',
+
+      content: `
+E-commerce Website:
+
+• Company Logo
+
+• Search Box
+
+• Cart Icon
+
+• Navigation Links
+
+All these elements are commonly placed inside a header.
+`,
+    },
+
+    {
+      heading: 'The Navigation Element',
+
+      content: `
+The nav element contains navigation links.
+
+Syntax:
+
+<nav>
+
+</nav>
+
+Examples:
+
+• Home
+
+• About
+
+• Services
+
+• Contact
+
+Navigation helps users move between pages.
+`,
+    },
+
+    {
+      heading: 'Why Use Nav Element?',
+
+      content: `
+Benefits:
+
+• Better SEO
+
+• Better accessibility
+
+• Clear structure
+
+• Improved maintainability
+
+Search engines can easily identify navigation menus.
+`,
+    },
+
+    {
+      heading: 'The Main Element',
+
+      content: `
+The main element contains the primary content of a webpage.
+
+Syntax:
+
+<main>
+
+</main>
+
+Important Rule:
+
+Only one main element should exist per page.
+
+This represents the most important content area.
+`,
+    },
+
+    {
+      heading: 'What Belongs Inside Main?',
+
+      content: `
+Examples:
+
+• Blog Content
+
+• Product Information
+
+• Tutorials
+
+• Articles
+
+• Main Application Content
+
+Content unique to the page should be placed inside main.
+`,
+    },
+
+    {
+      heading: 'The Section Element',
+
+      content: `
+The section element groups related content together.
+
+Syntax:
+
+<section>
+
+</section>
+
+Examples:
+
+• Services Section
+
+• Features Section
+
+• Testimonials Section
+
+• Contact Section
+
+Each section usually has its own heading.
+`,
+    },
+
+    {
+      heading: 'When to Use Section?',
+
+      content: `
+Use section when:
+
+• Content belongs to a specific topic
+
+• Content can have its own heading
+
+• Content forms a logical group
+
+Sections improve organization.
+`,
+    },
+
+    {
+      heading: 'The Article Element',
+
+      content: `
+The article element represents independent content.
+
+Syntax:
+
+<article>
+
+</article>
+
+Examples:
+
+• Blog Post
+
+• News Article
+
+• Forum Post
+
+• Product Review
+
+Articles should make sense independently.
+`,
+    },
+
+    {
+      heading: 'Section vs Article',
+
+      content: `
+Section:
+
+• Groups related content
+
+Article:
+
+• Independent content
+
+Example:
+
+News Website
+
+Section = Technology News
+
+Article = Individual News Story
+
+This distinction is important in interviews.
+`,
+    },
+
+    {
+      heading: 'The Aside Element',
+
+      content: `
+The aside element contains related but secondary content.
+
+Syntax:
+
+<aside>
+
+</aside>
+
+Examples:
+
+• Sidebar
+
+• Advertisements
+
+• Related Articles
+
+• Author Information
+
+Aside content supports the main content.
+`,
+    },
+
+    {
+      heading: 'Real-world Aside Examples',
+
+      content: `
+Blog Website:
+
+Main Content:
+
+HTML Tutorial
+
+Aside Content:
+
+• Popular Posts
+
+• Categories
+
+• Advertisements
+
+• Related Tutorials
+
+These are excellent uses of aside.
+`,
+    },
+
+    {
+      heading: 'The Footer Element',
+
+      content: `
+The footer element contains concluding information.
+
+Syntax:
+
+<footer>
+
+</footer>
+
+Common Content:
+
+• Copyright Information
+
+• Contact Details
+
+• Privacy Policy
+
+• Terms of Service
+
+• Social Media Links
+`,
+    },
+
+    {
+      heading: 'Why Footer is Important?',
+
+      content: `
+Footers provide important supporting information.
+
+Benefits:
+
+• Easy navigation
+
+• Legal information
+
+• Contact information
+
+• Better user experience
+
+Almost every professional website uses a footer.
+`,
+    },
+
+    {
+      heading: 'The Figure Element',
+
+      content: `
+The figure element represents self-contained content.
+
+Syntax:
+
+<figure>
+
+</figure>
+
+Examples:
+
+• Images
+
+• Charts
+
+• Diagrams
+
+• Code Snippets
+
+Figure groups content together logically.
+`,
+    },
+
+    {
+      heading: 'The Figcaption Element',
+
+      content: `
+Figcaption provides a caption for a figure.
+
+Syntax:
+
+<figcaption>
+
+</figcaption>
+
+Examples:
+
+• Image Descriptions
+
+• Chart Explanations
+
+• Diagram Titles
+
+It improves understanding and accessibility.
+`,
+    },
+
+    {
+      heading: 'SEO Benefits of Semantic HTML',
+
+      content: `
+Search engines understand semantic elements more effectively.
+
+Benefits:
+
+• Better indexing
+
+• Improved rankings
+
+• Better content understanding
+
+• Enhanced search visibility
+
+Semantic HTML contributes to good SEO practices.
+`,
+    },
+
+    {
+      heading: 'Accessibility Benefits',
+
+      content: `
+Semantic HTML improves accessibility.
+
+Benefits:
+
+• Better screen reader support
+
+• Easier navigation
+
+• Improved structure
+
+• Better user experience
+
+Accessibility is a major reason for using semantic elements.
+`,
+    },
+
+    {
+      heading: 'Advantages of Semantic Elements',
+
+      content: `
+• Cleaner code
+
+• Better SEO
+
+• Better accessibility
+
+• Easier maintenance
+
+• Improved readability
+
+• Professional structure
+
+Modern websites should use semantic HTML whenever possible.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Use div everywhere
+
+• Ignore semantic structure
+
+• Place everything inside main
+
+• Confuse section and article
+
+• Skip accessibility considerations
+
+These mistakes reduce code quality.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use semantic tags whenever possible
+
+• Keep content organized
+
+• Use one main element
+
+• Add meaningful headings
+
+• Improve accessibility
+
+• Follow logical structure
+
+These practices create professional websites.
+`,
+    },
+
+    {
+      heading: 'Important Points About Semantic Elements',
+
+      content: `
+• Semantic elements describe content meaning
+
+• They improve SEO
+
+• They improve accessibility
+
+• They make code easier to maintain
+
+• They are essential in modern HTML5
+
+Semantic HTML is a fundamental skill for every web developer.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Semantic Layout',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<header>
+
+Website Header
+
+</header>
+
+<nav>
+
+Navigation Menu
+
+</nav>
+
+<main>
+
+Main Content
+
+</main>
+
+<footer>
+
+Footer Content
+
+</footer>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a basic semantic webpage structure.',
+    },
+
+    {
+      title: 'Section and Article Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<section>
+
+<h2>
+
+Technology News
+
+</h2>
+
+<article>
+
+<h3>
+
+New AI Update
+
+</h3>
+
+<p>
+
+Article Content
+
+</p>
+
+</article>
+
+</section>
+
+</body>
+
+</html>`,
+
+      output:
+        'A section contains a news category, while the article contains an individual story.',
+    },
+
+    {
+      title: 'Figure and Figcaption Example',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<figure>
+
+<img
+src="image.jpg"
+alt="Nature">
+
+<figcaption>
+
+Beautiful Nature Scene
+
+</figcaption>
+
+</figure>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays an image with a descriptive caption.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which element represents the primary content of a webpage?',
+
+      options: [
+        '<footer>',
+        '<aside>',
+        '<main>',
+        '<nav>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The main element contains the primary content of a webpage.',
+    },
+
+    {
+      question:
+        'Which element is used for navigation links?',
+
+      options: [
+        '<menu>',
+        '<section>',
+        '<nav>',
+        '<header>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The nav element is specifically designed for navigation links.',
+    },
+
+    {
+      question:
+        'Which element represents independent content?',
+
+      options: [
+        '<section>',
+        '<article>',
+        '<aside>',
+        '<div>'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The article element represents independent, self-contained content.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What are semantic elements in HTML?',
+
+      answer:
+        'Semantic elements are HTML tags that clearly describe the purpose and meaning of the content they contain, such as header, nav, main, section, article, aside, and footer.',
+    },
+
+    {
+      question:
+        'What are the benefits of semantic HTML?',
+
+      answer:
+        'Semantic HTML improves SEO, accessibility, readability, maintainability, and helps search engines and screen readers understand webpage structure more effectively.',
+    },
+  ],
+
+  nextTopic: 'html-audio-element',
+},
+{
+  id: 'html-audio-element',
+
+  title: 'HTML Audio Element',
+
+  slug: 'html-audio-element',
+
+  image:
+    'https://images.unsplash.com/photo-1511379938547-c1f69419868d',
+
+  readTime: '95 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML Audio deeply including audio formats, controls, autoplay, loop, muted, preload, multiple sources, browser support, accessibility, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Audio Element',
+
+      content: `
+• What is HTML Audio?
+
+• Why Audio is Important
+
+• Audio Tag Syntax
+
+• Audio Formats
+
+• Controls Attribute
+
+• Autoplay Attribute
+
+• Loop Attribute
+
+• Muted Attribute
+
+• Preload Attribute
+
+• Multiple Audio Sources
+
+• Fallback Content
+
+• Browser Support
+
+• Accessibility
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML Audio?',
+
+      content: `
+The audio element is used to embed sound files into web pages.
+
+Before HTML5, playing audio required plugins.
+
+HTML5 introduced the audio element, allowing browsers to play audio natively.
+
+Examples:
+
+• Music
+
+• Podcasts
+
+• Voice Messages
+
+• Audiobooks
+
+• Sound Effects
+
+• Educational Audio Content
+`,
+    },
+
+    {
+      heading: 'Why is Audio Important?',
+
+      content: `
+Audio enhances user experience.
+
+Common Uses:
+
+• Online Music Platforms
+
+• Learning Websites
+
+• Podcasts
+
+• Gaming Websites
+
+• Announcements
+
+• Accessibility Features
+
+Modern websites frequently use audio content.
+`,
+    },
+
+    {
+      heading: 'Basic Audio Syntax',
+
+      content: `
+Example:
+
+<audio>
+
+</audio>
+
+The audio element acts as a container for audio content.
+
+Additional attributes control playback behavior.
+`,
+    },
+
+    {
+      heading: 'How Audio Works?',
+
+      content: `
+Step 1:
+
+Browser loads the audio file.
+
+Step 2:
+
+Audio controls become available.
+
+Step 3:
+
+User clicks Play.
+
+Step 4:
+
+Audio starts playing.
+
+Step 5:
+
+User can pause, seek, or adjust volume.
+
+This process happens entirely inside the browser.
+`,
+    },
+
+    {
+      heading: 'Audio Source File',
+
+      content: `
+Audio files are typically linked using:
+
+src
+
+Example:
+
+audio.mp3
+
+The browser downloads and plays the file when needed.
+`,
+    },
+
+    {
+      heading: 'Popular Audio Formats',
+
+      content: `
+Common Audio Formats:
+
+• MP3
+
+• WAV
+
+• OGG
+
+• AAC
+
+MP3 is the most widely supported format across browsers and devices.
+`,
+    },
+
+    {
+      heading: 'MP3 Format',
+
+      content: `
+Advantages:
+
+• Small file size
+
+• High compatibility
+
+• Good quality
+
+• Widely supported
+
+Most websites prefer MP3 for audio delivery.
+`,
+    },
+
+    {
+      heading: 'WAV Format',
+
+      content: `
+Advantages:
+
+• High quality
+
+• Uncompressed audio
+
+Disadvantages:
+
+• Large file size
+
+WAV is often used for professional audio production.
+`,
+    },
+
+    {
+      heading: 'OGG Format',
+
+      content: `
+Advantages:
+
+• Open-source format
+
+• Good compression
+
+• High quality
+
+Some developers provide OGG as an alternative audio source.
+`,
+    },
+
+    {
+      heading: 'The Controls Attribute',
+
+      content: `
+The controls attribute displays built-in audio controls.
+
+Example:
+
+<audio controls>
+
+</audio>
+
+Controls usually include:
+
+• Play
+
+• Pause
+
+• Volume
+
+• Progress Bar
+
+• Playback Time
+
+Most audio players use this attribute.
+`,
+    },
+
+    {
+      heading: 'Why Controls are Important?',
+
+      content: `
+Without controls:
+
+• Users cannot easily play audio
+
+• Users cannot pause audio
+
+• Users cannot adjust volume
+
+Controls improve usability significantly.
+`,
+    },
+
+    {
+      heading: 'The Autoplay Attribute',
+
+      content: `
+Autoplay starts audio automatically.
+
+Example:
+
+<audio autoplay>
+
+</audio>
+
+The browser attempts to play audio as soon as it loads.
+`,
+    },
+
+    {
+      heading: 'Autoplay Restrictions',
+
+      content: `
+Modern browsers often block autoplay.
+
+Reasons:
+
+• Better user experience
+
+• Reduced annoyance
+
+• Lower bandwidth consumption
+
+Autoplay should be used carefully.
+`,
+    },
+
+    {
+      heading: 'The Loop Attribute',
+
+      content: `
+The loop attribute repeats audio continuously.
+
+Example:
+
+<audio loop>
+
+</audio>
+
+When playback reaches the end, it starts again automatically.
+`,
+    },
+
+    {
+      heading: 'Loop Use Cases',
+
+      content: `
+Examples:
+
+• Background Music
+
+• Ambient Sounds
+
+• Meditation Audio
+
+• Game Sound Effects
+
+Looping creates uninterrupted playback.
+`,
+    },
+
+    {
+      heading: 'The Muted Attribute',
+
+      content: `
+Muted starts audio without sound.
+
+Example:
+
+<audio muted>
+
+</audio>
+
+Users can manually enable sound later.
+`,
+    },
+
+    {
+      heading: 'The Preload Attribute',
+
+      content: `
+Preload tells the browser how audio should be loaded.
+
+Values:
+
+• auto
+
+• metadata
+
+• none
+
+This affects loading behavior and performance.
+`,
+    },
+
+    {
+      heading: 'Preload Auto',
+
+      content: `
+Example:
+
+preload="auto"
+
+The browser may download the entire audio file.
+
+Benefits:
+
+• Faster playback
+
+Drawback:
+
+• Higher bandwidth usage
+`,
+    },
+
+    {
+      heading: 'Preload Metadata',
+
+      content: `
+Example:
+
+preload="metadata"
+
+Only basic information is loaded.
+
+Examples:
+
+• Duration
+
+• File Information
+
+This saves bandwidth.
+`,
+    },
+
+    {
+      heading: 'Preload None',
+
+      content: `
+Example:
+
+preload="none"
+
+The browser waits until playback begins.
+
+Benefits:
+
+• Better performance
+
+• Reduced network usage
+
+Useful for large audio files.
+`,
+    },
+
+    {
+      heading: 'Multiple Audio Sources',
+
+      content: `
+Browsers support different audio formats.
+
+Providing multiple sources improves compatibility.
+
+Examples:
+
+• MP3
+
+• OGG
+
+• WAV
+
+The browser selects the first supported format.
+`,
+    },
+
+    {
+      heading: 'Why Multiple Sources Matter?',
+
+      content: `
+Benefits:
+
+• Better compatibility
+
+• Cross-browser support
+
+• Improved reliability
+
+Users experience fewer playback issues.
+`,
+    },
+
+    {
+      heading: 'Fallback Content',
+
+      content: `
+Fallback text appears if audio is unsupported.
+
+Example:
+
+Your browser does not support audio.
+
+This ensures users receive useful information.
+`,
+    },
+
+    {
+      heading: 'Browser Support',
+
+      content: `
+Modern browsers support HTML5 audio.
+
+Examples:
+
+• Chrome
+
+• Firefox
+
+• Edge
+
+• Safari
+
+• Opera
+
+HTML Audio is widely supported today.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Provide transcripts
+
+• Use clear controls
+
+• Avoid unwanted autoplay
+
+• Include captions when appropriate
+
+Accessible audio improves inclusiveness.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Music Website:
+
+• Songs
+
+Podcast Platform:
+
+• Episodes
+
+Learning Platform:
+
+• Audio Lessons
+
+Meditation App:
+
+• Guided Sessions
+
+Audio is used across many industries.
+`,
+    },
+
+    {
+      heading: 'Advantages of HTML Audio',
+
+      content: `
+• Native browser support
+
+• No plugins required
+
+• Easy implementation
+
+• Multiple format support
+
+• Mobile-friendly
+
+• Cross-platform compatibility
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Depend only on autoplay
+
+• Ignore browser restrictions
+
+• Use unsupported formats
+
+• Forget controls
+
+• Skip fallback text
+
+These mistakes reduce usability.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use MP3 format
+
+• Include controls
+
+• Avoid excessive autoplay
+
+• Provide fallback content
+
+• Support accessibility
+
+• Optimize file size
+
+These practices create better user experiences.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Audio',
+
+      content: `
+• audio embeds sound content
+
+• controls display playback controls
+
+• autoplay starts playback automatically
+
+• loop repeats audio
+
+• muted disables sound initially
+
+• preload controls loading behavior
+
+• Multiple sources improve compatibility
+
+HTML Audio is the standard way to play sound on modern websites.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Audio Player',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<audio controls>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays an audio player with play, pause, and volume controls.',
+    },
+
+    {
+      title: 'Looping Audio',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<audio controls loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+
+</html>`,
+
+      output:
+        'Audio automatically repeats after reaching the end.',
+    },
+
+    {
+      title: 'Multiple Audio Sources',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<audio controls>
+
+  <source src="music.mp3" type="audio/mpeg">
+
+  <source src="music.ogg" type="audio/ogg">
+
+  Your browser does not support audio.
+
+</audio>
+
+</body>
+
+</html>`,
+
+      output:
+        'Browser chooses the first supported audio format.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML element is used to play audio?',
+
+      options: [
+        '<sound>',
+        '<music>',
+        '<audio>',
+        '<media>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The audio element is used to embed sound content in HTML.',
+    },
+
+    {
+      question:
+        'Which attribute displays built-in audio controls?',
+
+      options: [
+        'play',
+        'controls',
+        'media',
+        'player'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The controls attribute displays audio playback controls.',
+    },
+
+    {
+      question:
+        'Which attribute repeats audio continuously?',
+
+      options: [
+        'repeat',
+        'restart',
+        'loop',
+        'replay'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The loop attribute restarts audio automatically after it finishes.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of the audio element in HTML?',
+
+      answer:
+        'The audio element is used to embed and play sound files directly in web pages without requiring external plugins.',
+    },
+
+    {
+      question:
+        'Why should multiple audio sources be provided?',
+
+      answer:
+        'Different browsers may support different audio formats. Providing multiple sources improves compatibility and ensures successful playback across browsers.',
+    },
+  ],
+
+  nextTopic: 'html-video-element',
+},
+{
+  id: 'html-video-element',
+
+  title: 'HTML Video Element',
+
+  slug: 'html-video-element',
+
+  image:
+    'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d',
+
+  readTime: '110 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML Video deeply including video formats, controls, autoplay, loop, muted, poster images, subtitles, responsive videos, browser support, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Video Element',
+
+      content: `
+• What is HTML Video?
+
+• Why Video is Important
+
+• Video Tag Syntax
+
+• Video Formats
+
+• Controls Attribute
+
+• Width and Height
+
+• Autoplay Attribute
+
+• Loop Attribute
+
+• Muted Attribute
+
+• Poster Attribute
+
+• Preload Attribute
+
+• Multiple Video Sources
+
+• Subtitles using Track
+
+• Responsive Videos
+
+• Browser Support
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is HTML Video?',
+
+      content: `
+The video element is used to embed video content directly into web pages.
+
+Before HTML5, developers relied on plugins such as Flash to display videos.
+
+HTML5 introduced the video element, allowing browsers to play videos natively.
+
+Examples:
+
+• Tutorials
+
+• Movies
+
+• Advertisements
+
+• Product Demonstrations
+
+• Online Courses
+
+• Entertainment Content
+
+Today, HTML Video is the standard method for displaying videos on websites.
+`,
+    },
+
+    {
+      heading: 'Why is Video Important?',
+
+      content: `
+Video is one of the most engaging forms of content.
+
+Benefits:
+
+• Better user engagement
+
+• Improved learning experience
+
+• Product demonstrations
+
+• Storytelling
+
+• Marketing
+
+• Entertainment
+
+Modern websites use video extensively.
+`,
+    },
+
+    {
+      heading: 'Basic Video Syntax',
+
+      content: `
+Example:
+
+<video>
+
+</video>
+
+The video element acts as a container for video content.
+
+Additional attributes control playback behavior.
+`,
+    },
+
+    {
+      heading: 'How Video Works?',
+
+      content: `
+Step 1:
+
+Browser loads the video file.
+
+Step 2:
+
+Video controls appear.
+
+Step 3:
+
+User clicks Play.
+
+Step 4:
+
+Video starts playing.
+
+Step 5:
+
+User can pause, seek, adjust volume, or switch fullscreen mode.
+
+This entire process occurs inside the browser.
+`,
+    },
+
+    {
+      heading: 'Popular Video Formats',
+
+      content: `
+Common Video Formats:
+
+• MP4
+
+• WebM
+
+• OGG
+
+MP4 is the most widely supported format across browsers and devices.
+`,
+    },
+
+    {
+      heading: 'MP4 Format',
+
+      content: `
+Advantages:
+
+• Excellent compatibility
+
+• Good compression
+
+• High quality
+
+• Mobile-friendly
+
+Most websites use MP4 as their primary video format.
+`,
+    },
+
+    {
+      heading: 'WebM Format',
+
+      content: `
+Advantages:
+
+• Open-source
+
+• Good compression
+
+• Optimized for the web
+
+Some developers provide WebM as an alternative source.
+`,
+    },
+
+    {
+      heading: 'OGG Video Format',
+
+      content: `
+Advantages:
+
+• Open standard
+
+• Free to use
+
+Disadvantages:
+
+• Less common than MP4
+
+OGG is usually provided as an optional backup format.
+`,
+    },
+
+    {
+      heading: 'The Controls Attribute',
+
+      content: `
+The controls attribute displays built-in video controls.
+
+Example:
+
+<video controls>
+
+</video>
+
+Controls usually include:
+
+• Play
+
+• Pause
+
+• Progress Bar
+
+• Volume Control
+
+• Fullscreen Button
+
+Controls greatly improve usability.
+`,
+    },
+
+    {
+      heading: 'Width and Height Attributes',
+
+      content: `
+These attributes define video dimensions.
+
+Example:
+
+width="640"
+
+height="360"
+
+Benefits:
+
+• Consistent layout
+
+• Better page structure
+
+• Improved user experience
+
+Dimensions should match the video's aspect ratio.
+`,
+    },
+
+    {
+      heading: 'The Autoplay Attribute',
+
+      content: `
+Autoplay starts video playback automatically.
+
+Example:
+
+<video autoplay>
+
+</video>
+
+The browser attempts to play the video immediately after loading.
+`,
+    },
+
+    {
+      heading: 'Autoplay Restrictions',
+
+      content: `
+Most modern browsers restrict autoplay.
+
+Reasons:
+
+• Better user experience
+
+• Reduced data usage
+
+• Less distraction
+
+Autoplay often works only when videos are muted.
+`,
+    },
+
+    {
+      heading: 'The Loop Attribute',
+
+      content: `
+Loop automatically restarts the video.
+
+Example:
+
+<video loop>
+
+</video>
+
+When the video finishes, playback begins again automatically.
+`,
+    },
+
+    {
+      heading: 'Loop Use Cases',
+
+      content: `
+Examples:
+
+• Background Videos
+
+• Product Demonstrations
+
+• Animated Displays
+
+• Digital Signage
+
+Looping provides continuous playback.
+`,
+    },
+
+    {
+      heading: 'The Muted Attribute',
+
+      content: `
+Muted starts the video without sound.
+
+Example:
+
+<video muted>
+
+</video>
+
+Users can manually enable sound later.
+
+Muted videos are commonly used with autoplay.
+`,
+    },
+
+    {
+      heading: 'The Poster Attribute',
+
+      content: `
+Poster displays an image before playback begins.
+
+Example:
+
+poster="thumbnail.jpg"
+
+Benefits:
+
+• Attractive preview
+
+• Better user engagement
+
+• Professional appearance
+
+The poster acts like a video thumbnail.
+`,
+    },
+
+    {
+      heading: 'Why Poster Images Matter?',
+
+      content: `
+Without a poster:
+
+• Users may see a blank area
+
+• Less visual appeal
+
+With a poster:
+
+• Better presentation
+
+• Improved click rates
+
+• Better user experience
+`,
+    },
+
+    {
+      heading: 'The Preload Attribute',
+
+      content: `
+Preload controls how video data loads.
+
+Values:
+
+• auto
+
+• metadata
+
+• none
+
+This affects performance and bandwidth usage.
+`,
+    },
+
+    {
+      heading: 'Preload Auto',
+
+      content: `
+Example:
+
+preload="auto"
+
+The browser may download most or all of the video.
+
+Benefits:
+
+• Faster playback
+
+Drawback:
+
+• Higher bandwidth usage
+`,
+    },
+
+    {
+      heading: 'Preload Metadata',
+
+      content: `
+Example:
+
+preload="metadata"
+
+Only video information loads.
+
+Examples:
+
+• Duration
+
+• Dimensions
+
+• Video Information
+
+This saves bandwidth.
+`,
+    },
+
+    {
+      heading: 'Preload None',
+
+      content: `
+Example:
+
+preload="none"
+
+The browser waits until the user starts playback.
+
+Benefits:
+
+• Better performance
+
+• Lower data usage
+
+Useful for large videos.
+`,
+    },
+
+    {
+      heading: 'Multiple Video Sources',
+
+      content: `
+Different browsers may support different formats.
+
+Providing multiple sources improves compatibility.
+
+Examples:
+
+• MP4
+
+• WebM
+
+• OGG
+
+The browser automatically chooses the first supported format.
+`,
+    },
+
+    {
+      heading: 'The Track Element',
+
+      content: `
+The track element provides subtitles and captions.
+
+Benefits:
+
+• Accessibility
+
+• Language Support
+
+• Better Understanding
+
+• Inclusive User Experience
+
+Subtitles are especially important for educational content.
+`,
+    },
+
+    {
+      heading: 'Types of Track Content',
+
+      content: `
+Track files can provide:
+
+• Captions
+
+• Subtitles
+
+• Descriptions
+
+• Metadata
+
+These improve accessibility significantly.
+`,
+    },
+
+    {
+      heading: 'Responsive Videos',
+
+      content: `
+Responsive videos adapt to different screen sizes.
+
+Benefits:
+
+• Mobile Support
+
+• Tablet Support
+
+• Better User Experience
+
+• Modern Design
+
+Responsive design is essential today.
+`,
+    },
+
+    {
+      heading: 'Browser Support',
+
+      content: `
+Modern browsers support HTML Video.
+
+Examples:
+
+• Chrome
+
+• Firefox
+
+• Safari
+
+• Edge
+
+• Opera
+
+HTML Video is widely supported across platforms.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Provide subtitles
+
+• Use captions
+
+• Avoid forced autoplay
+
+• Include controls
+
+• Provide transcripts
+
+Accessible videos help all users.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Video Platforms:
+
+• Educational Websites
+
+• Streaming Services
+
+• News Websites
+
+• Product Pages
+
+• Online Courses
+
+Videos are used in almost every industry.
+`,
+    },
+
+    {
+      heading: 'Advantages of HTML Video',
+
+      content: `
+• Native browser support
+
+• No plugins required
+
+• Mobile-friendly
+
+• Multiple format support
+
+• Supports captions
+
+• Easy implementation
+
+HTML Video is a core HTML5 feature.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Depend only on autoplay
+
+• Ignore subtitles
+
+• Use large video files
+
+• Skip poster images
+
+• Forget fallback content
+
+These mistakes reduce usability.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use MP4 format
+
+• Include controls
+
+• Add poster images
+
+• Provide subtitles
+
+• Optimize file sizes
+
+• Support mobile devices
+
+These practices improve user experience.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Video',
+
+      content: `
+• video embeds video content
+
+• controls display playback controls
+
+• autoplay starts playback automatically
+
+• loop repeats videos
+
+• muted disables sound
+
+• poster displays preview images
+
+• track provides subtitles
+
+• Multiple sources improve compatibility
+
+HTML Video is the modern standard for web video playback.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Video Player',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<video controls width="600">
+
+  <source src="video.mp4" type="video/mp4">
+
+</video>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a video player with playback controls.',
+    },
+
+    {
+      title: 'Video with Poster Image',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<video
+controls
+width="600"
+poster="thumbnail.jpg">
+
+  <source src="video.mp4" type="video/mp4">
+
+</video>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a thumbnail image before video playback starts.',
+    },
+
+    {
+      title: 'Video with Multiple Sources',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<video controls>
+
+  <source src="video.mp4" type="video/mp4">
+
+  <source src="video.webm" type="video/webm">
+
+  Your browser does not support video.
+
+</video>
+
+</body>
+
+</html>`,
+
+      output:
+        'Browser selects the first supported video format.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML element is used to display videos?',
+
+      options: [
+        '<movie>',
+        '<media>',
+        '<video>',
+        '<play>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The video element is used to embed videos in HTML.',
+    },
+
+    {
+      question:
+        'Which attribute displays video playback controls?',
+
+      options: [
+        'play',
+        'controls',
+        'media',
+        'video'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The controls attribute displays built-in video controls.',
+    },
+
+    {
+      question:
+        'Which attribute displays a preview image before playback?',
+
+      options: [
+        'thumbnail',
+        'preview',
+        'poster',
+        'image'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The poster attribute displays a preview image before the video starts.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is the purpose of the video element in HTML?',
+
+      answer:
+        'The video element allows developers to embed and play videos directly in web pages without requiring external plugins.',
+    },
+
+    {
+      question:
+        'Why should subtitles be added to videos?',
+
+      answer:
+        'Subtitles improve accessibility, help users understand content, support multiple languages, and provide a better viewing experience.',
+    },
+  ],
+
+  nextTopic: 'html-iframe',
+},
+{
+  id: 'html-iframe',
+
+  title: 'HTML Iframe',
+
+  slug: 'html-iframe',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '110 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML Iframe deeply including embedding webpages, videos, maps, width, height, loading optimization, sandbox security, responsive iframes, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Infosys', 'TCS'],
+
+  sections: [
+    {
+      heading: 'HTML Iframe',
+
+      content: `
+• What is an Iframe?
+
+• Why Iframes are Important
+
+• Iframe Syntax
+
+• How Iframes Work
+
+• Embedding Webpages
+
+• Width Attribute
+
+• Height Attribute
+
+• Frameborder Attribute
+
+• Loading Attribute
+
+• Sandbox Attribute
+
+• Embedding YouTube Videos
+
+• Embedding Google Maps
+
+• Responsive Iframes
+
+• Security Considerations
+
+• Advantages and Disadvantages
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is an Iframe?',
+
+      content: `
+An iframe (Inline Frame) is used to embed another webpage inside the current webpage.
+
+HTML provides:
+
+<iframe>
+
+</iframe>
+
+The iframe creates a window that displays external content.
+
+It allows one webpage to exist inside another webpage.
+`,
+    },
+
+    {
+      heading: 'Why are Iframes Important?',
+
+      content: `
+Iframes allow websites to display third-party content.
+
+Examples:
+
+• YouTube Videos
+
+• Google Maps
+
+• Payment Gateways
+
+• Advertisements
+
+• Embedded Applications
+
+• External Documents
+
+Many modern websites use iframes extensively.
+`,
+    },
+
+    {
+      heading: 'Basic Iframe Syntax',
+
+      content: `
+Example:
+
+<iframe src="page.html">
+
+</iframe>
+
+The src attribute specifies the webpage to display.
+
+The browser loads the content inside the iframe window.
+`,
+    },
+
+    {
+      heading: 'How Iframes Work?',
+
+      content: `
+Step 1:
+
+Browser loads the main webpage.
+
+Step 2:
+
+Iframe tag is detected.
+
+Step 3:
+
+The browser requests the iframe source.
+
+Step 4:
+
+External content loads inside the iframe.
+
+Step 5:
+
+Users can interact with the embedded content.
+
+The iframe behaves almost like a separate browser window.
+`,
+    },
+
+    {
+      heading: 'The Source (src) Attribute',
+
+      content: `
+The src attribute specifies the URL to load.
+
+Example:
+
+src="https://example.com"
+
+Without src, the iframe has no content to display.
+
+This is the most important iframe attribute.
+`,
+    },
+
+    {
+      heading: 'Embedding a Webpage',
+
+      content: `
+An iframe can display another webpage.
+
+Examples:
+
+• Company Portals
+
+• Documentation
+
+• Dashboards
+
+• Reports
+
+• External Applications
+
+Users can interact with the embedded page directly.
+`,
+    },
+
+    {
+      heading: 'The Width Attribute',
+
+      content: `
+Width controls the horizontal size.
+
+Example:
+
+width="800"
+
+Benefits:
+
+• Better layout control
+
+• Improved design
+
+• Responsive planning
+
+Width is usually measured in pixels or percentages.
+`,
+    },
+
+    {
+      heading: 'The Height Attribute',
+
+      content: `
+Height controls the vertical size.
+
+Example:
+
+height="500"
+
+Benefits:
+
+• Better visibility
+
+• Reduced scrolling
+
+• Improved user experience
+
+The correct height depends on embedded content.
+`,
+    },
+
+    {
+      heading: 'Width and Height Together',
+
+      content: `
+Example:
+
+width="800"
+
+height="500"
+
+These attributes define the visible iframe area.
+
+Choosing proper dimensions improves usability.
+`,
+    },
+
+    {
+      heading: 'The Frameborder Attribute',
+
+      content: `
+Older HTML versions used:
+
+frameborder="0"
+
+to remove borders around iframes.
+
+Modern websites generally use CSS instead.
+
+However, you may still encounter this attribute in legacy code.
+`,
+    },
+
+    {
+      heading: 'The Loading Attribute',
+
+      content: `
+The loading attribute controls when iframe content loads.
+
+Values:
+
+• eager
+
+• lazy
+
+Example:
+
+loading="lazy"
+
+This improves page performance.
+`,
+    },
+
+    {
+      heading: 'Loading Lazy',
+
+      content: `
+Lazy loading delays iframe loading until needed.
+
+Benefits:
+
+• Faster page load
+
+• Reduced bandwidth usage
+
+• Better performance
+
+Modern websites frequently use lazy loading.
+`,
+    },
+
+    {
+      heading: 'Loading Eager',
+
+      content: `
+Example:
+
+loading="eager"
+
+The iframe loads immediately.
+
+Useful when embedded content is critical to the page.
+`,
+    },
+
+    {
+      heading: 'Embedding YouTube Videos',
+
+      content: `
+One of the most common iframe uses is video embedding.
+
+Benefits:
+
+• Easy integration
+
+• Reduced hosting requirements
+
+• Cross-device compatibility
+
+YouTube provides iframe embed code automatically.
+`,
+    },
+
+    {
+      heading: 'Embedding Google Maps',
+
+      content: `
+Google Maps can be embedded using iframes.
+
+Common Uses:
+
+• Business Locations
+
+• Store Locations
+
+• Event Venues
+
+• Contact Pages
+
+Maps improve user convenience.
+`,
+    },
+
+    {
+      heading: 'The Sandbox Attribute',
+
+      content: `
+Sandbox improves security.
+
+Example:
+
+sandbox
+
+The browser restricts certain actions inside the iframe.
+
+This helps protect users and websites.
+`,
+    },
+
+    {
+      heading: 'Why Sandbox is Important?',
+
+      content: `
+Embedded content may come from external sources.
+
+Potential Risks:
+
+• Malicious Scripts
+
+• Unauthorized Actions
+
+• Security Vulnerabilities
+
+Sandbox reduces these risks significantly.
+`,
+    },
+
+    {
+      heading: 'Security Considerations',
+
+      content: `
+Important security practices:
+
+• Use trusted sources
+
+• Apply sandbox restrictions
+
+• Avoid unknown websites
+
+• Monitor embedded content
+
+Security should always be considered when using iframes.
+`,
+    },
+
+    {
+      heading: 'Responsive Iframes',
+
+      content: `
+Responsive iframes adapt to screen size.
+
+Benefits:
+
+• Mobile-friendly
+
+• Better tablet support
+
+• Improved user experience
+
+Responsive design is essential in modern development.
+`,
+    },
+
+    {
+      heading: 'Real-world Examples',
+
+      content: `
+Examples:
+
+• YouTube Videos
+
+• Google Maps
+
+• Online Forms
+
+• Payment Gateways
+
+• Analytics Dashboards
+
+• Chat Widgets
+
+Iframes are used extensively across industries.
+`,
+    },
+
+    {
+      heading: 'Advantages of Iframes',
+
+      content: `
+• Easy content embedding
+
+• Third-party integration
+
+• Reusable content
+
+• Independent loading
+
+• Supports external applications
+
+• Simplifies integration
+`,
+    },
+
+    {
+      heading: 'Disadvantages of Iframes',
+
+      content: `
+Potential drawbacks:
+
+• Security concerns
+
+• Performance impact
+
+• SEO limitations
+
+• Responsive design challenges
+
+These issues should be considered during development.
+`,
+    },
+
+    {
+      heading: 'Iframe vs Hyperlink',
+
+      content: `
+Hyperlink:
+
+• Opens another page
+
+Iframe:
+
+• Displays another page inside the current page
+
+Both have different purposes and use cases.
+`,
+    },
+
+    {
+      heading: 'Accessibility Considerations',
+
+      content: `
+Accessibility recommendations:
+
+• Provide meaningful titles
+
+• Use trusted content
+
+• Ensure keyboard accessibility
+
+• Avoid unnecessary embeds
+
+Accessible iframes improve usability.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use lazy loading
+
+• Add meaningful titles
+
+• Use sandbox when possible
+
+• Keep dimensions appropriate
+
+• Optimize performance
+
+• Embed only trusted content
+
+These practices create better user experiences.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget width and height
+
+• Ignore security
+
+• Use too many iframes
+
+• Skip lazy loading
+
+• Embed untrusted websites
+
+These mistakes can affect performance and security.
+`,
+    },
+
+    {
+      heading: 'Important Points About HTML Iframe',
+
+      content: `
+• iframe embeds another webpage
+
+• src specifies the content source
+
+• width and height control dimensions
+
+• loading improves performance
+
+• sandbox improves security
+
+• Frequently used for videos and maps
+
+Iframes are one of the most useful embedding technologies in HTML.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Basic Iframe',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+src="https://example.com"
+width="600"
+height="400">
+
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays another webpage inside the current webpage.',
+    },
+
+    {
+      title: 'YouTube Video Embed',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/video-id">
+
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'Embeds a YouTube video inside the webpage.',
+    },
+
+    {
+      title: 'Lazy Loaded Iframe',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<iframe
+src="https://example.com"
+loading="lazy"
+width="600"
+height="400">
+
+</iframe>
+
+</body>
+
+</html>`,
+
+      output:
+        'The iframe loads only when needed, improving performance.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which HTML element is used to embed another webpage?',
+
+      options: [
+        '<frame>',
+        '<embed>',
+        '<iframe>',
+        '<window>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The iframe element embeds another webpage within the current webpage.',
+    },
+
+    {
+      question:
+        'Which attribute specifies the webpage to display?',
+
+      options: [
+        'href',
+        'link',
+        'src',
+        'url'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The src attribute specifies the source URL of the iframe.',
+    },
+
+    {
+      question:
+        'Which attribute improves iframe security?',
+
+      options: [
+        'secure',
+        'sandbox',
+        'protect',
+        'safe'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'The sandbox attribute restricts iframe capabilities and improves security.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is an iframe in HTML?',
+
+      answer:
+        'An iframe (Inline Frame) is an HTML element used to embed another webpage or external content within the current webpage.',
+    },
+
+    {
+      question:
+        'Why is the sandbox attribute important for iframes?',
+
+      answer:
+        'The sandbox attribute restricts actions inside the iframe, reducing security risks from embedded third-party content.',
+    },
+  ],
+
+  nextTopic: 'html-svg',
+},
+{
+  id: 'html-svg',
+
+  title: 'HTML SVG',
+
+  slug: 'html-svg',
+
+  image:
+    'https://images.unsplash.com/photo-1545239351-1141bd82e8a6',
+
+  readTime: '120 min read',
+
+  difficulty: 'Intermediate',
+
+  description:
+    'Learn HTML SVG deeply including vector graphics, shapes, paths, gradients, text, animations, SVG vs Canvas, scalability, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Adobe', 'Infosys'],
+
+  sections: [
+    {
+      heading: 'HTML SVG',
+
+      content: `
+• What is SVG?
+
+• Why SVG is Important
+
+• SVG vs Images
+
+• SVG Syntax
+
+• SVG Coordinate System
+
+• SVG Shapes
+
+• Lines
+
+• Rectangles
+
+• Circles
+
+• Ellipses
+
+• Polygons
+
+• Polylines
+
+• Paths
+
+• SVG Text
+
+• SVG Gradients
+
+• SVG Groups
+
+• SVG Advantages
+
+• SVG vs Canvas
+
+• Real-world Examples
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is SVG?',
+
+      content: `
+SVG stands for Scalable Vector Graphics.
+
+It is an XML-based format used for creating vector graphics directly inside web pages.
+
+SVG graphics can scale to any size without losing quality.
+
+Unlike normal images, SVG graphics remain sharp at all resolutions.
+
+SVG is widely used for:
+
+• Logos
+
+• Icons
+
+• Charts
+
+• Illustrations
+
+• Infographics
+
+• UI Components
+`,
+    },
+
+    {
+      heading: 'Why SVG is Important?',
+
+      content: `
+Modern websites require graphics that look sharp on all devices.
+
+SVG provides:
+
+• Infinite scalability
+
+• Small file sizes
+
+• High quality
+
+• Animation support
+
+• Better responsiveness
+
+This makes SVG ideal for modern web development.
+`,
+    },
+
+    {
+      heading: 'SVG vs Traditional Images',
+
+      content: `
+SVG:
+
+• Vector-based
+
+• Scalable
+
+• Editable using code
+
+• Small size for simple graphics
+
+PNG/JPG:
+
+• Pixel-based
+
+• Quality loss when enlarged
+
+• Difficult to edit
+
+• Better for photographs
+
+Choose SVG for graphics and PNG/JPG for photos.
+`,
+    },
+
+    {
+      heading: 'Basic SVG Syntax',
+
+      content: `
+Example:
+
+<svg>
+
+</svg>
+
+The svg element acts as a container for all SVG graphics.
+
+Every SVG graphic begins with this element.
+`,
+    },
+
+    {
+      heading: 'How SVG Works?',
+
+      content: `
+Step 1:
+
+Browser reads SVG code.
+
+Step 2:
+
+Shapes are generated mathematically.
+
+Step 3:
+
+The graphic is rendered.
+
+Step 4:
+
+The graphic scales automatically.
+
+Because SVG uses mathematical calculations instead of pixels, quality remains perfect.
+`,
+    },
+
+    {
+      heading: 'SVG Coordinate System',
+
+      content: `
+SVG uses coordinates.
+
+Example:
+
+x = Horizontal Position
+
+y = Vertical Position
+
+Top-left corner:
+
+(0,0)
+
+All SVG shapes are placed using coordinates.
+`,
+    },
+
+    {
+      heading: 'Drawing a Line',
+
+      content: `
+SVG can draw straight lines.
+
+Important properties:
+
+• x1
+
+• y1
+
+• x2
+
+• y2
+
+Lines are commonly used in charts and diagrams.
+`,
+    },
+
+    {
+      heading: 'SVG Rectangle',
+
+      content: `
+A rectangle is created using:
+
+<rect>
+
+Properties:
+
+• x
+
+• y
+
+• width
+
+• height
+
+Rectangles are used for cards, buttons, banners, and layouts.
+`,
+    },
+
+    {
+      heading: 'Rectangle Features',
+
+      content: `
+Rectangles support:
+
+• Fill Colors
+
+• Borders
+
+• Rounded Corners
+
+• Opacity
+
+They are among the most frequently used SVG shapes.
+`,
+    },
+
+    {
+      heading: 'SVG Circle',
+
+      content: `
+A circle is created using:
+
+<circle>
+
+Important properties:
+
+• cx
+
+• cy
+
+• r
+
+Where r represents radius.
+
+Circles are used in icons, charts, and diagrams.
+`,
+    },
+
+    {
+      heading: 'SVG Ellipse',
+
+      content: `
+An ellipse is similar to a circle.
+
+Element:
+
+<ellipse>
+
+Properties:
+
+• cx
+
+• cy
+
+• rx
+
+• ry
+
+Ellipses can have different horizontal and vertical radii.
+`,
+    },
+
+    {
+      heading: 'SVG Polygon',
+
+      content: `
+Polygons create shapes with multiple sides.
+
+Element:
+
+<polygon>
+
+Examples:
+
+• Triangle
+
+• Pentagon
+
+• Hexagon
+
+• Custom Shapes
+
+Polygons are useful for illustrations and diagrams.
+`,
+    },
+
+    {
+      heading: 'SVG Polyline',
+
+      content: `
+Polyline creates connected lines.
+
+Element:
+
+<polyline>
+
+Examples:
+
+• Graphs
+
+• Trend Lines
+
+• Route Maps
+
+Unlike polygons, polylines do not automatically close the shape.
+`,
+    },
+
+    {
+      heading: 'SVG Path',
+
+      content: `
+The path element is the most powerful SVG feature.
+
+Element:
+
+<path>
+
+It can create:
+
+• Curves
+
+• Arcs
+
+• Complex Shapes
+
+• Custom Icons
+
+Most professional SVG artwork uses paths.
+`,
+    },
+
+    {
+      heading: 'Why Paths are Important?',
+
+      content: `
+Paths allow developers to create nearly any shape imaginable.
+
+Examples:
+
+• Company Logos
+
+• Custom Icons
+
+• Maps
+
+• Illustrations
+
+Many SVG editors generate path code automatically.
+`,
+    },
+
+    {
+      heading: 'SVG Fill Color',
+
+      content: `
+Fill controls the inside color.
+
+Example:
+
+fill="red"
+
+Fill is used to color SVG shapes.
+
+Without fill, shapes may appear empty.
+`,
+    },
+
+    {
+      heading: 'SVG Stroke',
+
+      content: `
+Stroke controls borders.
+
+Example:
+
+stroke="black"
+
+Benefits:
+
+• Visible outlines
+
+• Better design
+
+• Improved contrast
+
+Stroke is equivalent to a border in CSS.
+`,
+    },
+
+    {
+      heading: 'Stroke Width',
+
+      content: `
+Stroke width controls border thickness.
+
+Example:
+
+stroke-width="4"
+
+Larger values create thicker borders.
+`,
+    },
+
+    {
+      heading: 'SVG Text',
+
+      content: `
+SVG supports text rendering.
+
+Element:
+
+<text>
+
+Benefits:
+
+• Scalable text
+
+• Custom positioning
+
+• Graphic integration
+
+Text can be part of charts, diagrams, and illustrations.
+`,
+    },
+
+    {
+      heading: 'SVG Gradients',
+
+      content: `
+Gradients create smooth color transitions.
+
+Types:
+
+• Linear Gradient
+
+• Radial Gradient
+
+Gradients create modern visual effects.
+`,
+    },
+
+    {
+      heading: 'Linear Gradient',
+
+      content: `
+A linear gradient transitions colors in a straight line.
+
+Examples:
+
+• Left to Right
+
+• Top to Bottom
+
+• Diagonal
+
+Often used in modern UI designs.
+`,
+    },
+
+    {
+      heading: 'Radial Gradient',
+
+      content: `
+A radial gradient starts from the center and expands outward.
+
+Benefits:
+
+• Realistic effects
+
+• Depth
+
+• Better visual appeal
+
+Widely used in illustrations.
+`,
+    },
+
+    {
+      heading: 'SVG Group Element',
+
+      content: `
+The group element organizes SVG objects.
+
+Element:
+
+<g>
+
+Benefits:
+
+• Easier management
+
+• Shared styles
+
+• Better organization
+
+Useful for large SVG projects.
+`,
+    },
+
+    {
+      heading: 'SVG Scalability',
+
+      content: `
+The greatest advantage of SVG is scalability.
+
+Benefits:
+
+• No quality loss
+
+• Retina display support
+
+• High-resolution compatibility
+
+• Responsive graphics
+
+SVG remains sharp at every size.
+`,
+    },
+
+    {
+      heading: 'SVG Animation Support',
+
+      content: `
+SVG supports animation.
+
+Examples:
+
+• Moving Shapes
+
+• Rotations
+
+• Scaling
+
+• Color Changes
+
+Animations can be created using CSS or JavaScript.
+`,
+    },
+
+    {
+      heading: 'SVG vs Canvas',
+
+      content: `
+SVG:
+
+• Vector-based
+
+• Scalable
+
+• DOM accessible
+
+• Better for UI graphics
+
+Canvas:
+
+• Pixel-based
+
+• Faster for complex animations
+
+• Better for games
+
+• Not inherently scalable
+
+Both technologies have different use cases.
+`,
+    },
+
+    {
+      heading: 'Real-world SVG Examples',
+
+      content: `
+Examples:
+
+• Company Logos
+
+• Website Icons
+
+• Charts
+
+• Graphs
+
+• Maps
+
+• Infographics
+
+• Dashboard Visualizations
+
+SVG is used throughout modern websites.
+`,
+    },
+
+    {
+      heading: 'Advantages of SVG',
+
+      content: `
+• Infinite scalability
+
+• Small file sizes
+
+• Easy styling
+
+• Animation support
+
+• SEO friendly
+
+• Accessible
+
+• Responsive
+
+SVG offers many benefits over traditional image formats.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Confuse SVG with PNG
+
+• Ignore coordinate systems
+
+• Overuse complex paths
+
+• Forget viewBox
+
+• Use SVG for large photos
+
+These mistakes can reduce effectiveness.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use SVG for icons
+
+• Optimize SVG files
+
+• Use groups logically
+
+• Keep paths organized
+
+• Add accessibility labels
+
+• Use viewBox properly
+
+These practices create professional SVG graphics.
+`,
+    },
+
+    {
+      heading: 'Important Points About SVG',
+
+      content: `
+• SVG stands for Scalable Vector Graphics
+
+• SVG is vector-based
+
+• SVG scales without quality loss
+
+• Shapes are created using XML
+
+• Paths create complex graphics
+
+• SVG supports gradients and animation
+
+• SVG is ideal for icons and logos
+
+SVG is one of the most important graphics technologies on the web.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'SVG Rectangle',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<svg width="300" height="150">
+
+  <rect
+    x="20"
+    y="20"
+    width="200"
+    height="100"
+    fill="blue">
+
+  </rect>
+
+</svg>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a blue rectangle.',
+    },
+
+    {
+      title: 'SVG Circle',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<svg width="200" height="200">
+
+  <circle
+    cx="100"
+    cy="100"
+    r="60"
+    fill="green">
+
+  </circle>
+
+</svg>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a green circle.',
+    },
+
+    {
+      title: 'SVG Text',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<svg width="300" height="100">
+
+  <text
+    x="20"
+    y="50">
+
+    Hello SVG
+
+  </text>
+
+</svg>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays scalable text inside SVG.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'What does SVG stand for?',
+
+      options: [
+        'Scalable Visual Graphics',
+        'Scalable Vector Graphics',
+        'System Vector Graphics',
+        'Structured Visual Graphics'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'SVG stands for Scalable Vector Graphics.',
+    },
+
+    {
+      question:
+        'Which SVG element creates a circle?',
+
+      options: [
+        '<round>',
+        '<shape>',
+        '<circle>',
+        '<arc>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The circle element creates circular shapes in SVG.',
+    },
+
+    {
+      question:
+        'Which is the biggest advantage of SVG?',
+
+      options: [
+        'Animation',
+        'Scalability',
+        'Color',
+        'Compression'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'SVG graphics can scale infinitely without losing quality.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is SVG and why is it used?',
+
+      answer:
+        'SVG is a vector-based graphics format used to create scalable graphics that remain sharp at any size. It is commonly used for icons, logos, charts, and illustrations.',
+    },
+
+    {
+      question:
+        'What is the difference between SVG and Canvas?',
+
+      answer:
+        'SVG is vector-based, scalable, and DOM-accessible, making it suitable for UI graphics and icons. Canvas is pixel-based and better suited for games and high-performance animations.',
+    },
+  ],
+
+  nextTopic: 'html-canvas',
+},
+{
+  id: 'html-canvas',
+
+  title: 'HTML Canvas',
+
+  slug: 'html-canvas',
+
+  image:
+    'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+
+  readTime: '130 min read',
+
+  difficulty: 'Advanced',
+
+  description:
+    'Learn HTML Canvas deeply including drawing shapes, graphics rendering, text, images, transformations, animations, Canvas API, Canvas vs SVG, and interview concepts.',
+
+  companyTags: ['Google', 'Amazon', 'Microsoft', 'Adobe', 'Meta'],
+
+  sections: [
+    {
+      heading: 'HTML Canvas',
+
+      content: `
+• What is Canvas?
+
+• Why Canvas is Important
+
+• Canvas Syntax
+
+• Canvas Coordinate System
+
+• Getting the Context
+
+• Drawing Lines
+
+• Drawing Rectangles
+
+• Drawing Circles
+
+• Colors and Styles
+
+• Canvas Paths
+
+• Canvas Text
+
+• Canvas Images
+
+• Transformations
+
+• Rotation
+
+• Scaling
+
+• Translation
+
+• Canvas Animations
+
+• Canvas vs SVG
+
+• Real-world Applications
+
+• Best Practices
+
+• Interview Concepts
+`,
+    },
+
+    {
+      heading: 'What is Canvas?',
+
+      content: `
+Canvas is an HTML5 element used to draw graphics dynamically using JavaScript.
+
+Unlike SVG, Canvas is pixel-based.
+
+Canvas provides a drawing area where developers can create:
+
+• Games
+
+• Charts
+
+• Animations
+
+• Drawing Applications
+
+• Image Editors
+
+• Data Visualizations
+
+Canvas is one of the most powerful HTML5 features.
+`,
+    },
+
+    {
+      heading: 'Why Canvas is Important?',
+
+      content: `
+Canvas allows developers to create interactive graphics directly in the browser.
+
+Benefits:
+
+• High performance
+
+• Real-time rendering
+
+• Dynamic graphics
+
+• Animation support
+
+• Game development
+
+Modern web applications frequently use Canvas.
+`,
+    },
+
+    {
+      heading: 'Basic Canvas Syntax',
+
+      content: `
+Example:
+
+<canvas>
+
+</canvas>
+
+The canvas element creates a blank drawing area.
+
+JavaScript is required to draw inside it.
+`,
+    },
+
+    {
+      heading: 'Canvas Width and Height',
+
+      content: `
+Canvas dimensions are defined using:
+
+width
+
+height
+
+Example:
+
+width="500"
+
+height="300"
+
+These dimensions determine the drawing area size.
+`,
+    },
+
+    {
+      heading: 'How Canvas Works?',
+
+      content: `
+Step 1:
+
+Create a canvas element.
+
+Step 2:
+
+Access the canvas using JavaScript.
+
+Step 3:
+
+Get the drawing context.
+
+Step 4:
+
+Use Canvas API methods.
+
+Step 5:
+
+Render graphics on the screen.
+
+Everything drawn on canvas is generated through code.
+`,
+    },
+
+    {
+      heading: 'Getting the Canvas Context',
+
+      content: `
+The context is the drawing tool.
+
+Example:
+
+getContext("2d")
+
+Without a context, drawing operations cannot be performed.
+
+Most applications use the 2D context.
+`,
+    },
+
+    {
+      heading: 'Canvas Coordinate System',
+
+      content: `
+Canvas uses coordinates.
+
+Top-left corner:
+
+(0,0)
+
+Moving right increases X.
+
+Moving down increases Y.
+
+Example:
+
+(100,50)
+
+means:
+
+100 pixels right
+
+50 pixels down
+`,
+    },
+
+    {
+      heading: 'Drawing a Line',
+
+      content: `
+Canvas can draw straight lines.
+
+Important methods:
+
+• beginPath()
+
+• moveTo()
+
+• lineTo()
+
+• stroke()
+
+Lines are used in charts, diagrams, and drawings.
+`,
+    },
+
+    {
+      heading: 'Drawing Rectangles',
+
+      content: `
+Rectangles are among the most common shapes.
+
+Methods:
+
+• fillRect()
+
+• strokeRect()
+
+• clearRect()
+
+These methods create filled, outlined, or cleared rectangular areas.
+`,
+    },
+
+    {
+      heading: 'Filled Rectangles',
+
+      content: `
+A filled rectangle contains color.
+
+Common Uses:
+
+• Buttons
+
+• Cards
+
+• Background Blocks
+
+• UI Components
+
+Filled rectangles are frequently used in interfaces.
+`,
+    },
+
+    {
+      heading: 'Outlined Rectangles',
+
+      content: `
+Outlined rectangles only display borders.
+
+Benefits:
+
+• Clean design
+
+• Minimal appearance
+
+• Better emphasis
+
+Often used for wireframes and layouts.
+`,
+    },
+
+    {
+      heading: 'Drawing Circles',
+
+      content: `
+Canvas uses arcs to create circles.
+
+Important Method:
+
+arc()
+
+Uses:
+
+• Icons
+
+• Graphs
+
+• Charts
+
+• Games
+
+Circles are fundamental graphical elements.
+`,
+    },
+
+    {
+      heading: 'Canvas Paths',
+
+      content: `
+Paths define custom shapes.
+
+Methods:
+
+• beginPath()
+
+• moveTo()
+
+• lineTo()
+
+• closePath()
+
+Paths allow developers to create complex graphics.
+`,
+    },
+
+    {
+      heading: 'Why Paths are Important?',
+
+      content: `
+Paths enable:
+
+• Custom Shapes
+
+• Logos
+
+• Illustrations
+
+• Advanced Graphics
+
+Most professional graphics use paths extensively.
+`,
+    },
+
+    {
+      heading: 'Colors in Canvas',
+
+      content: `
+Canvas supports colors through:
+
+fillStyle
+
+strokeStyle
+
+Examples:
+
+• Red
+
+• Blue
+
+• Green
+
+• Hex Colors
+
+• RGB Values
+
+Colors improve visual appearance.
+`,
+    },
+
+    {
+      heading: 'Stroke Styles',
+
+      content: `
+Stroke styles control borders.
+
+Examples:
+
+• Border Colors
+
+• Line Width
+
+• Line Patterns
+
+Stroke styling improves graphic clarity.
+`,
+    },
+
+    {
+      heading: 'Canvas Text',
+
+      content: `
+Canvas can display text.
+
+Methods:
+
+• fillText()
+
+• strokeText()
+
+Uses:
+
+• Labels
+
+• Chart Values
+
+• Game Scores
+
+• Dynamic Information
+
+Text rendering is widely used in applications.
+`,
+    },
+
+    {
+      heading: 'Text Styling',
+
+      content: `
+Text supports:
+
+• Font Family
+
+• Font Size
+
+• Font Weight
+
+• Color
+
+This allows complete customization.
+`,
+    },
+
+    {
+      heading: 'Drawing Images',
+
+      content: `
+Canvas can display images.
+
+Method:
+
+drawImage()
+
+Uses:
+
+• Photo Editing
+
+• Games
+
+• Graphics Processing
+
+• Image Manipulation
+
+Image rendering is a major Canvas capability.
+`,
+    },
+
+    {
+      heading: 'Canvas Transformations',
+
+      content: `
+Transformations modify objects.
+
+Types:
+
+• Translation
+
+• Rotation
+
+• Scaling
+
+These help create advanced graphics and animations.
+`,
+    },
+
+    {
+      heading: 'Translation',
+
+      content: `
+Translation moves objects.
+
+Example:
+
+Move a shape:
+
+• Right
+
+• Left
+
+• Up
+
+• Down
+
+This changes object position.
+`,
+    },
+
+    {
+      heading: 'Rotation',
+
+      content: `
+Rotation turns objects around a point.
+
+Examples:
+
+• Rotating Wheels
+
+• Rotating Icons
+
+• Game Objects
+
+Rotation creates dynamic visuals.
+`,
+    },
+
+    {
+      heading: 'Scaling',
+
+      content: `
+Scaling changes object size.
+
+Benefits:
+
+• Zoom Effects
+
+• Responsive Graphics
+
+• Dynamic Interfaces
+
+Objects can grow or shrink.
+`,
+    },
+
+    {
+      heading: 'Canvas Animations',
+
+      content: `
+Canvas is widely used for animations.
+
+Examples:
+
+• Games
+
+• Interactive Effects
+
+• Moving Objects
+
+• Visual Simulations
+
+Animations are created using JavaScript loops.
+`,
+    },
+
+    {
+      heading: 'Animation Process',
+
+      content: `
+Typical Animation Flow:
+
+Step 1:
+
+Clear canvas.
+
+Step 2:
+
+Update positions.
+
+Step 3:
+
+Redraw objects.
+
+Step 4:
+
+Repeat continuously.
+
+This creates smooth movement.
+`,
+    },
+
+    {
+      heading: 'Real-world Canvas Applications',
+
+      content: `
+Examples:
+
+• Browser Games
+
+• Whiteboard Apps
+
+• Signature Pads
+
+• Data Dashboards
+
+• Image Editors
+
+• Interactive Maps
+
+Canvas powers many advanced web applications.
+`,
+    },
+
+    {
+      heading: 'Canvas vs SVG',
+
+      content: `
+Canvas:
+
+• Pixel-based
+
+• Faster rendering
+
+• Better for games
+
+• Better for animations
+
+SVG:
+
+• Vector-based
+
+• Scalable
+
+• Better for icons
+
+• Better for UI graphics
+
+Both technologies solve different problems.
+`,
+    },
+
+    {
+      heading: 'Advantages of Canvas',
+
+      content: `
+• High performance
+
+• Real-time graphics
+
+• Animation support
+
+• Image manipulation
+
+• Game development
+
+• Dynamic rendering
+
+Canvas is ideal for graphics-intensive applications.
+`,
+    },
+
+    {
+      heading: 'Limitations of Canvas',
+
+      content: `
+Canvas limitations:
+
+• Not inherently scalable
+
+• Less accessible
+
+• More code required
+
+• Pixel-based rendering
+
+Developers should choose Canvas appropriately.
+`,
+    },
+
+    {
+      heading: 'Common Beginner Mistakes',
+
+      content: `
+Many beginners:
+
+• Forget dimensions
+
+• Skip context creation
+
+• Ignore coordinate systems
+
+• Redraw inefficiently
+
+• Use Canvas where SVG is better
+
+These mistakes affect performance and maintainability.
+`,
+    },
+
+    {
+      heading: 'Best Practices',
+
+      content: `
+Recommended practices:
+
+• Use requestAnimationFrame()
+
+• Optimize redraw operations
+
+• Keep graphics organized
+
+• Use Canvas for dynamic content
+
+• Use SVG for static graphics
+
+• Test performance regularly
+
+These practices improve quality and speed.
+`,
+    },
+
+    {
+      heading: 'Important Points About Canvas',
+
+      content: `
+• Canvas is pixel-based
+
+• JavaScript is required
+
+• Supports graphics rendering
+
+• Supports animations
+
+• Supports image processing
+
+• Widely used for games
+
+• Faster than SVG for complex animations
+
+Canvas is one of the most powerful graphical technologies available in HTML5.
+`,
+    },
+  ],
+
+  codeExamples: [
+    {
+      title: 'Drawing a Rectangle',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<canvas id="myCanvas" width="300" height="200"></canvas>
+
+<script>
+
+const canvas =
+document.getElementById("myCanvas");
+
+const ctx =
+canvas.getContext("2d");
+
+ctx.fillRect(50, 50, 150, 80);
+
+</script>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a filled rectangle on the canvas.',
+    },
+
+    {
+      title: 'Drawing a Circle',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+<script>
+
+const canvas =
+document.getElementById("myCanvas");
+
+const ctx =
+canvas.getContext("2d");
+
+ctx.beginPath();
+
+ctx.arc(
+150,
+150,
+60,
+0,
+2 * Math.PI
+);
+
+ctx.fill();
+
+</script>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays a filled circle.',
+    },
+
+    {
+      title: 'Drawing Text',
+
+      language: 'html',
+
+      code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<canvas id="myCanvas" width="400" height="200"></canvas>
+
+<script>
+
+const canvas =
+document.getElementById("myCanvas");
+
+const ctx =
+canvas.getContext("2d");
+
+ctx.font =
+"30px Arial";
+
+ctx.fillText(
+"Hello Canvas",
+50,
+100
+);
+
+</script>
+
+</body>
+
+</html>`,
+
+      output:
+        'Displays text drawn directly on the canvas.',
+    },
+  ],
+
+  mcqs: [
+    {
+      question:
+        'Which element is used for drawing graphics in HTML5?',
+
+      options: [
+        '<graphics>',
+        '<draw>',
+        '<canvas>',
+        '<paint>'
+      ],
+
+      answer: 2,
+
+      explanation:
+        'The canvas element provides a drawing area for graphics.',
+    },
+
+    {
+      question:
+        'Which method is used to obtain a 2D drawing context?',
+
+      options: [
+        'createContext()',
+        'getContext()',
+        'drawContext()',
+        'canvasContext()'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'getContext("2d") returns the 2D drawing context.',
+    },
+
+    {
+      question:
+        'Canvas graphics are primarily?',
+
+      options: [
+        'Vector-based',
+        'Pixel-based',
+        'Text-based',
+        'XML-based'
+      ],
+
+      answer: 1,
+
+      explanation:
+        'Canvas uses pixel-based rendering.',
+    },
+  ],
+
+  interviewQuestions: [
+    {
+      question:
+        'What is HTML Canvas?',
+
+      answer:
+        'HTML Canvas is an HTML5 element that provides a drawable area where graphics, animations, charts, games, and images can be created dynamically using JavaScript.',
+    },
+
+    {
+      question:
+        'What is the difference between Canvas and SVG?',
+
+      answer:
+        'Canvas is pixel-based and better for animations, games, and dynamic graphics. SVG is vector-based and better for icons, logos, and scalable UI graphics.',
+    },
+  ],
+
+  nextTopic: 'html-geolocation-api',
 },
 ]
